@@ -1,0 +1,144 @@
+{
+    "synonyms": {
+            "sec-checker": "security-checker",
+            "req-checker": "requirements-checker",
+            "cli": "console",
+            "admingen": "admin",
+            "admin-gen": "admin",
+            "admingenerator": "admin",
+            "admin-generator": "admin",
+            "template": "twig",
+            "templates": "twig",
+            "templating": "twig",
+            "translator": "translation",
+            "serialization": "serializer",
+            "logs": "log",
+            "logging": "log",
+            "webserver": "server",
+            "web-server": "server"
+    },
+    "map": {
+        "server": [
+            ["symfony/web-server-bundle", "3.3.x-dev", false]
+        ],
+        "framework": [
+            ["symfony/framework-bundle", "3.3.x-dev", false]
+        ],
+        "security-checker": [
+            ["sensiolabs/security-checker", null, false]
+        ],
+        "requirements-checker": [
+            ["symfony/requirements-checker", "^1.0@dev", false]
+        ],
+        "console": [
+            ["symfony/console", "^3.2", false]
+        ],
+        "yaml": [
+            ["symfony/yaml", "^3.2", false]
+        ],
+        "mailer": [
+            ["symfony/swiftmailer-bundle", "^2.4", false]
+        ],
+        "profiler": [
+            ["symfony/web-profiler-bundle", "^3.2", false]
+        ],
+        "log": [
+            ["symfony/monolog-bundle", "^3.0", false]
+        ],
+        "admin": [
+            ["javiereguiluz/easyadmin-bundle", "dev-master", false],
+        ],
+        "twig": [
+            ["symfony/twig-bundle", "^3.2", false],
+        ],
+        "orm": [
+            ["doctrine/doctrine-bundle", "^1.6", false],
+            ["propel/propel-bundle", "@stable", false],
+            ["laravel/...", "@stable", false]
+        ],
+        "doctrine": [
+            ["doctrine/doctrine-bundle", "^1.6", false]
+        ]
+    },
+    "packs": {
+        "micro": {
+            "description": "A microframework style",
+            "init": true,
+            "packages": [
+                ["symfony/framework-bundle", "3.3.x-dev", false],
+            ]
+        },
+        "standard": {
+            "description": "A standard Web project with Doctrine and Twig",
+            "init": true,
+            "packages": [
+                ["symfony/symfony", "^3.2", false],
+                ["doctrine/orm", "^2.5", false],
+                ["doctrine/doctrine-bundle", "^1.6", false],
+                ["doctrine/doctrine-cache-bundle", "^1.2", false],
+                ["symfony/swiftmailer-bundle", "^2.3", false],
+                ["symfony/monolog-bundle", "^3.0", false],
+                ["symfony/polyfill-apcu", "^1.0", false],
+                ["sensio/distribution-bundle", "^5.0", false],
+                ["sensio/framework-extra-bundle", "^3.0.2", false],
+                ["sensio/generator-bundle", "^3.0", true],
+                ["symfony/phpunit-bridge", "^3.0", true]
+            ]
+        },
+        "beginner": {
+            "description": "A pack for beginners",
+            "init": true,
+            "packages": [
+            ]
+        },
+        "debug-tools": {
+            "description": "Debug tools",
+            "init": false,
+            "packages": [
+                ["symfony/monolog-bundle", "^3.0", false],
+                ["easycorp/easy-log-handler", "dev-master", false],
+                ["symfony/web-profiler-bundle", "^3.2", false],
+                ["symfony/phpunit-bridge", "^3.2", true],
+                ["symfony/var-dumper", "^3.2", true]
+            ]
+        },
+        "tests": {
+            "description": "Testing tools",
+            "init": false,
+            "packages": [
+                ["symfony/phpunit-bridge", "^3.2", false],
+                ["symfony/browser-kit", "^3.2", false],
+                ["symfony/css-selector", "^3.2", false],
+            ]
+        },
+        "_comments": "// FIXME: should not be a pack, but needed to force a specific version of Symfony to be installed",
+        "_comments": "// when using a package choice libe in lookup(), we should have a more complex entry",
+        "_comments": "// a string, the main package, and some optional other packages",
+        "admin": {
+            "description": "A backend",
+            "init": true,
+            "packages": [
+                ["javiereguiluz/easyadmin-bundle", "dev-master", false],
+                "_comments": "// force Symfony 3.2: needed for env support",
+                "_comments": "// FIXME: problem is that as we include framework-bundle here, remove admin will remove it as well, but should not",
+                "_comments": "// so, we should probably do something special when removing a pack or not allow the removal of a pack",
+                "_comments": "// or only remove the first dep? Not very clear what would work",
+                "_comments": "// ideally, we would keep somewhere the installed pack and only deps coming from one pack can be removed",
+                ["symfony/framework-bundle", "3.3.x-dev", false],
+                "_comments": "// force Symfony 3.2: needed for proper ini support in DIC",
+                ["symfony/config", "^3.2", false],
+                ["symfony/dependency-injection", "^3.2", false],
+                "_comments": "// force Symfony 3.2: as assets are not in framework-bundle anymore, should be inlined, so need 3.2",
+                ["symfony/twig-bundle", "^3.2", false],
+                "_comments": "// FIXME: bug in easyadmin-bundle, validator is a requirement",
+                "_comments": "// or a bug in symfony/form which should require validator?",
+                ["symfony/validator", "^3.2", false]
+            ]
+        },
+        "empty": {
+            "description": "Don't install anything, let me do everything by myself (symfony/framework-bundle is required!)",
+            "init": true,
+            "packages": []
+        }
+    }
+}
