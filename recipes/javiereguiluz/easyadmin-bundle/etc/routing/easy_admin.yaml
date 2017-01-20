@@ -1,0 +1,4 @@
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller"
+    prefix: /admin
+    type: annotation

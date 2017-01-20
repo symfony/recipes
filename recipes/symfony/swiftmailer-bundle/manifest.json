@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "env": {
+        "MAILER_HOST": "127.0.0.1",
+        "MAILER_USERNAME": "",
+        "MAILER_PASSWORD": ""
+    }
+}

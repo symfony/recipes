@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\DebugBundle\\DebugBundle": ["dev", "test"]
+    }
+}

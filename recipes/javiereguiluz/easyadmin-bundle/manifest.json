@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "JavierEguiluz\\Bundle\\EasyAdminBundle\\EasyAdminBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

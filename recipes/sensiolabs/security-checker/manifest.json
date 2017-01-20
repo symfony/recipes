@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "composer-scripts": {
+        "vendor/bin/security-checker security:check": "php-script"
+    }
+}

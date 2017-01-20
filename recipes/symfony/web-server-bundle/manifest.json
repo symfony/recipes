@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": ["dev"]
+    }
+}

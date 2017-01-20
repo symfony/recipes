@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear --no-warmup": "symfony-cmd",
+        "cache:warmup": "symfony-cmd",
+        "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+    }
+}

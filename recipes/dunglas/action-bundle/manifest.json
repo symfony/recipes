@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Dunglas\\ActionBundle\\DunglasActionBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

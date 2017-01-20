@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

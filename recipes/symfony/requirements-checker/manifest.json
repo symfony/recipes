@@ -1,0 +1,9 @@
+{
+    "copy-from-package": {
+        "bin/check.php": "%BIN_DIR%/check.php",
+        "web/check.php": "%WEB_DIR%/check.php"
+    },
+    "composer-scripts": {
+        "%BIN_DIR%/check.php": "php-script"
+    }
+}

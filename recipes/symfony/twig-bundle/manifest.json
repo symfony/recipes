@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

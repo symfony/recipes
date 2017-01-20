@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "",
+        "DB_NAME": "symfony",
+        "DB_USER": "root",
+        "DB_PASSWORD": ""
+    }
+}
