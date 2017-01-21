@@ -119,7 +119,6 @@
                 ["symfony/framework-bundle", "3.3.x-dev", false],
                 ["symfony/config", "^3.2", false],
                 ["symfony/dependency-injection", "^3.2", false],
-                ["symfony/twig-bundle", "^3.2", false],
                 ["symfony/validator", "^3.2", false]
             ]
         },
