@@ -46,10 +46,10 @@
             ["symfony/monolog-bundle", "^3.0", false]
         ],
         "admin": [
-            ["javiereguiluz/easyadmin-bundle", "dev-master", false],
+            ["javiereguiluz/easyadmin-bundle", "dev-master", false]
         ],
         "twig": [
-            ["symfony/twig-bundle", "^3.2", false],
+            ["symfony/twig-bundle", "^3.2", false]
         ],
         "orm": [
             ["doctrine/doctrine-bundle", "^1.6", false],
@@ -65,7 +65,7 @@
             "description": "A microframework style",
             "init": true,
             "packages": [
-                ["symfony/framework-bundle", "3.3.x-dev", false],
+                ["symfony/framework-bundle", "3.3.x-dev", false]
             ]
         },
         "standard": {
@@ -108,30 +108,18 @@
             "packages": [
                 ["symfony/phpunit-bridge", "^3.2", false],
                 ["symfony/browser-kit", "^3.2", false],
-                ["symfony/css-selector", "^3.2", false],
+                ["symfony/css-selector", "^3.2", false]
             ]
         },
-        "_comments": "// FIXME: should not be a pack, but needed to force a specific version of Symfony to be installed",
-        "_comments": "// when using a package choice libe in lookup(), we should have a more complex entry",
-        "_comments": "// a string, the main package, and some optional other packages",
         "admin": {
             "description": "A backend",
             "init": true,
             "packages": [
                 ["javiereguiluz/easyadmin-bundle", "dev-master", false],
-                "_comments": "// force Symfony 3.2: needed for env support",
-                "_comments": "// FIXME: problem is that as we include framework-bundle here, remove admin will remove it as well, but should not",
-                "_comments": "// so, we should probably do something special when removing a pack or not allow the removal of a pack",
-                "_comments": "// or only remove the first dep? Not very clear what would work",
-                "_comments": "// ideally, we would keep somewhere the installed pack and only deps coming from one pack can be removed",
                 ["symfony/framework-bundle", "3.3.x-dev", false],
-                "_comments": "// force Symfony 3.2: needed for proper ini support in DIC",
                 ["symfony/config", "^3.2", false],
                 ["symfony/dependency-injection", "^3.2", false],
-                "_comments": "// force Symfony 3.2: as assets are not in framework-bundle anymore, should be inlined, so need 3.2",
                 ["symfony/twig-bundle", "^3.2", false],
-                "_comments": "// FIXME: bug in easyadmin-bundle, validator is a requirement",
-                "_comments": "// or a bug in symfony/form which should require validator?",
                 ["symfony/validator", "^3.2", false]
             ]
         },
