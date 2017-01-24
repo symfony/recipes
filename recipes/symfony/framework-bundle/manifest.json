@@ -13,6 +13,7 @@
     "makefile": "
 serve:
 	echo \"Started web server on http://127.0.0.1:8000\"
+	echo \"Run composer require symfony/web-server-bundle for a better web server\"
 	php -S 127.0.0.1:8000 -t web
 "
 }
