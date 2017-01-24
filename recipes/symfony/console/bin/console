@@ -15,7 +15,7 @@ if (class_exists(AnnotationRegistry::class)) {
     AnnotationRegistry::registerLoader([$loader, 'loadClass']);
 }
 
-if (!class_exists('Symfony\Bundle\FrameworkBundle\Console\Application')) {
+if (!class_exists(Application::class)) {
     throw new \RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
 }
 
