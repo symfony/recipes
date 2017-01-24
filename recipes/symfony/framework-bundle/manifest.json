@@ -9,5 +9,10 @@
         "cache:clear --no-warmup": "symfony-cmd",
         "cache:warmup": "symfony-cmd",
         "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
-    }
+    },
+    "makefile": "
+serve:
+	echo \"Started web server on http://127.0.0.1:8000\"
+	php -S 127.0.0.1:8000 -t web
+"
 }
