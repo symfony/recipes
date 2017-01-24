@@ -53,8 +53,7 @@
         ],
         "orm": [
             ["doctrine/doctrine-bundle", "^1.6", false],
-            ["propel/propel-bundle", "@stable", false],
-            ["laravel/...", "@stable", false]
+            ["propel/propel-bundle", "@stable", false]
         ],
         "doctrine": [
             ["doctrine/doctrine-bundle", "^1.6", false]
