@@ -6,7 +6,7 @@
         "etc/": "%ETC_DIR%/"
     },
     "env": {
-        "MAILER_HOST": "127.0.0.1",
+        "MAILER_HOST": "",
         "MAILER_USERNAME": "",
         "MAILER_PASSWORD": ""
     }

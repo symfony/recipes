@@ -1,5 +1,5 @@
 swiftmailer:
-    transport: smtp
+    transport: sendmail
     host: "%env(MAILER_HOST)%"
     username: "%env(MAILER_USERNAME)%"
     password: "%env(MAILER_PASSWORD)%"
