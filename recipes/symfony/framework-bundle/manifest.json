@@ -11,6 +11,11 @@
         "cache:warmup": "symfony-cmd",
         "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
     },
+    "env": {
+        "APP_ENV": "dev",
+        "APP_DEBUG": 1,
+        "APP_SECRET": "Ju$tChang3it!"
+    },
     "makefile": [
         "serve:",
         "\t@echo \"\\033[32;49mServer listening on http://127.0.0.1:8000\\033[39m\"",
