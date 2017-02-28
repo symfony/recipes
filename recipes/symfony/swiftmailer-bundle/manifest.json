@@ -10,8 +10,6 @@
         "MAILER_TRANSPORT": "smtp",
         "MAILER_HOST": "localhost",
         "MAILER_PORT": "25",
-        "MAILER_ENCRYPTION": "",
-        "MAILER_AUTH_MODE": "",
         "MAILER_USERNAME": "",
         "MAILER_PASSWORD": ""
     }
