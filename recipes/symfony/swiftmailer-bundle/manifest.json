@@ -6,7 +6,8 @@
         "etc/": "%ETC_DIR%/"
     },
     "env": {
-        "MAILER_HOST": "",
+        "MAILER_TRANSPORT": "smtp",
+        "MAILER_HOST": "localhost",
         "MAILER_USERNAME": "",
         "MAILER_PASSWORD": ""
     }

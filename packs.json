@@ -37,7 +37,7 @@
             ["symfony/yaml", "^3.2", false]
         ],
         "mailer": [
-            ["symfony/swiftmailer-bundle", "^2.4", false]
+            ["symfony/swiftmailer-bundle", "^2.5", false]
         ],
         "profiler": [
             ["symfony/web-profiler-bundle", "^3.2", false]
@@ -75,7 +75,7 @@
                 ["doctrine/orm", "^2.5", false],
                 ["doctrine/doctrine-bundle", "^1.6", false],
                 ["doctrine/doctrine-cache-bundle", "^1.2", false],
-                ["symfony/swiftmailer-bundle", "^2.3", false],
+                ["symfony/swiftmailer-bundle", "^2.5", false],
                 ["symfony/monolog-bundle", "^3.0", false],
                 ["symfony/polyfill-apcu", "^1.0", false],
                 ["sensio/distribution-bundle", "^5.0", false],
