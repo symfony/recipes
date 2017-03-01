@@ -3,11 +3,13 @@
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = require __DIR__.'/../vendor/autoload.php';
 if (class_exists(AnnotationRegistry::class)) {
     AnnotationRegistry::registerLoader([$loader, 'loadClass']);
+    AnnotationReader::addGlobalIgnoredName('required');
 }
 
 // The check is to ensure we don't use .env in production

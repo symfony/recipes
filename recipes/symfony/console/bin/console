@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
@@ -13,6 +14,7 @@ set_time_limit(0);
 $loader = require __DIR__.'/../vendor/autoload.php';
 if (class_exists(AnnotationRegistry::class)) {
     AnnotationRegistry::registerLoader([$loader, 'loadClass']);
+    AnnotationReader::addGlobalIgnoredName('required');
 }
 
 if (!class_exists(Application::class)) {
