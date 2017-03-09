@@ -13,7 +13,7 @@
     },
     "env": {
         "APP_ENV": "dev",
-        "APP_DEBUG": 1,
+        "APP_DEBUG": "1",
         "APP_SECRET": "Ju$tChang3it!"
     },
     "makefile": [
