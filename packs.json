@@ -31,7 +31,7 @@
             ["symfony/requirements-checker", "^1.0@dev", false]
         ],
         "console": [
-            ["symfony/console", "^3.2", false]
+            ["symfony/console", "3.3.x-dev", false]
         ],
         "yaml": [
             ["symfony/yaml", "^3.2", false]
