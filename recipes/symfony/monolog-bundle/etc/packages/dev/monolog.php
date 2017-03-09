@@ -26,6 +26,7 @@ $container->addResource(new ClassExistenceResource(Application::class));
 if (class_exists(Application::class)) {
     $handlers['console'] = [
         'type' => 'console',
+        'process_psr_3_messages' => false,
         'channels' => ['!event', '!doctrine', '!console'],
     ];
 }
