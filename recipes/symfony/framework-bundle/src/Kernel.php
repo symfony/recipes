@@ -28,12 +28,12 @@ class Kernel extends BaseKernel
 
     public function getCacheDir()
     {
-        return dirname(dirname(__DIR__)).'/var/cache/'.$this->environment;
+        return dirname(__DIR__).'/var/cache/'.$this->environment;
     }
 
     public function getLogDir()
     {
-        return dirname(dirname(__DIR__)).'/var/logs';
+        return dirname(__DIR__).'/var/logs';
     }
 
     public function registerBundles()
