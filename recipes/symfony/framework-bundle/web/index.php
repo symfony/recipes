@@ -1,5 +1,6 @@
 <?php
 
+use App\Kernel;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
@@ -39,7 +40,7 @@ if (getenv('APP_DEBUG')) {
 // Request::setTrustedProxiestTrustedHeaderName(Request::HEADER_FORWARDED, null);
 // Request::setTrustedProxies(['0.0.0.0/0']);
 
-$kernel = new AppKernel(getenv('APP_ENV'), getenv('APP_DEBUG'));
+$kernel = new Kernel(getenv('APP_ENV'), getenv('APP_DEBUG'));
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();

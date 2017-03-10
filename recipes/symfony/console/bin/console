@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use App\Kernel;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
@@ -33,6 +34,6 @@ if ($debug && class_exists(Debug::class)) {
     Debug::enable();
 }
 
-$kernel = new AppKernel($env, $debug);
+$kernel = new Kernel($env, $debug);
 $application = new Application($kernel);
 $application->run($input);

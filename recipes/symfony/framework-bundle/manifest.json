@@ -4,6 +4,7 @@
     },
     "copy-from-recipe": {
         "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/",
         "web/": "%WEB_DIR%/"
     },
     "composer-scripts": {
