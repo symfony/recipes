@@ -5,8 +5,7 @@
     "copy-from-recipe": {
         "etc/": "%ETC_DIR%/",
         "src/": "%SRC_DIR%/",
-        "web/": "%WEB_DIR%/",
-        ".env.dist": ".env.dist"
+        "web/": "%WEB_DIR%/"
     },
     "composer-scripts": {
         "cache:clear --no-warmup": "symfony-cmd",
