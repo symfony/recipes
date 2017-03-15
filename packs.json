@@ -80,7 +80,14 @@
                 ["sensio/distribution-bundle", "^5.0", false],
                 ["sensio/framework-extra-bundle", "^3.0.2", false],
                 ["sensio/generator-bundle", "^3.0", true],
-                ["symfony/phpunit-bridge", "^3.0", true]
+                ["symfony/phpunit-bridge", "3.3.x-dev", true]
+            ]
+        },
+        "phpunit": {
+            "description": "PHPUnit related packages",
+            "init": false,
+            "packages": [
+                ["symfony/phpunit-bridge", "3.3.x-dev", true]
             ]
         },
         "beginner": {
@@ -96,7 +103,7 @@
                 ["symfony/monolog-bundle", "^3.0", false],
                 ["easycorp/easy-log-handler", "dev-master", false],
                 ["symfony/web-profiler-bundle", "^3.2", false],
-                ["symfony/phpunit-bridge", "^3.2", true],
+                ["symfony/phpunit-bridge", "3.3.x-dev", true],
                 ["symfony/var-dumper", "^3.2", true]
             ]
         },
@@ -104,7 +111,7 @@
             "description": "Testing tools",
             "init": false,
             "packages": [
-                ["symfony/phpunit-bridge", "^3.2", false],
+                ["symfony/phpunit-bridge", "3.3.x-dev", true],
                 ["symfony/browser-kit", "^3.2", false],
                 ["symfony/css-selector", "^3.2", false]
             ]
