@@ -2,8 +2,6 @@
 <?php
 
 use App\Kernel;
-use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Console\Input\ArgvInput;
@@ -12,11 +10,7 @@ use Symfony\Component\Debug\Debug;
 umask(0000);
 set_time_limit(0);
 
-$loader = require __DIR__.'/../vendor/autoload.php';
-if (class_exists(AnnotationRegistry::class)) {
-    AnnotationRegistry::registerLoader([$loader, 'loadClass']);
-    AnnotationReader::addGlobalIgnoredName('required');
-}
+require __DIR__.'/../vendor/autoload.php';
 
 if (!class_exists(Application::class)) {
     throw new \RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
