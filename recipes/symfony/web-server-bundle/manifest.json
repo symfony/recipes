@@ -1,5 +1,8 @@
 {
     "bundles": {
         "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": ["dev"]
-    }
+    },
+    "gitignore": [
+        ".web-server-pid"
+    ]
 }

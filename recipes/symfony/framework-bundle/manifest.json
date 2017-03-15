@@ -24,5 +24,20 @@
         "\t@echo \"Run \\033[32mcomposer require symfony/web-server-bundle\\033[39m for a better web server\"",
         "\tphp -S 127.0.0.1:8000 -t web",
         ".PHONY: serve"
+    ],
+    "gitignore": [
+        ".env",
+        "/var/*",
+        "!/var/cache",
+        "/var/cache/*",
+        "!var/cache/.gitkeep",
+        "!/var/logs",
+        "/var/logs/*",
+        "!var/logs/.gitkeep",
+        "!/var/sessions",
+        "/var/sessions/*",
+        "!var/sessions/.gitkeep",
+        "/vendor/",
+        "/web/bundles/"
     ]
 }
