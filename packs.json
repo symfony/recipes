@@ -15,49 +15,23 @@
             "logs": "log",
             "logging": "log",
             "webserver": "server",
-            "web-server": "server"
+            "web-server": "server",
+            "orm": "doctrine"
     },
     "map": {
-        "server": [
-            ["symfony/web-server-bundle", "3.3.x-dev", false]
-        ],
-        "framework": [
-            ["symfony/framework-bundle", "3.3.x-dev", false]
-        ],
-        "security-checker": [
-            ["sensiolabs/security-checker", null, false]
-        ],
-        "requirements-checker": [
-            ["symfony/requirements-checker", "^1.0@dev", false]
-        ],
-        "console": [
-            ["symfony/console", "3.3.x-dev", false]
-        ],
-        "yaml": [
-            ["symfony/yaml", "^3.2", false]
-        ],
-        "mailer": [
-            ["symfony/swiftmailer-bundle", "^2.5.3", false]
-        ],
-        "profiler": [
-            ["symfony/web-profiler-bundle", "^3.2", false]
-        ],
-        "log": [
-            ["symfony/monolog-bundle", "^3.0", false]
-        ],
-        "admin": [
-            ["javiereguiluz/easyadmin-bundle", "dev-master", false]
-        ],
-        "twig": [
-            ["symfony/twig-bundle", "^3.2", false]
-        ],
-        "orm": [
-            ["doctrine/doctrine-bundle", "^1.6", false],
-            ["propel/propel-bundle", "@stable", false]
-        ],
-        "doctrine": [
-            ["doctrine/doctrine-bundle", "^1.6", false]
-        ]
+        "server": ["symfony/web-server-bundle", "3.3.x-dev", false],
+        "framework": ["symfony/framework-bundle", "3.3.x-dev", false],
+        "security-checker": ["sensiolabs/security-checker", null, false],
+        "requirements-checker": ["symfony/requirements-checker", "^1.0@dev", false],
+        "console": ["symfony/console", "3.3.x-dev", false],
+        "yaml": ["symfony/yaml", "^3.2", false],
+        "mailer": ["symfony/swiftmailer-bundle", "^2.5.3", false],
+        "profiler": ["symfony/web-profiler-bundle", "^3.2", false],
+        "log": ["symfony/monolog-bundle", "^3.0", false],
+        "admin": ["javiereguiluz/easyadmin-bundle", "dev-master", false],
+        "twig": ["symfony/twig-bundle", "^3.2", false],
+        "orm": ["doctrine/doctrine-bundle", "^1.6", false],
+        "doctrine": ["doctrine/doctrine-bundle", "^1.6", false]
     },
     "packs": {
         "micro": {
@@ -126,11 +100,6 @@
                 ["symfony/dependency-injection", "^3.2", false],
                 ["symfony/validator", "^3.2", false]
             ]
-        },
-        "empty": {
-            "description": "Don't install anything, let me do everything by myself (symfony/framework-bundle is required!)",
-            "init": true,
-            "packages": []
         }
     }
 }
