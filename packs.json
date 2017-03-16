@@ -19,7 +19,7 @@
             "orm": "doctrine"
     },
     "map": {
-        "server": ["symfony/web-server-bundle", "3.3.x-dev", false],
+        "server": ["symfony/web-server-bundle", "3.3.x-dev", true],
         "framework": ["symfony/framework-bundle", "3.3.x-dev", false],
         "security-checker": ["sensiolabs/security-checker", null, false],
         "requirements-checker": ["symfony/requirements-checker", "^1.0@dev", false],
