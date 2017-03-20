@@ -1,6 +1,6 @@
 easy_admin:
     entities:
         # List the entity class name you want to manage
-        #Entity\Product
-        #Entity\Category
-        #Entity\User
+        #- App\Entity\Product
+        #- App\Entity\Category
+        #- App\Entity\User
