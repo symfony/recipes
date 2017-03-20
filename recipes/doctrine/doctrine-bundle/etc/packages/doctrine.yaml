@@ -1,6 +1,6 @@
 doctrine:
     dbal:
-        driver: pdo_mysql
+        driver: "%env(DB_DRIVER)%"
         host: "%env(DB_HOST)%"
         port: "%env(DB_PORT)%"
         dbname: "%env(DB_NAME)%"
