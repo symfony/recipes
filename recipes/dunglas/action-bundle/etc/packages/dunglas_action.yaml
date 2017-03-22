@@ -1,3 +1,0 @@
-dunglas_action:
-    directories:
-        - "../src/{Action,Command,Controller,EventSubscriber,Twig}"
