@@ -4,5 +4,6 @@
     },
     "gitignore": [
         ".web-server-pid"
-    ]
+    ],
+    "aliases": ["web-server", "server"]
 }

@@ -13,5 +13,6 @@
         "DB_NAME": "symfony",
         "DB_USER": "root",
         "DB_PASSWORD": ""
-    }
+    },
+    "aliases": ["doctrine", "orm"]
 }

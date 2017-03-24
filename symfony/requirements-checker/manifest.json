@@ -5,5 +5,6 @@
     },
     "composer-scripts": {
         "%BIN_DIR%/check.php": "php-script"
-    }
+    },
+    "aliases": ["requirement-check", "requirement-checker", "req-checker", "req-check", "req-checks"]
 }
