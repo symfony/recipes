@@ -4,5 +4,5 @@
 
 # if annotations are enabled
 #controllers:
-#    resource: src/Controller/
+#    resource: ../src/Controller/
 #    type: annotation
