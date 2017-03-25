@@ -1,6 +1,6 @@
 services:
     _defaults:
-        autowire: true
+        autowire: by_id
         public: false
 
     _instanceof:
