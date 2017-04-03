@@ -15,7 +15,7 @@ if (!getenv('APP_ENV')) {
 if (getenv('APP_DEBUG')) {
     // WARNING: You should setup permissions the proper way!
     // REMOVE the following PHP line and read
-    // http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
+    // https://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
     umask(0000);
 
     // This check prevents access to debug front controllers that are deployed by accident to production servers.

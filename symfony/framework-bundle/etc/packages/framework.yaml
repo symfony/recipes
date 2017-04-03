@@ -5,7 +5,7 @@ framework:
     #http_method_override: true
     #trusted_hosts: null
     #trusted_proxies: null
-    # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+    # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
     #session:
     #    handler_id: session.handler.native_file
     #    save_path: "%kernel.root_dir%/../var/sessions/%kernel.environment%"

@@ -45,6 +45,6 @@
         "    1. Execute the <comment>make serve</comment> command;",
         "    2. Browse to the <comment>http://localhost:8000/</comment> URL.",
         "",
-        "  * <fg=blue>Read</> the documentation at <comment>http://symfony.com/doc</comment>"
+        "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</comment>"
     ]
 }
