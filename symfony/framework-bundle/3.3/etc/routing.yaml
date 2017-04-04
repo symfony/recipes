@@ -1,6 +1,6 @@
 #index:
 #    path: /
-#    defaults: { _controller: "App\\Controller\\SomeController::index" }
+#    defaults: { _controller: "App\\Controller\\DefaultController::index" }
 
 # if annotations are enabled
 #controllers:
