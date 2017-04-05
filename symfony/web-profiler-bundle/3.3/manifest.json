@@ -5,5 +5,5 @@
     "copy-from-recipe": {
         "etc/": "%ETC_DIR%/"
     },
-    "aliases": ["profiler"]
+    "aliases": ["profiler", "web-profiler"]
 }
