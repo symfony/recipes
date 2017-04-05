@@ -2,7 +2,7 @@
 #    path: /
 #    defaults: { _controller: "App\\Controller\\DefaultController::index" }
 
-# if annotations are enabled
+# Depends on sensio/framework-extra-bundle:^3.0 and doctrine/annotations
 #controllers:
 #    resource: ../src/Controller/
 #    type: annotation
