@@ -71,12 +71,12 @@ of your ``composer.json`` file:
 
 .. code-block:: json
 
+    // composer.json
     {
-        "// composer.json",
-
         "...": "...",
+
         "extra": {
-            "my-special-dir": '...'
+            "my-special-dir": "..."
         }
     }
 
