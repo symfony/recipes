@@ -1,0 +1,7 @@
+{
+    "copy-from-recipe": {
+        "phpunit.xml.dist": "phpunit.xml.dist"
+    },
+    "aliases": ["phpunit"],
+    "version_aliases": ["4.8", "5.0", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "6.0"]
+}

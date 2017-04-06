@@ -1,6 +1,0 @@
-{
-    "copy-from-recipe": {
-        "phpunit.xml.dist": "phpunit.xml.dist"
-    },
-    "aliases": ["phpunit"]
-}
