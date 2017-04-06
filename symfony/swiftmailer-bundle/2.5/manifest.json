@@ -6,7 +6,8 @@
         "etc/": "%ETC_DIR%/"
     },
     "env": {
-        "#1": "For Gmail as a transport, use: \"gmail://username:password\"",
+        "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
+        "#2": "To disable sending emails, use: \"null://localhost\"",
         "MAILER_URL": "smtp://localhost:25&encryption=&auth_mode="
     },
     "aliases": ["mailer", "mail"]
