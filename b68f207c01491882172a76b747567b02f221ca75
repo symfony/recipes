@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-06T13:49:27Z
+
+This one is interesting :) By default, Symfony Flex tries to add `symfony/` when there is no `/` in a package name. But here, an explicit alias should take precedence. I need to double-check the implementation to be sure that this is the case.
