@@ -6,6 +6,8 @@ doctrine:
         dbname: "%env(DB_NAME)%"
         user: "%env(DB_USER)%"
         password: "%env(DB_PASSWORD)%"
+        # set your database server version to avoid edge-case exceptions and extra database calls
+        # server_version: 5.7
         charset: UTF8
         # if using pdo_sqlite as your database driver, uncomment next line:
         # path: "%kernel.root_dir%/../var/data.db"
