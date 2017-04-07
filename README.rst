@@ -33,7 +33,7 @@ install:
 .. code-block:: json
 
     {
-        aliases: ["acme-log", "acmelog"]
+        "aliases": ["acme-log", "acmelog"]
     }
 
 Developers can now install this dependency as ``composer require acme-log``. For
