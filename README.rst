@@ -3,9 +3,57 @@ Symfony Flex Recipes
 
 `Symfony Flex`_ is the new way to manage dependencies in Symfony applications.
 One of its main features is the automatic installation, configuration and
-removal of dependencies. This automation is possible thanks to **Symfony Flex
-Recipes**, which are defined as ``manifest.json`` files stored at the root
-directory of your packages.
+removal of dependencies. This automation is possible thanks to the **Symfony Flex
+Recipes**.
+
+Creating Flex Recipes
+---------------------
+
+Symfony Flex recipes consist of a ``manifest.json`` config file and, optionally,
+any number of files and directories. Recipes must be stored on their own
+repositories, outside of your Composer package repository.
+
+All the contents of the ``manifest.json`` file are optional and they are divided
+into options and configurators.
+
+.. TODO: explain that recipe contents must be versioned
+
+Options
+-------
+
+``aliases`` option
+~~~~~~~~~~~~~~~~~~
+
+The main configuration option is called ``aliases`` and its value is an array
+that defines one or more alternative names that can be used to install the
+dependency. For example, if a dependency is published as the ``acme-inc/acme-
+log-monolog-handler``, it can define one or more aliases to make it easier to
+install:
+
+.. code-block:: json
+
+    {
+        aliases: ["acme-log", "acmelog"]
+    }
+
+Developers can now install this dependency as ``composer require acme-log``. For
+security reasons, and to improve Symfony's developer experience, a long list of
+aliases are reserved by Symfony Flex (``orm``, ``mailer``, ``loger``, ``admin``,
+etc.) If you use those aliases in your recipe, they will be ignored.
+
+``version_aliases`` option
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This option lists all the additional versions of the dependency that work with
+this very same recipe (versions can use any of the syntaxes supported by
+Composer). This avoids duplicating recipes when a new version of the package is
+released:
+
+.. code-block:: json
+
+    {
+        "version_aliases": ["3.3", "3.4", "4.0-dev"]
+    }
 
 Configurators
 -------------
