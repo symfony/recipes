@@ -52,7 +52,7 @@ released:
 .. code-block:: json
 
     {
-        "version_aliases": ["3.3", "3.4", "4.0-dev"]
+        "version_aliases": ["3.3", "3.4", "4.0"]
     }
 
 Configurators
