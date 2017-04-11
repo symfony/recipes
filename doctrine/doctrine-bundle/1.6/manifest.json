@@ -7,7 +7,8 @@
         "src/": "%SRC_DIR%/"
     },
     "env": {
-        "#1": "For a sqlite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
+        "#1": "DB_URL format: \"vendor://username:password@host-or-ip:port/database-name?optional=config\"",
+        "#2": "For a sqlite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
         "DB_URL": "mysql://root@127.0.0.1:3306/symfony?charset=utf8mb4"
     },
     "aliases": ["doctrine", "orm"]
