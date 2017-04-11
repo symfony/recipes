@@ -1,0 +1,40 @@
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-10T18:14:17Z
+
+I'm afraid 7.1 was discarded for some Linux reasons (Ubuntu?) so we must stick to 7.0 for now.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-10T18:58:39Z
+
+I don't think I ever wrote that we would require 7.0. 7.1 might be a good idea.
+
+> On 10 Apr 2017, at 11:14, Javier Eguiluz <notifications@github.com> wrote:
+>
+> I'm afraid 7.1 was discarded for some Linux reasons (Ubuntu?) so we must stick to 7.0 for now.
+>
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+>
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-10T19:22:26Z
+
+7.1 would be great ... but reading your second tweet here: https://twitter.com/fabpot/status/844945740468183040  I thought you were saying that we'll use 7.0 because of Ubuntu.
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-10T19:27:55Z
+
+`symfony/symfony` should probably be in sync with the PHP version shipped with Ubuntu. But `symfony/flex` can encourage the user to start with the latest version (and greatest features) of PHP.
+
+And, in term of marketing, generating a skeleton using typehints and so on will increase the hype...
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-10T19:57:36Z
+
+PHP 7.1 support introduced in another commit (if this is accepted I'll open another one to `symfony/skeleton`.
