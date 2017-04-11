@@ -11,23 +11,23 @@ use Symfony\Component\Routing\RouteCollectionBuilder;
 /**
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Kernel extends BaseKernel
+final class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+    private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         return dirname(__DIR__).'/var/cache/'.$this->environment;
     }
 
-    public function getLogDir()
+    public function getLogDir(): string
     {
         return dirname(__DIR__).'/var/logs';
     }
 
-    public function registerBundles()
+    public function registerBundles(): iterable
     {
         $contents = require dirname(__DIR__).'/etc/bundles.php';
         foreach ($contents as $class => $envs) {
@@ -37,7 +37,7 @@ class Kernel extends BaseKernel
         }
     }
 
-    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
+    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
         $confDir = dirname(__DIR__).'/etc';
         $loader->import($confDir.'/packages/*'.self::CONFIG_EXTS, 'glob');
@@ -47,7 +47,7 @@ class Kernel extends BaseKernel
         $loader->import($confDir.'/container'.self::CONFIG_EXTS, 'glob');
     }
 
-    protected function configureRoutes(RouteCollectionBuilder $routes)
+    protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $confDir = dirname(__DIR__).'/etc';
         if (is_dir($confDir.'/routing/')) {
