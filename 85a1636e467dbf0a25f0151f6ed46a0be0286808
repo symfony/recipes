@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-07T21:08:01Z
+
+Don't you think that the mysql default is explicit enough? Or perhaps it would better to instead link to somewhere in the docs where this is explained with all the possible settings? The same goes for Swiftmailer.
