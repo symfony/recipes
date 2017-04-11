@@ -24,11 +24,10 @@ Options
 ``aliases`` option
 ~~~~~~~~~~~~~~~~~~
 
-The main configuration option is called ``aliases`` and its value is an array
-that defines one or more alternative names that can be used to install the
-dependency. For example, if a dependency is published as the ``acme-inc/acme-
-log-monolog-handler``, it can define one or more aliases to make it easier to
-install:
+This option defines one or more alternative names that can be used to install
+the dependency. Its value is an array of strings. For example, if a dependency
+is published as the ``acme-inc/acme-log-monolog-handler``, it can define one or
+more aliases to make it easier to install:
 
 .. code-block:: json
 
@@ -36,24 +35,25 @@ install:
         "aliases": ["acme-log", "acmelog"]
     }
 
-Developers can now install this dependency as ``composer require acme-log``. For
-security reasons, and to improve Symfony's developer experience, a long list of
-aliases are reserved by Symfony Flex (``orm``, ``mailer``, ``loger``, ``admin``,
-etc.) If you use those aliases in your recipe, they will be ignored.
+Developers can now install this dependency as ``composer require acme-log``.
 
 ``version_aliases`` option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This option lists all the additional versions of the dependency that work with
-this very same recipe (versions can use any of the syntaxes supported by
-Composer). This avoids duplicating recipes when a new version of the package is
-released:
+this very same recipe (only versions with the ``x.y`` syntax are supported).
+This avoids duplicating recipes when a new version of the package is released:
 
 .. code-block:: json
 
     {
         "version_aliases": ["3.3", "3.4", "4.0"]
     }
+
+.. note::
+
+    When using ``version_aliases``, the directory where the recipe is defined
+    must be the oldest supported version (``3.3`` in the previous example).
 
 Configurators
 -------------
@@ -68,13 +68,14 @@ Symfony Flex provides eight types of tasks, which are called **configurators**:
 ``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``, ``makefile``,
 ``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
-``bundles`` configurator
+``bundles`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Enables one or more bundles in the Symfony application by appending them to the
-``bundles.php`` file. Its value is an associative array with the bundle
-namespace as the keys and the array of environments where it must be enabled as
-the value. Use ``all`` to enable the bundle in any existing environment:
+``bundles.php`` file. Its value is an associative array where the key is the
+bundle class name and the value is an array of environments where it must be
+enabled. The supported environtments are ``dev``, ``prod``, ``test`` and ``all``
+(which enables the bundle in all environments):
 
 .. code-block:: json
 
@@ -93,7 +94,7 @@ The previous recipe is transformed by Symfony Flex into the following PHP code::
         'Symfony\Bundle\MonologBundle\MonologBundle' => ['all' => true],
     ];
 
-``copy-from-package`` configurator
+``copy-from-package`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copies files or directories from the Composer package contents to the Symfony
@@ -113,9 +114,9 @@ directory of the application:
 
 The ``%BIN_DIR%`` string is a special value that it's turned into the absolute
 path of the binaries directory of the Symfony application. These are the special
-variables available: ``BIN_DIR``, ``CONF_DIR``, ``ETC_DIR``, ``SRC_DIR`` and
-``WEB_DIR``. You can also access to any variable defined in the ``extra`` section
-of your ``composer.json`` file:
+variables available: ``%BIN_DIR%``, ``%CONF_DIR%``, ``%ETC_DIR%``, ``%SRC_DIR%``
+and ``%WEB_DIR%``. You can also access to any variable defined in the ``extra``
+section of your ``composer.json`` file:
 
 .. code-block:: json
 
@@ -130,7 +131,7 @@ of your ``composer.json`` file:
 
 Now you can use ``%MY_SPECIAL_DIR%`` in your Symfony Flex recipes.
 
-``copy-from-recipe`` configurator
+``copy-from-recipe`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's identical to ``copy-from-package`` but contents are copied from the recipe
@@ -145,7 +146,7 @@ files and directories:
         "src/": "%SRC_DIR%/"
     }
 
-``env`` configurator
+``env`` Configurator
 ~~~~~~~~~~~~~~~~~~~~
 
 Adds the given list of environment variables to the ``.env`` and ``.env.dist``
@@ -155,30 +156,32 @@ files stored in the root of the Symfony project:
 
     {
         "env": {
-            "DB_HOST": "127.0.0.1",
-            "DB_NAME": "symfony",
-            "DB_USER": "root",
-            "DB_PASSWORD": ""
+            "MAILER_TRANSPORT": "smtp",
+            "MAILER_HOST": "localhost",
+            "MAILER_PORT": "25",
+            "MAILER_USER": "",
+            "MAILER_PASSWORD": ""
         }
     }
 
 Symfony Flex turns that recipe into the following content appended to the ``.env``
 and ``.env.dist`` files:
 
-.. code-block:: ini
+.. code-block:: bash
 
     ###> your-recipe-name-here ###
-    DB_HOST=127.0.0.1
-    DB_NAME=symfony
-    DB_USER=root
-    DB_PASSWORD=
+    MAILER_TRANSPORT=smtp
+    MAILER_HOST=localhost
+    MAILER_PORT=25
+    MAILER_USER=
+    MAILER_PASSWORD=
     ###< your-recipe-name-here ###
 
 The ``###> your-recipe-name-here ###`` section separators are needed by
 Symfony Flex to detect the contents added by this dependency in case you
 uninstall it later. Don't remove or modify these separators.
 
-``makefile`` configurator
+``makefile`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds new tasks to the ``Makefile`` file stored in the root of the Symfony project.
@@ -199,15 +202,15 @@ Similar to the ``env`` configurator, the contents are copied into the ``Makefile
 file and wrapped with section separators (``###> your-recipe-name-here ###``)
 that must not be removed or modified.
 
-``composer-scripts`` configurator
+``composer-scripts`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Registers scripts in the ``auto-scripts`` section of the ``composer.json`` file
-to execute them automatically when running ``composer install`` and ``composer update``.
-The value is an associative array where the key is the script to execute (including
-all its arguments and options) and the value is the type of script (``php-script``
-for PHP scripts, ``script`` for Makefile tasks and ``symfony-cmd`` for Symfony
-commands):
+to execute them automatically when running ``composer install`` and ``composer
+update``. The value is an associative array where the key is the script to
+execute (including all its arguments and options) and the value is the type of
+script (``php-script`` for PHP scripts, ``script`` for any shell script and
+``symfony-cmd`` for Symfony commands):
 
 .. code-block:: json
 
@@ -219,7 +222,7 @@ commands):
         }
     }
 
-``gitignore`` configurator
+``gitignore`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds patterns to the ``.gitignore`` file of the Symfony project. Define those
@@ -241,7 +244,7 @@ Similar to other configurators, the contents are copied into the ``.gitignore``
 file and wrapped with section separators (``###> your-recipe-name-here ###``)
 that must not be removed or modified.
 
-``post-install-output`` configurator
+``post-install-output`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Displays contents in the command console after the package has been installed.
@@ -327,5 +330,5 @@ one used by ``symfony/framework-bundle``:
         ]
     }
 
-.. _`Symfony Flex`: https://github.com/fabpot/flex
+.. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
