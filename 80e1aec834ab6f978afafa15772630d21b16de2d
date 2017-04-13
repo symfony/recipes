@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-06T18:02:18Z
+
+I've just added one more option: `version_aliases`. Right now, there is only one recipe using it, `phpunit`. Basically, it lists all additional versions that work with the recipe.
+
+For Symfony, instead of duplicating all recipes when 3.4 is out, we can just add it to `version_aliases` for each 3.3 recipe. If one recipe should be different, then we need to duplicate the recipe (we might want to use symlinks to avoid too many duplications though).
