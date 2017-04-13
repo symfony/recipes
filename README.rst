@@ -26,7 +26,7 @@ Options
 
 This option defines one or more alternative names that can be used to install
 the dependency. Its value is an array of strings. For example, if a dependency
-is published as the ``acme-inc/acme-log-monolog-handler``, it can define one or
+is published as ``acme-inc/acme-log-monolog-handler``, it can define one or
 more aliases to make it easier to install:
 
 .. code-block:: json
@@ -35,17 +35,18 @@ more aliases to make it easier to install:
         "aliases": ["acme-log", "acmelog"]
     }
 
-Developers can now install this dependency as ``composer require acme-log``.
+Developers can now install this dependency with ``composer require acme-log``.
 
 ``version_aliases`` option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This option lists all the additional versions of the dependency that work with
-this very same recipe (only versions with the ``x.y`` syntax are supported).
-This avoids duplicating recipes when a new version of the package is released:
+This option lists all the additional dependency versions (using the ``x.y``
+format) that work with this very same recipe. This avoids duplicating recipes
+when a new version of the package is released:
 
 .. code-block:: json
 
+    // vendor/package-name/3.2/manifest.json
     {
         "version_aliases": ["3.3", "3.4", "4.0"]
     }
@@ -53,7 +54,7 @@ This avoids duplicating recipes when a new version of the package is released:
 .. note::
 
     When using ``version_aliases``, the directory where the recipe is defined
-    must be the oldest supported version (``3.3`` in the previous example).
+    must be the oldest supported version (``3.2`` in the previous example).
 
 Configurators
 -------------
@@ -74,7 +75,7 @@ Symfony Flex provides eight types of tasks, which are called **configurators**:
 Enables one or more bundles in the Symfony application by appending them to the
 ``bundles.php`` file. Its value is an associative array where the key is the
 bundle class name and the value is an array of environments where it must be
-enabled. The supported environtments are ``dev``, ``prod``, ``test`` and ``all``
+enabled. The supported environments are ``dev``, ``prod``, ``test`` and ``all``
 (which enables the bundle in all environments):
 
 .. code-block:: json
@@ -86,7 +87,9 @@ enabled. The supported environtments are ``dev``, ``prod``, ``test`` and ``all``
         }
     }
 
-The previous recipe is transformed by Symfony Flex into the following PHP code::
+The previous recipe is transformed by Symfony Flex into the following PHP code:
+
+.. code-block:: php
 
     // etc/bundles.php
     return [
@@ -156,11 +159,8 @@ files stored in the root of the Symfony project:
 
     {
         "env": {
-            "MAILER_TRANSPORT": "smtp",
-            "MAILER_HOST": "localhost",
-            "MAILER_PORT": "25",
-            "MAILER_USER": "",
-            "MAILER_PASSWORD": ""
+            "APP_ENV": "dev",
+            "APP_DEBUG": "1"
         }
     }
 
@@ -170,11 +170,8 @@ and ``.env.dist`` files:
 .. code-block:: bash
 
     ###> your-recipe-name-here ###
-    MAILER_TRANSPORT=smtp
-    MAILER_HOST=localhost
-    MAILER_PORT=25
-    MAILER_USER=
-    MAILER_PASSWORD=
+    APP_ENV=dev
+    APP_DEBUG=1
     ###< your-recipe-name-here ###
 
 The ``###> your-recipe-name-here ###`` section separators are needed by
