@@ -11,12 +11,31 @@ Creating Flex Recipes
 
 Symfony Flex recipes consist of a ``manifest.json`` config file and, optionally,
 any number of files and directories. Recipes must be stored on their own
-repositories, outside of your Composer package repository.
+repositories, outside of your Composer package repository. They must follow the
+``vendor/package/version/`` directory structure, where ``version`` is the
+minimum version supported by the recipe.
 
-All the contents of the ``manifest.json`` file are optional and they are divided
-into options and configurators.
+The following example shows the real directory structure of some Symfony recipes:
 
-.. TODO: explain that recipe contents must be versioned
+::
+
+    symfony/
+        console/
+            3.3/
+                bin/
+                manifest.json
+        framework-bundle/
+            3.3/
+                etc/
+                src/
+                web/
+                manifest.json
+        requirements-checker/
+            1.0/
+                manifest.json
+
+All the ``manifest.json`` file contents are optional and they are divided into
+options and configurators.
 
 Options
 -------
