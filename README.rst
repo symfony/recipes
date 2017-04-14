@@ -258,23 +258,22 @@ Displays contents in the command console after the package has been installed.
 Avoid outputting meaningless information and use it only when you need to show
 help messages or the next step actions.
 
-The contents are defined as a simple array of strings (Symfony Flex adds a
-``PHP_EOL`` character after each line). `Symfony Console styles and colors`_
-are supported too:
+The contents must be defined in a file named ``post-install.txt`` (Symfony Flex
+adds a ``PHP_EOL`` character after each line). `Symfony Console styles and
+colors`_ are supported too:
 
-.. code-block:: json
+.. code-block:: text
 
-    {
-        "post-install-output": [
-            "<fg=blue> What's next? </>",
-            "",
-            "  * <fg=blue>Run</> your application:",
-            "    1. Execute the <comment>make serve</comment> command;",
-            "    2. Browse to the <comment>http://localhost:8000/</comment> URL.",
-            "",
-            "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</comment>"
-        ]
-    }
+    <bg=blue;fg=white>              </>
+    <bg=blue;fg=white> What's next? </>
+    <bg=blue;fg=white>              </>
+
+      * <fg=blue>Run</> your application:
+        1. Change to the project directory
+        2. Execute the <comment>make serve</> command;
+        3. Browse to the <comment>http://localhost:8000/</> URL.
+
+      * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
 
 Full Example
 ------------
@@ -302,38 +301,11 @@ one used by ``symfony/framework-bundle``:
             "APP_DEBUG": "1",
             "APP_SECRET": "Ju$tChang3it!"
         },
-        "makefile": [
-            "cache-clear:",
-            "\t@test -f bin/console && bin/console cache:clear --no-warmup || rm -rf var/cache/*",
-            ".PHONY: cache-clear",
-            "",
-            "cache-warmup: cache-clear",
-            "\t@test -f bin/console && bin/console cache:warmup || echo \"cannot warmup the cache (needs symfony/console)\"",
-            ".PHONY: cache-warmup",
-            "",
-            "serve:",
-            "\t@echo \"\\033[32;49mServer listening on http://127.0.0.1:8000\\033[39m\"",
-            "\t@echo \"Quit the server with CTRL-C.\"",
-            "\t@echo \"Run \\033[32mcomposer require symfony/web-server-bundle\\033[39m for a better web server\"",
-            "\tphp -S 127.0.0.1:8000 -t web",
-            ".PHONY: serve"
-        ],
         "gitignore": [
             ".env",
             "/var/",
             "/vendor/",
             "/web/bundles/"
-        ],
-        "post-install-output": [
-            "<bg=blue;fg=white>              </>",
-            "<bg=blue;fg=white> What's next? </>",
-            "<bg=blue;fg=white>              </>",
-            "",
-            "  * <fg=blue>Run</> your application:",
-            "    1. Execute the <comment>make serve</comment> command;",
-            "    2. Browse to the <comment>http://localhost:8000/</comment> URL.",
-            "",
-            "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</comment>"
         ]
     }
 

@@ -21,17 +21,5 @@
         "/var/",
         "/vendor/",
         "/web/bundles/"
-    ],
-    "post-install-output": [
-        "<bg=blue;fg=white>              </>",
-        "<bg=blue;fg=white> What's next? </>",
-        "<bg=blue;fg=white>              </>",
-        "",
-        "  * <fg=blue>Run</> your application:",
-        "    1. Change to the project directory",
-        "    2. Execute the <comment>make serve</comment> command;",
-        "    3. Browse to the <comment>http://localhost:8000/</comment> URL.",
-        "",
-        "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</comment>"
     ]
 }
