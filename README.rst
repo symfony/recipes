@@ -200,19 +200,10 @@ uninstall it later. Don't remove or modify these separators.
 ``makefile`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds new tasks to the ``Makefile`` file stored in the root of the Symfony project.
-The value is a simple array where each element is a new line (Symfony Flex adds
-a ``PHP_EOL`` character after each line):
-
-.. code-block:: json
-
-    {
-        "makefile": [
-            "cache-clear:",
-            "\t@test -f bin/console && bin/console cache:clear --no-warmup || rm -rf var/cache/*",
-            ".PHONY: cache-clear",
-        ]
-    }
+Adds new tasks to the ``Makefile`` file stored in the root of the Symfony
+project. Unlike other configurators, there is no specific entry in the manifest
+file. Define tasks by creating a ``Makefile`` file at the root of the recipe
+directory (Symfony Flex adds a ``PHP_EOL`` character after each line).
 
 Similar to the ``env`` configurator, the contents are copied into the ``Makefile``
 file and wrapped with section separators (``###> your-recipe-name-here ###``)
