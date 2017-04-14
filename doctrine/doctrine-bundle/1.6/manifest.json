@@ -11,6 +11,5 @@
         "#2": "For a sqlite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
         "#3": "Set \"serverVersion\" to your server version to avoid edge-case exceptions and extra database calls",
         "DATABASE_URL": "mysql://root@127.0.0.1:3306/symfony?charset=utf8mb4&serverVersion=5.7"
-    },
-    "aliases": ["doctrine", "orm"]
+    }
 }
