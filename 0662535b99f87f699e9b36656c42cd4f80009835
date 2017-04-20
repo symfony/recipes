@@ -1,0 +1,166 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-12T04:25:14Z
+
+@dunglas You can now easily test PRs :)
+
+Each PR has its own Flex server. So to test this PR for instance, define `FLEX_ENDPOINT` like this:
+
+```bash
+FLEX_ENDPOINT=https://pr21.flex.symfony.com/ composer req some/package
+```
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-12T09:30:38Z
+
+@fabpot could it be reported on the github repo using the github deployment API so that contributors know when the updated deployment is available and don't have to guess the URL ? It would make it easier (not critical currently as the core team can remember the convention, but much easier once the repo becomes public)
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-12T13:55:59Z
+
+@stof Right now, Symfony Flex creates a commit status as you can see here with the link begin available on "Details". Is that what you're looking for?
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-12T14:43:01Z
+
+Well, as green status are collapsed by default, people might not notice that it includes info about a deployment.
+Github also has a deployment API, which is dedicated to that, and makes the deployment more visible (the target of the link might be the same than for the commit status).
+See this screenshot of how it looks like when using heroku review apps:
+![github_deployment](https://cloud.githubusercontent.com/assets/439401/24963388/c2a857a0-1f9e-11e7-9dc0-f3ce41d80dba.png)
+
+The commit status is good to make the PR unmergeable when recipes are invalid. (btw, could the validator be part of the repo like in https://github.com/FriendsOfPHP/security-advisories to allow running it locally or is it too much work ?). The deployment API on the other hand would make it easy to access the temporary deployment.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-12T18:17:10Z
+
+@stof Done :)
+
+For the validator, it's part of the server, written in Go, so not easy to add to the repository.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-12T18:28:53Z
+
+@dunglas Have you tested your recipe? Does it work well? I've tried and everything installs correctly at least :)
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-12T21:38:19Z
+
+The flex part works great. But I'll need to make some minor changes to do to the API Platform Bundle's configuration to allow it to work without the full stack framework installed.
+
+For now I've to do `composer req validator twig doctrine/annotations symfony/property-access` to be able to use it. Most of those packages are not required by API Platform's components themselves, I should be adjust the bundle to work with a minimal setup like the one provided by Flex.
+
+The only annoying thing related to Flex is that templates provided by bundles are not discovered automatically:
+
+    Unable to find template "ApiPlatformBundle:SwaggerUi:index.html.twig" (looked into: /Users/dunglas/workspace/flex-api/templates).
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-12T21:40:48Z
+
+Btw, what is the preferred way to encourage the user to install some extra packages? For instance API Platform works with a minimal setup but the user will miss most interesting features like the Doctrine ORM integration and the UI.
+
+Should I add a post install message like "Type `composer require orm twig` to enable the user interface and the integration with the Doctrine ORM."?
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-13T07:15:26Z
+
+@dunglas you would need to use the `@ApiPlatform/SwaggerUI/index.html.twig` notation. Otherwise, you also need `symfony/templating` as a dependency (TwigBundle without the Templating component only supports the native Twig syntax, not the Symfony specific one)
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-13T07:16:22Z
+
+> For the validator, it's part of the server, written in Go, so not easy to add to the repository.
+
+Then fine. Having the CI can be enough if the report is clear enough (and feedback is fast on push)
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-14T01:17:26Z
+
+@dunglas You should really get rid of the `a:b:c` template notation and switch to the native Twig notation `@ApiPlatform/x`.
+
+For optional, but interesting packages, I think adding a `post-install-output` is the way to go (with some colors to emphasize what needs to be done).
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-15T09:28:14Z
+
+Minor issues (including the template notation) fixed in API Platform and pack created.
+
+~~@fabpot do you have an idea of why it fails? https://pr21.flex.symfony.com/~~ NVM...
+
+---------------------------------------------------------------------------
+
+by dunglas at 2017-04-15T10:04:20Z
+
+Works like a charm!
+
+To test it:
+
+```
+composer create-project symfony/skeleton:dev-temp flex-api
+cd flex-api
+FLEX_ENDPOINT=https://pr21.flex.symfony.com/ composer require api
+```
+
+Then, create an API for the "Hello" resource class:
+
+```php
+<?php
+
+// src/Entity/Hello.php
+
+namespace App\Entity;
+
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Say Hello.
+ *
+ * @ORM\Entity
+ * @ApiResource
+ */
+class Hello
+{
+    /**
+     * @var int The id
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    public $id;
+
+    /**
+     * @var string A name
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    public $name;
+}
+```
+
+And finally create the related schema:
+
+```
+bin/console doctrine:schema:create
+```
+
+Go to `http://127.0.0.1:8000/` to play with the new API.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-15T14:41:41Z
+
+That's wonderful! I like it a lot. No configuration, nothing more than pure business logic.
