@@ -1,24 +1,8 @@
 services:
     _defaults:
         autowire: true
+        autoconfigure: true
         public: false
-
-    _instanceof:
-        Symfony\Component\Console\Command\Command:
-            tags: ['console.command']
-            public: true
-
-        Twig_ExtensionInterface:
-            tags: ['twig.extension']
-
-        Symfony\Component\EventDispatcher\EventSubscriberInterface:
-            tags: ['kernel.event_subscriber']
-
-        Symfony\Component\Form\FormTypeInterface:
-            tags: ['form.type']
-
-        Symfony\Component\Security\Core\Authorization\VoterInterface:
-            tags: ['security.voter']
 
     App\:
         resource: '../../src/{Command,Form,EventSubscriber,Twig,Voter}'
