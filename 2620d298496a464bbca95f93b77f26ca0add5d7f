@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------
+
+by sstok at 2017-04-21T14:07:26Z
+
+Note that PHPUnit doesn't actually use this uri for validating, it's mainly for IDE auto suggest 😛
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-04-21T14:08:45Z
+
+Yep, but still, _consistency_, you know 😜
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-21T23:40:16Z
+
+What about doing it the other way and bump the version to the max in the XSD? That way, you have autocompletion for everything supported.
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-04-22T07:49:22Z
+
+You're right @fabpot, updated the PR
