@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%"
+    },
+    "env": {
+        "JWT_PRIVATE_KEY_PATH": "%ETC_DIR%/jwt/private.pem",
+        "JWT_PUBLIC_KEY_PATH": "%ETC_DIR%/jwt/public.pem",
+        "JWT_PASSPHRASE": "%generate(secret)%"
+    }
+}
