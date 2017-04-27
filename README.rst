@@ -35,6 +35,12 @@ The following example shows the real directory structure of some Symfony recipes
 All the ``manifest.json`` file contents are optional and they are divided into
 options and configurators.
 
+.. note::
+
+    Don't create a recipe for Symfony bundles if the only configuration in the
+    manifest is the registration of the bundle for all environments, as this is
+    done automatically.
+
 Options
 -------
 
