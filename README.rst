@@ -137,8 +137,8 @@ directory of the application:
 The ``%BIN_DIR%`` string is a special value that it's turned into the absolute
 path of the binaries directory of the Symfony application. These are the special
 variables available: ``%BIN_DIR%``, ``%CONF_DIR%``, ``%ETC_DIR%``, ``%SRC_DIR%``
-and ``%WEB_DIR%``. You can also access to any variable defined in the ``extra``
-section of your ``composer.json`` file:
+``%VAR_DIR%`` and ``%WEB_DIR%``. You can also access to any variable defined in
+the ``extra`` section of your ``composer.json`` file:
 
 .. code-block:: json
 
