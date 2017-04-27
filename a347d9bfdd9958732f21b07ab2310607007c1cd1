@@ -1,0 +1,45 @@
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-27T18:32:49Z
+
+Proposal for another check: the GitHub repo has "php", "symfony", "bundle" and "symfony-bundle" topics, as officially recommended (https://symfony.com/blog/standardizing-the-github-topics-for-symfony-repositories).
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-27T18:34:35Z
+
+Another proposal: XLIFF files must be valid (it's easy to make mistakes and break everything ... I did that recently on the Symfony Demo app: https://github.com/symfony/symfony-demo/pull/549)
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-27T18:34:58Z
+
+Another proposal: service XML files must be valid (we have an XSD for them after all).
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-27T18:38:12Z
+
+I don't think adding XLIFF files in the recipe makes much sense, so I'm not sure this makes sense to validate them.
+
+And if you talk about validating the content of the bundle itself, this would be wrong: it would not forbid you to break your own bundle (as there is nothing triggering a recipe PR in this case), but then your own broken bundle would forbid other people to submit their own recipes (as the recipe of your own bundle, which is already merged, would then become invalid for rules validating content in another repo).
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-27T18:38:16Z
+
+Another proposal: bundles must be compatible with Symfony.
+
+Not simple but the idea is: Symfony Flex server creates an empty Symfony project and then installs the bundle. The check is to run "bin/console --version" and verify that no errors happen. This check is not perfect, but it rules out a lot of incompatibilities.
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-27T18:40:09Z
+
+@stof yes, I was suggesting to check some of the bundle contents. Using Flex to install a bundle and find that your app is broken is not a good experience (of course it's not caused by Flex ... but if we can use Flex to detect those issues...)
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-27T19:05:26Z
+
+@javiereguiluz I think those kind of checks are interesting but should be part of a checker that people can install on their bundle repository directly.
