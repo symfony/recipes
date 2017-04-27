@@ -279,6 +279,26 @@ colors`_ are supported too:
 
       * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
 
+Validation
+----------
+
+When submitting a recipe, several checks are automatically executed to validate
+the recipe:
+
+* YAML files suffix must be `.yaml`, not `.yml`;
+* YAML files must be valid;
+* JSON files must be valid;
+* Aliases are only supported in the main repository, not the contrib one;
+* Aliases must not be already defined by another package;
+* All versions listed in `version_aliases` and the main version should be valid;
+* Version defined in the directory must be the oldest amongst those defined in `version_aliases`;
+* The package must exist on Packagist;
+* The package must have at least one version on Packagist;
+* The package must have an MIT or BSD license;
+* The package must be of type "symfony-bundle" if a bundle is registered in the manifest;
+* The package must have a registered bundle in the manifest if type is "symfony-bundle";
+* The package does not only register a bundle for all environments.
+
 Full Example
 ------------
 
