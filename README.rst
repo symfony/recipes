@@ -1,16 +1,14 @@
-Symfony Flex Recipes
-====================
+Symfony Recipes
+===============
 
-`Symfony Flex`_ is the new way to manage dependencies in Symfony applications.
-One of its main features is the automatic installation, configuration and
-removal of dependencies. This automation is possible thanks to the **Symfony Flex
-Recipes**.
+Symfony recipes allow the automation of Composer packages configuration via the
+`Symfony Flex`_ Composer plugin.
 
-Creating Flex Recipes
----------------------
+Creating Recipes
+----------------
 
-Symfony Flex recipes consist of a ``manifest.json`` config file and, optionally,
-any number of files and directories. Recipes must be stored on their own
+Symfony recipes consist of a ``manifest.json`` config file and, optionally, any
+number of files and directories. Recipes must be stored on their own
 repositories, outside of your Composer package repository. They must follow the
 ``vendor/package/version/`` directory structure, where ``version`` is the
 minimum version supported by the recipe.
@@ -36,6 +34,12 @@ The following example shows the real directory structure of some Symfony recipes
 
 All the ``manifest.json`` file contents are optional and they are divided into
 options and configurators.
+
+.. note::
+
+    Don't create a recipe for Symfony bundles if the only configuration in the
+    manifest is the registration of the bundle for all environments, as this is
+    done automatically.
 
 Options
 -------
@@ -81,12 +85,12 @@ Configurators
 Recipes define the different tasks executed when installing a dependency, such
 as running commands, copying files or adding new environment variables. Recipes
 only contain the tasks needed to install and configure the dependency because
-Symfony Flex is smart enough to reverse those tasks when uninstalling and
+Symfony is smart enough to reverse those tasks when uninstalling and
 unconfiguring the dependencies.
 
-Symfony Flex provides eight types of tasks, which are called **configurators**:
-``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``, ``makefile``,
-``composer-scripts``, ``gitignore``, and ``post-install-output``.
+There are eight types of tasks, which are called **configurators**:
+``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``,
+``makefile``, ``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
 ``bundles`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +110,7 @@ enabled. The supported environments are ``dev``, ``prod``, ``test`` and ``all``
         }
     }
 
-The previous recipe is transformed by Symfony Flex into the following PHP code:
+The previous recipe is transformed into the following PHP code:
 
 .. code-block:: php
 
@@ -151,7 +155,7 @@ the ``extra`` section of your ``composer.json`` file:
         }
     }
 
-Now you can use ``%MY_SPECIAL_DIR%`` in your Symfony Flex recipes.
+Now you can use ``%MY_SPECIAL_DIR%`` in your recipes.
 
 ``copy-from-recipe`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -183,7 +187,7 @@ files stored in the root of the Symfony project:
         }
     }
 
-Symfony Flex turns that recipe into the following content appended to the ``.env``
+This recipe is converted into the following content appended to the ``.env``
 and ``.env.dist`` files:
 
 .. code-block:: bash
@@ -193,9 +197,9 @@ and ``.env.dist`` files:
     APP_DEBUG=1
     ###< your-recipe-name-here ###
 
-The ``###> your-recipe-name-here ###`` section separators are needed by
-Symfony Flex to detect the contents added by this dependency in case you
-uninstall it later. Don't remove or modify these separators.
+The ``###> your-recipe-name-here ###`` section separators are needed by Symfony
+to detect the contents added by this dependency in case you uninstall it later.
+Don't remove or modify these separators.
 
 ``makefile`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -203,7 +207,7 @@ uninstall it later. Don't remove or modify these separators.
 Adds new tasks to the ``Makefile`` file stored in the root of the Symfony
 project. Unlike other configurators, there is no specific entry in the manifest
 file. Define tasks by creating a ``Makefile`` file at the root of the recipe
-directory (Symfony Flex adds a ``PHP_EOL`` character after each line).
+directory (a ``PHP_EOL`` character is added after each line).
 
 Similar to the ``env`` configurator, the contents are copied into the ``Makefile``
 file and wrapped with section separators (``###> your-recipe-name-here ###``)
@@ -233,8 +237,8 @@ script (``php-script`` for PHP scripts, ``script`` for any shell script and
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adds patterns to the ``.gitignore`` file of the Symfony project. Define those
-patterns as a simple array of strings (Symfony Flex adds a ``PHP_EOL`` character
-after each line):
+patterns as a simple array of strings (a ``PHP_EOL`` character is added after
+each line):
 
 .. code-block:: json
 
@@ -258,8 +262,8 @@ Displays contents in the command console after the package has been installed.
 Avoid outputting meaningless information and use it only when you need to show
 help messages or the next step actions.
 
-The contents must be defined in a file named ``post-install.txt`` (Symfony Flex
-adds a ``PHP_EOL`` character after each line). `Symfony Console styles and
+The contents must be defined in a file named ``post-install.txt`` (a
+``PHP_EOL`` character is added after each line). `Symfony Console styles and
 colors`_ are supported too:
 
 .. code-block:: text
