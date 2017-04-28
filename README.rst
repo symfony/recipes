@@ -203,8 +203,8 @@ Don't remove or modify these separators.
 
 .. tip::
 
-    Use ``%generate(secret)%`` as the value of any environment variable to ask
-    Symfony to replace it with a cryptographically secure random value of 16 bytes.
+    Use ``%generate(secret)%`` as the value of any environment variable to
+    replace it with a cryptographically secure random value of 16 bytes.
 
 ``makefile`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
