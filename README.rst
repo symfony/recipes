@@ -4,6 +4,9 @@ Symfony Recipes
 Symfony recipes allow the automation of Composer packages configuration via the
 `Symfony Flex`_ Composer plugin.
 
+This repository contains "official" recipes for Composer packages endorsed by
+the Symfony Core Team. For contributed recipes, see the `contrib repository`_.
+
 Creating Recipes
 ----------------
 
@@ -334,4 +337,5 @@ one used by ``symfony/framework-bundle``:
     }
 
 .. _`Symfony Flex`: https://github.com/symfony/flex
+.. _`contrib repository`: https://github.com/symfony/recipes-contrib
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
