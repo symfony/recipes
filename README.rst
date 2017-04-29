@@ -204,6 +204,11 @@ The ``###> your-recipe-name-here ###`` section separators are needed by Symfony
 to detect the contents added by this dependency in case you uninstall it later.
 Don't remove or modify these separators.
 
+.. tip::
+
+    Use ``%generate(secret)%`` as the value of any environment variable to
+    replace it with a cryptographically secure random value of 16 bytes.
+
 ``makefile`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
