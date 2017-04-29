@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-04-28T07:09:05Z
+
+It is a Flex feature or a Symfony feature?
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-28T07:31:02Z
+
+it is a Flex feature. It will replace it by a random value when editing the .env file
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-28T07:32:15Z
+
+@Pierstoval in #34 Fabien removed most references to the "Flex" name, so I thought it was a good idea to not mention it. But I've reworded to not mention neither Symfony nor Flex.
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-04-28T09:32:25Z
+
+Yeah, because there's a difference between Symfony (the framework) and Symfony Flex (the package auto-configurator), and the server behind all of this that does the validation 😆 Lots of new cool stuff!
