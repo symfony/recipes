@@ -5,7 +5,7 @@ services:
         public: false
 
     App\:
-        resource: '../../src/{Command,Form,EventSubscriber,Twig,Voter}'
+        resource: '../../src/{Command,Form,EventSubscriber,Twig,Security}'
 
     App\Controller\:
         resource: '../../src/Controller'
