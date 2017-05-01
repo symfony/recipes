@@ -1,1 +1,2 @@
-<bg=blue;fg=white>Now</>, run <comment>make generate-jwt-keys</> to generate a key pair for LexikJWTAuthenticationBundle.
+<bg=blue;fg=white> Next for LexikJWTAuthenticationBundle </>
+    Run <comment>make generate-jwt-keys</> to generate a key pair.
