@@ -300,6 +300,7 @@ the recipe:
 * Aliases must not be already defined by another package;
 * All versions listed in `version_aliases` and the main version should be valid;
 * Version defined in the directory must be the oldest amongst those defined in `version_aliases`;
+* The manifest file only contains supported keys;
 * The package must exist on Packagist;
 * The package must have at least one version on Packagist;
 * The package must have an MIT or BSD license;
