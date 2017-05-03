@@ -4,7 +4,6 @@ framework:
     #csrf_protection: null
     #http_method_override: true
     #trusted_hosts: null
-    #trusted_proxies: null
     # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
     #session:
     #    handler_id: session.handler.native_file
