@@ -2,5 +2,5 @@
     "bundles": {
         "JMS\\SecurityExtraBundle\\JMSSecurityExtraBundle": ["all"]
     },
-    "aliases": ["fake"]
+    "alias": ["fake"]
 }
