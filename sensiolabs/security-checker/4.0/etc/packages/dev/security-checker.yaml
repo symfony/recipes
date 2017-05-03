@@ -5,6 +5,6 @@ services:
 
     sensio_distribution.security_checker.command:
         class: SensioLabs\Security\Command\SecurityCheckerCommand
-        arguments: ["@sensio_distribution.security_checker"]
+        arguments: ['@sensio_distribution.security_checker']
         tags:
             - { name: console.command }
