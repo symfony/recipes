@@ -31,7 +31,7 @@ final class Kernel extends BaseKernel
     {
         $contents = require dirname(__DIR__).'/etc/bundles.php';
         foreach ($contents as $class => $envs) {
-            if (isset($envs['all']) || isset($envs[$this->getEnvironment()])) {
+            if (isset($envs['all']) || isset($envs[$this->environment])) {
                 yield new $class();
             }
         }
@@ -41,8 +41,8 @@ final class Kernel extends BaseKernel
     {
         $confDir = dirname(__DIR__).'/etc';
         $loader->import($confDir.'/packages/*'.self::CONFIG_EXTS, 'glob');
-        if (is_dir($confDir.'/packages/'.$this->getEnvironment())) {
-            $loader->import($confDir.'/packages/'.$this->getEnvironment().'/**/*'.self::CONFIG_EXTS, 'glob');
+        if (is_dir($confDir.'/packages/'.$this->environment)) {
+            $loader->import($confDir.'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
         }
         $loader->import($confDir.'/container'.self::CONFIG_EXTS, 'glob');
     }
@@ -53,8 +53,8 @@ final class Kernel extends BaseKernel
         if (is_dir($confDir.'/routing/')) {
             $routes->import($confDir.'/routing/*'.self::CONFIG_EXTS, '/', 'glob');
         }
-        if (is_dir($confDir.'/routing/'.$this->getEnvironment())) {
-            $routes->import($confDir.'/routing/'.$this->getEnvironment().'/**/*'.self::CONFIG_EXTS, '/', 'glob');
+        if (is_dir($confDir.'/routing/'.$this->environment)) {
+            $routes->import($confDir.'/routing/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         }
         $routes->import($confDir.'/routing'.self::CONFIG_EXTS, '/', 'glob');
     }
