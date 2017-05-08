@@ -1,4 +1,5 @@
+# see http://symfony.com/foo/bar
 easy_admin_bundle:
-    resource: '@EasyAdminBundle/Controller/AdminController.php'
-    prefix: /admin
-    type: annotation
+  resource: '@EasyAdminBundle/Controller/AdminController.php'
+  prefix: /admin
+  type: annotation
