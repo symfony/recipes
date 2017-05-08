@@ -306,7 +306,8 @@ the recipe:
 * The package must have an MIT or BSD license;
 * The package must be of type "symfony-bundle" if a bundle is registered in the manifest;
 * The package must have a registered bundle in the manifest if type is "symfony-bundle";
-* The package does not only register a bundle for all environments.
+* The package does not only register a bundle for all environments;
+* The Symfony website must be referenced using HTTPs.
 
 Full Example
 ------------
