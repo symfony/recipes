@@ -308,6 +308,8 @@ the recipe:
 * The package must be of type "symfony-bundle" if a bundle is registered in the manifest;
 * The package must have a registered bundle in the manifest if type is "symfony-bundle";
 * The package does not only register a bundle for all environments;
+* All text files should end with a newline;
+* All file names should use the underscore notation;
 * The Symfony website must be referenced using HTTPs.
 
 Full Example
