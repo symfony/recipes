@@ -293,7 +293,7 @@ Validation
 When submitting a recipe, several checks are automatically executed to validate
 the recipe:
 
-* YAML files suffix must be `.yaml`, not `.yml`;
+* YAML files suffix must be ``.yaml``, not ``.yml``;
 * YAML files must be valid;
 * YAML files must use 4 space indentations;
 * JSON files must be valid;
@@ -309,7 +309,7 @@ the recipe:
 * The package must have a registered bundle in the manifest if type is "symfony-bundle";
 * The package does not only register a bundle for all environments;
 * All text files should end with a newline;
-* All configuration file names under `etc` should use the underscore notation;
+* All configuration file names under ``etc`` should use the underscore notation;
 * The Symfony website must be referenced using HTTPs.
 
 Full Example
