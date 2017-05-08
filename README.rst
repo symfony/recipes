@@ -295,6 +295,7 @@ the recipe:
 
 * YAML files suffix must be `.yaml`, not `.yml`;
 * YAML files must be valid;
+* YAML files must use 4 space indentations;
 * JSON files must be valid;
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
