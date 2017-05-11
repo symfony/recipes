@@ -1,2 +1,2 @@
 doctrine_migrations:
-    dir_name: '%kernel.project_dir%/DoctrineMigrations'
+    dir_name: '%kernel.project_dir%/src/Migrations'
