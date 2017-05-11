@@ -5,6 +5,7 @@
     "copy-from-recipe": {
         "etc/": "%ETC_DIR%"
     },
+    "aliases": ["jwt-auth"],
     "env": {
         "JWT_PRIVATE_KEY_PATH": "%ETC_DIR%/jwt/private.pem",
         "JWT_PUBLIC_KEY_PATH": "%ETC_DIR%/jwt/public.pem",
