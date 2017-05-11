@@ -1,5 +1,2 @@
 doctrine_migrations:
     dir_name: '%kernel.project_dir%/DoctrineMigrations'
-    namespace: App\Migrations
-    table_name: migration_versions
-    name: Application Migrations
