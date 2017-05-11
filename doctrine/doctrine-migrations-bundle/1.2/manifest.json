@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "aliases": ["doctrine-migrations", "migrations"]
+}
