@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+
+by stof at 2017-05-11T14:56:34Z
+
+@fabpot there was some discussion in the past about forcing bundles to use their DI alias for the naming of the YAML config file they add in `packages` (which is not the case here, due to `migrations.yaml` vs `doctrine_migrations`). Is it something we want to enforce ?
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-11T19:35:48Z
+
+@stof is right, you rename `migrations.yaml` to `doctrine_migrations.yaml`
