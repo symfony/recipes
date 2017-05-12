@@ -297,6 +297,7 @@ the recipe:
 * YAML files must be valid;
 * YAML files must use 4 space indentations;
 * JSON files must be valid;
+* JSON files must use 4 space indentations;
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
 * All versions listed in `version_aliases` and the main version should be valid;
