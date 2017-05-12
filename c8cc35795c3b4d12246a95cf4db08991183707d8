@@ -1,0 +1,109 @@
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-04T10:04:16Z
+
+I made a different version with suggestions from @greg0ire 👍
+
+*I really need to learn how to fully utilize Makefile.*
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-05T16:22:23Z
+
+I've just tested and it works quite well. Well done!
+
+Here is the output when console and the web server are not installed:
+
+```
+bin/console could not be found. Run composer require console to install the console.
+You may use an alternate binary by using: make CONSOLE=path/to/console some_target
+
+/bin/sh: bin/console: No such file or directory
+Server listening on http://127.0.0.1:8000
+Quit the server with CTRL-C.
+Run composer require symfony/web-server-bundle for a better web server
+php -S 127.0.0.1:8000 -t web
+PHP 7.1.2 Development Server started at Fri May  5 09:17:46 2017
+Listening on http://127.0.0.1:8000
+Document root is /private/tmp/foobar/web
+Press Ctrl-C to quit.
+```
+
+Is it possible to remove the `/bin/sh: bin/console: No such file or directory` part?
+
+I think we should also use shortcuts when possible:
+
+`Run composer req cli to install the Symfony console.`
+`Run composer req webserver for a better web server`
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-05T16:23:41Z
+
+Forgot to mention something: the `bin/console could not be found.` message should probably not be in red as the command works without it; so this is not an error to not have the console installed.
+
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-05T16:56:21Z
+
+I'm away for today, so feel free to push new commits ;)
+
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-06T09:46:57Z
+
+> Is it possible to remove the /bin/sh: bin/console: No such file or directory part?
+
+No idea 😐 it's possible suppress errors in a rule but not when the rule itself itself it a target or something. I can make the console a rule but then you still need to check if console exists in each rule, is this acceptable?
+
+```makefile
+CONSOLE=bin/console
+sf_console:
+	@test -f $(CONSOLE) || printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
+	@exit
+
+serve_as_sf: sf_console
+	@test -f $(CONSOLE) && $(CONSOLE)|grep server:start > /dev/null || ${MAKE} serve_as_php
+	@$(CONSOLE) server:start || exit 0
+
+	@printf "Quit the server with \033[32;49mbin/console server:stop.\033[39m\n"
+
+serve_as_php:
+	@printf "\033[32;49mServer listening on http://127.0.0.1:8000\033[39m\n";
+	@printf "Quit the server with CTRL-C.\n"
+	@printf "Run \033[32mcomposer require symfony/web-server-bundle\033[39m for a better web server\n"
+	php -S 127.0.0.1:8000 -t web
+
+serve:
+	@${MAKE} serve_as_sf
+.PHONY: sf_console serve serve_as_sf serve_as_php
+```
+
+```
+$ make serve
+Run composer require cli to install the Symfony console.
+Server listening on http://127.0.0.1:8000
+Quit the server with CTRL-C.
+Run composer require symfony/web-server-bundle for a better web server
+php -S 127.0.0.1:8000 -t web
+PHP 7.1.3 Development Server started at Sat May  6 11:45:52 2017
+Listening on http://127.0.0.1:8000
+```
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-11T19:38:36Z
+
+@sstok your proposer changes look good to me.
+
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-12T15:05:13Z
+
+OK, all should be good now.
+
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-12T15:07:11Z
+
+OK, should be good now 👍
