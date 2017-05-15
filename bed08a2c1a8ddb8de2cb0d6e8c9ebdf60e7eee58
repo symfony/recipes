@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-05-14T16:57:01Z
+
+What's the purpose of this template? If "contrib" accepts any license, we wouldn't need it. And if "contrib" doesn't accept all licenses, shouldn't we instead add a message explaining which licenses do we accept? Thanks!
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-14T17:00:36Z
+
+Indeed, you're right, I will add the template and only keep the comment.
