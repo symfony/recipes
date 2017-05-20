@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-20T07:40:47Z
+
+Note that a recipe for version 3.3 will be applied when installing version 4.0. I think that's the best thing to do as not applying the recipe when installing 4.0 is worse than trying to apply the recipe for 3.3. Proof if PHPUnit for which the recipe works for version 4, 5, and 6.
+
+And if something breaks, fixing it is as easy as creating a new recipe. That also avoids duplicated recipes with no changes.
