@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-05-16T11:53:03Z
+
+Just to make things consciously: this will load+track all classes in src/ to build the container.
+Any (signature-related) changes to any of them will invalidate the container + every class will be loaded for every single request to check if something changed (using the code in ReflectionClassResource.)
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-16T13:50:11Z
+
+@nicolas-grekas That's indeed a good point and why we add a list of specific directories before. We made the same change in Symfony SE, so we need to decide between DX and performance here. /cc @weaverryan
+
+---------------------------------------------------------------------------
+
+by GuilhemN at 2017-05-16T20:44:21Z
+
+I don't think that's a big deal, generally all classes in `src/` are used either as services or during the compilation so imo unwanted invalidation should not happen often.
+At worse if that becomes a big deal, that's because that's a big application so its admin should know he has to tweak his config to improve perf.
+
+Here I think dx clearly wins, moreover the perf loss is only during compilation.
+
+---------------------------------------------------------------------------
+
+by stof at 2017-05-16T21:44:11Z
+
+thus, if you end up whitelisting most folders in `src` instead of adding everything and excluding some folders, you get exactly the same classes being registered as ReflectionClassResource.
+So the question here is not how many resources you have. It is whether it is easier to write a whitelist or a blacklist to build the list of folders being registered.
+
+---------------------------------------------------------------------------
+
+by weaverryan at 2017-05-17T14:09:26Z
+
+I'm also aware of this tracking issue - and it was on my list for the future to fix, because I think it's a bug. Specifically, if we remove a private service (because it's unused), then we could/should be smart enough to remove its `ReflectionClassResource`. It's just a matter of coding up that fix. If we think it's a critical bug, we could add it in time for the 3.3 release.
+
+I think we should keep just `{Entity,Repository}`... we don't know for sure of any other directories that should definitely *not* be tracked. And no matter what, there will probably be a few opportunities/needs to improve the resource tracking further.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-05-17T14:14:20Z
+
+> if we remove a private service (because it's unused), then we could/should be smart enough to remove its ReflectionClassResource
+
+False assumption: just add an interface on one of them, and autoconfig might add it as eg an event subscriber. This will happen in the dev cycle of many. The current behavior is just accurate to me, no bug.
+
+---------------------------------------------------------------------------
+
+by weaverryan at 2017-05-17T15:19:57Z
+
+@nicolas-grekas you're correct - if we don't track a class and then someone adds an autoconfigurable interface, the container wouldn't rebuild.
+
+I still think we should keep only `{Entity,Repository}`. And then we can see how this works in the wild. I can add a note in the docs about dev performance considerations. The new features - including autowiring - will naturally be a bit more aggressive on rebuilding your cache, which might be a problem in REALLY big projects.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-05-17T15:27:14Z
+
+Let's try, +1 :)
