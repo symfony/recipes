@@ -63,25 +63,6 @@ more aliases to make it easier to install:
 
 Developers can now install this dependency with ``composer require acme-log``.
 
-``version_aliases`` option
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This option lists all the additional dependency versions (using the ``x.y``
-format) that work with this very same recipe. This avoids duplicating recipes
-when a new version of the package is released:
-
-.. code-block:: json
-
-    // vendor/package-name/3.2/manifest.json
-    {
-        "version_aliases": ["3.3", "3.4", "4.0"]
-    }
-
-.. note::
-
-    When using ``version_aliases``, the directory where the recipe is defined
-    must be the oldest supported version (``3.2`` in the previous example).
-
 Configurators
 -------------
 
@@ -300,8 +281,6 @@ the recipe:
 * JSON files must use 4 space indentations;
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
-* All versions listed in `version_aliases` and the main version should be valid;
-* Version defined in the directory must be the oldest amongst those defined in `version_aliases`;
 * The manifest file only contains supported keys;
 * The package must exist on Packagist;
 * The package must have at least one version on Packagist;
