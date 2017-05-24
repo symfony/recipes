@@ -1,0 +1,7 @@
+framework:
+    translator:
+        paths:
+            - '%kernel.project_dir%/etc/translations/'
+        fallbacks:
+            # Setup your app locales here
+            - 'en'
