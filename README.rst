@@ -104,6 +104,26 @@ The previous recipe is transformed into the following PHP code:
         'Symfony\Bundle\MonologBundle\MonologBundle' => ['all' => true],
     ];
 
+``container`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adds new container parameters in the ``container.yaml`` file by adding your parameters
+in the ``container`` option.
+
+This example creates a new ``locale`` container parameter with a default value in your
+container:
+
+.. code-block:: json
+
+    {
+        "container": {
+            "locale": "en"
+        }
+    }
+
+**Note:** For now, when you remove a package, container parameters that were added this
+way are not removed.
+
 ``copy-from-package`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
