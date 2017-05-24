@@ -1,3 +1,10 @@
 {
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "translations/": "translations/"
+    },
+    "container": {
+        "locale": "en"
+    },
     "aliases": ["translator"]
 }
