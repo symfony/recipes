@@ -1,0 +1,11 @@
+parameters:
+    # Change this locale depending on your app's default language
+    locale: 'en'
+
+framework:
+    default_locale: '%locale%'
+    translator:
+        paths:
+            - '%kernel.project_dir%/etc/translations/'
+        fallbacks:
+            - '%locale%'
