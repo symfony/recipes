@@ -1,0 +1,29 @@
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-05-23T14:51:56Z
+
+Should we add a comment here https://github.com/symfony/recipes/blob/master/lexik/jwt-authentication-bundle/2.3/manifest.json#L10 explaining that the paths should be relative to the project dir?
+
+---------------------------------------------------------------------------
+
+by chalasr at 2017-05-23T16:16:54Z
+
+@javiereguiluz That'd be hard since [comments aren't supported in json](https://stackoverflow.com/questions/244777/can-comments-be-used-in-json) :) I'll take care of this when documenting the flex way to install the bundle.
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-05-23T16:25:33Z
+
+See https://github.com/symfony/recipes/blob/master/doctrine/doctrine-bundle/1.6/manifest.json#L10
+
+---------------------------------------------------------------------------
+
+by stof at 2017-05-23T16:28:22Z
+
+@chalasr  People don't read this JSON anyway. They read their .env.dist file
+
+---------------------------------------------------------------------------
+
+by chalasr at 2017-05-23T16:32:06Z
+
+Of course, comment added!
