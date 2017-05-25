@@ -283,6 +283,7 @@ the recipe:
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
 * The manifest file only contains supported keys;
+* The Makefile file does not wrap Symfony Console commands as tasks
 * The package must exist on Packagist;
 * The package must have at least one version on Packagist;
 * The package must have an MIT or BSD license;
