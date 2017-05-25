@@ -277,6 +277,7 @@ the recipe:
 * YAML files suffix must be ``.yaml``, not ``.yml``;
 * YAML files must be valid;
 * YAML files must use 4 space indentations;
+* YAML files under etc/packages must not define a "parameters" section;
 * JSON files must be valid;
 * JSON files must use 4 space indentations;
 * Aliases are only supported in the main repository, not the contrib one;
