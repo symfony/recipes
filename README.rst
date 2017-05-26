@@ -122,8 +122,7 @@ container:
     }
 
 **Note:** For now, when you remove a package, container parameters that were added this
-way are not removed. This configurator should be used only when environment variables do
-not fit your recipe needs.
+way are not removed.
 
 ``copy-from-package`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
