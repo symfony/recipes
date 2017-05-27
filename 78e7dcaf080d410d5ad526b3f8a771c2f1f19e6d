@@ -1,0 +1,52 @@
+---------------------------------------------------------------------------
+
+by pixocode at 2017-05-24T11:44:04Z
+
+:+1:
+
+---------------------------------------------------------------------------
+
+by syrm at 2017-05-24T12:29:18Z
+
++1
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-05-24T12:48:02Z
+
+I'd prefer to move them to the `translations/` dir at the project root dir. Translations are not config, so they shouldn't go to etc/ (or config/).
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-05-24T20:28:36Z
+
+@fabpot
+> I would use ``
+
+I think the full answer didn't come out 😆
+
+I'll fix your reviews in a minute
+
+---------------------------------------------------------------------------
+
+by sstok at 2017-05-25T11:20:25Z
+
+Can't the locale be an ENV variable?
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-05-25T12:36:35Z
+
+I'm not sure that it would be useful, as most of the time it's application-specific, not platform-specific. That's why we often put it in parameters (and in `config.yml`) instead of env vars
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-26T16:30:03Z
+
+@Pierstoval Can you add the License header in the PR description (this is now enforced), thanks.
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-05-26T18:08:03Z
+
+@fabpot Added the same contents as in [recipes-contrib PR template](https://github.com/symfony/recipes-contrib/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
