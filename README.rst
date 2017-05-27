@@ -121,9 +121,6 @@ container:
         }
     }
 
-**Note:** For now, when you remove a package, container parameters that were added this
-way are not removed.
-
 ``copy-from-package`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
