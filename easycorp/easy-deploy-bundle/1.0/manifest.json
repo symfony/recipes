@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "EasyCorp\\Bundle\\EasyDeployBundle\\EasydeployBundle": ["dev"]
+    },
+    "aliases": ["deploy"]
+}
