@@ -1,6 +1,9 @@
 doctrine:
     dbal:
-        url: '%env(DATABASE_URL)%'
+        # Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
+        # For a sqlite database, use: "sqlite:///%kernel.project_dir%/var/data.db"
+        # Set "serverVersion" to your server version to avoid edge-case exceptions and extra database calls
+        url: 'mysql://%env(DB_USER)%:%env(DB_PASSWORD)%@%env(DB_HOST)%:%env(DB_PORT)%/%env(DB_DBNAME)%?charset=utf8mb4&serverVersion=5.7'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
