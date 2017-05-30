@@ -1,6 +1,7 @@
+OPENSSL_BIN := $(shell which openssl)
 generate-jwt-keys:
-ifeq (, $(shell which openssl))
-$(error "Unable to generate keys (needs OpenSSL)")
+ifndef OPENSSL_BIN
+	$(error "Unable to generate keys (needs OpenSSL)")
 endif
 	mkdir -p etc/jwt
 	openssl genrsa -passout pass:${JWT_PASSPHRASE} -out ${JWT_PRIVATE_KEY_PATH} -aes256 4096
