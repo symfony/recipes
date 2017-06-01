@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\DoctrineCacheBundle\\DoctrineCacheBundle": ["all"]
+    }
+}
