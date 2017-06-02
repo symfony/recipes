@@ -1,0 +1,12 @@
+{
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "post-install-output": [
+        ".htaccess files have been created in %ETC_DIR%/ and %SRC_DIR%/ to protect your application.",
+        "Read https://symfony.com/doc/current/setup/web_server_configuration.html",
+        "to learn how to configure and optimize Apache to serve Symfony applications."
+    ],
+    "aliases": ["apache"]
+}
