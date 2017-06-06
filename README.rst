@@ -335,7 +335,7 @@ one used by ``symfony/framework-bundle``:
         "env": {
             "APP_ENV": "dev",
             "APP_DEBUG": "1",
-            "APP_SECRET": "Ju$tChang3it!"
+            "APP_SECRET": "%generate(secret)%"
         },
         "gitignore": [
             ".env",
