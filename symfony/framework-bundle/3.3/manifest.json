@@ -21,5 +21,6 @@
         "/var/",
         "/vendor/",
         "/web/bundles/"
-    ]
+    ],
+    "version_aliases": ["3.4"]
 }
