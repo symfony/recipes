@@ -23,9 +23,9 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When this is a demo scenario that sends a request to :path
+     * @When a demo scenario sends a request to :path
      */
-    public function thisIsADemoScenarioThatSendsARequestTo(string $path)
+    public function aDemoScenarioSendsARequestTo(string $path)
     {
         $this->response = $this->kernel->handle(Request::create($path, 'GET'));
     }
