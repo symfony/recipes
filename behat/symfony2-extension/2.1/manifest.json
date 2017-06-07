@@ -3,5 +3,6 @@
         "behat.yml.dist": "behat.yml.dist",
         "features/": "features/"
     },
-    "aliases": ["behat"]
+    "aliases": ["behat"],
+    "gitignore": ["behat.yml"]
 }
