@@ -12,5 +12,3 @@ framework:
     #fragments: ~
     php_errors:
         log: true
-    router:
-        strict_requirements: null
