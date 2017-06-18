@@ -16,9 +16,7 @@ repositories, outside of your Composer package repository. They must follow the
 ``vendor/package/version/`` directory structure, where ``version`` is the
 minimum version supported by the recipe.
 
-The following example shows the real directory structure of some Symfony recipes:
-
-::
+The following example shows the real directory structure of some Symfony recipes::
 
     symfony/
         console/
@@ -335,7 +333,7 @@ one used by ``symfony/framework-bundle``:
         "env": {
             "APP_ENV": "dev",
             "APP_DEBUG": "1",
-            "APP_SECRET": "Ju$tChang3it!"
+            "APP_SECRET": "%generate(secret)%"
         },
         "gitignore": [
             ".env",
