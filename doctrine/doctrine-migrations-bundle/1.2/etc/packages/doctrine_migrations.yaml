@@ -1,3 +1,2 @@
 doctrine_migrations:
     dir_name: '%kernel.project_dir%/src/Migration'
-    namespace: App\Migration
