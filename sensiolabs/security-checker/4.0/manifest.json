@@ -3,7 +3,7 @@
         "etc/": "%ETC_DIR%/"
     },
     "composer-scripts": {
-        "vendor/bin/security-checker security:check": "php-script"
+        "security-checker security:check": "script"
     },
     "aliases": ["security-check", "security-checker", "sec-checker", "sec-check", "sec-checks"]
 }
