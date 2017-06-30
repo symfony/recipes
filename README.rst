@@ -307,6 +307,7 @@ the recipe:
 * The package does not only register a bundle for all environments;
 * All text files should end with a newline;
 * All configuration file names under ``etc`` should use the underscore notation;
+* All files are stored under a directory referenced by the "copy-from-recipe" section of "manifest.json"
 * The Symfony website must be referenced using HTTPs.
 
 Full Example
