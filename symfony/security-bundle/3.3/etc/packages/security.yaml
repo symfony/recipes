@@ -3,9 +3,8 @@ security:
     providers:
         in_memory: { memory: null }
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+        dev: null
+
         main:
             anonymous: null
 
