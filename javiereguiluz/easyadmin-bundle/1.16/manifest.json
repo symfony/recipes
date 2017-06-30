@@ -5,5 +5,5 @@
     "copy-from-recipe": {
         "etc/": "%ETC_DIR%/"
     },
-    "aliases": ["admin-gen", "admin-generator", "admin"]
+    "alias": ["admin-gen", "admin-generator", "admin"]
 }
