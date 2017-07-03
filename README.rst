@@ -340,7 +340,7 @@ one used by ``symfony/framework-bundle``:
             ".env",
             "/public/bundles/"
             "/var/",
-            "/vendor/",
+            "/vendor/"
         ]
     }
 
