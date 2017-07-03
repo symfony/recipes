@@ -25,9 +25,9 @@ The following example shows the real directory structure of some Symfony recipes
                 manifest.json
         framework-bundle/
             3.3/
-                etc/
+                config/
+                public/
                 src/
-                web/
                 manifest.json
         requirements-checker/
             1.0/
@@ -96,7 +96,7 @@ The previous recipe is transformed into the following PHP code:
 
 .. code-block:: php
 
-    // etc/bundles.php
+    // config/bundles.php
     return [
         'Symfony\Bundle\DebugBundle\DebugBundle' => ['dev' => true, 'test' => true],
         'Symfony\Bundle\MonologBundle\MonologBundle' => ['all' => true],
@@ -139,8 +139,8 @@ directory of the application:
 
 The ``%BIN_DIR%`` string is a special value that it's turned into the absolute
 path of the binaries directory of the Symfony application. These are the special
-variables available: ``%BIN_DIR%``, ``%CONF_DIR%``, ``%ETC_DIR%``, ``%SRC_DIR%``
-``%VAR_DIR%`` and ``%WEB_DIR%``. You can also access to any variable defined in
+variables available: ``%BIN_DIR%``, ``%CONF_DIR%``, ``%CONFIG_DIR%``, ``%SRC_DIR%``
+``%VAR_DIR%`` and ``%PUBLIC_DIR%``. You can also access to any variable defined in
 the ``extra`` section of your ``composer.json`` file:
 
 .. code-block:: json
@@ -167,7 +167,7 @@ files and directories:
 .. code-block:: json
 
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
+        "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     }
 
@@ -233,7 +233,7 @@ script (``php-script`` for PHP scripts, ``script`` for any shell script and
         "composer-scripts": {
             "vendor/bin/security-checker security:check": "php-script",
             "make cache-warmup": "script",
-            "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         }
     }
 
@@ -249,9 +249,9 @@ each line):
     {
         "gitignore": [
             ".env",
+            "/public/bundles/",
             "/var/",
-            "/vendor/",
-            "/web/bundles/"
+            "/vendor/"
         ]
     }
 
@@ -292,7 +292,7 @@ the recipe:
 * YAML files suffix must be ``.yaml``, not ``.yml``;
 * YAML files must be valid;
 * YAML files must use 4 space indentations;
-* YAML files under etc/packages must not define a "parameters" section;
+* YAML files under config/packages must not define a "parameters" section;
 * JSON files must be valid;
 * JSON files must use 4 space indentations;
 * Aliases are only supported in the main repository, not the contrib one;
@@ -306,7 +306,7 @@ the recipe:
 * The package must have a registered bundle in the manifest if type is "symfony-bundle";
 * The package does not only register a bundle for all environments;
 * All text files should end with a newline;
-* All configuration file names under ``etc`` should use the underscore notation;
+* All configuration file names under ``config`` should use the underscore notation;
 * All files are stored under a directory referenced by the "copy-from-recipe" section of "manifest.json"
 * The Symfony website must be referenced using HTTPs.
 
@@ -323,13 +323,13 @@ one used by ``symfony/framework-bundle``:
             "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
         },
         "copy-from-recipe": {
-            "etc/": "%ETC_DIR%/",
-            "src/": "%SRC_DIR%/",
-            "web/": "%WEB_DIR%/"
+            "config/": "%CONFIG_DIR%/",
+            "public/": "%PUBLIC_DIR%/",
+            "src/": "%SRC_DIR%/"
         },
         "composer-scripts": {
             "make cache-warmup": "script",
-            "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         },
         "env": {
             "APP_ENV": "dev",
@@ -338,9 +338,9 @@ one used by ``symfony/framework-bundle``:
         },
         "gitignore": [
             ".env",
+            "/public/bundles/"
             "/var/",
             "/vendor/",
-            "/web/bundles/"
         ]
     }
 

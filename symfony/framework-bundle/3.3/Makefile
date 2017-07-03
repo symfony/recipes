@@ -21,7 +21,7 @@ serve_as_php:
 	@printf "\033[32;49mServer listening on http://127.0.0.1:8000\033[39m\n";
 	@printf "Quit the server with CTRL-C.\n"
 	@printf "Run \033[32mcomposer require symfony/web-server-bundle\033[39m for a better web server\n"
-	php -S 127.0.0.1:8000 -t web
+	php -S 127.0.0.1:8000 -t public
 
 serve:
 	@${MAKE} serve_as_sf

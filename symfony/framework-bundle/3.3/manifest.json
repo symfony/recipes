@@ -3,13 +3,13 @@
         "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
-        "src/": "%SRC_DIR%/",
-        "web/": "%WEB_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/",
+        "src/": "%SRC_DIR%/"
     },
     "composer-scripts": {
         "make cache-warmup": "script",
-        "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
     },
     "env": {
         "APP_ENV": "dev",
@@ -18,8 +18,8 @@
     },
     "gitignore": [
         ".env",
+        "/public/bundles/",
         "/var/",
-        "/vendor/",
-        "/web/bundles/"
+        "/vendor/"
     ]
 }

@@ -3,7 +3,7 @@
         "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
