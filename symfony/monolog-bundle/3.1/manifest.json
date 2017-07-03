@@ -3,7 +3,7 @@
         "Symfony\\Bundle\\MonologBundle\\MonologBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "aliases": ["log", "logger", "logging", "logs", "monolog"]
 }

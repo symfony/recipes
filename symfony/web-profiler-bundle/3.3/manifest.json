@@ -3,6 +3,6 @@
         "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": ["dev", "test"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     }
 }

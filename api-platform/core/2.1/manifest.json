@@ -3,7 +3,7 @@
         "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
+        "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     }
 }

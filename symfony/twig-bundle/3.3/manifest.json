@@ -3,7 +3,7 @@
         "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
+        "config/": "%CONFIG_DIR%/",
         "templates/": "templates/"
     },
     "aliases": ["twig", "template", "templates", "templating"]

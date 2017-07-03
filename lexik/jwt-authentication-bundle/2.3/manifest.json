@@ -3,13 +3,13 @@
         "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%"
+        "config/": "%CONFIG_DIR%"
     },
     "aliases": ["jwt-auth"],
     "env": {
         "#1": "Key paths should be relative to the project directory",
-        "JWT_PRIVATE_KEY_PATH": "%ETC_DIR%/jwt/private.pem",
-        "JWT_PUBLIC_KEY_PATH": "%ETC_DIR%/jwt/public.pem",
+        "JWT_PRIVATE_KEY_PATH": "%CONFIG_DIR%/jwt/private.pem",
+        "JWT_PUBLIC_KEY_PATH": "%CONFIG_DIR%/jwt/public.pem",
         "JWT_PASSPHRASE": "%generate(secret)%"
     }
 }
