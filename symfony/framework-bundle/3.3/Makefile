@@ -13,7 +13,7 @@ sf_console:
 
 serve_as_sf: sf_console
 	@test -f $(CONSOLE) && $(CONSOLE)|grep server:start > /dev/null || ${MAKE} serve_as_php
-	@$(CONSOLE) server:start || exit 1
+	@$(CONSOLE) server:start --docroot=public/ || exit 1
 
 	@printf "Quit the server with \033[32;49mbin/console server:stop.\033[39m\n"
 
