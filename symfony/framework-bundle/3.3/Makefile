@@ -1,19 +1,31 @@
+CONSOLE := $(shell which bin/console)
+sf_console:
+ifndef CONSOLE
+	@printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
+endif
+
 cache-clear:
-	@test -f bin/console && bin/console cache:clear --no-warmup || rm -rf var/cache/*
+ifdef CONSOLE
+	@$(CONSOLE) cache:clear --no-warmup
+else
+	@rm -rf var/cache/*
+endif
 .PHONY: cache-clear
 
 cache-warmup: cache-clear
-	@test -f bin/console && bin/console cache:warmup || echo "cannot warmup the cache (needs symfony/console)"
+ifndef CONSOLE
+	@printf "cannot warmup the cache (needs symfony/console)\n"
+	@exit 1
+endif
+	@$(CONSOLE) cache:warmup
 .PHONY: cache-warmup
 
-CONSOLE=bin/console
-sf_console:
-	@test -f $(CONSOLE) || printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
-	@exit
-
 serve_as_sf: sf_console
-	@test -f $(CONSOLE) && $(CONSOLE)|grep server:start > /dev/null || ${MAKE} serve_as_php
-	@$(CONSOLE) server:start --docroot=public/ || exit 1
+ifndef CONSOLE
+	@${MAKE} serve_as_php
+endif
+	@$(CONSOLE) | grep server:start > /dev/null || ${MAKE} serve_as_php
+	@$(CONSOLE) server:start --docroot=public/
 
 	@printf "Quit the server with \033[32;49mbin/console server:stop.\033[39m\n"
 
