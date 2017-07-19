@@ -1,10 +1,9 @@
 {
     "copy-from-package": {
-        "bin/check.php": "%BIN_DIR%/check.php",
         "public/check.php": "%PUBLIC_DIR%/check.php"
     },
     "composer-scripts": {
-        "%BIN_DIR%/check.php": "php-script"
+        "requirements-checker": "script"
     },
     "aliases": ["requirement-check", "requirement-checker", "req-checker", "req-check", "req-checks"]
 }
