@@ -2,5 +2,9 @@
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%/"
     },
+    "composer-scripts": {
+        "make cache-warmup": "script",
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    },
     "aliases": ["cli"]
 }
