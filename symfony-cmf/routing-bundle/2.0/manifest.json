@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\Cmf\\Bundle\\RoutingBundle\\CmfRoutingBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["cmf-routing"]
+}
