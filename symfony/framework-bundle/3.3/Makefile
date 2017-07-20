@@ -13,11 +13,11 @@ endif
 .PHONY: cache-clear
 
 cache-warmup: cache-clear
-ifndef CONSOLE
-	@printf "cannot warmup the cache (needs symfony/console)\n"
-	@exit 1
-endif
+ifdef CONSOLE
 	@$(CONSOLE) cache:warmup
+else
+	@printf "cannot warmup the cache (needs symfony/console)\n"
+endif
 .PHONY: cache-warmup
 
 serve_as_sf: sf_console
