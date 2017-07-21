@@ -25,7 +25,7 @@ ifndef CONSOLE
 	@${MAKE} serve_as_php
 endif
 	@$(CONSOLE) | grep server:start > /dev/null || ${MAKE} serve_as_php
-	@$(CONSOLE) server:start --docroot=public/
+	@$(CONSOLE) server:start
 
 	@printf "Quit the server with \033[32;49mbin/console server:stop.\033[39m\n"
 
