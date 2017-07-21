@@ -50,12 +50,12 @@ final class Kernel extends BaseKernel
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $confDir = dirname(__DIR__).'/config';
-        if (is_dir($confDir.'/routing/')) {
-            $routes->import($confDir.'/routing/*'.self::CONFIG_EXTS, '/', 'glob');
+        if (is_dir($confDir.'/routes/')) {
+            $routes->import($confDir.'/routes/*'.self::CONFIG_EXTS, '/', 'glob');
         }
-        if (is_dir($confDir.'/routing/'.$this->environment)) {
-            $routes->import($confDir.'/routing/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
+        if (is_dir($confDir.'/routes/'.$this->environment)) {
+            $routes->import($confDir.'/routes/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         }
-        $routes->import($confDir.'/routing'.self::CONFIG_EXTS, '/', 'glob');
+        $routes->import($confDir.'/routes'.self::CONFIG_EXTS, '/', 'glob');
     }
 }
