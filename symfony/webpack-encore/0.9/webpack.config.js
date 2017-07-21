@@ -1,23 +1,24 @@
 var Encore = require('@symfony/webpack-encore');
 
 Encore
-    // directory where all compiled assets will be stored
-    .setOutputPath('web/build/')
-    // what's the public path to this directory (relative to your project's document root dir)
+    // the project directory where compiled assets will be stored
+    .setOutputPath('public/build/')
+    // the public path used by the web server to access the previous directory
     .setPublicPath('/build')
-    // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
-    // allow sass/scss files to be processed
-    .enableSassLoader()
     .enableSourceMaps(!Encore.isProduction())
-    // will output as web/build/app.js
-    // .addEntry('app', './assets/js/app.js')
-    // will output as web/build/global.css
-    // .addStyleEntry('global', './assets/css/app.scss')
-    // allow legacy applications to use $/jQuery as a global variable
+    // uncomment to create hashed filenames (e.g. app.abc123.css)
+    // .enableVersioning(Encore.isProduction())
+
+    // uncomment to define the assets of the project
+    // .addEntry('js/app', './assets/js/app.js')
+    // .addStyleEntry('css/app', './assets/css/app.scss')
+
+    // uncomment if you use Sass/SCSS files
+    // .enableSassLoader()
+
+    // uncomment for legacy applications that require $/jQuery as a global variable
     // .autoProvidejQuery()
-    // create hashed filenames (e.g. app.abc123.css)
-    // .enableVersioning()
 ;
 
 module.exports = Encore.getWebpackConfig();
