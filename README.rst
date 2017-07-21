@@ -105,11 +105,11 @@ The previous recipe is transformed into the following PHP code:
 ``container`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds new container parameters in the ``container.yaml`` file by adding your parameters
-in the ``container`` option.
+Adds new container parameters in the ``services.yaml`` file by adding your
+parameters in the ``container`` option.
 
-This example creates a new ``locale`` container parameter with a default value in your
-container:
+This example creates a new ``locale`` container parameter with a default value
+in your container:
 
 .. code-block:: json
 
