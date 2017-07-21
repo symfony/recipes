@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-07-21T08:05:46Z
+
+That makes it easier to make a difference from routing configuration (`config/packages/routing.yaml`) and routes configuration (`config/routes/*`)
