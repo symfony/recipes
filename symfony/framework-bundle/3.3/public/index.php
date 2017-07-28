@@ -9,7 +9,9 @@ require __DIR__.'/../vendor/autoload.php';
 
 // The check is to ensure we don't use .env in production
 if (!getenv('APP_ENV')) {
-    (new Dotenv())->load(__DIR__.'/../.env');
+    $dotEnv = new Dotenv();
+    $dotEnv->populate(['APP_DIR' => dirname(__DIR__)]);
+    $dotEnv->load(__DIR__.'/../.env');
 }
 
 if (getenv('APP_DEBUG')) {
