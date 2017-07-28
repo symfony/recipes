@@ -8,7 +8,7 @@
     "env": {
         "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
         "#2": "To disable sending emails, use: \"null://localhost\"",
-        "MAILER_URL": "MAILER_URL=smtp://localhost?encryption=ssl&auth_mode=login&username=&password="
+        "MAILER_URL": "smtp://localhost?encryption=ssl&auth_mode=login&username=&password="
     },
     "aliases": ["mailer", "mail"]
 }
