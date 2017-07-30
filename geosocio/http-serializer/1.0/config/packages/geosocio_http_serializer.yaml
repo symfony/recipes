@@ -1,0 +1,2 @@
+geosocio_http_serializer:
+  default_format: 'json'
