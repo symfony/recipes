@@ -17,7 +17,9 @@ if (!class_exists(Application::class)) {
 }
 
 if (!getenv('APP_ENV')) {
-    (new Dotenv())->load(__DIR__.'/../.env');
+    $dotEnv = new Dotenv();
+    $dotEnv->populate(['APP_DIR' => dirname(__DIR__)]);
+    $dotEnv->load(__DIR__.'/../.env');
 }
 
 $input = new ArgvInput();
