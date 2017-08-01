@@ -1,10 +1,8 @@
 services:
-    sensio_distribution.security_checker:
-        class: SensioLabs\Security\SecurityChecker
+    SensioLabs\Security\SecurityChecker:
         public: false
 
-    sensio_distribution.security_checker.command:
-        class: SensioLabs\Security\Command\SecurityCheckerCommand
-        arguments: ['@sensio_distribution.security_checker']
+    SensioLabs\Security\Command\SecurityCheckerCommand:
+        arguments: ['@SensioLabs\Security\SecurityChecker']
         tags:
             - { name: console.command }
