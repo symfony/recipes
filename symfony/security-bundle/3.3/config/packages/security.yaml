@@ -1,18 +1,18 @@
 security:
     # https://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        in_memory: { memory: null }
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: ~
+            anonymous: null
 
             # activate different ways to authenticate
 
-            # http_basic: ~
+            # http_basic: null
             # https://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
 
-            # form_login: ~
+            # form_login: null
             # https://symfony.com/doc/current/cookbook/security/form_login_setup.html
