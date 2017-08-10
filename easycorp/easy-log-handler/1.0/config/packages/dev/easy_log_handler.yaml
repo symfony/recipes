@@ -13,4 +13,4 @@ services:
 #            level:    debug
 #        easylog:
 #            type: service
-#            id:   easycorp.easylog.handler
+#            id:   EasyCorp\EasyLog\EasyLogHandler
