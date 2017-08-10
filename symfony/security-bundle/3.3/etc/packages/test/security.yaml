@@ -1,0 +1,5 @@
+# See https://symfony.com/doc/master/testing/http_authentication.html
+#security:
+    #firewalls:
+        #main:
+            #http_basic: null
