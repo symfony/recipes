@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Bazinga\\Bundle\\JsTranslationBundle\\BazingaJsTranslationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["js-translation", "js-translator"]
+}
