@@ -7,8 +7,9 @@
     },
     "env": {
         "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
-        "#2": "To disable sending emails, use: \"null://localhost\"",
-        "MAILER_URL": "smtp://localhost:25?encryption=&auth_mode="
+        "#2": "For a generic SMTP server, use: \"smtp://localhost:25?encryption=&auth_mode=\"",
+        "#3": "Delivery is disabled by default via \"null://localhost\"",
+        "MAILER_URL": "null://localhost"
     },
     "aliases": ["mailer", "mail"]
 }
