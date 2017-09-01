@@ -16,7 +16,7 @@ cache-warmup: cache-clear
 ifdef CONSOLE
 	@$(CONSOLE) cache:warmup
 else
-	@printf "cannot warmup the cache (needs symfony/console)\n"
+	@printf "Cannot warm up the cache (needs symfony/console)\n"
 endif
 .PHONY: cache-warmup
 
