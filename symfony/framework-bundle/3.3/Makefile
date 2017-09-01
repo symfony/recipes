@@ -27,7 +27,7 @@ endif
 	@$(CONSOLE) | grep server:start > /dev/null || ${MAKE} serve_as_php
 	@$(CONSOLE) server:start
 
-	@printf "Quit the server with \033[32;49mbin/console server:stop.\033[39m\n"
+	@printf "Quit the server with \033[32;49mbin/console server:stop\033[39m\n"
 
 serve_as_php:
 	@printf "\033[32;49mServer listening on http://127.0.0.1:8000\033[39m\n";
