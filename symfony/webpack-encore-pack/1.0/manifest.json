@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "package.json": "package.json",
+        "webpack.config.js": "webpack.config.js"
+    },
+    "aliases": ["encore", "webpack", "webpack-encore"]
+}

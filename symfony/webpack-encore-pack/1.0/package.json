@@ -1,0 +1,11 @@
+{
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.12.0"
+    },
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production"
+    }
+}
