@@ -1,8 +1,8 @@
 {
     "copy-from-recipe": {
-        "assets/": "%PROJECT_DIR%/",
-        "package.json": "%PROJECT_DIR%/",
-        "webpack.config.js": "%PROJECT_DIR%/"
+        "assets/": "assets/",
+        "package.json": "package.json",
+        "webpack.config.js": "webpack.config.js"
     },
     "aliases": ["encore", "webpack", "webpack-encore"]
 }
