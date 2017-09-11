@@ -4,5 +4,8 @@
         "package.json": "package.json",
         "webpack.config.js": "webpack.config.js"
     },
-    "aliases": ["encore", "webpack", "webpack-encore"]
+    "aliases": ["encore", "webpack", "webpack-encore"],
+    "gitignore": [
+        "/node_modules/"
+    ]
 }
