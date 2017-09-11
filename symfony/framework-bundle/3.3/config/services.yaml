@@ -21,9 +21,8 @@ services:
         # but if a service is unused, it's removed anyway
         exclude: '../src/{Entity,Migrations,Repository,Tests}'
 
-    # controllers are imported separately to make sure they're public
-    # and have a tag that allows actions to type-hint services
+    # controllers are imported separately to make sure they
+    # have the tag that allows actions to type-hint services
     App\Controller\:
         resource: '../src/Controller'
-        public: true
         tags: ['controller.service_arguments']
