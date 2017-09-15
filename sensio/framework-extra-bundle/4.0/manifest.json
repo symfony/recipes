@@ -4,5 +4,6 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    }
+    },
+    "aliases": ["annotations", "annotation", "annot", "annots"]
 }

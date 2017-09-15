@@ -2,8 +2,7 @@
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
-# Depends on sensio/framework-extra-bundle, doctrine/annotations, and doctrine/cache
-#   install with composer req sensio/framework-extra-bundle annot
+# first, run composer req annotations
 #controllers:
 #    resource: ../src/Controller/
 #    type: annotation
