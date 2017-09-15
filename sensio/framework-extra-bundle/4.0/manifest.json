@@ -2,8 +2,5 @@
     "bundles": {
         "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": ["all"]
     },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
     "aliases": ["annotations", "annotation", "annot", "annots"]
 }
