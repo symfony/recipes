@@ -42,6 +42,11 @@ options and configurators.
     manifest is the registration of the bundle for all environments, as this is
     done automatically.
 
+.. note::
+
+    When creating a recipe, don't create bundle config files under
+    ``config/packages/`` when no options are set.
+
 Options
 -------
 
@@ -308,7 +313,8 @@ the recipe:
 * The package does not depend on ``symfony/symfony``;
 * All text files should end with a newline;
 * All configuration file names under ``config`` should use the underscore notation;
-* All files are stored under a directory referenced by the "copy-from-recipe" section of "manifest.json"
+* No "semantically" empty configuration files are created under ``config/packages``;
+* All files are stored under a directory referenced by the "copy-from-recipe" section of "manifest.json";
 * The Symfony website must be referenced using HTTPs.
 
 Full Example
