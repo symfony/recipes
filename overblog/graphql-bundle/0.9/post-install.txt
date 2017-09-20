@@ -1,0 +1,4 @@
+<bg=blue;fg=white> Next for OverblogGraphQLBundle </>
+    1. Define your schema, read documentation <comment>https://github.com/overblog/GraphQLBundle/blob/master/Resources/doc/definitions/index.md</>
+    2. Browse to <comment>/graphiql</>
+    3. Optionally dump your schema: run <comment>bin/console graphql:dump-schema</comment>
