@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Overblog\\GraphQLBundle\\OverblogGraphQLBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["graphql", "api-graphql"]
+}
