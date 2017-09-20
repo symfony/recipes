@@ -315,6 +315,7 @@ the recipe:
 * All configuration file names under ``config`` should use the underscore notation;
 * No "semantically" empty configuration files are created under ``config/packages``;
 * All files are stored under a directory referenced by the "copy-from-recipe" section of "manifest.json";
+* The pull request does not contain merge commits;
 * The Symfony website must be referenced using HTTPs.
 
 Full Example
