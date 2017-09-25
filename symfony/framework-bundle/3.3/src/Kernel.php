@@ -24,7 +24,7 @@ class Kernel extends BaseKernel
         return dirname(__DIR__).'/var/log';
     }
 
-    public function registerBundles(): iterable
+    public function registerBundles()
     {
         $contents = require dirname(__DIR__).'/config/bundles.php';
         foreach ($contents as $class => $envs) {
@@ -34,7 +34,7 @@ class Kernel extends BaseKernel
         }
     }
 
-    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
+    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
         $confDir = dirname(__DIR__).'/config';
         $loader->load($confDir.'/packages/*'.self::CONFIG_EXTS, 'glob');
@@ -45,7 +45,7 @@ class Kernel extends BaseKernel
         $loader->load($confDir.'/services_'.$this->environment.self::CONFIG_EXTS, 'glob');
     }
 
-    protected function configureRoutes(RouteCollectionBuilder $routes): void
+    protected function configureRoutes(RouteCollectionBuilder $routes)
     {
         $confDir = dirname(__DIR__).'/config';
         if (is_dir($confDir.'/routes/')) {
