@@ -10,7 +10,7 @@ require __DIR__.'/../vendor/autoload.php';
 // The check is to ensure we don't use .env in production
 if (!isset($_SERVER['APP_ENV'])) {
     $envFile = $_SERVER['ENV_FILE'] ?? '.env';
-    (new Dotenv())->load(__DIR__.'/../' . $envFile);
+    (new Dotenv())->load(__DIR__.'/../'.$envFile);
 }
 
 if ($_SERVER['APP_DEBUG'] ?? false) {
