@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Nelmio\\SecurityBundle\\NelmioSecurityBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
