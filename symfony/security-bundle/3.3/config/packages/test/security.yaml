@@ -2,5 +2,6 @@
 # See https://symfony.com/doc/current/cookbook/testing/http_authentication.html
 security:
     firewalls:
+        # replace 'main' by the name of your own firewall
         main:
             http_basic: ~
