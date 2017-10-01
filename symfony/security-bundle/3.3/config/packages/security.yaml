@@ -6,7 +6,7 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        # if the name of the firewall changes, update it in the packages/test/security.yaml file too
+        # if you change the name of the firewall, update it in the packages/test/security.yaml file too
         main:
             anonymous: null
 
