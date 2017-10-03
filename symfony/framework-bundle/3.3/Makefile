@@ -1,4 +1,9 @@
-CONSOLE := $(shell printf %q "`which bin/console`")
+ifeq ($(shell test -e bin/console && echo -n yes), yes)
+	CONSOLE=bin/console
+else
+	CONSOLE=''
+endif
+
 sf_console:
 ifeq ($(CONSOLE), '')
 	@printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
