@@ -1,31 +1,31 @@
-CONSOLE := $(shell printf %q "`which bin/console`")
+CONSOLE := $(shell which bin/console)
 sf_console:
-ifeq ($(CONSOLE), '')
+ifndef CONSOLE
 	@printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
 endif
 
 cache-clear:
-ifneq ($(CONSOLE), '')
-	@$(CONSOLE) cache:clear --no-warmup
+ifdef CONSOLE
+	@bin/console cache:clear --no-warmup
 else
 	@rm -rf var/cache/*
 endif
 .PHONY: cache-clear
 
 cache-warmup: cache-clear
-ifneq ($(CONSOLE), '')
-	@$(CONSOLE) cache:warmup
+ifdef CONSOLE
+	@bin/console cache:warmup
 else
 	@printf "Cannot warm up the cache (needs symfony/console).\n"
 endif
 .PHONY: cache-warmup
 
 serve_as_sf: sf_console
-ifeq ($(CONSOLE), '')
+ifndef CONSOLE
 	@${MAKE} serve_as_php
 endif
-	@$(CONSOLE) | grep server:start > /dev/null || ${MAKE} serve_as_php
-	@$(CONSOLE) server:start
+	@bin/console list | grep server:start > /dev/null || ${MAKE} serve_as_php
+	@bin/console server:start
 
 	@printf "Quit the server with \033[32;49mbin/console server:stop\033[39m\n"
 
