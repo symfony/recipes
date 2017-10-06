@@ -4,7 +4,7 @@ ifndef CONSOLE
 	@printf "Run \033[32mcomposer require cli\033[39m to install the Symfony console.\n"
 endif
 
-cache-clear:
+cache-clear: ## Clears the cache
 ifdef CONSOLE
 	@bin/console cache:clear --no-warmup
 else
@@ -12,7 +12,7 @@ else
 endif
 .PHONY: cache-clear
 
-cache-warmup: cache-clear
+cache-warmup: cache-clear ## Warms up an empty cache
 ifdef CONSOLE
 	@bin/console cache:warmup
 else
@@ -35,6 +35,6 @@ serve_as_php:
 	@printf "Run \033[32mcomposer require symfony/web-server-bundle\033[39m for a better web server.\n"
 	php -S 127.0.0.1:8000 -t public
 
-serve:
+serve: ## Runs a local web server
 	@${MAKE} serve_as_sf
 .PHONY: sf_console serve serve_as_sf serve_as_php
