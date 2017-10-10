@@ -1,5 +1,5 @@
 OPENSSL_BIN := $(shell which openssl)
-generate-jwt-keys:
+generate-jwt-keys: ## Generates JWT auth keys
 ifndef OPENSSL_BIN
 	$(error "Unable to generate keys (needs OpenSSL)")
 endif
