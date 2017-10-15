@@ -4,5 +4,6 @@
     },
     "gitignore": [
         "/phpunit.xml"
-    ]
+    ],
+    "aliases": ["simple-phpunit"]
 }
