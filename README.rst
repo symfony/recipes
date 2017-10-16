@@ -77,7 +77,7 @@ unconfiguring the dependencies.
 
 There are eight types of tasks, which are called **configurators**:
 ``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``,
-``makefile``, ``composer-scripts``, ``gitignore``, and ``post-install-output``.
+``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
 ``bundles`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,18 +210,6 @@ Don't remove or modify these separators.
     Use ``%generate(secret)%`` as the value of any environment variable to
     replace it with a cryptographically secure random value of 16 bytes.
 
-``makefile`` Configurator
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Adds new tasks to the ``Makefile`` file stored in the root of the Symfony
-project. Unlike other configurators, there is no specific entry in the manifest
-file. Define tasks by creating a ``Makefile`` file at the root of the recipe
-directory (a ``PHP_EOL`` character is added after each line).
-
-Similar to the ``env`` configurator, the contents are copied into the ``Makefile``
-file and wrapped with section separators (``###> your-recipe-name-here ###``)
-that must not be removed or modified.
-
 ``composer-scripts`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -303,7 +291,6 @@ the recipe:
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
 * The manifest file only contains supported keys;
-* The Makefile file does not wrap Symfony Console commands as tasks
 * The package must exist on Packagist;
 * The package must have at least one version on Packagist;
 * The package must have an MIT or BSD license;

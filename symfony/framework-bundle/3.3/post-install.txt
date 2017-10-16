@@ -4,7 +4,10 @@
 
   * <fg=blue>Run</> your application:
     1. Change to the project directory
-    2. Execute the <comment>make serve</> command;
+    2. Execute the <comment>php -S 127.0.0.1:8000 -t public</> command;
     3. Browse to the <comment>http://localhost:8000/</> URL.
+
+       Quit the server with CTRL-C.
+       Run <bg=yellow>composer require symfony/web-server-bundle</> for a better web server.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
