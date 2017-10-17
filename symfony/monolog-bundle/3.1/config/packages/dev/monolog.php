@@ -2,6 +2,7 @@
 
 use Symfony\Component\Config\Resource\ClassExistenceResource;
 use Symfony\Component\Console\Application;
+use Symfony\Component\VarDumper\Dumper\CliDumper;
 
 $handlers = [
     'main' => [
@@ -29,6 +30,9 @@ if (class_exists(Application::class)) {
         'process_psr_3_messages' => false,
         'channels' => ['!event', '!doctrine', '!console'],
     ];
+    if (!class_exists(CliDumper::class)) {
+        $handlers['console']['formatter'] = 'monolog.formatter.line';
+    }
 }
 
 $container->loadFromExtension('monolog', [
