@@ -8,6 +8,6 @@
     3. Browse to the <comment>http://localhost:8000/</> URL.
 
        Quit the server with CTRL-C.
-       Run <bg=yellow>composer require symfony/web-server-bundle</> for a better web server.
+       Run <comment>composer require symfony/web-server-bundle</> for a better web server.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
