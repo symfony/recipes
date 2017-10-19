@@ -1,0 +1,33 @@
+cache:
+    session:
+        enabled: "%env(bool:SESSION_CACHE_ENABLED)%"
+        service_id: "cache.provider.default"
+        use_tagging: true
+        ttl: 7200
+    router:
+        enabled: "%env(bool:ROUTER_CACHE_ENABLED)%"
+        service_id: "cache.provider.default"
+        ttl: 86400
+    logging:
+        enabled: "%env(bool:APP_DEBUG)%"
+        logger: "logger"
+        level: "info"
+    annotation:
+        enabled: "%env(bool:ANNOTATION_CACHE_ENABLED)%"
+        service_id: "cache.provider.default"
+        use_tagging: true
+    serializer:
+        enabled: "%env(bool:SERIALIZER_CACHE_ENABLED)%"
+        service_id: "cache.provider.default"
+        use_tagging: true
+    validation:
+        enabled: "%env(bool:VALIDATION_CACHE_ENABLED)%"
+        service_id: "cache.provider.default"
+        use_tagging: true
+
+framework:
+    annotations:
+        cache: 'cache.service.annotation'
+    validation:
+        cache: 'cache.service.validation'
+
