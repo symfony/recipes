@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Cache\\CacheBundle\\CacheBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SESSION_CACHE_ENABLED": "true",
+        "ROUTER_CACHE_ENABLED": "true",
+        "ANNOTATION_CACHE_ENABLED": "true",
+        "SERIALIZER_CACHE_ENABLED": "true",
+        "VALIDATION_CACHE_ENABLED": "true"
+    }
+}
