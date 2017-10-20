@@ -6,5 +6,5 @@
         "config/": "%CONFIG_DIR%/",
         "templates/": "templates/"
     },
-    "aliases": ["twig", "template", "templates", "templating"]
+    "aliases": ["twig", "template", "templates"]
 }
