@@ -1,6 +1,5 @@
 <?php
 
-// adjust configuration to your needs
 return PhpCsFixer\Config::create()
     ->setRules([
         '@Symfony' => true,
