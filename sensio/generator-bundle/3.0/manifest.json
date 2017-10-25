@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle": ["dev", "test"]
+    },
+    "aliases": ["generator"]
+}
