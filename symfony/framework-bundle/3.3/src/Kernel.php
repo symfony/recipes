@@ -14,12 +14,12 @@ class Kernel extends BaseKernel
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
-    public function getCacheDir(): string
+    public function getCacheDir()
     {
         return dirname(__DIR__).'/var/cache/'.$this->environment;
     }
 
-    public function getLogDir(): string
+    public function getLogDir()
     {
         return dirname(__DIR__).'/var/log';
     }
