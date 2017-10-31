@@ -1,3 +1,11 @@
+parameters:
+    env(ROUTER_REQUEST_CONTEXT_HOST): null
+    router.request_context.host: '%env(ROUTER_REQUEST_CONTEXT_HOST)%'
+    env(ROUTER_REQUEST_CONTEXT_SCHEME): null
+    router.request_context.scheme: '%env(ROUTER_REQUEST_CONTEXT_SCHEME)%'
+    env(ROUTER_REQUEST_CONTEXT_BASE_URL): null
+    router.request_context.base_url: '%env(ROUTER_REQUEST_CONTEXT_BASE_URL)%'
+
 framework:
     secret: '%env(APP_SECRET)%'
     #default_locale: en
