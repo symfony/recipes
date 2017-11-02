@@ -1,6 +1,3 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
     "aliases": ["twig-extensions", "twig-ext", "twig-exts"]
 }
