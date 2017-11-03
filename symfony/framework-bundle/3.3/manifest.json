@@ -8,7 +8,8 @@
         "src/": "%SRC_DIR%/"
     },
     "composer-scripts": {
-        "cache:clear": "symfony-cmd",
+        "cache:clear --no-warmup": "symfony-cmd",
+        "cache:warmup": "symfony-cmd",
         "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
     },
     "env": {
