@@ -2,3 +2,7 @@ framework:
     test: ~
     #session:
     #    storage_id: session.storage.mock_file
+
+services:
+    # Disable logs
+    logger: Psr\Log\NullLogger
