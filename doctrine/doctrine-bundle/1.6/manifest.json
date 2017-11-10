@@ -10,6 +10,6 @@
         "#1": "Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
         "#2": "For an SQLite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
         "#3": "Set \"serverVersion\" to your server version to avoid edge-case exceptions and extra database calls",
-        "DATABASE_URL": "mysql://root@127.0.0.1:3306/symfony?charset=utf8mb4&serverVersion=5.7"
+        "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name?charset=utf8mb4&serverVersion=5.7"
     }
 }
