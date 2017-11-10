@@ -14,12 +14,12 @@ class Kernel extends BaseKernel
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
-    public function getCacheDir(): string
+    public function getCacheDir()
     {
         return $this->getVarDir().'/cache/'.$this->environment;
     }
 
-    public function getLogDir(): string
+    public function getLogDir()
     {
         return $this->getVarDir().'/log';
     }
@@ -34,35 +34,37 @@ class Kernel extends BaseKernel
         }
     }
 
-    protected function getConfigDir(): string
+    protected function getConfigDir()
     {
-        return dirname(__DIR__).'/config';
+        return $this->getProjectDir().'/config';
     }
 
-    protected function getVarDir(): string
+    protected function getVarDir()
     {
-        return dirname(__DIR__).'/var';
+        return $this->getProjectDir().'/var';
     }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
         $container->setParameter('container.autowiring.strict_mode', true);
-        $loader->load($this->getConfigDir().'/packages/*'.self::CONFIG_EXTS, 'glob');
-        if (is_dir($this->getConfigDir().'/packages/'.$this->environment)) {
-            $loader->load($this->getConfigDir().'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
+        $configDir = $this->getConfigDir();
+        $loader->load($configDir.'/packages/*'.self::CONFIG_EXTS, 'glob');
+        if (is_dir($configDir.'/packages/'.$this->environment)) {
+            $loader->load($configDir.'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
         }
-        $loader->load($this->getConfigDir().'/services'.self::CONFIG_EXTS, 'glob');
-        $loader->load($this->getConfigDir().'/services_'.$this->environment.self::CONFIG_EXTS, 'glob');
+        $loader->load($configDir.'/services'.self::CONFIG_EXTS, 'glob');
+        $loader->load($configDir.'/services_'.$this->environment.self::CONFIG_EXTS, 'glob');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        if (is_dir($this->getConfigDir().'/routes/')) {
-            $routes->import($this->getConfigDir().'/routes/*'.self::CONFIG_EXTS, '/', 'glob');
+        $configDir = $this->getConfigDir();
+        if (is_dir($configDir.'/routes/')) {
+            $routes->import($configDir.'/routes/*'.self::CONFIG_EXTS, '/', 'glob');
         }
-        if (is_dir($this->getConfigDir().'/routes/'.$this->environment)) {
-            $routes->import($this->getConfigDir().'/routes/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
+        if (is_dir($configDir.'/routes/'.$this->environment)) {
+            $routes->import($configDir.'/routes/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         }
-        $routes->import($this->getConfigDir().'/routes'.self::CONFIG_EXTS, '/', 'glob');
+        $routes->import($configDir.'/routes'.self::CONFIG_EXTS, '/', 'glob');
     }
 }
