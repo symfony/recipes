@@ -10,6 +10,6 @@ doctrine:
             App:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/src/Entity'
+                dir: '%kernel.project_dir%/%SRC_DIR%/Entity'
                 prefix: 'App\Entity\'
                 alias: App
