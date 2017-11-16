@@ -1,13 +1,9 @@
 parameters:
-    # update these for your app
-    doctrine.database_server: mysql
-    doctrine.server_version: 5.7
-
     # adds a fallback URL if the env var is not set
     # this is useful to allow you to run cache:warmup
     # even when your environment variables don't yet exist
     # you should not need to change this value
-    DATABASE_URL: '%doctrine.database_server%://'
+    env(DATABASE_URL): '%doctrine.database_server%://'
 
 doctrine:
     dbal:
