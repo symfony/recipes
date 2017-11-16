@@ -3,4 +3,6 @@
 <bg=blue;fg=white>                         </>
 
   * Modify your DATABASE_URL config in <fg=green>.env</>
-  * Check your server_version in <fg=green>config/packages/doctrine.yaml</>
+
+  * Configure the <fg=green>database_server</> (mysql) and
+    <fg=green>server_version</fg> (5.7) in <fg=green>config/packages/doctrine.yaml</>

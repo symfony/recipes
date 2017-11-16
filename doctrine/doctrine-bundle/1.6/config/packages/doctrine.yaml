@@ -1,8 +1,19 @@
+parameters:
+    # update these for your app
+    doctrine.database_server: mysql
+    doctrine.server_version: 5.7
+
+    # adds a fallback URL if the env var is not set
+    # this is useful to allow you to run cache:warmup
+    # even when your environment variables don't yet exist
+    # you should not need to change this value
+    DATABASE_URL: '%doctrine.database_server%://'
+
 doctrine:
     dbal:
         # With Symfony 3.3, remove the `resolve:` prefix
         url: '%env(resolve:DATABASE_URL)%'
-        server_version: 5.7
+        server_version: '%doctrine.server_version%'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
