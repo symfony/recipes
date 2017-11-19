@@ -19,7 +19,7 @@ services:
         resource: '../src/*'
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
-        exclude: '../src/{Entity,Migrations,Tests}'
+        exclude: '../src/{DataFixtures,Entity,Migrations,Tests}'
 
     # controllers are imported separately to make sure they
     # have the tag that allows actions to type-hint services
