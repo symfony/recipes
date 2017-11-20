@@ -2,6 +2,8 @@ doctrine:
     dbal:
         # With Symfony 3.3, remove the `resolve:` prefix
         url: '%env(resolve:DATABASE_URL)%'
+        # Put here your server version to be able to warmup the doctrine class caches
+        # server_version: 5.7
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
