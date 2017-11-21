@@ -2,5 +2,5 @@
     "bundles": {
         "Symfony\\Bundle\\MakerBundle\\MakerBundle": ["dev"]
     },
-    "aliases": ["maker", "generator"]
+    "aliases": ["maker", "generator", "make"]
 }
