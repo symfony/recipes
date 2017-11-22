@@ -10,5 +10,5 @@ httplug:
         app:
             http_methods_client: true
             plugins:
-                - 'httplug.plugin.logger'
+                - 'httplug.plugin.content_length'
                 - 'httplug.plugin.redirect'
