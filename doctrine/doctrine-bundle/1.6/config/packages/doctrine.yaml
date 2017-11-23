@@ -14,6 +14,10 @@ doctrine:
 
         # With Symfony 3.3, remove the `resolve:` prefix
         url: '%env(resolve:DATABASE_URL)%'
+
+        default_table_options:
+            charset: utf8
+            collate: utf8_unicode_ci
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
