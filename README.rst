@@ -313,32 +313,32 @@ one used by ``symfony/framework-bundle``:
 
 .. code-block:: json
 
-    {
-        "bundles": {
-            "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
-        },
-        "copy-from-recipe": {
-            "config/": "%CONFIG_DIR%/",
-            "public/": "%PUBLIC_DIR%/",
-            "src/": "%SRC_DIR%/"
-        },
-        "composer-scripts": {
-            "make cache-warmup": "script",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
-        },
-        "env": {
-            "APP_ENV": "dev",
-            "APP_DEBUG": "1",
-            "APP_SECRET": "%generate(secret)%"
-        },
-        "gitignore": [
-            ".env",
-            "/public/bundles/"
-            "/var/",
-            "/vendor/"
-        ]
-    }
 
+{
+    "bundles": {
+        "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "env": {
+        "APP_ENV": "dev",
+        "APP_DEBUG": "1",
+        "APP_SECRET": "%generate(secret)%"
+    },
+    "gitignore": [
+        ".env",
+        "/public/bundles/",
+        "/var/",
+        "/vendor/"
+    ]
+}
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`contrib repository`: https://github.com/symfony/recipes-contrib
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
