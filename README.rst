@@ -313,7 +313,6 @@ one used by ``symfony/framework-bundle``:
 
 .. code-block:: json
 
-
     {
         "bundles": {
             "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
@@ -339,6 +338,7 @@ one used by ``symfony/framework-bundle``:
             "/vendor/"
         ]
     }
+
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`contrib repository`: https://github.com/symfony/recipes-contrib
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
