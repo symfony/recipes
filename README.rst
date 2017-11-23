@@ -323,7 +323,7 @@ one used by ``symfony/framework-bundle``:
             "src/": "%SRC_DIR%/"
         },
         "composer-scripts": {
-            "make cache-warmup": "script",
+            "cache:clear": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         },
         "env": {
@@ -333,7 +333,7 @@ one used by ``symfony/framework-bundle``:
         },
         "gitignore": [
             ".env",
-            "/public/bundles/"
+            "/public/bundles/",
             "/var/",
             "/vendor/"
         ]
