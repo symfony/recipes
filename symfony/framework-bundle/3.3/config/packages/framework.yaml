@@ -4,10 +4,12 @@ framework:
     #csrf_protection: ~
     #http_method_override: true
     #trusted_hosts: ~
-    # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+
+    # uncomment this entire section to enable sessions
     #session:
-    #    # The native PHP session handler will be used
+    #    # With this config, PHP's native session handling is used
     #    handler_id: ~
+
     #esi: ~
     #fragments: ~
     php_errors:
