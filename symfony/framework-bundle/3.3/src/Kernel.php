@@ -16,17 +16,17 @@ class Kernel extends BaseKernel
 
     public function getCacheDir()
     {
-        return $this->getProjectDir().'/var/cache/'.$this->environment;
+        return $this->getProjectDir().'/%VAR_DIR%/cache/'.$this->environment;
     }
 
     public function getLogDir()
     {
-        return $this->getProjectDir().'/var/log';
+        return $this->getProjectDir().'/%VAR_DIR%/log';
     }
 
     public function registerBundles()
     {
-        $contents = require $this->getProjectDir().'/config/bundles.php';
+        $contents = require $this->getProjectDir().'/%CONFIG_DIR%/bundles.php';
         foreach ($contents as $class => $envs) {
             if (isset($envs['all']) || isset($envs[$this->environment])) {
                 yield new $class();
@@ -38,7 +38,7 @@ class Kernel extends BaseKernel
     {
         $container->setParameter('container.autowiring.strict_mode', true);
         $container->setParameter('container.dumper.inline_class_loader', true);
-        $confDir = $this->getProjectDir().'/config';
+        $confDir = $this->getProjectDir().'/%CONFIG_DIR%';
         $loader->load($confDir.'/packages/*'.self::CONFIG_EXTS, 'glob');
         if (is_dir($confDir.'/packages/'.$this->environment)) {
             $loader->load($confDir.'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
@@ -49,7 +49,7 @@ class Kernel extends BaseKernel
 
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        $confDir = $this->getProjectDir().'/config';
+        $confDir = $this->getProjectDir().'/%CONFIG_DIR%';
         if (is_dir($confDir.'/routes/')) {
             $routes->import($confDir.'/routes/*'.self::CONFIG_EXTS, '/', 'glob');
         }

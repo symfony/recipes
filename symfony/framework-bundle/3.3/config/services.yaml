@@ -16,13 +16,13 @@ services:
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
-        resource: '../src/*'
+        resource: '../%SRC_DIR%/*'
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
-        exclude: '../src/{DataFixtures,Entity,Migrations,Tests}'
+        exclude: '../%SRC_DIR%/{DataFixtures,Entity,Migrations,Tests}'
 
     # controllers are imported separately to make sure they
     # have the tag that allows actions to type-hint services
     App\Controller\:
-        resource: '../src/Controller'
+        resource: '../%SRC_DIR%/Controller'
         tags: ['controller.service_arguments']

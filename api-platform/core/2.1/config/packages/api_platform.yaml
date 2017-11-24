@@ -1,3 +1,3 @@
 api_platform:
     mapping:
-        paths: ['%kernel.project_dir%/src/Entity']
+        paths: ['%kernel.project_dir%/%SRC_DIR%/Entity']
