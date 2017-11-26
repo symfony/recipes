@@ -1,6 +1,7 @@
 {
     "copy-from-recipe": {
-        "phpunit.xml.dist": "phpunit.xml.dist"
+        "phpunit.xml.dist": "phpunit.xml.dist",
+        "tests/": "tests/"
     },
     "gitignore": [
         "/phpunit.xml"

@@ -1,7 +1,8 @@
 {
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%/",
-        "phpunit.xml.dist": "phpunit.xml.dist"
+        "phpunit.xml.dist": "phpunit.xml.dist",
+        "tests/": "tests/"
     },
     "gitignore": [
         "/phpunit.xml"
