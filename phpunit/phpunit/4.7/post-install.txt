@@ -1,0 +1,2 @@
+Adding <comment>phpunit/phpunit</> as a dependency is <comment>discouraged</>.
+You should require <fg=green>simple-phpunit</> instead.
