@@ -5,6 +5,7 @@
         "tests/": "tests/"
     },
     "gitignore": [
+        ".phpunit",
         "/phpunit.xml"
     ],
     "aliases": ["phpunit", "simple-phpunit"]
