@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "src/": "%SRC_DIR%/"
+    }
+}
