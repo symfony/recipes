@@ -1,0 +1,8 @@
+<bg=blue;fg=white>                                  </>
+<bg=blue;fg=white> Next: SearchBundle Configuration </>
+<bg=blue;fg=white>                                  </>
+
+  * The Algolia/SearchBundle ships with Algolia by default. Create a free
+    account on http://www.algolia.com and get credentials from the API Keys tab.
+
+  * Modify your ALGOLIA_APP_ID and ALGOLIA_API_KEY config in <fg=green>.env</>

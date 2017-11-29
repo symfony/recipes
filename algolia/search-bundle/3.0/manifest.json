@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Algolia\\SearchBundle\\AlgoliaSearchBundle": ["all"]
+    },
+    "env": {
+        "#1": "Create a free account on www.algolia.com",
+        "#2": "and get your credentials from the API Keys tab.",
+        "ALGOLIA_APP_ID": "...",
+        "ALGOLIA_API_KEY": "..."
+    },
+    "aliases": ["search", "search-engine", "algolia"]
+}
