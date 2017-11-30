@@ -21,7 +21,9 @@ if ($_SERVER['APP_DEBUG'] ?? ('prod' !== ($_SERVER['APP_ENV'] ?? 'dev'))) {
     Debug::enable();
 }
 
-// Request::setTrustedProxies(['0.0.0.0/0'], Request::HEADER_FORWARDED);
+if (($trustedProxies = getenv('TRUSTED_PROXIES')) && ($trustedHeaders = getenv('TRUSTED_HEADERS'))) {
+    Request::setTrustedProxies(explode(' ', $trustedProxies), constant(Request::class.'::'.$trustedHeaders));
+}
 
 $kernel = new Kernel($_SERVER['APP_ENV'] ?? 'dev', $_SERVER['APP_DEBUG'] ?? ('prod' !== ($_SERVER['APP_ENV'] ?? 'dev')));
 $request = Request::createFromGlobals();

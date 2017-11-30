@@ -14,7 +14,10 @@
     "env": {
         "APP_ENV": "dev",
         "APP_DEBUG": "1",
-        "APP_SECRET": "%generate(secret)%"
+        "APP_SECRET": "%generate(secret)%",
+        "#1": "See https://symfony.com/doc/current/request/load_balancer_reverse_proxy.html",
+        "#TRUSTED_PROXIES": "0.0.0.0/0",
+        "#TRUSTED_HEADERS": "HEADER_FORWARDED"
     },
     "gitignore": [
         ".env",
