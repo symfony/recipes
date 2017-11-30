@@ -1,4 +1,5 @@
 {
+    "aliases": ["orm-fixtures"],
     "bundles": {
         "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": ["dev", "test"]
     },
