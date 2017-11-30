@@ -13,7 +13,6 @@
     },
     "env": {
         "APP_ENV": "dev",
-        "APP_DEBUG": "1",
         "APP_SECRET": "%generate(secret)%"
     },
     "gitignore": [

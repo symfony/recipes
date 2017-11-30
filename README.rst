@@ -186,8 +186,7 @@ files stored in the root of the Symfony project:
 
     {
         "env": {
-            "APP_ENV": "dev",
-            "APP_DEBUG": "1"
+            "APP_ENV": "dev"
         }
     }
 
@@ -198,7 +197,6 @@ and ``.env.dist`` files:
 
     ###> your-recipe-name-here ###
     APP_ENV=dev
-    APP_DEBUG=1
     ###< your-recipe-name-here ###
 
 The ``###> your-recipe-name-here ###`` section separators are needed by Symfony
@@ -328,7 +326,6 @@ one used by ``symfony/framework-bundle``:
         },
         "env": {
             "APP_ENV": "dev",
-            "APP_DEBUG": "1",
             "APP_SECRET": "%generate(secret)%"
         },
         "gitignore": [
