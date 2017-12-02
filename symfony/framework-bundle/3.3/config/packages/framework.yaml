@@ -3,7 +3,6 @@ framework:
     #default_locale: en
     #csrf_protection: ~
     #http_method_override: true
-    #trusted_hosts: ~
 
     # uncomment this entire section to enable sessions
     #session:
