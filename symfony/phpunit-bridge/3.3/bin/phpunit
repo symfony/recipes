@@ -9,7 +9,7 @@ if (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {
     putenv('SYMFONY_PHPUNIT_REMOVE=symfony/yaml');
 }
 if (false === getenv('SYMFONY_PHPUNIT_VERSION')) {
-    putenv('SYMFONY_PHPUNIT_VERSION=6.4');
+    putenv('SYMFONY_PHPUNIT_VERSION=6.5');
 }
 if (false === getenv('SYMFONY_PHPUNIT_DIR')) {
     putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');
