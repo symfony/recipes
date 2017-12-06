@@ -6,5 +6,5 @@
     "container": {
         "locale": "en"
     },
-    "aliases": ["translator"]
+    "aliases": ["translator", "translations"]
 }
