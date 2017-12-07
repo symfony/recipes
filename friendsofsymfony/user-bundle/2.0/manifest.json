@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "FOS\\UserBundle\\FOSUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "copy-from-recipe": {
+            "config/": "%CONFIG_DIR%/",
+            "src/": "%SRC_DIR%/"
+        }
+    }
+}

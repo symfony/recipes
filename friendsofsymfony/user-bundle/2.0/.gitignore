@@ -1,0 +1,16 @@
+*
+!.gitignore
+!composer.json
+!config/
+config/*
+!config/packages/
+config/packages/*
+!config/packages/fos_user.yaml
+!config/routes/
+config/routes/*
+!config/routes/fos_user.yaml
+!manifest.json
+!src/
+src/*
+!src/Entity/
+!src/Repository/
