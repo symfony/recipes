@@ -295,7 +295,7 @@ the recipe:
 * The package must be of type "symfony-bundle" if a bundle is registered in the manifest;
 * The package must have a registered bundle in the manifest if type is "symfony-bundle";
 * The package does not only register a bundle for all environments;
-* The package does not depend on ``symfony/symfony``;
+* The package does not depend on ``symfony/symfony`` or ``symfony/security``;
 * All text files should end with a newline;
 * All configuration file names under ``config`` should use the underscore notation;
 * No "semantically" empty configuration files are created under ``config/packages``;
