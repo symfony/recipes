@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
+{% block html_wrapper %}<html>{% block html_core %}
+    {% block head_wrapper %}<head>{% block head_core %}
+        {% block head %}
+            <meta charset="UTF-8">
+            <title>{% block title %}Welcome!{% endblock %}</title>
+        {% endblock %}
+
+        {% block stylesheets_wrapper %}
+            {% block stylesheets_core %}
+                {% block stylesheets %}{% endblock %}
+            {% endblock %}
+        {% endblock %}
+    {% endblock %}</head>{% endblock %}
+
+    {% block body_wrapper %}<body>{% block body_core %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+
+        {% block javascripts_wrapper %}
+            {% block javascripts_core %}
+                {% block javascripts %}{% endblock %}
+            {% endblock %}
+        {% endblock %}
+    {% endblock %}</body>{% endblock %}
+{% endblock %}</html>{% endblock %}
