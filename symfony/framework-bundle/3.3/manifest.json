@@ -5,8 +5,7 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%/",
-        "src/": "%SRC_DIR%/",
-        ".env.dist": ".env.dist"
+        "src/": "%SRC_DIR%/"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
