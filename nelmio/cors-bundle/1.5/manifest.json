@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Nelmio\\CorsBundle\\NelmioCorsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CORS_ALLOW_ORIGIN": "^https?://localhost:?[0-9]*$"
+    },
+    "aliases": ["cors"]
+}
