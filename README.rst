@@ -53,7 +53,7 @@ Options
 ``aliases`` option
 ~~~~~~~~~~~~~~~~~~
 
-This option (not available in the `recipes-contrib` repository) defines one or 
+This option (not available in the ``recipes-contrib`` repository) defines one or 
 more alternative names that can be used to install the dependency. 
 Its value is an array of strings. For example, if a dependency
 is published as ``acme-inc/acme-log-monolog-handler``, it can define one or
