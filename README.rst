@@ -76,7 +76,7 @@ only contain the tasks needed to install and configure the dependency because
 Symfony is smart enough to reverse those tasks when uninstalling and
 unconfiguring the dependencies.
 
-There are eight types of tasks, which are called **configurators**:
+There are several types of tasks, which are called **configurators**:
 ``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``,
 ``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
