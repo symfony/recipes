@@ -1,5 +1,6 @@
 {
     "copy-from-recipe": {
-        ".env.dist": ".env.dist"
+        ".env.dist": ".env.dist",
+        "git/": ".git"
     }
 }
