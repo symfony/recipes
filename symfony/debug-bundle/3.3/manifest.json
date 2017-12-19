@@ -1,6 +1,5 @@
 {
     "bundles": {
         "Symfony\\Bundle\\DebugBundle\\DebugBundle": ["dev", "test"]
-    },
-    "aliases": ["debug"]
+    }
 }
