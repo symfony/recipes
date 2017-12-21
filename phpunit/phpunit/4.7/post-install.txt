@@ -1,5 +1,5 @@
 <bg=yellow;fg=black>                                                                                              </>
-<bg=yellow;fg=black> Adding phpunit/phpunit as a dependency is discouraged in favour of Symfony's PHPUnit Bridge. </>
+<bg=yellow;fg=black> Adding phpunit/phpunit as a dependency is discouraged in favor of Symfony's PHPUnit Bridge. </>
 <bg=yellow;fg=black>                                                                                              </>
 
   * <fg=blue>Instead</>:
