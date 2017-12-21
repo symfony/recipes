@@ -1,7 +1,7 @@
-<bg=yellow;fg=black>                                                        </>
-<bg=yellow;fg=black> Adding phpunit/phpunit as a dependency is discouraged. </>
-<bg=yellow;fg=black>                                                        </>
+<bg=yellow;fg=black>                                                                                             </>
+<bg=yellow;fg=black> Adding phpunit/phpunit as a dependency is discouraged in favor of Symfony's PHPUnit Bridge. </>
+<bg=yellow;fg=black>                                                                                             </>
 
   * <fg=blue>Instead</>:
     1. Remove it now: <comment>composer remove phpunit/phpunit</>
-    2. Use Symfony's bridge: <comment>composer require phpunit</>
+    2. Use Symfony's bridge: <comment>composer require --dev phpunit</>
