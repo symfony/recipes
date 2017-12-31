@@ -1,0 +1,5 @@
+Give thanks (in the form of a GitHub ⭐) to your fellow PHP package maintainers (not limited to Symfony components)!
+
+Run <comment>composer thanks</>
+
+This will find all of your Composer dependencies, find their github.com repository, and star their GitHub repositories.
