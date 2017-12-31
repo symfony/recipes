@@ -14,4 +14,4 @@
 
   * <fg=blue>Thanks</> for using Symfony!
     Spread some love by starring the GitHub repositories you use!
-    Run <comment>composer req thanks && composer thanks</>
+    Run <comment>composer req --dev thanks && composer thanks</>
