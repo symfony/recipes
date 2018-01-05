@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Sonata\\CoreBundle\\SonataCoreBundle": ["all"],
+        "Knp\\Bundle\\MenuBundle\\KnpMenuBundle": ["all"],
+        "Sonata\\AdminBundle\\SonataAdminBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "aliases": ["sonata", "sonata-admin"]
+}
