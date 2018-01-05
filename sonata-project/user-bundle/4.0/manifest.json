@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Sonata\\AdminBundle\\SonataAdminBundle": ["all"],
+        "Sonata\\CoreBundle\\SonataCoreBundle": ["all"],
+        "Sonata\\BlockBundle\\SonataBlockBundle": ["all"],
+        "FOS\\UserBundle\\FOSUserBundle": ["all"],
+        "Sonata\\UserBundle\\SonataUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["sonata-user"]
+}

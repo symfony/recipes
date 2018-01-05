@@ -1,0 +1,21 @@
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb
+
+fos_user:
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Sonata\UserBundle\Entity\BaseUser
+
+    group:
+        group_class:   Sonata\UserBundle\Entity\BaseGroup
+        group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+    service:
+        user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
+
+doctrine:
+
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
