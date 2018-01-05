@@ -1,0 +1,2 @@
+sonata_block:
+    default_contexts: [cms]
