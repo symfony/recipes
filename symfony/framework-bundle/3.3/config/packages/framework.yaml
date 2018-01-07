@@ -13,3 +13,11 @@ framework:
     #fragments: ~
     php_errors:
         log: true
+
+    cache:
+        # app cache uses the filesystem by default. Other options include:
+        # app: cache.adapter.apcu
+
+        # app: cache.adapter.redis
+        # configure your redis connnection via:
+        # default_redis_provider: redis://localhost
