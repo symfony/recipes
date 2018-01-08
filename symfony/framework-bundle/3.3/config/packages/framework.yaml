@@ -15,9 +15,11 @@ framework:
         log: true
 
     cache:
-        # app cache uses the filesystem by default. Other options include:
+        # The app cache caches to the filesystem by default. Other options include:
+
+        # apcu
         # app: cache.adapter.apcu
 
+        # redis
         # app: cache.adapter.redis
-        # configure your redis connnection via:
         # default_redis_provider: redis://localhost
