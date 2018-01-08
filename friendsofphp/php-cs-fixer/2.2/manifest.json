@@ -1,5 +1,5 @@
 {
-    "aliases": ["fixer"],
+    "aliases": ["cs-fixer", "fixer", "php-cs-fixer"],
     "copy-from-recipe": {
         ".php_cs.dist": ".php_cs.dist"
     },
