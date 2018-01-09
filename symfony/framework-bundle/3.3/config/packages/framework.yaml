@@ -17,9 +17,9 @@ framework:
     cache:
         # The app cache caches to the filesystem by default. Other options include:
 
-        # apcu
-        # app: cache.adapter.apcu
+        # Redis
+        #app: cache.adapter.redis
+        #default_redis_provider: redis://localhost
 
-        # redis
-        # app: cache.adapter.redis
-        # default_redis_provider: redis://localhost
+        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)
+        #app: cache.adapter.apcu
