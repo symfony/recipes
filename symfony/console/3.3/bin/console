@@ -24,7 +24,9 @@ if (!isset($_SERVER['APP_ENV'])) {
 
 $input = new ArgvInput();
 $env = $input->getParameterOption(['--env', '-e'], $_SERVER['APP_ENV'] ?? 'dev');
-$debug = ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env)) && !$input->hasParameterOption(['--no-debug', '']);
+$debug = (
+        (!isset($_SERVER['APP_DEBUG']) ? null : filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE)) ?? ('prod' !== $env)
+    ) && !$input->hasParameterOption(['--no-debug', '']);
 
 if ($debug) {
     umask(0000);
