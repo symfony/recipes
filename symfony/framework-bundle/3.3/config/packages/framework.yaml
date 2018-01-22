@@ -15,7 +15,12 @@ framework:
         log: true
 
     cache:
-        # The app cache caches to the filesystem by default. Other options include:
+        # Put the unique name of your app here: the prefix seed
+        # is used to compute stable namespaces for cache keys.
+        #prefix_seed: your_vendor_name/app_name
+
+        # The app cache caches to the filesystem by default.
+        # Other options include:
 
         # Redis
         #app: cache.adapter.redis
