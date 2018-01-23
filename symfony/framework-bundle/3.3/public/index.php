@@ -16,7 +16,7 @@ if (!isset($_SERVER['APP_ENV'])) {
 }
 
 $env = $_SERVER['APP_ENV'] ?? 'dev';
-$debug = $_SERVER['APP_DEBUG'] ?? ('prod' !== $env);
+$debug = (!isset($_SERVER['APP_DEBUG']) ? null : filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE)) ?? ('prod' !== $env)
 
 if ($debug) {
     umask(0000);
