@@ -4,7 +4,7 @@
 
   * <fg=blue>Run</> your application:
     1. Change to the project directory
-    2. Execute the <comment>php -S 127.0.0.1:8000 -t public</> command;
+    2. Execute the <comment>php -S 127.0.0.1:8000 public/index.php</> command;
     3. Browse to the <comment>http://localhost:8000/</> URL.
 
        Quit the server with CTRL-C.
