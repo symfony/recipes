@@ -16,3 +16,9 @@ security:
 
             # form_login: ~
             # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # easy way to control access for large sections of your site
+    # note: only the *first* access control that matches will be used
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
