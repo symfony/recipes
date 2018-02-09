@@ -28,7 +28,7 @@ class Kernel extends BaseKernel
     {
         $contents = require $this->getProjectDir().'/config/bundles.php';
         foreach ($contents as $class => $envs) {
-            if (isset($envs['all']) || isset($envs[$this->environment])) {
+            if ((isset($envs['all']) && $envs['all']) || (isset($envs[$this->environment]) && $envs[$this->environment])) {
                 yield new $class();
             }
         }
