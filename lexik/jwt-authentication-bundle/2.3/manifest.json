@@ -13,6 +13,6 @@
         "JWT_PASSPHRASE": "%generate(secret)%"
     },
     "gitignore": [
-    	"/var/jwt"
+    	"%CONFIG_DIR%/jwt/*.pem"
     ]
 }
