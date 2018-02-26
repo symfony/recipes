@@ -11,5 +11,8 @@
         "JWT_PRIVATE_KEY_PATH": "%CONFIG_DIR%/jwt/private.pem",
         "JWT_PUBLIC_KEY_PATH": "%CONFIG_DIR%/jwt/public.pem",
         "JWT_PASSPHRASE": "%generate(secret)%"
+    },
+    "gitignore": {
+    	"/var/jwt"
     }
 }
