@@ -4,7 +4,7 @@
         ".php_cs.dist": ".php_cs.dist"
     },
     "gitignore": [
-        ".php_cs",
-        ".php_cs.cache"
+        "/.php_cs",
+        "/.php_cs.cache"
     ]
 }
