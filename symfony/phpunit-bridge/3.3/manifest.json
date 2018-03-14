@@ -9,5 +9,5 @@
         ".phpunit",
         "/phpunit.xml"
     ],
-    "aliases": ["phpunit", "simple-phpunit", "test", "tests"]
+    "aliases": ["phpunit", "simple-phpunit"]
 }
