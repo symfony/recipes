@@ -7,6 +7,6 @@
     "aliases": ["encore", "webpack", "webpack-encore"],
     "gitignore": [
         "/node_modules/",
-        "/public/build/"
+        "/%PUBLIC_DIR%/build/"
     ]
 }
