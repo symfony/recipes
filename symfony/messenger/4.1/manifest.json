@@ -3,7 +3,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MESSENGER_ADAPTER_DSN": "amqp://guest:guest@localhost:5672/%2f/messages"
+        "#MESSENGER_ADAPTER_DSN": "amqp://guest:guest@localhost:5672/%2f/messages"
     },
     "aliases": ["messenger", "amqp"]
 }

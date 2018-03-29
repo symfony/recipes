@@ -1,8 +1,9 @@
 framework:
     messenger:
+        adapters:
+            # Uncomment the following line to enable a default adapter
+            # default: "%env(MESSENGER_ADAPTER_DSN)%"
+
         routing:
             # Route your messages to the senders...
             # 'App\Message\YourMessage': messenger.default_sender
-
-        adapters:
-            default: "%env(MESSENGER_ADAPTER_DSN)%"
