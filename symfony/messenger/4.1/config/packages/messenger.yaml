@@ -1,7 +1,7 @@
 framework:
     messenger:
         adapters:
-            # Uncomment the following line to enable a default adapter
+            # Uncomment the following line to enable an adapter named "amqp"
             # amqp: "%env(MESSENGER_ADAPTER_DSN)%"
 
         routing:
