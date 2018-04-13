@@ -25,12 +25,12 @@ class Kernel extends BaseKernel
         return $this->getProjectDir().'/var/log';
     }
 
-    public function getConfigDir()
+    private function getConfigDir()
     {
         return $this->getProjectDir().'/config';
     }
 
-    public function getBundlesFile()
+    private function getBundlesFile()
     {
         return $this->getConfigDir().'/bundles.php';
     }
@@ -53,16 +53,18 @@ class Kernel extends BaseKernel
         $container->setParameter('container.autowiring.strict_mode', true);
         $container->setParameter('container.dumper.inline_class_loader', true);
 
-        $loader->load($this->getConfigDir().'/{packages}/*'.self::CONFIG_EXTS, 'glob');
-        $loader->load($this->getConfigDir().'/{packages}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
-        $loader->load($this->getConfigDir().'/{services}'.self::CONFIG_EXTS, 'glob');
-        $loader->load($this->getConfigDir().'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');
+        $confDir = $this->getConfigDir();
+        $loader->load($confDir.'/{packages}/*'.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/{packages}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/{services}'.self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        $routes->import($this->getConfigDir().'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($this->getConfigDir().'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($this->getConfigDir().'/{routes}'.self::CONFIG_EXTS, '/', 'glob');
+        $confDir = $this->getConfigDir();
+        $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
+        $routes->import($confDir.'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
+        $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');
     }
 }
