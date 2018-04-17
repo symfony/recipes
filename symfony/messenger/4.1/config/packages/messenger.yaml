@@ -5,5 +5,5 @@ framework:
             # amqp: "%env(MESSENGER_ADAPTER_DSN)%"
 
         routing:
-            # Route your messages to the senders.
+            # Route your messages to the adapters
             # 'App\Message\YourMessage': amqp
