@@ -15,7 +15,6 @@ doctrine:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
 
-        # With Symfony 3.3, remove the `resolve:` prefix
         url: '%env(resolve:DATABASE_URL)%'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
