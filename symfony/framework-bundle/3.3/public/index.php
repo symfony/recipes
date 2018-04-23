@@ -2,6 +2,7 @@
 
 use App\Kernel;
 use Symfony\Component\Debug\Debug;
+use Symfony\Component\Debug\ExceptionHandler;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -20,8 +21,9 @@ $debug = (bool) ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env));
 
 if ($debug) {
     umask(0000);
-
     Debug::enable();
+} else {
+    ExceptionHandler::register(false);
 }
 
 if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
