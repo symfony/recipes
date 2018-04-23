@@ -25,16 +25,6 @@ class Kernel extends BaseKernel
         return $this->getProjectDir().'/var/log';
     }
 
-    private function getConfigDir()
-    {
-        return $this->getProjectDir().'/config';
-    }
-
-    private function getBundlesFile()
-    {
-        return $this->getConfigDir().'/bundles.php';
-    }
-
     public function registerBundles()
     {
         $contents = require $this->getBundlesFile();
@@ -66,5 +56,15 @@ class Kernel extends BaseKernel
         $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir.'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');
+    }
+
+    private function getConfigDir()
+    {
+        return $this->getProjectDir().'/config';
+    }
+
+    private function getBundlesFile()
+    {
+        return $this->getConfigDir().'/bundles.php';
     }
 }
