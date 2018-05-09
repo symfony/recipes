@@ -1,0 +1,6 @@
+<bg=blue;fg=white>                  </>
+<bg=blue;fg=white> Easy Log Handler </>
+<bg=blue;fg=white>                  </>
+
+  * Uncomment Monolog configuration in <comment>%CONFIG_DIR%/packages/dev/easy_log_handler.yaml</comment>
+    to enable Easy Log Handler.
