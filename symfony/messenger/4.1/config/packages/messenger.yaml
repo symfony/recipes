@@ -1,9 +1,9 @@
 framework:
     messenger:
-        adapters:
-            # Uncomment the following line to enable an adapter named "amqp"
-            # amqp: "%env(MESSENGER_ADAPTER_DSN)%"
+        transports:
+            # Uncomment the following line to enable a transport named "amqp"
+            # amqp: '%env(MESSENGER_ADAPTER_DSN)%'
 
         routing:
-            # Route your messages to the adapters
+            # Route your messages to the transports
             # 'App\Message\YourMessage': amqp

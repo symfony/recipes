@@ -1,0 +1,17 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * You're ready to use the Messenger component. You can define your own message buses
+    or start using the default one right now by injecting the <info>messenger.bus.default</info> service
+    or typehinting <info>Symfony\Component\Messenger\MessageBusInterface</info> in your code.
+
+  * If you need to send messages to your broker, you can benefit from the built-in
+    amqp transport by:
+
+    1. Installing the <info>symfony/serializer-pack</>
+    2. Uncommenting the <comment> MESSENGER_ADAPTER_DSN</> env var
+       and `framework.messanger.transports.amqp` config
+    3. Routing your messages to the amqp sender.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/messenger.html</>
