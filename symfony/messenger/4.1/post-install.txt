@@ -7,11 +7,11 @@
     or typehinting <info>Symfony\Component\Messenger\MessageBusInterface</info> in your code.
 
   * If you need to send messages to your broker, you can benefit from the built-in
-    amqp transport by:
+    AMQP transport by:
 
-    1. Installing the AMQP pack by running <info>composer require amqp</>
-    2. Uncommenting the <comment> MESSENGER_ADAPTER_DSN</> env var
-       and `framework.messanger.transports.amqp` config
+    1. Installing the AMQP pack by running <info>composer require amqp</>;
+    2. Uncommenting the <comment>MESSENGER_ADAPTER_DSN</> env var
+       and <comment>framework.messanger.transports.amqp</> config;
     3. Routing your messages to the amqp sender.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/messenger.html</>
