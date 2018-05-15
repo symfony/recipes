@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
@@ -33,6 +34,27 @@ class Kernel extends BaseKernel
                 yield new $class();
             }
         }
+    }
+
+    public static function bootstrapEnvironment(string $env = null)
+    {
+        $env = $env ?? $_SERVER['APP_ENV'] ?? null;
+        $projectDir = __DIR__.'/..';
+        if (!$env && !class_exists(Dotenv::class)) {
+            throw new \RuntimeException('Environment not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
+        }
+
+        // Dotenv is not installed or generic env file is not present
+        // Assume envs are already defined
+        if (!class_exists(Dotenv::class) || !file_exists($projectDir.'/.env')) {
+            return;
+        }
+
+        $envFiles = ["$projectDir/.env"];
+        if (file_exists($file = "$projectDir/.env.$env")) {
+            $envFiles[] = $file;
+        }
+        (new Dotenv())->load(...$envFiles);
     }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
