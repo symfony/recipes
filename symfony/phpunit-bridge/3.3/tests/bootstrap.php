@@ -9,7 +9,7 @@ use App\Kernel;
  * Those variables will override any defined in .env.
  */
 
-Kernel::bootstrapEnvironment();
+Kernel::bootstrapEnvironment($_ENV['APP_ENV'] ?? null);
 
 $debug = $_SERVER['APP_DEBUG'] ?? true;
 
