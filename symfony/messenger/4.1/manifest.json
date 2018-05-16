@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "MESSENGER_ADAPTER_DSN=amqp://guest:guest@localhost:5672/%2f/messages"
+    },
+    "aliases": ["messenger"]
+}
