@@ -1,7 +1,6 @@
 {
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%/",
-        "config/": "%CONFIG_DIR%/",
         "phpunit.xml.dist": "phpunit.xml.dist",
         "tests/": "tests/"
     },
