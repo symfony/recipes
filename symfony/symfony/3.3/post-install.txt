@@ -1,0 +1,5 @@
+<bg=yellow;fg=black>                                                                                 </>
+<bg=yellow;fg=black> Using "symfony/symfony" in your dependencies is incompatible with Symfony Flex! </>
+<bg=yellow;fg=black>                                                                                 </>
+
+  * <fg=blue>Instead</> use individual <comment>symfony/*</comment> packages.
