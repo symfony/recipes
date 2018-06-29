@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "aliases": ["jwt-auth"],
+    "env": {
+        "JWT_SECRET_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
+        "JWT_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
+        "JWT_PASSPHRASE": "%generate(secret)%"
+    },
+    "gitignore": [
+        "/%CONFIG_DIR%/jwt/*.pem"
+    ]
+}
