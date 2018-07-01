@@ -6,6 +6,9 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        esi:
+            pattern: ^/_fragment$
+            security: false
         main:
             anonymous: true
 
