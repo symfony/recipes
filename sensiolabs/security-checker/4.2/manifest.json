@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "security-checker security:check": "script"
+    },
+    "aliases": ["security-check", "security-checker", "sec-checker", "sec-check", "sec-checks"]
+}
