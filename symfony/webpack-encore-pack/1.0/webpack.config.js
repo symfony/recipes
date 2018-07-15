@@ -5,7 +5,7 @@ Encore
     .setOutputPath('public/build/')
     // the public path used by the web server to access the previous directory
     .setPublicPath('/build')
-    // the path inside the Symfony app, as given to the asset() function
+    // the public path you will use in Symfony's asset() function - e.g. asset('build/some_file.js')
     .setManifestKeyPrefix('build/')
 
     .cleanupOutputBeforeBuild()
