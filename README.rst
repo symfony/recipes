@@ -289,6 +289,7 @@ the recipe:
 * JSON files must use 4 space indentations;
 * Aliases are only supported in the main repository, not the contrib one;
 * Aliases must not be already defined by another package;
+* Aliases are not in the list of special Composer commands (nothing, lock, and mirrors);
 * The manifest file only contains supported keys;
 * The package must exist on Packagist;
 * The package must have at least one version on Packagist;
