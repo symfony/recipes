@@ -11,7 +11,7 @@
 
     1. Installing the AMQP pack by running <info>composer require amqp</>;
     2. Uncommenting the <comment>MESSENGER_TRANSPORT_DSN</> env var
-       and <comment>framework.messanger.transports.amqp</> config;
+       and <comment>framework.messenger.transports.amqp</> config;
     3. Routing your messages to the amqp sender.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/messenger.html</>
