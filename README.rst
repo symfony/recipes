@@ -222,10 +222,12 @@ script (``php-script`` for PHP scripts, ``script`` for any shell script and
 .. code-block:: json
 
     {
-        "auto-scripts": {
-            "vendor/bin/security-checker security:check": "php-script",
-            "make cache-warmup": "script",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+        "scripts": {
+            "auto-scripts": {
+                "vendor/bin/security-checker security:check": "php-script",
+                "make cache-warmup": "script",
+                "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+            }
         }
     }
 
