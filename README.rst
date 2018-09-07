@@ -209,8 +209,8 @@ Don't remove or modify these separators.
     Use ``%generate(secret)%`` as the value of any environment variable to
     replace it with a cryptographically secure random value of 16 bytes.
 
-``auto-scripts`` Configurator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``composer-scripts`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Registers scripts in the ``auto-scripts`` section of the ``composer.json`` file
 to execute them automatically when running ``composer install`` and ``composer
@@ -222,12 +222,10 @@ script (``php-script`` for PHP scripts, ``script`` for any shell script and
 .. code-block:: json
 
     {
-        "scripts": {
-            "auto-scripts": {
-                "vendor/bin/security-checker security:check": "php-script",
-                "make cache-warmup": "script",
-                "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
-            }
+        "composer-scripts": {
+            "vendor/bin/security-checker security:check": "php-script",
+            "make cache-warmup": "script",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         }
     }
 
