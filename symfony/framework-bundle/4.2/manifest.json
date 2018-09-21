@@ -18,7 +18,7 @@
         "#TRUSTED_HOSTS": "localhost,example.com"
     },
     "gitignore": [
-        "/.env",
+        "/.env.*",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
         "/vendor/"
