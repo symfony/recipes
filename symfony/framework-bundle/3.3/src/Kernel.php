@@ -36,25 +36,36 @@ class Kernel extends BaseKernel
         }
     }
 
+    /**
+     * Bootstrap the environment if APP_ENV has not been set yet
+     * It will load the generic .env file and the .env for the APP_ENV set in the generic (if it exists)
+     *
+     * @param string|null $env If set it will load an additional ".env" file
+     */
     public static function bootstrapEnvironment(string $env = null)
     {
-        $env = $env ?? $_SERVER['APP_ENV'] ?? null;
-        $projectDir = __DIR__.'/..';
-        if (!$env && !class_exists(Dotenv::class)) {
-            throw new \RuntimeException('Environment not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
-        }
-
-        // Dotenv is not installed or generic env file is not present
-        // Assume envs are already defined
-        if (!class_exists(Dotenv::class) || !file_exists($projectDir.'/.env')) {
+        if (isset($_SERVER['APP_ENV'])) {
+            // environment is set, do not load .env
             return;
         }
 
-        $envFiles = ["$projectDir/.env"];
-        if (file_exists($file = "$projectDir/.env.$env")) {
-            $envFiles[] = $file;
+        $projectDir = __DIR__.'/..';
+        if (!class_exists(Dotenv::class) || !file_exists($projectDir.'/.env')) {
+            // Dotenv is not installed or generic env file is not present
+            return;
         }
-        (new Dotenv())->load(...$envFiles);
+
+        // Load default .env file
+        $dotEnv = new Dotenv();
+        $dotEnv->load($projectDir.'/.env');
+        $appEnv = $_SERVER['APP_ENV'] ?? 'dev';
+        if ($env && file_exists($file = "$projectDir/.env.$env")) {
+            // Load a specific environment requested by the user
+            $dotEnv->load($file);
+        } elseif ($appEnv && $appEnv !== $env && file_exists($file = "$projectDir/.env.$appEnv")) {
+            // Load the environment for the app set in the generic
+            $dotEnv->load($file);
+        }
     }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)

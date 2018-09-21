@@ -15,7 +15,7 @@ if (!class_exists(Application::class)) {
 }
 
 $input = new ArgvInput();
-$env = $input->getParameterOption(['--env', '-e'], $_SERVER['APP_ENV'] ?? 'dev', true);
+$env = $input->getParameterOption(['--env', '-e'], null, true);
 
 Kernel::bootstrapEnvironment($env);
 
