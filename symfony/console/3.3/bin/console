@@ -23,7 +23,7 @@ if (!isset($_SERVER['APP_ENV'])) {
 }
 
 $input = new ArgvInput();
-$env = $input->getParameterOption(['--env', '-e'], $_SERVER['APP_ENV'] ?? 'dev', true);
+$env = $input->getParameterOption(['--env', '-e'], $_SERVER['CONSOLE_APP_ENV'] ?? $_SERVER['APP_ENV'] ?? 'dev', true);
 $debug = (bool) ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env)) && !$input->hasParameterOption('--no-debug', true);
 
 if ($debug) {
