@@ -24,7 +24,7 @@ if ($debug) {
     Debug::enable();
 }
 
-if (PHP_SAPI === 'cli-server' && '/index.php' !== $_SERVER['SCRIPT_NAME'] && is_file(__DIR__.                 $_SERVER['SCRIPT_NAME'])) {
+if (PHP_SAPI === 'cli-server' && '/index.php' !== $_SERVER['SCRIPT_NAME'] && is_file(__DIR__.$_SERVER['SCRIPT_NAME'])) {
     return false;
 }
 
