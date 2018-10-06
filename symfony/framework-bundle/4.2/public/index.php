@@ -19,6 +19,10 @@ $env = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? 'dev';
 $debug = (bool) ($_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? ('prod' !== $env));
 
 if ($debug) {
+    // Compatibility with the built-in PHP web server
+    if ('/index.php' !== $_SERVER['SCRIPT_NAME'] && is_file(__DIR__.$_SERVER['SCRIPT_NAME'])) {
+        return false;
+    }
     umask(0000);
 
     Debug::enable();
