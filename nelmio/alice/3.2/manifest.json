@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Nelmio\\Alice\\Bridge\\Symfony\\NelmioAliceBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
