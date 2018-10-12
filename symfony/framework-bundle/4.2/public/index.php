@@ -24,10 +24,6 @@ if ($debug) {
     Debug::enable();
 }
 
-if ('cli-server' === PHP_SAPI && '/index.php' !== $_SERVER['SCRIPT_NAME'] && is_file(__DIR__.$_SERVER['SCRIPT_NAME'])) {
-    return false;
-}
-
 if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? $_ENV['TRUSTED_PROXIES'] ?? false) {
     Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL ^ Request::HEADER_X_FORWARDED_HOST);
 }
