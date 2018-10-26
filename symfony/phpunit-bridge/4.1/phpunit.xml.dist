@@ -14,6 +14,9 @@
         <env name="APP_DEBUG" value="1" />
         <env name="APP_SECRET" value="s$cretf0rt3st" />
         <env name="SHELL_VERBOSITY" value="-1" />
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="999999" />
+        <env name="SYMFONY_PHPUNIT_REMOVE" value="" />
+        <env name="SYMFONY_PHPUNIT_VERSION" value="6.5" />
         <!-- define your env variables for the test env here -->
     </php>
 
