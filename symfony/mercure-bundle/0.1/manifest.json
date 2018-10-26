@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\MercureBundle\\MercureBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "container": {
+        "env(MERCURE_PUBLISH_URL)": "",
+        "env(MERCURE_JWT)": ""
+    },
+    "env": {
+        "MERCURE_PUBLISH_URL": "https://demo.mercure.rocks/hub",
+        "MERCURE_JWT": "your.JWT.token"
+    },
+    "aliases": ["mercure"]
+}
