@@ -5,10 +5,7 @@
   * <fg=blue>Run</> your application:
     1. Change to the project directory
     2. Create your code repository with the <comment>git init</comment> command
-    3. Execute the <comment>php -S 127.0.0.1:8000 -t public</> command
-    4. Browse to the <comment>http://localhost:8000/</> URL.
-
-       Quit the server with CTRL-C.
-       Run <comment>composer require server --dev</> for a better web server.
+    3. Run <comment>composer require server --dev</> to install the development web server,
+       or configure another supported web server <comment>https://symfony.com/doc/current/setup/web_server_configuration.html</>
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
