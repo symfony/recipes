@@ -12,6 +12,7 @@ $prod = 'prod' === $env;
 
 if (!$prod && class_exists(Dotenv::class)) {
     (new Dotenv())->loadForEnv($env, __DIR__.'/../.env');
+    $env = $_SERVER['APP_ENV'] ?? $env;
 } elseif (null === $envFromEnv) {
     throw new \RuntimeException('APP_ENV environment variable is not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
 }
