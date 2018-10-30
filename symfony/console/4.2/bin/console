@@ -1,26 +1,14 @@
 #!/usr/bin/env php
 <?php
 
-use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Debug\Debug;
-
-set_time_limit(0);
-
-[$env, $debug] = require __DIR__.'/../src/bootstrap.php';
 
 if (!class_exists(Application::class)) {
     throw new \RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
 }
 
-if ($debug) {
-    umask(0000);
+set_time_limit(0);
 
-    if (class_exists(Debug::class)) {
-        Debug::enable();
-    }
-}
-
-$kernel = new Kernel($env, $debug);
+$kernel = require __DIR__.'/../src/bootstrap.php';
 $application = new Application($kernel);
 $application->run($input);

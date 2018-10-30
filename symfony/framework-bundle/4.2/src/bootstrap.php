@@ -2,6 +2,8 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use App\Kernel;
+use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 
 $envFromEnv = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null;
@@ -14,4 +16,13 @@ if (!$prod && class_exists(Dotenv::class)) {
     throw new \RuntimeException('APP_ENV environment variable is not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
 }
 
-return [$env, (bool) ($_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? !$prod)];
+$debug = (bool) ($_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? !$prod);
+if ($debug) {
+    umask(0000);
+
+    if (class_exists(Debug::class)) {
+        Debug::enable();
+    }
+}
+
+return new Kernel($env, $debug);
