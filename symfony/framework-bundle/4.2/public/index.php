@@ -4,10 +4,7 @@ use App\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
-require __DIR__.'/../src/bootstrap.php';
-
-$env = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? 'dev';
-$debug = (bool) ($_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? ('prod' !== $env));
+[$env, $debug] = require __DIR__.'/../src/bootstrap.php';
 
 if ($debug) {
     umask(0000);
