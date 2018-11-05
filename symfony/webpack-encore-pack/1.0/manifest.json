@@ -1,11 +1,4 @@
 {
-    "copy-from-recipe": {
-        "assets/": "assets/",
-        "config/": "%CONFIG_DIR%/",
-        "package.json": "package.json",
-        "webpack.config.js": "webpack.config.js"
-    },
-    "aliases": ["encore", "webpack", "webpack-encore"],
     "gitignore": [
         "/node_modules/",
         "/%PUBLIC_DIR%/build/",
