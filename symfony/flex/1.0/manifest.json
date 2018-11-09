@@ -1,5 +1,6 @@
 {
     "copy-from-recipe": {
-        ".env": ".env"
+        ".env": ".env",
+        ".env.dist": ".env.dist"
     }
 }
