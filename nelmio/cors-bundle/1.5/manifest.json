@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "CORS_ALLOW_ORIGIN": "^https?://localhost(:[0-9]+)?$"
+        "CORS_ALLOW_ORIGIN": "^https?://localhost\(:[0-9]+\)?$"
     },
     "aliases": ["cors"]
 }
