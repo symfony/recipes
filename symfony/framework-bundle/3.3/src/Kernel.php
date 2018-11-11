@@ -114,7 +114,11 @@ class Kernel extends BaseKernel
 
     private static function loadEnv(Dotenv $dotenv, $path)
     {
-        $dotenv->load($path);
+        if (file_exists($path) || !file_exists($p = "$path.dist")) {
+            $dotenv->load($path);
+        } else {
+            $dotenv->load($p);
+        }
 
         if (null === $env = isset($_SERVER['APP_ENV']) ? $_SERVER['APP_ENV'] : (isset($_ENV['APP_ENV']) ? $_ENV['APP_ENV'] : null)) {
             $dotenv->populate(array('APP_ENV' => $env = 'dev'));
