@@ -6,9 +6,9 @@ if (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-php
     exit(1);
 }
 
-$classLoader = require dirname(__DIR__).'/vendor/autoload.php';
+require dirname(__DIR__).'/vendor/autoload.php';
+
 App\Kernel::bootstrapEnv('test');
-$classLoader->unregister();
 
 if (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {
     putenv('SYMFONY_PHPUNIT_REMOVE=');
