@@ -1,0 +1,1 @@
+../../../../symfony/framework-bundle/3.3/src/.bootstrap.php
