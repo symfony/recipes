@@ -4,7 +4,6 @@
         "bin/": "%BIN_DIR%/",
         "config/": "%CONFIG_DIR%/",
         "phpunit.xml.dist": "phpunit.xml.dist",
-        "src/": "%SRC_DIR%/",
         "tests/": "tests/"
     },
     "gitignore": [

@@ -1,7 +1,7 @@
 {
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "aliases": ["cli"]
 }
