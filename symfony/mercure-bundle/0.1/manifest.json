@@ -7,11 +7,11 @@
     },
     "container": {
         "env(MERCURE_PUBLISH_URL)": "",
-        "env(MERCURE_JWT)": ""
+        "env(MERCURE_JWT_SECRET)": ""
     },
     "env": {
         "MERCURE_PUBLISH_URL": "https://demo.mercure.rocks/hub",
-        "MERCURE_JWT": "your.JWT.token"
+        "MERCURE_JWT_SECRET": "#see https://mercure.rocks"
     },
     "aliases": ["mercure"]
 }
