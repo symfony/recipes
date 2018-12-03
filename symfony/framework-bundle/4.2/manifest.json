@@ -19,6 +19,7 @@
     },
     "gitignore": [
         "/.env.local",
+        "/.env.local.php",
         "/.env.*.local",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
