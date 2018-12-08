@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Platform Admin{% endblock %}
+
+{% block body %}<div id="api-platform-admin"></div>{% endblock %}
+
+{% block javascripts %}
+    <script type="text/plain" id="api-entrypoint">{{ path('api_entrypoint') }}</script>
+    {{ encore_entry_script_tags('admin') }}
+{% endblock %}

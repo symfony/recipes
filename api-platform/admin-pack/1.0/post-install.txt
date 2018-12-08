@@ -1,0 +1,16 @@
+<bg=blue;fg=white>                       </>
+<bg=blue;fg=white> To finish the install </>
+<bg=blue;fg=white>                       </>
+
+  * Your admin is almost ready:
+    1. Install the JavaScript dependencies by running <comment>yarn add @api-platform/admin</comment>
+    2. Go in <comment>webpack.config.js</comment> and <info>uncomment</info> the following lines:
+
+        Encore
+            // ...
+            .enableReactPreset()
+            .addEntry('admin', './assets/js/admin.js')
+
+  * Mark any entity with the <comment>@ApiResource</comment> annotation, it appears in the admin!
+
+  * Using MakerBundle? Try <info>php bin/console make:entity --api-resource</info>
