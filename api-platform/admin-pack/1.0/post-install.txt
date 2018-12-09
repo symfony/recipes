@@ -3,7 +3,7 @@
 <bg=blue;fg=white>                       </>
 
   * Your admin is almost ready:
-    1. Install the JavaScript dependencies by running <comment>yarn add @api-platform/admin</comment>
+    1. Install the JavaScript dependencies by running <comment>yarn add @api-platform/admin @babel/preset-react</comment>
     2. Edit <comment>webpack.config.js</comment> and <info>uncomment</info> the following lines:
 
         Encore
