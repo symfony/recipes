@@ -9,7 +9,7 @@ services:
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true # Automatically adds corresponding tags to your services depending on interfaces they implement.
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
