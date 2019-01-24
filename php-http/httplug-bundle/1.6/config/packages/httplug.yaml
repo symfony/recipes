@@ -1,7 +1,7 @@
 httplug:
     plugins:
-        redirect:
-            preserve_header: true
+        retry:
+            retry: 1
 
     discovery:
         client: 'auto'
@@ -12,3 +12,7 @@ httplug:
             plugins:
                 - 'httplug.plugin.content_length'
                 - 'httplug.plugin.redirect'
+                - header_defaults:
+                    headers:
+                        "X-Httplug": "This is just an example".
+                - 'httplug.plugin.retry'
