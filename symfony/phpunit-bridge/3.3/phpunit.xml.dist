@@ -10,6 +10,7 @@
     <php>
         <ini name="error_reporting" value="-1" />
         <env name="APP_ENV" value="test" />
+        <env name="APP_DEBUG" value="false" />
         <env name="SHELL_VERBOSITY" value="-1" />
     </php>
 
