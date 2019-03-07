@@ -8,8 +8,10 @@ require dirname(__DIR__).'/config/bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
-
-    Debug::enable();
+    
+    if (class_exists(Debug::class)) {
+        Debug::enable();
+    }
 }
 
 if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? $_ENV['TRUSTED_PROXIES'] ?? false) {
