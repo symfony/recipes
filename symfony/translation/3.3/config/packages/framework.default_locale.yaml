@@ -1,0 +1,2 @@
+framework:
+    default_locale: '%locale%'
