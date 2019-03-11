@@ -1,0 +1,4 @@
+framework:
+    http_client:
+        default_options:
+            # see HttpClientInterface::OPTIONS_DEFAULTS for existing options
