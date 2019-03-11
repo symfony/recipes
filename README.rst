@@ -143,7 +143,7 @@ directory of the application:
         }
     }
 
-The ``%BIN_DIR%`` string is a placeholder that, when installing the recipe, it's
+The ``%BIN_DIR%`` string is a placeholder that, when installing the recipe, is
 turned into the absolute path of the binaries directory of the Symfony app.
 These are the available placeholders: ``%BIN_DIR%``, ``%CONF_DIR%``,
 ``%CONFIG_DIR%``, ``%SRC_DIR%`` ``%VAR_DIR%`` and ``%PUBLIC_DIR%``.
