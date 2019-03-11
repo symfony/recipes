@@ -53,8 +53,8 @@ Options
 ``aliases`` option
 ~~~~~~~~~~~~~~~~~~
 
-This option (not available in the ``recipes-contrib`` repository) defines one or 
-more alternative names that can be used to install the dependency. 
+This option (not available in the ``recipes-contrib`` repository) defines one or
+more alternative names that can be used to install the dependency.
 Its value is an array of strings. For example, if a dependency
 is published as ``acme-inc/acme-log-monolog-handler``, it can define one or
 more aliases to make it easier to install:
@@ -143,11 +143,14 @@ directory of the application:
         }
     }
 
-The ``%BIN_DIR%`` string is a special value that it's turned into the absolute
-path of the binaries directory of the Symfony application. These are the special
-variables available: ``%BIN_DIR%``, ``%CONF_DIR%``, ``%CONFIG_DIR%``, ``%SRC_DIR%``
-``%VAR_DIR%`` and ``%PUBLIC_DIR%``. You can also access to any variable defined in
-the ``extra`` section of your ``composer.json`` file:
+The ``%BIN_DIR%`` string is a placeholder that, when installing the recipe, it's
+turned into the absolute path of the binaries directory of the Symfony app.
+These are the available placeholders: ``%BIN_DIR%``, ``%CONF_DIR%``,
+``%CONFIG_DIR%``, ``%SRC_DIR%`` ``%VAR_DIR%`` and ``%PUBLIC_DIR%``.
+
+Recipes must use these placeholders instead of hardcoding the paths to be truly
+reusable. The placeholder values can be overridden in the ``extra`` section of
+your ``composer.json`` file (where you can define your own placeholders too):
 
 .. code-block:: json
 
@@ -156,11 +159,18 @@ the ``extra`` section of your ``composer.json`` file:
         "...": "...",
 
         "extra": {
+            // overriding the value of the default placeholders
+            "bin-dir": "bin/",
+            "config-dir": "config/",
+            "src-dir": "src/",
+            "var-dir": "var/",
+            "public-dir": "public/",
+
+            // defining a custom placeholder (can be accessed using
+            // %MY_SPECIAL_DIR% in the recipe)
             "my-special-dir": "..."
         }
     }
-
-Now you can use ``%MY_SPECIAL_DIR%`` in your recipes.
 
 ``copy-from-recipe`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
