@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "MAILER_DSN=smtp://localhost"
+    }
+}
