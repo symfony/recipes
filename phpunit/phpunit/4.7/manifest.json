@@ -6,6 +6,7 @@
         "tests/": "tests/"
     },
     "gitignore": [
-        "/phpunit.xml"
+        "/phpunit.xml",
+        ".phpunit.result.cache"
     ]
 }
