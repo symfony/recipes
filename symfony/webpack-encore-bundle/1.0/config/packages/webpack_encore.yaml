@@ -3,7 +3,7 @@ webpack_encore:
     # This should match Encore.setOutputPath() in webpack.config.js.
     output_path: '%kernel.project_dir%/public/build'
     # If multiple builds are defined (as shown below), you can disable the default build:
-    # output_path: false	    # output_path: false
+    # output_path: false
 
     # if using Encore.enableIntegrityHashes() specify the crossorigin attribute value (default: anonymous)
     # crossorigin: 'use-credentials'
