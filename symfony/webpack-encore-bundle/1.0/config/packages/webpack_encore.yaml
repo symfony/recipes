@@ -5,8 +5,8 @@ webpack_encore:
     # If multiple builds are defined (as shown below), you can disable the default build:
     # output_path: false
 
-    # if using Encore.enableIntegrityHashes() specify the crossorigin attribute value (default: anonymous)
-    # crossorigin: 'use-credentials'
+    # if using Encore.enableIntegrityHashes() specify the crossorigin attribute value (default: false, or use 'anonymous' or 'use-credentials')
+    # crossorigin: 'anonymous'
     
     # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)
     # Available in version 1.2
