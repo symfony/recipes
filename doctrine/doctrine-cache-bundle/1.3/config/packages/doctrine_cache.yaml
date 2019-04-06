@@ -1,0 +1,10 @@
+doctrine_cache:
+    aliases:
+        apc_cache: my_apc_cache
+
+    providers:
+        my_apc_cache:
+            type: apc
+            namespace: my_apc_cache_ns
+            aliases:
+                - apc_cache
