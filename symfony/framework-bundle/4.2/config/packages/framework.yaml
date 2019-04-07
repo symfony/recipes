@@ -1,5 +1,5 @@
 framework:
-    secret: '%env(APP_SECRET)%'
+    secret: '%env(file:resolve:APP_SECRET_FILE)%'
     #default_locale: en
     #csrf_protection: true
     #http_method_override: true

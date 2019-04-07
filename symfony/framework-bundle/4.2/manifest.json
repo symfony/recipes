@@ -13,7 +13,7 @@
     },
     "env": {
         "APP_ENV": "dev",
-        "APP_SECRET": "%generate(secret)%",
+        "APP_SECRET_FILE": "%kernel.project_dir%/%CONFIG_DIR%/secrets/seed",
         "#TRUSTED_PROXIES": "127.0.0.1,127.0.0.2",
         "#TRUSTED_HOSTS": "'^localhost|example\\.com$'"
     },
@@ -21,6 +21,7 @@
         "/.env.local",
         "/.env.local.php",
         "/.env.*.local",
+        "/%CONFIG_DIR%/secrets/seed",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
         "/vendor/"
