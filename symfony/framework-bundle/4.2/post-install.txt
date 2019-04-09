@@ -3,9 +3,9 @@
 <bg=blue;fg=white>              </>
 
   * <fg=blue>Run</> your application:
-    1. Change to the project directory
+    1. Go to the project directory
     2. Create your code repository with the <comment>git init</comment> command
-    3. Run <comment>composer require server --dev</> to install the development web server,
-       or configure another supported web server <comment>https://symfony.com/doc/current/setup/web_server_configuration.html</>
+    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server,
+       or run <comment>composer require server --dev</> for a minimalist one
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
