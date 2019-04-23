@@ -6,14 +6,4 @@ if (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-php
     exit(1);
 }
 
-if (false === getenv('SYMFONY_PHPUNIT_VERSION')) {
-    putenv('SYMFONY_PHPUNIT_VERSION=6.5');
-}
-if (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {
-    putenv('SYMFONY_PHPUNIT_REMOVE=symfony/yaml');
-}
-if (false === getenv('SYMFONY_PHPUNIT_DIR')) {
-    putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');
-}
-
 require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit';
