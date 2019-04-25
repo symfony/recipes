@@ -13,11 +13,13 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+    private const CONFIGS_POSSIBLE_EXTENSIONS = '.{php,xml,yaml,yml}';
+
+    private const RESOURCE_TYPE_GLOBAL = 'glob';
 
     public function registerBundles(): iterable
     {
-        $contents = require $this->getProjectDir().'/config/bundles.php';
+        $contents = require $this->getBundlesFilePath();
         foreach ($contents as $class => $envs) {
             if ($envs[$this->environment] ?? $envs['all'] ?? false) {
                 yield new $class();
@@ -32,22 +34,62 @@ class Kernel extends BaseKernel
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
-        $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));
+        $bundlesFileResource = new FileResource($this->getBundlesFilePath());
+        $container->addResource($bundlesFileResource);
+        
         $container->setParameter('container.dumper.inline_class_loader', true);
-        $confDir = $this->getProjectDir().'/config';
-
-        $loader->load($confDir.'/{packages}/*'.self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir.'/{packages}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir.'/{services}'.self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');
+        
+        $configsRelativePaths = [
+            '/{packages}/*',
+            '/{packages}/'.$this->environment.'/**/*',
+            '/{services}',
+            '/{services}_'.$this->environment,
+        ];
+        $this->loadConfigs($loader, $configsRelativePaths);
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
-        $confDir = $this->getProjectDir().'/config';
+        $routesRelativePaths = [
+            '/{routes}/'.$this->environment.'/**/*',
+            '/{routes}/*',
+            '/{routes}',
+        ];
+        $this->importRoutes($routes, $routesRelativePaths);
+    }
 
-        $routes->import($confDir.'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');
+    private function loadConfigs(LoaderInterface $loader, array $relativePaths): void
+    {
+        $confDir = $this->getConfigDir();
+        
+        foreach ($relativePaths as $configRelativePath) {
+            $loader->load(
+                $confDir.$configRelativePath.self::CONFIGS_POSSIBLE_EXTENSIONS,
+                self::RESOURCE_TYPE_GLOBAL
+            );
+        }
+    }
+
+    private function importRoutes(RouteCollectionBuilder $routes, array $relativePaths): void
+    {
+        $confDir = $this->getConfigDir();
+
+        foreach ($relativePaths as $routeRelativePath) {
+            $routes->import(
+                $confDir.$routeRelativePath.self::CONFIGS_POSSIBLE_EXTENSIONS,
+                '/',
+                self::RESOURCE_TYPE_GLOBAL
+            );
+        }        
+    }
+
+    private function getConfigDir(): string
+    {
+        return $this->getProjectDir().'/config';
+    }
+
+    private function getBundlesFilePath(): string
+    {
+        return $this->getConfigDir().'/bundles.php';
     }
 }
