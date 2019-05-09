@@ -1,4 +1,1 @@
-framework:
-    test: true
-    session:
-        storage_id: session.storage.mock_file
+../../../../4.2/config/packages/test/framework.yaml
