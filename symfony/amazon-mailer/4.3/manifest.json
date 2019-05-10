@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=smtp://$AWS_ACCESS_KEY:$AWS_SECRET_KEY@ses",
+        "#2": "MAILER_DSN=http://$AWS_ACCESS_KEY:$AWS_SECRET_KEY@ses"
+    }
+}
