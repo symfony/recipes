@@ -6,7 +6,7 @@
 
   * If you want to send emails via a supported email provider, install
     the corresponding bridge.
-    For instance, <info>composer require mailgun-bridge</> for Mailgun.
+    For instance, <info>composer require mailgun-mailer</> for Mailgun.
 
   * If you want to send emails asynchronously:
 
