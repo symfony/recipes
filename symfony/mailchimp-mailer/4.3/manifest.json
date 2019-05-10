@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=smtp://$MANDRILL_USERNAME:$MANDRILL_PASSWORD@mandrill",
+        "#2": "MAILER_DSN=http://$MANDRILL_KEY@mandrill"
+    }
+}
