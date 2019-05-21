@@ -1,0 +1,14 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "To use AMQP, also run ‘composer require amqp’",
+        "#2": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+        "#3": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages"
+    },
+    "aliases": ["messenger"],
+    "conflict": {
+        "symfony/framework-bundle": "<4.3"
+    }
+}
