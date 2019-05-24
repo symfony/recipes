@@ -5,7 +5,7 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%"
     },
-    "aliases": ["jwt-auth"],
+    "aliases": ["jwt", "jwt-auth"],
     "env": {
         "JWT_SECRET_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
         "JWT_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",

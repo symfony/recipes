@@ -5,7 +5,7 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%"
     },
-    "aliases": ["jwt-auth"],
+    "aliases": ["jwt", "jwt-auth"],
     "env": {
         "#1": "Key paths should be relative to the project directory",
         "JWT_PRIVATE_KEY_PATH": "%CONFIG_DIR%/jwt/private.pem",
