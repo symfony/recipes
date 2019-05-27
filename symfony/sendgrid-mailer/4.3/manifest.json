@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "MAILER_DSN=smtp://$SENDGRID_KEY@sendgrid"
+        "#1": "MAILER_DSN=api://$SENDGRID_KEY@sendgrid"
     }
 }
