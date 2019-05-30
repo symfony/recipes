@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "MAILER_DSN=smtp://$POSTMARK_ID@postmark"
+        "#1": "MAILER_DSN=smtp://{YOUR-POSTMARK-USERNAME}:{YOUR-POSTMARK-PASSWORD}@smtp.postmarkapp.com"
     }
 }

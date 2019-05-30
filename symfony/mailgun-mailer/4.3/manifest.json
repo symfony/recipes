@@ -1,6 +1,6 @@
 {
     "env": {
-        "#1": "MAILER_DSN=smtp://$MAILGUN_USERNAME:$MAILGUN_PASSWORD@mailgun",
-        "#2": "MAILER_DSN=http://$MAILGUN_KEY:$MAILGUN_DOMAIN@mailgun"
+        "#1": "MAILER_DSN=smtp://{YOUR-MAILGUN-USERNAME}:{YOUR-MAILGUN-PASSWORD}@smtp.mailgun.org",
+        "#2": "MAILER_DSN=http://{YOUR-MAILGUN-KEY}:{YOUR-MAILGUN-DOMAIN}@mailgun"
     }
 }
