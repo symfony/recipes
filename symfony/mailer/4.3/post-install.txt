@@ -8,11 +8,4 @@
     the corresponding bridge.
     For instance, <info>composer require mailgun-mailer</> for Mailgun.
 
-  * If you want to send emails asynchronously:
-
-    1. Install the messenger component by running <info>composer require messenger</>;
-    2. Add <info>'Symfony\Component\Mailer\Messenger\SendEmailMessage': amqp</> to the
-       <info>config/packages/messenger.yaml</> file under <info>framework.messenger.routing</>
-       and replace <info>amqp</> with your transport name of choice.
-
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/mailer.html</>
