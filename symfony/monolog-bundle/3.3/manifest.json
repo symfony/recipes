@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\MonologBundle\\MonologBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["log", "logger", "logging", "logs", "monolog"]
+}
