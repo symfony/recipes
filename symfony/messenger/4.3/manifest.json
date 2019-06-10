@@ -4,7 +4,7 @@
     },
     "env": {
         "#1": "Choose one of the transports below",
-        "#2": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+        "#2": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f",
         "#3": "MESSENGER_TRANSPORT_DSN=doctrine://default",
         "#4": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages"
     },

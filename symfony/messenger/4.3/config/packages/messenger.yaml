@@ -5,7 +5,7 @@ framework:
 
         transports:
             # https://symfony.com/doc/current/messenger.html#transports
-            # async: '%env(MESSENGER_TRANSPORT_DSN)%'
+            # async: '%env(MESSENGER_TRANSPORT_DSN)%/messages_exchange'
             # failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
 
