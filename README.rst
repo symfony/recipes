@@ -10,6 +10,13 @@ the Symfony Core Team. For contributed recipes, see the `contrib repository`_.
 Creating Recipes
 ----------------
 
+1. Clone a repository
+~~~~~~~~~~~~~~~~~~
+In order to create a recipe, you will need to fork symfony/recipes-contrib repository. Then follow below instructions.
+
+2. Create your recipe structure
+~~~~~~~~~~~~~~~~~~
+
 Symfony recipes consist of a ``manifest.json`` config file and, optionally, any
 number of files and directories. Recipes must be stored on their own
 repositories, outside of your Composer package repository. They must follow the
