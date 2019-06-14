@@ -10,7 +10,7 @@ the Symfony Core Team. For contributed recipes, see the `contrib repository`_.
 Creating Recipes
 ----------------
 
-1. Clone a repository
+1. Fork the repository
 ~~~~~~~~~~~~~~~~~~
 In order to create a recipe, you will need to fork symfony/recipes-contrib repository. Then follow below instructions.
 
