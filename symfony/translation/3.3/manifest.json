@@ -3,8 +3,5 @@
         "config/": "%CONFIG_DIR%/",
         "translations/": "translations/"
     },
-    "container": {
-        "locale": "en"
-    },
     "aliases": ["translator", "translations"]
 }
