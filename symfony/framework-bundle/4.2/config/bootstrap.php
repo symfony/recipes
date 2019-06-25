@@ -1,16 +1,14 @@
 <?php
 
 use Symfony\Component\Dotenv\Dotenv;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Requirements\SymfonyRequirements;
 
 require dirname(__DIR__).'/vendor/autoload.php';
 
 // Verify Symfony requirements
 if (class_exists(SymfonyRequirements::class)) {
-    $requirements = new SymfonyRequirements(dirname(__DIR__), Kernel::VERSION);
     $argv = [];
-    echo "<pre>REMOVE THIS MESSAGE: composer remove symfony/requirements-checker\n\n";
+    echo (isset($_SERVER['HTTP_HOST']) ? '<pre>' : '')."REMOVE THIS MESSAGE: composer remove symfony/requirements-checker\n\n";
     require dirname(__DIR__).'/vendor/symfony/requirements-checker/bin/requirements-checker.php';
     die(1);
 }
