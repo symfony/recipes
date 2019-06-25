@@ -1,8 +1,19 @@
 <?php
 
 use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Requirements\SymfonyRequirements;
 
 require dirname(__DIR__).'/vendor/autoload.php';
+
+// Verify Symfony requirements
+if (class_exists(SymfonyRequirements::class)) {
+    $requirements = new SymfonyRequirements(dirname(__DIR__), Kernel::VERSION);
+    $argv = [];
+    echo "<pre>REMOVE THIS MESSAGE: composer remove symfony/requirements-checker\n\n";
+    require dirname(__DIR__).'/vendor/symfony/requirements-checker/bin/requirements-checker.php';
+    die(1);
+}
 
 // Load cached env vars if the .env.local.php file exists
 // Run "composer dump-env prod" to create it (requires symfony/flex >=1.2)
