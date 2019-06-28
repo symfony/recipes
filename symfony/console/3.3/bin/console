@@ -34,6 +34,8 @@ if ($_SERVER['APP_DEBUG']) {
 
     if (class_exists(Debug::class)) {
         Debug::enable();
+    } else {
+        throw new RuntimeException('You need to add "symfony/debug" as a development Composer dependency.');
     }
 }
 
