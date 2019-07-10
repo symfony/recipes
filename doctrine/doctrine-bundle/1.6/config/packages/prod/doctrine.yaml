@@ -1,4 +1,8 @@
 doctrine:
+    dbal:
+        # configure these for your production database server
+        driver: 'pdo_mysql'
+        server_version: '5.7'
     orm:
         auto_generate_proxy_classes: false
         metadata_cache_driver:
