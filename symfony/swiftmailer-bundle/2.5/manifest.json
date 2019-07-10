@@ -11,5 +11,5 @@
         "#3": "Delivery is disabled by default via \"null://localhost\"",
         "MAILER_URL": "null://localhost"
     },
-    "aliases": ["mailer", "mail"]
+    "aliases": ["mailer", "mail", "swiftmailer"]
 }
