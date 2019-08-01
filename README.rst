@@ -294,6 +294,7 @@ the recipe:
 * YAML files suffix must be ``.yaml``, not ``.yml``;
 * YAML files must be valid;
 * YAML files must use 4 space indentations;
+* YAML files use ``null`` instead of ``~``;
 * YAML files under config/packages must not define a "parameters" section;
 * JSON files must be valid;
 * JSON files must use 4 space indentations;
