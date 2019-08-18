@@ -5,6 +5,21 @@
     "env": {
         "#1": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages"
     },
+    "docker-compose": {
+        "services": [
+            "rabbitmq:",
+            "  image: rabbitmq:management-alpine",
+            "  environment:",
+            "    # You should definitely change the password in production",
+            "    - RABBITMQ_DEFAULT_USER=guest",
+            "    - RABBITMQ_DEFAULT_PASS=guest",
+            "  volumes:",
+            "    - rabbitmq-data:/var/lib/rabbitmq",
+            "  ports:",
+            "    - \"5672\""
+        ],
+        "volumes": ["rabbitmq-data: {}"]
+    },
     "aliases": ["messenger"],
     "conflict": {
         "symfony/framework-bundle": "<4.1"
