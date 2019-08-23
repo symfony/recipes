@@ -5,14 +5,11 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "container": {
-        "env(MERCURE_PUBLISH_URL)": "",
-        "env(MERCURE_JWT_SECRET)": ""
-    },
     "env": {
         "#1": "See https://symfony.com/doc/current/mercure.html#configuration",
         "MERCURE_PUBLISH_URL": "http://mercure/hub",
-        "MERCURE_JWT_SECRET": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOltdfX0.Oo0yg7y4yMa1vr_bziltxuTCqb8JVHKxp-f_FwwOim0"
+        "#2": "The default token is signed with the secret key: !ChangeMe!",
+        "MERCURE_JWT_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOltdfX0.Oo0yg7y4yMa1vr_bziltxuTCqb8JVHKxp-f_FwwOim0"
     },
     "docker-compose": {
         "services": [
