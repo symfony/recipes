@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=postmark://ID@default"
+    }
+}

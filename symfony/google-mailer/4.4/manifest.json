@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "Gmail SHOULD NOT be used on production, use it in development only.",
+        "#2": "MAILER_DSN=gmail://USERNAME:PASSWORD@default"
+    }
+}

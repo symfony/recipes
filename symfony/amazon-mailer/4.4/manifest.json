@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=ses://ACCESS_KEY:SECRET_KEY@default",
+        "#2": "MAILER_DSN=ses+smtp://ACCESS_KEY:SECRET_KEY@default"
+    }
+}
