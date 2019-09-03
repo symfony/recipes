@@ -1,6 +1,5 @@
 {
     "env": {
-        "#1": "SENDGRID_KEY=",
-        "#2": "MAILER_DSN=sendgrid://$SENDGRID_KEY@default"
+        "#1": "MAILER_DSN=sendgrid://KEY@default"
     }
 }

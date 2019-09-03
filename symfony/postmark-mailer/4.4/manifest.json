@@ -1,6 +1,5 @@
 {
     "env": {
-        "#1": "POSTMARK_ID=",
-        "#2": "MAILER_DSN=postmark://$POSTMARK_ID@default"
+        "#1": "MAILER_DSN=postmark://ID@default"
     }
 }
