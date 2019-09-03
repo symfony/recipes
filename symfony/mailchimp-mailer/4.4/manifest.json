@@ -1,0 +1,9 @@
+{
+    "env": {
+        "#1": "MANDRILL_USERNAME=",
+        "#2": "MANDRILL_PASSWORD=",
+        "#3": "MAILER_DSN=mandrill+smtp://$MANDRILL_USERNAME:$MANDRILL_PASSWORD@default",
+        "#4": "MANDRILL_KEY=",
+        "#5": "MAILER_DSN=mandrill://$MANDRILL_KEY@default"
+    }
+}
