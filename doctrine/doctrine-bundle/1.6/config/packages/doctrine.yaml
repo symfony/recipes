@@ -1,8 +1,12 @@
 doctrine:
     dbal:
         # configure these for your database server
-        driver: 'pdo_mysql'
+        # use postgresql for PostgreSQL
+        # use sqlite for SQLite
+        driver: 'mysql'
         server_version: '5.7'
+
+        # only needed for MySQL
         charset: utf8mb4
         default_table_options:
             charset: utf8mb4
