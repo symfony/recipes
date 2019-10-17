@@ -5,6 +5,5 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "templates/": "templates/"
-    },
-    "aliases": ["twig", "template", "templates"]
+    }
 }
