@@ -1,5 +1,6 @@
 mercure:
     hubs:
+        enable_profiler: '%kernel.debug%'
         default:
             url: '%env(MERCURE_PUBLISH_URL)%'
             jwt: '%env(MERCURE_JWT_TOKEN)%'
