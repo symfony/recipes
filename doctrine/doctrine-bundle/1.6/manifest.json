@@ -10,7 +10,7 @@
         "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
         "#2": "For an SQLite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
         "#3": "For a PostgreSQL database, use: \"postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=11\"",
-        "#4": "IMPORTANT: You MUST also configure your db driver and server_version in config/packages/doctrine.yaml",
-        "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name"
+        "#4": "IMPORTANT: You MUST configure your db driver and server version, either here or in config/packages/doctrine.yaml",
+        "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7"
     }
 }
