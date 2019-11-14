@@ -1,3 +1,3 @@
 _errors:
     resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
-    prefix: /__error
+    prefix: /_error
