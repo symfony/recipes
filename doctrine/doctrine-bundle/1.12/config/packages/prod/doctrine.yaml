@@ -1,0 +1,3 @@
+doctrine:
+    orm:
+        auto_generate_proxy_classes: false
