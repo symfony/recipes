@@ -1,7 +1,8 @@
 monolog:
     handlers:
-        main:
-            type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
-            channels: ["!event"]
+        # Enable if you need logs during (automated) tests
+        #main:
+        #    type: stream
+        #    path: "%kernel.logs_dir%/%kernel.environment%.log"
+        #    level: debug
+        #    channels: ["!event"]
