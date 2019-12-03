@@ -190,8 +190,8 @@ files and directories:
 ``env`` Configurator
 ~~~~~~~~~~~~~~~~~~~~
 
-Adds the given list of environment variables to the ``.env`` and ``.env.dist``
-files stored in the root of the Symfony project:
+Adds the given list of environment variables to the ``.env`` 
+file stored in the root of the Symfony project:
 
 .. code-block:: json
 
@@ -201,8 +201,7 @@ files stored in the root of the Symfony project:
         }
     }
 
-This recipe is converted into the following content appended to the ``.env``
-and ``.env.dist`` files:
+This recipe is converted into the following content appended to the ``.env`` file:
 
 .. code-block:: bash
 
