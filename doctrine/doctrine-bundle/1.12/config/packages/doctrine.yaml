@@ -1,11 +1,13 @@
 doctrine:
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
-        profiling_collect_backtrace: '%kernel.debug%'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '5.7'
+
+        # backtrace queries in profiler (significantly increases memory usage per request)
+        #profiling_collect_backtrace: '%kernel.debug%'
 
         # only needed for MySQL
         charset: utf8mb4
