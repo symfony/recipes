@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        public: false
+        autowire: true
+        autoconfigure: true
+
+    Twig\Extra\Markdown\MarkdownExtension: {}
+    Twig\Extra\Markdown\MarkdownRuntime:
+        tags: ['twig.runtime']
+    Twig\Extra\Markdown\DefaultMarkdown: {}
