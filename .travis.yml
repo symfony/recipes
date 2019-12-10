@@ -8,11 +8,11 @@ cache:
 matrix:
     fast_finish: true
     include:
-        - php: 7.4snapshot
+        - php: 7.4
           env: SKELETON_VERSION="^3.4"
-        - php: 7.4snapshot
+        - php: 7.4
           env: SKELETON_VERSION="^4.4"
-        - php: 7.4snapshot
+        - php: 7.4
           env: SKELETON_VERSION="^5.0"
 
 before_install:
