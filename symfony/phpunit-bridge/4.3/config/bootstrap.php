@@ -1,1 +1,1 @@
-../../../../symfony/framework-bundle/3.3/config/bootstrap.php
+../../4.2/config/bootstrap.php
