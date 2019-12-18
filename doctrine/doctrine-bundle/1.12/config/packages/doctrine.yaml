@@ -6,7 +6,7 @@ doctrine:
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '5.7'
 
-        # backtrace queries in profiler (significantly increases memory usage per request)
+        # backtrace queries in profiler (increases memory usage per request)
         #profiling_collect_backtrace: '%kernel.debug%'
 
         # only needed for MySQL
