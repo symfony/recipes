@@ -6,13 +6,13 @@ doctrine:
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '5.7'
 
-        # backtrace queries in profiler (increases memory usage per request)
-        #profiling_collect_backtrace: '%kernel.debug%'
-
         # only needed for MySQL
         charset: utf8mb4
         default_table_options:
             collate: utf8mb4_unicode_ci
+
+        # backtrace queries in profiler (increases memory usage per request)
+        #profiling_collect_backtrace: '%kernel.debug%'
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
