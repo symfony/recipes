@@ -1,0 +1,4 @@
+doctrine:
+    dbal:
+        # backtrace queries in profiler (increases memory usage per request)
+        #profiling_collect_backtrace: '%kernel.debug%'
