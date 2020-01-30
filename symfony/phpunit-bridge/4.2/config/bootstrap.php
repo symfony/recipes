@@ -1,1 +1,0 @@
-../../../framework-bundle/4.2/config/bootstrap.php

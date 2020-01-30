@@ -2,7 +2,6 @@
     "copy-from-recipe": {
         ".env.test": ".env.test",
         "phpunit.xml.dist": "phpunit.xml.dist",
-        "config/": "%CONFIG_DIR%/",
         "tests/": "tests/"
     },
     "gitignore": [
