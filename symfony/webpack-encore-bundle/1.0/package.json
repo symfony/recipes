@@ -8,9 +8,9 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
-        "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "dev-server": "NODE_ENV=development encore dev-server",
+        "dev": "NODE_ENV=development encore dev",
+        "watch": "NODE_ENV=development encore dev --watch",
+        "build": "NODE_ENV=production encore production --progress"
     }
 }
