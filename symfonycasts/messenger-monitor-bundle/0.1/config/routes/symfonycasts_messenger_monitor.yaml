@@ -1,0 +1,3 @@
+messenger_monitor:
+    resource: '@SymfonyCastsMessengerMonitorBundle/Resources/config/routing.xml'
+    prefix: /messenger-monitor

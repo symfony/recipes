@@ -1,0 +1,4 @@
+symfonycasts_messenger_monitor:
+    doctrine:
+        table: messenger_monitor
+        connection: default

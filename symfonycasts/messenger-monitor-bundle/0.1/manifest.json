@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "SymfonyCasts\\MessengerMonitorBundle\\SymfonyCastsMessengerMonitorBundle": ["all"]
+    },
+    "composer-scripts": {
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

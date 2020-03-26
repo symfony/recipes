@@ -1,0 +1,6 @@
+ * Messenger monitor bundle successfully installed!
+   Please don't forget to generate the table by running `doctrine:schema:update` or by creating a doctrine migration.
+
+   You can access messenger monitor's dashboard from the url `/messenger-monitor`.
+   Don't forget to add role `ROLE_ADMIN_MESSENGER` to your admin user.
+
