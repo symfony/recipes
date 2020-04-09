@@ -1,7 +1,7 @@
 var Encore = require('@symfony/webpack-encore');
 
-// Optional: sync the NODE_ENV value with the current webpack environment
-// It's useful when you configure tools like PostCSS in their own config files instead of in webpack.config.js.
+// Optional: sync the NODE_ENV value with the current Webpack Encore environment
+// It’s useful if you need to read the Webpack Encore environment from some other config file
 // process.env.NODE_ENV = Encore.isProduction() ? 'production' : 'development';
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
