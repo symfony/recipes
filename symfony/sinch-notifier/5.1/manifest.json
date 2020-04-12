@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SINCH_DSN=sinch://SID:TOKEN@default?from=FROM"
+    }
+}
