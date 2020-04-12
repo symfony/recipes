@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "TWILIO_DSN=twilio://SID:TOKEN@default?from=FROM"
+    }
+}
