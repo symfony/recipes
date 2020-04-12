@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "NEXMO_DSN=nexmo://KEY:SECRET@default?from=FROM"
+    }
+}
