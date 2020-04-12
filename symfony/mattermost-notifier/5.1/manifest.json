@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MATTERMOST_DSN=mattermost://TOKEN@HOST?channel=CHANNEL"
+    }
+}
