@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "See https://api.slack.com/messaging/webhooks",
+        "#2": "SLACK_DSN=slack://default/ID"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SLACK_DSN=slack://TOKEN@default?channel=CHANNEL"
+    }
+}
