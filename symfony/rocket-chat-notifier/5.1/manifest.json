@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ROCKETCHAT_DSN=rocketchat://ACCESS_TOKEN@default?channel=CHANNEL"
+    }
+}
