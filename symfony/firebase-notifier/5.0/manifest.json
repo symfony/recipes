@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "FIREBASE_DSN=firebase://TOKEN@default"
+    }
+}
