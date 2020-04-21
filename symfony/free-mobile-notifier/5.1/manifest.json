@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "FREE_MOBILE_DSN=freemobile://default?phone=PHONE"
+    }
+}
