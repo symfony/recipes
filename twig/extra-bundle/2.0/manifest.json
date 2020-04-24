@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Twig\\Extra\\TwigExtraBundle\\TwigExtraBundle": ["all"]
+    }
+}
