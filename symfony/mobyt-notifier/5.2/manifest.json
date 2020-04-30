@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MOBYT_DSN=mobyt://USER_KEY:ACCESS_TOKEN@default?from=FROM"
+    }
+}
