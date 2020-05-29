@@ -17,7 +17,3 @@ monolog:
             type: console
             process_psr_3_messages: false
             channels: ["!event", "!doctrine", "!console"]
-            # # As of Symfony 4.3 you can configure the log output:
-            # console_formater_options:
-            #     format: "%%datetime%% %%start_tag%%%%level_name%%%%end_tag%% <comment>[%%channel%%]</> %%message%%%%context%%\n"
-            #     multiline: false
