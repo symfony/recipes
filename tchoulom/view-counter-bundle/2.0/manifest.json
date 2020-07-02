@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Tchoulom\\Bundle\\ViewCounterBundle\\TchoulomViewCounterBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["viewcounter", "view-counter", "counter"]
+}

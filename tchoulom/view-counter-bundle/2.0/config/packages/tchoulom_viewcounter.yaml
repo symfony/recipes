@@ -1,0 +1,7 @@
+tchoulom_view_counter:
+    view_counter:
+        view_strategy: daily_view
+    statistics:
+        use_stats: false
+        stats_file_name: stats
+        stats_file_extension:
