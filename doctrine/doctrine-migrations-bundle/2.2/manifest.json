@@ -4,7 +4,7 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "migrations/": "migrations/"
+        "src/": "%SRC_DIR%/"
     },
     "aliases": ["doctrine-migrations", "migrations"]
 }
