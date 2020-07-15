@@ -20,7 +20,7 @@ if (!class_exists(Application::class)) {
 
 $input = new ArgvInput();
 if (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {
-    putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);
+    putenv('APP_MODE='.$_SERVER['APP_MODE'] = $_ENV['APP_MODE'] = $env);
 }
 
 if ($input->hasParameterOption('--no-debug', true)) {
@@ -37,6 +37,6 @@ if ($_SERVER['APP_DEBUG']) {
     }
 }
 
-$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+$kernel = new Kernel($_SERVER['APP_MODE'], (bool) $_SERVER['APP_DEBUG']);
 $application = new Application($kernel);
 $application->run($input);

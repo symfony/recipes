@@ -12,7 +12,7 @@
         "assets:install %PUBLIC_DIR%": "symfony-cmd"
     },
     "env": {
-        "APP_ENV": "dev",
+        "APP_MODE": "dev",
         "APP_SECRET": "%generate(secret)%"
     },
     "gitignore": [
