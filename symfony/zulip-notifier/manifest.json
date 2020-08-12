@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ZULIP_DSN=zulip://EMAIL:APIKEY@ENDPOINT?channel=CHANNEL"
+    }
+}
