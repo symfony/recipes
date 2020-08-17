@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=mailjet+api://PUBLIC_KEY:PRIVATE_KEY@api.mailjet.com",
+        "#2": "#MAILER_DSN=mailjet+smtp://PUBLIC_KEY:PRIVATE_KEY@in-v3.mailjet.com"
+    }
+}
