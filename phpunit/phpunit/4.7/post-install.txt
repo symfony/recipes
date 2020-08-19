@@ -1,7 +1,11 @@
-<bg=yellow;fg=black>                                                                                             </>
-<bg=yellow;fg=black> Adding phpunit/phpunit as a dependency is discouraged in favor of Symfony's PHPUnit Bridge. </>
-<bg=yellow;fg=black>                                                                                             </>
+<bg=yellow;fg=black>                                                                      </>
+<bg=yellow;fg=black> Suggest: install Symfony's PHPUnit Bridge instead of phpunit/phpunit </>
+<bg=yellow;fg=black>                                                                      </>
 
-  * <fg=blue>Instead</>:
-    1. Remove it now: <comment>composer remove --dev phpunit/phpunit</>
-    2. Use Symfony's bridge: <comment>composer require --dev phpunit</>
+Symfony's PHPUnit bridge is a wrapper around PHPUnit that adds reports for deprecated code
+calls, an isolated PHPUnit that's separate from the dependencies of your app and more.
+See: https://symfony.com/doc/current/components/phpunit_bridge.html.
+
+  * <fg=blue>To install the PHPUnit bridge</>:
+    1. Remove PHPUnit: <comment>composer remove --dev phpunit/phpunit</>
+    2. Install Symfony's bridge: <comment>composer require --dev phpunit</>
