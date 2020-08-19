@@ -8,4 +8,4 @@ See: https://symfony.com/doc/current/components/phpunit_bridge.html.
 
   * <fg=blue>To install the PHPUnit bridge</>:
     1. Remove PHPUnit: <comment>composer remove --dev phpunit/phpunit</>
-    2. Install Symfony's bridge: <comment>composer require --dev phpunit</>
+    2. Install Symfony's bridge: <comment>composer require --dev symfony/phpunit-bridge</>
