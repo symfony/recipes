@@ -6,6 +6,6 @@ Symfony's PHPUnit bridge is a wrapper around PHPUnit that adds reports for depre
 calls, an isolated PHPUnit that's separate from the dependencies of your app and more.
 See: https://symfony.com/doc/current/components/phpunit_bridge.html.
 
-  * <fg=blue>To install the PHPUnit bridge</>:
+  * <fg=blue>If you want to install the PHPUnit bridge</>:
     1. Remove PHPUnit: <comment>composer remove --dev phpunit/phpunit</>
     2. Install Symfony's bridge: <comment>composer require --dev symfony/phpunit-bridge</>
