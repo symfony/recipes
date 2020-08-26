@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ESENDEX_DSN=esendex://EMAIL:PASSWORD@default?accountreference=ACCOUNT_REFERENCE&from=FROM"
+    }
+}
