@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "INFOBIP_DSN=infobip://authtoken@default?from=FROM"
+        "#1": "INFOBIP_DSN=infobip://AUTH_TOKEN@INFOBIP_HOST?from=FROM"
     }
 }
