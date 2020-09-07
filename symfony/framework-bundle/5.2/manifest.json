@@ -21,6 +21,7 @@
         "/.env.*.local",
         "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
         "/%PUBLIC_DIR%/bundles/",
+        "/%SRC_DIR%/preload.php",
         "/%VAR_DIR%/",
         "/vendor/"
     ]
