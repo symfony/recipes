@@ -19,6 +19,7 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+            - '../src/preload.php'
             - '../src/Tests/'
 
     # controllers are imported separately to make sure services can be injected
