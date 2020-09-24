@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=sendinblue+api://KEY@default",
+        "#2": "MAILER_DSN=sendinblue+smtp://USERNAME:PASSWORD@default"
+    }
+}
