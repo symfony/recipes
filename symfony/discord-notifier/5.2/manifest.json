@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "DISCORD_DSN=discord://TOKEN@default?channel=ID"
+        "#1": "DISCORD_DSN=discord://TOKEN@default?webhook_id=ID"
     }
 }
