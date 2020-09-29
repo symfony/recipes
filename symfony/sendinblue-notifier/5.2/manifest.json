@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SENDINBLUE_DSN=sendinblue://API_KEY@default?sender=PHONE"
+    }
+}
