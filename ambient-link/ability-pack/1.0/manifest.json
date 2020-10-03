@@ -1,0 +1,13 @@
+{
+    "aliases": ["ability", "iot"],
+    "env": {
+        "MQTT_HOST": "",
+        "MQTT_USERNAME":  "",
+        "MQTT_PASSWORD": "",
+        "BASE_TOPIC": "",
+        "MONKEY_ID":  ""
+    },
+    "copy-from-recipe": {
+        "src/": "%SRC_DIR%/"
+    }
+}

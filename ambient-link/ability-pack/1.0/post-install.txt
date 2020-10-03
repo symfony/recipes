@@ -1,0 +1,26 @@
+<bg=blue;fg=white>                       </>
+<bg=blue;fg=white> To finish the install </>
+<bg=blue;fg=white>                       </>
+
+  * Your ability is almost ready:
+    1. Edit <comment>src/AbilityEventSubscriber</comment> and <info>implement</info> your logic:
+
+        public static function getSubscribedEvents(): array
+        {
+            return [
+                // can be found in AmbientLink\SDK\Event\
+                EnterRoomEvent::NAME => 'onEnterRoom',
+            ];
+        }
+
+        public function onEnterRoom(EnterRoomEvent $event): void
+        {
+            $roomName = $event->roomName();
+
+            $this->logger->debug(sprintf('Some person enters room %s', $roomName));
+
+            // @todo implement logic here
+        }
+
+  * You can found Events in AmbientLink\SDK\Event\
+  * Using Ability Command? Try <info>php bin/console ability:debug --dummy</info>
