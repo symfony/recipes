@@ -1,4 +1,5 @@
 # As of Symfony 5.1, deprecations are logged in the dedicated "deprecation" channel when it exists
+# Please remove deprecation and deprecation_filter in monolog.yaml to use this handler
 #monolog:
 #    channels: [deprecation]
 #    handlers:
