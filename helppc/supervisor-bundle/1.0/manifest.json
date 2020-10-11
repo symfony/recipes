@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "HelpPC\\Bundle\\SupervisorBundle\\SupervisorBundle": ["all"]
+    },
+    "aliases": ["supervisor", "supervisor-ui", "supervisorui"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
