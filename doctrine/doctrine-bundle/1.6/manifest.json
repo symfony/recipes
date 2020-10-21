@@ -18,21 +18,21 @@
     "docker-compose": {
         "services": [
             "db:",
-            "  image: mariadb:10.5.6",
+            "  image: mariadb:${MARIADB_VERSION:-10.5.6}",
             "  environment:",
-            "    - MYSQL_DATABASE=app",
+            "    MYSQL_DATABASE: ${MYSQL_DATABASE:-app}",
             "    # You should definitely change the password in production",
-            "    - MYSQL_PASSWORD=ChangeMe",
-            "    - MYSQL_RANDOM_ROOT_PASSWORD=true",
-            "    - MYSQL_USER=symfony",
+            "    MYSQL_PASSWORD: ${MYSQL_PASSWORD:-ChangeMe}",
+            "    MYSQL_RANDOM_ROOT_PASSWORD: \"true\"",
+            "    MYSQL_USER: ${MYSQL_USER:-symfony}",
             "  volumes:",
             "    - db-data:/var/lib/mysql:rw",
             "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
             "    # - ./docker/db/data:/var/lib/mysql:rw",
-            "  # To expose the port publicly",
+            "  # To expose the port on the host",
             "  # ports:",
-            "  #   - \"3306\""
+            "  #   - \"3306:3306\""
         ],
-        "volumes": ["db-data: {}"]
+        "volumes": ["db-data:"]
     }
 }
