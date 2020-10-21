@@ -31,7 +31,7 @@
             "    # - ./docker/db/data:/var/lib/mysql:rw",
             "  # To expose the port on the host",
             "  # ports:",
-            "  #   - \"3306:3306\""
+            "  #   - \"3306\""
         ],
         "volumes": ["db-data:"]
     }
