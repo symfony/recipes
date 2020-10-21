@@ -1,2 +1,0 @@
-<bg=blue;fg=white> Next for Behat/SymfonyExtension </>
-    Run <comment>vendor/bin/behat</> to run the demo tests.
