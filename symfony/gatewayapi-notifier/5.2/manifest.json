@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "GATEWAYAPI_DSN=gatewayapi://AUTH_TOKEN@default?from=SENDER"
+    }
+}
