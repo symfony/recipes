@@ -22,7 +22,7 @@
     "docker-compose": {
         "docker-compose.yml": {
             "services": [
-                "db:",
+                "database:",
                 "  image: postgres:${POSTGRES_VERSION:-13}-alpine",
                 "  environment:",
                 "    POSTGRES_DB: ${POSTGRES_DB:-app}",
