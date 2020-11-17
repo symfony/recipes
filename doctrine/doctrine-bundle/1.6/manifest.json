@@ -38,7 +38,7 @@
         },
         "docker-compose.override.yml": {
             "services": [
-                "db:",
+                "database:",
                 "  ports:",
                 "    - \"5432\""
             ]
