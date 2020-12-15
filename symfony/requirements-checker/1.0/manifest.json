@@ -1,6 +1,6 @@
 {
-    "copy-from-package": {
-        "public/check.php": "%PUBLIC_DIR%/check.php"
+    "copy-from-recipe": {
+        "public/": "%PUBLIC_DIR%/"
     },
     "composer-scripts": {
         "requirements-checker": "script"
