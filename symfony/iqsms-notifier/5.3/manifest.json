@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "IQSMS_DSN=iqsms://LOGIN:PASSWORD@default?from=FROM"
+    }
+}
