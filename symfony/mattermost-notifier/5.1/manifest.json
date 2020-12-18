@@ -1,6 +1,6 @@
 {
     "env": {
         "#1": "See https://docs.mattermost.com/developer/bot-accounts.html",
-        "#2": "MATTERMOST_DSN=mattermost://TOKEN@HOST?channel=CHANNEL_ID"
+        "#2": "MATTERMOST_DSN=mattermost://ACCESS_TOKEN@HOST/PATH?channel=CHANNEL"
     }
 }
