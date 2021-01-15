@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "GITTER_DSN=gitter://TOKEN@default?room_id=ROOM_ID"
+    }
+}
