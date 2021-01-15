@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "OCTOPUSH_DSN=octopush://USERLOGIN:APIKEY@default?from=FROM&type=TYPE"
+    }
+}
