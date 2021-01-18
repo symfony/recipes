@@ -47,6 +47,22 @@ options and configurators.
     When creating a recipe, don't create bundle config files under
     ``config/packages/`` when no options are set.
 
+Updating Recipes
+----------------
+
+When a recipe needs to be updated, we try to minimize the impact for the
+current versions. Creating a new project with a set of dependencies should
+always use the same recipes to avoid differences between the generated code and
+the existing documentation, blog posts, videos for these versions.
+
+As a rule of thumb, consider the same principles as semantic versioning:
+
+* Only change an existing recipe for a version in case of a bug (typos,
+  mis-configuration, ...);
+
+* If the change is about a new best practice or a different way of doing
+  something, do it for the next version of the dependency.
+
 Options
 -------
 
