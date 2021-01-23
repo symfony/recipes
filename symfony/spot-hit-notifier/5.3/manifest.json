@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SPOTHIT_DSN=spothit://api_token@default?from=MyCompany"
+    }
+}
