@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "CLICKATELL_DSN=clickatell://ACCESS_TOKEN@default?from=FROM"
+    }
+}
