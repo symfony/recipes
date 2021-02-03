@@ -1,10 +1,4 @@
 {
-    "copy-from-recipe": {
-        "error-screenshots/": "tests/error-screenshots/"
-    },
-    "gitignore": [
-        "/tests/error-screenshots/*.png"
-    ],
     "dockerfile": [
         "# Chromium and ChromeDriver",
         "ENV PANTHER_NO_SANDBOX 1",

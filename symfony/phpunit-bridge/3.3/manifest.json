@@ -8,7 +8,8 @@
     "gitignore": [
         ".phpunit",
         ".phpunit.result.cache",
-        "/phpunit.xml"
+        "/phpunit.xml",
+        "error-screenshots/"
     ],
     "aliases": ["simple-phpunit"]
 }
