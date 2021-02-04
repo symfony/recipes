@@ -1,0 +1,16 @@
+<bg=blue;fg=white>                             </>
+<bg=blue;fg=white> Finish Panther Installation </>
+<bg=blue;fg=white>                             </>
+
+  * Install <fg=green>ChromeDriver</> or <fg=green>geckodriver</> with 
+    the package manager of your Operating System.
+    
+    Alternatively, use Browser Driver Installer:
+
+    <fg=green>composer require --dev dbrekelmans/bdi</>
+    <fg=green>vendor/bin/bdi detect drivers</>
+
+    This step is not necessary when using Docker.
+
+  * To use Panther with PHPUnit,
+    uncomment the snippet registering the Panther extension in <fg=green>phpunit.xml.dist</>
