@@ -6,4 +6,4 @@
 
   * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</>
 
-  * Start the development server: <fg=green>yarn dev-server</fg>
+  * Start the development server: <fg=green>yarn encore dev-server</fg>
