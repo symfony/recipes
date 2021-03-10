@@ -1,0 +1,5 @@
+psr_http_message:
+
+    # Message converters that allow controllers to operate on PSR-7 requests/responses
+    message_converters:
+        enabled: false
