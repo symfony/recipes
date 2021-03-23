@@ -12,10 +12,8 @@ services:
     Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory: null
     Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory: null
 
-    # Uncomment the following line to allow controllers to receive a
-    # PSR-7 server request object instead of an HttpFoundation request
+    # Uncomment to allow controllers to receive a PSR-7 server request object as argument
     #Symfony\Bridge\PsrHttpMessage\ArgumentValueResolver\PsrServerRequestResolver: null
 
-    # Uncomment the following line to allow controllers to return a
-    # PSR-7 response object instead of an HttpFoundation response
+    # Uncomment to allow controllers to return a PSR-7 response object
     #Symfony\Bridge\PsrHttpMessage\EventListener\PsrResponseListener: null
