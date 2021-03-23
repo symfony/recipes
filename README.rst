@@ -168,7 +168,7 @@ Recipes must use these placeholders instead of hardcoding the paths to be truly
 reusable. The placeholder values can be overridden in the ``extra`` section of
 your ``composer.json`` file (where you can define your own placeholders too):
 
-.. code-block:: json
+.. code-block:: jsonc
 
     // composer.json
     {
