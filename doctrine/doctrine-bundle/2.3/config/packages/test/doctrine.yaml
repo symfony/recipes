@@ -1,3 +1,5 @@
 doctrine:
     dbal:
+        # Overrides the database name in the test environment only
+        # "host", "port", "username", & "password" can also be set to override their respective url parts
         dbname: main_test
