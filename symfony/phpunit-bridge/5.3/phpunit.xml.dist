@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
+<!-- If you use phpunit-bridge directly, set -->
+<!-- xsi:noNamespaceSchemaLocation="bin/.phpunit/phpunit.xsd" -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          backupGlobals="false"
@@ -11,6 +13,11 @@
         <ini name="error_reporting" value="-1" />
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
+        <!-- If you use phpunit-bridge directly, you can control extra behavior -->
+        <!--
+        <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
+        <server name="SYMFONY_PHPUNIT_VERSION" value="8.5" />
+        -->
     </php>
 
     <testsuites>
@@ -25,12 +32,9 @@
         </whitelist>
     </filter>
 
-    <!-- Run `composer require symfony/phpunit-bridge` before enabling this extension -->
-    <!--
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
     </listeners>
-    -->
 
     <!-- Run `composer require symfony/panther` before enabling this extension -->
     <!--

@@ -1,0 +1,7 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> How to test? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Write</> test cases in the <comment>tests/</> folder
+  * Use MakerBundle's <comment>make:test</> command as a shortcut!
+  * <fg=blue>Run</> the tests with <comment>php bin/phpunit</>
