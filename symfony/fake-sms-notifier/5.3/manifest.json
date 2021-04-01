@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "FAKE_SMS_DSN=fakesms+email://MAILER_SERVICE_ID?to=TO&from=FROM"
+    }
+}
