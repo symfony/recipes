@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MICROSOFT_TEAMS_DSN=microsoftteams://default/HOSTPATH"
+    }
+}
