@@ -1,5 +1,0 @@
-{
-    "env": {
-        "#1": "LIGHTSMS_DSN=lightsms://LOGIN:TOKEN@default?from=PHONE"
-    }
-}
