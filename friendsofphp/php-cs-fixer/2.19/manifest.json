@@ -1,0 +1,10 @@
+{
+    "aliases": ["cs-fixer", "php-cs-fixer"],
+    "copy-from-recipe": {
+        ".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php"
+    },
+    "gitignore": [
+        "/.php-cs-fixer.php",
+        "/.php_cs.cache"
+    ]
+}
