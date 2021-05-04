@@ -5,6 +5,6 @@
     },
     "gitignore": [
         "/.php-cs-fixer.php",
-        "/.php-cs-fixer.cache"
+        "/.php_cs.cache"
     ]
 }
