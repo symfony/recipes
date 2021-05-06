@@ -10,5 +10,5 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
     ])
     ->setFinder($finder)
-    ->setCacheFile(".php-cs-fixer.cache") // forward compatibility with 3.x line
+    ->setCacheFile('.php-cs-fixer.cache') // forward compatibility with 3.x line
 ;
