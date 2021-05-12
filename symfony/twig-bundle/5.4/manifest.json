@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "templates/": "templates/"
+    }
+}
