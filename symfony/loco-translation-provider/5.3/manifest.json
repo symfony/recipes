@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "LOCO_DSN=loco://API_KEY@default"
+    }
+}

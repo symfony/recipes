@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+    }
+}
