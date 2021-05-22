@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MESSAGEMEDIA_DSN=messagemedia://API_KEY:API_SECRET@default?from=FROM"
+    }
+}
