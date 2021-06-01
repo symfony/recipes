@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default"
+    }
+}
