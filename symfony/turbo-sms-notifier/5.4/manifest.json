@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "TURBOSMS_DSN=turbosms://AUTH_TOKEN@default?from=FROM" 
+    }
+}
