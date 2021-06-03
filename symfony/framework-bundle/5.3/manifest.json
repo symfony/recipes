@@ -22,6 +22,7 @@
         "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
-        "/vendor/"
+        "/vendor/*",
+        "!vendor/autoload_runtime.php"
     ]
 }
