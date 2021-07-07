@@ -1,1 +1,9 @@
-../2.1/manifest.json
+{
+    "bundles": {
+        "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}
