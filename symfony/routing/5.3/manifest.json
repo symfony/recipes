@@ -1,1 +1,6 @@
-../4.2/manifest.json
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["router"]
+}

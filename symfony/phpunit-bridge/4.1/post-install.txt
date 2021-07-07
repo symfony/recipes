@@ -1,1 +1,6 @@
-../3.3/post-install.txt
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> How to test? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Write</> test cases in the <comment>tests/</> folder
+  * <fg=blue>Run</> <comment>php bin/phpunit</>

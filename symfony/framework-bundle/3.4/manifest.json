@@ -1,1 +1,28 @@
-../3.3/manifest.json
+{
+    "bundles": {
+        "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "env": {
+        "APP_ENV": "dev",
+        "APP_SECRET": "%generate(secret)%",
+        "#TRUSTED_PROXIES": "127.0.0.1,127.0.0.2",
+        "#TRUSTED_HOSTS": "'^(localhost|example\\.com)$'"
+    },
+    "gitignore": [
+        "/.env.local",
+        "/.env.local.php",
+        "/.env.*.local",
+        "/%PUBLIC_DIR%/bundles/",
+        "/%VAR_DIR%/",
+        "/vendor/"
+    ]
+}
