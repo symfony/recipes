@@ -18,9 +18,39 @@ jobs:
         uses: actions/checkout@v2
 
       - name: No symlinks
+        if: always()
         run: |
-          SYMLINKS=$(find -type l)
+          SYMLINKS=$(find * -type l)
           if [[ "" != "$SYMLINKS" ]]; then
             echo "::error::Symlinks are not allowed"
             echo "Found $SYMLINKS"
+            echo
+            exit 1
           fi
+
+      - name: No .yml, use .yaml
+        if: always()
+        run: |
+          YMLS=$(find * -name '*.yml')
+          if [[ "" != "$YMLS" ]]; then
+            echo "::error::*.yml files should renamed to *.yaml"
+            echo "Found $YMLS"
+            echo
+            exit 1
+          fi
+
+      - name: No .gitkeep, use .gitignore
+        if: always()
+        run: |
+          GITKEEPS=$(find * -name .gitkeep)
+          if [[ "" != "$GITKEEPS" ]]; then
+            echo "::error::.gitkeep files should be renamed to .gitignore"
+            echo "Found $GITKEEPS"
+            echo
+            exit 1
+          fi
+
+      - name: 4 spaces indentation
+        if: always()
+        run: |
+          find * -name '*.yaml' | xargs -n1 grep -P -H -n -v '^((    )*[^ \t]|$)' | cut -d: -f1-2 | sed 's/\(.*\):\([0-9]*\)$/::error file=\1,line=\2::Indendation must be a multiple of 4 spaces/'
