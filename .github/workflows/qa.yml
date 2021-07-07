@@ -1,0 +1,26 @@
+name: Q&A
+
+on:
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+
+  tests:
+    name: Checks
+    runs-on: Ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: No symlinks
+        run: |
+          SYMLINKS=$(find -type l)
+          if [[ "" != "$SYMLINKS" ]]; then
+            echo "::error::Symlinks are not allowed"
+            echo "Found $SYMLINKS"
+          fi
