@@ -1,7 +1,7 @@
 name: Q&A
 
 on:
-    pull_request:
+    pull_request_target:
 
 defaults:
     run:
@@ -40,6 +40,20 @@ jobs:
                 run: |
                     .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }} | xargs -n10 rm -rf
 
+            -
+                name: Compute diff between recipe versions
+                if: "always() && steps.checkout.outcome == 'success'"
+                run: |
+                    find * -mindepth 1 -maxdepth 1 -type d | sort \
+                        | .github/recipes-checker-main/run diff-recipe-versions \
+                        > .github/diff-recipe-versions.md
+
+            -
+                name: Post diff between recipe versions
+                if: "always() && steps.checkout.outcome == 'success'"
+                uses: marocchino/sticky-pull-request-comment@v2
+                with:
+                    path: .github/diff-recipe-versions.md
             -
                 name: No symlinks
                 if: "always() && steps.checkout.outcome == 'success'"
