@@ -54,6 +54,7 @@ jobs:
                 uses: marocchino/sticky-pull-request-comment@v2
                 with:
                     path: .github/diff-recipe-versions.md
+
             -
                 name: No symlinks
                 if: "always() && steps.checkout.outcome == 'success'"
