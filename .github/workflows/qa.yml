@@ -18,6 +18,8 @@ jobs:
                 name: Checkout
                 uses: actions/checkout@v2
                 id: checkout
+                with:
+                    ref: 'refs/pull/${{ github.event.number }}/merge'
 
             -
                 name: Install tools
