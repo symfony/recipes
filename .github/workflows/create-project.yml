@@ -26,7 +26,7 @@ jobs:
                 continue-on-error: true
                 id: config
                 run: |
-                    SYMFONY_ENDPOINT=https://symfony.sh/r/github.com/symfony/recipes/${{ github.event.number }}
+                    SYMFONY_ENDPOINT=https://flex.symfony.com/r/github.com/symfony/recipes/${{ github.event.number }}
                     echo SYMFONY_ENDPOINT=$SYMFONY_ENDPOINT >> $GITHUB_ENV
 
                     PACKAGES=$(curl -s $SYMFONY_ENDPOINT | sed -En 's/.*composer req "([^"]+)".*/\1/p')
