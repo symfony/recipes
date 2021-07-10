@@ -38,14 +38,14 @@ jobs:
                 name: Create-project with skeleton ^4
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
-                    composer create-project "symfony/skeleton:^4" v4
+                    composer create-project --ansi "symfony/skeleton:^4" v4
                     cd v4
-                    composer require $PACKAGES
+                    composer require --ansi $PACKAGES
 
             -
                 name: Create-project with skeleton ^5
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
-                    composer create-project "symfony/skeleton:^5" v5
+                    composer create-project --ansi "symfony/skeleton:^5" v5
                     cd v5
-                    composer require $PACKAGES
+                    composer require --ansi $PACKAGES
