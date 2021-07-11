@@ -40,6 +40,7 @@ jobs:
                 run: |
                     composer create-project --ansi "symfony/skeleton:^4" v4
                     cd v4
+                    composer config minimum-stability dev
                     composer require --ansi $PACKAGES
 
             -
@@ -48,4 +49,5 @@ jobs:
                 run: |
                     composer create-project --ansi "symfony/skeleton:^5" v5
                     cd v5
+                    composer config minimum-stability dev
                     composer require --ansi $PACKAGES
