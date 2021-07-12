@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "TEXTER_DSN=sns://ACCESS_KEY:SECRET_KEY@default?region=REGION"
+        "#1": "AMAZON_SNS_DSN=sns://ACCESS_KEY:SECRET_KEY@default?region=REGION"
     }
 }
