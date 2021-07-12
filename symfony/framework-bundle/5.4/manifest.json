@@ -9,7 +9,7 @@
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
-        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        "assets:install %PUBLIC_DIR% --symlink --relative": "symfony-cmd"
     },
     "env": {
         "APP_ENV": "dev",
