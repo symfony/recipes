@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SMSC_DSN=smsc://LOGIN:PASSWORD@default?from=FROM"
+    }
+}
