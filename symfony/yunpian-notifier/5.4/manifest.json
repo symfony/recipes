@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "YUNPIAN_DSN=yunpian://APIKEY@default"
+    }
+}
