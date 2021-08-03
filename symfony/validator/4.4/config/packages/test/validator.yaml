@@ -1,1 +1,3 @@
-../../../../4.3/config/packages/test/validator.yaml
+framework:
+    validation:
+        not_compromised_password: false
