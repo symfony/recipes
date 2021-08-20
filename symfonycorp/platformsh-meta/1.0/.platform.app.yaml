@@ -1,0 +1,61 @@
+name: app
+
+type: php:8.0
+
+runtime:
+    extensions:
+        - apcu
+        - mbstring
+        - sodium
+        - ctype
+        - iconv
+        - xsl
+        - pdo_pgsql
+        - blackfire
+
+variables:
+    php:
+        opcache.preload: /app/config/preload.php
+
+build:
+    flavor: none
+
+disk: 512
+
+relationships:
+    database: "database:postgresql"
+
+web:
+    locations:
+        "/":
+            root: "public"
+            expires: 1h
+            passthru: "/index.php"
+
+mounts:
+    "/var": { source: local, source_path: var }
+
+hooks:
+    build: |
+        set -x -e
+
+        curl -fs https://get.symfony.com/cloud/configurator | (>&2 bash)
+
+        (>&2 symfony-build)
+
+    deploy: |
+        set -x -e
+
+        (>&2 symfony-deploy)
+
+workers:
+    messenger:
+        # PHP background workers usually don't require much CPU.
+        # See https://symfony.com/doc/current/cloud/cookbooks/resources_allocation.html
+        size: XS
+        resources:
+            base_memory: 64 # Keep in sync with the `memory-limit` flag value
+            memory_ratio: 128
+        commands:
+            # Don't forget to update your receiver name(s)
+            start: symfony console --time-limit=3600 --memory-limit=64M messenger:consume async

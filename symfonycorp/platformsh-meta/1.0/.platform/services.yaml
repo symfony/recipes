@@ -1,0 +1,3 @@
+database:
+    type: postgresql:13
+    disk: 1024
