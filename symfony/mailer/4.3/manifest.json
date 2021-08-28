@@ -5,5 +5,14 @@
     "env": {
         "#1": "MAILER_DSN=smtp://localhost"
     },
+    "docker-compose": {
+        "docker-compose.override.yml": {
+            "services": [
+                "mailer:",
+                "  image: schickling/mailcatcher",
+                "  ports: [1025, 1080]"
+            ]
+        }
+    },
     "aliases": ["mailer", "mail"]
 }
