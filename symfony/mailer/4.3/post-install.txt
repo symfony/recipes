@@ -1,7 +1,3 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
   * You're ready to send emails.
 
   * If you want to send emails via a supported email provider, install

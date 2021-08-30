@@ -1,7 +1,3 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
   * Your API is almost ready:
     1. Create your first API resource in <info>src/Entity</info>;
     2. Go to <info>/api</info> to browse your API
