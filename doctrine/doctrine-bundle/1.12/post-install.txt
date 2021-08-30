@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                        </>
-<bg=blue;fg=white> Database Configuration </>
-<bg=blue;fg=white>                        </>
-
   * Modify your DATABASE_URL config in <fg=green>.env</>
 
   * Configure the <fg=green>driver</> (mysql) and

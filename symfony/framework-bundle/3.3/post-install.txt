@@ -1,7 +1,3 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
   * <fg=blue>Run</> your application:
     1. Go to the project directory
     2. Create your code repository with the <comment>git init</comment> command

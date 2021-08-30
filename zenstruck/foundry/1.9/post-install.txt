@@ -1,7 +1,3 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
   * You're ready to use zenstruck/foundry. Create your first factory with
     <info>bin/console make:factory</>.
 

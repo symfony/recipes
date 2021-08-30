@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                             </>
-<bg=blue;fg=white> Finish Panther Installation </>
-<bg=blue;fg=white>                             </>
-
   * Install <fg=green>ChromeDriver</> or <fg=green>geckodriver</> with 
     the package manager of your Operating System.
     
