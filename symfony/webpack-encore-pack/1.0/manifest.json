@@ -1,8 +1,0 @@
-{
-    "gitignore": [
-        "/node_modules/",
-        "/%PUBLIC_DIR%/build/",
-        "npm-debug.log",
-        "yarn-error.log"
-    ]
-}
