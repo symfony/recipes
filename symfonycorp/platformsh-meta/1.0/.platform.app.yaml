@@ -48,14 +48,18 @@ hooks:
 
         (>&2 symfony-deploy)
 
+crons:
+    security-check:
+        # Check that no security issues have been found for PHP packages deployed in production
+        # See https://github.com/fabpot/local-php-security-checker
+        spec: '50 23 * * *'
+        cmd: |
+            if [ "$SYMFONY_BRANCH" = "master" ]; then
+                croncape php-security-checker
+            fi
+
 workers:
     messenger:
-        # PHP background workers usually don't require much CPU.
-        # See https://symfony.com/doc/current/cloud/cookbooks/resources_allocation.html
-        size: XS
-        resources:
-            base_memory: 64 # Keep in sync with the `memory-limit` flag value
-            memory_ratio: 128
         commands:
-            # Don't forget to update your receiver name(s)
+            # Consume "async" messages (as configured in the routing section of config/packages/messenger.yaml)
             start: symfony console --time-limit=3600 --memory-limit=64M messenger:consume async
