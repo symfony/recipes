@@ -48,6 +48,16 @@ hooks:
 
         (>&2 symfony-deploy)
 
+crons:
+    security-check:
+        # Check that no security issues have been found for PHP packages deployed in production
+        # See https://github.com/fabpot/local-php-security-checker
+        spec: '50 23 * * *'
+        cmd: |
+            if [ "$SYMFONY_BRANCH" = "master" ]; then
+                croncape php-security-checker
+            fi
+
 workers:
     messenger:
         # PHP background workers usually don't require much CPU.
