@@ -1,0 +1,7 @@
+scenarios: |
+    #!blackfire-player
+
+    scenario
+        name "Test homepage"
+        visit url('/')
+            expect status_code() == 200

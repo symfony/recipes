@@ -1,0 +1,24 @@
+{
+    "copy-from-recipe": {
+        ".blackfire.yaml": ".blackfire.yaml"
+    },
+    "env": {
+        "#1": "Get your SERVER credentials at https://blackfire.io/my/settings/credentials",
+        "#2": "BLACKFIRE_SERVER_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "#3": "BLACKFIRE_SERVER_TOKEN=yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+    },
+    "docker-compose": {
+        "docker-compose.override.yml": {
+            "services": [
+                "blackfire:",
+                "  image: blackfire/blackfire:2",
+                "  # uncomment to store Blackfire credentials in a local .env.local file",
+                "  #env_file: .env.local",
+                "  environment:",
+                "    BLACKFIRE_LOG_LEVEL: 4",
+                "  ports: [8307]"
+            ]
+        }
+    },
+    "aliases": ["blackfire"]
+}
