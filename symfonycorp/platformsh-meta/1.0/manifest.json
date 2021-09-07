@@ -1,9 +1,6 @@
 {
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        ".platform/": ".platform/",
-        ".platform.app.yaml": ".platform.app.yaml",
-        "php.ini": "php.ini"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "MESSENGER_TRANSPORT_DSN": "doctrine://default"
