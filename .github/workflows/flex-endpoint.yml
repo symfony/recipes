@@ -1,0 +1,63 @@
+name: Flex
+
+on:
+    push:
+        branches:
+            - master
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+
+    update:
+        name: Update endpoint
+        runs-on: Ubuntu-20.04
+
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v2
+                id: checkout
+                with:
+                    fetch-depth: 0
+
+            -
+                name: Install tools
+                run: |
+                    git config --global user.email ""
+                    git config --global user.name "github-action bot"
+                    cd .github
+                    wget -q -O - https://github.com/splitsh/lite/releases/download/v1.0.1/lite_linux_amd64.tar.gz | tar -zxp
+                    wget -q -O recipes-checker.zip https://codeload.github.com/symfony-tools/recipes-checker/zip/refs/heads/main
+                    unzip recipes-checker.zip
+                    cd recipes-checker-main
+                    composer install --ansi --no-dev
+
+            -
+                name: Cache Splitsh-lite
+                uses: actions/cache@v2
+                with:
+                    path: .git/splitsh.db
+                    key: ${{ runner.os }}-main-${{ github.sha }}
+                    restore-keys: ${{ runner.os }}-main-
+
+            -
+                name: Update Flex endpoint
+                run: |
+                    find -mindepth 2 -maxdepth 2 -not -wholename './.*' | cut -c 3- | xargs -r -n1 -I{} .github/splitsh-lite --prefix={} --target=refs/heads/flex-main/{} || rm .git/splitsh.db
+                    [ -e .git/splitsh.db ] || find -mindepth 2 -maxdepth 2 -not -wholename './.*' | cut -c 3- | xargs -r -n1 -I{} .github/splitsh-lite --prefix={} --target=refs/heads/flex-main/{}
+
+                    git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-index ${{ github.repository }} flex-main > flex-index.json
+                    git switch 'flex/main'
+                    mv flex-index.json index.json
+                    git add index.json
+                    git commit -m 'Update Flex index' || true
+                    git switch -
+
+                    git branch --list 'flex-main/*' | xargs -r git push origin -f flex/main
+                    git branch -r --list 'origin/flex-main/*' \
+                        | sed 's/[^/]*\//:/' \
+                        | grep -Fxv "$(find -mindepth 2 -maxdepth 2 -not -wholename './.*' | sed 's/../:flex-main\//')" \
+                        | xargs -r git push origin || true
