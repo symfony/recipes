@@ -48,7 +48,6 @@
                 }
             },
             "origin": "hautelook/alice-bundle:2.1@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

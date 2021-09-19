@@ -43,7 +43,6 @@
                 }
             },
             "origin": "easycorp/easyadmin-bundle:1.17@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

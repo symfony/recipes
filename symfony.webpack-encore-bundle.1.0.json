@@ -93,7 +93,6 @@
                 }
             },
             "origin": "symfony/webpack-encore-bundle:1.0@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

@@ -6,7 +6,7 @@
                 "repo": "1.9",
                 "branch": "master",
                 "version": "1.9",
-                "ref": "404714014dd6ff7de9aa0f9582d592147359e617"
+                "ref": "0f274572ea315eb3b5884518a50ca43f211b4534"
             }
         }
     },
@@ -42,7 +42,7 @@
             },
             "files": {
                 "config/packages/webpack_encore.yaml": {
-                    "contents": "webpack_encore:\n    # The path where Encore is building the assets - i.e. Encore.setOutputPath()\n    output_path: '%kernel.project_dir%/public/build'\n    # If multiple builds are defined (as shown below), you can disable the default build:\n    # output_path: false\n\n    # Set attributes that will be rendered on all script and link tags\n    script_attributes:\n        defer: true\n        # Uncomment (also under link_attributes) if using Turbo Drive\n        # https://turbo.hotwire.dev/handbook/drive#reloading-when-assets-change\n        # 'data-turbo-track': reload\n    # link_attributes:\n        # Uncomment if using Turbo Drive\n        # 'data-turbo-track': reload\n\n    # If using Encore.enableIntegrityHashes() and need the crossorigin attribute (default: false, or use 'anonymous' or 'use-credentials')\n    # crossorigin: 'anonymous'\n\n    # Preload all rendered script and link tags automatically via the HTTP/2 Link header\n    # preload: true\n\n    # Throw an exception if the entrypoints.json file is missing or an entry is missing from the data\n    # strict_mode: false\n\n    # If you have multiple builds:\n    # builds:\n        # pass \"frontend\" as the 3rg arg to the Twig functions\n        # {{ encore_entry_script_tags('entry1', null, 'frontend') }}\n\n        # frontend: '%kernel.project_dir%/public/frontend/build'\n\n    # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)\n    # Put in config/packages/prod/webpack_encore.yaml\n    # cache: true\n",
+                    "contents": "webpack_encore:\n    # The path where Encore is building the assets - i.e. Encore.setOutputPath()\n    output_path: '%kernel.project_dir%/public/build'\n    # If multiple builds are defined (as shown below), you can disable the default build:\n    # output_path: false\n\n    # Set attributes that will be rendered on all script and link tags\n    script_attributes:\n        defer: true\n        # Uncomment (also under link_attributes) if using Turbo Drive\n        # https://turbo.hotwired.dev/handbook/drive#reloading-when-assets-change\n        # 'data-turbo-track': reload\n    # link_attributes:\n        # Uncomment if using Turbo Drive\n        # 'data-turbo-track': reload\n\n    # If using Encore.enableIntegrityHashes() and need the crossorigin attribute (default: false, or use 'anonymous' or 'use-credentials')\n    # crossorigin: 'anonymous'\n\n    # Preload all rendered script and link tags automatically via the HTTP/2 Link header\n    # preload: true\n\n    # Throw an exception if the entrypoints.json file is missing or an entry is missing from the data\n    # strict_mode: false\n\n    # If you have multiple builds:\n    # builds:\n        # pass \"frontend\" as the 3rg arg to the Twig functions\n        # {{ encore_entry_script_tags('entry1', null, 'frontend') }}\n\n        # frontend: '%kernel.project_dir%/public/frontend/build'\n\n    # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)\n    # Put in config/packages/prod/webpack_encore.yaml\n    # cache: true\n",
                     "executable": false,
                     "encoding": ""
                 },
@@ -98,7 +98,6 @@
                 }
             },
             "origin": "symfony/webpack-encore-bundle:1.9@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

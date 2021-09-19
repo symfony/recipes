@@ -41,7 +41,6 @@
                 }
             },
             "origin": "scheb/2fa-bundle:5.0@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

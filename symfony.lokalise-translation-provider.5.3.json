@@ -22,7 +22,6 @@
             },
             "files": [],
             "origin": "symfony/lokalise-translation-provider:5.3@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

@@ -43,7 +43,6 @@
                 }
             },
             "origin": "doctrine/doctrine-migrations-bundle:3.1@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

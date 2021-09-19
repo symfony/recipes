@@ -88,7 +88,6 @@
                 }
             },
             "origin": "symfony/framework-bundle:3.4@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

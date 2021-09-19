@@ -38,7 +38,6 @@
                 }
             },
             "origin": "javiereguiluz/easyadmin-bundle:1.16@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

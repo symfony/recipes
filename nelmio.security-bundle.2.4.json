@@ -33,7 +33,6 @@
                 }
             },
             "origin": "nelmio/security-bundle:2.4@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

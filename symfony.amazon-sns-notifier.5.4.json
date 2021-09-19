@@ -22,7 +22,6 @@
             },
             "files": [],
             "origin": "symfony/amazon-sns-notifier:5.4@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

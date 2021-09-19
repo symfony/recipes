@@ -44,7 +44,6 @@
                 }
             },
             "origin": "symfony/twig-bundle:4.4@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }

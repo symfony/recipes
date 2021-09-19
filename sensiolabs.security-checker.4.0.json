@@ -38,7 +38,6 @@
                 }
             },
             "origin": "sensiolabs/security-checker:4.0@github.com/symfony/recipes:master",
-            "not_installable": false,
             "is_contrib": false
         }
     }
