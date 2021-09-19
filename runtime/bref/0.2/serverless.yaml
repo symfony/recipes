@@ -7,13 +7,14 @@ provider:
     # The AWS region in which to deploy (us-east-1 is the default)
     region: us-east-1
     # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
-    stage: dev
+    stage: prod
     runtime: provided.al2
     environment:
         # Symfony environment variables
         APP_ENV: prod
         APP_RUNTIME: Runtime\Bref\Runtime
         BREF_LOOP_MAX: 1 # Increase to keep the Lambda process alive between requests
+        # SYMFONY_DECRYPTION_SECRET: ${ssm:/stripe-notifications/prod-decrypt-private-key}
 
 plugins:
     - ./vendor/bref/bref
@@ -48,3 +49,4 @@ package:
         - 'var/cache/prod/**'
         - 'public/build/entrypoints.json'
         - 'public/build/manifest.json'
+        - '.env*'
