@@ -1,4 +1,4 @@
-name: Q&A
+name: Run checks
 
 on:
     pull_request_target:
@@ -10,7 +10,7 @@ defaults:
 jobs:
 
     tests:
-        name: Checks
+        name: Run checks
         runs-on: Ubuntu-20.04
 
         steps:
@@ -28,7 +28,6 @@ jobs:
                     git config --global user.email ""
                     git config --global user.name "github-action bot"
                     cd .github
-                    wget -q -O - https://github.com/splitsh/lite/releases/download/v1.0.1/lite_linux_amd64.tar.gz | tar -zxp
                     wget -q -O recipes-checker.zip https://codeload.github.com/symfony-tools/recipes-checker/zip/refs/heads/main
                     unzip recipes-checker.zip
                     cd recipes-checker-main
@@ -46,28 +45,22 @@ jobs:
                 run: |
                     .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }} | xargs -r -n10 rm -rf
 
-
             -
                 name: Generate Flex testing endpoint
                 if: "always() && steps.checkout.outcome == 'success' && github.base_ref == 'master'"
                 run: |
-                    find -mindepth 2 -maxdepth 2 -not -wholename './.*' | cut -c 3- | xargs -r -n1 -I{} .github/splitsh-lite --prefix={} --target=refs/heads/flex-pull-${{ github.event.number }}/{}
-
-                    git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-index ${{ github.repository }} flex-pull-${{ github.event.number }} > index.json
+                    mkdir .github/flex-endpoint
+                    git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-endpoint ${{ github.repository }} master flex/pull-${{ github.event.number }} .github/flex-endpoint
                     git stash
                     git switch -c pr
-                    git switch --orphan 'flex/pull-${{ github.event.number }}'
+                    git switch --orphan flex/pull-${{ github.event.number }}
                     git reset --hard -q
-                    git add index.json
-                    git commit -m 'Create Flex index' || true
+                    mv .github/flex-endpoint/*.json .
+                    git add *.json
+                    git commit -m 'Create Flex endpoint' || true
+                    git push origin -f flex/pull-${{ github.event.number }}
                     git switch pr
                     git stash pop -q
-
-                    git branch --list 'flex-pull-${{ github.event.number }}/*' | xargs -r git push origin -f flex/pull-${{ github.event.number }}
-                    git branch -r --list 'origin/flex-pull-${{ github.event.number }}/*' \
-                        | sed 's/[^/]*\//:/' \
-                        | grep -Fxv "$(find -mindepth 2 -maxdepth 2 -not -wholename './.*' | sed 's/../:flex-pull-${{ github.event.number }}\//')" \
-                        | xargs -r git push origin || true
 
             -
                 name: Compute diff between recipe versions

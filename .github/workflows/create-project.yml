@@ -1,4 +1,4 @@
-name: Q&A
+name: Run updated recipes
 
 on:
     pull_request:
@@ -10,7 +10,7 @@ defaults:
 jobs:
 
     create-project:
-        name: Create-project
+        name: Run updated recipes
         runs-on: Ubuntu-20.04
 
         steps:

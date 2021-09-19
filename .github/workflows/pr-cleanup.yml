@@ -1,4 +1,4 @@
-name: Closing PR
+name: Cleanup Flex testing endpoint
 
 on:
     pull_request_target:
@@ -11,20 +11,15 @@ defaults:
 jobs:
 
     cleanup:
-        name: Cleanup
+        name: Cleanup Flex testing endpoint
         runs-on: Ubuntu-20.04
 
         steps:
             -
                 name: Checkout
                 uses: actions/checkout@v2
-                id: checkout
-                with:
-                    fetch-depth: 0
 
             -
                 name: Cleanup Flex testing endpoint
                 run: |
-                    git branch -r --list 'origin/flex-pull-${{ github.event.number }}/*' \
-                        | sed 's/[^/]*\//:/' \
-                        | xargs -r git push origin :flex/pull-${{ github.event.number }} || true
+                    git push origin :flex/pull-${{ github.event.number }} || true
