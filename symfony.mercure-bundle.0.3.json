@@ -1,0 +1,52 @@
+{
+    "locks": {
+        "symfony/mercure-bundle": {
+            "version": "0.3",
+            "recipe": {
+                "repo": "0.3",
+                "branch": "master",
+                "version": "0.3",
+                "ref": "d1cdff3ae53bf6a5cbfb088c82f26032bdc14cc3"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/mercure-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/mercure-bundle",
+            "version": "0.3",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\MercureBundle\\MercureBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "See https://symfony.com/doc/current/mercure.html#configuration",
+                    "#2": "The URL of the Mercure hub, used by the app to publish updates (can be a local URL)",
+                    "MERCURE_URL": "https://127.0.0.1:8000/.well-known/mercure",
+                    "#3": "The public URL of the Mercure hub, used by the browser to connect",
+                    "MERCURE_PUBLIC_URL": "https://127.0.0.1:8000/.well-known/mercure",
+                    "#4": "The secret used to sign the JWTs",
+                    "MERCURE_JWT_SECRET": "!ChangeMe!"
+                },
+                "aliases": [
+                    "mercure"
+                ]
+            },
+            "files": {
+                "config/packages/mercure.yaml": {
+                    "contents": "mercure:\n    hubs:\n        default:\n            url: '%env(MERCURE_URL)%'\n            public_url: '%env(MERCURE_PUBLIC_URL)%'\n            jwt:\n                secret: '%env(MERCURE_JWT_SECRET)%'\n                publish: '*'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/mercure-bundle:0.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

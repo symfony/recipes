@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/sms-biuras-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "1f9640b3fdead7de6094c4aa1569548349213516"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/sms-biuras-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/sms-biuras-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "SMSBIURAS_DSN=smsbiuras://UID:API_KEY@default?from=FROM&test_mode=0"
+                }
+            },
+            "files": [],
+            "origin": "symfony/sms-biuras-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

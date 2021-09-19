@@ -1,0 +1,94 @@
+{
+    "locks": {
+        "symfony/framework-bundle": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "414ba00ad43fa71be42c7906a551f1831716b03c"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/framework-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/framework-bundle",
+            "version": "5.3",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd",
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_SECRET": "%generate(secret)%"
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+                    "/%PUBLIC_DIR%/bundles/",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ]
+            },
+            "files": {
+                "public/index.php": {
+                    "contents": "<?php\n\nuse App\\Kernel;\n\nrequire_once dirname(__DIR__).'/vendor/autoload_runtime.php';\n\nreturn function (array $context) {\n    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);\n};\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Controller/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Kernel.php": {
+                    "contents": "<?php\n\nnamespace App;\n\nuse Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;\nuse Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;\nuse Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;\nuse Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;\n\nclass Kernel extends BaseKernel\n{\n    use MicroKernelTrait;\n\n    protected function configureContainer(ContainerConfigurator $container): void\n    {\n        $container->import('../config/{packages}/*.yaml');\n        $container->import('../config/{packages}/'.$this->environment.'/*.yaml');\n\n        if (is_file(\\dirname(__DIR__).'/config/services.yaml')) {\n            $container->import('../config/services.yaml');\n            $container->import('../config/{services}_'.$this->environment.'.yaml');\n        } else {\n            $container->import('../config/{services}.php');\n        }\n    }\n\n    protected function configureRoutes(RoutingConfigurator $routes): void\n    {\n        $routes->import('../config/{routes}/'.$this->environment.'/*.yaml');\n        $routes->import('../config/{routes}/*.yaml');\n\n        if (is_file(\\dirname(__DIR__).'/config/routes.yaml')) {\n            $routes->import('../config/routes.yaml');\n        } else {\n            $routes->import('../config/{routes}.php');\n        }\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/framework.yaml": {
+                    "contents": "when@dev:\n    _errors:\n        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'\n        prefix: /_error\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/preload.php": {
+                    "contents": "<?php\n\nif (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {\n    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/services.yaml": {
+                    "contents": "# This file is the entry point to configure your own services.\n# Files in the packages/ subdirectory configure your dependencies.\n\n# Put parameters here that don't need to change on each machine where the app is deployed\n# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration\nparameters:\n\nservices:\n    # default configuration for services in *this* file\n    _defaults:\n        autowire: true      # Automatically injects dependencies in your services.\n        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.\n\n    # makes classes in src/ available to be used as services\n    # this creates a service per class whose id is the fully-qualified class name\n    App\\:\n        resource: '../src/'\n        exclude:\n            - '../src/DependencyInjection/'\n            - '../src/Entity/'\n            - '../src/Kernel.php'\n            - '../src/Tests/'\n\n    # add more service definitions when explicit configuration is needed\n    # please note that last definitions always *replace* previous ones\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/framework.yaml": {
+                    "contents": "# see https://symfony.com/doc/current/reference/configuration/framework.html\nframework:\n    secret: '%env(APP_SECRET)%'\n    #csrf_protection: true\n    http_method_override: false\n\n    # Enables session support. Note that the session will ONLY be started if you read or write from it.\n    # Remove or comment this section to explicitly disable session support.\n    session:\n        handler_id: null\n        cookie_secure: auto\n        cookie_samesite: lax\n        storage_factory_id: session.storage.factory.native\n\n    #esi: true\n    #fragments: true\n    php_errors:\n        log: true\n\nwhen@test:\n    framework:\n        test: true\n        session:\n            storage_factory_id: session.storage.factory.mock_file\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/cache.yaml": {
+                    "contents": "framework:\n    cache:\n        # Unique name of your app: used to compute stable namespaces for cache keys.\n        #prefix_seed: your_vendor_name/app_name\n\n        # The \"app\" cache stores to the filesystem by default.\n        # The data in this cache should persist between deploys.\n        # Other options include:\n\n        # Redis\n        #app: cache.adapter.redis\n        #default_redis_provider: redis://localhost\n\n        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)\n        #app: cache.adapter.apcu\n\n        # Namespaced pools use the above \"app\" backend by default\n        #pools:\n            #my.dedicated.cache: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/framework-bundle:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

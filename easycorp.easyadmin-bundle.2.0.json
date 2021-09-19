@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "easycorp/easyadmin-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "0a51040a43c6f2172a3a0135cd15daf2043905d7"
+            }
+        }
+    },
+    "manifests": {
+        "easycorp/easyadmin-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "easycorp/easyadmin-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "aliases": [
+                    "admin-gen",
+                    "admin-generator",
+                    "admin"
+                ]
+            },
+            "files": {
+                "config/routes/easy_admin.yaml": {
+                    "contents": "easy_admin_bundle:\n    resource: '@EasyAdminBundle/Controller/EasyAdminController.php'\n    prefix: /admin\n    type: annotation\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/easy_admin.yaml": {
+                    "contents": "#easy_admin:\n#    entities:\n#        # List the entity class name you want to manage\n#        - App\\Entity\\Product\n#        - App\\Entity\\Category\n#        - App\\Entity\\User\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "easycorp/easyadmin-bundle:2.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/gatewayapi-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "147b1278d07d4d0146f89750d961fcf9beeb387d"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/gatewayapi-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/gatewayapi-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "GATEWAYAPI_DSN=gatewayapi://TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/gatewayapi-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

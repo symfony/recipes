@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/clickatell-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "d952063f1246274c59108daa0d6e7bd0a5490689"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/clickatell-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/clickatell-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "CLICKATELL_DSN=clickatell://ACCESS_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/clickatell-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

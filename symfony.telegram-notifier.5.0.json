@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/telegram-notifier": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "5cf5c19e8fdcbf922de680cdf8d65fa7d77758ae"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/telegram-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/telegram-notifier",
+            "version": "5.0",
+            "manifest": {
+                "env": {
+                    "#1": "TELEGRAM_DSN=telegram://TOKEN@default?channel=CHAT_ID"
+                }
+            },
+            "files": [],
+            "origin": "symfony/telegram-notifier:5.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

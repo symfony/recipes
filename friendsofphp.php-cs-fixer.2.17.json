@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "friendsofphp/php-cs-fixer": {
+            "version": "2.17",
+            "recipe": {
+                "repo": "2.17",
+                "branch": "master",
+                "version": "2.17",
+                "ref": "f0d4b4ddb4e2bb73b227e3987b6ecc53cd8be431"
+            }
+        }
+    },
+    "manifests": {
+        "friendsofphp/php-cs-fixer": {
+            "repository": "github.com/symfony/recipes",
+            "package": "friendsofphp/php-cs-fixer",
+            "version": "2.17",
+            "manifest": {
+                "aliases": [
+                    "cs-fixer",
+                    "php-cs-fixer"
+                ],
+                "copy-from-recipe": {
+                    ".php_cs.dist": ".php_cs.dist"
+                },
+                "gitignore": [
+                    "/.php_cs",
+                    "/.php_cs.cache"
+                ]
+            },
+            "files": {
+                ".php_cs.dist": {
+                    "contents": "<?php\n\n$finder = (new PhpCsFixer\\Finder())\n    ->in(__DIR__)\n    ->exclude('var')\n;\n\nreturn (new PhpCsFixer\\Config())\n    ->setRules([\n        '@Symfony' => true,\n    ])\n    ->setFinder($finder)\n;\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "friendsofphp/php-cs-fixer:2.17@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

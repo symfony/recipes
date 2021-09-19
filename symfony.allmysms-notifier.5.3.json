@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/allmysms-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "31ed2243d1214731f86141890173a64fca741986"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/allmysms-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/allmysms-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "ALLMYSMS_DSN=allmysms://LOGIN:APIKEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/allmysms-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

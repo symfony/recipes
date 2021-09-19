@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/fake-sms-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "70edf4dc13e3082d555575325207f0529ddd3bfe"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/fake-sms-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/fake-sms-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "FAKE_SMS_DSN=fakesms+email://default?to=TO&from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/fake-sms-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

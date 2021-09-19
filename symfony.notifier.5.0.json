@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "symfony/notifier": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "c31585e252b32fe0e1f30b1f256af553f4a06eb9"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/notifier",
+            "version": "5.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/notifier.yaml": {
+                    "contents": "framework:\n    notifier:\n        #chatter_transports:\n        #    slack: '%env(SLACK_DSN)%'\n        #    telegram: '%env(TELEGRAM_DSN)%'\n        #texter_transports:\n        #    twilio: '%env(TWILIO_DSN)%'\n        #    nexmo: '%env(NEXMO_DSN)%'\n        channel_policy:\n            # use chat/slack, chat/telegram, sms/twilio or sms/nexmo\n            urgent: ['email']\n            high: ['email']\n            medium: ['email']\n            low: ['email']\n        admin_recipients:\n            - { email: admin@example.com }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/notifier:5.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

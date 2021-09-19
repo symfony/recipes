@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "zenstruck/foundry": {
+            "version": "1.9",
+            "recipe": {
+                "repo": "1.9",
+                "branch": "master",
+                "version": "1.9",
+                "ref": "26a9e6291d5fc0bfd1d673bc1d6cfe3c582c7678"
+            }
+        }
+    },
+    "manifests": {
+        "zenstruck/foundry": {
+            "repository": "github.com/symfony/recipes",
+            "package": "zenstruck/foundry",
+            "version": "1.9",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": {
+                "config/packages/dev/zenstruck_foundry.yaml": {
+                    "contents": "# See full configuration: https://github.com/zenstruck/foundry#full-default-bundle-configuration\nzenstruck_foundry:\n    # Whether to auto-refresh proxies by default (https://github.com/zenstruck/foundry#auto-refresh)\n    auto_refresh_proxies: true\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/zenstruck_foundry.yaml": {
+                    "contents": "# Unless you want different configuration for test/dev environments,\n# add configuration to config/packages/dev/zenstruck_foundry.yml\n# and this will be synced to your test environment.\nimports:\n    - { resource: ../dev/zenstruck_foundry.yaml }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "zenstruck/foundry:1.9@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

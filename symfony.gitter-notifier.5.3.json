@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/gitter-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "956a66cfe2c1e2fee63b9432aaad095475c48b01"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/gitter-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/gitter-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "GITTER_DSN=gitter://TOKEN@default?room_id=ROOM_ID"
+                }
+            },
+            "files": [],
+            "origin": "symfony/gitter-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

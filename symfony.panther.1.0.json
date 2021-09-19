@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "symfony/panther": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "877d853a05c6713665a2f4b954734592680abff6"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/panther": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/panther",
+            "version": "1.0",
+            "manifest": {
+                "dockerfile": [
+                    "# Chromium and ChromeDriver",
+                    "ENV PANTHER_NO_SANDBOX 1",
+                    "# Not mandatory, but recommended",
+                    "ENV PANTHER_CHROME_ARGUMENTS='--disable-dev-shm-usage'",
+                    "RUN apk add --no-cache chromium chromium-chromedriver",
+                    "",
+                    "# Firefox and geckodriver",
+                    "#ARG GECKODRIVER_VERSION=0.29.0",
+                    "#RUN apk add --no-cache firefox",
+                    "#RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz; \\",
+                    "#\ttar -zxf geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/bin; \\",
+                    "#\trm geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz"
+                ]
+            },
+            "files": [],
+            "origin": "symfony/panther:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

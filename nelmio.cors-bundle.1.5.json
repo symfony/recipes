@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "nelmio/cors-bundle": {
+            "version": "1.5",
+            "recipe": {
+                "repo": "1.5",
+                "branch": "master",
+                "version": "1.5",
+                "ref": "6bea22e6c564fba3a1391615cada1437d0bde39c"
+            }
+        }
+    },
+    "manifests": {
+        "nelmio/cors-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "nelmio/cors-bundle",
+            "version": "1.5",
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\CorsBundle\\NelmioCorsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CORS_ALLOW_ORIGIN": "'^https?://(localhost|127\\.0\\.0\\.1)(:[0-9]+)?$'"
+                },
+                "aliases": [
+                    "cors"
+                ]
+            },
+            "files": {
+                "config/packages/nelmio_cors.yaml": {
+                    "contents": "nelmio_cors:\n    defaults:\n        origin_regex: true\n        allow_origin: ['%env(CORS_ALLOW_ORIGIN)%']\n        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']\n        allow_headers: ['Content-Type', 'Authorization']\n        expose_headers: ['Link']\n        max_age: 3600\n    paths:\n        '^/': null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nelmio/cors-bundle:1.5@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

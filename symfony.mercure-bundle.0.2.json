@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "symfony/mercure-bundle": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "9c94631c3fc2e9ab2302380ebb36b5942f5be676"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/mercure-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/mercure-bundle",
+            "version": "0.2",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\MercureBundle\\MercureBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "See https://symfony.com/doc/current/mercure.html#configuration",
+                    "MERCURE_PUBLISH_URL": "http://mercure/.well-known/mercure",
+                    "#2": "The default token is signed with the secret key: !ChangeMe!",
+                    "MERCURE_JWT_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOltdfX0.Oo0yg7y4yMa1vr_bziltxuTCqb8JVHKxp-f_FwwOim0"
+                },
+                "aliases": [
+                    "mercure"
+                ]
+            },
+            "files": {
+                "config/packages/mercure.yaml": {
+                    "contents": "mercure:\n    enable_profiler: '%kernel.debug%'\n    hubs:\n        default:\n            url: '%env(MERCURE_PUBLISH_URL)%'\n            jwt: '%env(MERCURE_JWT_TOKEN)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/mercure-bundle:0.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

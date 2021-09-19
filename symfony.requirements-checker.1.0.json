@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "symfony/requirements-checker": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "88980e1a5d7fe6ef1837e45bc44e9d38538b88ca"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/requirements-checker": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/requirements-checker",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "public/": "%PUBLIC_DIR%/"
+                },
+                "composer-scripts": {
+                    "requirements-checker": "script"
+                },
+                "aliases": [
+                    "requirement-check",
+                    "requirement-checker",
+                    "req-checker",
+                    "req-check",
+                    "req-checks"
+                ]
+            },
+            "files": {
+                "public/check.php": {
+                    "contents": "<?php\n\nrequire dirname(__DIR__).'/vendor/symfony/requirements-checker/public/check.php';\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/requirements-checker:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

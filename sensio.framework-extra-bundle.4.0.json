@@ -1,0 +1,37 @@
+{
+    "locks": {
+        "sensio/framework-extra-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
+            }
+        }
+    },
+    "manifests": {
+        "sensio/framework-extra-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "sensio/framework-extra-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": [
+                        "all"
+                    ]
+                },
+                "aliases": [
+                    "annotations",
+                    "annotation",
+                    "annot",
+                    "annots"
+                ]
+            },
+            "files": [],
+            "origin": "sensio/framework-extra-bundle:4.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

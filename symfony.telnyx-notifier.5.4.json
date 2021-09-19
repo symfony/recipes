@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/telnyx-notifier": {
+            "version": "5.4",
+            "recipe": {
+                "repo": "5.4",
+                "branch": "master",
+                "version": "5.4",
+                "ref": "d67467a335b8ee2929fa5355379909ce0c104dc8"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/telnyx-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/telnyx-notifier",
+            "version": "5.4",
+            "manifest": {
+                "env": {
+                    "#1": "TELNYX_DSN=telnyx://API_KEY@default?from=FROM&messaging_profile_id=MESSAGING_PROFILE_ID"
+                }
+            },
+            "files": [],
+            "origin": "symfony/telnyx-notifier:5.4@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

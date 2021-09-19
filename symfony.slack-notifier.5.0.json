@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/slack-notifier": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/slack-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/slack-notifier",
+            "version": "5.0",
+            "manifest": {
+                "env": {
+                    "#1": "SLACK_DSN=slack://TOKEN@default?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "origin": "symfony/slack-notifier:5.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

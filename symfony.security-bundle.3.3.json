@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "symfony/security-bundle": {
+            "version": "3.3",
+            "recipe": {
+                "repo": "3.3",
+                "branch": "master",
+                "version": "3.3",
+                "ref": "38d658ce68375d66d2cddc88892af8f08701e6e7"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/security-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/security-bundle",
+            "version": "3.3",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "aliases": [
+                    "security"
+                ]
+            },
+            "files": {
+                "config/packages/security.yaml": {
+                    "contents": "security:\n    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers\n    providers:\n        users_in_memory: { memory: null }\n    firewalls:\n        dev:\n            pattern: ^/(_(profiler|wdt)|css|images|js)/\n            security: false\n        main:\n            anonymous: true\n            provider: users_in_memory\n\n            # activate different ways to authenticate\n            # https://symfony.com/doc/current/security.html#firewalls-authentication\n\n            # https://symfony.com/doc/current/security/impersonating_user.html\n            # switch_user: true\n\n    # Easy way to control access for large sections of your site\n    # Note: Only the *first* access control that matches will be used\n    access_control:\n        # - { path: ^/admin, roles: ROLE_ADMIN }\n        # - { path: ^/profile, roles: ROLE_USER }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/security-bundle:3.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

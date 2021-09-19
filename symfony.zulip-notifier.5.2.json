@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/zulip-notifier": {
+            "version": "5.2",
+            "recipe": {
+                "repo": "5.2",
+                "branch": "master",
+                "version": "5.2",
+                "ref": "4a15d94334463daa5274c81373cf12f115829e6f"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/zulip-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/zulip-notifier",
+            "version": "5.2",
+            "manifest": {
+                "env": {
+                    "#1": "ZULIP_DSN=zulip://EMAIL:TOKEN@HOST?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "origin": "symfony/zulip-notifier:5.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

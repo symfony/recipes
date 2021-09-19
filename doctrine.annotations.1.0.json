@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "doctrine/annotations": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "a2759dd6123694c8d901d0ec80006e044c2e6457"
+            }
+        }
+    },
+    "manifests": {
+        "doctrine/annotations": {
+            "repository": "github.com/symfony/recipes",
+            "package": "doctrine/annotations",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/annotations.yaml": {
+                    "contents": "controllers:\n    resource: ../../src/Controller/\n    type: annotation\n\nkernel:\n    resource: ../../src/Kernel.php\n    type: annotation\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "doctrine/annotations:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

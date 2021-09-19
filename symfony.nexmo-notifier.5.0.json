@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/nexmo-notifier": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "b636066bd9dd508f10c24de73065f42d0412e2bf"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/nexmo-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/nexmo-notifier",
+            "version": "5.0",
+            "manifest": {
+                "env": {
+                    "#1": "NEXMO_DSN=nexmo://KEY:SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/nexmo-notifier:5.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

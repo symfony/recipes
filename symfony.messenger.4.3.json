@@ -1,0 +1,47 @@
+{
+    "locks": {
+        "symfony/messenger": {
+            "version": "4.3",
+            "recipe": {
+                "repo": "4.3",
+                "branch": "master",
+                "version": "4.3",
+                "ref": "25e3c964d3aee480b3acc3114ffb7940c89edfed"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/messenger": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/messenger",
+            "version": "4.3",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the transports below",
+                    "#2": "MESSENGER_TRANSPORT_DSN=doctrine://default",
+                    "#3": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+                    "#4": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages"
+                },
+                "aliases": [
+                    "messenger"
+                ],
+                "conflict": {
+                    "symfony/framework-bundle": "<4.3"
+                }
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": "framework:\n    messenger:\n        # Uncomment this (and the failed transport below) to send failed messages to this transport for later handling.\n        # failure_transport: failed\n\n        transports:\n            # https://symfony.com/doc/current/messenger.html#transport-configuration\n            # async: '%env(MESSENGER_TRANSPORT_DSN)%'\n            # failed: 'doctrine://default?queue_name=failed'\n            # sync: 'sync://'\n\n        routing:\n            # Route your messages to the transports\n            # 'App\\Message\\YourMessage': async\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/messenger:4.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

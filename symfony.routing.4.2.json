@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "symfony/routing": {
+            "version": "4.2",
+            "recipe": {
+                "repo": "4.2",
+                "branch": "master",
+                "version": "4.2",
+                "ref": "683dcb08707ba8d41b7e34adb0344bfd68d248a7"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/routing": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/routing",
+            "version": "4.2",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "aliases": [
+                    "router"
+                ]
+            },
+            "files": {
+                "config/routes.yaml": {
+                    "contents": "#index:\n#    path: /\n#    controller: App\\Controller\\DefaultController::index\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/prod/routing.yaml": {
+                    "contents": "framework:\n    router:\n        strict_requirements: null\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/routing.yaml": {
+                    "contents": "framework:\n    router:\n        utf8: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/routing:4.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

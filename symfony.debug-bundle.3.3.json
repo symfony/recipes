@@ -1,0 +1,32 @@
+{
+    "locks": {
+        "symfony/debug-bundle": {
+            "version": "3.3",
+            "recipe": {
+                "repo": "3.3",
+                "branch": "master",
+                "version": "3.3",
+                "ref": "71d29aaf710fd59cd3abff2b1ade907ed73103c6"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/debug-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/debug-bundle",
+            "version": "3.3",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\DebugBundle\\DebugBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "origin": "symfony/debug-bundle:3.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

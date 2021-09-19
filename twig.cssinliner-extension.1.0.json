@@ -1,0 +1,31 @@
+{
+    "locks": {
+        "twig/cssinliner-extension": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "3460ba58f2609c9f1a38c6e9f2a416ff911f0861"
+            }
+        }
+    },
+    "manifests": {
+        "twig/cssinliner-extension": {
+            "repository": "github.com/symfony/recipes",
+            "package": "twig/cssinliner-extension",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Twig\\CssInliner\\Bundle\\TwigCssInlinerBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "origin": "twig/cssinliner-extension:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

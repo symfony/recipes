@@ -1,0 +1,53 @@
+{
+    "locks": {
+        "lexik/jwt-authentication-bundle": {
+            "version": "2.3",
+            "recipe": {
+                "repo": "2.3",
+                "branch": "master",
+                "version": "2.3",
+                "ref": "42cd3a3895e580dc9c89856b61fe986cafd7d23f"
+            }
+        }
+    },
+    "manifests": {
+        "lexik/jwt-authentication-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "lexik/jwt-authentication-bundle",
+            "version": "2.3",
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "aliases": [
+                    "jwt",
+                    "jwt-auth"
+                ],
+                "env": {
+                    "#1": "Key paths should be relative to the project directory",
+                    "JWT_PRIVATE_KEY_PATH": "%CONFIG_DIR%/jwt/private.pem",
+                    "JWT_PUBLIC_KEY_PATH": "%CONFIG_DIR%/jwt/public.pem",
+                    "JWT_PASSPHRASE": "%generate(secret)%"
+                },
+                "gitignore": [
+                    "/%CONFIG_DIR%/jwt/*.pem"
+                ]
+            },
+            "files": {
+                "config/packages/lexik_jwt_authentication.yaml": {
+                    "contents": "lexik_jwt_authentication:\n    private_key_path: '%kernel.project_dir%/%env(JWT_PRIVATE_KEY_PATH)%'\n    public_key_path: '%kernel.project_dir%/%env(JWT_PUBLIC_KEY_PATH)%'\n    pass_phrase: '%env(JWT_PASSPHRASE)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "lexik/jwt-authentication-bundle:2.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "symfony/debug-bundle": {
+            "version": "4.1",
+            "recipe": {
+                "repo": "4.1",
+                "branch": "master",
+                "version": "4.1",
+                "ref": "0ce7a032d344fb7b661cd25d31914cd703ad445b"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/debug-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/debug-bundle",
+            "version": "4.1",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\DebugBundle\\DebugBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/debug.yaml": {
+                    "contents": "debug:\n    # Forwards VarDumper Data clones to a centralized server allowing to inspect dumps on CLI or in your browser.\n    # See the \"server:dump\" command to start a new server.\n    dump_destination: \"tcp://%env(VAR_DUMPER_SERVER)%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/debug-bundle:4.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

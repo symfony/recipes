@@ -1,0 +1,31 @@
+{
+    "locks": {
+        "symfony/test-pack": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "07897cab0d2db73daf4a80222112886f7f9a6a34"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/test-pack": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/test-pack",
+            "version": "1.0",
+            "manifest": {
+                "aliases": [
+                    "test",
+                    "tests",
+                    "phpunit"
+                ]
+            },
+            "files": [],
+            "origin": "symfony/test-pack:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "api-platform/core": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "d57f9ff8067d8d077f026c4b4700ec876839aed9"
+            }
+        }
+    },
+    "manifests": {
+        "api-platform/core": {
+            "repository": "github.com/symfony/recipes",
+            "package": "api-platform/core",
+            "version": "2.1",
+            "manifest": {
+                "bundles": {
+                    "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/api_platform.yaml": {
+                    "contents": "api_platform:\n    resource: .\n    type: api_platform\n    prefix: /api\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/api_platform.yaml": {
+                    "contents": "api_platform:\n    mapping:\n        paths: ['%kernel.project_dir%/src/Entity']\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "api-platform/core:2.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/smsc-notifier": {
+            "version": "5.4",
+            "recipe": {
+                "repo": "5.4",
+                "branch": "master",
+                "version": "5.4",
+                "ref": "8870594f0b0c0c4e204a20e6065723a42ea3cfd2"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/smsc-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/smsc-notifier",
+            "version": "5.4",
+            "manifest": {
+                "env": {
+                    "#1": "SMSC_DSN=smsc://LOGIN:PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/smsc-notifier:5.4@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

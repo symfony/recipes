@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "doctrine/doctrine-fixtures-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "e5b542d4ef47d8a003c91beb35650c76907f7e53"
+            }
+        }
+    },
+    "manifests": {
+        "doctrine/doctrine-fixtures-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "doctrine/doctrine-fixtures-bundle",
+            "version": "3.0",
+            "manifest": {
+                "aliases": [
+                    "orm-fixtures"
+                ],
+                "bundles": {
+                    "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/DataFixtures/AppFixtures.php": {
+                    "contents": "<?php\n\nnamespace App\\DataFixtures;\n\nuse Doctrine\\Bundle\\FixturesBundle\\Fixture;\nuse Doctrine\\Persistence\\ObjectManager;\n\nclass AppFixtures extends Fixture\n{\n    public function load(ObjectManager $manager)\n    {\n        // $product = new Product();\n        // $manager->persist($product);\n\n        $manager->flush();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "doctrine/doctrine-fixtures-bundle:3.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

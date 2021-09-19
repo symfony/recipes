@@ -1,0 +1,30 @@
+{
+    "locks": {
+        "symfony/serializer-pack": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "db292a5edd63381add1af98700d16e1ce6b54ce2"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/serializer-pack": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/serializer-pack",
+            "version": "1.0",
+            "manifest": {
+                "aliases": [
+                    "serialization",
+                    "serializer"
+                ]
+            },
+            "files": [],
+            "origin": "symfony/serializer-pack:1.0@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

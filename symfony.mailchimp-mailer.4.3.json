@@ -1,0 +1,33 @@
+{
+    "locks": {
+        "symfony/mailchimp-mailer": {
+            "version": "4.3",
+            "recipe": {
+                "repo": "4.3",
+                "branch": "master",
+                "version": "4.3",
+                "ref": "552791a6bc7306198f4c647102a2b4f50d431fb8"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/mailchimp-mailer": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/mailchimp-mailer",
+            "version": "4.3",
+            "manifest": {
+                "env": {
+                    "#1": "MANDRILL_USERNAME=",
+                    "#2": "MANDRILL_PASSWORD=",
+                    "#3": "MAILER_DSN=smtp://$MANDRILL_USERNAME:$MANDRILL_PASSWORD@mandrill",
+                    "#4": "MANDRILL_KEY=",
+                    "#5": "MAILER_DSN=http://$MANDRILL_KEY@mandrill"
+                }
+            },
+            "files": [],
+            "origin": "symfony/mailchimp-mailer:4.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

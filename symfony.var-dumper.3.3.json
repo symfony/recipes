@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/var-dumper": {
+            "version": "3.3",
+            "recipe": {
+                "repo": "3.3",
+                "branch": "master",
+                "version": "3.3",
+                "ref": "194f673f6638645cfc690fb9d360ed0135552e22"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/var-dumper": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/var-dumper",
+            "version": "3.3",
+            "manifest": {
+                "aliases": [
+                    "dump"
+                ]
+            },
+            "files": [],
+            "origin": "symfony/var-dumper:3.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

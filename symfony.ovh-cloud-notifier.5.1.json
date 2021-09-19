@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/ovh-cloud-notifier": {
+            "version": "5.1",
+            "recipe": {
+                "repo": "5.1",
+                "branch": "master",
+                "version": "5.1",
+                "ref": "71809b3735a012a6359e9f48aa373b2680c3da54"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/ovh-cloud-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/ovh-cloud-notifier",
+            "version": "5.1",
+            "manifest": {
+                "env": {
+                    "#1": "OVHCLOUD_DSN=ovhcloud://APPLICATION_KEY:APPLICATION_SECRET@default?consumer_key=CONSUMER_KEY&service_name=SERVICE_NAME"
+                }
+            },
+            "files": [],
+            "origin": "symfony/ovh-cloud-notifier:5.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

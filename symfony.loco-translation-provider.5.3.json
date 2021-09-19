@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/loco-translation-provider": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "c706da68af4ae956f45cffccf99a130e9484cb33"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/loco-translation-provider": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/loco-translation-provider",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "LOCO_DSN=loco://API_KEY@default"
+                }
+            },
+            "files": [],
+            "origin": "symfony/loco-translation-provider:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

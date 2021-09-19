@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/message-media-notifier": {
+            "version": "5.4",
+            "recipe": {
+                "repo": "5.4",
+                "branch": "master",
+                "version": "5.4",
+                "ref": "069fb95c3bba9bc8ba30d08d164aaea0725999b7"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/message-media-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/message-media-notifier",
+            "version": "5.4",
+            "manifest": {
+                "env": {
+                    "#1": "MESSAGEMEDIA_DSN=messagemedia://API_KEY:API_SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/message-media-notifier:5.4@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

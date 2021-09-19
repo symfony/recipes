@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/sendgrid-mailer": {
+            "version": "4.4",
+            "recipe": {
+                "repo": "4.4",
+                "branch": "master",
+                "version": "4.4",
+                "ref": "b46e4f8f1adb2864f0aa9c0ff57aea3324a07199"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/sendgrid-mailer": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/sendgrid-mailer",
+            "version": "4.4",
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=sendgrid://KEY@default"
+                }
+            },
+            "files": [],
+            "origin": "symfony/sendgrid-mailer:4.4@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

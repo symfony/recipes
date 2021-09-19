@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "symfony/mailer": {
+            "version": "4.3",
+            "recipe": {
+                "repo": "4.3",
+                "branch": "master",
+                "version": "4.3",
+                "ref": "bbfc7e27257d3a3f12a6fb0a42540a42d9623a37"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/mailer": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/mailer",
+            "version": "4.3",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MAILER_DSN=smtp://localhost"
+                },
+                "docker-compose": {
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "mailer:",
+                            "  image: schickling/mailcatcher",
+                            "  ports: [1025, 1080]"
+                        ]
+                    }
+                },
+                "aliases": [
+                    "mailer",
+                    "mail"
+                ]
+            },
+            "files": {
+                "config/packages/mailer.yaml": {
+                    "contents": "framework:\n    mailer:\n        dsn: '%env(MAILER_DSN)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/mailer:4.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

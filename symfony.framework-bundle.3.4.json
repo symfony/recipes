@@ -1,0 +1,95 @@
+{
+    "locks": {
+        "symfony/framework-bundle": {
+            "version": "3.4",
+            "recipe": {
+                "repo": "3.4",
+                "branch": "master",
+                "version": "3.4",
+                "ref": "4e582450c27d790227d2596a2ffb514fd71d5db7"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/framework-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/framework-bundle",
+            "version": "3.4",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd",
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_SECRET": "%generate(secret)%",
+                    "#TRUSTED_PROXIES": "127.0.0.1,127.0.0.2",
+                    "#TRUSTED_HOSTS": "'^(localhost|example\\.com)$'"
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%PUBLIC_DIR%/bundles/",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ]
+            },
+            "files": {
+                "public/index.php": {
+                    "contents": "<?php\n\nuse App\\Kernel;\nuse Symfony\\Component\\Debug\\Debug;\nuse Symfony\\Component\\HttpFoundation\\Request;\n\nrequire dirname(__DIR__).'/config/bootstrap.php';\n\nif ($_SERVER['APP_DEBUG']) {\n    umask(0000);\n\n    Debug::enable();\n}\n\nif ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {\n    Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO);\n}\n\nif ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {\n    Request::setTrustedHosts([$trustedHosts]);\n}\n\n$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);\n$request = Request::createFromGlobals();\n$response = $kernel->handle($request);\n$response->send();\n$kernel->terminate($request, $response);\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Controller/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Kernel.php": {
+                    "contents": "<?php\n\nnamespace App;\n\nuse Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;\nuse Symfony\\Component\\Config\\Loader\\LoaderInterface;\nuse Symfony\\Component\\Config\\Resource\\FileResource;\nuse Symfony\\Component\\DependencyInjection\\ContainerBuilder;\nuse Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;\nuse Symfony\\Component\\Routing\\RouteCollectionBuilder;\n\nclass Kernel extends BaseKernel\n{\n    use MicroKernelTrait;\n\n    const CONFIG_EXTS = '.{php,xml,yaml,yml}';\n\n    public function getCacheDir()\n    {\n        return $this->getProjectDir().'/var/cache/'.$this->environment;\n    }\n\n    public function getLogDir()\n    {\n        return $this->getProjectDir().'/var/log';\n    }\n\n    public function registerBundles()\n    {\n        $contents = require $this->getProjectDir().'/config/bundles.php';\n        foreach ($contents as $class => $envs) {\n            if ($envs[$this->environment] ?? $envs['all'] ?? false) {\n                yield new $class();\n            }\n        }\n    }\n\n    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)\n    {\n        $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));\n        // Feel free to remove the \"container.autowiring.strict_mode\" parameter\n        // if you are using symfony/dependency-injection 4.0+ as it's the default behavior\n        $container->setParameter('container.autowiring.strict_mode', true);\n        $container->setParameter('container.dumper.inline_class_loader', true);\n        $confDir = $this->getProjectDir().'/config';\n\n        $loader->load($confDir.'/{packages}/*'.self::CONFIG_EXTS, 'glob');\n        $loader->load($confDir.'/{packages}/'.$this->environment.'/*'.self::CONFIG_EXTS, 'glob');\n        $loader->load($confDir.'/{services}'.self::CONFIG_EXTS, 'glob');\n        $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');\n    }\n\n    protected function configureRoutes(RouteCollectionBuilder $routes)\n    {\n        $confDir = $this->getProjectDir().'/config';\n\n        $routes->import($confDir.'/{routes}/'.$this->environment.'/*'.self::CONFIG_EXTS, '/', 'glob');\n        $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');\n        $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/bootstrap.php": {
+                    "contents": "<?php\n\nuse Symfony\\Component\\Dotenv\\Dotenv;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (!class_exists(Dotenv::class)) {\n    throw new LogicException('Please run \"composer require symfony/dotenv\" to load the \".env\" files configuring the application.');\n}\n\n// Load cached env vars if the .env.local.php file exists\n// Run \"composer dump-env prod\" to create it (requires symfony/flex >=1.2)\nif (is_array($env = @include dirname(__DIR__).'/.env.local.php') && (!isset($env['APP_ENV']) || ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])) {\n    (new Dotenv(false))->populate($env);\n} else {\n    $path = dirname(__DIR__).'/.env';\n    $dotenv = new Dotenv(false);\n\n    // load all the .env files\n    if (method_exists($dotenv, 'loadEnv')) {\n        $dotenv->loadEnv($path);\n    } else {\n        // fallback code in case your Dotenv component is not 4.2 or higher (when loadEnv() was added)\n\n        if (file_exists($path) || !file_exists($p = \"$path.dist\")) {\n            $dotenv->load($path);\n        } else {\n            $dotenv->load($p);\n        }\n\n        if (null === $env = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) {\n            $dotenv->populate(array('APP_ENV' => $env = 'dev'));\n        }\n\n        if ('test' !== $env && file_exists($p = \"$path.local\")) {\n            $dotenv->load($p);\n            $env = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env;\n        }\n\n        if (file_exists($p = \"$path.$env\")) {\n            $dotenv->load($p);\n        }\n\n        if (file_exists($p = \"$path.$env.local\")) {\n            $dotenv->load($p);\n        }\n    }\n}\n\n$_SERVER += $_ENV;\n$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';\n$_SERVER['APP_DEBUG'] = $_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? 'prod' !== $_SERVER['APP_ENV'];\n$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN) ? '1' : '0';\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/services.yaml": {
+                    "contents": "# This file is the entry point to configure your own services.\n# Files in the packages/ subdirectory configure your dependencies.\n\n# Put parameters here that don't need to change on each machine where the app is deployed\n# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration\nparameters:\n\nservices:\n    # default configuration for services in *this* file\n    _defaults:\n        autowire: true      # Automatically injects dependencies in your services.\n        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.\n        public: false       # Allows optimizing the container by removing unused services; this also means\n                            # fetching services directly from the container via $container->get() won't work.\n                            # The best practice is to be explicit about your dependencies anyway.\n\n    # makes classes in src/ available to be used as services\n    # this creates a service per class whose id is the fully-qualified class name\n    App\\:\n        resource: '../src/*'\n        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'\n\n    # controllers are imported separately to make sure services can be injected\n    # as action arguments even if you don't extend any base controller class\n    App\\Controller\\:\n        resource: '../src/Controller'\n        tags: ['controller.service_arguments']\n\n    # add more service definitions when explicit configuration is needed\n    # please note that last definitions always *replace* previous ones\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/framework.yaml": {
+                    "contents": "framework:\n    secret: '%env(APP_SECRET)%'\n    #csrf_protection: true\n    #http_method_override: true\n\n    # Enables session support. Note that the session will ONLY be started if you read or write from it.\n    # Remove or comment this section to explicitly disable session support.\n    session:\n        handler_id: null\n        cookie_samesite: lax\n\n    #esi: true\n    #fragments: true\n    php_errors:\n        log: true\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/cache.yaml": {
+                    "contents": "framework:\n    cache:\n        # Unique name of your app: used to compute stable namespaces for cache keys.\n        #prefix_seed: your_vendor_name/app_name\n\n        # The \"app\" cache stores to the filesystem by default.\n        # The data in this cache should persist between deploys.\n        # Other options include:\n\n        # Redis\n        #app: cache.adapter.redis\n        #default_redis_provider: redis://localhost\n\n        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)\n        #app: cache.adapter.apcu\n\n        # Namespaced pools use the above \"app\" backend by default\n        #pools:\n            #my.dedicated.cache: null\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/framework.yaml": {
+                    "contents": "framework:\n    test: true\n    session:\n        storage_id: session.storage.mock_file\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/framework-bundle:3.4@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

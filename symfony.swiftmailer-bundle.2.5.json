@@ -1,0 +1,59 @@
+{
+    "locks": {
+        "symfony/swiftmailer-bundle": {
+            "version": "2.5",
+            "recipe": {
+                "repo": "2.5",
+                "branch": "master",
+                "version": "2.5",
+                "ref": "f0b2fccdca2dfd97dc2fd5ad216d5e27c4f895ac"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/swiftmailer-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/swiftmailer-bundle",
+            "version": "2.5",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
+                    "#2": "For a generic SMTP server, use: \"smtp://localhost:25?encryption=&auth_mode=\"",
+                    "#3": "Delivery is disabled by default via \"null://localhost\"",
+                    "MAILER_URL": "null://localhost"
+                },
+                "aliases": [
+                    "swiftmailer"
+                ]
+            },
+            "files": {
+                "config/packages/dev/swiftmailer.yaml": {
+                    "contents": "# See https://symfony.com/doc/current/email/dev_environment.html\n#swiftmailer:\n#    send all emails to a specific address\n#    delivery_addresses: ['me@example.com']\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/swiftmailer.yaml": {
+                    "contents": "swiftmailer:\n    disable_delivery: true\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/swiftmailer.yaml": {
+                    "contents": "swiftmailer:\n    url: '%env(MAILER_URL)%'\n    spool: { type: 'memory' }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/swiftmailer-bundle:2.5@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

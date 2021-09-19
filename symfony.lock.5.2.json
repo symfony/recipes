@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "symfony/lock": {
+            "version": "5.2",
+            "recipe": {
+                "repo": "5.2",
+                "branch": "master",
+                "version": "5.2",
+                "ref": "a1c8800e40ae735206bb14586fdd6c4630a51b8d"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/lock": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/lock",
+            "version": "5.2",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the stores below",
+                    "#2": "postgresql+advisory://db_user:db_password@localhost/db_name",
+                    "LOCK_DSN": "semaphore"
+                }
+            },
+            "files": {
+                "config/packages/lock.yaml": {
+                    "contents": "framework:\n    lock: '%env(LOCK_DSN)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/lock:5.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

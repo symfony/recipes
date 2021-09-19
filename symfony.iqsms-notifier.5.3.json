@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/iqsms-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "1231da9b9e79308b8ce9b11a0f3c88b09b9489c3"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/iqsms-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/iqsms-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "IQSMS_DSN=iqsms://LOGIN:PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "origin": "symfony/iqsms-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

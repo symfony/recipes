@@ -1,0 +1,30 @@
+{
+    "locks": {
+        "symfony/smsapi-notifier": {
+            "version": "5.2",
+            "recipe": {
+                "repo": "5.2",
+                "branch": "master",
+                "version": "5.2",
+                "ref": "908405e1f48e7e81a186f25c685758127d3aa1db"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/smsapi-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/smsapi-notifier",
+            "version": "5.2",
+            "manifest": {
+                "env": {
+                    "#1": "See https://www.smsapi.pl/docs/#autoryzacja",
+                    "#2": "SMSAPI_DSN=smsapi://TOKEN@default?from=CHANNEL_ID"
+                }
+            },
+            "files": [],
+            "origin": "symfony/smsapi-notifier:5.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

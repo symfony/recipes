@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "symfony/routing": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "44633353926a0382d7dfb0530922c5c0b30fae11"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/routing": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/routing",
+            "version": "5.3",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "aliases": [
+                    "router"
+                ]
+            },
+            "files": {
+                "config/routes.yaml": {
+                    "contents": "#index:\n#    path: /\n#    controller: App\\Controller\\DefaultController::index\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/routing.yaml": {
+                    "contents": "framework:\n    router:\n        utf8: true\n\n        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.\n        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands\n        #default_uri: http://localhost\n\nwhen@prod:\n    framework:\n        router:\n            strict_requirements: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/routing:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

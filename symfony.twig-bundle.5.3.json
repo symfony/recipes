@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "symfony/twig-bundle": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "3dd530739a4284e3272274c128dbb7a8140a66f1"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/twig-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/twig-bundle",
+            "version": "5.3",
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                }
+            },
+            "files": {
+                "templates/base.html.twig": {
+                    "contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>{% block title %}Welcome!{% endblock %}</title>\n        {# Run `composer require symfony/webpack-encore-bundle`\n           and uncomment the following Encore helpers to start using Symfony UX #}\n        {% block stylesheets %}\n            {#{{ encore_entry_link_tags('app') }}#}\n        {% endblock %}\n\n        {% block javascripts %}\n            {#{{ encore_entry_script_tags('app') }}#}\n        {% endblock %}\n    </head>\n    <body>\n        {% block body %}{% endblock %}\n    </body>\n</html>\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/twig.yaml": {
+                    "contents": "twig:\n    default_path: '%kernel.project_dir%/templates'\n\nwhen@test:\n    twig:\n        strict_variables: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/twig-bundle:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

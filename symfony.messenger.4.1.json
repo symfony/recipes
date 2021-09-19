@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "symfony/messenger": {
+            "version": "4.1",
+            "recipe": {
+                "repo": "4.1",
+                "branch": "master",
+                "version": "4.1",
+                "ref": "fb924c94bcbf351a987da8a8125133e72e059472"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/messenger": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/messenger",
+            "version": "4.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages"
+                },
+                "aliases": [
+                    "messenger"
+                ],
+                "conflict": {
+                    "symfony/framework-bundle": "<4.1"
+                }
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": "framework:\n    messenger:\n        transports:\n            # Uncomment the following line to enable a transport named \"amqp\"\n            # amqp: '%env(MESSENGER_TRANSPORT_DSN)%'\n\n        routing:\n            # Route your messages to the transports\n            # 'App\\Message\\YourMessage': amqp\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/messenger:4.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

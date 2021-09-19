@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/light-sms-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "917f38d91980a127b634991465cc0ee3821bfa4f"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/light-sms-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/light-sms-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "LIGHTSMS_DSN=lightsms://LOGIN:TOKEN@default?from=PHONE"
+                }
+            },
+            "files": [],
+            "origin": "symfony/light-sms-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

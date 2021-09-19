@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "nelmio/alice": {
+            "version": "3.2",
+            "recipe": {
+                "repo": "3.2",
+                "branch": "master",
+                "version": "3.2",
+                "ref": "0b9900ece737bec7752e4155c0164639dd9b0cb0"
+            }
+        }
+    },
+    "manifests": {
+        "nelmio/alice": {
+            "repository": "github.com/symfony/recipes",
+            "package": "nelmio/alice",
+            "version": "3.2",
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\Alice\\Bridge\\Symfony\\NelmioAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/nelmio_alice.yaml": {
+                    "contents": "nelmio_alice:\n    functions_blacklist:\n        - 'current'\n        - 'shuffle'\n        - 'date'\n        - 'time'\n        - 'file'\n        - 'md5'\n        - 'sha1'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/nelmio_alice.yaml": {
+                    "contents": "imports:\n    - { resource: ../dev/nelmio_alice.yaml }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nelmio/alice:3.2@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

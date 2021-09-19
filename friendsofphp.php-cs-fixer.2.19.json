@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "friendsofphp/php-cs-fixer": {
+            "version": "2.19",
+            "recipe": {
+                "repo": "2.19",
+                "branch": "master",
+                "version": "2.19",
+                "ref": "34d1a22f840953909c581b8f993093b14cc9491b"
+            }
+        }
+    },
+    "manifests": {
+        "friendsofphp/php-cs-fixer": {
+            "repository": "github.com/symfony/recipes",
+            "package": "friendsofphp/php-cs-fixer",
+            "version": "2.19",
+            "manifest": {
+                "aliases": [
+                    "cs-fixer",
+                    "php-cs-fixer"
+                ],
+                "copy-from-recipe": {
+                    ".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php"
+                },
+                "gitignore": [
+                    "/.php-cs-fixer.php",
+                    "/.php-cs-fixer.cache"
+                ]
+            },
+            "files": {
+                ".php-cs-fixer.dist.php": {
+                    "contents": "<?php\n\n$finder = (new PhpCsFixer\\Finder())\n    ->in(__DIR__)\n    ->exclude('var')\n;\n\nreturn (new PhpCsFixer\\Config())\n    ->setRules([\n        '@Symfony' => true,\n    ])\n    ->setFinder($finder)\n    ->setCacheFile('.php-cs-fixer.cache') // forward compatibility with 3.x line\n;\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "friendsofphp/php-cs-fixer:2.19@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

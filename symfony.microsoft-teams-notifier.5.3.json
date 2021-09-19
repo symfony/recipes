@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/microsoft-teams-notifier": {
+            "version": "5.3",
+            "recipe": {
+                "repo": "5.3",
+                "branch": "master",
+                "version": "5.3",
+                "ref": "9d3dcfded9e56435f75e0ee521f575c1deb12f21"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/microsoft-teams-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/microsoft-teams-notifier",
+            "version": "5.3",
+            "manifest": {
+                "env": {
+                    "#1": "MICROSOFT_TEAMS_DSN=microsoftteams://default/HOSTPATH"
+                }
+            },
+            "files": [],
+            "origin": "symfony/microsoft-teams-notifier:5.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "locks": {
+        "symfony/slack-notifier": {
+            "version": "5.1",
+            "recipe": {
+                "repo": "5.1",
+                "branch": "master",
+                "version": "5.1",
+                "ref": "adaf0c2b191293ed376d13d419e1183c2b2dc10c"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/slack-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/slack-notifier",
+            "version": "5.1",
+            "manifest": {
+                "env": {
+                    "#1": "See https://api.slack.com/messaging/webhooks",
+                    "#2": "SLACK_DSN=slack://default/ID"
+                }
+            },
+            "files": [],
+            "origin": "symfony/slack-notifier:5.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

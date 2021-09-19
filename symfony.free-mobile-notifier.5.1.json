@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "symfony/free-mobile-notifier": {
+            "version": "5.1",
+            "recipe": {
+                "repo": "5.1",
+                "branch": "master",
+                "version": "5.1",
+                "ref": "448003c0471b88be050d6d6970bab5c9b78a63b8"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/free-mobile-notifier": {
+            "repository": "github.com/symfony/recipes",
+            "package": "symfony/free-mobile-notifier",
+            "version": "5.1",
+            "manifest": {
+                "env": {
+                    "#1": "FREE_MOBILE_DSN=freemobile://default?phone=PHONE"
+                }
+            },
+            "files": [],
+            "origin": "symfony/free-mobile-notifier:5.1@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

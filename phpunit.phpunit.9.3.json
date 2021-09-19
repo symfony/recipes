@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "phpunit/phpunit": {
+            "version": "9.3",
+            "recipe": {
+                "repo": "9.3",
+                "branch": "master",
+                "version": "9.3",
+                "ref": "a6249a6c4392e9169b87abf93225f7f9f59025e6"
+            }
+        }
+    },
+    "manifests": {
+        "phpunit/phpunit": {
+            "repository": "github.com/symfony/recipes",
+            "package": "phpunit/phpunit",
+            "version": "9.3",
+            "manifest": {
+                "copy-from-recipe": {
+                    ".env.test": ".env.test",
+                    "phpunit.xml.dist": "phpunit.xml.dist",
+                    "tests/": "tests/"
+                },
+                "gitignore": [
+                    "/phpunit.xml",
+                    ".phpunit.result.cache"
+                ]
+            },
+            "files": {
+                ".env.test": {
+                    "contents": "# define your env variables for the test env here\nKERNEL_CLASS='App\\Kernel'\nAPP_SECRET='$ecretf0rt3st'\nSYMFONY_DEPRECATIONS_HELPER=999999\nPANTHER_APP_ENV=panther\nPANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "phpunit.xml.dist": {
+                    "contents": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"\n         backupGlobals=\"false\"\n         colors=\"true\"\n         bootstrap=\"tests/bootstrap.php\"\n         convertDeprecationsToExceptions=\"false\"\n>\n    <php>\n        <ini name=\"display_errors\" value=\"1\" />\n        <ini name=\"error_reporting\" value=\"-1\" />\n        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />\n        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />\n        <server name=\"SYMFONY_PHPUNIT_REMOVE\" value=\"\" />\n        <server name=\"SYMFONY_PHPUNIT_VERSION\" value=\"9.5\" />\n    </php>\n\n    <testsuites>\n        <testsuite name=\"Project Test Suite\">\n            <directory>tests</directory>\n        </testsuite>\n    </testsuites>\n\n    <coverage processUncoveredFiles=\"true\">\n        <include>\n            <directory suffix=\".php\">src</directory>\n        </include>\n    </coverage>\n\n    <listeners>\n        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />\n    </listeners>\n\n    <!-- Run `composer require symfony/panther` before enabling this extension -->\n    <!--\n    <extensions>\n        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />\n    </extensions>\n    -->\n</phpunit>\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "tests/bootstrap.php": {
+                    "contents": "<?php\n\nuse Symfony\\Component\\Dotenv\\Dotenv;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {\n    require dirname(__DIR__).'/config/bootstrap.php';\n} elseif (method_exists(Dotenv::class, 'bootEnv')) {\n    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "phpunit/phpunit:9.3@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}

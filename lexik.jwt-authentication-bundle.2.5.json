@@ -1,0 +1,52 @@
+{
+    "locks": {
+        "lexik/jwt-authentication-bundle": {
+            "version": "2.5",
+            "recipe": {
+                "repo": "2.5",
+                "branch": "master",
+                "version": "2.5",
+                "ref": "5b2157bcd5778166a5696e42f552ad36529a07a6"
+            }
+        }
+    },
+    "manifests": {
+        "lexik/jwt-authentication-bundle": {
+            "repository": "github.com/symfony/recipes",
+            "package": "lexik/jwt-authentication-bundle",
+            "version": "2.5",
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "aliases": [
+                    "jwt",
+                    "jwt-auth"
+                ],
+                "env": {
+                    "JWT_SECRET_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
+                    "JWT_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
+                    "JWT_PASSPHRASE": "%generate(secret)%"
+                },
+                "gitignore": [
+                    "/%CONFIG_DIR%/jwt/*.pem"
+                ]
+            },
+            "files": {
+                "config/packages/lexik_jwt_authentication.yaml": {
+                    "contents": "lexik_jwt_authentication:\n    secret_key: '%env(resolve:JWT_SECRET_KEY)%'\n    public_key: '%env(resolve:JWT_PUBLIC_KEY)%'\n    pass_phrase: '%env(JWT_PASSPHRASE)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "lexik/jwt-authentication-bundle:2.5@github.com/symfony/recipes:master",
+            "not_installable": false,
+            "is_contrib": false
+        }
+    }
+}
