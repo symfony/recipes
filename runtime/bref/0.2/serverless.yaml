@@ -1,0 +1,50 @@
+# Read the documentation at https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+service: my-symfony-app
+configValidationMode: error
+
+provider:
+    name: aws
+    # The AWS region in which to deploy (us-east-1 is the default)
+    region: us-east-1
+    # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
+    stage: dev
+    runtime: provided.al2
+    environment:
+        # Symfony environment variables
+        APP_ENV: prod
+        APP_RUNTIME: Runtime\Bref\Runtime
+        BREF_LOOP_MAX: 1 # Increase to keep the Lambda process alive between requests
+
+plugins:
+    - ./vendor/bref/bref
+
+functions:
+    # This function runs the Symfony website/API
+    web:
+        handler: public/index.php
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        layers:
+            - ${bref:layer.php-80}
+        events:
+            - httpApi: '*'
+
+    # This function let us run console commands in Lambda
+    console:
+        handler: bin/console
+        timeout: 120 # in seconds
+        layers:
+            - ${bref:layer.php-80}
+
+package:
+    patterns:
+        # Excluded files and folders for deployment
+        - '!assets/**'
+        - '!node_modules/**'
+        - '!public/build/**'
+        - '!tests/**'
+        - '!var/**'
+        # If you want to include files and folders that are part of excluded folders,
+        # add them at the end
+        - 'var/cache/prod/**'
+        - 'public/build/entrypoints.json'
+        - 'public/build/manifest.json'

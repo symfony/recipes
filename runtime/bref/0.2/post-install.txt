@@ -1,0 +1,4 @@
+  * <fg=blue>Read</> the full documentation to properly configure your
+    Symfony application at <comment>https://bref.sh/docs/frameworks/symfony.html</>
+
+  * Bref documentation: <comment>https://bref.sh/docs/</>

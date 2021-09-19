@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# Keep this file in the application's root or install bref/extra-php-extensions.
+# See https://github.com/php-runtime/bref
+#
+
+# Fail on error
+set -e
+
+LAMBDA_ARGV=(${_HANDLER//:/ })
+
+while true
+do
+    # We redirect stderr to stdout so that everything
+    # written on the output ends up in Cloudwatch automatically
+    /opt/bin/php "${LAMBDA_ARGV[0]}" 2>&1
+done
