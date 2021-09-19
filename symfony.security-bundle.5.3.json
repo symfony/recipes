@@ -6,7 +6,7 @@
                 "repo": "5.3",
                 "branch": "master",
                 "version": "5.3",
-                "ref": "227eba5e0c7e8fc4beda3537c3d81dc23ba08182"
+                "ref": "9c4fcf79873f7400c885b90935f7163233615d6f"
             }
         }
     },
@@ -30,7 +30,7 @@
             },
             "files": {
                 "config/packages/security.yaml": {
-                    "contents": "security:\n    # https://symfony.com/doc/current/security/experimental_authenticators.html\n    enable_authenticator_manager: true\n    # https://symfony.com/doc/current/security.html#c-hashing-passwords\n    password_hashers:\n        Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface: 'auto'\n    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers\n    providers:\n        users_in_memory: { memory: null }\n    firewalls:\n        dev:\n            pattern: ^/(_(profiler|wdt)|css|images|js)/\n            security: false\n        main:\n            lazy: true\n            provider: users_in_memory\n\n            # activate different ways to authenticate\n            # https://symfony.com/doc/current/security.html#firewalls-authentication\n\n            # https://symfony.com/doc/current/security/impersonating_user.html\n            # switch_user: true\n\n    # Easy way to control access for large sections of your site\n    # Note: Only the *first* access control that matches will be used\n    access_control:\n        # - { path: ^/admin, roles: ROLE_ADMIN }\n        # - { path: ^/profile, roles: ROLE_USER }\n",
+                    "contents": "security:\n    # https://symfony.com/doc/current/security/authenticator_manager.html\n    enable_authenticator_manager: true\n    # https://symfony.com/doc/current/security.html#c-hashing-passwords\n    password_hashers:\n        Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface: 'auto'\n    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers\n    providers:\n        users_in_memory: { memory: null }\n    firewalls:\n        dev:\n            pattern: ^/(_(profiler|wdt)|css|images|js)/\n            security: false\n        main:\n            lazy: true\n            provider: users_in_memory\n\n            # activate different ways to authenticate\n            # https://symfony.com/doc/current/security.html#firewalls-authentication\n\n            # https://symfony.com/doc/current/security/impersonating_user.html\n            # switch_user: true\n\n    # Easy way to control access for large sections of your site\n    # Note: Only the *first* access control that matches will be used\n    access_control:\n        # - { path: ^/admin, roles: ROLE_ADMIN }\n        # - { path: ^/profile, roles: ROLE_USER }\n",
                     "executable": false,
                     "encoding": ""
                 }
