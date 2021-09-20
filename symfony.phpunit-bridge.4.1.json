@@ -30,7 +30,10 @@
                 "aliases": [
                     "simple-phpunit"
                 ],
-                "post-install-output": "  * <fg=blue>Write</> test cases in the <comment>tests/</> folder\n  * <fg=blue>Run</> <comment>php bin/phpunit</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Write</> test cases in the <comment>tests/</> folder",
+                    "  * <fg=blue>Run</> <comment>php bin/phpunit</>"
+                ]
             },
             "files": {
                 ".env.test": {

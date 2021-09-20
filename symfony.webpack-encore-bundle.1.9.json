@@ -39,7 +39,13 @@
                     "npm-debug.log",
                     "yarn-error.log"
                 ],
-                "post-install-output": "  * Install Yarn and run <fg=green>yarn install</>\n\n  * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</>\n\n  * Start the development server: <fg=green>yarn encore dev-server</>\n"
+                "post-install-output": [
+                    "  * Install Yarn and run <fg=green>yarn install</>",
+                    "",
+                    "  * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</>",
+                    "",
+                    "  * Start the development server: <fg=green>yarn encore dev-server</>"
+                ]
             },
             "files": {
                 "config/packages/webpack_encore.yaml": {

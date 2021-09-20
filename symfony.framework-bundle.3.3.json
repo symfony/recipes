@@ -44,7 +44,15 @@
                     "/%VAR_DIR%/",
                     "/vendor/"
                 ],
-                "post-install-output": "  * <fg=blue>Run</> your application:\n    1. Go to the project directory\n    2. Create your code repository with the <comment>git init</comment> command\n    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server,\n       or run <comment>composer require server --dev</> for a minimalist one\n\n  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Go to the project directory",
+                    "    2. Create your code repository with the <comment>git init</comment> command",
+                    "    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server,",
+                    "       or run <comment>composer require server --dev</> for a minimalist one",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                ]
             },
             "files": {
                 "public/index.php": {

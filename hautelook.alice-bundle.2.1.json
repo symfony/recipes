@@ -29,7 +29,10 @@
                     "config/": "%CONFIG_DIR%/",
                     "fixtures/": "fixtures/"
                 },
-                "post-install-output": "  * <fg=blue>Write</> fixtures files in the <comment>fixtures/</> folder\n  * <fg=blue>Run</> <comment>php bin/console hautelook:fixtures:load</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Write</> fixtures files in the <comment>fixtures/</> folder",
+                    "  * <fg=blue>Run</> <comment>php bin/console hautelook:fixtures:load</>"
+                ]
             },
             "files": {
                 "config/packages/dev/hautelook_alice.yaml": {
