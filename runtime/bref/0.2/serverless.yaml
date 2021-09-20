@@ -14,7 +14,7 @@ provider:
         APP_ENV: prod
         APP_RUNTIME: Runtime\Bref\Runtime
         BREF_LOOP_MAX: 1 # Increase to keep the Lambda process alive between requests
-        # SYMFONY_DECRYPTION_SECRET: ${ssm:/stripe-notifications/prod-decrypt-private-key}
+        # SYMFONY_DECRYPTION_SECRET: ${ssm:/my-symfony-app/prod-decrypt-private-key}
 
 plugins:
     - ./vendor/bref/bref
