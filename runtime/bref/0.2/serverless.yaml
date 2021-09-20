@@ -1,6 +1,7 @@
 # Read the documentation at https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
 service: my-symfony-app
 configValidationMode: error
+useDotenv: true
 
 provider:
     name: aws
@@ -49,4 +50,3 @@ package:
         - 'var/cache/prod/**'
         - 'public/build/entrypoints.json'
         - 'public/build/manifest.json'
-        - '.env*'
