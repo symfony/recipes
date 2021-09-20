@@ -39,7 +39,8 @@
                 },
                 "aliases": [
                     "blackfire"
-                ]
+                ],
+                "post-install-output": "  * Blackfire Agent has been configured in your <comment>docker-compose.override.yaml</> file\n\n  * Configure your Blackfire <comment>SERVER</> credentials in <info>.env.local</> (get them at https://blackfire.io/my/settings/credentials)\n\n  * Install the <comment>PHP probe</>: https://blackfire.io/docs/up-and-running/installation\n\n  * <fg=blue>Read</> the documentation at <comment>https://blackfire.io/docs</>\n"
             },
             "files": {
                 ".blackfire.yaml": {

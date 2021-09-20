@@ -42,7 +42,8 @@
                     "/%PUBLIC_DIR%/bundles/",
                     "/%VAR_DIR%/",
                     "/vendor/"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Run</> your application:\n    1. Go to the project directory\n    2. Create your code repository with the <comment>git init</comment> command\n    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server\n\n  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>\n"
             },
             "files": {
                 "public/index.php": {

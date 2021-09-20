@@ -29,7 +29,8 @@
                     "#RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz; \\",
                     "#\ttar -zxf geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/bin; \\",
                     "#\trm geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz"
-                ]
+                ],
+                "post-install-output": "  * Install <fg=green>ChromeDriver</> or <fg=green>geckodriver</> with \n    the package manager of your Operating System.\n    \n    Alternatively, use Browser Driver Installer:\n\n    <fg=green>composer require --dev dbrekelmans/bdi</>\n    <fg=green>vendor/bin/bdi detect drivers</>\n\n    This step is not necessary when using Docker.\n\n  * To use Panther with PHPUnit,\n    uncomment the snippet registering the Panther extension in <fg=green>phpunit.xml.dist</>\n"
             },
             "files": [],
             "origin": "symfony/panther:1.0@github.com/symfony/recipes:master",

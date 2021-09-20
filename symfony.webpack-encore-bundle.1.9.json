@@ -38,7 +38,8 @@
                     "/%PUBLIC_DIR%/build/",
                     "npm-debug.log",
                     "yarn-error.log"
-                ]
+                ],
+                "post-install-output": "  * Install Yarn and run <fg=green>yarn install</>\n\n  * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</>\n\n  * Start the development server: <fg=green>yarn encore dev-server</>\n"
             },
             "files": {
                 "config/packages/webpack_encore.yaml": {

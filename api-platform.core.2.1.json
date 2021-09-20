@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "  * Your API is almost ready:\n    1. Create your first API resource in <info>src/Entity</info>;\n    2. Go to <info>/api</info> to browse your API\n\n  * To enable the GraphQL support, run <comment>composer require webonyx/graphql-php</>,\n    then browse <info>/api/graphql</info>.\n\n  * <fg=blue>Read</> the documentation at <comment>https://api-platform.com/docs</>\n"
             },
             "files": {
                 "src/Entity/.gitignore": {

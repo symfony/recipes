@@ -30,7 +30,8 @@
                 ],
                 "conflict": {
                     "symfony/framework-bundle": "<4.3"
-                }
+                },
+                "post-install-output": "  * You're ready to use the Messenger component. You can define your own message buses\n    or start using the default one right now by injecting the <info>message_bus</info> service\n    or type-hinting <info>Symfony\\Component\\Messenger\\MessageBusInterface</info> in your code.\n\n  * To send messages to a transport and handle them asynchronously:\n\n    1. Uncomment the <info>MESSENGER_TRANSPORT_DSN</> env var in <comment>.env</>\n       and <info>framework.messenger.transports.async</> in <comment>config/packages/messenger.yaml</>;\n    2. Route your message classes to the async transport in <comment>config/packages/messenger.yaml</>.\n\n  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/current/messenger.html</>\n"
             },
             "files": {
                 "config/packages/messenger.yaml": {

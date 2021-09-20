@@ -24,7 +24,8 @@
                         "dev",
                         "test"
                     ]
-                }
+                },
+                "post-install-output": "  * You're ready to use zenstruck/foundry. Create your first factory with\n    <info>bin/console make:factory</>.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/foundry#foundry</>\n"
             },
             "files": {
                 "config/packages/dev/zenstruck_foundry.yaml": {

@@ -65,7 +65,8 @@
                             "    - \"5432\""
                         ]
                     }
-                }
+                },
+                "post-install-output": "  * Modify your DATABASE_URL config in <fg=green>.env</>\n\n  * Configure the <fg=green>driver</> (postgresql) and\n    <fg=green>server_version</> (13) in <fg=green>config/packages/doctrine.yaml</>\n"
             },
             "files": {
                 "src/Repository/.gitignore": {

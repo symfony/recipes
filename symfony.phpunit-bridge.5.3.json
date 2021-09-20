@@ -28,7 +28,8 @@
                 ],
                 "aliases": [
                     "simple-phpunit"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Write</> test cases in the <comment>tests/</> folder\n  * Use MakerBundle's <comment>make:test</> command as a shortcut!\n  * <fg=blue>Run</> the tests with <comment>php bin/phpunit</>\n"
             },
             "files": {
                 ".env.test": {

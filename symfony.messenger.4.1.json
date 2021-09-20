@@ -27,7 +27,8 @@
                 ],
                 "conflict": {
                     "symfony/framework-bundle": "<4.1"
-                }
+                },
+                "post-install-output": "  * You're ready to use the Messenger component. You can define your own message buses\n    or start using the default one right now by injecting the <info>messenger.bus.default</info> service\n    or typehinting <info>Symfony\\Component\\Messenger\\MessageBusInterface</info> in your code.\n\n  * If you need to send messages to your broker, you can benefit from the built-in\n    AMQP transport by:\n\n    1. Installing the AMQP pack by running <info>composer require amqp</>;\n    2. Uncommenting the <comment>MESSENGER_TRANSPORT_DSN</> env var\n       and <comment>framework.messenger.transports.amqp</> config;\n    3. Routing your messages to the amqp sender.\n\n  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/messenger.html</>\n"
             },
             "files": {
                 "config/packages/messenger.yaml": {
