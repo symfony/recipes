@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/workflow": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "3b2f8ca32a07fcb00f899649053943fa3d8bbfb6"
-            }
-        }
-    },
     "manifests": {
         "symfony/workflow": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/workflow",
-            "version": "3.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,15 @@
             },
             "files": {
                 "config/packages/workflow.yaml": {
-                    "contents": "framework:\n    workflows: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    workflows: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/workflow:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "3b2f8ca32a07fcb00f899649053943fa3d8bbfb6"
         }
     }
 }

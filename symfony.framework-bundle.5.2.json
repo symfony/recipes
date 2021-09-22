@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/framework-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "7eb218d19263e5e4a0f9d1d1502d8656098ec857"
-            }
-        }
-    },
     "manifests": {
         "symfony/framework-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/framework-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
@@ -54,53 +40,200 @@
             },
             "files": {
                 "public/index.php": {
-                    "contents": "<?php\n\nuse App\\Kernel;\nuse Symfony\\Component\\Dotenv\\Dotenv;\nuse Symfony\\Component\\ErrorHandler\\Debug;\nuse Symfony\\Component\\HttpFoundation\\Request;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\n(new Dotenv())->bootEnv(dirname(__DIR__).'/.env');\n\nif ($_SERVER['APP_DEBUG']) {\n    umask(0000);\n\n    Debug::enable();\n}\n\n$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);\n$request = Request::createFromGlobals();\n$response = $kernel->handle($request);\n$response->send();\n$kernel->terminate($request, $response);\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "use Symfony\\Component\\ErrorHandler\\Debug;",
+                        "use Symfony\\Component\\HttpFoundation\\Request;",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "(new Dotenv())->bootEnv(dirname(__DIR__).'/.env');",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "",
+                        "    Debug::enable();",
+                        "}",
+                        "",
+                        "$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);",
+                        "$request = Request::createFromGlobals();",
+                        "$response = $kernel->handle($request);",
+                        "$response->send();",
+                        "$kernel->terminate($request, $response);",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Controller/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Kernel.php": {
-                    "contents": "<?php\n\nnamespace App;\n\nuse Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;\nuse Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;\nuse Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;\nuse Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;\n\nclass Kernel extends BaseKernel\n{\n    use MicroKernelTrait;\n\n    protected function configureContainer(ContainerConfigurator $container): void\n    {\n        $container->import('../config/{packages}/*.yaml');\n        $container->import('../config/{packages}/'.$this->environment.'/*.yaml');\n\n        if (is_file(\\dirname(__DIR__).'/config/services.yaml')) {\n            $container->import('../config/services.yaml');\n            $container->import('../config/{services}_'.$this->environment.'.yaml');\n        } elseif (is_file($path = \\dirname(__DIR__).'/config/services.php')) {\n            (require $path)($container->withPath($path), $this);\n        }\n    }\n\n    protected function configureRoutes(RoutingConfigurator $routes): void\n    {\n        $routes->import('../config/{routes}/'.$this->environment.'/*.yaml');\n        $routes->import('../config/{routes}/*.yaml');\n\n        if (is_file(\\dirname(__DIR__).'/config/routes.yaml')) {\n            $routes->import('../config/routes.yaml');\n        } elseif (is_file($path = \\dirname(__DIR__).'/config/routes.php')) {\n            (require $path)($routes->withPath($path), $this);\n        }\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
+                        "",
+                        "    protected function configureContainer(ContainerConfigurator $container): void",
+                        "    {",
+                        "        $container->import('../config/{packages}/*.yaml');",
+                        "        $container->import('../config/{packages}/'.$this->environment.'/*.yaml');",
+                        "",
+                        "        if (is_file(\\dirname(__DIR__).'/config/services.yaml')) {",
+                        "            $container->import('../config/services.yaml');",
+                        "            $container->import('../config/{services}_'.$this->environment.'.yaml');",
+                        "        } elseif (is_file($path = \\dirname(__DIR__).'/config/services.php')) {",
+                        "            (require $path)($container->withPath($path), $this);",
+                        "        }",
+                        "    }",
+                        "",
+                        "    protected function configureRoutes(RoutingConfigurator $routes): void",
+                        "    {",
+                        "        $routes->import('../config/{routes}/'.$this->environment.'/*.yaml');",
+                        "        $routes->import('../config/{routes}/*.yaml');",
+                        "",
+                        "        if (is_file(\\dirname(__DIR__).'/config/routes.yaml')) {",
+                        "            $routes->import('../config/routes.yaml');",
+                        "        } elseif (is_file($path = \\dirname(__DIR__).'/config/routes.php')) {",
+                        "            (require $path)($routes->withPath($path), $this);",
+                        "        }",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/dev/framework.yaml": {
-                    "contents": "_errors:\n    resource: '@FrameworkBundle/Resources/config/routing/errors.xml'\n    prefix: /_error\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/preload.php": {
-                    "contents": "<?php\n\nif (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {\n    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {",
+                        "    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/services.yaml": {
-                    "contents": "# This file is the entry point to configure your own services.\n# Files in the packages/ subdirectory configure your dependencies.\n\n# Put parameters here that don't need to change on each machine where the app is deployed\n# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration\nparameters:\n\nservices:\n    # default configuration for services in *this* file\n    _defaults:\n        autowire: true      # Automatically injects dependencies in your services.\n        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.\n\n    # makes classes in src/ available to be used as services\n    # this creates a service per class whose id is the fully-qualified class name\n    App\\:\n        resource: '../src/'\n        exclude:\n            - '../src/DependencyInjection/'\n            - '../src/Entity/'\n            - '../src/Kernel.php'\n            - '../src/Tests/'\n\n    # controllers are imported separately to make sure services can be injected\n    # as action arguments even if you don't extend any base controller class\n    App\\Controller\\:\n        resource: '../src/Controller/'\n        tags: ['controller.service_arguments']\n\n    # add more service definitions when explicit configuration is needed\n    # please note that last definitions always *replace* previous ones\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        autowire: true      # Automatically injects dependencies in your services.",
+                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "        exclude:",
+                        "            - '../src/DependencyInjection/'",
+                        "            - '../src/Entity/'",
+                        "            - '../src/Kernel.php'",
+                        "            - '../src/Tests/'",
+                        "",
+                        "    # controllers are imported separately to make sure services can be injected",
+                        "    # as action arguments even if you don't extend any base controller class",
+                        "    App\\Controller\\:",
+                        "        resource: '../src/Controller/'",
+                        "        tags: ['controller.service_arguments']",
+                        "",
+                        "    # add more service definitions when explicit configuration is needed",
+                        "    # please note that last definitions always *replace* previous ones",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/framework.yaml": {
-                    "contents": "# see https://symfony.com/doc/current/reference/configuration/framework.html\nframework:\n    secret: '%env(APP_SECRET)%'\n    #csrf_protection: true\n    #http_method_override: true\n\n    # Enables session support. Note that the session will ONLY be started if you read or write from it.\n    # Remove or comment this section to explicitly disable session support.\n    session:\n        handler_id: null\n        cookie_secure: auto\n        cookie_samesite: lax\n\n    #esi: true\n    #fragments: true\n    php_errors:\n        log: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# see https://symfony.com/doc/current/reference/configuration/framework.html",
+                        "framework:",
+                        "    secret: '%env(APP_SECRET)%'",
+                        "    #csrf_protection: true",
+                        "    #http_method_override: true",
+                        "",
+                        "    # Enables session support. Note that the session will ONLY be started if you read or write from it.",
+                        "    # Remove or comment this section to explicitly disable session support.",
+                        "    session:",
+                        "        handler_id: null",
+                        "        cookie_secure: auto",
+                        "        cookie_samesite: lax",
+                        "",
+                        "    #esi: true",
+                        "    #fragments: true",
+                        "    php_errors:",
+                        "        log: true",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/cache.yaml": {
-                    "contents": "framework:\n    cache:\n        # Unique name of your app: used to compute stable namespaces for cache keys.\n        #prefix_seed: your_vendor_name/app_name\n\n        # The \"app\" cache stores to the filesystem by default.\n        # The data in this cache should persist between deploys.\n        # Other options include:\n\n        # Redis\n        #app: cache.adapter.redis\n        #default_redis_provider: redis://localhost\n\n        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)\n        #app: cache.adapter.apcu\n\n        # Namespaced pools use the above \"app\" backend by default\n        #pools:\n            #my.dedicated.cache: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    cache:",
+                        "        # Unique name of your app: used to compute stable namespaces for cache keys.",
+                        "        #prefix_seed: your_vendor_name/app_name",
+                        "",
+                        "        # The \"app\" cache stores to the filesystem by default.",
+                        "        # The data in this cache should persist between deploys.",
+                        "        # Other options include:",
+                        "",
+                        "        # Redis",
+                        "        #app: cache.adapter.redis",
+                        "        #default_redis_provider: redis://localhost",
+                        "",
+                        "        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
+                        "        #app: cache.adapter.apcu",
+                        "",
+                        "        # Namespaced pools use the above \"app\" backend by default",
+                        "        #pools:",
+                        "            #my.dedicated.cache: null",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/framework.yaml": {
-                    "contents": "framework:\n    test: true\n    session:\n        storage_id: session.storage.mock_file\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    test: true",
+                        "    session:",
+                        "        storage_id: session.storage.mock_file",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/framework-bundle:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "7eb218d19263e5e4a0f9d1d1502d8656098ec857"
         }
     }
 }

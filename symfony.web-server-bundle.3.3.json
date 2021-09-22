@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/web-server-bundle": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
-            }
-        }
-    },
     "manifests": {
         "symfony/web-server-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/web-server-bundle",
-            "version": "3.3",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": [
@@ -30,8 +16,7 @@
                 ]
             },
             "files": [],
-            "origin": "symfony/web-server-bundle:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
         }
     }
 }

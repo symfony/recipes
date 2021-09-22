@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/mailjet-mailer": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "037c3256baa3334fd4cc3092a63209ae523696ff"
-            }
-        }
-    },
     "manifests": {
         "symfony/mailjet-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mailjet-mailer",
-            "version": "5.2",
             "manifest": {
                 "env": {
                     "#1": "MAILER_DSN=mailjet+api://PUBLIC_KEY:PRIVATE_KEY@api.mailjet.com",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/mailjet-mailer:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "037c3256baa3334fd4cc3092a63209ae523696ff"
         }
     }
 }

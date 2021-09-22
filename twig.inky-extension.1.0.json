@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "twig/inky-extension": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "98aa25792ca5b18aebbac6644a150ac90867408d"
-            }
-        }
-    },
     "manifests": {
         "twig/inky-extension": {
-            "repository": "github.com/symfony/recipes",
-            "package": "twig/inky-extension",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Twig\\Inky\\Bundle\\TwigInkyBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "twig/inky-extension:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "98aa25792ca5b18aebbac6644a150ac90867408d"
         }
     }
 }

@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/validator": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "0d6115cadab05af210a14db75560e55744a4cb3c"
-            }
-        }
-    },
     "manifests": {
         "symfony/validator": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/validator",
-            "version": "3.3",
             "manifest": {
                 "aliases": [
                     "validation"
                 ]
             },
             "files": [],
-            "origin": "symfony/validator:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "0d6115cadab05af210a14db75560e55744a4cb3c"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/twig-bundle": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "7e5381cd17e0e27d1b432af9230b65060b75ac4c"
-            }
-        }
-    },
     "manifests": {
         "symfony/twig-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/twig-bundle",
-            "version": "3.3",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
@@ -28,28 +14,59 @@
             },
             "files": {
                 "templates/base.html.twig": {
-                    "contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>{% block title %}Welcome!{% endblock %}</title>\n        {# Run `composer require symfony/webpack-encore-bundle`\n           and uncomment the following Encore helpers to start using Symfony UX #}\n        {% block stylesheets %}\n            {#{{ encore_entry_link_tags('app') }}#}\n        {% endblock %}\n\n        {% block javascripts %}\n            {#{{ encore_entry_script_tags('app') }}#}\n        {% endblock %}\n    </head>\n    <body>\n        {% block body %}{% endblock %}\n    </body>\n</html>\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<!DOCTYPE html>",
+                        "<html>",
+                        "    <head>",
+                        "        <meta charset=\"UTF-8\">",
+                        "        <title>{% block title %}Welcome!{% endblock %}</title>",
+                        "        {# Run `composer require symfony/webpack-encore-bundle`",
+                        "           and uncomment the following Encore helpers to start using Symfony UX #}",
+                        "        {% block stylesheets %}",
+                        "            {#{{ encore_entry_link_tags('app') }}#}",
+                        "        {% endblock %}",
+                        "",
+                        "        {% block javascripts %}",
+                        "            {#{{ encore_entry_script_tags('app') }}#}",
+                        "        {% endblock %}",
+                        "    </head>",
+                        "    <body>",
+                        "        {% block body %}{% endblock %}",
+                        "    </body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/dev/twig.yaml": {
-                    "contents": "_errors:\n    resource: '@TwigBundle/Resources/config/routing/errors.xml'\n    prefix: /_error\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/twig.yaml": {
-                    "contents": "twig:\n    default_path: '%kernel.project_dir%/templates'\n    debug: '%kernel.debug%'\n    strict_variables: '%kernel.debug%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "twig:",
+                        "    default_path: '%kernel.project_dir%/templates'",
+                        "    debug: '%kernel.debug%'",
+                        "    strict_variables: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/twig.yaml": {
-                    "contents": "twig:\n    strict_variables: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "twig:",
+                        "    strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/twig-bundle:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "7e5381cd17e0e27d1b432af9230b65060b75ac4c"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/phpunit-bridge": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "97cb3dc7b0f39c7cfc4b7553504c9d7b7795de96"
-            }
-        }
-    },
     "manifests": {
         "symfony/phpunit-bridge": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/phpunit-bridge",
-            "version": "5.3",
             "manifest": {
                 "copy-from-recipe": {
                     ".env.test": ".env.test",
@@ -37,28 +23,109 @@
             },
             "files": {
                 ".env.test": {
-                    "contents": "# define your env variables for the test env here\nKERNEL_CLASS='App\\Kernel'\nAPP_SECRET='$ecretf0rt3st'\nSYMFONY_DEPRECATIONS_HELPER=999999\nPANTHER_APP_ENV=panther\nPANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# define your env variables for the test env here",
+                        "KERNEL_CLASS='App\\Kernel'",
+                        "APP_SECRET='$ecretf0rt3st'",
+                        "SYMFONY_DEPRECATIONS_HELPER=999999",
+                        "PANTHER_APP_ENV=panther",
+                        "PANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "bin/phpunit": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nif (!ini_get('date.timezone')) {\n    ini_set('date.timezone', 'UTC');\n}\n\nif (is_file(dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit')) {\n    define('PHPUNIT_COMPOSER_INSTALL', dirname(__DIR__).'/vendor/autoload.php');\n    require PHPUNIT_COMPOSER_INSTALL;\n    PHPUnit\\TextUI\\Command::main();\n} else {\n    if (!is_file(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php')) {\n        echo \"Unable to find the `simple-phpunit.php` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";\n        exit(1);\n    }\n\n    require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';\n}\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "if (!ini_get('date.timezone')) {",
+                        "    ini_set('date.timezone', 'UTC');",
+                        "}",
+                        "",
+                        "if (is_file(dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit')) {",
+                        "    define('PHPUNIT_COMPOSER_INSTALL', dirname(__DIR__).'/vendor/autoload.php');",
+                        "    require PHPUNIT_COMPOSER_INSTALL;",
+                        "    PHPUnit\\TextUI\\Command::main();",
+                        "} else {",
+                        "    if (!is_file(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php')) {",
+                        "        echo \"Unable to find the `simple-phpunit.php` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";",
+                        "        exit(1);",
+                        "    }",
+                        "",
+                        "    require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';",
+                        "}",
+                        ""
+                    ],
+                    "executable": true
                 },
                 "phpunit.xml.dist": {
-                    "contents": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"\n         backupGlobals=\"false\"\n         colors=\"true\"\n         bootstrap=\"tests/bootstrap.php\"\n         convertDeprecationsToExceptions=\"false\"\n>\n    <php>\n        <ini name=\"display_errors\" value=\"1\" />\n        <ini name=\"error_reporting\" value=\"-1\" />\n        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />\n        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />\n        <server name=\"SYMFONY_PHPUNIT_REMOVE\" value=\"\" />\n        <server name=\"SYMFONY_PHPUNIT_VERSION\" value=\"9.5\" />\n    </php>\n\n    <testsuites>\n        <testsuite name=\"Project Test Suite\">\n            <directory>tests</directory>\n        </testsuite>\n    </testsuites>\n\n    <coverage processUncoveredFiles=\"true\">\n        <include>\n            <directory suffix=\".php\">src</directory>\n        </include>\n    </coverage>\n\n    <listeners>\n        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />\n    </listeners>\n\n    <!-- Run `composer require symfony/panther` before enabling this extension -->\n    <!--\n    <extensions>\n        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />\n    </extensions>\n    -->\n</phpunit>\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->",
+                        "<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"",
+                        "         backupGlobals=\"false\"",
+                        "         colors=\"true\"",
+                        "         bootstrap=\"tests/bootstrap.php\"",
+                        "         convertDeprecationsToExceptions=\"false\"",
+                        ">",
+                        "    <php>",
+                        "        <ini name=\"display_errors\" value=\"1\" />",
+                        "        <ini name=\"error_reporting\" value=\"-1\" />",
+                        "        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />",
+                        "        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />",
+                        "        <server name=\"SYMFONY_PHPUNIT_REMOVE\" value=\"\" />",
+                        "        <server name=\"SYMFONY_PHPUNIT_VERSION\" value=\"9.5\" />",
+                        "    </php>",
+                        "",
+                        "    <testsuites>",
+                        "        <testsuite name=\"Project Test Suite\">",
+                        "            <directory>tests</directory>",
+                        "        </testsuite>",
+                        "    </testsuites>",
+                        "",
+                        "    <coverage processUncoveredFiles=\"true\">",
+                        "        <include>",
+                        "            <directory suffix=\".php\">src</directory>",
+                        "        </include>",
+                        "    </coverage>",
+                        "",
+                        "    <listeners>",
+                        "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
+                        "    </listeners>",
+                        "",
+                        "    <!-- Run `composer require symfony/panther` before enabling this extension -->",
+                        "    <!--",
+                        "    <extensions>",
+                        "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+                        "    </extensions>",
+                        "    -->",
+                        "</phpunit>",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/bootstrap.php": {
-                    "contents": "<?php\n\nuse Symfony\\Component\\Dotenv\\Dotenv;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {\n    require dirname(__DIR__).'/config/bootstrap.php';\n} elseif (method_exists(Dotenv::class, 'bootEnv')) {\n    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {",
+                        "    require dirname(__DIR__).'/config/bootstrap.php';",
+                        "} elseif (method_exists(Dotenv::class, 'bootEnv')) {",
+                        "    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/phpunit-bridge:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "97cb3dc7b0f39c7cfc4b7553504c9d7b7795de96"
         }
     }
 }

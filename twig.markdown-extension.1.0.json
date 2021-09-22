@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "twig/markdown-extension": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "709b663eeb863ec3011db883d795c1122d85be85"
-            }
-        }
-    },
     "manifests": {
         "twig/markdown-extension": {
-            "repository": "github.com/symfony/recipes",
-            "package": "twig/markdown-extension",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Twig\\Markdown\\Bundle\\TwigMarkdownBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "twig/markdown-extension:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "709b663eeb863ec3011db883d795c1122d85be85"
         }
     }
 }

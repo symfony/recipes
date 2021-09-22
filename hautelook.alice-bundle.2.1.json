@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "hautelook/alice-bundle": {
-            "version": "2.1",
-            "recipe": {
-                "repo": "2.1",
-                "branch": "master",
-                "version": "2.1",
-                "ref": "ff94d76b2ec0c552b5d67d401f59ab8fd62f3d5f"
-            }
-        }
-    },
     "manifests": {
         "hautelook/alice-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "hautelook/alice-bundle",
-            "version": "2.1",
             "manifest": {
                 "aliases": [
                     "alice"
@@ -36,23 +22,29 @@
             },
             "files": {
                 "config/packages/dev/hautelook_alice.yaml": {
-                    "contents": "hautelook_alice:\n    fixtures_path: fixtures\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "hautelook_alice:",
+                        "    fixtures_path: fixtures",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/hautelook_alice.yaml": {
-                    "contents": "imports:\n    - { resource: ../dev/hautelook_alice.yaml }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: ../dev/hautelook_alice.yaml }",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "fixtures/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "hautelook/alice-bundle:2.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ff94d76b2ec0c552b5d67d401f59ab8fd62f3d5f"
         }
     }
 }

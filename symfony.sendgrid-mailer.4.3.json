@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/sendgrid-mailer": {
-            "version": "4.3",
-            "recipe": {
-                "repo": "4.3",
-                "branch": "master",
-                "version": "4.3",
-                "ref": "ed69bc442325accbf79e8c93e1ae88c9abe7fd12"
-            }
-        }
-    },
     "manifests": {
         "symfony/sendgrid-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/sendgrid-mailer",
-            "version": "4.3",
             "manifest": {
                 "env": {
                     "#1": "SENDGRID_KEY=",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/sendgrid-mailer:4.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ed69bc442325accbf79e8c93e1ae88c9abe7fd12"
         }
     }
 }

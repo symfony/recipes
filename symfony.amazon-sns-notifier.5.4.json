@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/amazon-sns-notifier": {
-            "version": "5.4",
-            "recipe": {
-                "repo": "5.4",
-                "branch": "master",
-                "version": "5.4",
-                "ref": "6049aca06f3e7b8481a06693792d34b0014ee6c3"
-            }
-        }
-    },
     "manifests": {
         "symfony/amazon-sns-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/amazon-sns-notifier",
-            "version": "5.4",
             "manifest": {
                 "env": {
                     "#1": "AMAZON_SNS_DSN=sns://ACCESS_KEY:SECRET_KEY@default?region=REGION"
                 }
             },
             "files": [],
-            "origin": "symfony/amazon-sns-notifier:5.4@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "6049aca06f3e7b8481a06693792d34b0014ee6c3"
         }
     }
 }

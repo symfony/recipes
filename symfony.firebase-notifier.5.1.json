@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/firebase-notifier": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "a6e63ab1ddcc32c93bc064a19084810bfa673c7b"
-            }
-        }
-    },
     "manifests": {
         "symfony/firebase-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/firebase-notifier",
-            "version": "5.1",
             "manifest": {
                 "env": {
                     "#1": "FIREBASE_DSN=firebase://TOKEN@default"
                 }
             },
             "files": [],
-            "origin": "symfony/firebase-notifier:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "a6e63ab1ddcc32c93bc064a19084810bfa673c7b"
         }
     }
 }

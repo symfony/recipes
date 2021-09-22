@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/routing": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "eb64cc2de2fa548a89fbf1446d37b391c9a9e936"
-            }
-        }
-    },
     "manifests": {
         "symfony/routing": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/routing",
-            "version": "3.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -25,18 +11,28 @@
             },
             "files": {
                 "config/routes.yaml": {
-                    "contents": "# This file is the entry point to configure your own HTTP routes.\n# Files in the routes/ subdirectory configure the routes for your dependencies.\n\n#index:\n#    path: /\n#    defaults: { _controller: 'App\\Controller\\DefaultController::index' }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# This file is the entry point to configure your own HTTP routes.",
+                        "# Files in the routes/ subdirectory configure the routes for your dependencies.",
+                        "",
+                        "#index:",
+                        "#    path: /",
+                        "#    defaults: { _controller: 'App\\Controller\\DefaultController::index' }",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/routing.yaml": {
-                    "contents": "framework:\n    router:\n        strict_requirements: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/routing:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "eb64cc2de2fa548a89fbf1446d37b391c9a9e936"
         }
     }
 }

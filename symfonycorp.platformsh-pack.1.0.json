@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfonycorp/platformsh-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "4356f8659bcbb6f67f3833fb645985822b7189d1"
-            }
-        }
-    },
     "manifests": {
         "symfonycorp/platformsh-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfonycorp/platformsh-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "platformsh"
                 ]
             },
             "files": [],
-            "origin": "symfonycorp/platformsh-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "4356f8659bcbb6f67f3833fb645985822b7189d1"
         }
     }
 }

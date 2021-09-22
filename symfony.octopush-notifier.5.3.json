@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/octopush-notifier": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "7357f64c5e5e48bf92edc02a2405de36fabdced1"
-            }
-        }
-    },
     "manifests": {
         "symfony/octopush-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/octopush-notifier",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "OCTOPUSH_DSN=octopush://USERLOGIN:APIKEY@default?from=FROM&type=TYPE"
                 }
             },
             "files": [],
-            "origin": "symfony/octopush-notifier:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "7357f64c5e5e48bf92edc02a2405de36fabdced1"
         }
     }
 }

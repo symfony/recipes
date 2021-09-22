@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/mercure-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "d625f7454ed4a398a7c11606b3cab82f77c885d3"
-            }
-        }
-    },
     "manifests": {
         "symfony/mercure-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mercure-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\MercureBundle\\MercureBundle": [
@@ -36,13 +22,18 @@
             },
             "files": {
                 "config/packages/mercure.yaml": {
-                    "contents": "mercure:\n    hubs:\n        default:\n            url: '%env(MERCURE_PUBLISH_URL)%'\n            jwt: '%env(MERCURE_JWT_TOKEN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mercure:",
+                        "    hubs:",
+                        "        default:",
+                        "            url: '%env(MERCURE_PUBLISH_URL)%'",
+                        "            jwt: '%env(MERCURE_JWT_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/mercure-bundle:0.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "d625f7454ed4a398a7c11606b3cab82f77c885d3"
         }
     }
 }

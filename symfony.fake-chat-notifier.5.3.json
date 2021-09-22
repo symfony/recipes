@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/fake-chat-notifier": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "f5eaef315896a999cefc6e2f420a89194b385785"
-            }
-        }
-    },
     "manifests": {
         "symfony/fake-chat-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/fake-chat-notifier",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "FAKE_CHAT_DSN=fakechat+email://default?to=TO&from=FROM"
                 }
             },
             "files": [],
-            "origin": "symfony/fake-chat-notifier:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "f5eaef315896a999cefc6e2f420a89194b385785"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "blackfireio/blackfire-symfony-meta": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "fcf2e044bcd90c6f2f5a6c050645e77fb3bf31c7"
-            }
-        }
-    },
     "manifests": {
         "blackfireio/blackfire-symfony-meta": {
-            "repository": "github.com/symfony/recipes",
-            "package": "blackfireio/blackfire-symfony-meta",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     ".blackfire.yaml": ".blackfire.yaml"
@@ -52,13 +38,20 @@
             },
             "files": {
                 ".blackfire.yaml": {
-                    "contents": "scenarios: |\n    #!blackfire-player\n\n    scenario\n        name \"Test homepage\"\n        visit url('/')\n            expect status_code() == 200\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "scenarios: |",
+                        "    #!blackfire-player",
+                        "",
+                        "    scenario",
+                        "        name \"Test homepage\"",
+                        "        visit url('/')",
+                        "            expect status_code() == 200",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "blackfireio/blackfire-symfony-meta:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "fcf2e044bcd90c6f2f5a6c050645e77fb3bf31c7"
         }
     }
 }

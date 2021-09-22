@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/postmark-mailer": {
-            "version": "4.4",
-            "recipe": {
-                "repo": "4.4",
-                "branch": "master",
-                "version": "4.4",
-                "ref": "84842f6791eaef80618dda244d4e3bbcbbcdf543"
-            }
-        }
-    },
     "manifests": {
         "symfony/postmark-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/postmark-mailer",
-            "version": "4.4",
             "manifest": {
                 "env": {
                     "#1": "MAILER_DSN=postmark://ID@default"
                 }
             },
             "files": [],
-            "origin": "symfony/postmark-mailer:4.4@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "84842f6791eaef80618dda244d4e3bbcbbcdf543"
         }
     }
 }

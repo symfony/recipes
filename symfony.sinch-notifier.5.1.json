@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/sinch-notifier": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "2a18995f8d7e333b46ac1c65ecbbb1254be573cd"
-            }
-        }
-    },
     "manifests": {
         "symfony/sinch-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/sinch-notifier",
-            "version": "5.1",
             "manifest": {
                 "env": {
                     "#1": "SINCH_DSN=sinch://SID:TOKEN@default?from=FROM"
                 }
             },
             "files": [],
-            "origin": "symfony/sinch-notifier:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "2a18995f8d7e333b46ac1c65ecbbb1254be573cd"
         }
     }
 }

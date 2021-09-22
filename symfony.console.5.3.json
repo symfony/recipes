@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/console": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "da0c8be8157600ad34f10ff0c9cc91232522e047"
-            }
-        }
-    },
     "manifests": {
         "symfony/console": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/console",
-            "version": "5.3",
             "manifest": {
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/"
@@ -25,13 +11,30 @@
             },
             "files": {
                 "bin/console": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nuse App\\Kernel;\nuse Symfony\\Bundle\\FrameworkBundle\\Console\\Application;\n\nif (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {\n    throw new LogicException('Symfony Runtime is missing. Try running \"composer require symfony/runtime\".');\n}\n\nrequire_once dirname(__DIR__).'/vendor/autoload_runtime.php';\n\nreturn function (array $context) {\n    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);\n\n    return new Application($kernel);\n};\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Console\\Application;",
+                        "",
+                        "if (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {",
+                        "    throw new LogicException('Symfony Runtime is missing. Try running \"composer require symfony/runtime\".');",
+                        "}",
+                        "",
+                        "require_once dirname(__DIR__).'/vendor/autoload_runtime.php';",
+                        "",
+                        "return function (array $context) {",
+                        "    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
+                        "",
+                        "    return new Application($kernel);",
+                        "};",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "symfony/console:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "da0c8be8157600ad34f10ff0c9cc91232522e047"
         }
     }
 }

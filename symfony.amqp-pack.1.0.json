@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/amqp-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b4e9fbf8a0c486a2a0782f5d078cbf0886c6d4d6"
-            }
-        }
-    },
     "manifests": {
         "symfony/amqp-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/amqp-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "amqp"
                 ]
             },
             "files": [],
-            "origin": "symfony/amqp-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "b4e9fbf8a0c486a2a0782f5d078cbf0886c6d4d6"
         }
     }
 }

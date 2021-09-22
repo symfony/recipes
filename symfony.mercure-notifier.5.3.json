@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/mercure-notifier": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "ae4620ee823a67e41f65aabec525fa52c79a8b09"
-            }
-        }
-    },
     "manifests": {
         "symfony/mercure-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mercure-notifier",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "MERCURE_DSN=mercure://default"
                 }
             },
             "files": [],
-            "origin": "symfony/mercure-notifier:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ae4620ee823a67e41f65aabec525fa52c79a8b09"
         }
     }
 }

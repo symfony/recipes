@@ -1869,8 +1869,11 @@
             ]
         }
     },
-    "git_url": "https://github.com/symfony/recipes.git",
-    "tree_template": "https://github.com/symfony/recipes/tree/{tree}/{package}/{version}",
-    "recipe_template": "https://api.github.com/repos/symfony/recipes/contents/{package_dotted}.{version}.json?ref=flex/main",
-    "is_contrib": false
+    "branch": "master",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{$version}@github.com/symfony/recipes:master",
+        "recipe_template": "https://api.github.com/repos/symfony/recipes/contents/{package_dotted}.{version}.json?ref=flex/main"
+    }
 }

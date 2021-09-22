@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sensiolabs/ansi-to-html": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "d58d11d5b998f39260d387d3a0b50adc342db7e4"
-            }
-        }
-    },
     "manifests": {
         "sensiolabs/ansi-to-html": {
-            "repository": "github.com/symfony/recipes",
-            "package": "sensiolabs/ansi-to-html",
-            "version": "1.2",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,19 @@
             },
             "files": {
                 "config/packages/ansi_to_html.yaml": {
-                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n\n    SensioLabs\\AnsiConverter\\Bridge\\Twig\\AnsiExtension: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    SensioLabs\\AnsiConverter\\Bridge\\Twig\\AnsiExtension: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sensiolabs/ansi-to-html:1.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "d58d11d5b998f39260d387d3a0b50adc342db7e4"
         }
     }
 }

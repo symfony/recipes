@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/sendinblue-mailer": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "ae1cf494ce06b9a4578a8445c610402a1676ee8d"
-            }
-        }
-    },
     "manifests": {
         "symfony/sendinblue-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/sendinblue-mailer",
-            "version": "5.2",
             "manifest": {
                 "env": {
                     "#1": "MAILER_DSN=sendinblue+api://KEY@default",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/sendinblue-mailer:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ae1cf494ce06b9a4578a8445c610402a1676ee8d"
         }
     }
 }

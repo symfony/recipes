@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/flex": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
-            }
-        }
-    },
     "manifests": {
         "symfony/flex": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/flex",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     ".env": ".env"
@@ -22,13 +8,27 @@
             },
             "files": {
                 ".env": {
-                    "contents": "# In all environments, the following files are loaded if they exist,\n# the latter taking precedence over the former:\n#\n#  * .env                contains default values for the environment variables needed by the app\n#  * .env.local          uncommitted file with local overrides\n#  * .env.$APP_ENV       committed environment-specific defaults\n#  * .env.$APP_ENV.local uncommitted environment-specific overrides\n#\n# Real environment variables win over .env files.\n#\n# DO NOT DEFINE PRODUCTION SECRETS IN THIS FILE NOR IN ANY OTHER COMMITTED FILES.\n#\n# Run \"composer dump-env prod\" to compile .env files for production use (requires symfony/flex >=1.2).\n# https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# In all environments, the following files are loaded if they exist,",
+                        "# the latter taking precedence over the former:",
+                        "#",
+                        "#  * .env                contains default values for the environment variables needed by the app",
+                        "#  * .env.local          uncommitted file with local overrides",
+                        "#  * .env.$APP_ENV       committed environment-specific defaults",
+                        "#  * .env.$APP_ENV.local uncommitted environment-specific overrides",
+                        "#",
+                        "# Real environment variables win over .env files.",
+                        "#",
+                        "# DO NOT DEFINE PRODUCTION SECRETS IN THIS FILE NOR IN ANY OTHER COMMITTED FILES.",
+                        "#",
+                        "# Run \"composer dump-env prod\" to compile .env files for production use (requires symfony/flex >=1.2).",
+                        "# https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/flex:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
         }
     }
 }

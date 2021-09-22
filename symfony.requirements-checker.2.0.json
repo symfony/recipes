@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/requirements-checker": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "02c6e4b9b117c39e8a23eab7f3840ef6e62293b9"
-            }
-        }
-    },
     "manifests": {
         "symfony/requirements-checker": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/requirements-checker",
-            "version": "2.0",
             "manifest": {
                 "composer-scripts": {
                     "requirements-checker": "script"
@@ -28,8 +14,7 @@
                 ]
             },
             "files": [],
-            "origin": "symfony/requirements-checker:2.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "02c6e4b9b117c39e8a23eab7f3840ef6e62293b9"
         }
     }
 }

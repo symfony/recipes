@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "friendsofphp/php-cs-fixer": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "be2103eb4a20942e28a6dd87736669b757132435"
-            }
-        }
-    },
     "manifests": {
         "friendsofphp/php-cs-fixer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "friendsofphp/php-cs-fixer",
-            "version": "3.0",
             "manifest": {
                 "aliases": [
                     "cs-fixer",
@@ -30,13 +16,26 @@
             },
             "files": {
                 ".php-cs-fixer.dist.php": {
-                    "contents": "<?php\n\n$finder = (new PhpCsFixer\\Finder())\n    ->in(__DIR__)\n    ->exclude('var')\n;\n\nreturn (new PhpCsFixer\\Config())\n    ->setRules([\n        '@Symfony' => true,\n    ])\n    ->setFinder($finder)\n;\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "$finder = (new PhpCsFixer\\Finder())",
+                        "    ->in(__DIR__)",
+                        "    ->exclude('var')",
+                        ";",
+                        "",
+                        "return (new PhpCsFixer\\Config())",
+                        "    ->setRules([",
+                        "        '@Symfony' => true,",
+                        "    ])",
+                        "    ->setFinder($finder)",
+                        ";",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "friendsofphp/php-cs-fixer:3.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "be2103eb4a20942e28a6dd87736669b757132435"
         }
     }
 }

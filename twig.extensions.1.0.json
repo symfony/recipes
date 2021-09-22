@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "twig/extensions": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a86723ee8d8b2f9437c8ce60a5546a1c267da5ed"
-            }
-        }
-    },
     "manifests": {
         "twig/extensions": {
-            "repository": "github.com/symfony/recipes",
-            "package": "twig/extensions",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -27,13 +13,24 @@
             },
             "files": {
                 "config/packages/twig_extensions.yaml": {
-                    "contents": "services:\n    _defaults:\n        public: false\n        autowire: true\n        autoconfigure: true\n\n    # Uncomment any lines below to activate that Twig extension\n    #Twig\\Extensions\\ArrayExtension: null\n    #Twig\\Extensions\\DateExtension: null\n    #Twig\\Extensions\\IntlExtension: null\n    #Twig\\Extensions\\TextExtension: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # Uncomment any lines below to activate that Twig extension",
+                        "    #Twig\\Extensions\\ArrayExtension: null",
+                        "    #Twig\\Extensions\\DateExtension: null",
+                        "    #Twig\\Extensions\\IntlExtension: null",
+                        "    #Twig\\Extensions\\TextExtension: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "twig/extensions:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "a86723ee8d8b2f9437c8ce60a5546a1c267da5ed"
         }
     }
 }

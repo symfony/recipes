@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfonycorp/platformsh-meta": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "072c0ef861a3ac2a2343a650764895690bbc32c9"
-            }
-        }
-    },
     "manifests": {
         "symfonycorp/platformsh-meta": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfonycorp/platformsh-meta",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -25,13 +11,37 @@
             },
             "files": {
                 "config/packages/messenger.yaml": {
-                    "contents": "framework:\n    messenger:\n        failure_transport: failed\n\n        transports:\n            # https://symfony.com/doc/current/messenger.html#transport-configuration\n            async:\n                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'\n                options:\n                    use_notify: true\n                    check_delayed_interval: 60000\n                retry_strategy:\n                    max_retries: 3\n                    multiplier: 2\n            failed: 'doctrine://default?queue_name=failed'\n            # sync: 'sync://'\n\n        routing:\n            Symfony\\Component\\Mailer\\Messenger\\SendEmailMessage: async\n            Symfony\\Component\\Notifier\\Message\\ChatMessage: async\n            Symfony\\Component\\Notifier\\Message\\SmsMessage: async\n\n            # Route your messages to the transports\n            # 'App\\Message\\YourMessage': async\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        failure_transport: failed",
+                        "",
+                        "        transports:",
+                        "            # https://symfony.com/doc/current/messenger.html#transport-configuration",
+                        "            async:",
+                        "                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "                options:",
+                        "                    use_notify: true",
+                        "                    check_delayed_interval: 60000",
+                        "                retry_strategy:",
+                        "                    max_retries: 3",
+                        "                    multiplier: 2",
+                        "            failed: 'doctrine://default?queue_name=failed'",
+                        "            # sync: 'sync://'",
+                        "",
+                        "        routing:",
+                        "            Symfony\\Component\\Mailer\\Messenger\\SendEmailMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\ChatMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\SmsMessage: async",
+                        "",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': async",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfonycorp/platformsh-meta:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "072c0ef861a3ac2a2343a650764895690bbc32c9"
         }
     }
 }

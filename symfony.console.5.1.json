@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/console": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "c6d02bdfba9da13c22157520e32a602dbee8a75c"
-            }
-        }
-    },
     "manifests": {
         "symfony/console": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/console",
-            "version": "5.1",
             "manifest": {
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/"
@@ -25,13 +11,56 @@
             },
             "files": {
                 "bin/console": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nuse App\\Kernel;\nuse Symfony\\Bundle\\FrameworkBundle\\Console\\Application;\nuse Symfony\\Component\\Console\\Input\\ArgvInput;\nuse Symfony\\Component\\Dotenv\\Dotenv;\nuse Symfony\\Component\\ErrorHandler\\Debug;\n\nif (!in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {\n    echo 'Warning: The console should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;\n}\n\nset_time_limit(0);\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (!class_exists(Application::class) || !class_exists(Dotenv::class)) {\n    throw new LogicException('You need to add \"symfony/framework-bundle\" and \"symfony/dotenv\" as Composer dependencies.');\n}\n\n$input = new ArgvInput();\nif (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {\n    putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);\n}\n\nif ($input->hasParameterOption('--no-debug', true)) {\n    putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');\n}\n\n(new Dotenv())->bootEnv(dirname(__DIR__).'/.env');\n\nif ($_SERVER['APP_DEBUG']) {\n    umask(0000);\n\n    if (class_exists(Debug::class)) {\n        Debug::enable();\n    }\n}\n\n$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);\n$application = new Application($kernel);\n$application->run($input);\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Console\\Application;",
+                        "use Symfony\\Component\\Console\\Input\\ArgvInput;",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "use Symfony\\Component\\ErrorHandler\\Debug;",
+                        "",
+                        "if (!in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {",
+                        "    echo 'Warning: The console should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;",
+                        "}",
+                        "",
+                        "set_time_limit(0);",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (!class_exists(Application::class) || !class_exists(Dotenv::class)) {",
+                        "    throw new LogicException('You need to add \"symfony/framework-bundle\" and \"symfony/dotenv\" as Composer dependencies.');",
+                        "}",
+                        "",
+                        "$input = new ArgvInput();",
+                        "if (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {",
+                        "    putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);",
+                        "}",
+                        "",
+                        "if ($input->hasParameterOption('--no-debug', true)) {",
+                        "    putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');",
+                        "}",
+                        "",
+                        "(new Dotenv())->bootEnv(dirname(__DIR__).'/.env');",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "",
+                        "    if (class_exists(Debug::class)) {",
+                        "        Debug::enable();",
+                        "    }",
+                        "}",
+                        "",
+                        "$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);",
+                        "$application = new Application($kernel);",
+                        "$application->run($input);",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "symfony/console:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "c6d02bdfba9da13c22157520e32a602dbee8a75c"
         }
     }
 }

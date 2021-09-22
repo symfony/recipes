@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "doctrine/doctrine-migrations-bundle": {
-            "version": "3.1",
-            "recipe": {
-                "repo": "3.1",
-                "branch": "master",
-                "version": "3.1",
-                "ref": "ee609429c9ee23e22d6fa5728211768f51ed2818"
-            }
-        }
-    },
     "manifests": {
         "doctrine/doctrine-migrations-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "doctrine/doctrine-migrations-bundle",
-            "version": "3.1",
             "manifest": {
                 "bundles": {
                     "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": [
@@ -32,18 +18,25 @@
             },
             "files": {
                 "config/packages/doctrine_migrations.yaml": {
-                    "contents": "doctrine_migrations:\n    migrations_paths:\n        # namespace is arbitrary but should be different from App\\Migrations\n        # as migrations classes should NOT be autoloaded\n        'DoctrineMigrations': '%kernel.project_dir%/migrations'\n    enable_profiler: '%kernel.debug%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine_migrations:",
+                        "    migrations_paths:",
+                        "        # namespace is arbitrary but should be different from App\\Migrations",
+                        "        # as migrations classes should NOT be autoloaded",
+                        "        'DoctrineMigrations': '%kernel.project_dir%/migrations'",
+                        "    enable_profiler: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "migrations/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "doctrine/doctrine-migrations-bundle:3.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ee609429c9ee23e22d6fa5728211768f51ed2818"
         }
     }
 }

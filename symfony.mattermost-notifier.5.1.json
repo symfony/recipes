@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/mattermost-notifier": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "5493dd41fa3c575c93a58f374e46d62e6dc232cc"
-            }
-        }
-    },
     "manifests": {
         "symfony/mattermost-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mattermost-notifier",
-            "version": "5.1",
             "manifest": {
                 "env": {
                     "#1": "See https://docs.mattermost.com/developer/bot-accounts.html",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/mattermost-notifier:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "5493dd41fa3c575c93a58f374e46d62e6dc232cc"
         }
     }
 }

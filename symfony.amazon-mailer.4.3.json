@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/amazon-mailer": {
-            "version": "4.3",
-            "recipe": {
-                "repo": "4.3",
-                "branch": "master",
-                "version": "4.3",
-                "ref": "5dc61848401953f3ba03515d925904d2804c6ad5"
-            }
-        }
-    },
     "manifests": {
         "symfony/amazon-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/amazon-mailer",
-            "version": "4.3",
             "manifest": {
                 "env": {
                     "#1": "AWS_ACCESS_KEY=",
@@ -24,8 +10,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/amazon-mailer:4.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "5dc61848401953f3ba03515d925904d2804c6ad5"
         }
     }
 }

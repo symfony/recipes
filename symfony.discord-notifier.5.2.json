@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/discord-notifier": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "1bbc2f7c212346491efde98bf55a3f689056ed3f"
-            }
-        }
-    },
     "manifests": {
         "symfony/discord-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/discord-notifier",
-            "version": "5.2",
             "manifest": {
                 "env": {
                     "#1": "DISCORD_DSN=discord://TOKEN@default?webhook_id=ID"
                 }
             },
             "files": [],
-            "origin": "symfony/discord-notifier:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "1bbc2f7c212346491efde98bf55a3f689056ed3f"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/translation": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "2ad9d2545bce8ca1a863e50e92141f0b9d87ffcd"
-            }
-        }
-    },
     "manifests": {
         "symfony/translation": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/translation",
-            "version": "3.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
@@ -27,18 +13,25 @@
             },
             "files": {
                 "config/packages/translation.yaml": {
-                    "contents": "framework:\n    default_locale: en\n    translator:\n        default_path: '%kernel.project_dir%/translations'\n        fallbacks:\n            - en\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    default_locale: en",
+                        "    translator:",
+                        "        default_path: '%kernel.project_dir%/translations'",
+                        "        fallbacks:",
+                        "            - en",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "translations/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/translation:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "2ad9d2545bce8ca1a863e50e92141f0b9d87ffcd"
         }
     }
 }

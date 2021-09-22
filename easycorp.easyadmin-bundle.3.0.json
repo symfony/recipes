@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "easycorp/easyadmin-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "b131e6cbfe1b898a508987851963fff485986285"
-            }
-        }
-    },
     "manifests": {
         "easycorp/easyadmin-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "easycorp/easyadmin-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
@@ -28,8 +14,7 @@
                 ]
             },
             "files": [],
-            "origin": "easycorp/easyadmin-bundle:3.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/phpunit-bridge": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "f59588dbcb508b1f45097a97d5066905aa6f8f41"
-            }
-        }
-    },
     "manifests": {
         "symfony/phpunit-bridge": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/phpunit-bridge",
-            "version": "3.3",
             "manifest": {
                 "copy-from-recipe": {
                     ".env.test": ".env.test",
@@ -37,28 +23,97 @@
             },
             "files": {
                 ".env.test": {
-                    "contents": "# define your env variables for the test env here\nKERNEL_CLASS='App\\Kernel'\nAPP_SECRET='$ecretf0rt3st'\nSYMFONY_DEPRECATIONS_HELPER=999999\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# define your env variables for the test env here",
+                        "KERNEL_CLASS='App\\Kernel'",
+                        "APP_SECRET='$ecretf0rt3st'",
+                        "SYMFONY_DEPRECATIONS_HELPER=999999",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "bin/phpunit": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nif (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit')) {\n    echo \"Unable to find the `simple-phpunit` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";\n    exit(1);\n}\n\nif (false === getenv('SYMFONY_PHPUNIT_VERSION')) {\n    putenv('SYMFONY_PHPUNIT_VERSION=6.5');\n}\nif (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {\n    putenv('SYMFONY_PHPUNIT_REMOVE=symfony/yaml');\n}\nif (false === getenv('SYMFONY_PHPUNIT_DIR')) {\n    putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');\n}\n\nrequire dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit';\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "if (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit')) {",
+                        "    echo \"Unable to find the `simple-phpunit` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";",
+                        "    exit(1);",
+                        "}",
+                        "",
+                        "if (false === getenv('SYMFONY_PHPUNIT_VERSION')) {",
+                        "    putenv('SYMFONY_PHPUNIT_VERSION=6.5');",
+                        "}",
+                        "if (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {",
+                        "    putenv('SYMFONY_PHPUNIT_REMOVE=symfony/yaml');",
+                        "}",
+                        "if (false === getenv('SYMFONY_PHPUNIT_DIR')) {",
+                        "    putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');",
+                        "}",
+                        "",
+                        "require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit';",
+                        ""
+                    ],
+                    "executable": true
                 },
                 "phpunit.xml.dist": {
-                    "contents": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"bin/.phpunit/phpunit.xsd\"\n         backupGlobals=\"false\"\n         colors=\"true\"\n         bootstrap=\"tests/bootstrap.php\"\n>\n    <php>\n        <ini name=\"display_errors\" value=\"1\" />\n        <ini name=\"error_reporting\" value=\"-1\" />\n        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />\n        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />\n    </php>\n\n    <testsuites>\n        <testsuite name=\"Project Test Suite\">\n            <directory>tests</directory>\n        </testsuite>\n    </testsuites>\n\n    <filter>\n        <whitelist>\n            <directory>src</directory>\n        </whitelist>\n    </filter>\n\n    <listeners>\n        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />\n    </listeners>\n</phpunit>\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->",
+                        "<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"bin/.phpunit/phpunit.xsd\"",
+                        "         backupGlobals=\"false\"",
+                        "         colors=\"true\"",
+                        "         bootstrap=\"tests/bootstrap.php\"",
+                        ">",
+                        "    <php>",
+                        "        <ini name=\"display_errors\" value=\"1\" />",
+                        "        <ini name=\"error_reporting\" value=\"-1\" />",
+                        "        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />",
+                        "        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />",
+                        "    </php>",
+                        "",
+                        "    <testsuites>",
+                        "        <testsuite name=\"Project Test Suite\">",
+                        "            <directory>tests</directory>",
+                        "        </testsuite>",
+                        "    </testsuites>",
+                        "",
+                        "    <filter>",
+                        "        <whitelist>",
+                        "            <directory>src</directory>",
+                        "        </whitelist>",
+                        "    </filter>",
+                        "",
+                        "    <listeners>",
+                        "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
+                        "    </listeners>",
+                        "</phpunit>",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/bootstrap.php": {
-                    "contents": "<?php\n\nuse Symfony\\Component\\Dotenv\\Dotenv;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {\n    require dirname(__DIR__).'/config/bootstrap.php';\n} elseif (method_exists(Dotenv::class, 'bootEnv')) {\n    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (file_exists(dirname(__DIR__).'/config/bootstrap.php')) {",
+                        "    require dirname(__DIR__).'/config/bootstrap.php';",
+                        "} elseif (method_exists(Dotenv::class, 'bootEnv')) {",
+                        "    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/phpunit-bridge:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "f59588dbcb508b1f45097a97d5066905aa6f8f41"
         }
     }
 }

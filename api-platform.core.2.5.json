@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "api-platform/core": {
-            "version": "2.5",
-            "recipe": {
-                "repo": "2.5",
-                "branch": "master",
-                "version": "2.5",
-                "ref": "05b57782a78c21a664a42055dc11cf1954ca36bb"
-            }
-        }
-    },
     "manifests": {
         "api-platform/core": {
-            "repository": "github.com/symfony/recipes",
-            "package": "api-platform/core",
-            "version": "2.5",
             "manifest": {
                 "bundles": {
                     "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": [
@@ -38,23 +24,36 @@
             },
             "files": {
                 "src/Entity/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/api_platform.yaml": {
-                    "contents": "api_platform:\n    resource: .\n    type: api_platform\n    prefix: /api\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "api_platform:",
+                        "    resource: .",
+                        "    type: api_platform",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/api_platform.yaml": {
-                    "contents": "api_platform:\n    mapping:\n        paths: ['%kernel.project_dir%/src/Entity']\n    patch_formats:\n        json: ['application/merge-patch+json']\n    swagger:\n        versions: [3]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "api_platform:",
+                        "    mapping:",
+                        "        paths: ['%kernel.project_dir%/src/Entity']",
+                        "    patch_formats:",
+                        "        json: ['application/merge-patch+json']",
+                        "    swagger:",
+                        "        versions: [3]",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "api-platform/core:2.5@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "05b57782a78c21a664a42055dc11cf1954ca36bb"
         }
     }
 }

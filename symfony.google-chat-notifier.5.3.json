@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/google-chat-notifier": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "b114c8d95c4e187d8ea186be9ac3839602fec5ee"
-            }
-        }
-    },
     "manifests": {
         "symfony/google-chat-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/google-chat-notifier",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "See https://developers.google.com/hangouts/chat/how-tos/webhooks",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/google-chat-notifier:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "b114c8d95c4e187d8ea186be9ac3839602fec5ee"
         }
     }
 }

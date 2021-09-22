@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/profiler-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "bef948aac96fea48fe368199ade9c295ed30e142"
-            }
-        }
-    },
     "manifests": {
         "symfony/profiler-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/profiler-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "profiler",
@@ -22,8 +8,7 @@
                 ]
             },
             "files": [],
-            "origin": "symfony/profiler-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "bef948aac96fea48fe368199ade9c295ed30e142"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/lock": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "a1c8800e40ae735206bb14586fdd6c4630a51b8d"
-            }
-        }
-    },
     "manifests": {
         "symfony/lock": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/lock",
-            "version": "5.2",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -27,13 +13,15 @@
             },
             "files": {
                 "config/packages/lock.yaml": {
-                    "contents": "framework:\n    lock: '%env(LOCK_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    lock: '%env(LOCK_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/lock:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "a1c8800e40ae735206bb14586fdd6c4630a51b8d"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/validator": {
-            "version": "4.1",
-            "recipe": {
-                "repo": "4.1",
-                "branch": "master",
-                "version": "4.1",
-                "ref": "21ab70175caf1e4b273791364fb30d27f1153546"
-            }
-        }
-    },
     "manifests": {
         "symfony/validator": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/validator",
-            "version": "4.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -25,18 +11,26 @@
             },
             "files": {
                 "config/packages/validator.yaml": {
-                    "contents": "framework:\n    validation:\n        email_validation_mode: html5\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        email_validation_mode: html5",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/validator.yaml": {
-                    "contents": "framework:\n    validation:\n        # As of Symfony 4.3 you can disable the NotCompromisedPassword Validator\n        # not_compromised_password: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        # As of Symfony 4.3 you can disable the NotCompromisedPassword Validator",
+                        "        # not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/validator:4.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "21ab70175caf1e4b273791364fb30d27f1153546"
         }
     }
 }

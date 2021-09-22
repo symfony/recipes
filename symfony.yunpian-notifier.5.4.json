@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/yunpian-notifier": {
-            "version": "5.4",
-            "recipe": {
-                "repo": "5.4",
-                "branch": "master",
-                "version": "5.4",
-                "ref": "08778d7e5064baba215ea8be1176aee31a7bd1e3"
-            }
-        }
-    },
     "manifests": {
         "symfony/yunpian-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/yunpian-notifier",
-            "version": "5.4",
             "manifest": {
                 "env": {
                     "#1": "YUNPIAN_DSN=yunpian://APIKEY@default"
                 }
             },
             "files": [],
-            "origin": "symfony/yunpian-notifier:5.4@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "08778d7e5064baba215ea8be1176aee31a7bd1e3"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/web-profiler-bundle": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "6bdfa1a95f6b2e677ab985cd1af2eae35d62e0f6"
-            }
-        }
-    },
     "manifests": {
         "symfony/web-profiler-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/web-profiler-bundle",
-            "version": "3.3",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
@@ -28,23 +14,44 @@
             },
             "files": {
                 "config/routes/dev/web_profiler.yaml": {
-                    "contents": "web_profiler_wdt:\n    resource: '@WebProfilerBundle/Resources/config/routing/wdt.xml'\n    prefix: /_wdt\n\nweb_profiler_profiler:\n    resource: '@WebProfilerBundle/Resources/config/routing/profiler.xml'\n    prefix: /_profiler\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "web_profiler_wdt:",
+                        "    resource: '@WebProfilerBundle/Resources/config/routing/wdt.xml'",
+                        "    prefix: /_wdt",
+                        "",
+                        "web_profiler_profiler:",
+                        "    resource: '@WebProfilerBundle/Resources/config/routing/profiler.xml'",
+                        "    prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/dev/web_profiler.yaml": {
-                    "contents": "web_profiler:\n    toolbar: true\n    intercept_redirects: false\n\nframework:\n    profiler: { only_exceptions: false }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "web_profiler:",
+                        "    toolbar: true",
+                        "    intercept_redirects: false",
+                        "",
+                        "framework:",
+                        "    profiler: { only_exceptions: false }",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/web_profiler.yaml": {
-                    "contents": "web_profiler:\n    toolbar: false\n    intercept_redirects: false\n\nframework:\n    profiler: { collect: false }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "web_profiler:",
+                        "    toolbar: false",
+                        "    intercept_redirects: false",
+                        "",
+                        "framework:",
+                        "    profiler: { collect: false }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/web-profiler-bundle:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "6bdfa1a95f6b2e677ab985cd1af2eae35d62e0f6"
         }
     }
 }

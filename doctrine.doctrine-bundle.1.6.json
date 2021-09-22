@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "doctrine/doctrine-bundle": {
-            "version": "1.6",
-            "recipe": {
-                "repo": "1.6",
-                "branch": "master",
-                "version": "1.6",
-                "ref": "e4fc55e8adf9aa89d9bba8f5a95669d33a16cb00"
-            }
-        }
-    },
     "manifests": {
         "doctrine/doctrine-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "doctrine/doctrine-bundle",
-            "version": "1.6",
             "manifest": {
                 "bundles": {
                     "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
@@ -75,28 +61,86 @@
             },
             "files": {
                 "src/Repository/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/doctrine.yaml": {
-                    "contents": "doctrine:\n    orm:\n        auto_generate_proxy_classes: false\n        metadata_cache_driver:\n            type: service\n            id: doctrine.system_cache_provider\n        query_cache_driver:\n            type: service\n            id: doctrine.system_cache_provider\n        result_cache_driver:\n            type: service\n            id: doctrine.result_cache_provider\n\nservices:\n    doctrine.result_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine.result_cache_pool'\n    doctrine.system_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine.system_cache_pool'\n\nframework:\n    cache:\n        pools:\n            doctrine.result_cache_pool:\n                adapter: cache.app\n            doctrine.system_cache_pool:\n                adapter: cache.system\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        metadata_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        query_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        result_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.result_cache_provider",
+                        "",
+                        "services:",
+                        "    doctrine.result_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.result_cache_pool'",
+                        "    doctrine.system_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.system_cache_pool'",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/doctrine.yaml": {
-                    "contents": "doctrine:\n    dbal:\n        url: '%env(resolve:DATABASE_URL)%'\n\n        # IMPORTANT: You MUST configure your server version,\n        # either here or in the DATABASE_URL env var (see .env file)\n        #server_version: '13'\n\n        # only needed for MySQL\n        charset: utf8mb4\n        default_table_options:\n            collate: utf8mb4_unicode_ci\n    orm:\n        auto_generate_proxy_classes: true\n        naming_strategy: doctrine.orm.naming_strategy.underscore\n        auto_mapping: true\n        mappings:\n            App:\n                is_bundle: false\n                type: annotation\n                dir: '%kernel.project_dir%/src/Entity'\n                prefix: 'App\\Entity'\n                alias: App\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #server_version: '13'",
+                        "",
+                        "        # only needed for MySQL",
+                        "        charset: utf8mb4",
+                        "        default_table_options:",
+                        "            collate: utf8mb4_unicode_ci",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "doctrine/doctrine-bundle:1.6@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "e4fc55e8adf9aa89d9bba8f5a95669d33a16cb00"
         }
     }
 }

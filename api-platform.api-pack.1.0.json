@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "api-platform/api-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "7e2369fce00988c01de87918c0476b0da368afdd"
-            }
-        }
-    },
     "manifests": {
         "api-platform/api-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "api-platform/api-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "api",
@@ -22,8 +8,7 @@
                 ]
             },
             "files": [],
-            "origin": "api-platform/api-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "7e2369fce00988c01de87918c0476b0da368afdd"
         }
     }
 }

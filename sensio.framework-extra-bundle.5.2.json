@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sensio/framework-extra-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
-            }
-        }
-    },
     "manifests": {
         "sensio/framework-extra-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "sensio/framework-extra-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": [
@@ -33,13 +19,16 @@
             },
             "files": {
                 "config/packages/sensio_framework_extra.yaml": {
-                    "contents": "sensio_framework_extra:\n    router:\n        annotations: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sensio_framework_extra:",
+                        "    router:",
+                        "        annotations: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sensio/framework-extra-bundle:5.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/security-bundle": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "0a4bae19389d3b9cba1ca0102e3b2bccea724603"
-            }
-        }
-    },
     "manifests": {
         "symfony/security-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/security-bundle",
-            "version": "5.1",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": [
@@ -30,13 +16,37 @@
             },
             "files": {
                 "config/packages/security.yaml": {
-                    "contents": "security:\n    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers\n    providers:\n        users_in_memory: { memory: null }\n    firewalls:\n        dev:\n            pattern: ^/(_(profiler|wdt)|css|images|js)/\n            security: false\n        main:\n            anonymous: true\n            lazy: true\n            provider: users_in_memory\n\n            # activate different ways to authenticate\n            # https://symfony.com/doc/current/security.html#firewalls-authentication\n\n            # https://symfony.com/doc/current/security/impersonating_user.html\n            # switch_user: true\n\n    # Easy way to control access for large sections of your site\n    # Note: Only the *first* access control that matches will be used\n    access_control:\n        # - { path: ^/admin, roles: ROLE_ADMIN }\n        # - { path: ^/profile, roles: ROLE_USER }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "security:",
+                        "    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers",
+                        "    providers:",
+                        "        users_in_memory: { memory: null }",
+                        "    firewalls:",
+                        "        dev:",
+                        "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "            security: false",
+                        "        main:",
+                        "            anonymous: true",
+                        "            lazy: true",
+                        "            provider: users_in_memory",
+                        "",
+                        "            # activate different ways to authenticate",
+                        "            # https://symfony.com/doc/current/security.html#firewalls-authentication",
+                        "",
+                        "            # https://symfony.com/doc/current/security/impersonating_user.html",
+                        "            # switch_user: true",
+                        "",
+                        "    # Easy way to control access for large sections of your site",
+                        "    # Note: Only the *first* access control that matches will be used",
+                        "    access_control:",
+                        "        # - { path: ^/admin, roles: ROLE_ADMIN }",
+                        "        # - { path: ^/profile, roles: ROLE_USER }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/security-bundle:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "0a4bae19389d3b9cba1ca0102e3b2bccea724603"
         }
     }
 }

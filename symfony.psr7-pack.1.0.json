@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/psr7-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "5757a9204a2af95fb9a04aa746c60d981419a480"
-            }
-        }
-    },
     "manifests": {
         "symfony/psr7-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/psr7-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "psr7",
@@ -28,13 +14,32 @@
             },
             "files": {
                 "config/packages/psr_http_message_bridge.yaml": {
-                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n\n    Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface:\n        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory'\n\n    Symfony\\Bridge\\PsrHttpMessage\\HttpMessageFactoryInterface:\n        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory'\n\n    Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory: null\n    Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory: null\n\n    # Uncomment to allow controllers to receive a PSR-7 server request object as argument\n    #Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver: null\n\n    # Uncomment to allow controllers to return a PSR-7 response object\n    #Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpMessageFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory: null",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory: null",
+                        "",
+                        "    # Uncomment to allow controllers to receive a PSR-7 server request object as argument",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver: null",
+                        "",
+                        "    # Uncomment to allow controllers to return a PSR-7 response object",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/psr7-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "5757a9204a2af95fb9a04aa746c60d981419a480"
         }
     }
 }

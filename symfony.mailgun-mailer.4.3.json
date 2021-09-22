@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/mailgun-mailer": {
-            "version": "4.3",
-            "recipe": {
-                "repo": "4.3",
-                "branch": "master",
-                "version": "4.3",
-                "ref": "a2bc739b34862b926b8a58263fd3901297eec3b5"
-            }
-        }
-    },
     "manifests": {
         "symfony/mailgun-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mailgun-mailer",
-            "version": "4.3",
             "manifest": {
                 "env": {
                     "#1": "MAILGUN_USERNAME=",
@@ -26,8 +12,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/mailgun-mailer:4.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "a2bc739b34862b926b8a58263fd3901297eec3b5"
         }
     }
 }

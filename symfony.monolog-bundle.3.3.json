@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/monolog-bundle": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "2120e71a370db3a494b8afcc42d7cfb2cff6f910"
-            }
-        }
-    },
     "manifests": {
         "symfony/monolog-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/monolog-bundle",
-            "version": "3.3",
             "manifest": {
                 "bundles": {
                     "Symfony\\Bundle\\MonologBundle\\MonologBundle": [
@@ -34,28 +20,86 @@
             },
             "files": {
                 "config/packages/dev/monolog.yaml": {
-                    "contents": "monolog:\n    handlers:\n        main:\n            type: stream\n            path: \"%kernel.logs_dir%/%kernel.environment%.log\"\n            level: debug\n            channels: [\"!event\"]\n        # uncomment to get logging in your browser\n        # you may have to allow bigger header sizes in your Web server configuration\n        #firephp:\n        #    type: firephp\n        #    level: info\n        #chromephp:\n        #    type: chromephp\n        #    level: info\n        console:\n            type: console\n            process_psr_3_messages: false\n            channels: [\"!event\", \"!doctrine\", \"!console\"]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "monolog:",
+                        "    handlers:",
+                        "        main:",
+                        "            type: stream",
+                        "            path: \"%kernel.logs_dir%/%kernel.environment%.log\"",
+                        "            level: debug",
+                        "            channels: [\"!event\"]",
+                        "        # uncomment to get logging in your browser",
+                        "        # you may have to allow bigger header sizes in your Web server configuration",
+                        "        #firephp:",
+                        "        #    type: firephp",
+                        "        #    level: info",
+                        "        #chromephp:",
+                        "        #    type: chromephp",
+                        "        #    level: info",
+                        "        console:",
+                        "            type: console",
+                        "            process_psr_3_messages: false",
+                        "            channels: [\"!event\", \"!doctrine\", \"!console\"]",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/monolog.yaml": {
-                    "contents": "monolog:\n    handlers:\n        main:\n            type: fingers_crossed\n            action_level: error\n            handler: nested\n            excluded_http_codes: [404, 405]\n            buffer_size: 50 # How many messages should be saved? Prevent memory leaks\n        nested:\n            type: stream\n            path: \"%kernel.logs_dir%/%kernel.environment%.log\"\n            level: debug\n        console:\n            type: console\n            process_psr_3_messages: false\n            channels: [\"!event\", \"!doctrine\"]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "monolog:",
+                        "    handlers:",
+                        "        main:",
+                        "            type: fingers_crossed",
+                        "            action_level: error",
+                        "            handler: nested",
+                        "            excluded_http_codes: [404, 405]",
+                        "            buffer_size: 50 # How many messages should be saved? Prevent memory leaks",
+                        "        nested:",
+                        "            type: stream",
+                        "            path: \"%kernel.logs_dir%/%kernel.environment%.log\"",
+                        "            level: debug",
+                        "        console:",
+                        "            type: console",
+                        "            process_psr_3_messages: false",
+                        "            channels: [\"!event\", \"!doctrine\"]",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/deprecations.yaml": {
-                    "contents": "# As of Symfony 5.1, deprecations are logged in the dedicated \"deprecation\" channel when it exists\n#monolog:\n#    channels: [deprecation]\n#    handlers:\n#        deprecation:\n#            type: stream\n#            channels: [deprecation]\n#            path: \"%kernel.logs_dir%/%kernel.environment%.deprecations.log\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# As of Symfony 5.1, deprecations are logged in the dedicated \"deprecation\" channel when it exists",
+                        "#monolog:",
+                        "#    channels: [deprecation]",
+                        "#    handlers:",
+                        "#        deprecation:",
+                        "#            type: stream",
+                        "#            channels: [deprecation]",
+                        "#            path: \"%kernel.logs_dir%/%kernel.environment%.deprecations.log\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/monolog.yaml": {
-                    "contents": "monolog:\n    handlers:\n        main:\n            type: fingers_crossed\n            action_level: error\n            handler: nested\n            excluded_http_codes: [404, 405]\n            channels: [\"!event\"]\n        nested:\n            type: stream\n            path: \"%kernel.logs_dir%/%kernel.environment%.log\"\n            level: debug\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "monolog:",
+                        "    handlers:",
+                        "        main:",
+                        "            type: fingers_crossed",
+                        "            action_level: error",
+                        "            handler: nested",
+                        "            excluded_http_codes: [404, 405]",
+                        "            channels: [\"!event\"]",
+                        "        nested:",
+                        "            type: stream",
+                        "            path: \"%kernel.logs_dir%/%kernel.environment%.log\"",
+                        "            level: debug",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/monolog-bundle:3.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "2120e71a370db3a494b8afcc42d7cfb2cff6f910"
         }
     }
 }

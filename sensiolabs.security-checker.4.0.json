@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sensiolabs/security-checker": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "160c9b600564faa1224e8f387d49ef13ceb8b793"
-            }
-        }
-    },
     "manifests": {
         "sensiolabs/security-checker": {
-            "repository": "github.com/symfony/recipes",
-            "package": "sensiolabs/security-checker",
-            "version": "4.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -32,13 +18,21 @@
             },
             "files": {
                 "config/packages/security_checker.yaml": {
-                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n\n    SensioLabs\\Security\\SecurityChecker: null\n\n    SensioLabs\\Security\\Command\\SecurityCheckerCommand: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    SensioLabs\\Security\\SecurityChecker: null",
+                        "",
+                        "    SensioLabs\\Security\\Command\\SecurityCheckerCommand: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sensiolabs/security-checker:4.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "160c9b600564faa1224e8f387d49ef13ceb8b793"
         }
     }
 }

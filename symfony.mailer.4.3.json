@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/mailer": {
-            "version": "4.3",
-            "recipe": {
-                "repo": "4.3",
-                "branch": "master",
-                "version": "4.3",
-                "ref": "bbfc7e27257d3a3f12a6fb0a42540a42d9623a37"
-            }
-        }
-    },
     "manifests": {
         "symfony/mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/mailer",
-            "version": "4.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -54,13 +40,16 @@
             },
             "files": {
                 "config/packages/mailer.yaml": {
-                    "contents": "framework:\n    mailer:\n        dsn: '%env(MAILER_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    mailer:",
+                        "        dsn: '%env(MAILER_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/mailer:4.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "bbfc7e27257d3a3f12a6fb0a42540a42d9623a37"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/twig-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "6c1ec42393d21c5e4cca912b8e29d78fdb714f43"
-            }
-        }
-    },
     "manifests": {
         "symfony/twig-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/twig-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "twig",
@@ -23,8 +9,7 @@
                 ]
             },
             "files": [],
-            "origin": "symfony/twig-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "6c1ec42393d21c5e4cca912b8e29d78fdb714f43"
         }
     }
 }

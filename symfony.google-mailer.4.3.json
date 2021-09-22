@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/google-mailer": {
-            "version": "4.3",
-            "recipe": {
-                "repo": "4.3",
-                "branch": "master",
-                "version": "4.3",
-                "ref": "da7b29c169c9de4359a75be96d729438129d7d86"
-            }
-        }
-    },
     "manifests": {
         "symfony/google-mailer": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/google-mailer",
-            "version": "4.3",
             "manifest": {
                 "env": {
                     "#1": "Gmail SHOULD NOT be used on production, use it in development only.",
@@ -24,8 +10,7 @@
                 }
             },
             "files": [],
-            "origin": "symfony/google-mailer:4.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "da7b29c169c9de4359a75be96d729438129d7d86"
         }
     }
 }

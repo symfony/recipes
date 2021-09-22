@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/panther": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "877d853a05c6713665a2f4b954734592680abff6"
-            }
-        }
-    },
     "manifests": {
         "symfony/panther": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/panther",
-            "version": "1.0",
             "manifest": {
                 "dockerfile": [
                     "# Chromium and ChromeDriver",
@@ -46,8 +32,7 @@
                 ]
             },
             "files": [],
-            "origin": "symfony/panther:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "877d853a05c6713665a2f4b954734592680abff6"
         }
     }
 }

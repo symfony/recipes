@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/routing": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "8c5b5f86ec3e4547cec9a3ae30c3b40ae51cab1f"
-            }
-        }
-    },
     "manifests": {
         "symfony/routing": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/routing",
-            "version": "5.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -25,23 +11,38 @@
             },
             "files": {
                 "config/routes.yaml": {
-                    "contents": "#index:\n#    path: /\n#    controller: App\\Controller\\DefaultController::index\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "#index:",
+                        "#    path: /",
+                        "#    controller: App\\Controller\\DefaultController::index",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/routing.yaml": {
-                    "contents": "framework:\n    router:\n        strict_requirements: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/routing.yaml": {
-                    "contents": "framework:\n    router:\n        utf8: true\n\n        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.\n        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands\n        #default_uri: http://localhost\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        utf8: true",
+                        "",
+                        "        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.",
+                        "        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands",
+                        "        #default_uri: http://localhost",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/routing:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "8c5b5f86ec3e4547cec9a3ae30c3b40ae51cab1f"
         }
     }
 }

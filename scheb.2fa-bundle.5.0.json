@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "scheb/2fa-bundle": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "62660e7d21b8b5295c5a6f8ca17dc7099881f267"
-            }
-        }
-    },
     "manifests": {
         "scheb/2fa-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "scheb/2fa-bundle",
-            "version": "5.0",
             "manifest": {
                 "bundles": {
                     "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle": [
@@ -30,18 +16,34 @@
             },
             "files": {
                 "config/routes/scheb_2fa.yaml": {
-                    "contents": "2fa_login:\n    path: /2fa\n    defaults:\n        _controller: \"scheb_two_factor.form_controller:form\"\n\n2fa_login_check:\n    path: /2fa_check\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "2fa_login:",
+                        "    path: /2fa",
+                        "    defaults:",
+                        "        _controller: \"scheb_two_factor.form_controller:form\"",
+                        "",
+                        "2fa_login_check:",
+                        "    path: /2fa_check",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/scheb_2fa.yaml": {
-                    "contents": "# See the configuration reference at https://github.com/scheb/2fa/blob/master/doc/configuration.md\nscheb_two_factor:\n    security_tokens:\n        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken\n        # If you're using guard-based authentication, you have to use this one:\n        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken\n        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:\n        # - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See the configuration reference at https://github.com/scheb/2fa/blob/master/doc/configuration.md",
+                        "scheb_two_factor:",
+                        "    security_tokens:",
+                        "        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken",
+                        "        # If you're using guard-based authentication, you have to use this one:",
+                        "        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken",
+                        "        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:",
+                        "        # - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "scheb/2fa-bundle:5.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "62660e7d21b8b5295c5a6f8ca17dc7099881f267"
         }
     }
 }

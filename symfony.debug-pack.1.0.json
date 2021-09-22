@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/debug-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "32518550a6a8aed40de935841394d0d47a78b9c7"
-            }
-        }
-    },
     "manifests": {
         "symfony/debug-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/debug-pack",
-            "version": "1.0",
             "manifest": {
                 "aliases": [
                     "debug"
                 ]
             },
             "files": [],
-            "origin": "symfony/debug-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "32518550a6a8aed40de935841394d0d47a78b9c7"
         }
     }
 }

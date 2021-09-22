@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/lokalise-translation-provider": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "8f5abe62959fa4cb6d7616f98d42b4c86d014301"
-            }
-        }
-    },
     "manifests": {
         "symfony/lokalise-translation-provider": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/lokalise-translation-provider",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default"
                 }
             },
             "files": [],
-            "origin": "symfony/lokalise-translation-provider:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "8f5abe62959fa4cb6d7616f98d42b4c86d014301"
         }
     }
 }

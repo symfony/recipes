@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/console": {
-            "version": "4.2",
-            "recipe": {
-                "repo": "4.2",
-                "branch": "master",
-                "version": "4.2",
-                "ref": "0a4841612ca4dd3464cbbe1e06b073c79ce7a7f2"
-            }
-        }
-    },
     "manifests": {
         "symfony/console": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/console",
-            "version": "4.2",
             "manifest": {
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/",
@@ -26,18 +12,84 @@
             },
             "files": {
                 "config/bootstrap.php": {
-                    "contents": "<?php\n\nuse Symfony\\Component\\Dotenv\\Dotenv;\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (!class_exists(Dotenv::class)) {\n    throw new LogicException('Please run \"composer require symfony/dotenv\" to load the \".env\" files configuring the application.');\n}\n\n// Load cached env vars if the .env.local.php file exists\n// Run \"composer dump-env prod\" to create it (requires symfony/flex >=1.2)\nif (is_array($env = @include dirname(__DIR__).'/.env.local.php') && (!isset($env['APP_ENV']) || ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])) {\n    (new Dotenv(false))->populate($env);\n} else {\n    // load all the .env files\n    (new Dotenv(false))->loadEnv(dirname(__DIR__).'/.env');\n}\n\n$_SERVER += $_ENV;\n$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';\n$_SERVER['APP_DEBUG'] = $_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? 'prod' !== $_SERVER['APP_ENV'];\n$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN) ? '1' : '0';\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (!class_exists(Dotenv::class)) {",
+                        "    throw new LogicException('Please run \"composer require symfony/dotenv\" to load the \".env\" files configuring the application.');",
+                        "}",
+                        "",
+                        "// Load cached env vars if the .env.local.php file exists",
+                        "// Run \"composer dump-env prod\" to create it (requires symfony/flex >=1.2)",
+                        "if (is_array($env = @include dirname(__DIR__).'/.env.local.php') && (!isset($env['APP_ENV']) || ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])) {",
+                        "    (new Dotenv(false))->populate($env);",
+                        "} else {",
+                        "    // load all the .env files",
+                        "    (new Dotenv(false))->loadEnv(dirname(__DIR__).'/.env');",
+                        "}",
+                        "",
+                        "$_SERVER += $_ENV;",
+                        "$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';",
+                        "$_SERVER['APP_DEBUG'] = $_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? 'prod' !== $_SERVER['APP_ENV'];",
+                        "$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN) ? '1' : '0';",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "bin/console": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nuse App\\Kernel;\nuse Symfony\\Bundle\\FrameworkBundle\\Console\\Application;\nuse Symfony\\Component\\Console\\Input\\ArgvInput;\nuse Symfony\\Component\\Debug\\Debug;\n\nif (!in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {\n    echo 'Warning: The console should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;\n}\n\nset_time_limit(0);\n\nrequire dirname(__DIR__).'/vendor/autoload.php';\n\nif (!class_exists(Application::class)) {\n    throw new LogicException('You need to add \"symfony/framework-bundle\" as a Composer dependency.');\n}\n\n$input = new ArgvInput();\nif (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {\n    putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);\n}\n\nif ($input->hasParameterOption('--no-debug', true)) {\n    putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');\n}\n\nrequire dirname(__DIR__).'/config/bootstrap.php';\n\nif ($_SERVER['APP_DEBUG']) {\n    umask(0000);\n\n    if (class_exists(Debug::class)) {\n        Debug::enable();\n    }\n}\n\n$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);\n$application = new Application($kernel);\n$application->run($input);\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Console\\Application;",
+                        "use Symfony\\Component\\Console\\Input\\ArgvInput;",
+                        "use Symfony\\Component\\Debug\\Debug;",
+                        "",
+                        "if (!in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {",
+                        "    echo 'Warning: The console should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;",
+                        "}",
+                        "",
+                        "set_time_limit(0);",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (!class_exists(Application::class)) {",
+                        "    throw new LogicException('You need to add \"symfony/framework-bundle\" as a Composer dependency.');",
+                        "}",
+                        "",
+                        "$input = new ArgvInput();",
+                        "if (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {",
+                        "    putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);",
+                        "}",
+                        "",
+                        "if ($input->hasParameterOption('--no-debug', true)) {",
+                        "    putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');",
+                        "}",
+                        "",
+                        "require dirname(__DIR__).'/config/bootstrap.php';",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "",
+                        "    if (class_exists(Debug::class)) {",
+                        "        Debug::enable();",
+                        "    }",
+                        "}",
+                        "",
+                        "$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);",
+                        "$application = new Application($kernel);",
+                        "$application->run($input);",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "symfony/console:4.2@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "0a4841612ca4dd3464cbbe1e06b073c79ce7a7f2"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "willdurand/js-translation-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "02b720a49f6d36b44d557e0b18e48bf09e0a8e07"
-            }
-        }
-    },
     "manifests": {
         "willdurand/js-translation-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "willdurand/js-translation-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Bazinga\\Bundle\\JsTranslationBundle\\BazingaJsTranslationBundle": [
@@ -31,13 +17,15 @@
             },
             "files": {
                 "config/routes/js_translation.yaml": {
-                    "contents": "bazinga_js_translation:\n    resource: \"@BazingaJsTranslationBundle/Resources/config/routing/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "bazinga_js_translation:",
+                        "    resource: \"@BazingaJsTranslationBundle/Resources/config/routing/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "willdurand/js-translation-bundle:2.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "02b720a49f6d36b44d557e0b18e48bf09e0a8e07"
         }
     }
 }

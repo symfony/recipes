@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/crowdin-translation-provider": {
-            "version": "5.3",
-            "recipe": {
-                "repo": "5.3",
-                "branch": "master",
-                "version": "5.3",
-                "ref": "8acdcff2acee247e79f16ed0b2abc8fd53cf0d30"
-            }
-        }
-    },
     "manifests": {
         "symfony/crowdin-translation-provider": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/crowdin-translation-provider",
-            "version": "5.3",
             "manifest": {
                 "env": {
                     "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
                 }
             },
             "files": [],
-            "origin": "symfony/crowdin-translation-provider:5.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "8acdcff2acee247e79f16ed0b2abc8fd53cf0d30"
         }
     }
 }

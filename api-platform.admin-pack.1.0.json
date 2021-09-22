@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "api-platform/admin-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
-            }
-        }
-    },
     "manifests": {
         "api-platform/admin-pack": {
-            "repository": "github.com/symfony/recipes",
-            "package": "api-platform/admin-pack",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "assets/": "assets/",
@@ -43,23 +29,47 @@
             },
             "files": {
                 "templates/admin.html.twig": {
-                    "contents": "{% extends 'base.html.twig' %}\n\n{% block title %}API Platform Admin{% endblock %}\n\n{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}\n\n{% block javascripts %}\n    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>\n    {{ encore_entry_script_tags('admin') }}\n{% endblock %}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "{% extends 'base.html.twig' %}",
+                        "",
+                        "{% block title %}API Platform Admin{% endblock %}",
+                        "",
+                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
+                        "",
+                        "{% block javascripts %}",
+                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
+                        "    {{ encore_entry_script_tags('admin') }}",
+                        "{% endblock %}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/api_platform_admin.yaml": {
-                    "contents": "admin:\n    path: /admin\n    controller: Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController\n    defaults:\n        template: admin.html.twig\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "admin:",
+                        "    path: /admin",
+                        "    controller: Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+                        "    defaults:",
+                        "        template: admin.html.twig",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "assets/js/admin.js": {
-                    "contents": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { HydraAdmin } from '@api-platform/admin';\n\nconst entrypoint = document.getElementById('api-entrypoint').innerText;\n\nReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "import React from 'react';",
+                        "import ReactDOM from 'react-dom';",
+                        "import { HydraAdmin } from '@api-platform/admin';",
+                        "",
+                        "const entrypoint = document.getElementById('api-entrypoint').innerText;",
+                        "",
+                        "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "api-platform/admin-pack:1.0@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
         }
     }
 }

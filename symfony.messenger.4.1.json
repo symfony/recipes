@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony/messenger": {
-            "version": "4.1",
-            "recipe": {
-                "repo": "4.1",
-                "branch": "master",
-                "version": "4.1",
-                "ref": "fb924c94bcbf351a987da8a8125133e72e059472"
-            }
-        }
-    },
     "manifests": {
         "symfony/messenger": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/messenger",
-            "version": "4.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -46,13 +32,22 @@
             },
             "files": {
                 "config/packages/messenger.yaml": {
-                    "contents": "framework:\n    messenger:\n        transports:\n            # Uncomment the following line to enable a transport named \"amqp\"\n            # amqp: '%env(MESSENGER_TRANSPORT_DSN)%'\n\n        routing:\n            # Route your messages to the transports\n            # 'App\\Message\\YourMessage': amqp\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            # Uncomment the following line to enable a transport named \"amqp\"",
+                        "            # amqp: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "",
+                        "        routing:",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': amqp",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony/messenger:4.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "fb924c94bcbf351a987da8a8125133e72e059472"
         }
     }
 }

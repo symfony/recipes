@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "doctrine/doctrine-bundle": {
-            "version": "2.3",
-            "recipe": {
-                "repo": "2.3",
-                "branch": "master",
-                "version": "2.3",
-                "ref": "4f5eb542f01475cc2eb49624e2f1a3ea458e73bf"
-            }
-        }
-    },
     "manifests": {
         "doctrine/doctrine-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "doctrine/doctrine-bundle",
-            "version": "2.3",
             "manifest": {
                 "bundles": {
                     "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
@@ -75,33 +61,76 @@
             },
             "files": {
                 "src/Repository/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/doctrine.yaml": {
-                    "contents": "doctrine:\n    orm:\n        auto_generate_proxy_classes: false\n        query_cache_driver:\n            type: pool\n            pool: doctrine.system_cache_pool\n        result_cache_driver:\n            type: pool\n            pool: doctrine.result_cache_pool\n\nframework:\n    cache:\n        pools:\n            doctrine.result_cache_pool:\n                adapter: cache.app\n            doctrine.system_cache_pool:\n                adapter: cache.system\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        query_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.system_cache_pool",
+                        "        result_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.result_cache_pool",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/doctrine.yaml": {
-                    "contents": "doctrine:\n    dbal:\n        url: '%env(resolve:DATABASE_URL)%'\n\n        # IMPORTANT: You MUST configure your server version,\n        # either here or in the DATABASE_URL env var (see .env file)\n        #server_version: '13'\n    orm:\n        auto_generate_proxy_classes: true\n        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware\n        auto_mapping: true\n        mappings:\n            App:\n                is_bundle: false\n                type: annotation\n                dir: '%kernel.project_dir%/src/Entity'\n                prefix: 'App\\Entity'\n                alias: App\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #server_version: '13'",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/doctrine.yaml": {
-                    "contents": "doctrine:\n    dbal:\n        # \"TEST_TOKEN\" is typically set by ParaTest\n        dbname: 'main_test%env(default::TEST_TOKEN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        # \"TEST_TOKEN\" is typically set by ParaTest",
+                        "        dbname: 'main_test%env(default::TEST_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "doctrine/doctrine-bundle:2.3@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "4f5eb542f01475cc2eb49624e2f1a3ea458e73bf"
         }
     }
 }

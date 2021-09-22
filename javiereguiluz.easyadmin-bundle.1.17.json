@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "javiereguiluz/easyadmin-bundle": {
-            "version": "1.17",
-            "recipe": {
-                "repo": "1.17",
-                "branch": "master",
-                "version": "1.17",
-                "ref": "e58cc3a3956761ff41c27bc9847b145655494d42"
-            }
-        }
-    },
     "manifests": {
         "javiereguiluz/easyadmin-bundle": {
-            "repository": "github.com/symfony/recipes",
-            "package": "javiereguiluz/easyadmin-bundle",
-            "version": "1.17",
             "manifest": {
                 "bundles": {
                     "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
@@ -27,18 +13,29 @@
             },
             "files": {
                 "config/routes/easy_admin.yaml": {
-                    "contents": "easy_admin_bundle:\n    resource: '@EasyAdminBundle/Controller/AdminController.php'\n    prefix: /admin\n    type: annotation\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "easy_admin_bundle:",
+                        "    resource: '@EasyAdminBundle/Controller/AdminController.php'",
+                        "    prefix: /admin",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/easy_admin.yaml": {
-                    "contents": "#easy_admin:\n#    entities:\n#        # List the entity class name you want to manage\n#        - App\\Entity\\Product\n#        - App\\Entity\\Category\n#        - App\\Entity\\User\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "#easy_admin:",
+                        "#    entities:",
+                        "#        # List the entity class name you want to manage",
+                        "#        - App\\Entity\\Product",
+                        "#        - App\\Entity\\Category",
+                        "#        - App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "javiereguiluz/easyadmin-bundle:1.17@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "e58cc3a3956761ff41c27bc9847b145655494d42"
         }
     }
 }

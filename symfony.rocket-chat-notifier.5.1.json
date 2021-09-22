@@ -1,28 +1,13 @@
 {
-    "locks": {
-        "symfony/rocket-chat-notifier": {
-            "version": "5.1",
-            "recipe": {
-                "repo": "5.1",
-                "branch": "master",
-                "version": "5.1",
-                "ref": "ce742a1dce3babb1d22f325ff018044e7b355225"
-            }
-        }
-    },
     "manifests": {
         "symfony/rocket-chat-notifier": {
-            "repository": "github.com/symfony/recipes",
-            "package": "symfony/rocket-chat-notifier",
-            "version": "5.1",
             "manifest": {
                 "env": {
                     "#1": "ROCKETCHAT_DSN=rocketchat://ACCESS_TOKEN@default?channel=CHANNEL"
                 }
             },
             "files": [],
-            "origin": "symfony/rocket-chat-notifier:5.1@github.com/symfony/recipes:master",
-            "is_contrib": false
+            "ref": "ce742a1dce3babb1d22f325ff018044e7b355225"
         }
     }
 }
