@@ -1873,7 +1873,7 @@
     "is_contrib": false,
     "_links": {
         "repository": "github.com/symfony/recipes",
-        "origin_template": "{package}:{$version}@github.com/symfony/recipes:master",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:master",
         "recipe_template": "https://api.github.com/repos/symfony/recipes/contents/{package_dotted}.{version}.json?ref=flex/main"
     }
 }
