@@ -351,11 +351,12 @@ one used by ``symfony/framework-bundle``:
         },
         "composer-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "secrets:generate-keys": "symfony-cmd",
+            "secrets:set APP_SECRET --random": "symfony-cmd"
         },
         "env": {
-            "APP_ENV": "dev",
-            "APP_SECRET": "%generate(secret)%"
+            "APP_ENV": "dev"
         },
         "gitignore": [
             ".env",
