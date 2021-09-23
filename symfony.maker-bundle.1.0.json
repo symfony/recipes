@@ -6,12 +6,7 @@
                     "Symfony\\Bundle\\MakerBundle\\MakerBundle": [
                         "dev"
                     ]
-                },
-                "aliases": [
-                    "maker",
-                    "generator",
-                    "make"
-                ]
+                }
             },
             "files": [],
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"

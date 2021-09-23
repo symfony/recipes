@@ -9,13 +9,7 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "annotations",
-                    "annotation",
-                    "annot",
-                    "annots"
-                ]
+                }
             },
             "files": {
                 "config/packages/sensio_framework_extra.yaml": {

@@ -9,12 +9,7 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "admin-gen",
-                    "admin-generator",
-                    "admin"
-                ]
+                }
             },
             "files": {
                 "config/routes/easy_admin.yaml": {

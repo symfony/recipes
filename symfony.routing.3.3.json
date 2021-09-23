@@ -4,10 +4,7 @@
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "router"
-                ]
+                }
             },
             "files": {
                 "config/routes.yaml": {

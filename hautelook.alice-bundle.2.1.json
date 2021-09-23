@@ -2,9 +2,6 @@
     "manifests": {
         "hautelook/alice-bundle": {
             "manifest": {
-                "aliases": [
-                    "alice"
-                ],
                 "bundles": {
                     "Hautelook\\AliceBundle\\HautelookAliceBundle": [
                         "dev",

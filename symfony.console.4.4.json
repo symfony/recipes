@@ -5,10 +5,7 @@
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/",
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "cli"
-                ]
+                }
             },
             "files": {
                 "config/bootstrap.php": {

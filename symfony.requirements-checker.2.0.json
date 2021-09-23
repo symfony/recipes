@@ -4,14 +4,7 @@
             "manifest": {
                 "composer-scripts": {
                     "requirements-checker": "script"
-                },
-                "aliases": [
-                    "requirement-check",
-                    "requirement-checker",
-                    "req-checker",
-                    "req-check",
-                    "req-checks"
-                ]
+                }
             },
             "files": [],
             "ref": "02c6e4b9b117c39e8a23eab7f3840ef6e62293b9"

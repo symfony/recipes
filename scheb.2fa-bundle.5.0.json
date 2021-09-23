@@ -9,10 +9,7 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "2fa"
-                ]
+                }
             },
             "files": {
                 "config/routes/scheb_2fa.yaml": {

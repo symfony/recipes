@@ -9,14 +9,7 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "log",
-                    "logger",
-                    "logging",
-                    "logs",
-                    "monolog"
-                ]
+                }
             },
             "files": {
                 "config/packages/dev/monolog.yaml": {

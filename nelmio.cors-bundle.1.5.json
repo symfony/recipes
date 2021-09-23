@@ -12,10 +12,7 @@
                 },
                 "env": {
                     "CORS_ALLOW_ORIGIN": "'^https?://(localhost|127\\.0\\.0\\.1)(:[0-9]+)?$'"
-                },
-                "aliases": [
-                    "cors"
-                ]
+                }
             },
             "files": {
                 "config/packages/nelmio_cors.yaml": {

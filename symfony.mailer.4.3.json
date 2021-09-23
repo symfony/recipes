@@ -17,10 +17,6 @@
                         ]
                     }
                 },
-                "aliases": [
-                    "mailer",
-                    "mail"
-                ],
                 "post-install-output": [
                     "  * You're ready to send emails.",
                     "",

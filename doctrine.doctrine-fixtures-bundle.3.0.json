@@ -2,9 +2,6 @@
     "manifests": {
         "doctrine/doctrine-fixtures-bundle": {
             "manifest": {
-                "aliases": [
-                    "orm-fixtures"
-                ],
                 "bundles": {
                     "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": [
                         "dev",

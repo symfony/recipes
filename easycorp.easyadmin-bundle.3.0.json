@@ -6,12 +6,7 @@
                     "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
                         "all"
                     ]
-                },
-                "aliases": [
-                    "admin-gen",
-                    "admin-generator",
-                    "admin"
-                ]
+                }
             },
             "files": [],
             "ref": "b131e6cbfe1b898a508987851963fff485986285"

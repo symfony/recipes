@@ -340,9 +340,6 @@
         "api-platform/admin-pack": [
             "1.0"
         ],
-        "api-platform/api-pack": [
-            "1.0"
-        ],
         "api-platform/core": [
             "2.1",
             "2.5"
@@ -430,9 +427,6 @@
         "symfony/amazon-sns-notifier": [
             "5.4"
         ],
-        "symfony/amqp-pack": [
-            "1.0"
-        ],
         "symfony/clickatell-notifier": [
             "5.3"
         ],
@@ -449,9 +443,6 @@
         "symfony/debug-bundle": [
             "3.3",
             "4.1"
-        ],
-        "symfony/debug-pack": [
-            "1.0"
         ],
         "symfony/discord-notifier": [
             "5.2"
@@ -578,9 +569,6 @@
         "symfony/octopush-notifier": [
             "5.3"
         ],
-        "symfony/orm-pack": [
-            "1.0"
-        ],
         "symfony/ovh-cloud-notifier": [
             "5.1"
         ],
@@ -597,9 +585,6 @@
         "symfony/postmark-mailer": [
             "4.3",
             "4.4"
-        ],
-        "symfony/profiler-pack": [
-            "1.0"
         ],
         "symfony/psr7-pack": [
             "1.0"
@@ -634,9 +619,6 @@
         "symfony/sendinblue-notifier": [
             "5.2"
         ],
-        "symfony/serializer-pack": [
-            "1.0"
-        ],
         "symfony/sinch-notifier": [
             "5.1"
         ],
@@ -666,9 +648,6 @@
         "symfony/telnyx-notifier": [
             "5.4"
         ],
-        "symfony/test-pack": [
-            "1.0"
-        ],
         "symfony/translation": [
             "3.3",
             "5.3"
@@ -680,19 +659,12 @@
             "5.3",
             "5.4"
         ],
-        "symfony/twig-pack": [
-            "1.0"
-        ],
         "symfony/twilio-notifier": [
             "5.0"
         ],
         "symfony/validator": [
-            "3.3",
             "4.1",
             "4.3"
-        ],
-        "symfony/var-dumper": [
-            "3.3"
         ],
         "symfony/web-profiler-bundle": [
             "3.3"
@@ -718,9 +690,6 @@
             "1.0"
         ],
         "symfonycorp/platformsh-meta": [
-            "1.0"
-        ],
-        "symfonycorp/platformsh-pack": [
             "1.0"
         ],
         "theofidry/alice-data-fixtures": [

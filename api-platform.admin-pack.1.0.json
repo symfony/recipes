@@ -7,11 +7,6 @@
                     "config/": "%CONFIG_DIR%/",
                     "templates/": "templates/"
                 },
-                "aliases": [
-                    "api-admin",
-                    "api-platform-admin",
-                    "react-admin"
-                ],
                 "post-install-output": [
                     "  * Your admin is almost ready:",
                     "    1. Install the JavaScript dependencies by running <comment>yarn add @api-platform/admin @babel/preset-react</comment>",

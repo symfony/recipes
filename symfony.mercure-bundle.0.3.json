@@ -18,10 +18,7 @@
                     "MERCURE_PUBLIC_URL": "https://127.0.0.1:8000/.well-known/mercure",
                     "#4": "The secret used to sign the JWTs",
                     "MERCURE_JWT_SECRET": "!ChangeMe!"
-                },
-                "aliases": [
-                    "mercure"
-                ]
+                }
             },
             "files": {
                 "config/packages/mercure.yaml": {

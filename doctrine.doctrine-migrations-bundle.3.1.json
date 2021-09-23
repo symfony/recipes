@@ -10,11 +10,7 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "migrations/": "migrations/"
-                },
-                "aliases": [
-                    "doctrine-migrations",
-                    "migrations"
-                ]
+                }
             },
             "files": {
                 "config/packages/doctrine_migrations.yaml": {

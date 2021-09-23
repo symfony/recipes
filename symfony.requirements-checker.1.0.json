@@ -7,14 +7,7 @@
                 },
                 "composer-scripts": {
                     "requirements-checker": "script"
-                },
-                "aliases": [
-                    "requirement-check",
-                    "requirement-checker",
-                    "req-checker",
-                    "req-check",
-                    "req-checks"
-                ]
+                }
             },
             "files": {
                 "public/check.php": {

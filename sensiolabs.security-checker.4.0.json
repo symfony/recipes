@@ -7,14 +7,7 @@
                 },
                 "composer-scripts": {
                     "security-checker security:check": "script"
-                },
-                "aliases": [
-                    "security-check",
-                    "security-checker",
-                    "sec-checker",
-                    "sec-check",
-                    "sec-checks"
-                ]
+                }
             },
             "files": {
                 "config/packages/security_checker.yaml": {

@@ -4,12 +4,7 @@
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "twig-extensions",
-                    "twig-ext",
-                    "twig-exts"
-                ]
+                }
             },
             "files": {
                 "config/packages/twig_extensions.yaml": {

@@ -13,9 +13,6 @@
                     ".phpunit.result.cache",
                     "/phpunit.xml"
                 ],
-                "aliases": [
-                    "simple-phpunit"
-                ],
                 "post-install-output": [
                     "  * <fg=blue>Write</> test cases in the <comment>tests/</> folder",
                     "  * <fg=blue>Run</> <comment>php bin/phpunit</>"

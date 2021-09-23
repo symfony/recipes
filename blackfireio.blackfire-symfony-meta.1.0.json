@@ -23,9 +23,6 @@
                         ]
                     }
                 },
-                "aliases": [
-                    "blackfire"
-                ],
                 "post-install-output": [
                     "  * Blackfire Agent has been configured in your <comment>docker-compose.override.yaml</> file",
                     "",

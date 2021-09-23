@@ -2,10 +2,6 @@
     "manifests": {
         "friendsofphp/php-cs-fixer": {
             "manifest": {
-                "aliases": [
-                    "cs-fixer",
-                    "php-cs-fixer"
-                ],
                 "copy-from-recipe": {
                     ".php_cs.dist": ".php_cs.dist"
                 },

@@ -4,10 +4,7 @@
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "aliases": [
-                    "validation"
-                ]
+                }
             },
             "files": {
                 "config/packages/validator.yaml": {
