@@ -1,4 +1,4 @@
-name: Run checks
+name: Q&A
 
 on:
     pull_request_target:
@@ -208,3 +208,49 @@ jobs:
                         | sed 's/\(.*\):\([0-9]*\)$/\\n::error file=\1,line=\2::Symfony commands should not be wrapped in a Makefile/' || true)
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
+
+    create-project:
+        needs: tests
+        name: Run updated recipes
+        runs-on: Ubuntu-20.04
+
+        steps:
+            -
+                name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "7.4"
+
+            -
+                name: Export configuration
+                continue-on-error: true
+                id: config
+                run: |
+                    PACKAGES=$(curl -s https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json | jq -r '.recipes | to_entries | map(.key+":^"+.value[-1]) | join(" ")')
+                    echo PACKAGES=$PACKAGES >> $GITHUB_ENV
+                    [[ "" != "$PACKAGES" ]]
+
+            -
+                name: Create-project with skeleton ^4
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    composer create-project --ansi "symfony/skeleton:^4" v4
+                    cd v4
+                    composer config minimum-stability dev
+                    composer require --ansi "symfony/flex:^1.16"
+                    export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
+                    composer require --ansi $PACKAGES
+
+            -
+                name: Create-project with skeleton ^5
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    composer create-project --ansi "symfony/skeleton:^5" v5
+                    cd v5
+                    composer config minimum-stability dev
+                    composer require --ansi "symfony/flex:^1.16"
+                    export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
+                    composer require --ansi $PACKAGES
