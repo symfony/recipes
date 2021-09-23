@@ -67,7 +67,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     find * -mindepth 1 -maxdepth 1 -type d | sort \
-                        | .github/recipes-checker-main/run diff-recipe-versions https://github.com/${{ github.repository }}/raw/flex/pull-${{ github.event.number }}/index.json \
+                        | .github/recipes-checker-main/run diff-recipe-versions 'https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}' \
                         > .github/diff-recipe-versions.md
 
             -
