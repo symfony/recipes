@@ -239,9 +239,8 @@ jobs:
                     composer create-project --ansi "symfony/skeleton:^4" v4
                     cd v4
                     composer config minimum-stability dev
-                    composer require --ansi "symfony/flex:^1.16"
                     export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
-                    composer require --ansi $PACKAGES
+                    composer require -W --ansi $PACKAGES
 
             -
                 name: Create-project with skeleton ^5
@@ -251,6 +250,5 @@ jobs:
                     composer create-project --ansi "symfony/skeleton:^5" v5
                     cd v5
                     composer config minimum-stability dev
-                    composer require --ansi "symfony/flex:^1.16"
                     export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
-                    composer require --ansi $PACKAGES
+                    composer require -W --ansi $PACKAGES
