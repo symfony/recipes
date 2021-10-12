@@ -8,11 +8,40 @@
     "env": {
         "#1": "See https://symfony.com/doc/current/mercure.html#configuration",
         "#2": "The URL of the Mercure hub, used by the app to publish updates (can be a local URL)",
-        "MERCURE_URL": "https://127.0.0.1:8000/.well-known/mercure",
+        "MERCURE_URL": "https://example.com/.well-known/mercure",
         "#3": "The public URL of the Mercure hub, used by the browser to connect",
-        "MERCURE_PUBLIC_URL": "https://127.0.0.1:8000/.well-known/mercure",
+        "MERCURE_PUBLIC_URL": "https://example.com/.well-known/mercure",
         "#4": "The secret used to sign the JWTs",
         "MERCURE_JWT_SECRET": "!ChangeMe!"
+    },
+    "docker-compose": {
+        "docker-compose.yml": {
+            "services": [
+                "mercure:",
+                "  image: dunglas/mercure",
+                "  restart: unless-stopped",
+                "  environment:",
+                "    SERVER_NAME: ':80'",
+                "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeMe!'",
+                "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeMe!'",
+                "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
+                "    MERCURE_EXTRA_DIRECTIVES: |",
+                "      cors_origins http://127.0.0.1:8000",
+                "  # Comment the following line to disable the development mode",
+                "  command: /usr/bin/caddy run -config /etc/caddy/Caddyfile.dev",
+                "  volumes:",
+                "    - mercure_data:/data",
+                "    - mercure_config:/config"
+            ],
+            "volumes": ["mercure_data:", "mercure_config:"]
+        },
+        "docker-compose.override.yml": {
+            "services": [
+                "mercure:",
+                "  ports:",
+                "    - \"80\""
+            ]
+        }
     },
     "aliases": ["mercure"]
 }
