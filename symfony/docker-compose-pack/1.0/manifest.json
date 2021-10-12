@@ -1,0 +1,7 @@
+{
+    "copy-from-recipe": {
+        "docker-compose.yml": "docker-compose.yml",
+        "docker-compose.override.yml": "docker-compose.override.yml"
+    },
+    "aliases": ["docker-compose"]
+}
