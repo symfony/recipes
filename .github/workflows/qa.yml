@@ -89,7 +89,7 @@ jobs:
                 name: No .yml, use .yaml
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    YMLS=$(find * -name '*.yml')
+                    YMLS=$(find * -name '*.yml' ! -name 'docker-compose.*')
 
                     if [[ "" != "$YMLS" ]]; then echo -e "::error::*.yml files should renamed to *.yaml\nFound $YMLS\n"; exit 1; fi
 
