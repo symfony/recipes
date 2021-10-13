@@ -13,6 +13,33 @@
                 }
             },
             "files": {
+                "config/routes/dev/twig.yaml": {
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    default_path: '%kernel.project_dir%/templates'",
+                        "    debug: '%kernel.debug%'",
+                        "    strict_variables: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "templates/base.html.twig": {
                     "contents": [
                         "<!DOCTYPE html>",
@@ -34,33 +61,6 @@
                         "        {% block body %}{% endblock %}",
                         "    </body>",
                         "</html>",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/dev/twig.yaml": {
-                    "contents": [
-                        "_errors:",
-                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
-                        "    prefix: /_error",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/twig.yaml": {
-                    "contents": [
-                        "twig:",
-                        "    default_path: '%kernel.project_dir%/templates'",
-                        "    debug: '%kernel.debug%'",
-                        "    strict_variables: '%kernel.debug%'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/test/twig.yaml": {
-                    "contents": [
-                        "twig:",
-                        "    strict_variables: true",
                         ""
                     ],
                     "executable": false

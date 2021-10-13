@@ -69,6 +69,14 @@
                     ],
                     "executable": false
                 },
+                "config/packages/test/webpack_encore.yaml": {
+                    "contents": [
+                        "#webpack_encore:",
+                        "#    strict_mode: false",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/prod/webpack_encore.yaml": {
                     "contents": [
                         "#webpack_encore:",
@@ -79,60 +87,11 @@
                     ],
                     "executable": false
                 },
-                "config/packages/test/webpack_encore.yaml": {
-                    "contents": [
-                        "#webpack_encore:",
-                        "#    strict_mode: false",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/assets.yaml": {
                     "contents": [
                         "framework:",
                         "    assets:",
                         "        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "package.json": {
-                    "contents": [
-                        "{",
-                        "    \"devDependencies\": {",
-                        "        \"@symfony/stimulus-bridge\": \"^2.0.0\",",
-                        "        \"@symfony/webpack-encore\": \"^1.0.0\",",
-                        "        \"core-js\": \"^3.0.0\",",
-                        "        \"regenerator-runtime\": \"^0.13.2\",",
-                        "        \"stimulus\": \"^2.0.0\",",
-                        "        \"webpack-notifier\": \"^1.6.0\"",
-                        "    },",
-                        "    \"license\": \"UNLICENSED\",",
-                        "    \"private\": true,",
-                        "    \"scripts\": {",
-                        "        \"dev-server\": \"encore dev-server\",",
-                        "        \"dev\": \"encore dev\",",
-                        "        \"watch\": \"encore dev --watch\",",
-                        "        \"build\": \"encore production --progress\"",
-                        "    }",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "assets/bootstrap.js": {
-                    "contents": [
-                        "import { startStimulusApp } from '@symfony/stimulus-bridge';",
-                        "",
-                        "// Registers Stimulus controllers from controllers.json and in the controllers/ directory",
-                        "export const app = startStimulusApp(require.context(",
-                        "    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',",
-                        "    true,",
-                        "    /\\.(j|t)sx?$/",
-                        "));",
-                        "",
-                        "// register any custom, 3rd party controllers here",
-                        "// app.register('some_controller_name', SomeImportedController);",
                         ""
                     ],
                     "executable": false
@@ -192,6 +151,47 @@
                         "",
                         "// start the Stimulus application",
                         "import './bootstrap';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/bootstrap.js": {
+                    "contents": [
+                        "import { startStimulusApp } from '@symfony/stimulus-bridge';",
+                        "",
+                        "// Registers Stimulus controllers from controllers.json and in the controllers/ directory",
+                        "export const app = startStimulusApp(require.context(",
+                        "    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',",
+                        "    true,",
+                        "    /\\.(j|t)sx?$/",
+                        "));",
+                        "",
+                        "// register any custom, 3rd party controllers here",
+                        "// app.register('some_controller_name', SomeImportedController);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "package.json": {
+                    "contents": [
+                        "{",
+                        "    \"devDependencies\": {",
+                        "        \"@symfony/stimulus-bridge\": \"^2.0.0\",",
+                        "        \"@symfony/webpack-encore\": \"^1.0.0\",",
+                        "        \"core-js\": \"^3.0.0\",",
+                        "        \"regenerator-runtime\": \"^0.13.2\",",
+                        "        \"stimulus\": \"^2.0.0\",",
+                        "        \"webpack-notifier\": \"^1.6.0\"",
+                        "    },",
+                        "    \"license\": \"UNLICENSED\",",
+                        "    \"private\": true,",
+                        "    \"scripts\": {",
+                        "        \"dev-server\": \"encore dev-server\",",
+                        "        \"dev\": \"encore dev\",",
+                        "        \"watch\": \"encore dev --watch\",",
+                        "        \"build\": \"encore production --progress\"",
+                        "    }",
+                        "}",
                         ""
                     ],
                     "executable": false

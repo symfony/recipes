@@ -12,7 +12,7 @@
                 }
             },
             "files": {
-                "config/packages/dev/monolog.yaml": {
+                "config/packages/test/monolog.yaml": {
                     "contents": [
                         "monolog:",
                         "    handlers:",
@@ -21,18 +21,6 @@
                         "            path: \"%kernel.logs_dir%/%kernel.environment%.log\"",
                         "            level: debug",
                         "            channels: [\"!event\"]",
-                        "        # uncomment to get logging in your browser",
-                        "        # you may have to allow bigger header sizes in your Web server configuration",
-                        "        #firephp:",
-                        "        #    type: firephp",
-                        "        #    level: info",
-                        "        #chromephp:",
-                        "        #    type: chromephp",
-                        "        #    level: info",
-                        "        console:",
-                        "            type: console",
-                        "            process_psr_3_messages: false",
-                        "            channels: [\"!event\", \"!doctrine\", \"!console\"]",
                         ""
                     ],
                     "executable": false
@@ -75,7 +63,7 @@
                     ],
                     "executable": false
                 },
-                "config/packages/test/monolog.yaml": {
+                "config/packages/dev/monolog.yaml": {
                     "contents": [
                         "monolog:",
                         "    handlers:",
@@ -84,6 +72,18 @@
                         "            path: \"%kernel.logs_dir%/%kernel.environment%.log\"",
                         "            level: debug",
                         "            channels: [\"!event\"]",
+                        "        # uncomment to get logging in your browser",
+                        "        # you may have to allow bigger header sizes in your Web server configuration",
+                        "        #firephp:",
+                        "        #    type: firephp",
+                        "        #    level: info",
+                        "        #chromephp:",
+                        "        #    type: chromephp",
+                        "        #    level: info",
+                        "        console:",
+                        "            type: console",
+                        "            process_psr_3_messages: false",
+                        "            channels: [\"!event\", \"!doctrine\", \"!console\"]",
                         ""
                     ],
                     "executable": false

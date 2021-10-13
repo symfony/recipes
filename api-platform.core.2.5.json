@@ -23,12 +23,6 @@
                 ]
             },
             "files": {
-                "src/Entity/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/api_platform.yaml": {
                     "contents": [
                         "api_platform:",
@@ -48,6 +42,12 @@
                         "        json: ['application/merge-patch+json']",
                         "    swagger:",
                         "        versions: [3]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

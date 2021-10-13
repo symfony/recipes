@@ -60,41 +60,6 @@
                 ]
             },
             "files": {
-                "src/Repository/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Entity/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/prod/doctrine.yaml": {
-                    "contents": [
-                        "doctrine:",
-                        "    orm:",
-                        "        auto_generate_proxy_classes: false",
-                        "        query_cache_driver:",
-                        "            type: pool",
-                        "            pool: doctrine.system_cache_pool",
-                        "        result_cache_driver:",
-                        "            type: pool",
-                        "            pool: doctrine.result_cache_pool",
-                        "",
-                        "framework:",
-                        "    cache:",
-                        "        pools:",
-                        "            doctrine.result_cache_pool:",
-                        "                adapter: cache.app",
-                        "            doctrine.system_cache_pool:",
-                        "                adapter: cache.system",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/doctrine.yaml": {
                     "contents": [
                         "doctrine:",
@@ -125,6 +90,41 @@
                         "    dbal:",
                         "        # \"TEST_TOKEN\" is typically set by ParaTest",
                         "        dbname: 'main_test%env(default::TEST_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        query_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.system_cache_pool",
+                        "        result_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.result_cache_pool",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

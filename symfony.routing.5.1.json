@@ -16,15 +16,6 @@
                     ],
                     "executable": false
                 },
-                "config/packages/prod/routing.yaml": {
-                    "contents": [
-                        "framework:",
-                        "    router:",
-                        "        strict_requirements: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/routing.yaml": {
                     "contents": [
                         "framework:",
@@ -34,6 +25,15 @@
                         "        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.",
                         "        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands",
                         "        #default_uri: http://localhost",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
                         ""
                     ],
                     "executable": false

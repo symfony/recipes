@@ -19,16 +19,6 @@
                 ]
             },
             "files": {
-                "config/packages/dev/zenstruck_foundry.yaml": {
-                    "contents": [
-                        "# See full configuration: https://github.com/zenstruck/foundry#full-default-bundle-configuration",
-                        "zenstruck_foundry:",
-                        "    # Whether to auto-refresh proxies by default (https://github.com/zenstruck/foundry#auto-refresh)",
-                        "    auto_refresh_proxies: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/test/zenstruck_foundry.yaml": {
                     "contents": [
                         "# Unless you want different configuration for test/dev environments,",
@@ -36,6 +26,16 @@
                         "# and this will be synced to your test environment.",
                         "imports:",
                         "    - { resource: ../dev/zenstruck_foundry.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "# See full configuration: https://github.com/zenstruck/foundry#full-default-bundle-configuration",
+                        "zenstruck_foundry:",
+                        "    # Whether to auto-refresh proxies by default (https://github.com/zenstruck/foundry#auto-refresh)",
+                        "    auto_refresh_proxies: true",
                         ""
                     ],
                     "executable": false

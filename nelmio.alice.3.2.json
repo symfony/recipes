@@ -13,6 +13,14 @@
                 }
             },
             "files": {
+                "config/packages/test/nelmio_alice.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: ../dev/nelmio_alice.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/dev/nelmio_alice.yaml": {
                     "contents": [
                         "nelmio_alice:",
@@ -24,14 +32,6 @@
                         "        - 'file'",
                         "        - 'md5'",
                         "        - 'sha1'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/test/nelmio_alice.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: ../dev/nelmio_alice.yaml }",
                         ""
                     ],
                     "executable": false

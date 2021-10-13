@@ -7,6 +7,7 @@
         "admingen": "easycorp/easyadmin-bundle",
         "admingenerator": "easycorp/easyadmin-bundle",
         "alice": "hautelook/alice-bundle",
+        "all-my-sms-notifier": "symfony/all-my-sms-notifier",
         "allmysms-notifier": "symfony/allmysms-notifier",
         "allmysmsnotifier": "symfony/allmysms-notifier",
         "amazon-mailer": "symfony/amazon-mailer",
@@ -36,8 +37,6 @@
         "browser-kit": "symfony/browser-kit",
         "browserkit": "symfony/browser-kit",
         "cache": "symfony/cache",
-        "class-loader": "symfony/class-loader",
-        "classloader": "symfony/class-loader",
         "cli": "symfony/console",
         "clickatell-notifier": "symfony/clickatell-notifier",
         "clickatellnotifier": "symfony/clickatell-notifier",
@@ -94,6 +93,7 @@
         "frameworkbundle": "symfony/framework-bundle",
         "free-mobile-notifier": "symfony/free-mobile-notifier",
         "freemobilenotifier": "symfony/free-mobile-notifier",
+        "gateway-api-notifier": "symfony/gateway-api-notifier",
         "gatewayapi-notifier": "symfony/gatewayapi-notifier",
         "gatewayapinotifier": "symfony/gatewayapi-notifier",
         "generator": "symfony/maker-bundle",
@@ -113,9 +113,7 @@
         "infobip-notifier": "symfony/infobip-notifier",
         "infobipnotifier": "symfony/infobip-notifier",
         "intl": "symfony/intl",
-        "iqsms-notifer": "symfony/iqsms-notifer",
         "iqsms-notifier": "symfony/iqsms-notifier",
-        "iqsmsnotifer": "symfony/iqsms-notifer",
         "iqsmsnotifier": "symfony/iqsms-notifier",
         "js-translation": "willdurand/js-translation-bundle",
         "js-translator": "willdurand/js-translation-bundle",
@@ -145,7 +143,9 @@
         "mailgun-mailer": "symfony/mailgun-mailer",
         "mailgunmailer": "symfony/mailgun-mailer",
         "mailjet-mailer": "symfony/mailjet-mailer",
+        "mailjet-notifier": "symfony/mailjet-notifier",
         "mailjetmailer": "symfony/mailjet-mailer",
+        "mailjetnotifier": "symfony/mailjet-notifier",
         "make": "symfony/maker-bundle",
         "maker": "symfony/maker-bundle",
         "maker-bundle": "symfony/maker-bundle",
@@ -178,6 +178,8 @@
         "notifier": "symfony/notifier",
         "octopush-notifier": "symfony/octopush-notifier",
         "octopushnotifier": "symfony/octopush-notifier",
+        "oh-my-smtp-mailer": "symfony/oh-my-smtp-mailer",
+        "ohmysmtpmailer": "symfony/oh-my-smtp-mailer",
         "options-resolver": "symfony/options-resolver",
         "optionsresolver": "symfony/options-resolver",
         "orm": "symfony/orm-pack",
@@ -269,6 +271,8 @@
         "slack-notifier": "symfony/slack-notifier",
         "slacknotifier": "symfony/slack-notifier",
         "sms-biuras-notifier": "symfony/sms-biuras-notifier",
+        "sms77-notifier": "symfony/sms77-notifier",
+        "sms77notifier": "symfony/sms77-notifier",
         "smsapi-notifier": "symfony/smsapi-notifier",
         "smsapinotifier": "symfony/smsapi-notifier",
         "smsbiurasnotifier": "symfony/sms-biuras-notifier",
@@ -293,6 +297,8 @@
         "translation": "symfony/translation",
         "translations": "symfony/translation",
         "translator": "symfony/translation",
+        "turbo-sms-notifier": "symfony/turbo-sms-notifier",
+        "turbosmsnotifier": "symfony/turbo-sms-notifier",
         "twig": "symfony/twig-pack",
         "twig-bridge": "symfony/twig-bridge",
         "twig-bundle": "symfony/twig-bundle",
@@ -630,6 +636,9 @@
         "symfony/sms-biuras-notifier": [
             "5.3"
         ],
+        "symfony/sms77-notifier": [
+            "5.4"
+        ],
         "symfony/smsapi-notifier": [
             "5.2"
         ],
@@ -722,91 +731,53 @@
         "dev": "5.4",
         "dev-name": "5.4",
         "splits": {
-            "symfony/allmysms-notifier": [
+            "symfony/all-my-sms-notifier": [
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/amazon-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
+            "symfony/amazon-sns-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/amazon-sqs-messenger": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/amqp-messenger": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/asset": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/beanstalkd-messenger": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/browser-kit": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/cache": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
-            ],
-            "symfony/class-loader": [
-                "2.7",
-                "2.8",
-                "3.4"
             ],
             "symfony/clickatell-notifier": [
                 "5.3",
@@ -814,39 +785,22 @@
                 "6.0"
             ],
             "symfony/config": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/console": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/contracts": [
-                "5.4"
+                "4.4",
+                "5.3",
+                "5.4",
+                "6.0"
             ],
             "symfony/crowdin-translation-provider": [
                 "5.3",
@@ -854,165 +808,73 @@
                 "6.0"
             ],
             "symfony/css-selector": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/debug": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4"
             ],
             "symfony/debug-bundle": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/dependency-injection": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/discord-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/doctrine-bridge": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/doctrine-messenger": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/dom-crawler": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/dotenv": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/error-handler": [
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/esendex-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/event-dispatcher": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/expression-language": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1028,84 +890,40 @@
                 "6.0"
             ],
             "symfony/filesystem": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/finder": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/firebase-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/form": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/framework-bundle": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/free-mobile-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
-            "symfony/gatewayapi-notifier": [
+            "symfony/gateway-api-notifier": [
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1116,114 +934,57 @@
                 "6.0"
             ],
             "symfony/google-chat-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/google-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/http-client": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/http-foundation": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/http-kernel": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/inflector": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4"
             ],
             "symfony/infobip-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/intl": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
-            "symfony/iqsms-notifer": [
+            "symfony/iqsms-notifier": [
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/ldap": [
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1234,21 +995,12 @@
                 "6.0"
             ],
             "symfony/linked-in-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/lock": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1264,44 +1016,33 @@
                 "6.0"
             ],
             "symfony/mailchimp-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/mailgun-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/mailjet-mailer": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
+            "symfony/mailjet-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/mattermost-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1316,14 +1057,12 @@
                 "5.4",
                 "6.0"
             ],
+            "symfony/message-media-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/messenger": [
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1334,49 +1073,28 @@
                 "6.0"
             ],
             "symfony/mime": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/mobyt-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/monolog-bridge": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/nexmo-notifier": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/notifier": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1386,25 +1104,17 @@
                 "5.4",
                 "6.0"
             ],
+            "symfony/oh-my-smtp-mailer": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/options-resolver": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/ovh-cloud-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1415,110 +1125,52 @@
                 "6.0"
             ],
             "symfony/postmark-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/process": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/property-access": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/property-info": [
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/proxy-manager-bridge": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/rate-limiter": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/redis-messenger": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/rocket-chat-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/routing": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1529,149 +1181,70 @@
                 "6.0"
             ],
             "symfony/security": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4"
             ],
             "symfony/security-bundle": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/security-core": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/security-csrf": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/security-guard": [
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
-                "5.4",
-                "6.0"
+                "5.4"
             ],
             "symfony/security-http": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/semaphore": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/sendgrid-mailer": [
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/sendinblue-mailer": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/sendinblue-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/serializer": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/sinch-notifier": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/slack-notifier": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
@@ -1682,8 +1255,11 @@
                 "6.0"
             ],
             "symfony/smsapi-notifier": [
-                "5.2",
                 "5.3",
+                "5.4",
+                "6.0"
+            ],
+            "symfony/smsc-notifier": [
                 "5.4",
                 "6.0"
             ],
@@ -1693,229 +1269,113 @@
                 "6.0"
             ],
             "symfony/stopwatch": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/string": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/telegram-notifier": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
+            "symfony/telnyx-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/templating": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/translation": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
+            "symfony/turbo-sms-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/twig-bridge": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/twig-bundle": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/twilio-notifier": [
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/uid": [
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/validator": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/var-dumper": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/var-exporter": [
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/web-link": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/web-profiler-bundle": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/web-server-bundle": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4"
             ],
             "symfony/workflow": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
             "symfony/yaml": [
-                "2.7",
-                "2.8",
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
                 "4.4",
-                "5.0",
-                "5.1",
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"
             ],
+            "symfony/yunpian-notifier": [
+                "5.4",
+                "6.0"
+            ],
             "symfony/zulip-notifier": [
-                "5.2",
                 "5.3",
                 "5.4",
                 "6.0"

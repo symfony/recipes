@@ -16,20 +16,20 @@
                     ],
                     "executable": false
                 },
-                "config/packages/prod/routing.yaml": {
-                    "contents": [
-                        "framework:",
-                        "    router:",
-                        "        strict_requirements: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/routing.yaml": {
                     "contents": [
                         "framework:",
                         "    router:",
                         "        utf8: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
                         ""
                     ],
                     "executable": false

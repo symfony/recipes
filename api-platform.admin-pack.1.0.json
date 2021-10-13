@@ -23,22 +23,6 @@
                 ]
             },
             "files": {
-                "templates/admin.html.twig": {
-                    "contents": [
-                        "{% extends 'base.html.twig' %}",
-                        "",
-                        "{% block title %}API Platform Admin{% endblock %}",
-                        "",
-                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
-                        "",
-                        "{% block javascripts %}",
-                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
-                        "    {{ encore_entry_script_tags('admin') }}",
-                        "{% endblock %}",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/api_platform_admin.yaml": {
                     "contents": [
                         "admin:",
@@ -59,6 +43,22 @@
                         "const entrypoint = document.getElementById('api-entrypoint').innerText;",
                         "",
                         "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin.html.twig": {
+                    "contents": [
+                        "{% extends 'base.html.twig' %}",
+                        "",
+                        "{% block title %}API Platform Admin{% endblock %}",
+                        "",
+                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
+                        "",
+                        "{% block javascripts %}",
+                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
+                        "    {{ encore_entry_script_tags('admin') }}",
+                        "{% endblock %}",
                         ""
                     ],
                     "executable": false

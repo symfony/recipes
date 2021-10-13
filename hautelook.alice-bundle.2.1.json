@@ -18,18 +18,18 @@
                 ]
             },
             "files": {
-                "config/packages/dev/hautelook_alice.yaml": {
-                    "contents": [
-                        "hautelook_alice:",
-                        "    fixtures_path: fixtures",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/test/hautelook_alice.yaml": {
                     "contents": [
                         "imports:",
                         "    - { resource: ../dev/hautelook_alice.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/hautelook_alice.yaml": {
+                    "contents": [
+                        "hautelook_alice:",
+                        "    fixtures_path: fixtures",
                         ""
                     ],
                     "executable": false
