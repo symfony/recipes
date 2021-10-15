@@ -38,7 +38,7 @@ jobs:
                 name: Update Flex endpoint
                 run: |
                     mkdir .github/flex-endpoint
-                    git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-endpoint ${{ github.repository }} master flex/main .github/flex-endpoint
+                    git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-endpoint ${{ github.repository }} master flex/main .github/flex-endpoint .github/versions.json
                     git switch flex/main
                     git rm -q *.json
                     mv .github/flex-endpoint/*.json .
