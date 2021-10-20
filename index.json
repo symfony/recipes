@@ -326,6 +326,9 @@
         "web-profiler-bundle": "symfony/web-profiler-bundle",
         "web-server": "symfony/web-server-bundle",
         "web-server-bundle": "symfony/web-server-bundle",
+        "webapp": "symfony/webapp-pack",
+        "webapp-meta": "symfony/webapp-meta",
+        "webappmeta": "symfony/webapp-meta",
         "weblink": "symfony/web-link",
         "webpack": "symfony/webpack-encore-bundle",
         "webpack-encore": "symfony/webpack-encore-bundle",
@@ -682,6 +685,9 @@
         "symfony/web-server-bundle": [
             "3.3"
         ],
+        "symfony/webapp-meta": [
+            "1.0"
+        ],
         "symfony/webpack-encore-bundle": [
             "1.0",
             "1.6",
@@ -697,9 +703,6 @@
             "5.2"
         ],
         "symfonycasts/reset-password-bundle": [
-            "1.0"
-        ],
-        "symfonycorp/platformsh-meta": [
             "1.0"
         ],
         "theofidry/alice-data-fixtures": [

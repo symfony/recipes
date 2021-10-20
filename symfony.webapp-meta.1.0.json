@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "symfonycorp/platformsh-meta": {
+        "symfony/webapp-meta": {
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
