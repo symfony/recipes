@@ -6,7 +6,7 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=false"
+                    "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
                 }
             },
             "files": {
@@ -41,7 +41,7 @@
                     "executable": false
                 }
             },
-            "ref": "80f2126c6d6929ede1d19a2b861733467674ee45"
+            "ref": "67cae591d131c133d63b893c5324796b88c59b34"
         }
     }
 }
