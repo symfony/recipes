@@ -24,7 +24,7 @@
                         "",
                         "class AppFixtures extends Fixture",
                         "{",
-                        "    public function load(ObjectManager $manager)",
+                        "    public function load(ObjectManager $manager): void",
                         "    {",
                         "        // $product = new Product();",
                         "        // $manager->persist($product);",
@@ -37,7 +37,7 @@
                     "executable": false
                 }
             },
-            "ref": "e5b542d4ef47d8a003c91beb35650c76907f7e53"
+            "ref": "1f5514cfa15b947298df4d771e694e578d4c204d"
         }
     }
 }
