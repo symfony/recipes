@@ -17,7 +17,7 @@
                     "#3": "",
                     "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data.db\"",
                     "#5": "DATABASE_URL=\"mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7\"",
-                    "DATABASE_URL": "postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
+                    "DATABASE_URL": "postgresql://symfony:ChangeMe@127.0.0.1:5432/app?serverVersion=13&charset=utf8"
                 },
                 "dockerfile": [
                     "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \\",
@@ -130,7 +130,7 @@
                     "executable": false
                 }
             },
-            "ref": "bac5c852ff628886de2753215fe5eb1f9ce980fb"
+            "ref": "032f52ed50a27762b78ca6a2aaf432958c473553"
         }
     }
 }
