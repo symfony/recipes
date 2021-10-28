@@ -78,6 +78,8 @@
         "esendexnotifier": "symfony/esendex-notifier",
         "event-dispatcher": "symfony/event-dispatcher",
         "eventdispatcher": "symfony/event-dispatcher",
+        "expo-notifier": "symfony/expo-notifier",
+        "exponotifier": "symfony/expo-notifier",
         "expression-language": "symfony/expression-language",
         "expressionlanguage": "symfony/expression-language",
         "fake-chat-notifier": "symfony/fake-chat-notifier",
@@ -181,6 +183,8 @@
         "octopushnotifier": "symfony/octopush-notifier",
         "oh-my-smtp-mailer": "symfony/oh-my-smtp-mailer",
         "ohmysmtpmailer": "symfony/oh-my-smtp-mailer",
+        "one-signal-notifier": "symfony/one-signal-notifier",
+        "onesignalnotifier": "symfony/one-signal-notifier",
         "options-resolver": "symfony/options-resolver",
         "optionsresolver": "symfony/options-resolver",
         "orm": "symfony/orm-pack",
@@ -991,6 +995,9 @@
                 "5.4",
                 "6.0"
             ],
+            "symfony/expo-notifier": [
+                "5.4"
+            ],
             "symfony/expression-language": [
                 "3.4",
                 "4.0",
@@ -1298,8 +1305,6 @@
                 "6.0"
             ],
             "symfony/messenger": [
-                "3.4",
-                "4.0",
                 "4.1",
                 "4.2",
                 "4.3",
@@ -1368,6 +1373,10 @@
                 "6.0"
             ],
             "symfony/oh-my-smtp-mailer": [
+                "5.4",
+                "6.0"
+            ],
+            "symfony/one-signal-notifier": [
                 "5.4",
                 "6.0"
             ],
@@ -1769,13 +1778,6 @@
                 "6.0"
             ],
             "symfony/uid": [
-                "3.4",
-                "4.0",
-                "4.1",
-                "4.2",
-                "4.3",
-                "4.4",
-                "5.0",
                 "5.1",
                 "5.2",
                 "5.3",
