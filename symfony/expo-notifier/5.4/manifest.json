@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "EXPO_DSN=expo://TOKEN@default"
+    }
+}
