@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ONESIGNAL_DSN=onesignal://APP_ID:API_KEY@default?defaultRecipientId=DEFAULT_RECIPIENT_ID"
+    }
+}
