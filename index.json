@@ -586,6 +586,9 @@
         "symfony/octopush-notifier": [
             "5.3"
         ],
+        "symfony/one-signal-notifier": [
+            "5.4"
+        ],
         "symfony/ovh-cloud-notifier": [
             "5.1"
         ],
