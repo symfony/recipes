@@ -464,6 +464,9 @@
         "symfony/esendex-notifier": [
             "5.2"
         ],
+        "symfony/expo-notifier": [
+            "5.4"
+        ],
         "symfony/fake-chat-notifier": [
             "5.3"
         ],
