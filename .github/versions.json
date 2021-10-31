@@ -263,7 +263,8 @@
             "6.0"
         ],
         "symfony/expo-notifier": [
-            "5.4"
+            "5.4",
+            "6.0"
         ],
         "symfony/expression-language": [
             "3.4",
@@ -572,6 +573,8 @@
             "6.0"
         ],
         "symfony/messenger": [
+            "3.4",
+            "4.0",
             "4.1",
             "4.2",
             "4.3",
