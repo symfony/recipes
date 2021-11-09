@@ -12,6 +12,6 @@ import { Controller } from 'stimulus';
  */
 export default class extends Controller {
     connect() {
-        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';
+        this.element.textContent = 'Hello Stimulus! Edit me in assets/stimulus_controllers/hello_controller.js';
     }
 }
