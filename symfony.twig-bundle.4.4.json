@@ -13,14 +13,6 @@
                 }
             },
             "files": {
-                "config/packages/test/twig.yaml": {
-                    "contents": [
-                        "twig:",
-                        "    strict_variables: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/twig.yaml": {
                     "contents": [
                         "twig:",
@@ -28,6 +20,14 @@
                         "    debug: '%kernel.debug%'",
                         "    strict_variables: '%kernel.debug%'",
                         "    exception_controller: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    strict_variables: true",
                         ""
                     ],
                     "executable": false

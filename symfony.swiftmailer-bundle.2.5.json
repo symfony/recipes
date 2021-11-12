@@ -18,14 +18,6 @@
                 }
             },
             "files": {
-                "config/packages/test/swiftmailer.yaml": {
-                    "contents": [
-                        "swiftmailer:",
-                        "    disable_delivery: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/swiftmailer.yaml": {
                     "contents": [
                         "swiftmailer:",
@@ -41,6 +33,14 @@
                         "#swiftmailer:",
                         "#    send all emails to a specific address",
                         "#    delivery_addresses: ['me@example.com']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
                         ""
                     ],
                     "executable": false

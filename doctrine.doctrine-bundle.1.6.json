@@ -60,6 +60,18 @@
                 ]
             },
             "files": {
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/doctrine.yaml": {
                     "contents": [
                         "doctrine:",
@@ -123,18 +135,6 @@
                         "                adapter: cache.app",
                         "            doctrine.system_cache_pool:",
                         "                adapter: cache.system",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Repository/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Entity/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

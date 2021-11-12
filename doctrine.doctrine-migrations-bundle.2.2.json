@@ -13,6 +13,12 @@
                 }
             },
             "files": {
+                "migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/doctrine_migrations.yaml": {
                     "contents": [
                         "doctrine_migrations:",
@@ -20,12 +26,6 @@
                         "        # namespace is arbitrary but should be different from App\\Migrations",
                         "        # as migrations classes should NOT be autoloaded",
                         "        'DoctrineMigrations': '%kernel.project_dir%/migrations'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "migrations/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

@@ -13,11 +13,12 @@
                 }
             },
             "files": {
-                "config/routes/dev/twig.yaml": {
+                "config/packages/twig.yaml": {
                     "contents": [
-                        "_errors:",
-                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
-                        "    prefix: /_error",
+                        "twig:",
+                        "    default_path: '%kernel.project_dir%/templates'",
+                        "    debug: '%kernel.debug%'",
+                        "    strict_variables: '%kernel.debug%'",
                         ""
                     ],
                     "executable": false
@@ -30,12 +31,11 @@
                     ],
                     "executable": false
                 },
-                "config/packages/twig.yaml": {
+                "config/routes/dev/twig.yaml": {
                     "contents": [
-                        "twig:",
-                        "    default_path: '%kernel.project_dir%/templates'",
-                        "    debug: '%kernel.debug%'",
-                        "    strict_variables: '%kernel.debug%'",
+                        "_errors:",
+                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
                         ""
                     ],
                     "executable": false

@@ -23,17 +23,6 @@
                 ]
             },
             "files": {
-                "config/routes/api_platform_admin.yaml": {
-                    "contents": [
-                        "admin:",
-                        "    path: /admin",
-                        "    controller: Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
-                        "    defaults:",
-                        "        template: admin.html.twig",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "assets/js/admin.js": {
                     "contents": [
                         "import React from 'react';",
@@ -43,6 +32,17 @@
                         "const entrypoint = document.getElementById('api-entrypoint').innerText;",
                         "",
                         "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/api_platform_admin.yaml": {
+                    "contents": [
+                        "admin:",
+                        "    path: /admin",
+                        "    controller: Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+                        "    defaults:",
+                        "        template: admin.html.twig",
                         ""
                     ],
                     "executable": false

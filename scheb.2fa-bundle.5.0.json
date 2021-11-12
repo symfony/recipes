@@ -12,19 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/scheb_2fa.yaml": {
-                    "contents": [
-                        "2fa_login:",
-                        "    path: /2fa",
-                        "    defaults:",
-                        "        _controller: \"scheb_two_factor.form_controller:form\"",
-                        "",
-                        "2fa_login_check:",
-                        "    path: /2fa_check",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/scheb_2fa.yaml": {
                     "contents": [
                         "# See the configuration reference at https://github.com/scheb/2fa/blob/master/doc/configuration.md",
@@ -35,6 +22,19 @@
                         "        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken",
                         "        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:",
                         "        # - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/scheb_2fa.yaml": {
+                    "contents": [
+                        "2fa_login:",
+                        "    path: /2fa",
+                        "    defaults:",
+                        "        _controller: \"scheb_two_factor.form_controller:form\"",
+                        "",
+                        "2fa_login_check:",
+                        "    path: /2fa_check",
                         ""
                     ],
                     "executable": false

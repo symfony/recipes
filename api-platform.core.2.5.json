@@ -23,12 +23,8 @@
                 ]
             },
             "files": {
-                "config/routes/api_platform.yaml": {
+                "src/Entity/.gitignore": {
                     "contents": [
-                        "api_platform:",
-                        "    resource: .",
-                        "    type: api_platform",
-                        "    prefix: /api",
                         ""
                     ],
                     "executable": false
@@ -46,8 +42,12 @@
                     ],
                     "executable": false
                 },
-                "src/Entity/.gitignore": {
+                "config/routes/api_platform.yaml": {
                     "contents": [
+                        "api_platform:",
+                        "    resource: .",
+                        "    type: api_platform",
+                        "    prefix: /api",
                         ""
                     ],
                     "executable": false

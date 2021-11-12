@@ -54,79 +54,25 @@
                     ],
                     "executable": false
                 },
-                "config/services.yaml": {
-                    "contents": [
-                        "# This file is the entry point to configure your own services.",
-                        "# Files in the packages/ subdirectory configure your dependencies.",
-                        "",
-                        "# Put parameters here that don't need to change on each machine where the app is deployed",
-                        "# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration",
-                        "parameters:",
-                        "",
-                        "services:",
-                        "    # default configuration for services in *this* file",
-                        "    _defaults:",
-                        "        autowire: true      # Automatically injects dependencies in your services.",
-                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
-                        "",
-                        "    # makes classes in src/ available to be used as services",
-                        "    # this creates a service per class whose id is the fully-qualified class name",
-                        "    App\\:",
-                        "        resource: '../src/'",
-                        "        exclude:",
-                        "            - '../src/DependencyInjection/'",
-                        "            - '../src/Entity/'",
-                        "            - '../src/Kernel.php'",
-                        "            - '../src/Tests/'",
-                        "",
-                        "    # add more service definitions when explicit configuration is needed",
-                        "    # please note that last definitions always *replace* previous ones",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/framework.yaml": {
-                    "contents": [
-                        "when@dev:",
-                        "    _errors:",
-                        "        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'",
-                        "        prefix: /_error",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/preload.php": {
+                "src/Kernel.php": {
                     "contents": [
                         "<?php",
                         "",
-                        "if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {",
-                        "    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "",
+                        "class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
                         "}",
                         ""
                     ],
                     "executable": false
                 },
-                "config/packages/cache.yaml": {
+                "src/Controller/.gitignore": {
                     "contents": [
-                        "framework:",
-                        "    cache:",
-                        "        # Unique name of your app: used to compute stable namespaces for cache keys.",
-                        "        #prefix_seed: your_vendor_name/app_name",
-                        "",
-                        "        # The \"app\" cache stores to the filesystem by default.",
-                        "        # The data in this cache should persist between deploys.",
-                        "        # Other options include:",
-                        "",
-                        "        # Redis",
-                        "        #app: cache.adapter.redis",
-                        "        #default_redis_provider: redis://localhost",
-                        "",
-                        "        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
-                        "        #app: cache.adapter.apcu",
-                        "",
-                        "        # Namespaced pools use the above \"app\" backend by default",
-                        "        #pools:",
-                        "            #my.dedicated.cache: null",
                         ""
                     ],
                     "executable": false
@@ -161,25 +107,79 @@
                     ],
                     "executable": false
                 },
-                "src/Kernel.php": {
+                "config/packages/cache.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    cache:",
+                        "        # Unique name of your app: used to compute stable namespaces for cache keys.",
+                        "        #prefix_seed: your_vendor_name/app_name",
+                        "",
+                        "        # The \"app\" cache stores to the filesystem by default.",
+                        "        # The data in this cache should persist between deploys.",
+                        "        # Other options include:",
+                        "",
+                        "        # Redis",
+                        "        #app: cache.adapter.redis",
+                        "        #default_redis_provider: redis://localhost",
+                        "",
+                        "        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
+                        "        #app: cache.adapter.apcu",
+                        "",
+                        "        # Namespaced pools use the above \"app\" backend by default",
+                        "        #pools:",
+                        "            #my.dedicated.cache: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/services.yaml": {
+                    "contents": [
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        autowire: true      # Automatically injects dependencies in your services.",
+                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "        exclude:",
+                        "            - '../src/DependencyInjection/'",
+                        "            - '../src/Entity/'",
+                        "            - '../src/Kernel.php'",
+                        "            - '../src/Tests/'",
+                        "",
+                        "    # add more service definitions when explicit configuration is needed",
+                        "    # please note that last definitions always *replace* previous ones",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/preload.php": {
                     "contents": [
                         "<?php",
                         "",
-                        "namespace App;",
-                        "",
-                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
-                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
-                        "",
-                        "class Kernel extends BaseKernel",
-                        "{",
-                        "    use MicroKernelTrait;",
+                        "if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {",
+                        "    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';",
                         "}",
                         ""
                     ],
                     "executable": false
                 },
-                "src/Controller/.gitignore": {
+                "config/routes/framework.yaml": {
                     "contents": [
+                        "when@dev:",
+                        "    _errors:",
+                        "        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'",
+                        "        prefix: /_error",
                         ""
                     ],
                     "executable": false

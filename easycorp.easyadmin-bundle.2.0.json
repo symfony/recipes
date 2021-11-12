@@ -12,16 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/easy_admin.yaml": {
-                    "contents": [
-                        "easy_admin_bundle:",
-                        "    resource: '@EasyAdminBundle/Controller/EasyAdminController.php'",
-                        "    prefix: /admin",
-                        "    type: annotation",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/easy_admin.yaml": {
                     "contents": [
                         "#easy_admin:",
@@ -30,6 +20,16 @@
                         "#        - App\\Entity\\Product",
                         "#        - App\\Entity\\Category",
                         "#        - App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/easy_admin.yaml": {
+                    "contents": [
+                        "easy_admin_bundle:",
+                        "    resource: '@EasyAdminBundle/Controller/EasyAdminController.php'",
+                        "    prefix: /admin",
+                        "    type: annotation",
                         ""
                     ],
                     "executable": false

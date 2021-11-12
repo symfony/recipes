@@ -13,6 +13,12 @@
                 }
             },
             "files": {
+                "migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/doctrine_migrations.yaml": {
                     "contents": [
                         "doctrine_migrations:",
@@ -21,12 +27,6 @@
                         "        # as migrations classes should NOT be autoloaded",
                         "        'DoctrineMigrations': '%kernel.project_dir%/migrations'",
                         "    enable_profiler: '%kernel.debug%'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "migrations/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

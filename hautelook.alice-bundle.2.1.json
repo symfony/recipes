@@ -18,10 +18,8 @@
                 ]
             },
             "files": {
-                "config/packages/test/hautelook_alice.yaml": {
+                "fixtures/.gitignore": {
                     "contents": [
-                        "imports:",
-                        "    - { resource: ../dev/hautelook_alice.yaml }",
                         ""
                     ],
                     "executable": false
@@ -34,8 +32,10 @@
                     ],
                     "executable": false
                 },
-                "fixtures/.gitignore": {
+                "config/packages/test/hautelook_alice.yaml": {
                     "contents": [
+                        "imports:",
+                        "    - { resource: ../dev/hautelook_alice.yaml }",
                         ""
                     ],
                     "executable": false

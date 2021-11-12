@@ -60,6 +60,18 @@
                 ]
             },
             "files": {
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/doctrine.yaml": {
                     "contents": [
                         "doctrine:",
@@ -80,16 +92,6 @@
                         "                dir: '%kernel.project_dir%/src/Entity'",
                         "                prefix: 'App\\Entity'",
                         "                alias: App",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/test/doctrine.yaml": {
-                    "contents": [
-                        "doctrine:",
-                        "    dbal:",
-                        "        # \"TEST_TOKEN\" is typically set by ParaTest",
-                        "        dbname_suffix: '_test%env(default::TEST_TOKEN)%'",
                         ""
                     ],
                     "executable": false
@@ -117,14 +119,12 @@
                     ],
                     "executable": false
                 },
-                "src/Repository/.gitignore": {
+                "config/packages/test/doctrine.yaml": {
                     "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Entity/.gitignore": {
-                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        # \"TEST_TOKEN\" is typically set by ParaTest",
+                        "        dbname_suffix: '_test%env(default::TEST_TOKEN)%'",
                         ""
                     ],
                     "executable": false
