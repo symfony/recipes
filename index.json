@@ -1914,6 +1914,6 @@
     "_links": {
         "repository": "github.com/symfony/recipes",
         "origin_template": "{package}:{version}@github.com/symfony/recipes:master",
-        "recipe_template": "https://api.github.com/repos/symfony/recipes/contents/{package_dotted}.{version}.json?ref=flex/main"
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/{package_dotted}.{version}.json"
     }
 }

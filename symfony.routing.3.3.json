@@ -7,6 +7,15 @@
                 }
             },
             "files": {
+                "config/packages/prod/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes.yaml": {
                     "contents": [
                         "# This file is the entry point to configure your own HTTP routes.",
@@ -15,15 +24,6 @@
                         "#index:",
                         "#    path: /",
                         "#    defaults: { _controller: 'App\\Controller\\DefaultController::index' }",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/prod/routing.yaml": {
-                    "contents": [
-                        "framework:",
-                        "    router:",
-                        "        strict_requirements: null",
                         ""
                     ],
                     "executable": false

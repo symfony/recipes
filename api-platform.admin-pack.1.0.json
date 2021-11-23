@@ -23,15 +23,18 @@
                 ]
             },
             "files": {
-                "assets/js/admin.js": {
+                "templates/admin.html.twig": {
                     "contents": [
-                        "import React from 'react';",
-                        "import ReactDOM from 'react-dom';",
-                        "import { HydraAdmin } from '@api-platform/admin';",
+                        "{% extends 'base.html.twig' %}",
                         "",
-                        "const entrypoint = document.getElementById('api-entrypoint').innerText;",
+                        "{% block title %}API Platform Admin{% endblock %}",
                         "",
-                        "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
+                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
+                        "",
+                        "{% block javascripts %}",
+                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
+                        "    {{ encore_entry_script_tags('admin') }}",
+                        "{% endblock %}",
                         ""
                     ],
                     "executable": false
@@ -47,18 +50,15 @@
                     ],
                     "executable": false
                 },
-                "templates/admin.html.twig": {
+                "assets/js/admin.js": {
                     "contents": [
-                        "{% extends 'base.html.twig' %}",
+                        "import React from 'react';",
+                        "import ReactDOM from 'react-dom';",
+                        "import { HydraAdmin } from '@api-platform/admin';",
                         "",
-                        "{% block title %}API Platform Admin{% endblock %}",
+                        "const entrypoint = document.getElementById('api-entrypoint').innerText;",
                         "",
-                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
-                        "",
-                        "{% block javascripts %}",
-                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
-                        "    {{ encore_entry_script_tags('admin') }}",
-                        "{% endblock %}",
+                        "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
                         ""
                     ],
                     "executable": false

@@ -60,38 +60,14 @@
                 ]
             },
             "files": {
-                "src/Repository/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Entity/.gitignore": {
                     "contents": [
                         ""
                     ],
                     "executable": false
                 },
-                "config/packages/doctrine.yaml": {
+                "src/Repository/.gitignore": {
                     "contents": [
-                        "doctrine:",
-                        "    dbal:",
-                        "        url: '%env(resolve:DATABASE_URL)%'",
-                        "",
-                        "        # IMPORTANT: You MUST configure your server version,",
-                        "        # either here or in the DATABASE_URL env var (see .env file)",
-                        "        #server_version: '13'",
-                        "    orm:",
-                        "        auto_generate_proxy_classes: true",
-                        "        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware",
-                        "        auto_mapping: true",
-                        "        mappings:",
-                        "            App:",
-                        "                is_bundle: false",
-                        "                type: annotation",
-                        "                dir: '%kernel.project_dir%/src/Entity'",
-                        "                prefix: 'App\\Entity'",
-                        "                alias: App",
                         ""
                     ],
                     "executable": false
@@ -125,6 +101,30 @@
                         "    dbal:",
                         "        # \"TEST_TOKEN\" is typically set by ParaTest",
                         "        dbname: 'main_test%env(default::TEST_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #server_version: '13'",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
                         ""
                     ],
                     "executable": false

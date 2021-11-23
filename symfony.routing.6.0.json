@@ -7,19 +7,6 @@
                 }
             },
             "files": {
-                "config/routes.yaml": {
-                    "contents": [
-                        "controllers:",
-                        "    resource: ../src/Controller/",
-                        "    type: annotation",
-                        "",
-                        "kernel:",
-                        "    resource: ../src/Kernel.php",
-                        "    type: annotation",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/routing.yaml": {
                     "contents": [
                         "framework:",
@@ -34,6 +21,19 @@
                         "    framework:",
                         "        router:",
                         "            strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes.yaml": {
+                    "contents": [
+                        "controllers:",
+                        "    resource: ../src/Controller/",
+                        "    type: annotation",
+                        "",
+                        "kernel:",
+                        "    resource: ../src/Kernel.php",
+                        "    type: annotation",
                         ""
                     ],
                     "executable": false

@@ -13,22 +13,6 @@
                 }
             },
             "files": {
-                "config/packages/twig.yaml": {
-                    "contents": [
-                        "twig:",
-                        "    default_path: '%kernel.project_dir%/templates'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/test/twig.yaml": {
-                    "contents": [
-                        "twig:",
-                        "    strict_variables: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "templates/base.html.twig": {
                     "contents": [
                         "<!DOCTYPE html>",
@@ -50,6 +34,22 @@
                         "        {% block body %}{% endblock %}",
                         "    </body>",
                         "</html>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    default_path: '%kernel.project_dir%/templates'",
                         ""
                     ],
                     "executable": false

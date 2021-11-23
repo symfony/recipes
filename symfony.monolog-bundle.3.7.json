@@ -12,43 +12,6 @@
                 }
             },
             "files": {
-                "config/packages/prod/monolog.yaml": {
-                    "contents": [
-                        "monolog:",
-                        "    handlers:",
-                        "        main:",
-                        "            type: fingers_crossed",
-                        "            action_level: error",
-                        "            handler: nested",
-                        "            excluded_http_codes: [404, 405]",
-                        "            buffer_size: 50 # How many messages should be saved? Prevent memory leaks",
-                        "        nested:",
-                        "            type: stream",
-                        "            path: php://stderr",
-                        "            level: debug",
-                        "            formatter: monolog.formatter.json",
-                        "        console:",
-                        "            type: console",
-                        "            process_psr_3_messages: false",
-                        "            channels: [\"!event\", \"!doctrine\"]",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/prod/deprecations.yaml": {
-                    "contents": [
-                        "# As of Symfony 5.1, deprecations are logged in the dedicated \"deprecation\" channel when it exists",
-                        "#monolog:",
-                        "#    channels: [deprecation]",
-                        "#    handlers:",
-                        "#        deprecation:",
-                        "#            type: stream",
-                        "#            channels: [deprecation]",
-                        "#            path: php://stderr",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dev/monolog.yaml": {
                     "contents": [
                         "monolog:",
@@ -70,6 +33,43 @@
                         "            type: console",
                         "            process_psr_3_messages: false",
                         "            channels: [\"!event\", \"!doctrine\", \"!console\"]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/deprecations.yaml": {
+                    "contents": [
+                        "# As of Symfony 5.1, deprecations are logged in the dedicated \"deprecation\" channel when it exists",
+                        "#monolog:",
+                        "#    channels: [deprecation]",
+                        "#    handlers:",
+                        "#        deprecation:",
+                        "#            type: stream",
+                        "#            channels: [deprecation]",
+                        "#            path: php://stderr",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/monolog.yaml": {
+                    "contents": [
+                        "monolog:",
+                        "    handlers:",
+                        "        main:",
+                        "            type: fingers_crossed",
+                        "            action_level: error",
+                        "            handler: nested",
+                        "            excluded_http_codes: [404, 405]",
+                        "            buffer_size: 50 # How many messages should be saved? Prevent memory leaks",
+                        "        nested:",
+                        "            type: stream",
+                        "            path: php://stderr",
+                        "            level: debug",
+                        "            formatter: monolog.formatter.json",
+                        "        console:",
+                        "            type: console",
+                        "            process_psr_3_messages: false",
+                        "            channels: [\"!event\", \"!doctrine\"]",
                         ""
                     ],
                     "executable": false

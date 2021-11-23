@@ -18,15 +18,6 @@
                 }
             },
             "files": {
-                "config/packages/swiftmailer.yaml": {
-                    "contents": [
-                        "swiftmailer:",
-                        "    url: '%env(MAILER_URL)%'",
-                        "    spool: { type: 'memory' }",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dev/swiftmailer.yaml": {
                     "contents": [
                         "# See https://symfony.com/doc/current/email/dev_environment.html",
@@ -41,6 +32,15 @@
                     "contents": [
                         "swiftmailer:",
                         "    disable_delivery: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    url: '%env(MAILER_URL)%'",
+                        "    spool: { type: 'memory' }",
                         ""
                     ],
                     "executable": false

@@ -7,15 +7,6 @@
                 }
             },
             "files": {
-                "config/routes.yaml": {
-                    "contents": [
-                        "#index:",
-                        "#    path: /",
-                        "#    controller: App\\Controller\\DefaultController::index",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/routing.yaml": {
                     "contents": [
                         "framework:",
@@ -30,6 +21,15 @@
                         "    framework:",
                         "        router:",
                         "            strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes.yaml": {
+                    "contents": [
+                        "#index:",
+                        "#    path: /",
+                        "#    controller: App\\Controller\\DefaultController::index",
                         ""
                     ],
                     "executable": false
