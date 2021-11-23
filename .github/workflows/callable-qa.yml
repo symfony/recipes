@@ -77,7 +77,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     find * -mindepth 1 -maxdepth 1 -type d | sort \
-                        | .github/recipes-checker-main/run diff-recipe-versions 'https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}' \
+                        | .github/recipes-checker-main/run diff-recipe-versions 'https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json' \
                         > .github/diff-recipe-versions.md
 
             -
@@ -250,7 +250,7 @@ jobs:
                     cd v4
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
                     EXIT_CODE=$?
 
@@ -269,5 +269,5 @@ jobs:
                     cd v5
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
