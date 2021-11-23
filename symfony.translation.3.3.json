@@ -8,12 +8,6 @@
                 }
             },
             "files": {
-                "translations/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/translation.yaml": {
                     "contents": [
                         "framework:",
@@ -22,6 +16,12 @@
                         "        default_path: '%kernel.project_dir%/translations'",
                         "        fallbacks:",
                         "            - en",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "translations/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

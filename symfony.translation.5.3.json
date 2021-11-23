@@ -8,12 +8,6 @@
                 }
             },
             "files": {
-                "translations/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/translation.yaml": {
                     "contents": [
                         "framework:",
@@ -29,6 +23,12 @@
                         "#                dsn: '%env(LOCO_DSN)%'",
                         "#            lokalise:",
                         "#                dsn: '%env(LOKALISE_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "translations/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

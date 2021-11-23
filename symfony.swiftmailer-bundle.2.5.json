@@ -28,19 +28,19 @@
                     ],
                     "executable": false
                 },
-                "config/packages/test/swiftmailer.yaml": {
-                    "contents": [
-                        "swiftmailer:",
-                        "    disable_delivery: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/swiftmailer.yaml": {
                     "contents": [
                         "swiftmailer:",
                         "    url: '%env(MAILER_URL)%'",
                         "    spool: { type: 'memory' }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
                         ""
                     ],
                     "executable": false

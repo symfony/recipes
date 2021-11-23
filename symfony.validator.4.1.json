@@ -7,21 +7,21 @@
                 }
             },
             "files": {
-                "config/packages/validator.yaml": {
-                    "contents": [
-                        "framework:",
-                        "    validation:",
-                        "        email_validation_mode: html5",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/test/validator.yaml": {
                     "contents": [
                         "framework:",
                         "    validation:",
                         "        # As of Symfony 4.3 you can disable the NotCompromisedPassword Validator",
                         "        # not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        email_validation_mode: html5",
                         ""
                     ],
                     "executable": false

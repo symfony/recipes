@@ -7,6 +7,15 @@
                 }
             },
             "files": {
+                "config/packages/test/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/validator.yaml": {
                     "contents": [
                         "framework:",
@@ -17,15 +26,6 @@
                         "        # For instance, basic validation constraints will be inferred from Doctrine's metadata.",
                         "        #auto_mapping:",
                         "        #    App\\Entity\\: []",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/test/validator.yaml": {
-                    "contents": [
-                        "framework:",
-                        "    validation:",
-                        "        not_compromised_password: false",
                         ""
                     ],
                     "executable": false
