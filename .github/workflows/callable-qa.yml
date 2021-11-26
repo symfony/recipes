@@ -173,7 +173,7 @@ jobs:
                 name: Contribution is under MIT and has no merge commits
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    .github/recipes-checker-main/run lint:pull-request $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }}
+                    .github/recipes-checker-main/run lint:pull-request --license=MIT $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }}
 
             -
                 name: Parameters should be defined via the "container" configurator
