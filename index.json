@@ -325,6 +325,8 @@
         "var-exporter": "symfony/var-exporter",
         "vardumper": "symfony/var-dumper",
         "varexporter": "symfony/var-exporter",
+        "vonage-notifier": "symfony/vonage-notifier",
+        "vonagenotifier": "symfony/vonage-notifier",
         "web-link": "symfony/web-link",
         "web-profiler": "symfony/profiler-pack",
         "web-profiler-bundle": "symfony/web-profiler-bundle",
@@ -1313,8 +1315,6 @@
                 "6.0"
             ],
             "symfony/messenger": [
-                "3.4",
-                "4.0",
                 "4.1",
                 "4.2",
                 "4.3",
@@ -1366,8 +1366,7 @@
                 "5.1",
                 "5.2",
                 "5.3",
-                "5.4",
-                "6.0"
+                "5.4"
             ],
             "symfony/notifier": [
                 "5.0",
@@ -1830,6 +1829,10 @@
                 "5.1",
                 "5.2",
                 "5.3",
+                "5.4",
+                "6.0"
+            ],
+            "symfony/vonage-notifier": [
                 "5.4",
                 "6.0"
             ],
