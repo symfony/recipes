@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "symfony/psr7-pack": {
+        "symfony/psr7-meta": {
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -33,7 +33,7 @@
                     "executable": false
                 }
             },
-            "ref": "5757a9204a2af95fb9a04aa746c60d981419a480"
+            "ref": "3551b3c2c094aabf210553a9ad3580587d111f4d"
         }
     }
 }

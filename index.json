@@ -211,10 +211,12 @@
         "propertyinfo": "symfony/property-info",
         "proxy-manager-bridge": "symfony/proxy-manager-bridge",
         "proxymanagerbridge": "symfony/proxy-manager-bridge",
-        "psr-7": "symfony/psr7-pack",
-        "psr-17": "symfony/psr7-pack",
-        "psr7": "symfony/psr7-pack",
-        "psr17": "symfony/psr7-pack",
+        "psr-7": "symfony/psr7-meta",
+        "psr-17": "symfony/psr7-meta",
+        "psr7": "symfony/psr7-meta",
+        "psr7-meta": "symfony/psr7-meta",
+        "psr7meta": "symfony/psr7-meta",
+        "psr17": "symfony/psr7-meta",
         "rate-limiter": "symfony/rate-limiter",
         "ratelimiter": "symfony/rate-limiter",
         "react-admin": "api-platform/admin-pack",
@@ -608,7 +610,7 @@
             "4.3",
             "4.4"
         ],
-        "symfony/psr7-pack": [
+        "symfony/psr7-meta": [
             "1.0"
         ],
         "symfony/requirements-checker": [
