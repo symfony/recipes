@@ -1,4 +1,4 @@
   * You're ready to use zenstruck/foundry. Create your first factory with
     <info>bin/console make:factory</>.
 
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/foundry#foundry</>
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html</>
