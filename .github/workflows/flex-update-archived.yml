@@ -1,0 +1,42 @@
+name: Update Flex endpoint
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    flex-update-archived:
+        name: Update Flex Archives
+        runs-on: Ubuntu-20.04
+
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v2
+                id: checkout
+                with:
+                    fetch-depth: 0
+
+            -
+                name: Install tools
+                run: |
+                    git config --global user.email ""
+                    git config --global user.name "github-action[bot]"
+                    cd .github
+                    wget -q -O recipes-checker.zip https://codeload.github.com/symfony-tools/recipes-checker/zip/refs/heads/main
+                    unzip recipes-checker.zip
+                    cd recipes-checker-main
+                    composer install --ansi --no-dev
+            -
+                name: Update Flex Archives
+                run: |
+                    git switch master
+
+                    mkdir .github/archived
+                    php .github/recipes-checker-main/run generate:archived-recipes . master .github/archived
+
+                    git switch flex/main
+                    cp -a .github/archived .
+                    git add archived/
+                    git commit -m 'Update Flex archives' || true
+                    git push origin -f flex/main
