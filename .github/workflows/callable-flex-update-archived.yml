@@ -1,9 +1,13 @@
 name: Update Flex endpoint
 
 on:
-    push:
-        branches:
-            - main
+    workflow_call:
+        inputs:
+            branch:
+                default: main
+                required: false
+                type: string
+
 jobs:
     flex-update-archived:
         name: Update Flex Archives
@@ -30,10 +34,10 @@ jobs:
             -
                 name: Update Flex Archives
                 run: |
-                    git switch master
+                    git switch ${{ inputs.branch }}
 
                     mkdir .github/archived
-                    php .github/recipes-checker-main/run generate:archived-recipes . master .github/archived
+                    php .github/recipes-checker-main/run generate:archived-recipes . ${{ inputs.branch }} .github/archived
 
                     git switch flex/main
                     cp -a .github/archived .
