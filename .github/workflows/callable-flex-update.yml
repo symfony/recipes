@@ -47,9 +47,7 @@ jobs:
                     git rm -q *.json
                     mv .github/flex-endpoint/*.json .
                     git add *.json
-                    # merge in new archived files
-                    mkdir -p archived
-                    for file in .github/flex-endpoint/archived/*/*.json; do mv "$file" "archived/$(basename $(dirname "$file"))/$(basename "$file")"; done
-                    git add archived/*/*.json
+                    cp -a .github/flex-endpoint/archived .
+                    git add archived/
                     git commit -m 'Update Flex endpoint' || true
                     git push origin -f flex/main
