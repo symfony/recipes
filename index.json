@@ -2038,6 +2038,7 @@
     "_links": {
         "repository": "github.com/symfony/recipes",
         "origin_template": "{package}:{version}@github.com/symfony/recipes:master",
-        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/{package_dotted}.{version}.json"
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/archived/{package_dotted}/{ref}.json"
     }
 }
