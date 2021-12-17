@@ -47,5 +47,7 @@ jobs:
                     git rm -q *.json
                     mv .github/flex-endpoint/*.json .
                     git add *.json
+                    cp -a .github/flex-endpoint/archived .
+                    git add archived/
                     git commit -m 'Update Flex endpoint' || true
                     git push origin -f flex/main
