@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/spot-hit-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SPOTHIT_DSN=spothit://TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "9ea29894b440a8e854447f1194bd6a7e4bd11766"
+        }
+    }
+}

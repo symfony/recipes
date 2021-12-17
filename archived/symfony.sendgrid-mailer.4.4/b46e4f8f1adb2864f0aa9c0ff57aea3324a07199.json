@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sendgrid-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=sendgrid://KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "b46e4f8f1adb2864f0aa9c0ff57aea3324a07199"
+        }
+    }
+}

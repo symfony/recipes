@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "symfony/twig-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                }
+            },
+            "files": {
+                "config/packages/test/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    default_path: '%kernel.project_dir%/templates'",
+                        "    debug: '%kernel.debug%'",
+                        "    strict_variables: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/twig.yaml": {
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/base.html.twig": {
+                    "contents": [
+                        "<!DOCTYPE html>",
+                        "<html>",
+                        "    <head>",
+                        "        <meta charset=\"UTF-8\">",
+                        "        <title>{% block title %}Welcome!{% endblock %}</title>",
+                        "        {# Run `composer require symfony/webpack-encore-bundle`",
+                        "           and uncomment the following Encore helpers to start using Symfony UX #}",
+                        "        {% block stylesheets %}",
+                        "            {#{{ encore_entry_link_tags('app') }}#}",
+                        "        {% endblock %}",
+                        "",
+                        "        {% block javascripts %}",
+                        "            {#{{ encore_entry_script_tags('app') }}#}",
+                        "        {% endblock %}",
+                        "    </head>",
+                        "    <body>",
+                        "        {% block body %}{% endblock %}",
+                        "    </body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7e5381cd17e0e27d1b432af9230b65060b75ac4c"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sms-biuras-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SMSBIURAS_DSN=smsbiuras://UID:API_KEY@default?from=FROM&test_mode=0"
+                }
+            },
+            "files": [],
+            "ref": "1f9640b3fdead7de6094c4aa1569548349213516"
+        }
+    }
+}

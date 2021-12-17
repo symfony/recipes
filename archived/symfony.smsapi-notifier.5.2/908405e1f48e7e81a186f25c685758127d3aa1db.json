@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/smsapi-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "See https://www.smsapi.pl/docs/#autoryzacja",
+                    "#2": "SMSAPI_DSN=smsapi://TOKEN@default?from=CHANNEL_ID"
+                }
+            },
+            "files": [],
+            "ref": "908405e1f48e7e81a186f25c685758127d3aa1db"
+        }
+    }
+}

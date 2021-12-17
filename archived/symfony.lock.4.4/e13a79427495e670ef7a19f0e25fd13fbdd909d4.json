@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/lock": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the stores below",
+                    "#2": "LOCK_DSN=redis://localhost",
+                    "LOCK_DSN": "semaphore"
+                }
+            },
+            "files": {
+                "config/packages/lock.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    lock: '%env(LOCK_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e13a79427495e670ef7a19f0e25fd13fbdd909d4"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/iqsms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "IQSMS_DSN=iqsms://LOGIN:PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "1231da9b9e79308b8ce9b11a0f3c88b09b9489c3"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/nexmo-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "NEXMO_DSN=nexmo://KEY:SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "b636066bd9dd508f10c24de73065f42d0412e2bf"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "symfony/notifier": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/notifier.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    notifier:",
+                        "        #chatter_transports:",
+                        "        #    slack: '%env(SLACK_DSN)%'",
+                        "        #    telegram: '%env(TELEGRAM_DSN)%'",
+                        "        #texter_transports:",
+                        "        #    twilio: '%env(TWILIO_DSN)%'",
+                        "        #    nexmo: '%env(NEXMO_DSN)%'",
+                        "        channel_policy:",
+                        "            # use chat/slack, chat/telegram, sms/twilio or sms/nexmo",
+                        "            urgent: ['email']",
+                        "            high: ['email']",
+                        "            medium: ['email']",
+                        "            low: ['email']",
+                        "        admin_recipients:",
+                        "            - { email: admin@example.com }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c31585e252b32fe0e1f30b1f256af553f4a06eb9"
+        }
+    }
+}

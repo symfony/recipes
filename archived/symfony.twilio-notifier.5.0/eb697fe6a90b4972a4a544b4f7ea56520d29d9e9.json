@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/twilio-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "TWILIO_DSN=twilio://SID:TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "eb697fe6a90b4972a4a544b4f7ea56520d29d9e9"
+        }
+    }
+}

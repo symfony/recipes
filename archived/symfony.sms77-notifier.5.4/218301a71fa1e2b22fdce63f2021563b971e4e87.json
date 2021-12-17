@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sms77-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SMS77_DSN=sms77://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "218301a71fa1e2b22fdce63f2021563b971e4e87"
+        }
+    }
+}

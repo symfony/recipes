@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "twig/markdown-extension": {
+            "manifest": {
+                "bundles": {
+                    "Twig\\Markdown\\Bundle\\TwigMarkdownBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "709b663eeb863ec3011db883d795c1122d85be85"
+        }
+    }
+}

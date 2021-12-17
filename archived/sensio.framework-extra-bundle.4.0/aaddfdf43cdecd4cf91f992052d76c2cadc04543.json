@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sensio/framework-extra-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
+        }
+    }
+}

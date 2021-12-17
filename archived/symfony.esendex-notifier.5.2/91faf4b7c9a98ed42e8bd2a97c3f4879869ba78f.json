@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/esendex-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ESENDEX_DSN=esendex://EMAIL:PASSWORD@default?accountreference=ACCOUNT_REFERENCE&from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "91faf4b7c9a98ed42e8bd2a97c3f4879869ba78f"
+        }
+    }
+}

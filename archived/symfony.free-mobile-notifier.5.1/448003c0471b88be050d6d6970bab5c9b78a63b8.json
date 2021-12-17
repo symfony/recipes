@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/free-mobile-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "FREE_MOBILE_DSN=freemobile://default?phone=PHONE"
+                }
+            },
+            "files": [],
+            "ref": "448003c0471b88be050d6d6970bab5c9b78a63b8"
+        }
+    }
+}

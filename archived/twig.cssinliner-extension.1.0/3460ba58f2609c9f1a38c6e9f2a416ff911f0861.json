@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "twig/cssinliner-extension": {
+            "manifest": {
+                "bundles": {
+                    "Twig\\CssInliner\\Bundle\\TwigCssInlinerBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "3460ba58f2609c9f1a38c6e9f2a416ff911f0861"
+        }
+    }
+}

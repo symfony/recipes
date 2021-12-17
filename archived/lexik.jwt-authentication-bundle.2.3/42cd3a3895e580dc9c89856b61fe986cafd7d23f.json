@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "lexik/jwt-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "#1": "Key paths should be relative to the project directory",
+                    "JWT_PRIVATE_KEY_PATH": "%CONFIG_DIR%/jwt/private.pem",
+                    "JWT_PUBLIC_KEY_PATH": "%CONFIG_DIR%/jwt/public.pem",
+                    "JWT_PASSPHRASE": "%generate(secret)%"
+                },
+                "gitignore": [
+                    "/%CONFIG_DIR%/jwt/*.pem"
+                ]
+            },
+            "files": {
+                "config/packages/lexik_jwt_authentication.yaml": {
+                    "contents": [
+                        "lexik_jwt_authentication:",
+                        "    private_key_path: '%kernel.project_dir%/%env(JWT_PRIVATE_KEY_PATH)%'",
+                        "    public_key_path: '%kernel.project_dir%/%env(JWT_PUBLIC_KEY_PATH)%'",
+                        "    pass_phrase: '%env(JWT_PASSPHRASE)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42cd3a3895e580dc9c89856b61fe986cafd7d23f"
+        }
+    }
+}

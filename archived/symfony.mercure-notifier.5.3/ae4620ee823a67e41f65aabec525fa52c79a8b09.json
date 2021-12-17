@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mercure-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MERCURE_DSN=mercure://default"
+                }
+            },
+            "files": [],
+            "ref": "ae4620ee823a67e41f65aabec525fa52c79a8b09"
+        }
+    }
+}

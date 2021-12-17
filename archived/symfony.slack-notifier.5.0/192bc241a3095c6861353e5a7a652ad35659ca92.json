@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/slack-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SLACK_DSN=slack://TOKEN@default?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+        }
+    }
+}

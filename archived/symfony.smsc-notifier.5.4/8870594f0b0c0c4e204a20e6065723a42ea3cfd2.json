@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/smsc-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SMSC_DSN=smsc://LOGIN:PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "8870594f0b0c0c4e204a20e6065723a42ea3cfd2"
+        }
+    }
+}

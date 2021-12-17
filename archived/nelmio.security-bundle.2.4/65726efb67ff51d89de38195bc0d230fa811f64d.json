@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "nelmio/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\SecurityBundle\\NelmioSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nelmio_security.yaml": {
+                    "contents": [
+                        "nelmio_security:",
+                        "    # prevents framing of the entire site",
+                        "    clickjacking:",
+                        "        paths:",
+                        "            '^/.*': DENY",
+                        "",
+                        "    # disables content type sniffing for script resources",
+                        "    content_type:",
+                        "        nosniff: true",
+                        "",
+                        "    # forces Microsoft's XSS-Protection with",
+                        "    # its block mode",
+                        "    xss_protection:",
+                        "        enabled: true",
+                        "        mode_block: true",
+                        "",
+                        "    # Send a full URL in the `Referer` header when performing a same-origin request,",
+                        "    # only send the origin of the document to secure destination (HTTPS->HTTPS),",
+                        "    # and send no header to a less secure destination (HTTPS->HTTP).",
+                        "    # If `strict-origin-when-cross-origin` is not supported, use `no-referrer` policy,",
+                        "    # no referrer information is sent along with requests.",
+                        "    referrer_policy:",
+                        "        enabled: true",
+                        "        policies:",
+                        "            - 'no-referrer'",
+                        "            - 'strict-origin-when-cross-origin'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "65726efb67ff51d89de38195bc0d230fa811f64d"
+        }
+    }
+}
