@@ -1,4 +1,4 @@
-name: Update Flex endpoint
+name: Update Flex Archives
 
 on:
     workflow_call:
