@@ -1,0 +1,8 @@
+# See the configuration reference at https://github.com/scheb/2fa/blob/master/doc/configuration.md
+scheb_two_factor:
+    security_tokens:
+        - Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken
+        # If you're using guard-based authentication, you have to use this one:
+        # - Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken
+        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:
+        # - Symfony\Component\Security\Http\Authenticator\Token\PostAuthenticationToken
