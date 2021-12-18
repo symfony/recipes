@@ -1,0 +1,129 @@
+{
+    "manifests": {
+        "behat/symfony2-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "behat.yml.dist": "behat.yml.dist",
+                    "features/": "features/"
+                },
+                "gitignore": [
+                    "behat.yml"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white> Next for Behat/SymfonyExtension </>",
+                    "    Run <comment>vendor/bin/behat</> to run the demo tests."
+                ]
+            },
+            "files": {
+                "behat.yml.dist": {
+                    "contents": [
+                        "default:",
+                        "    suites:",
+                        "        default:",
+                        "            contexts:",
+                        "                - FeatureContext:",
+                        "                    kernel: '@kernel'",
+                        "",
+                        "    extensions:",
+                        "        Behat\\Symfony2Extension:",
+                        "            kernel:",
+                        "                bootstrap: features/bootstrap/bootstrap.php",
+                        "                class: App\\Kernel",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "features/bootstrap/FeatureContext.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Behat\\Behat\\Context\\Context;",
+                        "use Symfony\\Component\\HttpFoundation\\Request;",
+                        "use Symfony\\Component\\HttpFoundation\\Response;",
+                        "use Symfony\\Component\\HttpKernel\\KernelInterface;",
+                        "",
+                        "/**",
+                        " * This context class contains the definitions of the steps used by the demo",
+                        " * feature file. Learn how to get started with Behat and BDD on Behat's website.",
+                        " *",
+                        " * @see http://behat.org/en/latest/quick_start.html",
+                        " */",
+                        "class FeatureContext implements Context",
+                        "{",
+                        "    /**",
+                        "     * @var KernelInterface",
+                        "     */",
+                        "    private $kernel;",
+                        "",
+                        "    /**",
+                        "     * @var Response|null",
+                        "     */",
+                        "    private $response;",
+                        "",
+                        "    public function __construct(KernelInterface $kernel)",
+                        "    {",
+                        "        $this->kernel = $kernel;",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * @When a demo scenario sends a request to :path",
+                        "     */",
+                        "    public function aDemoScenarioSendsARequestTo(string $path)",
+                        "    {",
+                        "        $this->response = $this->kernel->handle(Request::create($path, 'GET'));",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * @Then the response should be received",
+                        "     */",
+                        "    public function theResponseShouldBeReceived()",
+                        "    {",
+                        "        if ($this->response === null) {",
+                        "            throw new \\RuntimeException('No response received');",
+                        "        }",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "features/bootstrap/bootstrap.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "",
+                        "putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = 'test');",
+                        "",
+                        "if (file_exists(dirname(__DIR__, 2).'/config/bootstrap.php')) {",
+                        "    require dirname(__DIR__, 2).'/config/bootstrap.php';",
+                        "} elseif (method_exists(Dotenv::class, 'bootEnv')) {",
+                        "    (new Dotenv())->bootEnv(dirname(__DIR__, 2).'/.env');",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "features/demo.feature": {
+                    "contents": [
+                        "# This file contains a user story for demonstration only.",
+                        "# Learn how to get started with Behat and BDD on Behat's website:",
+                        "# http://behat.org/en/latest/quick_start.html",
+                        "",
+                        "Feature:",
+                        "  In order to prove that the Behat Symfony extension is correctly installed",
+                        "  As a user",
+                        "  I want to have a demo scenario",
+                        "",
+                        "  Scenario: It receives a response from Symfony's kernel",
+                        "    When a demo scenario sends a request to \"/\"",
+                        "    Then the response should be received",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "af4f8fa93b1fee9e6f15d1e208ce743bb31cb2b2"
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "manifests": {
+        "symfony/phpunit-bridge": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "phpunit.xml.dist": "phpunit.xml.dist"
+                },
+                "gitignore": [
+                    "/phpunit.xml"
+                ],
+                "post-install-output": [
+                    "Run <comment>php bin/phpunit</> to launch your test suite."
+                ]
+            },
+            "files": {
+                "bin/phpunit": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "if (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit')) {",
+                        "    echo \"Unable to find the `simple-phpunit` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";",
+                        "    exit(1);",
+                        "}",
+                        "if (false === getenv('SYMFONY_PHPUNIT_REMOVE')) {",
+                        "    putenv('SYMFONY_PHPUNIT_REMOVE=symfony/yaml');",
+                        "}",
+                        "if (false === getenv('SYMFONY_PHPUNIT_VERSION')) {",
+                        "    putenv('SYMFONY_PHPUNIT_VERSION=6.4');",
+                        "}",
+                        "if (false === getenv('SYMFONY_PHPUNIT_DIR')) {",
+                        "    putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');",
+                        "}",
+                        "",
+                        "require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit';",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "phpunit.xml.dist": {
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->",
+                        "<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"http://schema.phpunit.de/6.1/phpunit.xsd\"",
+                        "         backupGlobals=\"false\"",
+                        "         colors=\"true\"",
+                        "         bootstrap=\"vendor/autoload.php\"",
+                        ">",
+                        "    <php>",
+                        "        <ini name=\"error_reporting\" value=\"-1\" />",
+                        "        <env name=\"KERNEL_CLASS\" value=\"App\\Kernel\" />",
+                        "        <env name=\"APP_ENV\" value=\"test\" />",
+                        "        <env name=\"APP_DEBUG\" value=\"1\" />",
+                        "        <env name=\"APP_SECRET\" value=\"s$cretf0rt3st\" />",
+                        "        <!-- define your env variables for the test env here -->",
+                        "    </php>",
+                        "",
+                        "    <testsuites>",
+                        "        <testsuite name=\"Project Test Suite\">",
+                        "            <directory>tests/</directory>",
+                        "        </testsuite>",
+                        "    </testsuites>",
+                        "",
+                        "    <listeners>",
+                        "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
+                        "    </listeners>",
+                        "</phpunit>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e2f5bcdeb7b543a5e188d290de498b40b6eeaaa8"
+        }
+    }
+}

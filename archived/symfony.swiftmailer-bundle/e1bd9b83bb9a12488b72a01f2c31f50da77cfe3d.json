@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "symfony/swiftmailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                },
+                "env": {
+                    "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
+                    "#2": "To disable sending emails, use: \"null://localhost\"",
+                    "MAILER_URL": "smtp://localhost:25&encryption=&auth_mode="
+                }
+            },
+            "files": {
+                "etc/packages/dev/swiftmailer.yaml": {
+                    "contents": [
+                        "#swiftmailer:",
+                        "    #delivery_address: me@example.com",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    url: \"%env(MAILER_URL)%\"",
+                        "    spool: { type: \"memory\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e1bd9b83bb9a12488b72a01f2c31f50da77cfe3d"
+        }
+    }
+}

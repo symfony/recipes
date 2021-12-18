@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/lock": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the stores below",
+                    "#2": "postgresql+advisory://db_user:db_password@localhost/db_name",
+                    "LOCK_DSN": "semaphore"
+                }
+            },
+            "files": {
+                "config/packages/lock.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    lock: '%env(LOCK_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "13350583a83fa636bf45a5fb62da3bdc73be52a1"
+        }
+    }
+}

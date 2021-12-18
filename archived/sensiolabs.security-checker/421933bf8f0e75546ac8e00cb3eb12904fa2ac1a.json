@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "sensiolabs/security-checker": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "security-checker security:check": "script"
+                }
+            },
+            "files": {
+                "config/packages/security_checker.yaml": {
+                    "contents": [
+                        "services:",
+                        "    SensioLabs\\Security\\SecurityChecker:",
+                        "        public: false",
+                        "",
+                        "    SensioLabs\\Security\\Command\\SecurityCheckerCommand:",
+                        "        arguments: ['@SensioLabs\\Security\\SecurityChecker']",
+                        "        public: false",
+                        "        tags:",
+                        "            - { name: console.command, command: 'security:check' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "421933bf8f0e75546ac8e00cb3eb12904fa2ac1a"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "zenstruck/foundry": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/foundry. Create your first factory with",
+                    "    <info>bin/console make:factory</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/dev/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "# See full configuration: https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#full-default-bundle-configuration",
+                        "zenstruck_foundry:",
+                        "    # Whether to auto-refresh proxies by default (https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#auto-refresh)",
+                        "    auto_refresh_proxies: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "# Unless you want different configuration for test/dev environments,",
+                        "# add configuration to config/packages/dev/zenstruck_foundry.yml",
+                        "# and this will be synced to your test environment.",
+                        "imports:",
+                        "    - { resource: ../dev/zenstruck_foundry.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4105965892040697deb766a89e518eddc8d207e1"
+        }
+    }
+}

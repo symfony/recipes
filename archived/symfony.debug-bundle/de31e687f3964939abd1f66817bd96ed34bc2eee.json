@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "symfony/debug-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\DebugBundle\\DebugBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "de31e687f3964939abd1f66817bd96ed34bc2eee"
+        }
+    }
+}

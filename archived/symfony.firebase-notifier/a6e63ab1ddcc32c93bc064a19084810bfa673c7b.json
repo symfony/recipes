@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/firebase-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "FIREBASE_DSN=firebase://TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "a6e63ab1ddcc32c93bc064a19084810bfa673c7b"
+        }
+    }
+}

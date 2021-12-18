@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "doctrine/doctrine-fixtures-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/DataFixtures/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2ea6070ecf365f9a801ccaed4b31d4a3b7af5693"
+        }
+    }
+}

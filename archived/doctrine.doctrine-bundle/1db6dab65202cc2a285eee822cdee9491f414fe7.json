@@ -1,0 +1,69 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#2": "For a sqlite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "#3": "Set \"serverVersion\" to your server version to avoid edge-case exceptions and extra database calls",
+                    "DATABASE_URL": "mysql://root@127.0.0.1:3306/symfony?charset=utf8mb4&serverVersion=5.7"
+                }
+            },
+            "files": {
+                "etc/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: \"%env(DATABASE_URL)%\"",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: \"%kernel.debug%\"",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: \"%kernel.project_dir%/src/Entity\"",
+                        "                prefix: \"App\\\\Entity\\\\\"",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        #metadata_cache_driver: apc",
+                        "        #result_cache_driver: apc",
+                        "        #query_cache_driver: apc",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1db6dab65202cc2a285eee822cdee9491f414fe7"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "symfony/routing": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes.yaml": {
+                    "contents": [
+                        "#index:",
+                        "#    path: /",
+                        "#    controller: App\\Controller\\DefaultController::index",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f09a32f7a0fc2b7a4661dab3d6961da5019bdbf3"
+        }
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "web/": "%WEB_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear --no-warmup": "symfony-cmd",
+                    "cache:warmup": "symfony-cmd",
+                    "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_DEBUG": 1,
+                    "APP_SECRET": "Ju$tChang3it!"
+                },
+                "makefile": [
+                    "serve:",
+                    "\t@echo \"\\033[32;49mServer listening on http://127.0.0.1:8000\\033[39m\"",
+                    "\t@echo \"Quit the server with CTRL-C.\"",
+                    "\t@echo \"Run \\033[32mcomposer require symfony/web-server-bundle\\033[39m for a better web server\"",
+                    "\tphp -S 127.0.0.1:8000 -t web"
+                ]
+            },
+            "files": {
+                "etc/packages/dev/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    secret: \"%env(APP_SECRET)%\"",
+                        "    #default_locale: en",
+                        "    #csrf_protection: null",
+                        "    #http_method_override: true",
+                        "    #trusted_hosts: null",
+                        "    #trusted_proxies: null",
+                        "    # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id",
+                        "    #session:",
+                        "    #    handler_id: session.handler.native_file",
+                        "    #    save_path: \"%kernel.root_dir%/../var/sessions/%kernel.environment%\"",
+                        "    #],",
+                        "    #esi: ~",
+                        "    #fragments: ~",
+                        "    php_errors:",
+                        "        log: true",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    test: null",
+                        "    session:",
+                        "        storage_id: session.storage.mock_file",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "web/index.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "use Symfony\\Component\\HttpFoundation\\Request;",
+                        "use Symfony\\Component\\Debug\\Debug;",
+                        "use Doctrine\\Common\\Annotations\\AnnotationRegistry;",
+                        "",
+                        "$loader = require __DIR__.'/../vendor/autoload.php';",
+                        "if (class_exists(AnnotationRegistry::class)) {",
+                        "    AnnotationRegistry::registerLoader([$loader, 'loadClass']);",
+                        "}",
+                        "",
+                        "// The check is to ensure we don't use .env in production",
+                        "if (!getenv('APP_ENV')) {",
+                        "    (new Dotenv())->load(__DIR__.'/../.env');",
+                        "}",
+                        "",
+                        "if (getenv('APP_DEBUG')) {",
+                        "    // WARNING: You should setup permissions the proper way!",
+                        "    // REMOVE the following PHP line and read",
+                        "    // http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup",
+                        "    umask(0000);",
+                        "",
+                        "    // This check prevents access to debug front controllers that are deployed by accident to production servers.",
+                        "    // Feel free to remove this, extend it, or make something more sophisticated.",
+                        "    if (isset($_SERVER['HTTP_CLIENT_IP'])",
+                        "        || isset($_SERVER['HTTP_X_FORWARDED_FOR'])",
+                        "        || !(in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']) || php_sapi_name() === 'cli-server')",
+                        "    ) {",
+                        "        header('HTTP/1.0 403 Forbidden');",
+                        "        exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');",
+                        "    }",
+                        "",
+                        "    Debug::enable();",
+                        "}",
+                        "",
+                        "// Request::setTrustedProxiestTrustedHeaderName(Request::HEADER_FORWARDED, null);",
+                        "// Request::setTrustedProxies(['0.0.0.0/0']);",
+                        "",
+                        "$kernel = new AppKernel(getenv('APP_ENV'), getenv('APP_DEBUG'));",
+                        "$request = Request::createFromGlobals();",
+                        "$response = $kernel->handle($request);",
+                        "$response->send();",
+                        "$kernel->terminate($request, $response);",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "66cc05c145d0ae0658a4b533dcd3ed3aaccd1206"
+        }
+    }
+}

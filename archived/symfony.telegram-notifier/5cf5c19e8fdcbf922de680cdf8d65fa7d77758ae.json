@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/telegram-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "TELEGRAM_DSN=telegram://TOKEN@default?channel=CHAT_ID"
+                }
+            },
+            "files": [],
+            "ref": "5cf5c19e8fdcbf922de680cdf8d65fa7d77758ae"
+        }
+    }
+}

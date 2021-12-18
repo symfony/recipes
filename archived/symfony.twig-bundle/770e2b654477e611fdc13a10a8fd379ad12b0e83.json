@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "symfony/twig-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "templates/": "templates/"
+                }
+            },
+            "files": {
+                "etc/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    paths: ['%kernel.project_dir%/templates']",
+                        "    debug: '%kernel.debug%'",
+                        "    strict_variables: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/routing/dev/twig.yaml": {
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@TwigBundle/Resources/config/routing/errors.xml'",
+                        "    prefix:   /_errors",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "770e2b654477e611fdc13a10a8fd379ad12b0e83"
+        }
+    }
+}

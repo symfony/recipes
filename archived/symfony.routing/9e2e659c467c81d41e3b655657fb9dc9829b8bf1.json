@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "symfony/routing": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routing.yaml": {
+                    "contents": [
+                        "#index:",
+                        "#    path: /",
+                        "#    defaults: { _controller: 'App\\Controller\\DefaultController::index' }",
+                        "",
+                        "# Depends on sensio/framework-extra-bundle, doctrine/annotations, and doctrine/cache",
+                        "#   install with composer req sensio/framework-extra-bundle annot",
+                        "#controllers:",
+                        "#    resource: ../src/Controller/",
+                        "#    type: annotation",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9e2e659c467c81d41e3b655657fb9dc9829b8bf1"
+        }
+    }
+}

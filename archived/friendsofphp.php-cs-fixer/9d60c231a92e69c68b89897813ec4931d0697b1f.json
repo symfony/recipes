@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "friendsofphp/php-cs-fixer": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".php_cs.dist": ".php_cs.dist"
+                },
+                "gitignore": [
+                    ".php_cs",
+                    ".php_cs.cache"
+                ]
+            },
+            "files": {
+                ".php_cs.dist": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return PhpCsFixer\\Config::create()",
+                        "    ->setRules([",
+                        "        '@Symfony' => true,",
+                        "        'array_syntax' => ['syntax' => 'short'],",
+                        "    ])",
+                        ";",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9d60c231a92e69c68b89897813ec4931d0697b1f"
+        }
+    }
+}

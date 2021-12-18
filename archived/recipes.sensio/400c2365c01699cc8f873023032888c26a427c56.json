@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "recipes/sensio": {
+            "manifest": {
+                "bundles": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/framework_extra.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    annotations: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "400c2365c01699cc8f873023032888c26a427c56"
+        }
+    }
+}

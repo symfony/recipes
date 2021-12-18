@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/flex": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".env.dist": ".env.dist"
+                }
+            },
+            "files": {
+                ".env.dist": {
+                    "contents": [
+                        "# This file is a \"template\" of which env vars needs to be defined in your configuration or in an .env file",
+                        "# Set variables here that may be different on each deployment target of the app, e.g. development, staging, production.",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7442ab6b1fa8d51f0aa7e779955cf3e0dbcdc767"
+        }
+    }
+}

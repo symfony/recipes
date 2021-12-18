@@ -1,0 +1,117 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#2": "For an SQLite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "#3": "For a PostgreSQL database, use: \"postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=11\"",
+                    "#4": "IMPORTANT: You MUST configure your db driver and server version, either here or in config/packages/doctrine.yaml",
+                    "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                        </>",
+                    "<bg=blue;fg=white> Database Configuration </>",
+                    "<bg=blue;fg=white>                        </>",
+                    "",
+                    "  * Modify your DATABASE_URL config in <fg=green>.env</>",
+                    "",
+                    "  * Configure the <fg=green>driver</> (mysql) and",
+                    "    <fg=green>server_version</> (5.7) in <fg=green>config/packages/doctrine.yaml</>"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your db driver and server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #driver: 'mysql'",
+                        "        #server_version: '5.7'",
+                        "",
+                        "        # Only needed for MySQL (ignored otherwise)",
+                        "        charset: utf8mb4",
+                        "        default_table_options:",
+                        "            collate: utf8mb4_unicode_ci",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        metadata_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        query_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        result_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.result_cache_provider",
+                        "",
+                        "services:",
+                        "    doctrine.result_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.result_cache_pool'",
+                        "    doctrine.system_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.system_cache_pool'",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ae7f137d0cacaf8f259f4e05af59e326f065ba5e"
+        }
+    }
+}

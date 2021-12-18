@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/infobip-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "INFOBIP_DSN=infobip://AUTH_TOKEN@INFOBIP_HOST?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "7303ee3d401daa69402b6cca4bdaea806460b69f"
+        }
+    }
+}

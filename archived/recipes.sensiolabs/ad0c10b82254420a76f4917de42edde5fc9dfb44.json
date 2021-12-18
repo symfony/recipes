@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "recipes/sensiolabs": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                },
+                "composer-scripts": {
+                    "vendor/bin/security-checker security:check": "php-script"
+                }
+            },
+            "files": {
+                "etc/packages/dev/security-checker.yaml": {
+                    "contents": [
+                        "services:",
+                        "    sensio_distribution.security_checker:",
+                        "        class: SensioLabs\\Security\\SecurityChecker",
+                        "        public: false",
+                        "",
+                        "    sensio_distribution.security_checker.command:",
+                        "        class: SensioLabs\\Security\\Command\\SecurityCheckerCommand",
+                        "        arguments: @sensio_distribution.security_checker",
+                        "        tags:",
+                        "            - { name: console.command }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ad0c10b82254420a76f4917de42edde5fc9dfb44"
+        }
+    }
+}

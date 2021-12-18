@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "doctrine/annotations": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/annotations.yaml": {
+                    "contents": [
+                        "controllers:",
+                        "    resource: ../src/Controller/",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b9cde490c337f6c496d5f403fa6f827cf8b4706d"
+        }
+    }
+}

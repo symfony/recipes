@@ -1,0 +1,121 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#2": "For an SQLite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "#3": "Configure your db driver and server_version in config/packages/doctrine.yaml",
+                    "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                        </>",
+                    "<bg=blue;fg=white> Database Configuration </>",
+                    "<bg=blue;fg=white>                        </>",
+                    "",
+                    "  * Modify your DATABASE_URL config in <fg=green>.env</>",
+                    "",
+                    "  * Configure the <fg=green>driver</> (mysql) and",
+                    "    <fg=green>server_version</> (5.7) in <fg=green>config/packages/doctrine.yaml</>"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "parameters:",
+                        "    # Adds a fallback DATABASE_URL if the env var is not set.",
+                        "    # This allows you to run cache:warmup even if your",
+                        "    # environment variables are not available yet.",
+                        "    # You should not need to change this value.",
+                        "    env(DATABASE_URL): ''",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        # configure these for your database server",
+                        "        driver: 'pdo_mysql'",
+                        "        server_version: '5.7'",
+                        "        charset: utf8mb4",
+                        "        default_table_options:",
+                        "            charset: utf8mb4",
+                        "            collate: utf8mb4_unicode_ci",
+                        "",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        metadata_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        query_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.system_cache_provider",
+                        "        result_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine.result_cache_provider",
+                        "",
+                        "services:",
+                        "    doctrine.result_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.result_cache_pool'",
+                        "    doctrine.system_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine.system_cache_pool'",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "453e89b78ded666f351617baca5ae40d20622351"
+        }
+    }
+}

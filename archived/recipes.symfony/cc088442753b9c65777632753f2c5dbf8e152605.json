@@ -1,0 +1,69 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear --no-warmup": "symfony-cmd",
+                    "cache:warmup": "symfony-cmd",
+                    "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+                }
+            },
+            "files": {
+                "etc/packages/dev/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        strict_requirements: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    secret: \"%env(APP_SECRET)%\"",
+                        "    #default_locale: en",
+                        "    #csrf_protection: null",
+                        "    #http_method_override: true",
+                        "    #trusted_hosts: null",
+                        "    #trusted_proxies: null",
+                        "    # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id",
+                        "    #session:",
+                        "    #    handler_id: session.handler.native_file",
+                        "    #    save_path: \"%kernel.root_dir%/../var/sessions/%kernel.environment%\"",
+                        "    #],",
+                        "    #esi: ~",
+                        "    #fragments: ~",
+                        "    php_errors:",
+                        "        log: true",
+                        "    router:",
+                        "        resource: kernel:loadRoutes",
+                        "        type: service",
+                        "        strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    test: null",
+                        "    session:",
+                        "        storage_id: session.storage.mock_file",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cc088442753b9c65777632753f2c5dbf8e152605"
+        }
+    }
+}

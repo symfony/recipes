@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "lexik/jwt-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%"
+                },
+                "env": {
+                    "JWT_PRIVATE_KEY_PATH": "%ETC_DIR%/jwt/private.pem",
+                    "JWT_PUBLIC_KEY_PATH": "%ETC_DIR%/jwt/public.pem",
+                    "JWT_PASSPHRASE": "%generate(secret)%"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> Next for LexikJWTAuthenticationBundle </>",
+                    "    Run <comment>make generate-jwt-keys</> to generate a key pair."
+                ],
+                "makefile": [
+                    "generate-jwt-keys:",
+                    "ifeq (, $(shell which openssl))",
+                    "$(error \"Unable to generate keys (needs OpenSSL)\")",
+                    "endif",
+                    "\tmkdir -p etc/jwt",
+                    "\topenssl genrsa -passout pass:${JWT_PASSPHRASE} -out ${JWT_PRIVATE_KEY_PATH} -aes256 4096",
+                    "\topenssl rsa -passin pass:${JWT_PASSPHRASE} -pubout -in ${JWT_PRIVATE_KEY_PATH} -out ${JWT_PUBLIC_KEY_PATH}",
+                    "\t@echo \"\\033[32mRSA key pair successfully generated\\033[39m\""
+                ]
+            },
+            "files": {
+                "etc/packages/lexik_jwt_authentication.yaml": {
+                    "contents": [
+                        "lexik_jwt_authentication:",
+                        "    private_key_path: '%env(JWT_PRIVATE_KEY_PATH)%'",
+                        "    public_key_path:  '%env(JWT_PUBLIC_KEY_PATH)%'",
+                        "    pass_phrase:      '%env(JWT_PASSPHRASE)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e5aea526499f8aef6983d0f57628b2d7e9ed36a5"
+        }
+    }
+}

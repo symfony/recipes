@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/fake-sms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "FAKE_SMS_DSN=fakesms+email://MAILER_SERVICE_ID?to=TO&from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "5729f756257996ae1bfc958d4e9b86af22761b92"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "easycorp/easy-log-handler": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/easy_log_handler.yaml": {
+                    "contents": [
+                        "services:",
+                        "    EasyCorp\\EasyLog\\EasyLogHandler:",
+                        "        public: false",
+                        "        arguments: ['%kernel.logs_dir%/%kernel.environment%.log']",
+                        "",
+                        "#// FIXME: How to add this configuration automatically without messing up with the monolog configuration?",
+                        "#monolog:",
+                        "#    handlers:",
+                        "#        buffered:",
+                        "#            type:     buffer",
+                        "#            handler:  easylog",
+                        "#            channels: ['!event']",
+                        "#            level:    debug",
+                        "#        easylog:",
+                        "#            type: service",
+                        "#            id:   easycorp.easylog.handler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7de4afdfe7cf5d344fae8692b61d932cbf697fad"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "symfony/panther": {
+            "manifest": {
+                "dockerfile": [
+                    "# Chromium and ChromeDriver",
+                    "ENV PANTHER_NO_SANDBOX 1",
+                    "# Not mandatory, but recommended",
+                    "ENV PANTHER_CHROME_ARGUMENTS='--disable-dev-shm-usage'",
+                    "RUN apk add --no-cache chromium chromium-chromedriver",
+                    "",
+                    "# Firefox and geckodriver",
+                    "#ARG GECKODRIVER_VERSION=0.29.0",
+                    "#RUN apk add --no-cache firefox",
+                    "#RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz; \\",
+                    "#\ttar -zxf geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/bin; \\",
+                    "#\trm geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>                             </>",
+                    "<bg=blue;fg=white> Finish Panther Installation </>",
+                    "<bg=blue;fg=white>                             </>",
+                    "",
+                    "  * Install <fg=green>ChromeDriver</> or <fg=green>geckodriver</> with ",
+                    "    the package manager of your Operating System.",
+                    "    ",
+                    "    Alternatively, use Browser Driver Installer:",
+                    "",
+                    "    <fg=green>composer require --dev dbrekelmans/bdi</>",
+                    "    <fg=green>vendor/bin/bdi detect drivers</>",
+                    "",
+                    "    This step is not necessary when using Docker.",
+                    "",
+                    "  * To use Panther with PHPUnit,",
+                    "    uncomment the snippet registering the Panther extension in <fg=green>phpunit.xml.dist</>"
+                ]
+            },
+            "files": [],
+            "ref": "93d9baa582d0a755cc9ef81bc38a921d5fa16973"
+        }
+    }
+}

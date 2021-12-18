@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "doctrine/doctrine-fixtures-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/DataFixtures/AppFixtures.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\DataFixtures;",
+                        "",
+                        "use Doctrine\\Bundle\\FixturesBundle\\Fixture;",
+                        "use Doctrine\\Common\\Persistence\\ObjectManager;",
+                        "",
+                        "class AppFixtures extends Fixture",
+                        "{",
+                        "    public function load(ObjectManager $manager)",
+                        "    {",
+                        "        // $product = new Product();",
+                        "        // $manager->persist($product);",
+                        "",
+                        "        $manager->flush();",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fc52d86631a6dfd9fdf3381d0b7e3df2069e51b3"
+        }
+    }
+}

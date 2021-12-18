@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "nelmio/alice": {
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\Alice\\Bridge\\Symfony\\NelmioAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/nelmio_alice.yaml": {
+                    "contents": [
+                        "nelmio_alice:",
+                        "    functions_blacklist:",
+                        "        - 'current'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/nelmio_alice.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: ../dev/nelmio_alice.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aaf440eb4d289ead8e2ef986c4f25c97fffec4ac"
+        }
+    }
+}

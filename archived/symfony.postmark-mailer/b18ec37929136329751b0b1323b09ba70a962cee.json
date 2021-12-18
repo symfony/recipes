@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/postmark-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=smtp://$POSTMARK_ID@postmark"
+                }
+            },
+            "files": [],
+            "ref": "b18ec37929136329751b0b1323b09ba70a962cee"
+        }
+    }
+}

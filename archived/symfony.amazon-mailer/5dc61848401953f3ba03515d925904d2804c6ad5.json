@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "symfony/amazon-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "AWS_ACCESS_KEY=",
+                    "#2": "AWS_SECRET_KEY=",
+                    "#3": "MAILER_DSN=smtp://$AWS_ACCESS_KEY:$AWS_SECRET_KEY@ses?region=eu-west-1",
+                    "#4": "MAILER_DSN=http://$AWS_ACCESS_KEY:$AWS_SECRET_KEY@ses?region=eu-west-1"
+                }
+            },
+            "files": [],
+            "ref": "5dc61848401953f3ba03515d925904d2804c6ad5"
+        }
+    }
+}

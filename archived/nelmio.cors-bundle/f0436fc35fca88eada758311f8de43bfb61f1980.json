@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "nelmio/cors-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\CorsBundle\\NelmioCorsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CORS_ALLOW_ORIGIN": "^https?://localhost(:[0-9]+)?$"
+                }
+            },
+            "files": {
+                "config/packages/nelmio_cors.yaml": {
+                    "contents": [
+                        "nelmio_cors:",
+                        "    defaults:",
+                        "        origin_regex: true",
+                        "        allow_origin: ['%env(CORS_ALLOW_ORIGIN)%']",
+                        "        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']",
+                        "        allow_headers: ['Content-Type', 'Authorization']",
+                        "        expose_headers: ['Link']",
+                        "        max_age: 3600",
+                        "    paths:",
+                        "        '^/': ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f0436fc35fca88eada758311f8de43bfb61f1980"
+        }
+    }
+}

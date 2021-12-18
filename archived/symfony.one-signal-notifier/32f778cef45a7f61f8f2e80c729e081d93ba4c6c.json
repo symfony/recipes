@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/one-signal-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ONESIGNAL_DSN=onesignal://APP_ID:API_KEY@default?defaultRecipientId=DEFAULT_RECIPIENT_ID"
+                }
+            },
+            "files": [],
+            "ref": "32f778cef45a7f61f8f2e80c729e081d93ba4c6c"
+        }
+    }
+}

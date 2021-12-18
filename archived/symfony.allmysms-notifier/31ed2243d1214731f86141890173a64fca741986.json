@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/allmysms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ALLMYSMS_DSN=allmysms://LOGIN:APIKEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "31ed2243d1214731f86141890173a64fca741986"
+        }
+    }
+}

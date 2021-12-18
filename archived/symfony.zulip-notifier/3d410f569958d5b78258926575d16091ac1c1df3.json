@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/zulip-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ZULIP_DSN=zulip://EMAIL:APIKEY@ENDPOINT?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "ref": "3d410f569958d5b78258926575d16091ac1c1df3"
+        }
+    }
+}

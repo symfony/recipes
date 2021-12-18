@@ -1,0 +1,152 @@
+{
+    "manifests": {
+        "symfonycorp/platformsh-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    ".platform/": ".platform/",
+                    ".platform.app.yaml": ".platform.app.yaml",
+                    "php.ini": "php.ini"
+                },
+                "env": {
+                    "MESSENGER_TRANSPORT_DSN": "doctrine://default"
+                }
+            },
+            "files": {
+                ".platform.app.yaml": {
+                    "contents": [
+                        "name: app",
+                        "",
+                        "type: php:8.0",
+                        "",
+                        "runtime:",
+                        "    extensions:",
+                        "        - apcu",
+                        "        - mbstring",
+                        "        - sodium",
+                        "        - ctype",
+                        "        - iconv",
+                        "        - xsl",
+                        "        - pdo_pgsql",
+                        "        - blackfire",
+                        "",
+                        "variables:",
+                        "    php:",
+                        "        opcache.preload: /app/config/preload.php",
+                        "",
+                        "build:",
+                        "    flavor: none",
+                        "",
+                        "disk: 512",
+                        "",
+                        "relationships:",
+                        "    database: \"database:postgresql\"",
+                        "",
+                        "web:",
+                        "    locations:",
+                        "        \"/\":",
+                        "            root: \"public\"",
+                        "            expires: 1h",
+                        "            passthru: \"/index.php\"",
+                        "",
+                        "mounts:",
+                        "    \"/var\": { source: local, source_path: var }",
+                        "",
+                        "hooks:",
+                        "    build: |",
+                        "        set -x -e",
+                        "",
+                        "        curl -fs https://get.symfony.com/cloud/configurator | (>&2 bash)",
+                        "",
+                        "        (>&2 symfony-build)",
+                        "",
+                        "    deploy: |",
+                        "        set -x -e",
+                        "",
+                        "        (>&2 symfony-deploy)",
+                        "",
+                        "crons:",
+                        "    security-check:",
+                        "        # Check that no security issues have been found for PHP packages deployed in production",
+                        "        # See https://github.com/fabpot/local-php-security-checker",
+                        "        spec: '50 23 * * *'",
+                        "        cmd: |",
+                        "            if [ \"$SYMFONY_BRANCH\" = \"master\" ]; then",
+                        "                croncape php-security-checker",
+                        "            fi",
+                        "",
+                        "workers:",
+                        "    messenger:",
+                        "        commands:",
+                        "            # Consume \"async\" messages (as configured in the routing section of config/packages/messenger.yaml)",
+                        "            start: symfony console --time-limit=3600 --memory-limit=64M messenger:consume async",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".platform/routes.yaml": {
+                    "contents": [
+                        "\"https://{all}/\": { type: upstream, upstream: \"app:http\" }",
+                        "\"http://{all}/\": { type: redirect, to: \"https://{all}/\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".platform/services.yaml": {
+                    "contents": [
+                        "database:",
+                        "    type: postgresql:13",
+                        "    disk: 1024",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/messenger.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        failure_transport: failed",
+                        "",
+                        "        transports:",
+                        "            # https://symfony.com/doc/current/messenger.html#transport-configuration",
+                        "            async:",
+                        "                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "                options:",
+                        "                    use_notify: true",
+                        "                    check_delayed_interval: 60000",
+                        "                retry_strategy:",
+                        "                    max_retries: 3",
+                        "                    multiplier: 2",
+                        "            failed: 'doctrine://default?queue_name=failed'",
+                        "            # sync: 'sync://'",
+                        "",
+                        "        routing:",
+                        "            Symfony\\Component\\Mailer\\Messenger\\SendEmailMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\ChatMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\SmsMessage: async",
+                        "",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': async",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "php.ini": {
+                    "contents": [
+                        "allow_url_include=off",
+                        "assert.active=off",
+                        "display_errors=off",
+                        "display_startup_errors=off",
+                        "max_execution_time=30",
+                        "session.use_strict_mode=On",
+                        "realpath_cache_ttl=3600",
+                        "zend.detect_unicode=Off",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6640a840a92a97592f98cada4152d7220ef50c58"
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "recipes/doctrine": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "DB_HOST": "127.0.0.1",
+                    "DB_PORT": "",
+                    "DB_NAME": "symfony",
+                    "DB_USER": "root",
+                    "DB_PASSWORD": ""
+                }
+            },
+            "files": {
+                "etc/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        driver: pdo_mysql",
+                        "        host: \"%env(DB_HOST)%\"",
+                        "        port: \"%env(DB_PORT)%\"",
+                        "        dbname: \"%env(DB_NAME)%\"",
+                        "        user: \"%env(DB_USER)%\"",
+                        "        password: \"%env(DB_PASSWORD)%\"",
+                        "        charset: UTF8",
+                        "        # if using pdo_sqlite as your database driver, uncomment next line:",
+                        "        # path: \"%kernel.root_dir%/../var/data.db\"",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: \"%kernel.debug%\"",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: \"%kernel.root_dir%/../src/Entity\"",
+                        "                prefix: \"App\\\\Entity\\\\\"",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        #metadata_cache_driver: apc",
+                        "        #result_cache_driver: apc",
+                        "        #query_cache_driver: apc",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b11302554e279d010aabb93cea0db059bb2c8f27"
+        }
+    }
+}

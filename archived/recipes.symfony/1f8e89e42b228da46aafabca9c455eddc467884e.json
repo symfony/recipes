@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                },
+                "env": {
+                    "MAILER_HOST": "",
+                    "MAILER_USERNAME": "",
+                    "MAILER_PASSWORD": ""
+                }
+            },
+            "files": {
+                "etc/packages/dev/swiftmailer.yaml": {
+                    "contents": [
+                        "#swiftmailer:",
+                        "    #delivery_address: me@example.com",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    transport: sendmail",
+                        "    host: \"%env(MAILER_HOST)%\"",
+                        "    username: \"%env(MAILER_USER)%\"",
+                        "    password: \"%env(MAILER_PASSWORD)%\"",
+                        "    spool: { type: \"memory\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1f8e89e42b228da46aafabca9c455eddc467884e"
+        }
+    }
+}

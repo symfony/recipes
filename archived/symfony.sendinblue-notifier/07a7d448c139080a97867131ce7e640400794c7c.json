@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sendinblue-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SENDINBLUE_DSN=sendinblue://API_KEY@default?sender=PHONE"
+                }
+            },
+            "files": [],
+            "ref": "07a7d448c139080a97867131ce7e640400794c7c"
+        }
+    }
+}

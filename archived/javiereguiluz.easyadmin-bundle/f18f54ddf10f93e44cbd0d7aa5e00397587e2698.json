@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "javiereguiluz/easyadmin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JavierEguiluz\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_admin.yaml": {
+                    "contents": [
+                        "#easy_admin:",
+                        "#    entities:",
+                        "#        # List the entity class name you want to manage",
+                        "#        - App\\Entity\\Product",
+                        "#        - App\\Entity\\Category",
+                        "#        - App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/easy_admin.yaml": {
+                    "contents": [
+                        "easy_admin_bundle:",
+                        "    resource: '@EasyAdminBundle/Controller/AdminController.php'",
+                        "    prefix: /admin",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f18f54ddf10f93e44cbd0d7aa5e00397587e2698"
+        }
+    }
+}

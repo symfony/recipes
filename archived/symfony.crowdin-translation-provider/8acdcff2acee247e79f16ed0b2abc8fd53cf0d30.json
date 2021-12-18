@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/crowdin-translation-provider": {
+            "manifest": {
+                "env": {
+                    "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+                }
+            },
+            "files": [],
+            "ref": "8acdcff2acee247e79f16ed0b2abc8fd53cf0d30"
+        }
+    }
+}

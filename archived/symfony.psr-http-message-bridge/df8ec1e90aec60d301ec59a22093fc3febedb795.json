@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "symfony/psr-http-message-bridge": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/psr_http_message_bridge.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpMessageFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory: null",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory: null",
+                        "",
+                        "    # Uncomment the following line to allow controllers to receive a",
+                        "    # PSR-7 server request object instead of an HttpFoundation request",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver: null",
+                        "",
+                        "    # Uncomment the following line to allow controllers to return a",
+                        "    # PSR-7 response object instead of an HttpFoundation response",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "df8ec1e90aec60d301ec59a22093fc3febedb795"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/gatewayapi-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "GATEWAYAPI_DSN=gatewayapi://TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "147b1278d07d4d0146f89750d961fcf9beeb387d"
+        }
+    }
+}

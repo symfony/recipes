@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/slack-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "See https://api.slack.com/messaging/webhooks",
+                    "#2": "SLACK_DSN=slack://default/ID"
+                }
+            },
+            "files": [],
+            "ref": "adaf0c2b191293ed376d13d419e1183c2b2dc10c"
+        }
+    }
+}

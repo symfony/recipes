@@ -1,0 +1,267 @@
+{
+    "manifests": {
+        "symfony/webpack-encore-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\WebpackEncoreBundle\\WebpackEncoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/",
+                    "package.json": "package.json",
+                    "webpack.config.js": "webpack.config.js"
+                },
+                "gitignore": [
+                    "/node_modules/",
+                    "/%PUBLIC_DIR%/build/",
+                    "npm-debug.log",
+                    "yarn-error.log"
+                ]
+            },
+            "files": {
+                "assets/app.js": {
+                    "contents": [
+                        "/*",
+                        " * Welcome to your app's main JavaScript file!",
+                        " *",
+                        " * We recommend including the built version of this JavaScript file",
+                        " * (and its CSS file) in your base layout (base.html.twig).",
+                        " */",
+                        "",
+                        "// any CSS you import will output into a single css file (app.css in this case)",
+                        "import './styles/app.css';",
+                        "",
+                        "// start the Stimulus application",
+                        "import './bootstrap';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/bootstrap.js": {
+                    "contents": [
+                        "import { startStimulusApp } from '@symfony/stimulus-bridge';",
+                        "",
+                        "// Registers Stimulus controllers from controllers.json and in the controllers/ directory",
+                        "export const app = startStimulusApp(require.context(",
+                        "    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',",
+                        "    true,",
+                        "    /\\.(j|t)sx?$/",
+                        "));",
+                        "",
+                        "// register any custom, 3rd party controllers here",
+                        "// app.register('some_controller_name', SomeImportedController);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers.json": {
+                    "contents": [
+                        "{",
+                        "    \"controllers\": [],",
+                        "    \"entrypoints\": []",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers/hello_controller.js": {
+                    "contents": [
+                        "import { Controller } from 'stimulus';",
+                        "",
+                        "/*",
+                        " * This is an example Stimulus controller!",
+                        " *",
+                        " * Any element with a data-controller=\"hello\" attribute will cause",
+                        " * this controller to be executed. The name \"hello\" comes from the filename:",
+                        " * hello_controller.js -> \"hello\"",
+                        " *",
+                        " * Delete this file or adapt it for your use!",
+                        " */",
+                        "export default class extends Controller {",
+                        "    connect() {",
+                        "        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/styles/app.css": {
+                    "contents": [
+                        "body {",
+                        "    background-color: lightgray;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/assets.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    assets:",
+                        "        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/webpack_encore.yaml": {
+                    "contents": [
+                        "#webpack_encore:",
+                        "    # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)",
+                        "    # Available in version 1.2",
+                        "    #cache: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/webpack_encore.yaml": {
+                    "contents": [
+                        "#webpack_encore:",
+                        "#    strict_mode: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/webpack_encore.yaml": {
+                    "contents": [
+                        "webpack_encore:",
+                        "    # The path where Encore is building the assets - i.e. Encore.setOutputPath()",
+                        "    output_path: '%kernel.project_dir%/public/build'",
+                        "    # If multiple builds are defined (as shown below), you can disable the default build:",
+                        "    # output_path: false",
+                        "",
+                        "    # If using Encore.enableIntegrityHashes() and need the crossorigin attribute (default: false, or use 'anonymous' or 'use-credentials')",
+                        "    # crossorigin: 'anonymous'",
+                        "",
+                        "    # Preload all rendered script and link tags automatically via the HTTP/2 Link header",
+                        "    # preload: true",
+                        "",
+                        "    # Throw an exception if the entrypoints.json file is missing or an entry is missing from the data",
+                        "    # strict_mode: false",
+                        "",
+                        "    # If you have multiple builds:",
+                        "    # builds:",
+                        "        # pass \"frontend\" as the 3rg arg to the Twig functions",
+                        "        # {{ encore_entry_script_tags('entry1', null, 'frontend') }}",
+                        "",
+                        "        # frontend: '%kernel.project_dir%/public/frontend/build'",
+                        "",
+                        "    # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)",
+                        "    # Put in config/packages/prod/webpack_encore.yaml",
+                        "    # cache: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "package.json": {
+                    "contents": [
+                        "{",
+                        "    \"devDependencies\": {",
+                        "        \"@symfony/stimulus-bridge\": \"^2.0.0\",",
+                        "        \"@symfony/webpack-encore\": \"^1.0.0\",",
+                        "        \"core-js\": \"^3.0.0\",",
+                        "        \"regenerator-runtime\": \"^0.13.2\",",
+                        "        \"stimulus\": \"^2.0.0\",",
+                        "        \"webpack-notifier\": \"^1.6.0\"",
+                        "    },",
+                        "    \"license\": \"UNLICENSED\",",
+                        "    \"private\": true,",
+                        "    \"scripts\": {",
+                        "        \"dev-server\": \"encore dev-server\",",
+                        "        \"dev\": \"encore dev\",",
+                        "        \"watch\": \"encore dev --watch\",",
+                        "        \"build\": \"encore production --progress\"",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "webpack.config.js": {
+                    "contents": [
+                        "const Encore = require('@symfony/webpack-encore');",
+                        "",
+                        "// Manually configure the runtime environment if not already configured yet by the \"encore\" command.",
+                        "// It's useful when you use tools that rely on webpack.config.js file.",
+                        "if (!Encore.isRuntimeEnvironmentConfigured()) {",
+                        "    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');",
+                        "}",
+                        "",
+                        "Encore",
+                        "    // directory where compiled assets will be stored",
+                        "    .setOutputPath('public/build/')",
+                        "    // public path used by the web server to access the output path",
+                        "    .setPublicPath('/build')",
+                        "    // only needed for CDN's or sub-directory deploy",
+                        "    //.setManifestKeyPrefix('build/')",
+                        "",
+                        "    /*",
+                        "     * ENTRY CONFIG",
+                        "     *",
+                        "     * Each entry will result in one JavaScript file (e.g. app.js)",
+                        "     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.",
+                        "     */",
+                        "    .addEntry('app', './assets/app.js')",
+                        "",
+                        "    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)",
+                        "    .enableStimulusBridge('./assets/controllers.json')",
+                        "",
+                        "    // When enabled, Webpack \"splits\" your files into smaller pieces for greater optimization.",
+                        "    .splitEntryChunks()",
+                        "",
+                        "    // will require an extra script tag for runtime.js",
+                        "    // but, you probably want this, unless you're building a single-page app",
+                        "    .enableSingleRuntimeChunk()",
+                        "",
+                        "    /*",
+                        "     * FEATURE CONFIG",
+                        "     *",
+                        "     * Enable & configure other features below. For a full",
+                        "     * list of features, see:",
+                        "     * https://symfony.com/doc/current/frontend.html#adding-more-features",
+                        "     */",
+                        "    .cleanupOutputBeforeBuild()",
+                        "    .enableBuildNotifications()",
+                        "    .enableSourceMaps(!Encore.isProduction())",
+                        "    // enables hashed filenames (e.g. app.abc123.css)",
+                        "    .enableVersioning(Encore.isProduction())",
+                        "",
+                        "    .configureBabel((config) => {",
+                        "        config.plugins.push('@babel/plugin-proposal-class-properties');",
+                        "    })",
+                        "",
+                        "    // enables @babel/preset-env polyfills",
+                        "    .configureBabelPresetEnv((config) => {",
+                        "        config.useBuiltIns = 'usage';",
+                        "        config.corejs = 3;",
+                        "    })",
+                        "",
+                        "    // enables Sass/SCSS support",
+                        "    //.enableSassLoader()",
+                        "",
+                        "    // uncomment if you use TypeScript",
+                        "    //.enableTypeScriptLoader()",
+                        "",
+                        "    // uncomment if you use React",
+                        "    //.enableReactPreset()",
+                        "",
+                        "    // uncomment to get integrity=\"...\" attributes on your script & link tags",
+                        "    // requires WebpackEncoreBundle 1.4 or higher",
+                        "    //.enableIntegrityHashes(Encore.isProduction())",
+                        "",
+                        "    // uncomment if you're having problems with a jQuery plugin",
+                        "    //.autoProvidejQuery()",
+                        ";",
+                        "",
+                        "module.exports = Encore.getWebpackConfig();",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "729e968bd020e8e012a7073739b6ac536e04160e"
+        }
+    }
+}

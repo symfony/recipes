@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/workflow": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/workflow.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    workflows: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7c8798612bf94fbe4cb75056a4cd7ea3a9183698"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "symfony/validator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/test/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        # As of Symfony 4.3 you can disable the NotCompromisedPassword Validator",
+                        "        # not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        email_validation_mode: html5",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "21ab70175caf1e4b273791364fb30d27f1153546"
+        }
+    }
+}

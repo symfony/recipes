@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "symfony/messenger": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages"
+                },
+                "docker-compose": {
+                    "services": [
+                        "rabbitmq:",
+                        "  image: rabbitmq:management-alpine",
+                        "  environment:",
+                        "    # You should definitely change the password in production",
+                        "    - RABBITMQ_DEFAULT_USER=guest",
+                        "    - RABBITMQ_DEFAULT_PASS=guest",
+                        "  volumes:",
+                        "    - rabbitmq-data:/var/lib/rabbitmq",
+                        "  ports:",
+                        "    - \"5672\""
+                    ],
+                    "volumes": [
+                        "rabbitmq-data: {}"
+                    ]
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<4.1"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * You're ready to use the Messenger component. You can define your own message buses",
+                    "    or start using the default one right now by injecting the <info>messenger.bus.default</info> service",
+                    "    or typehinting <info>Symfony\\Component\\Messenger\\MessageBusInterface</info> in your code.",
+                    "",
+                    "  * If you need to send messages to your broker, you can benefit from the built-in",
+                    "    AMQP transport by:",
+                    "",
+                    "    1. Installing the AMQP pack by running <info>composer require amqp</>;",
+                    "    2. Uncommenting the <comment>MESSENGER_TRANSPORT_DSN</> env var",
+                    "       and <comment>framework.messenger.transports.amqp</> config;",
+                    "    3. Routing your messages to the amqp sender.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/messenger.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            # Uncomment the following line to enable a transport named \"amqp\"",
+                        "            # amqp: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "",
+                        "        routing:",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': amqp",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0e5fab3df6760760f8d57b80d143a897548abead"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/message-media-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MESSAGEMEDIA_DSN=messagemedia://API_KEY:API_SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "069fb95c3bba9bc8ba30d08d164aaea0725999b7"
+        }
+    }
+}

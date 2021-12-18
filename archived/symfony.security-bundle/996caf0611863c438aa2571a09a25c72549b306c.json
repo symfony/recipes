@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "symfony/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    # https://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers",
+                        "    providers:",
+                        "        in_memory: { memory: ~ }",
+                        "    firewalls:",
+                        "        dev:",
+                        "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "            security: false",
+                        "        # if you change the name of the firewall, update it in the packages/test/security.yaml file too",
+                        "        main:",
+                        "            anonymous: ~",
+                        "",
+                        "            # activate different ways to authenticate",
+                        "",
+                        "            # http_basic: ~",
+                        "            # https://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate",
+                        "",
+                        "            # form_login: ~",
+                        "            # https://symfony.com/doc/current/cookbook/security/form_login_setup.html",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/security.yaml": {
+                    "contents": [
+                        "# This configuration simplifies testing URLs protected by the security mechanism",
+                        "# See https://symfony.com/doc/current/cookbook/testing/http_authentication.html",
+                        "security:",
+                        "    firewalls:",
+                        "        # replace 'main' by the name of your own firewall",
+                        "        main:",
+                        "            http_basic: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "996caf0611863c438aa2571a09a25c72549b306c"
+        }
+    }
+}

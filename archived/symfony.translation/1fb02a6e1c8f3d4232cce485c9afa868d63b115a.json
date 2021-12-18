@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "symfony/translation": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "translations/": "translations/"
+                },
+                "container": {
+                    "locale": "en"
+                }
+            },
+            "files": {
+                "config/packages/translation.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    default_locale: '%locale%'",
+                        "    translator:",
+                        "        default_path: '%kernel.project_dir%/translations'",
+                        "        fallbacks:",
+                        "            - '%locale%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "translations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1fb02a6e1c8f3d4232cce485c9afa868d63b115a"
+        }
+    }
+}

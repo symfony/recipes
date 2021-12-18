@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "symfony/swiftmailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "For Gmail as a transport, use: \"gmail://username:password@localhost\"",
+                    "#2": "To disable sending emails, use: \"null://localhost\"",
+                    "MAILER_URL": "smtp://localhost:25?encryption=&auth_mode="
+                }
+            },
+            "files": {
+                "config/packages/dev/swiftmailer.yaml": {
+                    "contents": [
+                        "# See https://symfony.com/doc/current/email/dev_environment.html",
+                        "swiftmailer:",
+                        "    # disable the sending of email altogether",
+                        "    disable_delivery: true",
+                        "    # ... or send all email to a specific address",
+                        "    #delivery_addresses: ['me@example.com']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    url: '%env(MAILER_URL)%'",
+                        "    spool: { type: 'memory' }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c970f9cf41065525aaf98feb1dc8062a8998cfd5"
+        }
+    }
+}

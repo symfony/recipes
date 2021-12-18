@@ -1,0 +1,259 @@
+{
+    "manifests": {
+        "symfony/framework-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "src/": "%SRC_DIR%/",
+                    "web/": "%WEB_DIR%/"
+                },
+                "composer-scripts": {
+                    "make cache-warmup": "script",
+                    "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_DEBUG": "1",
+                    "APP_SECRET": "%generate(secret)%"
+                },
+                "gitignore": [
+                    ".env",
+                    "/var/",
+                    "/vendor/",
+                    "/web/bundles/"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Change to the project directory",
+                    "    2. Execute the <comment>make serve</> command;",
+                    "    3. Browse to the <comment>http://localhost:8000/</> URL.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                ],
+                "makefile": [
+                    "cache-clear:",
+                    "\t@test -f bin/console && bin/console cache:clear --no-warmup || rm -rf var/cache/*",
+                    ".PHONY: cache-clear",
+                    "",
+                    "cache-warmup: cache-clear",
+                    "\t@test -f bin/console && bin/console cache:warmup || echo \"cannot warmup the cache (needs symfony/console)\"",
+                    ".PHONY: cache-warmup",
+                    "",
+                    "CONSOLE=bin/console",
+                    "sf_console:",
+                    "\t@test -f $(CONSOLE) || printf \"Run \\033[32mcomposer require cli\\033[39m to install the Symfony console.\\n\"",
+                    "\t@exit",
+                    "",
+                    "serve_as_sf: sf_console",
+                    "\t@test -f $(CONSOLE) && $(CONSOLE)|grep server:start > /dev/null || ${MAKE} serve_as_php",
+                    "\t@$(CONSOLE) server:start || exit 1",
+                    "",
+                    "\t@printf \"Quit the server with \\033[32;49mbin/console server:stop.\\033[39m\\n\"",
+                    "",
+                    "serve_as_php:",
+                    "\t@printf \"\\033[32;49mServer listening on http://127.0.0.1:8000\\033[39m\\n\";",
+                    "\t@printf \"Quit the server with CTRL-C.\\n\"",
+                    "\t@printf \"Run \\033[32mcomposer require symfony/web-server-bundle\\033[39m for a better web server\\n\"",
+                    "\tphp -S 127.0.0.1:8000 -t web",
+                    "",
+                    "serve:",
+                    "\t@${MAKE} serve_as_sf",
+                    ".PHONY: sf_console serve serve_as_sf serve_as_php"
+                ]
+            },
+            "files": {
+                "etc/container.yaml": {
+                    "contents": [
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/app.yaml": {
+                    "contents": [
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        # automatically injects dependencies in your services",
+                        "        autowire: true",
+                        "        # automatically registers your services as commands, event subscribers, etc.",
+                        "        autoconfigure: true",
+                        "        # this means you cannot fetch services directly from the container via $container->get()",
+                        "        # if you need to do this, you can override this setting on individual services",
+                        "        public: false",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../../src/*'",
+                        "        # you can exclude directories or files",
+                        "        # but if a service is unused, it's removed anyway",
+                        "        exclude: '../../src/{Entity,Repository,Tests}'",
+                        "",
+                        "    # controllers are imported separately to make sure they're public",
+                        "    # and have a tag that allows actions to type-hint services",
+                        "    App\\Controller\\:",
+                        "        resource: '../../src/Controller'",
+                        "        public: true",
+                        "        tags: ['controller.service_arguments']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    secret: '%env(APP_SECRET)%'",
+                        "    #default_locale: en",
+                        "    #csrf_protection: null",
+                        "    #http_method_override: true",
+                        "    #trusted_hosts: null",
+                        "    # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id",
+                        "    #session:",
+                        "    #    handler_id: session.handler.native_file",
+                        "    #    save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'",
+                        "    #esi: ~",
+                        "    #fragments: ~",
+                        "    php_errors:",
+                        "        log: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    test: null",
+                        "    session:",
+                        "        storage_id: session.storage.mock_file",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Controller/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Kernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\Config\\Loader\\LoaderInterface;",
+                        "use Symfony\\Component\\DependencyInjection\\ContainerBuilder;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "use Symfony\\Component\\Routing\\RouteCollectionBuilder;",
+                        "",
+                        "/**",
+                        " * @author Fabien Potencier <fabien@symfony.com>",
+                        " */",
+                        "final class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
+                        "",
+                        "    private const CONFIG_EXTS = '.{php,xml,yaml,yml}';",
+                        "",
+                        "    public function getCacheDir(): string",
+                        "    {",
+                        "        return dirname(__DIR__).'/var/cache/'.$this->environment;",
+                        "    }",
+                        "",
+                        "    public function getLogDir(): string",
+                        "    {",
+                        "        return dirname(__DIR__).'/var/logs';",
+                        "    }",
+                        "",
+                        "    public function registerBundles(): iterable",
+                        "    {",
+                        "        $contents = require dirname(__DIR__).'/etc/bundles.php';",
+                        "        foreach ($contents as $class => $envs) {",
+                        "            if (isset($envs['all']) || isset($envs[$this->environment])) {",
+                        "                yield new $class();",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "",
+                        "    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void",
+                        "    {",
+                        "        $confDir = dirname(__DIR__).'/etc';",
+                        "        $loader->load($confDir.'/packages/*'.self::CONFIG_EXTS, 'glob');",
+                        "        if (is_dir($confDir.'/packages/'.$this->environment)) {",
+                        "            $loader->load($confDir.'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');",
+                        "        }",
+                        "        $loader->load($confDir.'/container'.self::CONFIG_EXTS, 'glob');",
+                        "    }",
+                        "",
+                        "    protected function configureRoutes(RouteCollectionBuilder $routes): void",
+                        "    {",
+                        "        $confDir = dirname(__DIR__).'/etc';",
+                        "        if (is_dir($confDir.'/routing/')) {",
+                        "            $routes->import($confDir.'/routing/*'.self::CONFIG_EXTS, '/', 'glob');",
+                        "        }",
+                        "        if (is_dir($confDir.'/routing/'.$this->environment)) {",
+                        "            $routes->import($confDir.'/routing/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');",
+                        "        }",
+                        "        $routes->import($confDir.'/routing'.self::CONFIG_EXTS, '/', 'glob');",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "web/index.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "use Symfony\\Component\\HttpFoundation\\Request;",
+                        "use Symfony\\Component\\Debug\\Debug;",
+                        "",
+                        "require __DIR__.'/../vendor/autoload.php';",
+                        "",
+                        "// The check is to ensure we don't use .env in production",
+                        "if (!getenv('APP_ENV')) {",
+                        "    (new Dotenv())->load(__DIR__.'/../.env');",
+                        "}",
+                        "",
+                        "if (getenv('APP_DEBUG')) {",
+                        "    // WARNING: You should setup permissions the proper way!",
+                        "    // REMOVE the following PHP line and read",
+                        "    // https://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup",
+                        "    umask(0000);",
+                        "",
+                        "    Debug::enable();",
+                        "}",
+                        "",
+                        "// Request::setTrustedProxies(['0.0.0.0/0'], Request::HEADER_FORWARDED);",
+                        "",
+                        "$kernel = new Kernel(getenv('APP_ENV'), getenv('APP_DEBUG'));",
+                        "$request = Request::createFromGlobals();",
+                        "$response = $kernel->handle($request);",
+                        "$response->send();",
+                        "$kernel->terminate($request, $response);",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "90800156ed64088b9e637beb2af92c6cd80a4726"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "api-platform/core": {
+            "manifest": {
+                "bundles": {
+                    "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/api_platform.yaml": {
+                    "contents": [
+                        "api_platform:",
+                        "    loader_paths:",
+                        "        annotation: ['%kernel.project_dir%/src/Entity']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/api_platform.yaml": {
+                    "contents": [
+                        "api_platform:",
+                        "    resource: .",
+                        "    type: api_platform",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9241ff8d8775ec7ffb8085b19339d54caec867d3"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/discord-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "DISCORD_DSN=discord://TOKEN@default?webhook_id=ID"
+                }
+            },
+            "files": [],
+            "ref": "1bbc2f7c212346491efde98bf55a3f689056ed3f"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "symfony/symfony": {
+            "manifest": {
+                "post-install-output": [
+                    "<bg=yellow;fg=black>                                                                                 </>",
+                    "<bg=yellow;fg=black> Using \"symfony/symfony\" in your dependencies is incompatible with Symfony Flex! </>",
+                    "<bg=yellow;fg=black>                                                                                 </>",
+                    "",
+                    "  * <fg=blue>Instead</> use individual <comment>symfony/*</comment> packages."
+                ]
+            },
+            "files": [],
+            "ref": "d9ffde95d60fa64c4e39752016ee534460b7c691"
+        }
+    }
+}

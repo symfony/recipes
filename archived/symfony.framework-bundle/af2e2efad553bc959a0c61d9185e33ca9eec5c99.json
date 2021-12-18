@@ -1,0 +1,284 @@
+{
+    "manifests": {
+        "symfony/framework-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd",
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_SECRET": "%generate(secret)%",
+                    "#TRUSTED_PROXIES": "127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16",
+                    "#TRUSTED_HOSTS": "'^(localhost|example\\.com)$'"
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+                    "/%PUBLIC_DIR%/bundles/",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Go to the project directory",
+                    "    2. Create your code repository with the <comment>git init</comment> command",
+                    "    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                ]
+            },
+            "files": {
+                "config/bootstrap.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (!class_exists(Dotenv::class)) {",
+                        "    throw new LogicException('Please run \"composer require symfony/dotenv\" to load the \".env\" files configuring the application.');",
+                        "}",
+                        "",
+                        "// Load cached env vars if the .env.local.php file exists",
+                        "// Run \"composer dump-env prod\" to create it (requires symfony/flex >=1.2)",
+                        "if (is_array($env = @include dirname(__DIR__).'/.env.local.php') && (!isset($env['APP_ENV']) || ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])) {",
+                        "    (new Dotenv(false))->populate($env);",
+                        "} else {",
+                        "    // load all the .env files",
+                        "    (new Dotenv(false))->loadEnv(dirname(__DIR__).'/.env');",
+                        "}",
+                        "",
+                        "$_SERVER += $_ENV;",
+                        "$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';",
+                        "$_SERVER['APP_DEBUG'] = $_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? 'prod' !== $_SERVER['APP_ENV'];",
+                        "$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filter_var($_SERVER['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN) ? '1' : '0';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/cache.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    cache:",
+                        "        # Unique name of your app: used to compute stable namespaces for cache keys.",
+                        "        #prefix_seed: your_vendor_name/app_name",
+                        "",
+                        "        # The \"app\" cache stores to the filesystem by default.",
+                        "        # The data in this cache should persist between deploys.",
+                        "        # Other options include:",
+                        "",
+                        "        # Redis",
+                        "        #app: cache.adapter.redis",
+                        "        #default_redis_provider: redis://localhost",
+                        "",
+                        "        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
+                        "        #app: cache.adapter.apcu",
+                        "",
+                        "        # Namespaced pools use the above \"app\" backend by default",
+                        "        #pools:",
+                        "            #my.dedicated.cache: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/framework.yaml": {
+                    "contents": [
+                        "# see https://symfony.com/doc/current/reference/configuration/framework.html",
+                        "framework:",
+                        "    secret: '%env(APP_SECRET)%'",
+                        "    #csrf_protection: true",
+                        "    #http_method_override: true",
+                        "",
+                        "    # Enables session support. Note that the session will ONLY be started if you read or write from it.",
+                        "    # Remove or comment this section to explicitly disable session support.",
+                        "    session:",
+                        "        handler_id: null",
+                        "        cookie_secure: auto",
+                        "        cookie_samesite: lax",
+                        "",
+                        "    #esi: true",
+                        "    #fragments: true",
+                        "    php_errors:",
+                        "        log: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/framework.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    test: true",
+                        "    session:",
+                        "        storage_id: session.storage.mock_file",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/framework.yaml": {
+                    "contents": [
+                        "_errors:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/errors.xml'",
+                        "    prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/services.yaml": {
+                    "contents": [
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        autowire: true      # Automatically injects dependencies in your services.",
+                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "        exclude:",
+                        "            - '../src/DependencyInjection/'",
+                        "            - '../src/Entity/'",
+                        "            - '../src/Kernel.php'",
+                        "            - '../src/Tests/'",
+                        "",
+                        "    # controllers are imported separately to make sure services can be injected",
+                        "    # as action arguments even if you don't extend any base controller class",
+                        "    App\\Controller\\:",
+                        "        resource: '../src/Controller/'",
+                        "        tags: ['controller.service_arguments']",
+                        "",
+                        "    # add more service definitions when explicit configuration is needed",
+                        "    # please note that last definitions always *replace* previous ones",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/index.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Component\\ErrorHandler\\Debug;",
+                        "use Symfony\\Component\\HttpFoundation\\Request;",
+                        "",
+                        "require dirname(__DIR__).'/config/bootstrap.php';",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "",
+                        "    Debug::enable();",
+                        "}",
+                        "",
+                        "if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {",
+                        "    Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL ^ Request::HEADER_X_FORWARDED_HOST);",
+                        "}",
+                        "",
+                        "if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {",
+                        "    Request::setTrustedHosts([$trustedHosts]);",
+                        "}",
+                        "",
+                        "$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);",
+                        "$request = Request::createFromGlobals();",
+                        "$response = $kernel->handle($request);",
+                        "$response->send();",
+                        "$kernel->terminate($request, $response);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Controller/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Kernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\Config\\Loader\\LoaderInterface;",
+                        "use Symfony\\Component\\Config\\Resource\\FileResource;",
+                        "use Symfony\\Component\\DependencyInjection\\ContainerBuilder;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "use Symfony\\Component\\Routing\\RouteCollectionBuilder;",
+                        "",
+                        "class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
+                        "",
+                        "    private const CONFIG_EXTS = '.{php,xml,yaml,yml}';",
+                        "",
+                        "    public function registerBundles(): iterable",
+                        "    {",
+                        "        $contents = require $this->getProjectDir().'/config/bundles.php';",
+                        "        foreach ($contents as $class => $envs) {",
+                        "            if ($envs[$this->environment] ?? $envs['all'] ?? false) {",
+                        "                yield new $class();",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "",
+                        "    public function getProjectDir(): string",
+                        "    {",
+                        "        return \\dirname(__DIR__);",
+                        "    }",
+                        "",
+                        "    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void",
+                        "    {",
+                        "        $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));",
+                        "        $container->setParameter('container.dumper.inline_class_loader', \\PHP_VERSION_ID < 70400 || $this->debug);",
+                        "        $container->setParameter('container.dumper.inline_factories', true);",
+                        "        $confDir = $this->getProjectDir().'/config';",
+                        "",
+                        "        $loader->load($confDir.'/{packages}/*'.self::CONFIG_EXTS, 'glob');",
+                        "        $loader->load($confDir.'/{packages}/'.$this->environment.'/*'.self::CONFIG_EXTS, 'glob');",
+                        "        $loader->load($confDir.'/{services}'.self::CONFIG_EXTS, 'glob');",
+                        "        $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');",
+                        "    }",
+                        "",
+                        "    protected function configureRoutes(RouteCollectionBuilder $routes): void",
+                        "    {",
+                        "        $confDir = $this->getProjectDir().'/config';",
+                        "",
+                        "        $routes->import($confDir.'/{routes}/'.$this->environment.'/*'.self::CONFIG_EXTS, '/', 'glob');",
+                        "        $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');",
+                        "        $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "af2e2efad553bc959a0c61d9185e33ca9eec5c99"
+        }
+    }
+}

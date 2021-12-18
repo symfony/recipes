@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": [
+                        "dev"
+                    ]
+                },
+                "gitignore": [
+                    ".web-server-pid"
+                ]
+            },
+            "files": [],
+            "ref": "f3835fe266963a86e4636cc0cc3fe320c9dfdb8e"
+        }
+    }
+}

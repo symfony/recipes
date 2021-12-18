@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/google-chat-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "See https://developers.google.com/hangouts/chat/how-tos/webhooks",
+                    "#2": "GOOGLE_CHAT_DSN=googlechat://ACCESS_KEY:ACCESS_TOKEN@default/SPACE?threadKey=THREAD_KEY"
+                }
+            },
+            "files": [],
+            "ref": "048c9a67aab45935ea5e28bba0670b76d696160f"
+        }
+    }
+}

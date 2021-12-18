@@ -1,0 +1,74 @@
+{
+    "manifests": {
+        "api-platform/admin-pack": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                       </>",
+                    "<bg=blue;fg=white> To finish the install </>",
+                    "<bg=blue;fg=white>                       </>",
+                    "",
+                    "  * Your admin is almost ready:",
+                    "    1. Install the JavaScript dependencies by running <comment>yarn add @api-platform/admin @babel/preset-react</comment>",
+                    "    2. Edit <comment>webpack.config.js</comment> and <info>uncomment</info> the following lines:",
+                    "",
+                    "        Encore",
+                    "            // ...",
+                    "            .enableReactPreset()",
+                    "            .addEntry('admin', './assets/js/admin.js')",
+                    "",
+                    "  * Mark entities you want in the admin with the <comment>@ApiResource</comment> annotation, it appears in the admin!",
+                    "",
+                    "  * Using MakerBundle? Try <info>php bin/console make:entity --api-resource</info>"
+                ]
+            },
+            "files": {
+                "assets/js/admin.js": {
+                    "contents": [
+                        "import React from 'react';",
+                        "import ReactDOM from 'react-dom';",
+                        "import { HydraAdmin } from '@api-platform/admin';",
+                        "",
+                        "const entrypoint = document.getElementById('api-entrypoint').innerText;",
+                        "",
+                        "ReactDOM.render(<HydraAdmin entrypoint={entrypoint}/>, document.getElementById('api-platform-admin'));",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/api_platform_admin.yaml": {
+                    "contents": [
+                        "admin:",
+                        "    path: /admin",
+                        "    controller: Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+                        "    defaults:",
+                        "        template: admin.html.twig",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin.html.twig": {
+                    "contents": [
+                        "{% extends 'base.html.twig' %}",
+                        "",
+                        "{% block title %}API Platform Admin{% endblock %}",
+                        "",
+                        "{% block body %}<div id=\"api-platform-admin\"></div>{% endblock %}",
+                        "",
+                        "{% block javascripts %}",
+                        "    <script type=\"text/plain\" id=\"api-entrypoint\">{{ path('api_entrypoint') }}</script>",
+                        "    {{ encore_entry_script_tags('admin') }}",
+                        "{% endblock %}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "488ebfb0cddd283c16f4d072c6675ae7d7d52eb4"
+        }
+    }
+}

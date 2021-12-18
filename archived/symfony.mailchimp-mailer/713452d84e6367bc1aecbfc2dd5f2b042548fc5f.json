@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/mailchimp-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=smtp://$MANDRILL_USERNAME:$MANDRILL_PASSWORD@mandrill",
+                    "#2": "MAILER_DSN=http://$MANDRILL_KEY@mandrill"
+                }
+            },
+            "files": [],
+            "ref": "713452d84e6367bc1aecbfc2dd5f2b042548fc5f"
+        }
+    }
+}

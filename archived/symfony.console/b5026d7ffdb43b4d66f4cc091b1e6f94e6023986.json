@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "symfony/console": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/"
+                }
+            },
+            "files": {
+                "bin/console": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Console\\Application;",
+                        "use Symfony\\Component\\Debug\\Debug;",
+                        "",
+                        "set_time_limit(0);",
+                        "",
+                        "require dirname(__DIR__).'/vendor/autoload.php';",
+                        "",
+                        "if (!class_exists(Application::class)) {",
+                        "    throw new \\RuntimeException('You need to add \"symfony/framework-bundle\" as a Composer dependency.');",
+                        "}",
+                        "",
+                        "Kernel::bootstrapCli($_SERVER['argv']);",
+                        "Kernel::bootstrapEnv();",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "",
+                        "    if (class_exists(Debug::class)) {",
+                        "        Debug::enable();",
+                        "    }",
+                        "}",
+                        "",
+                        "$kernel = new Kernel($_SERVER['APP_ENV'], $_SERVER['APP_DEBUG']);",
+                        "$application = new Application($kernel);",
+                        "$application->run();",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "b5026d7ffdb43b4d66f4cc091b1e6f94e6023986"
+        }
+    }
+}

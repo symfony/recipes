@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "symfony/validator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/test/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        email_validation_mode: html5",
+                        "",
+                        "        # Enables validator auto-mapping support.",
+                        "        # For instance, basic validation constraints will be inferred from Doctrine's metadata.",
+                        "        #auto_mapping:",
+                        "        #    App\\Entity\\: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d902da3e4952f18d3bf05aab29512eb61cabd869"
+        }
+    }
+}

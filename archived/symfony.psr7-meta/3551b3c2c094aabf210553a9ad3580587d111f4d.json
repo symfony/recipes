@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "symfony/psr7-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/psr_http_message_bridge.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\HttpMessageFactoryInterface:",
+                        "        '@Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory'",
+                        "",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory: null",
+                        "    Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory: null",
+                        "",
+                        "    # Uncomment to allow controllers to receive a PSR-7 server request object as argument",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver: null",
+                        "",
+                        "    # Uncomment to allow controllers to return a PSR-7 response object",
+                        "    #Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3551b3c2c094aabf210553a9ad3580587d111f4d"
+        }
+    }
+}

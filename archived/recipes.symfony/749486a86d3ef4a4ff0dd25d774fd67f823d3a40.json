@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": [
+                        "dev"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "749486a86d3ef4a4ff0dd25d774fd67f823d3a40"
+        }
+    }
+}

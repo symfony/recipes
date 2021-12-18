@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                },
+                "env": {
+                    "MAILER_URL": "",
+                    "MAILER_TRANSPORT": "smtp",
+                    "MAILER_HOST": "localhost",
+                    "MAILER_PORT": "25",
+                    "MAILER_USER": "",
+                    "MAILER_PASSWORD": ""
+                }
+            },
+            "files": {
+                "etc/packages/dev/swiftmailer.yaml": {
+                    "contents": [
+                        "#swiftmailer:",
+                        "    #delivery_address: me@example.com",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    url: \"%env(MAILER_URL)%\"",
+                        "    transport: \"%env(MAILER_TRANSPORT)%\"",
+                        "    host: \"%env(MAILER_HOST)%\"",
+                        "    port: \"%env(MAILER_PORT)%\"",
+                        "    encryption: null",
+                        "    auth_mode: null",
+                        "    username: \"%env(MAILER_USER)%\"",
+                        "    password: \"%env(MAILER_PASSWORD)%\"",
+                        "    spool: { type: \"memory\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/test/swiftmailer.yaml": {
+                    "contents": [
+                        "swiftmailer:",
+                        "    disable_delivery: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "003a28ad5127358a25f051cf0032afc00128089b"
+        }
+    }
+}

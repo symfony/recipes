@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "copy-from-package": {
+                    "bin/check.php": "%BIN_DIR%/check.php",
+                    "web/check.php": "%WEB_DIR%/check.php"
+                },
+                "composer-scripts": {
+                    "%BIN_DIR%/check.php": "php-script"
+                }
+            },
+            "files": [],
+            "ref": "c6c27f9ebdb1493a1c16f0cbc90827d9edeecdcd"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "symfony/google-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "Gmail SHOULD NOT be used on production, use it in development only.",
+                    "#2": "GMAIL_USERNAME=",
+                    "#3": "GMAIL_PASSWORD=",
+                    "#4": "MAILER_DSN=smtp://$GMAIL_USERNAME:$GMAIL_PASSWORD@google"
+                }
+            },
+            "files": [],
+            "ref": "7b6d5252ce12eb93ebb0f6d4e7e285c6d60461ef"
+        }
+    }
+}

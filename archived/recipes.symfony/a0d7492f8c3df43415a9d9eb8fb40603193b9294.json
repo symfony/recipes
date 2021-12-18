@@ -1,0 +1,95 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\MonologBundle\\MonologBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/dev/monolog.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Config\\Resource\\ClassExistenceResource;",
+                        "use Symfony\\Component\\Console\\Application;",
+                        "",
+                        "$handlers = [",
+                        "    'main' => [",
+                        "        'type' => 'stream',",
+                        "        'path' => '%kernel.logs_dir%/%kernel.environment%.log',",
+                        "        'level' => 'debug',",
+                        "        'channels' => ['!event'],",
+                        "    ],",
+                        "    // uncomment to get logging in your browser",
+                        "    // you may have to allow bigger header sizes in your Web server configuration",
+                        "    //'firephp' => [",
+                        "    //    'type' => 'firephp',",
+                        "    //    'level' => 'info',",
+                        "    //],",
+                        "    //'chromephp' => [",
+                        "    //    'type' => 'chromephp',",
+                        "    //    'level' => 'info',",
+                        "    //],",
+                        "];",
+                        "",
+                        "$container->addResource(new ClassExistenceResource(Application::class));",
+                        "if (class_exists(Application::class)) {",
+                        "    $handlers['console'] = [",
+                        "        'type' => 'console',",
+                        "        'channels' => ['!event', '!doctrine', '!console'],",
+                        "    ];",
+                        "}",
+                        "",
+                        "$container->loadFromExtension('monolog', [",
+                        "    'handlers' => $handlers,",
+                        "]);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/prod/monolog.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Config\\Resource\\ClassExistenceResource;",
+                        "use Symfony\\Component\\Console\\Application;",
+                        "",
+                        "$handlers = [",
+                        "    'main' => [",
+                        "        'type' => 'fingers_crossed',",
+                        "        'action_level' => 'error',",
+                        "        'handler' => 'nested',",
+                        "    ],",
+                        "    'nested' => [",
+                        "        'type' => 'stream',",
+                        "        'path' => '%kernel.logs_dir%/%kernel.environment%.log',",
+                        "        'level' => 'debug',",
+                        "    ],",
+                        "];",
+                        "",
+                        "$container->addResource(new ClassExistenceResource(Application::class));",
+                        "if (class_exists(Application::class)) {",
+                        "    $handlers['console'] = [",
+                        "        'type' => 'console',",
+                        "        'channels' => ['!event', '!doctrine'],",
+                        "    ];",
+                        "}",
+                        "",
+                        "$container->loadFromExtension('monolog', [",
+                        "    'handlers' => $handlers,",
+                        "]);",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a0d7492f8c3df43415a9d9eb8fb40603193b9294"
+        }
+    }
+}

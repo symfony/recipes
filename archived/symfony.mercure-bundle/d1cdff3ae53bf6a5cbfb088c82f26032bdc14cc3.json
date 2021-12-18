@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "symfony/mercure-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\MercureBundle\\MercureBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "See https://symfony.com/doc/current/mercure.html#configuration",
+                    "#2": "The URL of the Mercure hub, used by the app to publish updates (can be a local URL)",
+                    "MERCURE_URL": "https://127.0.0.1:8000/.well-known/mercure",
+                    "#3": "The public URL of the Mercure hub, used by the browser to connect",
+                    "MERCURE_PUBLIC_URL": "https://127.0.0.1:8000/.well-known/mercure",
+                    "#4": "The secret used to sign the JWTs",
+                    "MERCURE_JWT_SECRET": "!ChangeMe!"
+                }
+            },
+            "files": {
+                "config/packages/mercure.yaml": {
+                    "contents": [
+                        "mercure:",
+                        "    hubs:",
+                        "        default:",
+                        "            url: '%env(MERCURE_URL)%'",
+                        "            public_url: '%env(MERCURE_PUBLIC_URL)%'",
+                        "            jwt:",
+                        "                secret: '%env(MERCURE_JWT_SECRET)%'",
+                        "                publish: '*'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1cdff3ae53bf6a5cbfb088c82f26032bdc14cc3"
+        }
+    }
+}

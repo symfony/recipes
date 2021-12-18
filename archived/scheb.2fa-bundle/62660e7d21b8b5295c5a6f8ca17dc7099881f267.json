@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "scheb/2fa-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/scheb_2fa.yaml": {
+                    "contents": [
+                        "# See the configuration reference at https://github.com/scheb/2fa/blob/master/doc/configuration.md",
+                        "scheb_two_factor:",
+                        "    security_tokens:",
+                        "        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken",
+                        "        # If you're using guard-based authentication, you have to use this one:",
+                        "        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken",
+                        "        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:",
+                        "        # - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/scheb_2fa.yaml": {
+                    "contents": [
+                        "2fa_login:",
+                        "    path: /2fa",
+                        "    defaults:",
+                        "        _controller: \"scheb_two_factor.form_controller:form\"",
+                        "",
+                        "2fa_login_check:",
+                        "    path: /2fa_check",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "62660e7d21b8b5295c5a6f8ca17dc7099881f267"
+        }
+    }
+}

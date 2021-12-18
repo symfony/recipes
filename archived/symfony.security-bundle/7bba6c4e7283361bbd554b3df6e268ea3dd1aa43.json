@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "symfony/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    # https://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers",
+                        "    providers:",
+                        "        in_memory: { memory: null }",
+                        "    firewalls:",
+                        "        dev:",
+                        "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "            security: false",
+                        "        main:",
+                        "            anonymous: null",
+                        "",
+                        "            # activate different ways to authenticate",
+                        "",
+                        "            # http_basic: null",
+                        "            # https://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate",
+                        "",
+                        "            # form_login: null",
+                        "            # https://symfony.com/doc/current/cookbook/security/form_login_setup.html",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7bba6c4e7283361bbd554b3df6e268ea3dd1aa43"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "recipes/symfony": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/"
+                }
+            },
+            "files": {
+                "bin/console": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use Doctrine\\Common\\Annotations\\AnnotationRegistry;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Console\\Application;",
+                        "use Symfony\\Component\\Dotenv\\Dotenv;",
+                        "use Symfony\\Component\\Console\\Input\\ArgvInput;",
+                        "use Symfony\\Component\\Debug\\Debug;",
+                        "",
+                        "umask(0000);",
+                        "set_time_limit(0);",
+                        "",
+                        "$loader = require __DIR__.'/../vendor/autoload.php';",
+                        "if (class_exists(AnnotationRegistry::class)) {",
+                        "    AnnotationRegistry::registerLoader([$loader, 'loadClass']);",
+                        "}",
+                        "",
+                        "if (!class_exists(Application::class)) {",
+                        "    throw new \\RuntimeException('You need to add \"symfony/framework-bundle\" as a Composer dependency.');",
+                        "}",
+                        "",
+                        "if (!getenv('APP_ENV')) {",
+                        "    (new Dotenv())->load(__DIR__.'/../.env');",
+                        "}",
+                        "",
+                        "$input = new ArgvInput();",
+                        "$env = $input->getParameterOption(['--env', '-e'], getenv('APP_ENV') ?: 'dev');",
+                        "$debug = getenv('APP_DEBUG') !== '0' && !$input->hasParameterOption(['--no-debug', '']);",
+                        "",
+                        "if ($debug && class_exists(Debug::class)) {",
+                        "    Debug::enable();",
+                        "}",
+                        "",
+                        "$kernel = new AppKernel($env, $debug);",
+                        "$application = new Application($kernel);",
+                        "$application->run($input);",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "4b9beb0e4799bc6527e0705328ee8a13d060fd95"
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "phpunit/phpunit": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "phpunit.xml.dist": "phpunit.xml.dist"
+                },
+                "version_aliases": [
+                    "4.8",
+                    "5.0",
+                    "5.1",
+                    "5.2",
+                    "5.3",
+                    "5.4",
+                    "5.5",
+                    "5.6",
+                    "5.7",
+                    "6.0",
+                    "6.1"
+                ]
+            },
+            "files": {
+                "phpunit.xml.dist": {
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->",
+                        "<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"http://schema.phpunit.de/4.8/phpunit.xsd\"",
+                        "         backupGlobals=\"false\"",
+                        "         colors=\"true\"",
+                        "         bootstrap=\"vendor/autoload.php\"",
+                        ">",
+                        "    <php>",
+                        "        <ini name=\"error_reporting\" value=\"-1\" />",
+                        "        <server name=\"KERNEL_DIR\" value=\"etc/\" />",
+                        "    </php>",
+                        "",
+                        "    <testsuites>",
+                        "        <testsuite name=\"Project Test Suite\">",
+                        "            <directory>tests/</directory>",
+                        "        </testsuite>",
+                        "    </testsuites>",
+                        "</phpunit>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "17602fd00e6ea3aa184b02cec79597dd0ea6568f"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "symfony/mercure-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\MercureBundle\\MercureBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "env(MERCURE_PUBLISH_URL)": "",
+                    "env(MERCURE_JWT_SECRET)": ""
+                },
+                "env": {
+                    "MERCURE_PUBLISH_URL": "https://demo.mercure.rocks/hub",
+                    "MERCURE_JWT_SECRET": "#see https://mercure.rocks"
+                }
+            },
+            "files": {
+                "config/packages/mercure.yaml": {
+                    "contents": [
+                        "mercure:",
+                        "    hubs:",
+                        "        default:",
+                        "            url: '%env(MERCURE_PUBLISH_URL)%'",
+                        "            jwt: '%env(MERCURE_JWT_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c78ab1f56e700004fc5cd675c26b3c1c26be281d"
+        }
+    }
+}

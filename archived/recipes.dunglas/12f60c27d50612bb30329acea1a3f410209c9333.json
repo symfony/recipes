@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "recipes/dunglas": {
+            "manifest": {
+                "bundles": {
+                    "Dunglas\\ActionBundle\\DunglasActionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/dunglas_action.yaml": {
+                    "contents": [
+                        "dunglas_action:",
+                        "    directories:",
+                        "        - \"../src/{Action,Command,Controller,EventSubscriber,Twig}\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "12f60c27d50612bb30329acea1a3f410209c9333"
+        }
+    }
+}

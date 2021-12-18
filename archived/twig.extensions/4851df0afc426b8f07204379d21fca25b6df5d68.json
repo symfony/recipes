@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "twig/extensions": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/twig_extensions.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    #Twig\\Extensions\\ArrayExtension: ~",
+                        "    #Twig\\Extensions\\DateExtension: ~",
+                        "    #Twig\\Extensions\\IntlExtension: ~",
+                        "    #Twig\\Extensions\\TextExtension: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4851df0afc426b8f07204379d21fca25b6df5d68"
+        }
+    }
+}

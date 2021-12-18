@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "symfony/web-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebServerBundle\\WebServerBundle": [
+                        "dev"
+                    ]
+                },
+                "gitignore": [
+                    ".web-server-pid"
+                ]
+            },
+            "files": [],
+            "ref": "c72d107d077f1654428edaed69415d0228c1aefe"
+        }
+    }
+}

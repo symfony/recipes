@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "symfony/webapp-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=false"
+                }
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        failure_transport: failed",
+                        "",
+                        "        transports:",
+                        "            # https://symfony.com/doc/current/messenger.html#transport-configuration",
+                        "            async:",
+                        "                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "                options:",
+                        "                    use_notify: true",
+                        "                    check_delayed_interval: 60000",
+                        "                retry_strategy:",
+                        "                    max_retries: 3",
+                        "                    multiplier: 2",
+                        "            failed: 'doctrine://default?queue_name=failed'",
+                        "            # sync: 'sync://'",
+                        "",
+                        "        routing:",
+                        "            Symfony\\Component\\Mailer\\Messenger\\SendEmailMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\ChatMessage: async",
+                        "            Symfony\\Component\\Notifier\\Message\\SmsMessage: async",
+                        "",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': async",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "80f2126c6d6929ede1d19a2b861733467674ee45"
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#2": "IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml",
+                    "#3": "",
+                    "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "#5": "DATABASE_URL=\"mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7\"",
+                    "DATABASE_URL": "postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
+                },
+                "dockerfile": [
+                    "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \\",
+                    "\tdocker-php-ext-install -j$(nproc) pdo_pgsql; \\",
+                    "\tapk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5; \\",
+                    "\tapk del .pgsql-deps"
+                ],
+                "docker-compose": {
+                    "docker-compose.yml": {
+                        "services": [
+                            "database:",
+                            "  image: postgres:${POSTGRES_VERSION:-13}-alpine",
+                            "  environment:",
+                            "    POSTGRES_DB: ${POSTGRES_DB:-app}",
+                            "    # You should definitely change the password in production",
+                            "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}",
+                            "    POSTGRES_USER: ${POSTGRES_USER:-symfony}",
+                            "  volumes:",
+                            "    - db-data:/var/lib/postgresql/data:rw",
+                            "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                            "    # - ./docker/db/data:/var/lib/postgresql/data:rw"
+                        ],
+                        "volumes": [
+                            "db-data:"
+                        ]
+                    },
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "database:",
+                            "  ports:",
+                            "    - \"5432\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                        </>",
+                    "<bg=blue;fg=white> Database Configuration </>",
+                    "<bg=blue;fg=white>                        </>",
+                    "",
+                    "  * Modify your DATABASE_URL config in <fg=green>.env</>",
+                    "",
+                    "  * Configure the <fg=green>driver</> (postgresql) and",
+                    "    <fg=green>server_version</> (13) in <fg=green>config/packages/doctrine.yaml</>"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        override_url: true",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #server_version: '13'",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        metadata_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.system_cache_pool",
+                        "        query_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.system_cache_pool",
+                        "        result_cache_driver:",
+                        "            type: pool",
+                        "            pool: doctrine.result_cache_pool",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine.result_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/doctrine.yaml": {
+                    "contents": [
+                        "#doctrine:",
+                        "#    dbal:",
+                        "#        # Overrides the database name in the test environment only",
+                        "#        # \"host\", \"port\", \"username\", & \"password\" can also be set to override their respective url parts",
+                        "#        #",
+                        "#        # If you're using ParaTest, \"TEST_TOKEN\" is set by ParaTest otherwise nothing is appended to the database name.",
+                        "#        dbname: main_test%env(default::TEST_TOKEN)%",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9777bf185961283a450b6237281132935025fe04"
+        }
+    }
+}

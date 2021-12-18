@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "symfony/flex": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".env.dist": ".env.dist",
+                    "git/": ".git"
+                }
+            },
+            "files": {
+                ".env.dist": {
+                    "contents": [
+                        "# This file is a \"template\" of which env vars need to be defined for your application",
+                        "# Copy this file to .env file for development, create environment variables when deploying to production",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "git/HEAD": {
+                    "contents": [
+                        "ref: refs/heads/master",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "git/config": {
+                    "contents": [
+                        "[core]",
+                        "\trepositoryformatversion = 0",
+                        "\tfilemode = true",
+                        "\tbare = false",
+                        "\tlogallrefupdates = true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "git/objects/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "git/refs/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
+        }
+    }
+}

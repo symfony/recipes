@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/validator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validator:",
+                        "        email_validation_mode: html5",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fec337133aee79010c1917725077fa06cbac3d7e"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "doctrine/doctrine-migrations-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_migrations.yaml": {
+                    "contents": [
+                        "doctrine_migrations:",
+                        "    dir_name: '%kernel.project_dir%/src/Migrations'",
+                        "    # namespace is arbitrary but should be different from App\\Migrations",
+                        "    # as migrations classes should NOT be autoloaded",
+                        "    namespace: DoctrineMigrations",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c1431086fec31f17fbcfe6d6d7e92059458facc1"
+        }
+    }
+}

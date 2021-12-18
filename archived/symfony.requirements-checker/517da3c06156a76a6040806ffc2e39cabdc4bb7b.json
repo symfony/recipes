@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "symfony/requirements-checker": {
+            "manifest": {
+                "copy-from-package": {
+                    "bin/check.php": "%BIN_DIR%/check.php",
+                    "public/check.php": "%PUBLIC_DIR%/check.php"
+                },
+                "composer-scripts": {
+                    "%BIN_DIR%/check.php": "php-script"
+                }
+            },
+            "files": [],
+            "ref": "517da3c06156a76a6040806ffc2e39cabdc4bb7b"
+        }
+    }
+}

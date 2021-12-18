@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "symfony/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers",
+                        "    providers:",
+                        "        in_memory: { memory: ~ }",
+                        "    firewalls:",
+                        "        dev:",
+                        "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "            security: false",
+                        "        main:",
+                        "            anonymous: ~",
+                        "",
+                        "            # activate different ways to authenticate",
+                        "",
+                        "            # http_basic: ~",
+                        "            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate",
+                        "",
+                        "            # form_login: ~",
+                        "            # https://symfony.com/doc/current/security/form_login_setup.html",
+                        "",
+                        "    # Easy way to control access for large sections of your site",
+                        "    # Note: Only the *first* access control that matches will be used",
+                        "    access_control:",
+                        "        # - { path: ^/admin, roles: ROLE_ADMIN }",
+                        "        # - { path: ^/profile, roles: ROLE_USER }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "03f21d01e3f41a095a43e0e7b2f7fbd9dbd33cf8"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "api-platform/core": {
+            "manifest": {
+                "bundles": {
+                    "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * Your API is almost ready:",
+                    "    1. Create your first API resource in <info>src/Entity</info>;",
+                    "    2. Go to <info>/api</info> to browse your API",
+                    "",
+                    "  * To enable the GraphQL support, run <comment>composer require webonyx/graphql-php</>,",
+                    "    then browse <info>/api/graphql</info>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://api-platform.com/docs</>"
+                ]
+            },
+            "files": {
+                "config/packages/api_platform.yaml": {
+                    "contents": [
+                        "api_platform:",
+                        "    mapping:",
+                        "        paths: ['%kernel.project_dir%/src/Entity']",
+                        "    patch_formats:",
+                        "        json: ['application/merge-patch+json']",
+                        "    swagger:",
+                        "        versions: [3]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/api_platform.yaml": {
+                    "contents": [
+                        "api_platform:",
+                        "    resource: .",
+                        "    type: api_platform",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f132b33c43cf47b4451d91d2b57057eacb6b8e1d"
+        }
+    }
+}

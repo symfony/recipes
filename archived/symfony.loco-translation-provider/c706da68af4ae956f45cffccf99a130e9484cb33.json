@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/loco-translation-provider": {
+            "manifest": {
+                "env": {
+                    "#1": "LOCO_DSN=loco://API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "c706da68af4ae956f45cffccf99a130e9484cb33"
+        }
+    }
+}

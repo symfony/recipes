@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "zenstruck/foundry": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * You're ready to use zenstruck/foundry. Create your first factory with",
+                    "    <info>bin/console make:factory</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/foundry#foundry</>"
+                ]
+            },
+            "files": {
+                "config/packages/dev/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "# See full configuration: https://github.com/zenstruck/foundry#full-default-bundle-configuration",
+                        "zenstruck_foundry:",
+                        "    # Whether to auto-refresh proxies by default (https://github.com/zenstruck/foundry#auto-refresh)",
+                        "    auto_refresh_proxies: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "# Unless you want different configuration for test/dev environments,",
+                        "# add configuration to config/packages/dev/zenstruck_foundry.yml",
+                        "# and this will be synced to your test environment.",
+                        "imports:",
+                        "    - { resource: ../dev/zenstruck_foundry.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e03ffeeb52fd76e99f2c527ecddc9c986cb194e5"
+        }
+    }
+}

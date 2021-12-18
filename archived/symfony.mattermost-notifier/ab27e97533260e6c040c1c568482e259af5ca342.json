@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/mattermost-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "See https://docs.mattermost.com/developer/bot-accounts.html",
+                    "#2": "MATTERMOST_DSN=mattermost://TOKEN@HOST?channel=CHANNEL_ID"
+                }
+            },
+            "files": [],
+            "ref": "ab27e97533260e6c040c1c568482e259af5ca342"
+        }
+    }
+}

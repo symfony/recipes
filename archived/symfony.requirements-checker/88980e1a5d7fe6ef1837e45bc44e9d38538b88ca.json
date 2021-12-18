@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/requirements-checker": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "public/": "%PUBLIC_DIR%/"
+                },
+                "composer-scripts": {
+                    "requirements-checker": "script"
+                }
+            },
+            "files": {
+                "public/check.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "require dirname(__DIR__).'/vendor/symfony/requirements-checker/public/check.php';",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "88980e1a5d7fe6ef1837e45bc44e9d38538b88ca"
+        }
+    }
+}

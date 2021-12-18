@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "symfony/mailer": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MAILER_DSN=smtp://localhost"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * You're ready to send emails.",
+                    "",
+                    "  * If you want to send emails via a supported email provider, install",
+                    "    the corresponding bridge.",
+                    "    For instance, <info>composer require mailgun-mailer</> for Mailgun.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/master/mailer.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/mailer.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    mailer:",
+                        "        dsn: '%env(MAILER_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8d03937083d1c2dbcfb69a0d6a0192edfc2fcf2f"
+        }
+    }
+}

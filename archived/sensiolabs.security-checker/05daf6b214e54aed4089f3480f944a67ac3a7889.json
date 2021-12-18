@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "sensiolabs/security-checker": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "security-checker security:check": "script"
+                }
+            },
+            "files": {
+                "config/packages/security_checker.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    SensioLabs\\Security\\SecurityChecker: ~",
+                        "",
+                        "    SensioLabs\\Security\\Command\\SecurityCheckerCommand: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "05daf6b214e54aed4089f3480f944a67ac3a7889"
+        }
+    }
+}

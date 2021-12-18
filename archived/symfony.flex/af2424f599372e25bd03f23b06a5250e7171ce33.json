@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/flex": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".env": ".env"
+                }
+            },
+            "files": {
+                ".env": {
+                    "contents": [
+                        "# This file is a \"template\" of which env vars need to be defined for your application",
+                        "# Override the variables you want in .env.local for development, create environment variables when deploying to production",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "af2424f599372e25bd03f23b06a5250e7171ce33"
+        }
+    }
+}

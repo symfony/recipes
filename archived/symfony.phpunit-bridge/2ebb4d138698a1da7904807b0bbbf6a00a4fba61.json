@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "symfony/phpunit-bridge": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "phpunit.xml.dist": "phpunit.xml.dist"
+                },
+                "gitignore": [
+                    "/phpunit.xml"
+                ]
+            },
+            "files": {
+                "phpunit.xml.dist": {
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->",
+                        "<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"http://schema.phpunit.de/6.1/phpunit.xsd\"",
+                        "         backupGlobals=\"false\"",
+                        "         colors=\"true\"",
+                        "         bootstrap=\"vendor/autoload.php\"",
+                        ">",
+                        "    <php>",
+                        "        <ini name=\"error_reporting\" value=\"-1\" />",
+                        "        <env name=\"KERNEL_CLASS\" value=\"App\\Kernel\" />",
+                        "        <env name=\"APP_ENV\" value=\"test\" />",
+                        "        <env name=\"APP_DEBUG\" value=\"1\" />",
+                        "        <env name=\"APP_SECRET\" value=\"s$cretf0rt3st\" />",
+                        "        <!-- define your env variables for the test env here -->",
+                        "    </php>",
+                        "",
+                        "    <testsuites>",
+                        "        <testsuite name=\"Project Test Suite\">",
+                        "            <directory>tests/</directory>",
+                        "        </testsuite>",
+                        "    </testsuites>",
+                        "</phpunit>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2ebb4d138698a1da7904807b0bbbf6a00a4fba61"
+        }
+    }
+}

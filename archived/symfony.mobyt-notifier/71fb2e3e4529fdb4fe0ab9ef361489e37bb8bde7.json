@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mobyt-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MOBYT_DSN=mobyt://USER_KEY:ACCESS_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "71fb2e3e4529fdb4fe0ab9ef361489e37bb8bde7"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "DB_URL format: \"vendor://username:password@host-or-ip:port/database-name?optional=config\"",
+                    "#2": "For a sqlite database, use: \"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "DATABASE_URL": "mysql://root@127.0.0.1:3306/symfony?charset=utf8mb4"
+                }
+            },
+            "files": {
+                "etc/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: \"%env(DATABASE_URL)%\"",
+                        "    orm:",
+                        "        auto_generate_proxy_classes: \"%kernel.debug%\"",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                is_bundle: false",
+                        "                type: annotation",
+                        "                dir: \"%kernel.project_dir%/src/Entity\"",
+                        "                prefix: \"App\\\\Entity\\\\\"",
+                        "                alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/prod/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        #metadata_cache_driver: apc",
+                        "        #result_cache_driver: apc",
+                        "        #query_cache_driver: apc",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1f7d810ad6b26558875738a25cb1ea01eac9d5d9"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mattermost-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MATTERMOST_DSN=mattermost://TOKEN@HOST?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "ref": "855fd5aaf6efdb4a6990eabbef083d02cbf37e18"
+        }
+    }
+}
