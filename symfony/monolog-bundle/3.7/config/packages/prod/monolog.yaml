@@ -9,6 +9,7 @@ monolog:
         nested:
             type: stream
             path: php://stderr
+            include_stacktraces: true
             level: debug
             formatter: monolog.formatter.json
         console:

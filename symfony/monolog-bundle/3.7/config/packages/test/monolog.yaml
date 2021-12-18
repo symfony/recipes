@@ -9,4 +9,5 @@ monolog:
         nested:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"
+            include_stacktraces: true
             level: debug
