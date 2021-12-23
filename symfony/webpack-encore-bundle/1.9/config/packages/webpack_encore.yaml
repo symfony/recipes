@@ -38,12 +38,12 @@ framework:
     assets:
         json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
 
-when@prod:
+#when@prod:
     #webpack_encore:
         # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)
         # Available in version 1.2
         #cache: true
 
-when@test:
+#when@test:
     #webpack_encore:
     #    strict_mode: false
