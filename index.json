@@ -106,6 +106,8 @@
         "google-mailer": "symfony/google-mailer",
         "googlechatnotifier": "symfony/google-chat-notifier",
         "googlemailer": "symfony/google-mailer",
+        "html-sanitizer": "symfony/html-sanitizer",
+        "htmlsanitizer": "symfony/html-sanitizer",
         "http-client": "symfony/http-client",
         "http-foundation": "symfony/http-foundation",
         "http-kernel": "symfony/http-kernel",
@@ -1166,6 +1168,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/html-sanitizer": [
                 "6.1"
             ],
             "symfony/http-client": [
