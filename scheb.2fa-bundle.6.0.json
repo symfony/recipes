@@ -14,14 +14,11 @@
             "files": {
                 "config/packages/scheb_2fa.yaml": {
                     "contents": [
-                        "# See the configuration reference at https://symfony.com/bundles/SchebTwoFactorBundle/5.x/configuration.html",
+                        "# See the configuration reference at https://symfony.com/bundles/SchebTwoFactorBundle/6.x/configuration.html",
                         "scheb_two_factor:",
                         "    security_tokens:",
                         "        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken",
-                        "        # If you're using guard-based authentication, you have to use this one:",
-                        "        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken",
-                        "        # If you're using authenticator-based security (introduced in Symfony 5.1), you have to use this one:",
-                        "        # - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken",
+                        "        - Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken",
                         ""
                     ],
                     "executable": false
@@ -40,7 +37,7 @@
                     "executable": false
                 }
             },
-            "ref": "ccdcd64169a0420507e9f6af85da457026c11e03"
+            "ref": "10513e776d7ac66b21e58d08bf34643434bcf3ab"
         }
     }
 }

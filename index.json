@@ -425,7 +425,8 @@
             "9.3"
         ],
         "scheb/2fa-bundle": [
-            "5.0"
+            "5.0",
+            "6.0"
         ],
         "sensio/framework-extra-bundle": [
             "4.0",
