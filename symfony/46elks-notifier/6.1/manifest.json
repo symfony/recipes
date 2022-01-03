@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "FORTYSIX_ELKS_DSN=46elks://API_USERNAME:API_PASSWORD@default?from=FROM"
+    }
+}
