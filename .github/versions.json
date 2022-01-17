@@ -733,6 +733,9 @@
             "6.0",
             "6.1"
         ],
+        "symfony/orange-sms-notifier": [
+            "6.1"
+        ],
         "symfony/ovh-cloud-notifier": [
             "5.1",
             "5.2",
