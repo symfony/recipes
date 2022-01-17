@@ -189,6 +189,8 @@
         "onesignalnotifier": "symfony/one-signal-notifier",
         "options-resolver": "symfony/options-resolver",
         "optionsresolver": "symfony/options-resolver",
+        "orange-sms-notifier": "symfony/orange-sms-notifier",
+        "orangesmsnotifier": "symfony/orange-sms-notifier",
         "orm": "symfony/orm-pack",
         "orm-fixtures": "doctrine/doctrine-fixtures-bundle",
         "ormfixtures": "doctrine/doctrine-fixtures-bundle",
@@ -1478,6 +1480,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/orange-sms-notifier": [
                 "6.1"
             ],
             "symfony/ovh-cloud-notifier": [
