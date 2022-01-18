@@ -371,6 +371,9 @@
             "6.0",
             "6.1"
         ],
+        "symfony/forty-six-elks-notifier": [
+            "6.1"
+        ],
         "symfony/framework-bundle": [
             "3.4",
             "4.0",
