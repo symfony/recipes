@@ -490,6 +490,9 @@
         "symfony/flex": [
             "1.0"
         ],
+        "symfony/forty-six-elks-notifier": [
+            "6.1"
+        ],
         "symfony/framework-bundle": [
             "3.3",
             "3.4",

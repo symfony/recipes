@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/forty-six-elks-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "FORTY_SIX_ELKS_DSN=forty-six-elks://API_USERNAME:API_PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "d06908b4cfb2570d36c7cb5723aa9c3f00d02435"
+        }
+    }
+}
