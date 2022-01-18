@@ -92,6 +92,8 @@
         "firebasenotifier": "symfony/firebase-notifier",
         "flex": "symfony/flex",
         "form": "symfony/form",
+        "forty-six-elks-notifier": "symfony/forty-six-elks-notifier",
+        "fortysixelksnotifier": "symfony/forty-six-elks-notifier",
         "framework-bundle": "symfony/framework-bundle",
         "frameworkbundle": "symfony/framework-bundle",
         "free-mobile-notifier": "symfony/free-mobile-notifier",
@@ -1118,6 +1120,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/forty-six-elks-notifier": [
                 "6.1"
             ],
             "symfony/framework-bundle": [
