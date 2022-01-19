@@ -512,6 +512,9 @@
             "6.0",
             "6.1"
         ],
+        "symfony/kaz-info-teh-notifier": [
+            "6.1"
+        ],
         "symfony/ldap": [
             "3.4",
             "4.0",
