@@ -528,6 +528,9 @@
         "symfony/iqsms-notifier": [
             "5.3"
         ],
+        "symfony/kaz-info-teh-notifier": [
+            "6.1"
+        ],
         "symfony/light-sms-notifier": [
             "5.3"
         ],

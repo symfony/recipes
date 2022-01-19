@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/kaz-info-teh-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "KAZ_INFO_TEH_DSN=kaz-info-teh://USERNAME:PASSWORD@default?sender=FROM"
+                }
+            },
+            "files": [],
+            "ref": "b66a81c5f16e21ecfee8d45e5f5036ca9e787fd9"
+        }
+    }
+}
