@@ -129,6 +129,8 @@
         "jwt": "lexik/jwt-authentication-bundle",
         "jwt-auth": "lexik/jwt-authentication-bundle",
         "jwtauth": "lexik/jwt-authentication-bundle",
+        "kaz-info-teh-notifier": "symfony/kaz-info-teh-notifier",
+        "kazinfotehnotifier": "symfony/kaz-info-teh-notifier",
         "ldap": "symfony/ldap",
         "light-sms-notifier": "symfony/light-sms-notifier",
         "lightsmsnotifier": "symfony/light-sms-notifier",
@@ -1264,6 +1266,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/kaz-info-teh-notifier": [
                 "6.1"
             ],
             "symfony/ldap": [
