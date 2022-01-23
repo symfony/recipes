@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "ByteArtist\\MenuBundle\\MenuBundle:": ["all"]
+        "ByteArtist\\MenuBundle\\MenuBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
