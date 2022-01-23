@@ -1,5 +1,5 @@
 menu:
-#    type: default # bootstrap, default, list, div (list is default)
+    type: default # bootstrap, default, list, div (list is default)
 #    brand_name: Brand Name # optional, only for bootstrap
 #    use_orig_css: true # flag to use the original css for current menu type, default true, optional
 #    use_orig_js: true # flag to use the original javascript for current menu type, default true, optional
