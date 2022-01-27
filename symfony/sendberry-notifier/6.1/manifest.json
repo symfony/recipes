@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SENDBERRY_DSN=sendberry://USERNAME:PASSWORD@default?auth_key=AUTH_KEY&from=FROM"
+    }
+}
