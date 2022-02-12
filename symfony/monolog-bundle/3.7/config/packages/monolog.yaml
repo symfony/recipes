@@ -1,7 +1,6 @@
-# As of Symfony 5.1, deprecations are logged in the dedicated "deprecation" channel when it exists
 monolog:
     channels:
-        - deprecation
+        - deprecation # Deprecations are logged in the dedicated "deprecation" channel when it exists
 
 when@dev:
     monolog:
