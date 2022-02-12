@@ -31,8 +31,8 @@ when@test:
                 type: fingers_crossed
                 action_level: error
                 handler: nested
-                excluded_http_codes: [ 404, 405 ]
-                channels: [ "!event" ]
+                excluded_http_codes: [404, 405]
+                channels: ["!event"]
             nested:
                 type: stream
                 path: "%kernel.logs_dir%/%kernel.environment%.log"
@@ -45,7 +45,7 @@ when@prod:
                 type: fingers_crossed
                 action_level: error
                 handler: nested
-                excluded_http_codes: [ 404, 405 ]
+                excluded_http_codes: [404, 405]
                 buffer_size: 50 # How many messages should be saved? Prevent memory leaks
             nested:
                 type: stream
@@ -55,7 +55,7 @@ when@prod:
             console:
                 type: console
                 process_psr_3_messages: false
-                channels: [ "!event", "!doctrine" ]
+                channels: ["!event", "!doctrine"]
 #            deprecation:
 #                type: stream
 #                channels: [deprecation]
