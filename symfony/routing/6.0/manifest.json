@@ -2,5 +2,8 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["router"]
+    "aliases": ["router"],
+    "conflict": {
+        "symfony/framework-bundle": "<5.3"
+    }
 }
