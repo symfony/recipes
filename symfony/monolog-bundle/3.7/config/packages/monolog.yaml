@@ -1,7 +1,7 @@
 # As of Symfony 5.1, deprecations are logged in the dedicated "deprecation" channel when it exists
-#monolog:
-#    channels:
-#        - deprecation
+monolog:
+    channels:
+        - deprecation
 
 when@dev:
     monolog:
@@ -56,7 +56,7 @@ when@prod:
                 type: console
                 process_psr_3_messages: false
                 channels: ["!event", "!doctrine"]
-#            deprecation:
-#                type: stream
-#                channels: [deprecation]
-#                path: php://stderr
+            deprecation:
+                type: stream
+                channels: [deprecation]
+                path: php://stderr
