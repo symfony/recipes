@@ -5,5 +5,8 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["log", "logger", "logging", "logs", "monolog"]
+    "aliases": ["log", "logger", "logging", "logs", "monolog"],
+    "conflict": {
+        "symfony/framework-bundle": "<5.3"
+    }
 }
