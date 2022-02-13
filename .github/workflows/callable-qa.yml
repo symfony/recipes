@@ -154,7 +154,7 @@ jobs:
                 name: JSON files are valid
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    ERRORS=$(find * -name '*.json' | parallel -j+3 -i{} -n1 bash -c 'ERR=$(python -mjson.tool {} 2>&1 1> /dev/null) || echo \\n::error file={},line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
+                    ERRORS=$(find * -name '*.json' | xargs -I{} -n1 -P0 bash -c 'ERR=$(cd / && python -mjson.tool '$(pwd)'/{} 2>&1 1> /dev/null) || echo \\n::error file={},line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
