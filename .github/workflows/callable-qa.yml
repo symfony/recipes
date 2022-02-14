@@ -128,7 +128,7 @@ jobs:
                 run: |
                     ERRORS=$(find * -name '*.yaml' -or -name '*.yml' -or -name '*.txt' -or -name '*.md' -or -name '*.markdown' \
                             -or -name '*.json' -or -name '*.rst' -or -name '*.php' -or -name '*.js' -or -name '*.css' -or -name '*.twig' \
-                        | xargs -n1 -I{} bash -c '[ -n "$(tail -c1 {})" ] && echo ::error file={},line=$((1 + `wc -l {} | cut -d" " -f1`))::Should end with a newline' || true)
+                        | xargs -n1 -P0 bash -c '[ -n "$(tail -c1 "$0")" ] && echo ::error file="$0",line=$((1 + `wc -l "$0" | cut -d" " -f1`))::Should end with a newline' || true)
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
@@ -154,7 +154,7 @@ jobs:
                 name: JSON files are valid
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    ERRORS=$(find * -name '*.json' | xargs -I{} -n1 -P0 bash -c 'ERR=$(cd / && python -mjson.tool '$(pwd)'/{} 2>&1 1> /dev/null) || echo \\n::error file={},line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
+                    ERRORS=$(find * -name '*.json' | xargs -n1 -P0 bash -c 'ERR=$(cd / && python -mjson.tool '$(pwd)'/"$0" 2>&1 1> /dev/null) || echo \\n::error file="$0",line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
