@@ -1,0 +1,2 @@
+  * <fg=blue>Write</> fixtures files in the <comment>fixtures/</> folder
+  * <fg=blue>Run</> <comment>php bin/console hautelook:fixtures:load</>
