@@ -14,7 +14,6 @@ on:
                 required: false
                 type: string
             create_project_php:
-                default: '7.4'
                 required: false
                 type: string
 
@@ -226,13 +225,6 @@ jobs:
 
         steps:
             -
-                name: Setup PHP
-                uses: shivammathur/setup-php@v2
-                with:
-                    coverage: "none"
-                    php-version: "${{ inputs.create_project_php }}"
-
-            -
                 name: Export configuration
                 continue-on-error: true
                 id: config
@@ -242,12 +234,20 @@ jobs:
                     [[ "" != "$PACKAGES" ]]
 
             -
-                name: Create-project with skeleton ^4
+                name: Setup PHP 7.4
+                uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "7.4"
+
+            -
+                name: Create-project with skeleton ^5
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
                     set -x
-                    composer create-project --ansi "symfony/skeleton:^4" v4
-                    cd v4
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^5" v5
+                    cd v5
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
@@ -255,18 +255,26 @@ jobs:
                     EXIT_CODE=$?
 
                     if [[ EXIT_CODE -eq 2 ]]; then
-                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 4\n#\n#\n#\n"
+                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 5\n#\n#\n#\n"
                     fi
 
                     exit $EXIT_CODE
 
             -
-                name: Create-project with skeleton ^5
+                name: Setup PHP 8.1
+                uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "8.1"
+
+            -
+                name: Create-project with skeleton ^6
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
                     set -x
-                    composer create-project --ansi "symfony/skeleton:^5" v5
-                    cd v5
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^6" v6
+                    cd v6
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
