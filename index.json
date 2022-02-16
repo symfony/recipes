@@ -404,7 +404,8 @@
             "3.0"
         ],
         "hautelook/alice-bundle": [
-            "2.1"
+            "2.1",
+            "2.2"
         ],
         "javiereguiluz/easyadmin-bundle": [
             "1.16",
@@ -415,7 +416,8 @@
             "2.5"
         ],
         "nelmio/alice": [
-            "3.2"
+            "3.2",
+            "3.3"
         ],
         "nelmio/cors-bundle": [
             "1.5"
@@ -707,10 +709,12 @@
         ],
         "symfony/validator": [
             "4.1",
-            "4.3"
+            "4.3",
+            "5.3"
         ],
         "symfony/web-profiler-bundle": [
-            "3.3"
+            "3.3",
+            "5.3"
         ],
         "symfony/web-server-bundle": [
             "3.3"
@@ -754,7 +758,8 @@
             "2.0"
         ],
         "zenstruck/foundry": [
-            "1.9"
+            "1.9",
+            "1.10"
         ]
     },
     "versions": {

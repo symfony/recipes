@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "zenstruck/foundry": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.3"
+                },
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/foundry. Create your first factory with",
+                    "    <info>bin/console make:factory</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "when@dev: &dev",
+                        "    # See full configuration: https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#full-default-bundle-configuration",
+                        "    zenstruck_foundry:",
+                        "        # Whether to auto-refresh proxies by default (https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#auto-refresh)",
+                        "        auto_refresh_proxies: true",
+                        "",
+                        "when@test: *dev",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "934cdd918703a7fcfc3ef91723a2eac42a0f7690"
+        }
+    }
+}

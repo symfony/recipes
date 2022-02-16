@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "hautelook/alice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hautelook\\AliceBundle\\HautelookAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "fixtures/": "fixtures/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.3"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Write</> fixtures files in the <comment>fixtures/</> folder",
+                    "  * <fg=blue>Run</> <comment>php bin/console hautelook:fixtures:load</>"
+                ]
+            },
+            "files": {
+                "config/packages/hautelook_alice.yaml": {
+                    "contents": [
+                        "when@dev: &dev",
+                        "    hautelook_alice:",
+                        "        fixtures_path: fixtures",
+                        "",
+                        "when@test: *dev",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "fixtures/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c84e4f2b9d7f436d7d52e8369230b393367607ec"
+        }
+    }
+}
