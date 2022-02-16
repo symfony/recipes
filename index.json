@@ -762,6 +762,72 @@
             "1.10"
         ]
     },
+    "recipe-conflicts": {
+        "doctrine/doctrine-bundle": {
+            "2.4": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "hautelook/alice-bundle": {
+            "2.2": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "nelmio/alice": {
+            "3.3": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/messenger": {
+            "4.1": {
+                "symfony/framework-bundle": "<4.1"
+            },
+            "4.3": {
+                "symfony/framework-bundle": "<4.3"
+            }
+        },
+        "symfony/monolog-bundle": {
+            "3.7": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/routing": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "6.0": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/security-bundle": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/twig-bundle": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "5.4": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/validator": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/web-profiler-bundle": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "zenstruck/foundry": {
+            "1.10": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        }
+    },
     "versions": {
         "lts": "5.4",
         "stable": "6.0",
@@ -2071,6 +2137,8 @@
         "repository": "github.com/symfony/recipes",
         "origin_template": "{package}:{version}@github.com/symfony/recipes:master",
         "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/archived/{package_dotted}/{ref}.json"
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
