@@ -374,7 +374,8 @@
             "1.0"
         ],
         "doctrine/annotations": [
-            "1.0"
+            "1.0",
+            "1.10"
         ],
         "doctrine/doctrine-bundle": [
             "1.6",
@@ -763,6 +764,11 @@
         ]
     },
     "recipe-conflicts": {
+        "doctrine/annotations": {
+            "1.10": {
+                "symfony/routing": "<6.0"
+            }
+        },
         "doctrine/doctrine-bundle": {
             "2.4": {
                 "symfony/framework-bundle": "<5.3"
