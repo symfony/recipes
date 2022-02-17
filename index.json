@@ -472,7 +472,8 @@
         ],
         "symfony/debug-bundle": [
             "3.3",
-            "4.1"
+            "4.1",
+            "5.3"
         ],
         "symfony/discord-notifier": [
             "5.2"
@@ -781,6 +782,11 @@
         },
         "nelmio/alice": {
             "3.3": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/debug-bundle": {
+            "5.3": {
                 "symfony/framework-bundle": "<5.3"
             }
         },
