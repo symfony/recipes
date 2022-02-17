@@ -23,20 +23,20 @@
                     "docker-compose.yml": {
                         "services": [
                             "mercure:",
-                            "    image: dunglas/mercure",
-                            "    restart: unless-stopped",
-                            "    environment:",
-                            "        SERVER_NAME: ':80'",
-                            "        MERCURE_PUBLISHER_JWT_KEY: '!ChangeMe!'",
-                            "        MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeMe!'",
-                            "        # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
-                            "        MERCURE_EXTRA_DIRECTIVES: |",
-                            "            cors_origins http://127.0.0.1:8000",
-                            "    # Comment the following line to disable the development mode",
-                            "    command: /usr/bin/caddy run -config /etc/caddy/Caddyfile.dev",
-                            "    volumes:",
-                            "        - mercure_data:/data",
-                            "        - mercure_config:/config"
+                            "  image: dunglas/mercure",
+                            "  restart: unless-stopped",
+                            "  environment:",
+                            "    SERVER_NAME: ':80'",
+                            "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeMe!'",
+                            "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeMe!'",
+                            "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
+                            "    MERCURE_EXTRA_DIRECTIVES: |",
+                            "      cors_origins http://127.0.0.1:8000",
+                            "  # Comment the following line to disable the development mode",
+                            "  command: /usr/bin/caddy run -config /etc/caddy/Caddyfile.dev",
+                            "  volumes:",
+                            "    - mercure_data:/data",
+                            "    - mercure_config:/config"
                         ],
                         "volumes": [
                             "mercure_data:",
@@ -46,8 +46,8 @@
                     "docker-compose.override.yml": {
                         "services": [
                             "mercure:",
-                            "    ports:",
-                            "        - \"80\""
+                            "  ports:",
+                            "    - \"80\""
                         ]
                     }
                 }
@@ -68,7 +68,7 @@
                     "executable": false
                 }
             },
-            "ref": "d1f7dde25c70478a732095b966d34c640e8dae74"
+            "ref": "e0a854b5439186e04b28fb8887b42c54f24a0d32"
         }
     }
 }

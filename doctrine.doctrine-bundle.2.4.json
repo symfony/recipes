@@ -29,16 +29,16 @@
                     "docker-compose.yml": {
                         "services": [
                             "database:",
-                            "    image: postgres:${POSTGRES_VERSION:-13}-alpine",
-                            "    environment:",
-                            "        POSTGRES_DB: ${POSTGRES_DB:-app}",
-                            "        # You should definitely change the password in production",
-                            "        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}",
-                            "        POSTGRES_USER: ${POSTGRES_USER:-symfony}",
-                            "    volumes:",
-                            "        - db-data:/var/lib/postgresql/data:rw",
-                            "        # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
-                            "        # - ./docker/db/data:/var/lib/postgresql/data:rw"
+                            "  image: postgres:${POSTGRES_VERSION:-13}-alpine",
+                            "  environment:",
+                            "    POSTGRES_DB: ${POSTGRES_DB:-app}",
+                            "    # You should definitely change the password in production",
+                            "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMe}",
+                            "    POSTGRES_USER: ${POSTGRES_USER:-symfony}",
+                            "  volumes:",
+                            "    - db-data:/var/lib/postgresql/data:rw",
+                            "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                            "    # - ./docker/db/data:/var/lib/postgresql/data:rw"
                         ],
                         "volumes": [
                             "db-data:"
@@ -47,8 +47,8 @@
                     "docker-compose.override.yml": {
                         "services": [
                             "database:",
-                            "    ports:",
-                            "        - \"5432\""
+                            "  ports:",
+                            "    - \"5432\""
                         ]
                     }
                 },
@@ -124,7 +124,7 @@
                     "executable": false
                 }
             },
-            "ref": "22ec8d438f54a58f50cb5a9c868af31434f2d1e1"
+            "ref": "ddddd8249dd55bbda16fa7a45bb7499ef6f8e90e"
         }
     }
 }
