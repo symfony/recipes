@@ -699,6 +699,9 @@
             "3.3",
             "5.3"
         ],
+        "symfony/turbo-sms-notifier": [
+            "5.4"
+        ],
         "symfony/twig-bundle": [
             "3.3",
             "4.4",

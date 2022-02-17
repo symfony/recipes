@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/turbo-sms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "TURBOSMS_DSN=turbosms://AUTH_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "28d7272be727c98b5d3a222fcce2e024dd3906a4"
+        }
+    }
+}
