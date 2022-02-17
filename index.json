@@ -727,7 +727,8 @@
         "symfony/webpack-encore-bundle": [
             "1.0",
             "1.6",
-            "1.9"
+            "1.9",
+            "1.10"
         ],
         "symfony/workflow": [
             "3.3"
@@ -832,6 +833,11 @@
         "symfony/web-profiler-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/webpack-encore-bundle": {
+            "1.10": {
+                "symfony/framework-bundle": "<5.4"
             }
         },
         "zenstruck/foundry": {
