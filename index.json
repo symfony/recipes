@@ -363,7 +363,7 @@
         "zulipnotifier": "symfony/zulip-notifier"
     },
     "recipes": {
-        "api-platform/admin-pack": [
+        "api-platform/admin-meta": [
             "1.0"
         ],
         "api-platform/core": [

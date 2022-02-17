@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "api-platform/admin-pack": {
+        "api-platform/admin-meta": {
             "manifest": {
                 "copy-from-recipe": {
                     "assets/": "assets/",
@@ -64,7 +64,7 @@
                     "executable": false
                 }
             },
-            "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
+            "ref": "41f4cc7bc6c8f415100a58e1ec6c76605cdd65d3"
         }
     }
 }
