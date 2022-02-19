@@ -13,9 +13,6 @@ on:
             find_yaml:
                 required: false
                 type: string
-            create_project_php:
-                required: false
-                type: string
 
 jobs:
     run-checks:
