@@ -1,5 +1,5 @@
   * Install Yarn and run <fg=green>yarn install</>
 
-  * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</>
+  * Uncomment the Twig helpers in <fg=green>templates/base.html.twig</> (they may be already)
 
   * Start the development server: <fg=green>yarn encore dev-server</>

@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "KAZ_INFO_TEH_DSN=kaz-info-teh://USERNAME:PASSWORD@default?sender=FROM"
+    }
+}

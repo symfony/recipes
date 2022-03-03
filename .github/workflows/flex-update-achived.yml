@@ -1,0 +1,7 @@
+name: Update Flex Archives
+
+on: [workflow_dispatch]
+
+jobs:
+    call-flex-update:
+        uses: symfony/recipes/.github/workflows/callable-flex-update-archived.yml@main

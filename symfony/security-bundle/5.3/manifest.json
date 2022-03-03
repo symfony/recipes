@@ -5,5 +5,8 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["security"]
+    "aliases": ["security"],
+    "conflict": {
+        "symfony/framework-bundle": "<5.3"
+    }
 }

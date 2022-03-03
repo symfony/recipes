@@ -1,8 +1,3 @@
 {
-    "copy-from-recipe": {
-        "assets/": "assets/",
-        "config/": "%CONFIG_DIR%/",
-        "templates/": "templates/"
-    },
     "aliases": ["api-admin", "api-platform-admin", "react-admin"]
 }
