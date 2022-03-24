@@ -7,5 +7,6 @@
     },
     "conflict": {
         "symfony/framework-bundle": "<5.3"
-    }
+    },
+    "aliases": ["foundry"]
 }
