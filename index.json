@@ -72,6 +72,8 @@
         "dotenv": "symfony/dotenv",
         "dump": "symfony/var-dumper",
         "encore": "symfony/webpack-encore-bundle",
+        "engagespot-notifier": "symfony/engagespot-notifier",
+        "engagespotnotifier": "symfony/engagespot-notifier",
         "error-handler": "symfony/error-handler",
         "errorhandler": "symfony/error-handler",
         "esendex-notifier": "symfony/esendex-notifier",
@@ -1111,6 +1113,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/engagespot-notifier": [
                 "6.1"
             ],
             "symfony/error-handler": [
