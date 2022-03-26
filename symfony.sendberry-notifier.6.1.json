@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sendberry-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SENDBERRY_DSN=sendberry://USERNAME:PASSWORD@default?auth_key=AUTH_KEY&from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "34b7526b67490b5435bae2a8a564afc58011a053"
+        }
+    }
+}
