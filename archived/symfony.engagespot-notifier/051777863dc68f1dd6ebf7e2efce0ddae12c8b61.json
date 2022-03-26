@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/engagespot-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ENGAGESPOT_DSN=engagespot://API_KEY@default?campaign_name=CAMPAIGN_NAME"
+                }
+            },
+            "files": [],
+            "ref": "051777863dc68f1dd6ebf7e2efce0ddae12c8b61"
+        }
+    }
+}

@@ -485,6 +485,9 @@
         "symfony/discord-notifier": [
             "5.2"
         ],
+        "symfony/engagespot-notifier": [
+            "5.4"
+        ],
         "symfony/esendex-notifier": [
             "5.2"
         ],
