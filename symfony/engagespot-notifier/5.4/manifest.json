@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ENGAGESPOT_DSN=engagespot://API_KEY@default?campaign_name=CAMPAIGN_NAME"
+    }
+}
