@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "league/flysystem-bundle": {
+            "manifest": {
+                "bundles": {
+                    "League\\FlysystemBundle\\FlysystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "%VAR_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at:",
+                    "    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/flysystem.yaml": {
+                    "contents": [
+                        "# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md",
+                        "flysystem:",
+                        "    storages:",
+                        "        default.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: '%kernel.project_dir%/%VAR_DIR%/storage/default'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/storage/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "913dc3d7a5a1af0d2b044c5ac3a16e2f851d7380"
+        }
+    }
+}

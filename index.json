@@ -270,6 +270,8 @@
         "securityguard": "symfony/security-guard",
         "securityhttp": "symfony/security-http",
         "semaphore": "symfony/semaphore",
+        "sendberry-notifier": "symfony/sendberry-notifier",
+        "sendberrynotifier": "symfony/sendberry-notifier",
         "sendgrid-mailer": "symfony/sendgrid-mailer",
         "sendgridmailer": "symfony/sendgrid-mailer",
         "sendinblue-mailer": "symfony/sendinblue-mailer",
@@ -411,6 +413,9 @@
         "javiereguiluz/easyadmin-bundle": [
             "1.16",
             "1.17"
+        ],
+        "league/flysystem-bundle": [
+            "1.0"
         ],
         "lexik/jwt-authentication-bundle": [
             "2.3",
@@ -1815,6 +1820,9 @@
                 "5.3",
                 "5.4",
                 "6.0",
+                "6.1"
+            ],
+            "symfony/sendberry-notifier": [
                 "6.1"
             ],
             "symfony/sendgrid-mailer": [
