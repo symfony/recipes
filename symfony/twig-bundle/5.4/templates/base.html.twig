@@ -14,6 +14,18 @@
         {% endblock %}
     </head>
     <body>
+        {% block flashes %}
+            {% if app.request.hasPreviousSession %}
+                {% for type, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ type }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
+
         {% block body %}{% endblock %}
     </body>
 </html>
