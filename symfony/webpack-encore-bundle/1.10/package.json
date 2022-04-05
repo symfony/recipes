@@ -1,4 +1,6 @@
 {
+    "name": "app",
+    "version": "1.0.0",
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.0",
         "@symfony/stimulus-bridge": "^3.0.0",
