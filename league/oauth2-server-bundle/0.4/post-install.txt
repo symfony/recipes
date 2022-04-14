@@ -1,0 +1,8 @@
+  1. <bg=magenta;fg=white> Provide a key pair </>
+    * Generate a private/public key pair at the locations defined in your .env file, using the value of the  <info>OAUTH_PASSPHRASE</> as passphrase: <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>
+
+  2. <bg=magenta;fg=white> Update the database schema </>
+    * Update your database schema so that bundle entities can be managed by Doctrine
+
+  3. <bg=magenta;fg=white> Read the docs </>
+    * Read the documentation at <comment>https://github.com/thephpleague/oauth2-server-bundle/blob/master/docs/index.md</>
