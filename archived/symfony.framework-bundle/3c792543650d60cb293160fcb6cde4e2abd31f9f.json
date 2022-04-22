@@ -27,18 +27,6 @@
                     "/var/",
                     "/vendor/"
                 ],
-                "post-install-output": [
-                    "<bg=blue;fg=white>              </>",
-                    "<bg=blue;fg=white> What's next? </>",
-                    "<bg=blue;fg=white>              </>",
-                    "",
-                    "  * <fg=blue>Run</> your application:",
-                    "    1. Change to the project directory",
-                    "    2. Execute the <comment>make serve</> command;",
-                    "    3. Browse to the <comment>http://localhost:8000/</> URL.",
-                    "",
-                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
-                ],
                 "makefile": [
                     "cache-clear:",
                     "\t@test -f bin/console && bin/console cache:clear --no-warmup || rm -rf var/cache/*",
@@ -68,6 +56,18 @@
                     "serve:",
                     "\t@${MAKE} serve_as_sf",
                     ".PHONY: sf_console serve serve_as_sf serve_as_php"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Change to the project directory",
+                    "    2. Execute the <comment>make serve</> command;",
+                    "    3. Browse to the <comment>http://localhost:8000/</> URL.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
                 ]
             },
             "files": {
