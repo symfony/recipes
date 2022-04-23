@@ -96,6 +96,7 @@
         "form": "symfony/form",
         "forty-six-elks-notifier": "symfony/forty-six-elks-notifier",
         "fortysixelksnotifier": "symfony/forty-six-elks-notifier",
+        "foundry": "zenstruck/foundry",
         "framework-bundle": "symfony/framework-bundle",
         "frameworkbundle": "symfony/framework-bundle",
         "free-mobile-notifier": "symfony/free-mobile-notifier",
