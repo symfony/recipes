@@ -4,7 +4,7 @@ on:
     workflow_call:
         inputs:
             branch:
-                default: master
+                default: main
                 required: false
                 type: string
 
