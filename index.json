@@ -598,7 +598,9 @@
         ],
         "symfony/messenger": [
             "4.1",
-            "4.3"
+            "4.3",
+            "5.4",
+            "6.0"
         ],
         "symfony/microsoft-teams-notifier": [
             "5.3"
@@ -813,6 +815,12 @@
                 "symfony/framework-bundle": "<4.1"
             },
             "4.3": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "5.4": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "6.0": {
                 "symfony/framework-bundle": "<4.3"
             }
         },
@@ -2172,11 +2180,11 @@
             ]
         }
     },
-    "branch": "master",
+    "branch": "main",
     "is_contrib": false,
     "_links": {
         "repository": "github.com/symfony/recipes",
-        "origin_template": "{package}:{version}@github.com/symfony/recipes:master",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
         "recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/{package_dotted}.{version}.json",
         "recipes_template_relative": "{package_dotted}.{version}.json",
         "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/main/archived/{package_dotted}/{ref}.json",

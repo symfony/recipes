@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "symfony/messenger": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the transports below",
+                    "#2": "MESSENGER_TRANSPORT_DSN=doctrine://default",
+                    "#3": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+                    "#4": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<4.3"
+                },
+                "post-install-output": [
+                    "  * You're ready to use the Messenger component. You can define your own message buses",
+                    "    or start using the default one right now by injecting the <info>message_bus</info> service",
+                    "    or type-hinting <info>Symfony\\Component\\Messenger\\MessageBusInterface</info> in your code.",
+                    "",
+                    "  * To send messages to a transport and handle them asynchronously:",
+                    "",
+                    "    1. Uncomment the <info>MESSENGER_TRANSPORT_DSN</> env var in <comment>.env</>",
+                    "       and <info>framework.messenger.transports.async</> in <comment>config/packages/messenger.yaml</>;",
+                    "    2. Route your message classes to the async transport in <comment>config/packages/messenger.yaml</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/current/messenger.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        # reset services after consuming messages",
+                        "        reset_on_message: true",
+                        "",
+                        "        # Uncomment this (and the failed transport below) to send failed messages to this transport for later handling.",
+                        "        # failure_transport: failed",
+                        "",
+                        "        transports:",
+                        "            # https://symfony.com/doc/current/messenger.html#transport-configuration",
+                        "            # async: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "            # failed: 'doctrine://default?queue_name=failed'",
+                        "            # sync: 'sync://'",
+                        "",
+                        "        routing:",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': async",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dfe610928a5c61619bdfc830cd7fa7f091368023"
+        }
+    }
+}
