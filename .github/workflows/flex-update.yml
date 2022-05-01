@@ -18,5 +18,3 @@ jobs:
     call-recipe-readme-update:
         needs: 'call-flex-update'
         uses: symfony/recipes/.github/workflows/callable-recipe-readme-update.yml@main
-        with:
-            branch: main

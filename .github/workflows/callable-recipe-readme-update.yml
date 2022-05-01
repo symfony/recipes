@@ -3,10 +3,6 @@ name: Update RECIPES.md
 on:
     workflow_call:
         inputs:
-            # branch where the RECIPES.md will be committed
-            branch:
-                required: true
-                type: string
             contrib:
                 required: false
                 type: boolean
@@ -41,8 +37,7 @@ jobs:
                     mkdir .github/recipe-readme
                     git switch flex/main
                     php .github/recipes-checker-main/run generate:recipes-readme index.json ${{ inputs.contrib && '--contrib' || '' }} > .github/recipe-readme/RECIPES.md
-                    git switch ${{ inputs.branch }}
                     cp .github/recipe-readme/RECIPES.md RECIPES.md
                     git add RECIPES.md
                     git commit -m 'Update Recipes README' || true
-                    git push origin ${{ inputs.branch }}
+                    git push origin flex/main
