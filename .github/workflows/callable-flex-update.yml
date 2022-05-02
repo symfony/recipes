@@ -49,5 +49,7 @@ jobs:
                     git add *.json
                     cp -a .github/flex-endpoint/archived .
                     git add archived/
+                    php .github/recipes-checker-main/run generate:recipes-readme index.json ${{ inputs.contrib && '--contrib' || '' }} > RECIPES.md
+                    git add RECIPES.md
                     git commit -m 'Update Flex endpoint' || true
                     git push origin -f flex/main
