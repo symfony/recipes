@@ -81,7 +81,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/psr7-meta](https://packagist.org/packages/symfony/psr7-meta) | [1.0](symfony/psr7-meta/1.0) | `psr-7`, `psr-17`, `psr7`, `psr7-meta`, `psr7meta`, `psr17` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
-| [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.0](symfony/routing/6.0) | `router`, `routing` |
+| [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.1](symfony/routing/6.1) | `router`, `routing` |
 | [symfony/security-bundle](https://packagist.org/packages/symfony/security-bundle) | [5.3](symfony/security-bundle/5.3) | `security`, `security-bundle`, `securitybundle` |
 | [symfony/sendberry-notifier](https://packagist.org/packages/symfony/sendberry-notifier) | [6.1](symfony/sendberry-notifier/6.1) | `sendberry-notifier`, `sendberrynotifier` |
 | [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [4.4](symfony/sendgrid-mailer/4.4) | `sendgrid-mailer`, `sendgridmailer` |
