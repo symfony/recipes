@@ -12,3 +12,9 @@ framework:
         routing:
             # Route your messages to the transports
             # 'App\Message\YourMessage': async
+
+# when@test:
+#    framework:
+#        messenger:
+#            transports:
+#                async: 'in-memory://' # replace your transport name here
