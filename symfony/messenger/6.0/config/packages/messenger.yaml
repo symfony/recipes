@@ -17,4 +17,6 @@ framework:
 #    framework:
 #        messenger:
 #            transports:
-#                async: 'in-memory://' # replace your transport name here
+#                # replace with your transport name here (e.g., my_transport: 'in-memory://')
+#                # For more Messenger testing tools, see https://github.com/zenstruck/messenger-test
+#                async: 'in-memory://'
