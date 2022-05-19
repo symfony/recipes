@@ -1,0 +1,7 @@
+{
+    "copy-from-recipe": {
+        "src/": "src/",
+        "templates/": "templates/",
+        "tests/": "tests/"
+    }
+}
