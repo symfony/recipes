@@ -20,8 +20,8 @@ webpack_encore:
     # Preload all rendered script and link tags automatically via the HTTP/2 Link header
     # preload: true
 
-    # Throw an exception if the entrypoints.json file is missing or an entry is missing from the data
-    # strict_mode: false
+    # Set to true to throw an exception if the entrypoints.json file is missing or an entry is missing from the data
+    strict_mode: false
 
     # If you have multiple builds:
     # builds:
