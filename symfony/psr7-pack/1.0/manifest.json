@@ -1,3 +1,6 @@
 {
-    "aliases": ["psr-7", "psr-17"]
+    "aliases": ["psr-7", "psr-17"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }
