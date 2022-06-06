@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "symfony/webapp-meta": {
+        "symfony/webapp-pack": {
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -41,7 +41,7 @@
                     "executable": false
                 }
             },
-            "ref": "67cae591d131c133d63b893c5324796b88c59b34"
+            "ref": "2fb3513dbc139884fc5b7c751242b66f9f10f0c3"
         }
     }
 }

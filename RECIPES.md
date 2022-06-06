@@ -4,7 +4,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 
 | Package | Latest Recipe | Aliases |
 | --- | --- | --- |
-| [api-platform/admin-meta](https://packagist.org/packages/api-platform/admin-meta) | [1.0](api-platform/admin-meta/1.0) |  |
+| [api-platform/admin-pack](https://packagist.org/packages/api-platform/admin-pack) | [1.0](api-platform/admin-pack/1.0) | `api-admin`, `api-platform-admin`, `apiadmin`, `apiplatformadmin`, `react-admin`, `reactadmin` |
 | [api-platform/core](https://packagist.org/packages/api-platform/core) | [2.5](api-platform/core/2.5) |  |
 | [blackfireio/blackfire-symfony-meta](https://packagist.org/packages/blackfireio/blackfire-symfony-meta) | [1.0](blackfireio/blackfire-symfony-meta/1.0) | `blackfire` |
 | [doctrine/annotations](https://packagist.org/packages/doctrine/annotations) | [1.10](doctrine/annotations/1.10) |  |
@@ -78,7 +78,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](symfony/panther/1.0) | `panther` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [5.3](symfony/phpunit-bridge/5.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
-| [symfony/psr7-meta](https://packagist.org/packages/symfony/psr7-meta) | [1.0](symfony/psr7-meta/1.0) | `psr7-meta`, `psr7meta` |
+| [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.1](symfony/routing/6.1) | `router`, `routing` |
@@ -104,7 +104,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [5.3](symfony/web-profiler-bundle/5.3) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
-| [symfony/webapp-meta](https://packagist.org/packages/symfony/webapp-meta) | [1.0](symfony/webapp-meta/1.0) | `webapp-meta`, `webappmeta` |
+| [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](symfony/webapp-pack/1.0) | `webapp` |
 | [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [1.10](symfony/webpack-encore-bundle/1.10) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
 | [symfony/workflow](https://packagist.org/packages/symfony/workflow) | [3.3](symfony/workflow/3.3) | `workflow` |
 | [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [5.4](symfony/yunpian-notifier/5.4) | `yunpian-notifier`, `yunpiannotifier` |

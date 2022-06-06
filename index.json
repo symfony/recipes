@@ -225,8 +225,6 @@
         "psr-7": "symfony/psr7-pack",
         "psr-17": "symfony/psr7-pack",
         "psr7": "symfony/psr7-pack",
-        "psr7-meta": "symfony/psr7-meta",
-        "psr7meta": "symfony/psr7-meta",
         "psr17": "symfony/psr7-pack",
         "rate-limiter": "symfony/rate-limiter",
         "ratelimiter": "symfony/rate-limiter",
@@ -348,8 +346,6 @@
         "web-server": "symfony/web-server-bundle",
         "web-server-bundle": "symfony/web-server-bundle",
         "webapp": "symfony/webapp-pack",
-        "webapp-meta": "symfony/webapp-meta",
-        "webappmeta": "symfony/webapp-meta",
         "weblink": "symfony/web-link",
         "webpack": "symfony/webpack-encore-bundle",
         "webpack-encore": "symfony/webpack-encore-bundle",
@@ -368,7 +364,7 @@
         "zulipnotifier": "symfony/zulip-notifier"
     },
     "recipes": {
-        "api-platform/admin-meta": [
+        "api-platform/admin-pack": [
             "1.0"
         ],
         "api-platform/core": [
@@ -642,7 +638,7 @@
             "4.3",
             "4.4"
         ],
-        "symfony/psr7-meta": [
+        "symfony/psr7-pack": [
             "1.0"
         ],
         "symfony/requirements-checker": [
@@ -742,7 +738,7 @@
         "symfony/web-server-bundle": [
             "3.3"
         ],
-        "symfony/webapp-meta": [
+        "symfony/webapp-pack": [
             "1.0"
         ],
         "symfony/webpack-encore-bundle": [
