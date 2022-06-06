@@ -3,6 +3,9 @@ name: Q&A
 on:
     workflow_call:
         inputs:
+            token:
+                required: true
+                type: string
             branch:
                 default: main
                 required: false
@@ -49,7 +52,7 @@ jobs:
                 name: Remove non-patched packages
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }} | xargs -r -n10 rm -rf
+                    .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ inputs.token }} | xargs -r -n10 rm -rf
 
             -
                 name: Generate Flex testing endpoint
@@ -73,7 +76,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: gh pr merge --auto --squash ${{ github.event.number }}
                 env:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    GITHUB_TOKEN: ${{ inputs.token }}
 
             -
                 name: Compute diff between recipe versions
@@ -177,7 +180,7 @@ jobs:
                 name: Contribution is under MIT and has no merge commits
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    .github/recipes-checker-main/run lint:pull-request --license=MIT $GITHUB_EVENT_PATH ${{ secrets.GITHUB_TOKEN }}
+                    .github/recipes-checker-main/run lint:pull-request --license=MIT $GITHUB_EVENT_PATH ${{ inputs.token }}
 
             -
                 name: Parameters should be defined via the "container" configurator
