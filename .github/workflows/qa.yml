@@ -10,5 +10,5 @@ defaults:
 jobs:
     call-qa:
         uses: symfony/recipes/.github/workflows/callable-qa.yml@main
-        with:
+        secrets:
             token: ${{ secrets.BOT_TOKEN }}
