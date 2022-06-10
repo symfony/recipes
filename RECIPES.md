@@ -102,7 +102,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [5.4](symfony/twig-bundle/5.4) | `twig-bundle`, `twigbundle` |
 | [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
-| [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [5.3](symfony/web-profiler-bundle/5.3) | `web-profiler-bundle`, `webprofilerbundle` |
+| [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [6.1](symfony/web-profiler-bundle/6.1) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](symfony/webapp-pack/1.0) | `webapp` |
 | [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [1.10](symfony/webpack-encore-bundle/1.10) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |

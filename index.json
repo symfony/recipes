@@ -733,7 +733,8 @@
         ],
         "symfony/web-profiler-bundle": [
             "3.3",
-            "5.3"
+            "5.3",
+            "6.1"
         ],
         "symfony/web-server-bundle": [
             "3.3"
@@ -862,6 +863,9 @@
         "symfony/web-profiler-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "6.1": {
+                "symfony/framework-bundle": "<6.1"
             }
         },
         "symfony/webpack-encore-bundle": {
