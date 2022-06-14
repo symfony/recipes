@@ -332,6 +332,8 @@
         "twilionotifier": "symfony/twilio-notifier",
         "uid": "symfony/uid",
         "ux": "symfony/webpack-encore-bundle",
+        "ux-live-component": "symfony/ux-live-component",
+        "uxlivecomponent": "symfony/ux-live-component",
         "validation": "symfony/validator",
         "validator": "symfony/validator",
         "var-dumper": "symfony/var-dumper",
@@ -725,6 +727,9 @@
         ],
         "symfony/twilio-notifier": [
             "5.0"
+        ],
+        "symfony/ux-live-component": [
+            "2.0"
         ],
         "symfony/validator": [
             "4.1",
