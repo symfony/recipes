@@ -332,7 +332,9 @@
         "twilionotifier": "symfony/twilio-notifier",
         "uid": "symfony/uid",
         "ux": "symfony/webpack-encore-bundle",
+        "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-live-component": "symfony/ux-live-component",
+        "uxautocomplete": "symfony/ux-autocomplete",
         "uxlivecomponent": "symfony/ux-live-component",
         "validation": "symfony/validator",
         "validator": "symfony/validator",
@@ -727,6 +729,9 @@
         ],
         "symfony/twilio-notifier": [
             "5.0"
+        ],
+        "symfony/ux-autocomplete": [
+            "2.2"
         ],
         "symfony/ux-live-component": [
             "2.0"
