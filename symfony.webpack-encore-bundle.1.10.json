@@ -129,8 +129,8 @@
                         "    # Preload all rendered script and link tags automatically via the HTTP/2 Link header",
                         "    # preload: true",
                         "",
-                        "    # Set to true to throw an exception if the entrypoints.json file is missing or an entry is missing from the data",
-                        "    strict_mode: false",
+                        "    # Throw an exception if the entrypoints.json file is missing or an entry is missing from the data",
+                        "    # strict_mode: false",
                         "",
                         "    # If you have multiple builds:",
                         "    # builds:",
@@ -266,7 +266,7 @@
                     "executable": false
                 }
             },
-            "ref": "642c9239e1c76e037f5b65446d09eba836ea147f"
+            "ref": "91f4d29f5ebbd2fcccc71ca55a17d14a17b308e8"
         }
     }
 }
