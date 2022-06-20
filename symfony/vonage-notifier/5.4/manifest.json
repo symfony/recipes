@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "VONAGE_DSN=vonage://KEY:SECRET@default?from=FROM"
+    }
+}

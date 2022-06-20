@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ORANGE_SMS_DSN=orange-sms://CLIENT_ID:CLIENT_SECRET@default?from=FROM&sender_name=SENDER_NAME"
+    }
+}
