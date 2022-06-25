@@ -147,6 +147,9 @@
             "6.1",
             "6.2"
         ],
+        "symfony/contact-everyone-notifier": [
+            "6.2"
+        ],
         "symfony/crowdin-translation-provider": [
             "5.3",
             "5.4",
@@ -1133,6 +1136,9 @@
             "5.4",
             "6.0",
             "6.1",
+            "6.2"
+        ],
+        "symfony/sms-factor-notifier": [
             "6.2"
         ],
         "symfony/sms77-notifier": [
