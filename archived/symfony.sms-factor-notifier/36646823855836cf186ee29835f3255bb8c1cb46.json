@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sms-factor-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SMS_FACTOR_DSN=sms-factor://TOKEN@default?sender=SENDER&push_type=PUSH_TYPE"
+                }
+            },
+            "files": [],
+            "ref": "36646823855836cf186ee29835f3255bb8c1cb46"
+        }
+    }
+}

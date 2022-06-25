@@ -90,6 +90,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/sinch-notifier](https://packagist.org/packages/symfony/sinch-notifier) | [5.1](symfony/sinch-notifier/5.1) | `sinch-notifier`, `sinchnotifier` |
 | [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [5.2](symfony/slack-notifier/5.2) | `slack-notifier`, `slacknotifier` |
 | [symfony/sms-biuras-notifier](https://packagist.org/packages/symfony/sms-biuras-notifier) | [5.3](symfony/sms-biuras-notifier/5.3) | `sms-biuras-notifier`, `smsbiurasnotifier` |
+| [symfony/sms-factor-notifier](https://packagist.org/packages/symfony/sms-factor-notifier) | [6.2](symfony/sms-factor-notifier/6.2) | `sms-factor-notifier`, `smsfactornotifier` |
 | [symfony/sms77-notifier](https://packagist.org/packages/symfony/sms77-notifier) | [5.4](symfony/sms77-notifier/5.4) | `sms77-notifier`, `sms77notifier` |
 | [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [5.2](symfony/smsapi-notifier/5.2) | `smsapi-notifier`, `smsapinotifier` |
 | [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [5.4](symfony/smsc-notifier/5.4) | `smsc-notifier`, `smscnotifier` |

@@ -696,6 +696,9 @@
         "symfony/sms-biuras-notifier": [
             "5.3"
         ],
+        "symfony/sms-factor-notifier": [
+            "6.2"
+        ],
         "symfony/sms77-notifier": [
             "5.4"
         ],
