@@ -630,6 +630,9 @@
             "6.1",
             "6.2"
         ],
+        "symfony/mail-pace-mailer": [
+            "6.2"
+        ],
         "symfony/mailchimp-mailer": [
             "4.3",
             "4.4",
