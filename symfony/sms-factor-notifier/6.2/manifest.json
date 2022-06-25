@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SMS_FACTOR_DSN=sms-factor://TOKEN@default?sender=SENDER&push_type=PUSH_TYPE"
+    }
+}
