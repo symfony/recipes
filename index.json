@@ -151,6 +151,7 @@
         "lokalise-translation-provider": "symfony/lokalise-translation-provider",
         "lokalisetranslationprovider": "symfony/lokalise-translation-provider",
         "mail": "symfony/mailer",
+        "mail-pace-mailer": "symfony/mail-pace-mailer",
         "mailchimp-mailer": "symfony/mailchimp-mailer",
         "mailchimpmailer": "symfony/mailchimp-mailer",
         "mailer": "symfony/mailer",
@@ -160,6 +161,7 @@
         "mailjet-notifier": "symfony/mailjet-notifier",
         "mailjetmailer": "symfony/mailjet-mailer",
         "mailjetnotifier": "symfony/mailjet-notifier",
+        "mailpacemailer": "symfony/mail-pace-mailer",
         "make": "symfony/maker-bundle",
         "maker": "symfony/maker-bundle",
         "maker-bundle": "symfony/maker-bundle",
@@ -1526,6 +1528,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/mail-pace-mailer": [
                 "6.2"
             ],
             "symfony/mailchimp-mailer": [
