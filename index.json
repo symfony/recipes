@@ -44,6 +44,8 @@
         "clickatellnotifier": "symfony/clickatell-notifier",
         "config": "symfony/config",
         "console": "symfony/console",
+        "contact-everyone-notifier": "symfony/contact-everyone-notifier",
+        "contacteveryonenotifier": "symfony/contact-everyone-notifier",
         "cors": "nelmio/cors-bundle",
         "crowdin-translation-provider": "symfony/crowdin-translation-provider",
         "crowdintranslationprovider": "symfony/crowdin-translation-provider",
@@ -289,6 +291,7 @@
         "slack-notifier": "symfony/slack-notifier",
         "slacknotifier": "symfony/slack-notifier",
         "sms-biuras-notifier": "symfony/sms-biuras-notifier",
+        "sms-factor-notifier": "symfony/sms-factor-notifier",
         "sms77-notifier": "symfony/sms77-notifier",
         "sms77notifier": "symfony/sms77-notifier",
         "smsapi-notifier": "symfony/smsapi-notifier",
@@ -296,6 +299,7 @@
         "smsbiurasnotifier": "symfony/sms-biuras-notifier",
         "smsc-notifier": "symfony/smsc-notifier",
         "smscnotifier": "symfony/smsc-notifier",
+        "smsfactornotifier": "symfony/sms-factor-notifier",
         "spot-hit-notifier": "symfony/spot-hit-notifier",
         "spothitnotifier": "symfony/spot-hit-notifier",
         "stopwatch": "symfony/stopwatch",
@@ -1036,6 +1040,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/contact-everyone-notifier": [
                 "6.2"
             ],
             "symfony/crowdin-translation-provider": [
@@ -2024,6 +2031,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/sms-factor-notifier": [
                 "6.2"
             ],
             "symfony/sms77-notifier": [
