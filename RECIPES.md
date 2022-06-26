@@ -58,6 +58,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/lock](https://packagist.org/packages/symfony/lock) | [5.2](symfony/lock/5.2) | `lock` |
 | [symfony/loco-translation-provider](https://packagist.org/packages/symfony/loco-translation-provider) | [5.3](symfony/loco-translation-provider/5.3) | `loco-translation-provider`, `locotranslationprovider` |
 | [symfony/lokalise-translation-provider](https://packagist.org/packages/symfony/lokalise-translation-provider) | [5.3](symfony/lokalise-translation-provider/5.3) | `lokalise-translation-provider`, `lokalisetranslationprovider` |
+| [symfony/mail-pace-mailer](https://packagist.org/packages/symfony/mail-pace-mailer) | [6.2](symfony/mail-pace-mailer/6.2) | `mail-pace-mailer`, `mailpacemailer` |
 | [symfony/mailchimp-mailer](https://packagist.org/packages/symfony/mailchimp-mailer) | [4.4](symfony/mailchimp-mailer/4.4) | `mailchimp-mailer`, `mailchimpmailer` |
 | [symfony/mailer](https://packagist.org/packages/symfony/mailer) | [4.3](symfony/mailer/4.3) | `mail`, `mailer` |
 | [symfony/mailgun-mailer](https://packagist.org/packages/symfony/mailgun-mailer) | [4.4](symfony/mailgun-mailer/4.4) | `mailgun-mailer`, `mailgunmailer` |

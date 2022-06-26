@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mail-pace-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=mailpace+api://API_TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "5e31b194d5ef3bea106765d8c7698d95aa3cd4b5"
+        }
+    }
+}

@@ -575,6 +575,9 @@
         "symfony/lokalise-translation-provider": [
             "5.3"
         ],
+        "symfony/mail-pace-mailer": [
+            "6.2"
+        ],
         "symfony/mailchimp-mailer": [
             "4.3",
             "4.4"
