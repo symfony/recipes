@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/vonage-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "VONAGE_DSN=vonage://KEY:SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "1e8dbcb8f9b1ddfb589a53a12b1941b6dce41d92"
+        }
+    }
+}

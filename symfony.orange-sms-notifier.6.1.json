@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/orange-sms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ORANGE_SMS_DSN=orange-sms://CLIENT_ID:CLIENT_SECRET@default?from=FROM&sender_name=SENDER_NAME"
+                }
+            },
+            "files": [],
+            "ref": "5bdacb8fb06fa47b48a211f7d349af2f2e6dc143"
+        }
+    }
+}

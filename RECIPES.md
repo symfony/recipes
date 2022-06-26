@@ -26,6 +26,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [sensio/framework-extra-bundle](https://packagist.org/packages/sensio/framework-extra-bundle) | [5.2](sensio/framework-extra-bundle/5.2) | `annot`, `annotation`, `annotations`, `annots` |
 | [sensiolabs/ansi-to-html](https://packagist.org/packages/sensiolabs/ansi-to-html) | [1.2](sensiolabs/ansi-to-html/1.2) |  |
 | [sensiolabs/security-checker](https://packagist.org/packages/sensiolabs/security-checker) | [4.0](sensiolabs/security-checker/4.0) | `sec-check`, `sec-checker`, `sec-checks`, `seccheck`, `secchecker`, `secchecks`, `security-check`, `security-checker`, `securitycheck`, `securitychecker` |
+| [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |
 | [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [5.4](symfony/amazon-sns-notifier/5.4) | `amazon-sns-notifier`, `amazonsnsnotifier` |
@@ -44,6 +45,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [6.2](symfony/framework-bundle/6.2) | `framework-bundle`, `frameworkbundle` |
 | [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [5.1](symfony/free-mobile-notifier/5.1) | `free-mobile-notifier`, `freemobilenotifier` |
+| [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
 | [symfony/gitter-notifier](https://packagist.org/packages/symfony/gitter-notifier) | [5.3](symfony/gitter-notifier/5.3) | `gitter-notifier`, `gitternotifier` |
 | [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [5.3](symfony/google-chat-notifier/5.3) | `google-chat-notifier`, `googlechatnotifier` |
@@ -60,6 +62,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/mailer](https://packagist.org/packages/symfony/mailer) | [4.3](symfony/mailer/4.3) | `mail`, `mailer` |
 | [symfony/mailgun-mailer](https://packagist.org/packages/symfony/mailgun-mailer) | [4.4](symfony/mailgun-mailer/4.4) | `mailgun-mailer`, `mailgunmailer` |
 | [symfony/mailjet-mailer](https://packagist.org/packages/symfony/mailjet-mailer) | [5.2](symfony/mailjet-mailer/5.2) | `mailjet-mailer`, `mailjetmailer` |
+| [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [5.4](symfony/mailjet-notifier/5.4) | `mailjet-notifier`, `mailjetnotifier` |
 | [symfony/maker-bundle](https://packagist.org/packages/symfony/maker-bundle) | [1.0](symfony/maker-bundle/1.0) | `generator`, `make`, `maker`, `maker-bundle`, `makerbundle` |
 | [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [5.1](symfony/mattermost-notifier/5.1) | `mattermost-notifier`, `mattermostnotifier` |
 | [symfony/mercure-bundle](https://packagist.org/packages/symfony/mercure-bundle) | [0.3](symfony/mercure-bundle/0.3) | `mercure`, `mercure-bundle`, `mercurebundle` |
@@ -74,6 +77,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/notifier](https://packagist.org/packages/symfony/notifier) | [5.0](symfony/notifier/5.0) | `notifier` |
 | [symfony/octopush-notifier](https://packagist.org/packages/symfony/octopush-notifier) | [5.3](symfony/octopush-notifier/5.3) | `octopush-notifier`, `octopushnotifier` |
 | [symfony/one-signal-notifier](https://packagist.org/packages/symfony/one-signal-notifier) | [5.4](symfony/one-signal-notifier/5.4) | `one-signal-notifier`, `onesignalnotifier` |
+| [symfony/orange-sms-notifier](https://packagist.org/packages/symfony/orange-sms-notifier) | [6.1](symfony/orange-sms-notifier/6.1) | `orange-sms-notifier`, `orangesmsnotifier` |
 | [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [5.1](symfony/ovh-cloud-notifier/5.1) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](symfony/panther/1.0) | `panther` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [5.3](symfony/phpunit-bridge/5.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
@@ -105,6 +109,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.2](symfony/ux-autocomplete/2.2) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.0](symfony/ux-live-component/2.0) | `ux-live-component`, `uxlivecomponent` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
+| [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [6.1](symfony/web-profiler-bundle/6.1) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](symfony/webapp-pack/1.0) | `webapp` |

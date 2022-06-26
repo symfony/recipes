@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mailjet-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILJET_DSN=mailjet://TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "ad18294be4171ed931deb012cf06c9e00e290d3a"
+        }
+    }
+}

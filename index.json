@@ -461,6 +461,9 @@
         "sensiolabs/security-checker": [
             "4.0"
         ],
+        "symfony/all-my-sms-notifier": [
+            "5.3"
+        ],
         "symfony/allmysms-notifier": [
             "5.3"
         ],
@@ -530,6 +533,9 @@
         "symfony/free-mobile-notifier": [
             "5.1"
         ],
+        "symfony/gateway-api-notifier": [
+            "5.3"
+        ],
         "symfony/gatewayapi-notifier": [
             "5.3"
         ],
@@ -583,6 +589,9 @@
         "symfony/mailjet-mailer": [
             "5.2"
         ],
+        "symfony/mailjet-notifier": [
+            "5.4"
+        ],
         "symfony/maker-bundle": [
             "1.0"
         ],
@@ -631,6 +640,9 @@
         ],
         "symfony/one-signal-notifier": [
             "5.4"
+        ],
+        "symfony/orange-sms-notifier": [
+            "6.1"
         ],
         "symfony/ovh-cloud-notifier": [
             "5.1"
@@ -750,6 +762,9 @@
             "4.1",
             "4.3",
             "5.3"
+        ],
+        "symfony/vonage-notifier": [
+            "5.4"
         ],
         "symfony/web-profiler-bundle": [
             "3.3",
