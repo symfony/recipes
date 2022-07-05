@@ -1,0 +1,37 @@
+{
+    "aliases": {
+        "encore": "symfony/webpack-encore-bundle",
+        "ux": "symfony/webpack-encore-bundle",
+        "webpack": "symfony/webpack-encore-bundle",
+        "webpack-encore": "symfony/webpack-encore-bundle",
+        "webpack-encore-bundle": "symfony/webpack-encore-bundle",
+        "webpackencore": "symfony/webpack-encore-bundle",
+        "webpackencorebundle": "symfony/webpack-encore-bundle"
+    },
+    "recipes": {
+        "symfony/webpack-encore-bundle": [
+            "1.0",
+            "1.6",
+            "1.9",
+            "1.10"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/webpack-encore-bundle": {
+            "1.10": {
+                "symfony/framework-bundle": "<5.4"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1106/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1106/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
