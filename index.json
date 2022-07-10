@@ -370,6 +370,8 @@
         "yaml": "symfony/yaml",
         "yunpian-notifier": "symfony/yunpian-notifier",
         "yunpiannotifier": "symfony/yunpian-notifier",
+        "zendesk-notifier": "symfony/zendesk-notifier",
+        "zendesknotifier": "symfony/zendesk-notifier",
         "zulip-notifier": "symfony/zulip-notifier",
         "zulipnotifier": "symfony/zulip-notifier"
     },
@@ -2348,6 +2350,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/zendesk-notifier": [
                 "6.2"
             ],
             "symfony/zulip-notifier": [
