@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/zendesk-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ZENDESK_DSN=zendesk://EMAIL:TOKEN@SUBDOMAIN"
+                }
+            },
+            "files": [],
+            "ref": "c072865eadef1eceb892914e0157d8fc46333a15"
+        }
+    }
+}

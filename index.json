@@ -794,6 +794,9 @@
         "symfony/yunpian-notifier": [
             "5.4"
         ],
+        "symfony/zendesk-notifier": [
+            "6.2"
+        ],
         "symfony/zulip-notifier": [
             "5.2"
         ],
