@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ZENDESK_DSN=zendesk://EMAIL:TOKEN@SUBDOMAIN"
+    }
+}
