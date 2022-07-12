@@ -1431,6 +1431,9 @@
             "6.1",
             "6.2"
         ],
+        "symfony/zendesk-notifier": [
+            "6.2"
+        ],
         "symfony/zulip-notifier": [
             "5.2",
             "5.3",
