@@ -122,7 +122,9 @@
         "httpfoundation": "symfony/http-foundation",
         "httpkernel": "symfony/http-kernel",
         "inflector": "symfony/inflector",
+        "infobip-mailer": "symfony/infobip-mailer",
         "infobip-notifier": "symfony/infobip-notifier",
+        "infobipmailer": "symfony/infobip-mailer",
         "infobipnotifier": "symfony/infobip-notifier",
         "intl": "symfony/intl",
         "iqsms-notifier": "symfony/iqsms-notifier",
@@ -1457,6 +1459,9 @@
                 "5.2",
                 "5.3",
                 "5.4"
+            ],
+            "symfony/infobip-mailer": [
+                "6.2"
             ],
             "symfony/infobip-notifier": [
                 "5.2",
