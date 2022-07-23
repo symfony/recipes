@@ -1,1 +1,10 @@
-../../../friendsofphp/php-cs-fixer/3.0/manifest.json
+{
+    "aliases": ["cs-fixer-shim", "php-cs-fixer-shim"],
+    "copy-from-recipe": {
+        ".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php"
+    },
+    "gitignore": [
+        "/.php-cs-fixer.php",
+        "/.php-cs-fixer.cache"
+    ]
+}
