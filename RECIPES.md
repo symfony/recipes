@@ -50,6 +50,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/gitter-notifier](https://packagist.org/packages/symfony/gitter-notifier) | [5.3](symfony/gitter-notifier/5.3) | `gitter-notifier`, `gitternotifier` |
 | [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [5.3](symfony/google-chat-notifier/5.3) | `google-chat-notifier`, `googlechatnotifier` |
 | [symfony/google-mailer](https://packagist.org/packages/symfony/google-mailer) | [4.4](symfony/google-mailer/4.4) | `google-mailer`, `googlemailer` |
+| [symfony/infobip-mailer](https://packagist.org/packages/symfony/infobip-mailer) | [6.2](symfony/infobip-mailer/6.2) | `infobip-mailer`, `infobipmailer` |
 | [symfony/infobip-notifier](https://packagist.org/packages/symfony/infobip-notifier) | [5.2](symfony/infobip-notifier/5.2) | `infobip-notifier`, `infobipnotifier` |
 | [symfony/iqsms-notifier](https://packagist.org/packages/symfony/iqsms-notifier) | [5.3](symfony/iqsms-notifier/5.3) | `iqsms-notifier`, `iqsmsnotifier` |
 | [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [6.1](symfony/kaz-info-teh-notifier/6.1) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |

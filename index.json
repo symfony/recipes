@@ -554,6 +554,9 @@
             "4.3",
             "4.4"
         ],
+        "symfony/infobip-mailer": [
+            "6.2"
+        ],
         "symfony/infobip-notifier": [
             "5.2"
         ],

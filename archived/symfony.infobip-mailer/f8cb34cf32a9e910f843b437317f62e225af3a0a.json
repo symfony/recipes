@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/infobip-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=infobip+api://KEY@BASE_URL",
+                    "#2": "#MAILER_DSN=infobip+smtp://KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "f8cb34cf32a9e910f843b437317f62e225af3a0a"
+        }
+    }
+}
