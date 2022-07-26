@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=infobip+api://KEY@BASE_URL",
+        "#2": "#MAILER_DSN=infobip+smtp://KEY@default"
+    }
+}
