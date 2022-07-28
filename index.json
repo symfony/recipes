@@ -42,6 +42,7 @@
         "cli": "symfony/console",
         "clickatell-notifier": "symfony/clickatell-notifier",
         "clickatellnotifier": "symfony/clickatell-notifier",
+        "clock": "symfony/clock",
         "config": "symfony/config",
         "console": "symfony/console",
         "contact-everyone-notifier": "symfony/contact-everyone-notifier",
@@ -1042,6 +1043,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/clock": [
                 "6.2"
             ],
             "symfony/config": [
