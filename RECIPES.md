@@ -35,7 +35,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/crowdin-translation-provider](https://packagist.org/packages/symfony/crowdin-translation-provider) | [5.3](symfony/crowdin-translation-provider/5.3) | `crowdin-translation-provider`, `crowdintranslationprovider` |
 | [symfony/debug-bundle](https://packagist.org/packages/symfony/debug-bundle) | [5.3](symfony/debug-bundle/5.3) | `debug-bundle`, `debugbundle` |
 | [symfony/discord-notifier](https://packagist.org/packages/symfony/discord-notifier) | [5.2](symfony/discord-notifier/5.2) | `discord-notifier`, `discordnotifier` |
-| [symfony/engagespot-notifier](https://packagist.org/packages/symfony/engagespot-notifier) | [5.4](symfony/engagespot-notifier/5.4) | `engagespot-notifier`, `engagespotnotifier` |
+| [symfony/engagespot-notifier](https://packagist.org/packages/symfony/engagespot-notifier) | [6.1](symfony/engagespot-notifier/6.1) | `engagespot-notifier`, `engagespotnotifier` |
 | [symfony/esendex-notifier](https://packagist.org/packages/symfony/esendex-notifier) | [5.2](symfony/esendex-notifier/5.2) | `esendex-notifier`, `esendexnotifier` |
 | [symfony/expo-notifier](https://packagist.org/packages/symfony/expo-notifier) | [5.4](symfony/expo-notifier/5.4) | `expo-notifier`, `exponotifier` |
 | [symfony/fake-chat-notifier](https://packagist.org/packages/symfony/fake-chat-notifier) | [5.3](symfony/fake-chat-notifier/5.3) | `fake-chat-notifier`, `fakechatnotifier` |
