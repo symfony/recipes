@@ -105,6 +105,9 @@
             "6.1",
             "6.2"
         ],
+        "symfony/chatwork-notifier": [
+            "6.2"
+        ],
         "symfony/class-loader": [
             "3.4"
         ],
