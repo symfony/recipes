@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/chatwork-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "CHATWORK_DSN=chatwork://API_TOKEN@default?room_id=ID"
+                }
+            },
+            "files": [],
+            "ref": "379a56f2f94f1575c962d232b12c081fc0627279"
+        }
+    }
+}

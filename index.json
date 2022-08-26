@@ -481,6 +481,9 @@
         "symfony/amazon-sns-notifier": [
             "5.4"
         ],
+        "symfony/chatwork-notifier": [
+            "6.2"
+        ],
         "symfony/clickatell-notifier": [
             "5.3"
         ],
