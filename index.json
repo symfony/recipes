@@ -37,6 +37,8 @@
         "browser-kit": "symfony/browser-kit",
         "browserkit": "symfony/browser-kit",
         "cache": "symfony/cache",
+        "chatwork-notifier": "symfony/chatwork-notifier",
+        "chatworknotifier": "symfony/chatwork-notifier",
         "class-loader": "symfony/class-loader",
         "classloader": "symfony/class-loader",
         "cli": "symfony/console",
@@ -1033,6 +1035,9 @@
                 "5.4",
                 "6.0",
                 "6.1",
+                "6.2"
+            ],
+            "symfony/chatwork-notifier": [
                 "6.2"
             ],
             "symfony/class-loader": [
