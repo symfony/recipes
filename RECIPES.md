@@ -5,7 +5,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | Package | Latest Recipe | Aliases |
 | --- | --- | --- |
 | [api-platform/admin-pack](https://packagist.org/packages/api-platform/admin-pack) | [1.0](api-platform/admin-pack/1.0) | `api-admin`, `api-platform-admin`, `apiadmin`, `apiplatformadmin`, `react-admin`, `reactadmin` |
-| [api-platform/core](https://packagist.org/packages/api-platform/core) | [2.5](api-platform/core/2.5) |  |
+| [api-platform/core](https://packagist.org/packages/api-platform/core) | [3.0](api-platform/core/3.0) |  |
 | [blackfireio/blackfire-symfony-meta](https://packagist.org/packages/blackfireio/blackfire-symfony-meta) | [1.0](blackfireio/blackfire-symfony-meta/1.0) | `blackfire` |
 | [doctrine/annotations](https://packagist.org/packages/doctrine/annotations) | [1.10](doctrine/annotations/1.10) |  |
 | [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.4](doctrine/doctrine-bundle/2.4) |  |
