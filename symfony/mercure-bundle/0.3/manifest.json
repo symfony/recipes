@@ -12,7 +12,7 @@
         "#3": "The public URL of the Mercure hub, used by the browser to connect",
         "MERCURE_PUBLIC_URL": "https://example.com/.well-known/mercure",
         "#4": "The secret used to sign the JWTs",
-        "MERCURE_JWT_SECRET": "!MUST_CHANGE_THIS_SECRET_JWT_KEY!"
+        "MERCURE_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!"
     },
     "docker-compose": {
         "docker-compose.yml": {
@@ -22,8 +22,8 @@
                 "  restart: unless-stopped",
                 "  environment:",
                 "    SERVER_NAME: ':80'",
-                "    MERCURE_PUBLISHER_JWT_KEY: '!MUST_CHANGE_THIS_SECRET_JWT_KEY!'",
-                "    MERCURE_SUBSCRIBER_JWT_KEY: '!MUST_CHANGE_THIS_SECRET_JWT_KEY!'",
+                "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
+                "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
                 "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
                 "    MERCURE_EXTRA_DIRECTIVES: |",
                 "      cors_origins http://127.0.0.1:8000",
