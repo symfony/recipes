@@ -3,7 +3,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MAILER_DSN": "null://null"
+        "#1": "MAILER_DSN=null://null"
     },
     "docker-compose": {
         "docker-compose.override.yml": {
