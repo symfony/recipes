@@ -434,6 +434,9 @@
         "league/flysystem-bundle": [
             "1.0"
         ],
+        "league/oauth2-server-bundle": [
+            "0.4"
+        ],
         "lexik/jwt-authentication-bundle": [
             "2.3",
             "2.5"

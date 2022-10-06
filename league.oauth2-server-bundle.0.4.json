@@ -1,0 +1,67 @@
+{
+    "manifests": {
+        "league/oauth2-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "League\\Bundle\\OAuth2ServerBundle\\LeagueOAuth2ServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OAUTH_PRIVATE_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
+                    "OAUTH_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
+                    "OAUTH_PASSPHRASE": "%generate(secret)%",
+                    "OAUTH_ENCRYPTION_KEY": "%generate(secret)%"
+                },
+                "post-install-output": [
+                    "  1. <bg=magenta;fg=white> Provide a key pair </>",
+                    "    * Generate a private/public key pair at the locations defined in your .env file, using the value of the  <info>OAUTH_PASSPHRASE</> as passphrase: <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>",
+                    "",
+                    "  2. <bg=magenta;fg=white> Update the database schema </>",
+                    "    * Update your database schema so that bundle entities can be managed by Doctrine",
+                    "",
+                    "  3. <bg=magenta;fg=white> Read the docs </>",
+                    "    * Read the documentation at <comment>https://github.com/thephpleague/oauth2-server-bundle/blob/master/docs/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/league_oauth2_server.yaml": {
+                    "contents": [
+                        "league_oauth2_server:",
+                        "    authorization_server:",
+                        "        private_key: '%env(resolve:OAUTH_PRIVATE_KEY)%'",
+                        "        private_key_passphrase: '%env(resolve:OAUTH_PASSPHRASE)%'",
+                        "        encryption_key: '%env(resolve:OAUTH_ENCRYPTION_KEY)%'",
+                        "    resource_server:",
+                        "        public_key: '%env(resolve:OAUTH_PUBLIC_KEY)%'",
+                        "    scopes:",
+                        "        available: ['email']",
+                        "        default: ['email']",
+                        "    persistence:",
+                        "        doctrine: null",
+                        "",
+                        "when@test:",
+                        "    league_oauth2_server:",
+                        "        persistence:",
+                        "            in_memory: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/league_oauth2_server.yaml": {
+                    "contents": [
+                        "oauth2_server:",
+                        "    resource: '@LeagueOAuth2ServerBundle/Resources/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d301b126eebe583d944398d47a30690b44f3fab3"
+        }
+    }
+}

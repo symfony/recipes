@@ -16,6 +16,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [hautelook/alice-bundle](https://packagist.org/packages/hautelook/alice-bundle) | [2.2](hautelook/alice-bundle/2.2) | `alice` |
 | [javiereguiluz/easyadmin-bundle](https://packagist.org/packages/javiereguiluz/easyadmin-bundle) | [1.17](javiereguiluz/easyadmin-bundle/1.17) |  |
 | [league/flysystem-bundle](https://packagist.org/packages/league/flysystem-bundle) | [1.0](league/flysystem-bundle/1.0) |  |
+| [league/oauth2-server-bundle](https://packagist.org/packages/league/oauth2-server-bundle) | [0.4](league/oauth2-server-bundle/0.4) |  |
 | [lexik/jwt-authentication-bundle](https://packagist.org/packages/lexik/jwt-authentication-bundle) | [2.5](lexik/jwt-authentication-bundle/2.5) | `jwt`, `jwt-auth`, `jwtauth` |
 | [nelmio/alice](https://packagist.org/packages/nelmio/alice) | [3.3](nelmio/alice/3.3) |  |
 | [nelmio/cors-bundle](https://packagist.org/packages/nelmio/cors-bundle) | [1.5](nelmio/cors-bundle/1.5) | `cors` |
