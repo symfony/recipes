@@ -288,3 +288,10 @@ jobs:
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
+                    EXIT_CODE=$?
+
+                    if [[ EXIT_CODE -eq 2 ]]; then
+                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 6\n#\n#\n#\n"
+                    fi
+
+                    exit $EXIT_CODE
