@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "CHATWORK_DSN=chatwork://API_TOKEN@default?room_id=ID"
+    }
+}
