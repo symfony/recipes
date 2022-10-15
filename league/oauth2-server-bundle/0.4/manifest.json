@@ -10,5 +10,6 @@
         "OAUTH_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
         "OAUTH_PASSPHRASE": "%generate(secret)%",
         "OAUTH_ENCRYPTION_KEY": "%generate(secret)%"
-    }
+    },
+    "aliases": ["oauth2-server", "oauth-server"]
 }
