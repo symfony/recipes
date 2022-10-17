@@ -14,5 +14,11 @@
             ]
         }
     },
+    "dockerfile": [
+        "RUN set -eux; \\",
+        "    install-php-extensions \\",
+        "        xsl \\",
+        "    ;"
+    ],
     "aliases": ["mailer", "mail"]
 }
