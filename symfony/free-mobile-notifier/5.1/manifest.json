@@ -1,5 +1,5 @@
 {
     "env": {
-        "#1": "FREE_MOBILE_DSN=freemobile://default?phone=PHONE"
+        "#1": "FREE_MOBILE_DSN=freemobile://LOGIN:API_KEY@default?phone=PHONE"
     }
 }
