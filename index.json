@@ -702,7 +702,8 @@
             "5.1",
             "5.3",
             "6.0",
-            "6.1"
+            "6.1",
+            "6.2"
         ],
         "symfony/security-bundle": [
             "3.3",
@@ -899,6 +900,9 @@
             },
             "6.1": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "6.2": {
+                "symfony/framework-bundle": "<6.2"
             }
         },
         "symfony/security-bundle": {
