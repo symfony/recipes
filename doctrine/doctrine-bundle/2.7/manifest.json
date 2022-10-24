@@ -1,0 +1,53 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+        "#2": "IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml",
+        "#3": "",
+        "#4": "DATABASE_URL=\"pdo-sqlite:///%kernel.project_dir%/var/data.db\"",
+        "#5": "DATABASE_URL=\"pdo-mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.31&charset=utf8mb4\"",
+        "#6": "DATABASE_URL=\"mysqli://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.9.3-MariaDB&charset=utf8mb4\"",
+        "DATABASE_URL": "pdo-pgsql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=15.0&charset=utf8"
+    },
+    "dockerfile": [
+        "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \\",
+        "\tdocker-php-ext-install -j$(nproc) pdo_pgsql; \\",
+        "\tapk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5; \\",
+        "\tapk del .pgsql-deps"
+    ],
+    "docker-compose": {
+        "docker-compose.yml": {
+            "services": [
+                "database:",
+                "  image: postgres:${POSTGRES_VERSION:-15}-alpine",
+                "  environment:",
+                "    POSTGRES_DB: ${POSTGRES_DB:-app}",
+                "    # You should definitely change the password in production",
+                "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}",
+                "    POSTGRES_USER: ${POSTGRES_USER:-app}",
+                "  volumes:",
+                "    - db-data:/var/lib/postgresql/data:rw",
+                "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                "    # - ./docker/db/data:/var/lib/postgresql/data:rw"
+            ],
+            "volumes": ["db-data:"]
+        },
+        "docker-compose.override.yml": {
+            "services": [
+                "database:",
+                "  ports:",
+                "    - \"5432\""
+            ]
+        }
+    },
+    "conflict": {
+        "doctrine/dbal": "<3.5",
+        "symfony/framework-bundle": "<5.3"
+    }
+}
