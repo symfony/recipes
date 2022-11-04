@@ -5,6 +5,6 @@
     "env": {
         "#1": "Choose one of the stores below",
         "#2": "postgresql+advisory://db_user:db_password@localhost/db_name",
-        "LOCK_DSN": "semaphore"
+        "LOCK_DSN": "flock"
     }
 }
