@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MASTODON_DSN=mastodon://ACCESS_TOKEN@HOST"
+    }
+}
