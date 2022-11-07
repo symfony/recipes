@@ -5,6 +5,6 @@
     "env": {
         "#1": "Choose one of the stores below",
         "#2": "LOCK_DSN=redis://localhost",
-        "LOCK_DSN": "semaphore"
+        "LOCK_DSN": "flock"
     }
 }
