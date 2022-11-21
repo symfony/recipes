@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/uid": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<6.2"
+                }
+            },
+            "files": {
+                "config/packages/uid.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    uid:",
+                        "        default_uuid_version: 7",
+                        "        time_based_uuid_version: 7",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d294ad4add3e15d7eb1bae0221588ca89b38e558"
+        }
+    }
+}

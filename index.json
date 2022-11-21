@@ -777,6 +777,9 @@
         "symfony/twilio-notifier": [
             "5.0"
         ],
+        "symfony/uid": [
+            "6.2"
+        ],
         "symfony/ux-autocomplete": [
             "2.2"
         ],
@@ -919,6 +922,11 @@
             },
             "5.4": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/uid": {
+            "6.2": {
+                "symfony/framework-bundle": "<6.2"
             }
         },
         "symfony/validator": {

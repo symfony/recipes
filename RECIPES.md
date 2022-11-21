@@ -110,6 +110,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [5.4](symfony/turbo-sms-notifier/5.4) | `turbo-sms-notifier`, `turbosmsnotifier` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [5.4](symfony/twig-bundle/5.4) | `twig-bundle`, `twigbundle` |
 | [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
+| [symfony/uid](https://packagist.org/packages/symfony/uid) | [6.2](symfony/uid/6.2) | `uid` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.2](symfony/ux-autocomplete/2.2) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.0](symfony/ux-live-component/2.0) | `ux-live-component`, `uxlivecomponent` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
