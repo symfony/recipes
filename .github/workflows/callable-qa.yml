@@ -13,9 +13,21 @@ on:
             find_yaml:
                 required: false
                 type: string
-            skeleton:
+            skeleton_74:
                 required: false
                 default: symfony/skeleton
+                type: string
+            skeleton_74_version:
+                required: false
+                default: ^5
+                type: string
+            skeleton_81:
+                required: false
+                default: symfony/skeleton
+                type: string
+            skeleton_81_version:
+                required: false
+                default: ^6
                 type: string
         secrets:
             token:
@@ -258,8 +270,8 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "${{ inputs.skeleton }}:^5" v5
-                    cd v5
+                    composer create-project --ansi "${{ inputs.skeleton_74 }}:${{ inputs.skeleton_74_version }}" skeleton_74
+                    cd skeleton_74
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
@@ -286,8 +298,8 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "${{ inputs.skeleton }}:^6" v6
-                    cd v6
+                    composer create-project --ansi "${{ inputs.skeleton_81 }}:${{ inputs.skeleton_81_version }}" skeleton_81
+                    cd skeleton_81
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
