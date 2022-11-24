@@ -13,6 +13,10 @@ on:
             find_yaml:
                 required: false
                 type: string
+            skeleton:
+                required: false
+                default: symfony/skeleton
+                type: string
         secrets:
             token:
                 required: true
@@ -254,7 +258,7 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^5" v5
+                    composer create-project --ansi "${{ inputs.skeleton }}:^5" v5
                     cd v5
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
@@ -282,7 +286,7 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^6" v6
+                    composer create-project --ansi "${{ inputs.skeleton }}:^6" v6
                     cd v6
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
