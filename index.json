@@ -781,10 +781,12 @@
             "6.2"
         ],
         "symfony/ux-autocomplete": [
-            "2.2"
+            "2.2",
+            "2.6"
         ],
         "symfony/ux-live-component": [
-            "2.0"
+            "2.0",
+            "2.6"
         ],
         "symfony/validator": [
             "4.1",

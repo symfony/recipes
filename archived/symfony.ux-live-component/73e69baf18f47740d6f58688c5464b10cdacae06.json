@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ux-live-component": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\LiveComponent\\LiveComponentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ux_live_component.yaml": {
+                    "contents": [
+                        "live_component:",
+                        "    resource: '@LiveComponentBundle/config/routes.php'",
+                        "    prefix: '/_components'",
+                        "    # adjust prefix to add localization to your components",
+                        "    #prefix: '/{_locale}/_components'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "73e69baf18f47740d6f58688c5464b10cdacae06"
+        }
+    }
+}
