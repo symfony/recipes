@@ -1031,9 +1031,6 @@
             "6.2",
             "6.3"
         ],
-        "symfony/ring-central-notifier": [
-            "6.3"
-        ],
         "symfony/rocket-chat-notifier": [
             "5.1",
             "5.2",
