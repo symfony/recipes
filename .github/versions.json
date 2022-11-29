@@ -1353,9 +1353,6 @@
             "6.2",
             "6.3"
         ],
-        "symfony/termii-notifier": [
-            "6.3"
-        ],
         "symfony/translation": [
             "3.4",
             "4.0",
