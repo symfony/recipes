@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "RINGCENTRAL_DSN=ringcentral://API_TOKEN@default?from=FROM"
+    }
+}
