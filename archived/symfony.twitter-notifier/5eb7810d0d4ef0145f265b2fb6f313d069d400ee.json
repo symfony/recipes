@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/twitter-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "TWITTER_DSN=twitter://API_KEY:API_SECRET:ACCESS_TOKEN:ACCESS_SECRET@default"
+                }
+            },
+            "files": [],
+            "ref": "5eb7810d0d4ef0145f265b2fb6f313d069d400ee"
+        }
+    }
+}

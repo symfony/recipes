@@ -804,6 +804,9 @@
         "symfony/twilio-notifier": [
             "5.0"
         ],
+        "symfony/twitter-notifier": [
+            "6.3"
+        ],
         "symfony/uid": [
             "6.2"
         ],
