@@ -501,6 +501,9 @@
         "symfony/amazon-sns-notifier": [
             "5.4"
         ],
+        "symfony/bandwidth-notifier": [
+            "6.3"
+        ],
         "symfony/chatwork-notifier": [
             "6.2"
         ],

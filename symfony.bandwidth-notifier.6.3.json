@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/bandwidth-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "BANDWIDTH_DSN=bandwidth://USERNAME:PASSWORD@default?from=FROM&account_id=ACCOUNT_ID&application_id=APPLICATION_ID&priority=PRIORITY"
+                }
+            },
+            "files": [],
+            "ref": "1245c95b3637dde2bc9425b57d0bdd0f9c495c4e"
+        }
+    }
+}

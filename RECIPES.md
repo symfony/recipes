@@ -31,6 +31,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |
 | [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [5.4](symfony/amazon-sns-notifier/5.4) | `amazon-sns-notifier`, `amazonsnsnotifier` |
+| [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
 | [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [6.2](symfony/chatwork-notifier/6.2) | `chatwork-notifier`, `chatworknotifier` |
 | [symfony/clickatell-notifier](https://packagist.org/packages/symfony/clickatell-notifier) | [5.3](symfony/clickatell-notifier/5.3) | `clickatell-notifier`, `clickatellnotifier` |
 | [symfony/console](https://packagist.org/packages/symfony/console) | [5.3](symfony/console/5.3) | `cli`, `console` |
