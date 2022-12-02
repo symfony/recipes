@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/ring-central-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "RINGCENTRAL_DSN=ringcentral://API_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "54f0bb6a8610199eff1779754d216a511e14911f"
+        }
+    }
+}

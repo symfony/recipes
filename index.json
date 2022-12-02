@@ -707,6 +707,9 @@
             "1.0",
             "2.0"
         ],
+        "symfony/ring-central-notifier": [
+            "6.3"
+        ],
         "symfony/rocket-chat-notifier": [
             "5.1"
         ],
