@@ -107,6 +107,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
 | [symfony/telegram-notifier](https://packagist.org/packages/symfony/telegram-notifier) | [5.0](symfony/telegram-notifier/5.0) | `telegram-notifier`, `telegramnotifier` |
 | [symfony/telnyx-notifier](https://packagist.org/packages/symfony/telnyx-notifier) | [5.4](symfony/telnyx-notifier/5.4) | `telnyx-notifier`, `telnyxnotifier` |
+| [symfony/termii-notifier](https://packagist.org/packages/symfony/termii-notifier) | [6.3](symfony/termii-notifier/6.3) | `termii-notifier`, `termiinotifier` |
 | [symfony/translation](https://packagist.org/packages/symfony/translation) | [5.3](symfony/translation/5.3) | `translation`, `translations`, `translator` |
 | [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [5.4](symfony/turbo-sms-notifier/5.4) | `turbo-sms-notifier`, `turbosmsnotifier` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [5.4](symfony/twig-bundle/5.4) | `twig-bundle`, `twigbundle` |

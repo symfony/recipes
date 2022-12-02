@@ -775,6 +775,9 @@
         "symfony/telnyx-notifier": [
             "5.4"
         ],
+        "symfony/termii-notifier": [
+            "6.3"
+        ],
         "symfony/translation": [
             "3.3",
             "5.3"

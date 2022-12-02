@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/termii-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "TERMII_DSN=termii://API_KEY@default?from=FROM&channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "ref": "fc5525cef230c6e91093c64027aaa033f0c9a38a"
+        }
+    }
+}
