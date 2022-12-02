@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "TWITTER_DSN=twitter://API_KEY:API_SECRET:ACCESS_TOKEN:ACCESS_SECRET@default"
+    }
+}
