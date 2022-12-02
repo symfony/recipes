@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "PLIVO_DSN=plivo://AUTH_ID:AUTH_TOKEN@default?from=FROM"
+    }
+}
