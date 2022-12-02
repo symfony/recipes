@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/plivo-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "PLIVO_DSN=plivo://AUTH_ID:AUTH_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "fae3075ec8802d1f0a01db50816d771872153a12"
+        }
+    }
+}
