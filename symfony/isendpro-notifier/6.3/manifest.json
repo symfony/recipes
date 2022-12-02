@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ISENDPRO_DSN=isendpro://ACCOUNT_KEY_ID@default?from=FROM&no_stop=NO_STOP&sandbox=SANDBOX"
+    }
+}
