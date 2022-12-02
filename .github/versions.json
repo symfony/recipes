@@ -1,10 +1,10 @@
 {
     "lts": "5.4",
-    "stable": "6.1",
-    "next": "6.2",
-    "previous": "6.0",
-    "dev": "6.2",
-    "dev-name": "6.2",
+    "stable": "6.2",
+    "next": "6.3",
+    "previous": "6.1",
+    "dev": "6.3",
+    "dev-name": "6.3",
     "splits": {
         "symfony/all-my-sms-notifier": [
             "5.3",
@@ -69,6 +69,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/bandwidth-notifier": [
             "6.3"
         ],
         "symfony/beanstalkd-messenger": [
@@ -625,6 +628,9 @@
             "6.2",
             "6.3"
         ],
+        "symfony/isendpro-notifier": [
+            "6.3"
+        ],
         "symfony/kaz-info-teh-notifier": [
             "6.1",
             "6.2",
@@ -931,6 +937,9 @@
             "6.2",
             "6.3"
         ],
+        "symfony/plivo-notifier": [
+            "6.3"
+        ],
         "symfony/postmark-mailer": [
             "4.3",
             "4.4",
@@ -1029,6 +1038,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/ring-central-notifier": [
             "6.3"
         ],
         "symfony/rocket-chat-notifier": [
@@ -1353,6 +1365,9 @@
             "6.2",
             "6.3"
         ],
+        "symfony/termii-notifier": [
+            "6.3"
+        ],
         "symfony/translation": [
             "3.4",
             "4.0",
@@ -1420,6 +1435,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/twitter-notifier": [
             "6.3"
         ],
         "symfony/uid": [
