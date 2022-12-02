@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/isendpro-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ISENDPRO_DSN=isendpro://ACCOUNT_KEY_ID@default?from=FROM&no_stop=NO_STOP&sandbox=SANDBOX"
+                }
+            },
+            "files": [],
+            "ref": "5a388f7d4046640a682a5ed39516566bc453df84"
+        }
+    }
+}

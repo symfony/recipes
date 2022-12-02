@@ -589,6 +589,9 @@
         "symfony/iqsms-notifier": [
             "5.3"
         ],
+        "symfony/isendpro-notifier": [
+            "6.3"
+        ],
         "symfony/kaz-info-teh-notifier": [
             "6.1"
         ],
