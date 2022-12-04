@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "LINE_NOTIFY_DSN=linenotify://TOKEN@default"
+    }
+}
