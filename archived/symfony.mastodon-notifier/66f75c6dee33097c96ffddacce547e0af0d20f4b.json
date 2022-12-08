@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/mastodon-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "MASTODON_DSN=mastodon://ACCESS_TOKEN@HOST"
+                }
+            },
+            "files": [],
+            "ref": "66f75c6dee33097c96ffddacce547e0af0d20f4b"
+        }
+    }
+}

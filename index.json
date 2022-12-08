@@ -644,6 +644,9 @@
         "symfony/maker-bundle": [
             "1.0"
         ],
+        "symfony/mastodon-notifier": [
+            "6.3"
+        ],
         "symfony/mattermost-notifier": [
             "5.1"
         ],

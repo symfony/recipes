@@ -71,6 +71,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/mailjet-mailer](https://packagist.org/packages/symfony/mailjet-mailer) | [5.2](symfony/mailjet-mailer/5.2) | `mailjet-mailer`, `mailjetmailer` |
 | [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [5.4](symfony/mailjet-notifier/5.4) | `mailjet-notifier`, `mailjetnotifier` |
 | [symfony/maker-bundle](https://packagist.org/packages/symfony/maker-bundle) | [1.0](symfony/maker-bundle/1.0) | `generator`, `make`, `maker`, `maker-bundle`, `makerbundle` |
+| [symfony/mastodon-notifier](https://packagist.org/packages/symfony/mastodon-notifier) | [6.3](symfony/mastodon-notifier/6.3) | `mastodon-notifier`, `mastodonnotifier` |
 | [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [5.1](symfony/mattermost-notifier/5.1) | `mattermost-notifier`, `mattermostnotifier` |
 | [symfony/mercure-bundle](https://packagist.org/packages/symfony/mercure-bundle) | [0.3](symfony/mercure-bundle/0.3) | `mercure`, `mercure-bundle`, `mercurebundle` |
 | [symfony/mercure-notifier](https://packagist.org/packages/symfony/mercure-notifier) | [5.3](symfony/mercure-notifier/5.3) | `mercure-notifier`, `mercurenotifier` |
