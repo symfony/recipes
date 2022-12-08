@@ -148,6 +148,8 @@
         "ldap": "symfony/ldap",
         "light-sms-notifier": "symfony/light-sms-notifier",
         "lightsmsnotifier": "symfony/light-sms-notifier",
+        "line-notify-notifier": "symfony/line-notify-notifier",
+        "linenotifynotifier": "symfony/line-notify-notifier",
         "linked-in-notifier": "symfony/linked-in-notifier",
         "linkedinnotifier": "symfony/linked-in-notifier",
         "lock": "symfony/lock",
@@ -175,6 +177,8 @@
         "maker": "symfony/maker-bundle",
         "maker-bundle": "symfony/maker-bundle",
         "makerbundle": "symfony/maker-bundle",
+        "mastodon-notifier": "symfony/mastodon-notifier",
+        "mastodonnotifier": "symfony/mastodon-notifier",
         "mattermost-notifier": "symfony/mattermost-notifier",
         "mattermostnotifier": "symfony/mattermost-notifier",
         "mercure": "symfony/mercure-bundle",
@@ -1648,6 +1652,9 @@
                 "6.2",
                 "6.3"
             ],
+            "symfony/line-notify-notifier": [
+                "6.3"
+            ],
             "symfony/linked-in-notifier": [
                 "5.2",
                 "5.3",
@@ -1747,6 +1754,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/mastodon-notifier": [
                 "6.3"
             ],
             "symfony/mattermost-notifier": [
