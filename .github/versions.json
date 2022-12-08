@@ -631,9 +631,6 @@
         "symfony/isendpro-notifier": [
             "6.3"
         ],
-        "symfony/isendpro-notifier": [
-            "6.3"
-        ],
         "symfony/kaz-info-teh-notifier": [
             "6.1",
             "6.2",
@@ -662,6 +659,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/line-notify-notifier": [
             "6.3"
         ],
         "symfony/linked-in-notifier": [
@@ -763,6 +763,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/mastodon-notifier": [
             "6.3"
         ],
         "symfony/mattermost-notifier": [
