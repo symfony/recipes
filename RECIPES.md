@@ -59,6 +59,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/isendpro-notifier](https://packagist.org/packages/symfony/isendpro-notifier) | [6.3](symfony/isendpro-notifier/6.3) | `isendpro-notifier`, `isendpronotifier` |
 | [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [6.1](symfony/kaz-info-teh-notifier/6.1) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |
 | [symfony/light-sms-notifier](https://packagist.org/packages/symfony/light-sms-notifier) | [5.3](symfony/light-sms-notifier/5.3) | `light-sms-notifier`, `lightsmsnotifier` |
+| [symfony/line-notify-notifier](https://packagist.org/packages/symfony/line-notify-notifier) | [6.3](symfony/line-notify-notifier/6.3) | `line-notify-notifier`, `linenotifynotifier` |
 | [symfony/linked-in-notifier](https://packagist.org/packages/symfony/linked-in-notifier) | [5.2](symfony/linked-in-notifier/5.2) | `linked-in-notifier`, `linkedinnotifier` |
 | [symfony/lock](https://packagist.org/packages/symfony/lock) | [5.2](symfony/lock/5.2) | `lock` |
 | [symfony/loco-translation-provider](https://packagist.org/packages/symfony/loco-translation-provider) | [5.3](symfony/loco-translation-provider/5.3) | `loco-translation-provider`, `locotranslationprovider` |

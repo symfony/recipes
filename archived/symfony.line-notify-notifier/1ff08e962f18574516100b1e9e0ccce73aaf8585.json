@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/line-notify-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "LINE_NOTIFY_DSN=linenotify://TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "1ff08e962f18574516100b1e9e0ccce73aaf8585"
+        }
+    }
+}

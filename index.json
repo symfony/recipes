@@ -605,6 +605,9 @@
         "symfony/light-sms-notifier": [
             "5.3"
         ],
+        "symfony/line-notify-notifier": [
+            "6.3"
+        ],
         "symfony/linked-in-notifier": [
             "5.2"
         ],
