@@ -22,6 +22,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [nelmio/cors-bundle](https://packagist.org/packages/nelmio/cors-bundle) | [1.5](nelmio/cors-bundle/1.5) | `cors` |
 | [nelmio/security-bundle](https://packagist.org/packages/nelmio/security-bundle) | [2.4](nelmio/security-bundle/2.4) |  |
 | [nyholm/psr7](https://packagist.org/packages/nyholm/psr7) | [1.0](nyholm/psr7/1.0) |  |
+| [php-cs-fixer/shim](https://packagist.org/packages/php-cs-fixer/shim) | [3.0](php-cs-fixer/shim/3.0) | `cs-fixer-shim`, `csfixershim`, `php-cs-fixer-shim`, `phpcsfixershim` |
 | [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | [9.3](phpunit/phpunit/9.3) |  |
 | [scheb/2fa-bundle](https://packagist.org/packages/scheb/2fa-bundle) | [6.0](scheb/2fa-bundle/6.0) | `2fa` |
 | [sensio/framework-extra-bundle](https://packagist.org/packages/sensio/framework-extra-bundle) | [5.2](sensio/framework-extra-bundle/5.2) | `annot`, `annotation`, `annotations`, `annots` |

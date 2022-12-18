@@ -55,7 +55,9 @@
         "crowdin-translation-provider": "symfony/crowdin-translation-provider",
         "crowdintranslationprovider": "symfony/crowdin-translation-provider",
         "cs-fixer": "friendsofphp/php-cs-fixer",
+        "cs-fixer-shim": "php-cs-fixer/shim",
         "csfixer": "friendsofphp/php-cs-fixer",
+        "csfixershim": "php-cs-fixer/shim",
         "css-selector": "symfony/css-selector",
         "cssselector": "symfony/css-selector",
         "debug": "symfony/debug-pack",
@@ -228,7 +230,9 @@
         "password-hasher": "symfony/password-hasher",
         "passwordhasher": "symfony/password-hasher",
         "php-cs-fixer": "friendsofphp/php-cs-fixer",
+        "php-cs-fixer-shim": "php-cs-fixer/shim",
         "phpcsfixer": "friendsofphp/php-cs-fixer",
+        "phpcsfixershim": "php-cs-fixer/shim",
         "phpunit": "symfony/test-pack",
         "phpunit-bridge": "symfony/phpunit-bridge",
         "phpunitbridge": "symfony/phpunit-bridge",
@@ -473,6 +477,9 @@
         ],
         "nyholm/psr7": [
             "1.0"
+        ],
+        "php-cs-fixer/shim": [
+            "3.0"
         ],
         "phpunit/phpunit": [
             "4.7",
