@@ -150,6 +150,13 @@ Copies files or directories from the Composer package contents to the Symfony
 application. It's defined as an associative array where the key is the original
 file/directory and the value is the target file/directory.
 
+.. caution::
+
+    Copying files from the package should be avoided, except for some very
+    specific use cases. Copying PHP files under the project's ``src/``
+    directory is almost always a bad idea; consider adding a command in your
+    bundle that is able to generate such PHP files instead.
+
 This example copies the ``bin/check.php`` script of the package into the binary
 directory of the application:
 
@@ -202,8 +209,11 @@ files and directories:
 
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
     }
+
+Avoid storing PHP files that should land under the ``src/`` directory; consider
+adding a command in your bundle that is able to generate such PHP files
+instead.
 
 ``env`` Configurator
 ~~~~~~~~~~~~~~~~~~~~
