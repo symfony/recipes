@@ -16,7 +16,7 @@
                 "  #env_file: .env.local",
                 "  environment:",
                 "    BLACKFIRE_LOG_LEVEL: 4",
-                "  ports: [8307]"
+                "  ports: [\"8307\"]"
             ]
         }
     },
