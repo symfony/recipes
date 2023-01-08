@@ -226,6 +226,8 @@
         "ormfixtures": "doctrine/doctrine-fixtures-bundle",
         "ovh-cloud-notifier": "symfony/ovh-cloud-notifier",
         "ovhcloudnotifier": "symfony/ovh-cloud-notifier",
+        "pager-duty-notifier": "symfony/pager-duty-notifier",
+        "pagerdutynotifier": "symfony/pager-duty-notifier",
         "panther": "symfony/panther",
         "password-hasher": "symfony/password-hasher",
         "passwordhasher": "symfony/password-hasher",
@@ -1625,6 +1627,15 @@
                 "6.3"
             ],
             "symfony/iqsms-notifier": [
+                "3.4",
+                "4.0",
+                "4.1",
+                "4.2",
+                "4.3",
+                "4.4",
+                "5.0",
+                "5.1",
+                "5.2",
                 "5.3",
                 "5.4",
                 "6.0",
@@ -1875,6 +1886,12 @@
                 "5.4"
             ],
             "symfony/notifier": [
+                "3.4",
+                "4.0",
+                "4.1",
+                "4.2",
+                "4.3",
+                "4.4",
                 "5.0",
                 "5.1",
                 "5.2",
@@ -1937,6 +1954,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/pager-duty-notifier": [
                 "6.3"
             ],
             "symfony/password-hasher": [
