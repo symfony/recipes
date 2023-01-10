@@ -1,0 +1,4 @@
+  * Modify your DATABASE_URL config in <fg=green>.env</>
+
+  * Configure the <fg=green>driver</> (postgresql) and
+    <fg=green>server_version</> (14) in <fg=green>config/packages/doctrine.yaml</>
