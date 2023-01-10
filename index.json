@@ -427,7 +427,8 @@
             "1.12",
             "2.0",
             "2.3",
-            "2.4"
+            "2.4",
+            "2.8"
         ],
         "doctrine/doctrine-fixtures-bundle": [
             "3.0"
@@ -908,6 +909,11 @@
         },
         "doctrine/doctrine-bundle": {
             "2.4": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "2.8": {
+                "doctrine/orm": "<2.14",
+                "symfony/dependency-injection": "<6.2",
                 "symfony/framework-bundle": "<5.3"
             }
         },
