@@ -12,7 +12,7 @@
         "#3": "",
         "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data.db\"",
         "#5": "DATABASE_URL=\"mysql://app:!ChangeMe!@127.0.0.1:3306/db_name?serverVersion=8\"",
-        "DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/db_name?serverVersion=14&charset=utf8"
+        "DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/db_name?serverVersion=15&charset=utf8"
     },
     "dockerfile": [
         "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev && \\",
@@ -24,7 +24,7 @@
         "docker-compose.yml": {
             "services": [
                 "database:",
-                "  image: postgres:${POSTGRES_VERSION:-14}-alpine",
+                "  image: postgres:${POSTGRES_VERSION:-15}-alpine",
                 "  environment:",
                 "    POSTGRES_DB: ${POSTGRES_DB:-app}",
                 "    # You should definitely change the password in production",
