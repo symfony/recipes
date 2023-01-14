@@ -88,6 +88,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/one-signal-notifier](https://packagist.org/packages/symfony/one-signal-notifier) | [5.4](symfony/one-signal-notifier/5.4) | `one-signal-notifier`, `onesignalnotifier` |
 | [symfony/orange-sms-notifier](https://packagist.org/packages/symfony/orange-sms-notifier) | [6.1](symfony/orange-sms-notifier/6.1) | `orange-sms-notifier`, `orangesmsnotifier` |
 | [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [5.1](symfony/ovh-cloud-notifier/5.1) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
+| [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [6.3](symfony/pager-duty-notifier/6.3) | `pager-duty-notifier`, `pagerdutynotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](symfony/panther/1.0) | `panther` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [5.3](symfony/phpunit-bridge/5.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |

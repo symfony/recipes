@@ -709,6 +709,9 @@
         "symfony/ovh-cloud-notifier": [
             "5.1"
         ],
+        "symfony/pager-duty-notifier": [
+            "6.3"
+        ],
         "symfony/panther": [
             "1.0"
         ],

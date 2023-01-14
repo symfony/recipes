@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/pager-duty-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "PAGERDUTY_DSN=pagerduty://TOKEN@SUBDOMAIN"
+                }
+            },
+            "files": [],
+            "ref": "6301ed7b93c9560a06ba2c58e5db5dbb9f92e332"
+        }
+    }
+}
