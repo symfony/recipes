@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "PAGERDUTY_DSN=pagerduty://TOKEN@SUBDOMAIN"
+    }
+}
