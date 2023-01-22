@@ -1,8 +1,0 @@
-  * Your API is almost ready:
-    1. Create your first API resource in <info>src/Entity</info>;
-    2. Go to <info>/api</info> to browse your API
-
-  * To enable the GraphQL support, run <comment>composer require webonyx/graphql-php</>,
-    then browse <info>/api/graphql</info>.
-
-  * <fg=blue>Read</> the documentation at <comment>https://api-platform.com/docs</>
