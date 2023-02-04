@@ -1,0 +1,7 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "translations/": "translations/"
+    },
+    "aliases": ["translator", "translations"]
+}
