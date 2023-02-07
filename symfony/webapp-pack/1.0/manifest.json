@@ -2,8 +2,5 @@
     "aliases": ["webapp"],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    },
-    "env": {
-        "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
     }
 }

@@ -4,9 +4,9 @@
     },
     "env": {
         "#1": "Choose one of the transports below",
-        "#2": "MESSENGER_TRANSPORT_DSN=doctrine://default",
-        "#3": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
-        "#4": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages"
+        "#2": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+        "#3": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages",
+        "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
     },
     "aliases": ["messenger"],
     "conflict": {
