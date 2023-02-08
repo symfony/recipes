@@ -4,8 +4,10 @@
 
   * To send messages to a transport and handle them asynchronously:
 
-    1. Uncomment the <info>MESSENGER_TRANSPORT_DSN</> env var in <comment>.env</>
+    1. Update the <info>MESSENGER_TRANSPORT_DSN</> env var in <comment>.env</> if needed
        and <info>framework.messenger.transports.async</> in <comment>config/packages/messenger.yaml</>;
-    2. Route your message classes to the async transport in <comment>config/packages/messenger.yaml</>.
+    2. (if using Doctrine) Generate a Doctrine migration <info>bin/console doctrine:migration:diff</>
+       and execute it <info>bin/console doctrine:migration:migrate</>
+    3. Route your message classes to the async transport in <comment>config/packages/messenger.yaml</>.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/current/messenger.html</>
