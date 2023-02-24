@@ -168,6 +168,8 @@
         "mailchimp-mailer": "symfony/mailchimp-mailer",
         "mailchimpmailer": "symfony/mailchimp-mailer",
         "mailer": "symfony/mailer",
+        "mailer-send-mailer": "symfony/mailer-send-mailer",
+        "mailersendmailer": "symfony/mailer-send-mailer",
         "mailgun-mailer": "symfony/mailgun-mailer",
         "mailgunmailer": "symfony/mailgun-mailer",
         "mailjet-mailer": "symfony/mailjet-mailer",
@@ -255,6 +257,8 @@
         "psr-17": "symfony/psr7-pack",
         "psr7": "symfony/psr7-pack",
         "psr17": "symfony/psr7-pack",
+        "pushover-notifier": "symfony/pushover-notifier",
+        "pushovernotifier": "symfony/pushover-notifier",
         "rate-limiter": "symfony/rate-limiter",
         "ratelimiter": "symfony/rate-limiter",
         "react-admin": "api-platform/admin-pack",
@@ -1751,6 +1755,9 @@
                 "6.2",
                 "6.3"
             ],
+            "symfony/mailer-send-mailer": [
+                "6.3"
+            ],
             "symfony/mailgun-mailer": [
                 "4.3",
                 "4.4",
@@ -2043,6 +2050,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/pushover-notifier": [
                 "6.3"
             ],
             "symfony/rate-limiter": [
