@@ -16,7 +16,7 @@
     },
     "dockerfile": [
         "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \\",
-        "\tdocker-php-ext-install -j$(nproc) pdo_pgsql; \\",
+        "\tdocker-php-ext-install -j\"$(nproc)\" pdo_pgsql; \\",
         "\tapk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5; \\",
         "\tapk del .pgsql-deps"
     ],
