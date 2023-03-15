@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/webhook": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/webhook.yaml": {
+                    "contents": [
+                        "webhook:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/webhook.xml'",
+                        "    prefix: /webhook",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0bc853a74c98e448116ba53e118a7b6b3cdf9a03"
+        }
+    }
+}

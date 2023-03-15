@@ -865,6 +865,9 @@
         "symfony/webapp-pack": [
             "1.0"
         ],
+        "symfony/webhook": [
+            "6.3"
+        ],
         "symfony/webpack-encore-bundle": [
             "1.0",
             "1.6",
