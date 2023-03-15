@@ -263,6 +263,8 @@
         "reactadmin": "api-platform/admin-pack",
         "redis-messenger": "symfony/redis-messenger",
         "redismessenger": "symfony/redis-messenger",
+        "remote-event": "symfony/remote-event",
+        "remoteevent": "symfony/remote-event",
         "req-check": "symfony/requirements-checker",
         "req-checker": "symfony/requirements-checker",
         "req-checks": "symfony/requirements-checker",
@@ -389,6 +391,7 @@
         "web-server": "symfony/web-server-bundle",
         "web-server-bundle": "symfony/web-server-bundle",
         "webapp": "symfony/webapp-pack",
+        "webhook": "symfony/webhook",
         "weblink": "symfony/web-link",
         "webpack": "symfony/webpack-encore-bundle",
         "webpack-encore": "symfony/webpack-encore-bundle",
@@ -1644,6 +1647,9 @@
                 "6.2",
                 "6.3"
             ],
+            "symfony/remote-event": [
+                "6.3"
+            ],
             "symfony/ring-central-notifier": [
                 "6.3"
             ],
@@ -1919,6 +1925,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/webhook": [
                 "6.3"
             ],
             "symfony/workflow": [
