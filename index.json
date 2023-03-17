@@ -284,6 +284,7 @@
         "router": "symfony/routing",
         "routing": "symfony/routing",
         "runtime": "symfony/runtime",
+        "scheduler": "symfony/scheduler",
         "sec-check": "sensiolabs/security-checker",
         "sec-checker": "sensiolabs/security-checker",
         "sec-checks": "sensiolabs/security-checker",
@@ -1675,6 +1676,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/scheduler": [
                 "6.3"
             ],
             "symfony/security": [
