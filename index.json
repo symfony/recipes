@@ -319,7 +319,9 @@
         "serializer": "symfony/serializer-pack",
         "server": "symfony/web-server-bundle",
         "simple-phpunit": "symfony/phpunit-bridge",
+        "simple-textin-notifier": "symfony/simple-textin-notifier",
         "simplephpunit": "symfony/phpunit-bridge",
+        "simpletextinnotifier": "symfony/simple-textin-notifier",
         "sinch-notifier": "symfony/sinch-notifier",
         "sinchnotifier": "symfony/sinch-notifier",
         "slack-notifier": "symfony/slack-notifier",
@@ -1757,6 +1759,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/simple-textin-notifier": [
                 "6.3"
             ],
             "symfony/sinch-notifier": [
