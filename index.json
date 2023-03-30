@@ -782,6 +782,9 @@
         "symfony/sendinblue-notifier": [
             "5.2"
         ],
+        "symfony/simple-textin-notifier": [
+            "6.3"
+        ],
         "symfony/sinch-notifier": [
             "5.1"
         ],

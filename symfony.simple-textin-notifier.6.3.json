@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/simple-textin-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SIMPLETEXTIN_DSN=simpletextin://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "85958d0b5782fcf383bf3c7c3090177c91389ff6"
+        }
+    }
+}
