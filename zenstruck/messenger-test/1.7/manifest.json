@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "Zenstruck\\Messenger\\Test\\ZenstruckMessengerTestBundle": ["test"]
+    },
+    "aliases": ["messenger-test"]
+}
