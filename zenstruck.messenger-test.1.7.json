@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "zenstruck/messenger-test": {
+            "manifest": {
+                "bundles": {
+                    "Zenstruck\\Messenger\\Test\\ZenstruckMessengerTestBundle": [
+                        "test"
+                    ]
+                },
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/messenger-test:",
+                    "    1. Override your transport(s) in your <info>test</info> environment with <info>test://</info>",
+                    "    2. Use the <info>InteractsWithMessenger</info> trait in your \"kernel\" tests",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/messenger-test#zenstruckmessenger-test</>"
+                ]
+            },
+            "files": [],
+            "ref": "e0d2a904cd584d15bcbb4c4a011549840bc01daf"
+        }
+    }
+}

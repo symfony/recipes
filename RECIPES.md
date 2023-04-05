@@ -143,3 +143,4 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [twig/markdown-extension](https://packagist.org/packages/twig/markdown-extension) | [1.0](twig/markdown-extension/1.0) |  |
 | [willdurand/js-translation-bundle](https://packagist.org/packages/willdurand/js-translation-bundle) | [2.0](willdurand/js-translation-bundle/2.0) | `js-translation`, `js-translator`, `jstranslation`, `jstranslator` |
 | [zenstruck/foundry](https://packagist.org/packages/zenstruck/foundry) | [1.10](zenstruck/foundry/1.10) | `foundry` |
+| [zenstruck/messenger-test](https://packagist.org/packages/zenstruck/messenger-test) | [1.7](zenstruck/messenger-test/1.7) | `messenger-test`, `messengertest` |

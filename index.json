@@ -195,6 +195,8 @@
         "messagebirdnotifier": "symfony/message-bird-notifier",
         "messagemedianotifier": "symfony/message-media-notifier",
         "messenger": "symfony/messenger",
+        "messenger-test": "zenstruck/messenger-test",
+        "messengertest": "zenstruck/messenger-test",
         "microsoft-teams-notifier": "symfony/microsoft-teams-notifier",
         "microsoftteamsnotifier": "symfony/microsoft-teams-notifier",
         "migrations": "doctrine/doctrine-migrations-bundle",
@@ -918,6 +920,9 @@
         "zenstruck/foundry": [
             "1.9",
             "1.10"
+        ],
+        "zenstruck/messenger-test": [
+            "1.7"
         ]
     },
     "recipe-conflicts": {
