@@ -124,6 +124,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [6.2](symfony/uid/6.2) | `uid` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
+| [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.7](symfony/ux-translator/2.7) | `ux-translator`, `uxtranslator` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
 | [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [6.1](symfony/web-profiler-bundle/6.1) | `web-profiler-bundle`, `webprofilerbundle` |

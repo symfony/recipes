@@ -382,8 +382,10 @@
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-live-component": "symfony/ux-live-component",
+        "ux-translator": "symfony/ux-translator",
         "uxautocomplete": "symfony/ux-autocomplete",
         "uxlivecomponent": "symfony/ux-live-component",
+        "uxtranslator": "symfony/ux-translator",
         "validation": "symfony/validator",
         "validator": "symfony/validator",
         "var-dumper": "symfony/var-dumper",
@@ -855,6 +857,9 @@
         "symfony/ux-live-component": [
             "2.0",
             "2.6"
+        ],
+        "symfony/ux-translator": [
+            "2.7"
         ],
         "symfony/validator": [
             "4.1",
