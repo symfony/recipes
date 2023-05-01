@@ -31,6 +31,8 @@
         "apiplatform": "api-platform/api-pack",
         "apiplatformadmin": "api-platform/admin-pack",
         "asset": "symfony/asset",
+        "asset-mapper": "symfony/asset-mapper",
+        "assetmapper": "symfony/asset-mapper",
         "bandwidth-notifier": "symfony/bandwidth-notifier",
         "bandwidthnotifier": "symfony/bandwidth-notifier",
         "beanstalkd-messenger": "symfony/beanstalkd-messenger",
@@ -1110,6 +1112,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/asset-mapper": [
                 "6.3"
             ],
             "symfony/bandwidth-notifier": [
