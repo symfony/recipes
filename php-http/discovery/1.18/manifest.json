@@ -1,8 +1,5 @@
 {
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    },
-    "conflict": {
-        "php-http/discovery": ">=1.18"
     }
 }
