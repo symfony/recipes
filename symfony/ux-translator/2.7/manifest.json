@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Symfony\\UX\\Translator\\TranslatorBundle": ["all"]
+        "Symfony\\UX\\Translator\\UxTranslatorBundle": ["all"]
     },
     "copy-from-recipe": {
         "assets/": "assets/",
