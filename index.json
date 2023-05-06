@@ -500,6 +500,9 @@
         "php-cs-fixer/shim": [
             "3.0"
         ],
+        "php-http/discovery": [
+            "1.18"
+        ],
         "phpunit/phpunit": [
             "4.7",
             "9.3"
@@ -956,6 +959,11 @@
         "nelmio/alice": {
             "3.3": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "nyholm/psr7": {
+            "1.0": {
+                "php-http/discovery": ">=1.18"
             }
         },
         "symfony/debug-bundle": {
