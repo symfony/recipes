@@ -127,6 +127,9 @@
         "symfony/class-loader": [
             "3.4"
         ],
+        "symfony/click-send-notifier": [
+            "6.3"
+        ],
         "symfony/clickatell-notifier": [
             "5.3",
             "5.4",
@@ -1319,6 +1322,9 @@
             "6.0",
             "6.1",
             "6.2",
+            "6.3"
+        ],
+        "symfony/smsmode-notifier": [
             "6.3"
         ],
         "symfony/spot-hit-notifier": [
