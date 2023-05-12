@@ -46,8 +46,10 @@
         "class-loader": "symfony/class-loader",
         "classloader": "symfony/class-loader",
         "cli": "symfony/console",
+        "click-send-notifier": "symfony/click-send-notifier",
         "clickatell-notifier": "symfony/clickatell-notifier",
         "clickatellnotifier": "symfony/clickatell-notifier",
+        "clicksendnotifier": "symfony/click-send-notifier",
         "clock": "symfony/clock",
         "config": "symfony/config",
         "console": "symfony/console",
@@ -342,6 +344,8 @@
         "smsc-notifier": "symfony/smsc-notifier",
         "smscnotifier": "symfony/smsc-notifier",
         "smsfactornotifier": "symfony/sms-factor-notifier",
+        "smsmode-notifier": "symfony/smsmode-notifier",
+        "smsmodenotifier": "symfony/smsmode-notifier",
         "spot-hit-notifier": "symfony/spot-hit-notifier",
         "spothitnotifier": "symfony/spot-hit-notifier",
         "stopwatch": "symfony/stopwatch",
@@ -1177,6 +1181,9 @@
             ],
             "symfony/class-loader": [
                 "3.4"
+            ],
+            "symfony/click-send-notifier": [
+                "6.3"
             ],
             "symfony/clickatell-notifier": [
                 "5.3",
@@ -2370,6 +2377,9 @@
                 "6.0",
                 "6.1",
                 "6.2",
+                "6.3"
+            ],
+            "symfony/smsmode-notifier": [
                 "6.3"
             ],
             "symfony/spot-hit-notifier": [
