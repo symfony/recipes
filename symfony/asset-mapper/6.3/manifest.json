@@ -1,6 +1,7 @@
 {
     "copy-from-recipe": {
         "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
         "importmap.php": "importmap.php"
     },
     "aliases": ["asset-mapper", "importmap"],
