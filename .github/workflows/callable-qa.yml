@@ -71,12 +71,12 @@ jobs:
                     git switch pr
                     git stash pop -q
 
-            -
-                name: Enable Automerge
-                if: "always() && steps.checkout.outcome == 'success'"
-                run: gh pr merge --auto --squash ${{ github.event.number }}
-                env:
-                    GITHUB_TOKEN: ${{ secrets.token }}
+#            -
+#                name: Enable Automerge
+#                if: "always() && steps.checkout.outcome == 'success'"
+#                run: gh pr merge --auto --squash ${{ github.event.number }}
+#                env:
+#                    GITHUB_TOKEN: ${{ secrets.token }}
 
             -
                 name: Compute diff between recipe versions
