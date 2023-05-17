@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "importmap.php": "importmap.php"
+    },
+    "aliases": ["asset-mapper", "importmap"],
+    "gitignore": [
+        "/%PUBLIC_DIR%/assets/"
+    ]
+}
