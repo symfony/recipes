@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\StimulusBundle\\StimulusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/"
+    },
+    "aliases": ["stimulus", "stimulus-bundle"]
+}
