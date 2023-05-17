@@ -6,5 +6,13 @@
     "aliases": ["asset-mapper", "importmap"],
     "gitignore": [
         "/%PUBLIC_DIR%/assets/"
+    ],
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ importmap() }}",
+            "position": "after_target",
+            "target": "{% block javascripts %}"
+        }
     ]
 }
