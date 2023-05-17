@@ -1,0 +1,30 @@
+{
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "importmap.php": "importmap.php"
+    },
+    "aliases": ["asset-mapper", "importmap"],
+    "gitignore": [
+        "/%PUBLIC_DIR%/assets/"
+    ],
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ importmap() }}",
+            "position": "after_target",
+            "target": "{% block javascripts %}",
+            "warn_if_missing": true
+        },
+        {
+            "file": "templates/base.html.twig",
+            "content": "            <link rel=\"stylesheet\" href=\"{{ asset('styles/app.css') }}\">",
+            "position": "after_target",
+            "target": "{% block stylesheets %}",
+            "warn_if_missing": true
+        }
+    ],
+    "conflict": {
+        "symfony/framework-bundle": "<6.3"
+    }
+}
