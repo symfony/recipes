@@ -14,6 +14,12 @@
             "content": "            {{ importmap() }}",
             "position": "after_target",
             "target": "{% block javascripts %}"
+        },
+        {
+            "file": "templates/base.html.twig",
+            "content": "            <link rel=\"stylesheet\" href=\"{{ asset('styles/app.css') }}\">",
+            "position": "after_target",
+            "target": "{% block stylesheets %}"
         }
     ]
 }
