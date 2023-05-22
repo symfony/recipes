@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Symfony\\StimulusBundle\\StimulusBundle": ["all"]
+        "Symfony\\UX\\StimulusBundle\\StimulusBundle": ["all"]
     },
     "copy-from-recipe": {
         "assets/": "assets/"
