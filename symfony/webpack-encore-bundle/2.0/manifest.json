@@ -16,7 +16,8 @@
         "yarn-error.log"
     ],
     "conflict": {
-        "symfony/framework-bundle": "<5.4"
+        "symfony/framework-bundle": "<5.4",
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
     },
     "add-lines": [
         {
