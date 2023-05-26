@@ -34,6 +34,13 @@
             "content": "import { startStimulusApp } from '@symfony/stimulus-bundle';\n\nconst app = startStimulusApp();",
             "position": "top",
             "requires": "symfony/asset-mapper"
+        },
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ ux_controller_link_tags() }}",
+            "position": "after_target",
+            "target": "{% block stylesheets %}",
+            "warn_if_missing": true
         }
     ]
 }
