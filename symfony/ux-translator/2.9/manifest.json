@@ -21,7 +21,7 @@
             "file": "assets/translator.js",
             "content": "import { localeFallbacks } from '@app/translations/configuration';",
             "position": "top",
-            "requires": "symfony/stimulus-bundle"
+            "requires": "symfony/asset-mapper"
         },
         {
             "file": "assets/translator.js",
@@ -33,7 +33,7 @@
             "file": "assets/translator.js",
             "content": "export * from '@app/translations';",
             "position": "bottom",
-            "requires": "symfony/stimulus-bundle"
+            "requires": "symfony/asset-mapper"
         }
     ]
 }
