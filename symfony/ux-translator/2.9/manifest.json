@@ -8,7 +8,7 @@
     "copy-from-recipe": {
         "assets/": "assets/",
         "config/": "%CONFIG_DIR%/",
-        "var/translations/": "var/translations/"
+        "var/": "var/"
     },
     "add-lines": [
         {
