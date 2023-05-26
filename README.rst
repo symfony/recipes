@@ -313,6 +313,44 @@ colors`_ are supported too:
 
       * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
 
+``add-lines`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If no other configurators can meet your needs, the ``add-lines`` configurator
+can add entire lines to files, either at the top, bottom or after a target:
+
+.. code-block:: json
+
+    "add-lines": [
+        {
+            "file": "webpack.config.js",
+            "content": "\nenables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+            "position": "after_target",
+            "target": ".splitEntryChunks()"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "import './bootstrap.js';",
+            "position": "top",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/translator.js",
+            "content": "export * from '../var/translations';",
+            "position": "bottom",
+            "requires": "symfony/webpack-encore-bundle"
+        }
+    ]
+
+Each item needs ``file``,  ``content`` and ``position``, which can be
+``top``, ``bottom`` or ``after_target``. If ``after_target`` is used, a
+``target`` must also be specified, which is a string that will be searched for
+in the file.
+
+If ``warn_if_missing`` is set to ``true``, a warning will be shown to the
+user if the ``file`` or ``target`` isn't found. If ``requires`` is set, the
+rule will only be applied if the given package is installed.
+
 Validation
 ----------
 
