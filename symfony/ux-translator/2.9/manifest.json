@@ -1,0 +1,39 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Translator\\UxTranslatorBundle": ["all"]
+    },
+    "conflict": {
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "var/cache/": "var/cache/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/translator.js",
+            "content": "import { localeFallbacks } from '../var/translations/configuration';",
+            "position": "top",
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/translator.js",
+            "content": "import { localeFallbacks } from '@app/translations/configuration';",
+            "position": "top",
+            "requires": "symfony/stimulus-bundle"
+        },
+        {
+            "file": "assets/translator.js",
+            "content": "export * from '../var/translations';",
+            "position": "bottom",
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/translator.js",
+            "content": "export * from '@app/translations';",
+            "position": "bottom",
+            "requires": "symfony/stimulus-bundle"
+        }
+    ]
+}
