@@ -1,0 +1,94 @@
+{
+    "manifests": {
+        "symfony/ux-translator": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Translator\\UxTranslatorBundle": [
+                        "all"
+                    ]
+                },
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "var/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/translator.js",
+                        "content": "import { localeFallbacks } from '../var/translations/configuration';",
+                        "position": "top",
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/translator.js",
+                        "content": "import { localeFallbacks } from '@app/translations/configuration';",
+                        "position": "top",
+                        "requires": "symfony/asset-mapper"
+                    },
+                    {
+                        "file": "assets/translator.js",
+                        "content": "export * from '../var/translations';",
+                        "position": "bottom",
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/translator.js",
+                        "content": "export * from '@app/translations';",
+                        "position": "bottom",
+                        "requires": "symfony/asset-mapper"
+                    }
+                ]
+            },
+            "files": {
+                "assets/translator.js": {
+                    "contents": [
+                        "import { trans, getLocale, setLocale, setLocaleFallbacks } from '@symfony/ux-translator';",
+                        "/*",
+                        " * This file is part of the Symfony UX Translator package.",
+                        " *",
+                        " * If folder \"../var/translations\" does not exist, or some translations are missing,",
+                        " * you must warmup your Symfony cache to refresh JavaScript translations.",
+                        " *",
+                        " * If you use TypeScript, you can rename this file to \"translator.ts\" to take advantage of types checking.",
+                        " */",
+                        "",
+                        "setLocaleFallbacks(localeFallbacks);",
+                        "",
+                        "export { trans };",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/ux_translator.yaml": {
+                    "contents": [
+                        "ux_translator:",
+                        "    # The directory where the JavaScript translations are dumped",
+                        "    dump_directory: '%kernel.project_dir%/var/translations'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/translations/configuration.js": {
+                    "contents": [
+                        "export const localeFallbacks = {};",
+                        "",
+                        "console.log('Run bin/console cache:warmup to generate the translation files.');",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/translations/index.js": {
+                    "contents": [
+                        "console.log('Run bin/console cache:warmup to generate the translation files.');",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bc396565cc4cab95692dd6df810553dc22e352e1"
+        }
+    }
+}

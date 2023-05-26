@@ -132,6 +132,7 @@
         "httpclient": "symfony/http-client",
         "httpfoundation": "symfony/http-foundation",
         "httpkernel": "symfony/http-kernel",
+        "importmap": "symfony/asset-mapper",
         "inflector": "symfony/inflector",
         "infobip-mailer": "symfony/infobip-mailer",
         "infobip-notifier": "symfony/infobip-notifier",
@@ -348,6 +349,9 @@
         "smsmodenotifier": "symfony/smsmode-notifier",
         "spot-hit-notifier": "symfony/spot-hit-notifier",
         "spothitnotifier": "symfony/spot-hit-notifier",
+        "stimulus": "symfony/stimulus-bundle",
+        "stimulus-bundle": "symfony/stimulus-bundle",
+        "stimulusbundle": "symfony/stimulus-bundle",
         "stopwatch": "symfony/stopwatch",
         "string": "symfony/string",
         "swiftmailer": "symfony/swiftmailer-bundle",
@@ -537,6 +541,9 @@
         ],
         "symfony/amazon-sns-notifier": [
             "5.4"
+        ],
+        "symfony/asset-mapper": [
+            "6.3"
         ],
         "symfony/bandwidth-notifier": [
             "6.3"
@@ -824,6 +831,9 @@
         "symfony/spot-hit-notifier": [
             "5.3"
         ],
+        "symfony/stimulus-bundle": [
+            "2.9"
+        ],
         "symfony/swiftmailer-bundle": [
             "2.5"
         ],
@@ -848,7 +858,8 @@
             "4.4",
             "5.0",
             "5.3",
-            "5.4"
+            "5.4",
+            "6.3"
         ],
         "symfony/twilio-notifier": [
             "5.0"
@@ -868,7 +879,8 @@
             "2.6"
         ],
         "symfony/ux-translator": [
-            "2.7"
+            "2.8",
+            "2.9"
         ],
         "symfony/validator": [
             "4.1",
@@ -896,7 +908,8 @@
             "1.0",
             "1.6",
             "1.9",
-            "1.10"
+            "1.10",
+            "2.0"
         ],
         "symfony/workflow": [
             "3.3"
@@ -970,6 +983,13 @@
                 "php-http/discovery": ">=1.18"
             }
         },
+        "symfony/asset-mapper": {
+            "6.3": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.3",
+                "symfony/twig-bundle": "<6.3"
+            }
+        },
         "symfony/debug-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
@@ -1016,17 +1036,31 @@
                 "symfony/framework-bundle": "<5.3"
             }
         },
+        "symfony/stimulus-bundle": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/webpack-encore-bundle": "<2.0"
+            }
+        },
         "symfony/twig-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
             },
             "5.4": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "6.3": {
+                "symfony/framework-bundle": "<5.3"
             }
         },
         "symfony/uid": {
             "6.2": {
                 "symfony/framework-bundle": "<6.2"
+            }
+        },
+        "symfony/ux-translator": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
             }
         },
         "symfony/validator": {
@@ -1044,6 +1078,10 @@
         },
         "symfony/webpack-encore-bundle": {
             "1.10": {
+                "symfony/framework-bundle": "<5.4"
+            },
+            "2.0": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<5.4"
             }
         },
