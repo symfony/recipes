@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "Symfony\\UX\\StimulusBundle\\StimulusBundle": ["all"]
+    },
+    "aliases": ["stimulus", "stimulus-bundle"]
+}
