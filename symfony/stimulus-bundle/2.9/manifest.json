@@ -40,7 +40,8 @@
             "content": "            {{ ux_controller_link_tags() }}",
             "position": "after_target",
             "target": "{% block stylesheets %}",
-            "warn_if_missing": true
+            "warn_if_missing": true,
+            "requires": "symfony/asset-mapper"
         }
     ]
 }
