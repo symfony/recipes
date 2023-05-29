@@ -832,6 +832,7 @@
             "5.3"
         ],
         "symfony/stimulus-bundle": [
+            "2.8",
             "2.9"
         ],
         "symfony/swiftmailer-bundle": [
