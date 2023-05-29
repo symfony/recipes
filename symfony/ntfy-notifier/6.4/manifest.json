@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "NTFY_DSN=ntfy://default/TOPIC"
+    }
+}
