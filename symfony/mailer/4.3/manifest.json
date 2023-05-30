@@ -3,7 +3,8 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "#1": "MAILER_DSN=null://null"
+        "#1": "Choose a transport to deliver your emails: https://symfony.com/doc/current/mailer.html#transport-setup",
+        "MAILER_DSN": "null://null"
     },
     "docker-compose": {
         "docker-compose.override.yml": {
