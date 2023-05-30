@@ -1094,11 +1094,11 @@
     },
     "versions": {
         "lts": "5.4",
-        "stable": "6.2",
-        "next": "6.3",
-        "previous": "6.1",
-        "dev": "6.3",
-        "dev-name": "6.3",
+        "stable": "6.3",
+        "next": "6.4",
+        "previous": "6.2",
+        "dev": "6.4",
+        "dev-name": "6.4",
         "splits": {
             "symfony/all-my-sms-notifier": [
                 "5.3",
