@@ -551,6 +551,9 @@
         "symfony/chatwork-notifier": [
             "6.2"
         ],
+        "symfony/click-send-notifier": [
+            "6.3"
+        ],
         "symfony/clickatell-notifier": [
             "5.3"
         ],

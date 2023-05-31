@@ -36,6 +36,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [6.3](symfony/asset-mapper/6.3) | `asset-mapper`, `assetmapper`, `importmap` |
 | [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
 | [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [6.2](symfony/chatwork-notifier/6.2) | `chatwork-notifier`, `chatworknotifier` |
+| [symfony/click-send-notifier](https://packagist.org/packages/symfony/click-send-notifier) | [6.3](symfony/click-send-notifier/6.3) | `click-send-notifier`, `clicksendnotifier` |
 | [symfony/clickatell-notifier](https://packagist.org/packages/symfony/clickatell-notifier) | [5.3](symfony/clickatell-notifier/5.3) | `clickatell-notifier`, `clickatellnotifier` |
 | [symfony/console](https://packagist.org/packages/symfony/console) | [5.3](symfony/console/5.3) | `cli`, `console` |
 | [symfony/crowdin-translation-provider](https://packagist.org/packages/symfony/crowdin-translation-provider) | [5.3](symfony/crowdin-translation-provider/5.3) | `crowdin-translation-provider`, `crowdintranslationprovider` |

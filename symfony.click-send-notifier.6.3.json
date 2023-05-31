@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/click-send-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "CLICKSEND_DSN=clicksend://API_USERNAME:API_KEY@default?from=FROM&source=SOURCE&list_id=LIST_ID&from_email=FROM_EMAIL"
+                }
+            },
+            "files": [],
+            "ref": "d30a4206c565fb863613bf89ab0a73c966e5a237"
+        }
+    }
+}
