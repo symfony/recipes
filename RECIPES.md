@@ -113,6 +113,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/sms77-notifier](https://packagist.org/packages/symfony/sms77-notifier) | [5.4](symfony/sms77-notifier/5.4) | `sms77-notifier`, `sms77notifier` |
 | [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [5.2](symfony/smsapi-notifier/5.2) | `smsapi-notifier`, `smsapinotifier` |
 | [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [5.4](symfony/smsc-notifier/5.4) | `smsc-notifier`, `smscnotifier` |
+| [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
 | [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.9](symfony/stimulus-bundle/2.9) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
