@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SMSMODE_DSN=smsmode://API_KEY@default?from=FROM"
+    }
+}
