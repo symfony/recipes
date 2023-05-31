@@ -765,6 +765,9 @@
         "symfony/psr7-pack": [
             "1.0"
         ],
+        "symfony/pushover-notifier": [
+            "6.3"
+        ],
         "symfony/requirements-checker": [
             "1.0",
             "2.0"

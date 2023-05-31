@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/pushover-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "PUSHOVER_DSN=pushover://USER_KEY:APP_TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "81f519e1d469ffa5bb9fda21292fea0c5b1dc8b7"
+        }
+    }
+}
