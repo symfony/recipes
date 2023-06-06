@@ -47,7 +47,7 @@
         }
     },
     "conflict": {
-        "doctrine/orm": "<2.14",
+        "doctrine/orm": "<2.16",
         "symfony/dependency-injection": "<6.2",
         "symfony/framework-bundle": "<5.3"
     }
