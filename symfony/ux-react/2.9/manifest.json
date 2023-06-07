@@ -2,8 +2,9 @@
     "bundles": {
         "Symfony\\UX\\React\\ReactBundle": ["all"]
     },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+    "conflict": {
+        "symfony/webpack-encore-bundle": "<2.0",
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
     },
     "add-lines": [
         {
