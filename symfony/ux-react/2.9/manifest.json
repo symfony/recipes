@@ -1,0 +1,36 @@
+{
+    "bundles": {
+        "Symfony\\UX\\React\\ReactBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "webpack.config.js",
+            "content": "\n    .enableReactPreset()",
+            "position": "after_target",
+            "target": ".splitEntryChunks()"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "import { registerReactControllerComponents } from '@symfony/ux-react';",
+            "position": "top",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/app.js",
+            "content": "registerReactControllerComponents(require.context('./react/controllers', true, /\\.(j|t)sx?$/));",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "registerReactControllerComponents();",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "requires": "symfony/asset-mapper"
+        }
+    ]
+}
