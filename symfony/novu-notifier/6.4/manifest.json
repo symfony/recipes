@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "NOVU_DSN=novu://API_KEY@default"
+    }
+}
