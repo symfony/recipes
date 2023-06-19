@@ -12,5 +12,13 @@
         "#RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz; \\",
         "#\ttar -zxf geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/bin; \\",
         "#\trm geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz"
+    ],
+    "add-lines": [
+        {
+            "file": "phpunit.xml.dist",
+            "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "position": "after_target",
+            "target": "<extensions>"
+        }
     ]
 }

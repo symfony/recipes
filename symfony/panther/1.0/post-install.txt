@@ -7,6 +7,3 @@
     <fg=green>vendor/bin/bdi detect drivers</>
 
     This step is not necessary when using Docker.
-
-  * To use Panther with PHPUnit,
-    uncomment the snippet registering the Panther extension in <fg=green>phpunit.xml.dist</>
