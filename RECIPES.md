@@ -88,6 +88,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/nexmo-notifier](https://packagist.org/packages/symfony/nexmo-notifier) | [5.0](symfony/nexmo-notifier/5.0) | `nexmo-notifier`, `nexmonotifier` |
 | [symfony/notifier](https://packagist.org/packages/symfony/notifier) | [5.0](symfony/notifier/5.0) | `notifier` |
 | [symfony/novu-notifier](https://packagist.org/packages/symfony/novu-notifier) | [6.4](symfony/novu-notifier/6.4) | `novu-notifier`, `novunotifier` |
+| [symfony/ntfy-notifier](https://packagist.org/packages/symfony/ntfy-notifier) | [6.4](symfony/ntfy-notifier/6.4) | `ntfy-notifier`, `ntfynotifier` |
 | [symfony/octopush-notifier](https://packagist.org/packages/symfony/octopush-notifier) | [5.3](symfony/octopush-notifier/5.3) | `octopush-notifier`, `octopushnotifier` |
 | [symfony/one-signal-notifier](https://packagist.org/packages/symfony/one-signal-notifier) | [5.4](symfony/one-signal-notifier/5.4) | `one-signal-notifier`, `onesignalnotifier` |
 | [symfony/orange-sms-notifier](https://packagist.org/packages/symfony/orange-sms-notifier) | [6.1](symfony/orange-sms-notifier/6.1) | `orange-sms-notifier`, `orangesmsnotifier` |

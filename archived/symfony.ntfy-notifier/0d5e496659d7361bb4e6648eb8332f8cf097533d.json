@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/ntfy-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "NTFY_DSN=ntfy://default/TOPIC"
+                }
+            },
+            "files": [],
+            "ref": "0d5e496659d7361bb4e6648eb8332f8cf097533d"
+        }
+    }
+}
