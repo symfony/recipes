@@ -735,6 +735,9 @@
         "symfony/notifier": [
             "5.0"
         ],
+        "symfony/novu-notifier": [
+            "6.4"
+        ],
         "symfony/octopush-notifier": [
             "5.3"
         ],

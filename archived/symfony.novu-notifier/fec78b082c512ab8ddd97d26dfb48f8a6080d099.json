@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/novu-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "NOVU_DSN=novu://API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "fec78b082c512ab8ddd97d26dfb48f8a6080d099"
+        }
+    }
+}
