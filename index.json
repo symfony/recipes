@@ -216,6 +216,10 @@
         "nexmo-notifier": "symfony/nexmo-notifier",
         "nexmonotifier": "symfony/nexmo-notifier",
         "notifier": "symfony/notifier",
+        "novu-notifier": "symfony/novu-notifier",
+        "novunotifier": "symfony/novu-notifier",
+        "ntfy-notifier": "symfony/ntfy-notifier",
+        "ntfynotifier": "symfony/ntfy-notifier",
         "oauth-server": "league/oauth2-server-bundle",
         "oauth2-server": "league/oauth2-server-bundle",
         "oauth2server": "league/oauth2-server-bundle",
@@ -2160,6 +2164,12 @@
                 "6.3",
                 "6.4",
                 "7.0"
+            ],
+            "symfony/novu-notifier": [
+                "6.4"
+            ],
+            "symfony/ntfy-notifier": [
+                "6.4"
             ],
             "symfony/octopush-notifier": [
                 "5.3",
