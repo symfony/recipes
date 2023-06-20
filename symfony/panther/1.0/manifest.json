@@ -18,7 +18,8 @@
             "file": "phpunit.xml.dist",
             "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
             "position": "after_target",
-            "target": "<extensions>"
+            "target": "<extensions>",
+            "warn_if_missing": true
         }
     ]
 }
