@@ -1262,6 +1262,9 @@
             "6.4",
             "7.0"
         ],
+        "symfony/redlink-notifier": [
+            "6.4"
+        ],
         "symfony/remote-event": [
             "6.3",
             "6.4",
