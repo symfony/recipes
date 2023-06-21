@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "symfony/mailersend-mailer": {
+        "symfony/mailer-send-mailer": {
             "manifest": {
                 "env": {
                     "#1": "MAILER_DSN=mailersend+api://KEY@BASE_URL",

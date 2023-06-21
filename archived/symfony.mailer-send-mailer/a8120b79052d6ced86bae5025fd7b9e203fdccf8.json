@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/mailer-send-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=mailersend+api://KEY@BASE_URL",
+                    "#2": "MAILER_DSN=mailersend+smtp://USERNAME:PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "a8120b79052d6ced86bae5025fd7b9e203fdccf8"
+        }
+    }
+}
