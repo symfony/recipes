@@ -276,6 +276,8 @@
         "reactadmin": "api-platform/admin-pack",
         "redis-messenger": "symfony/redis-messenger",
         "redismessenger": "symfony/redis-messenger",
+        "redlink-notifier": "symfony/redlink-notifier",
+        "redlinknotifier": "symfony/redlink-notifier",
         "remote-event": "symfony/remote-event",
         "remoteevent": "symfony/remote-event",
         "req-check": "symfony/requirements-checker",
@@ -2419,6 +2421,9 @@
                 "6.3",
                 "6.4",
                 "7.0"
+            ],
+            "symfony/redlink-notifier": [
+                "6.4"
             ],
             "symfony/remote-event": [
                 "6.3",
