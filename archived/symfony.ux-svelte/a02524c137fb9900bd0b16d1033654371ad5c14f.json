@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "symfony/ux-svelte": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Svelte\\SvelteBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "a02524c137fb9900bd0b16d1033654371ad5c14f"
+        }
+    }
+}

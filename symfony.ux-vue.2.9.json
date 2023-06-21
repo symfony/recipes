@@ -1,0 +1,66 @@
+{
+    "manifests": {
+        "symfony/ux-vue": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Vue\\VueBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/"
+                },
+                "conflict": {
+                    "symfony/webpack-encore-bundle": "<2.0",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "add-lines": [
+                    {
+                        "file": "webpack.config.js",
+                        "content": "\n    .enableVueLoader()",
+                        "position": "after_target",
+                        "target": ".splitEntryChunks()"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "import { registerVueControllerComponents } from '@symfony/ux-vue';",
+                        "position": "top",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "registerVueControllerComponents(require.context('./vue/controllers', true, /\\.vue$/));",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "registerVueControllerComponents();",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "requires": "symfony/asset-mapper"
+                    }
+                ]
+            },
+            "files": {
+                "assets/vue/controllers/Hello.vue": {
+                    "contents": [
+                        "<template>",
+                        "    <div>Hello {{ name }}!</div>",
+                        "</template>",
+                        "",
+                        "<script setup>",
+                        "    defineProps({",
+                        "        name: String",
+                        "    });",
+                        "</script>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7a6b5e211acc7b10b7190e704b40f6d2bca01adf"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "manifests": {
+        "symfony/ux-svelte": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Svelte\\SvelteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/"
+                },
+                "conflict": {
+                    "symfony/webpack-encore-bundle": "<2.0",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "add-lines": [
+                    {
+                        "file": "webpack.config.js",
+                        "content": "\n    .enableSvelte()",
+                        "position": "after_target",
+                        "target": ".splitEntryChunks()"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "import { registerSvelteControllerComponents } from '@symfony/ux-svelte';",
+                        "position": "top",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "registerSvelteControllerComponents(require.context('./svelte/controllers', true, /\\.svelte$/));",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "registerSvelteControllerComponents();",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "requires": "symfony/asset-mapper"
+                    }
+                ]
+            },
+            "files": {
+                "assets/svelte/controllers/Hello.svelte": {
+                    "contents": [
+                        "<script>",
+                        "    export let name = \"Svelte\";",
+                        "</script>",
+                        "",
+                        "<div>Hello {name}</div>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4a6ee82d817d4e9be8d4a861476a112011d701e1"
+        }
+    }
+}

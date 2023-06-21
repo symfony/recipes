@@ -132,7 +132,10 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [6.2](symfony/uid/6.2) | `uid` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
+| [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
+| [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
 | [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.9](symfony/ux-translator/2.9) | `ux-translator`, `uxtranslator` |
+| [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [2.9](symfony/ux-vue/2.9) | `ux-vue`, `uxvue` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [5.3](symfony/validator/5.3) | `validation`, `validator` |
 | [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [6.1](symfony/web-profiler-bundle/6.1) | `web-profiler-bundle`, `webprofilerbundle` |

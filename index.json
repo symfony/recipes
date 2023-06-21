@@ -396,10 +396,16 @@
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-live-component": "symfony/ux-live-component",
+        "ux-react": "symfony/ux-react",
+        "ux-svelte": "symfony/ux-svelte",
         "ux-translator": "symfony/ux-translator",
+        "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
         "uxlivecomponent": "symfony/ux-live-component",
+        "uxreact": "symfony/ux-react",
+        "uxsvelte": "symfony/ux-svelte",
         "uxtranslator": "symfony/ux-translator",
+        "uxvue": "symfony/ux-vue",
         "validation": "symfony/validator",
         "validator": "symfony/validator",
         "var-dumper": "symfony/var-dumper",
@@ -899,7 +905,19 @@
             "2.0",
             "2.6"
         ],
+        "symfony/ux-react": [
+            "2.8",
+            "2.9"
+        ],
+        "symfony/ux-svelte": [
+            "2.8",
+            "2.9"
+        ],
         "symfony/ux-translator": [
+            "2.8",
+            "2.9"
+        ],
+        "symfony/ux-vue": [
             "2.8",
             "2.9"
         ],
@@ -1084,9 +1102,27 @@
                 "symfony/framework-bundle": "<6.2"
             }
         },
+        "symfony/ux-react": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/webpack-encore-bundle": "<2.0"
+            }
+        },
+        "symfony/ux-svelte": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/webpack-encore-bundle": "<2.0"
+            }
+        },
         "symfony/ux-translator": {
             "2.9": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            }
+        },
+        "symfony/ux-vue": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/webpack-encore-bundle": "<2.0"
             }
         },
         "symfony/validator": {
