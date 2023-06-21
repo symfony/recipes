@@ -95,7 +95,7 @@ Symfony is smart enough to reverse those tasks when uninstalling and
 unconfiguring the dependencies.
 
 There are several types of tasks, which are called **configurators**:
-``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``,
+``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``, ``container``
 ``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
 ``bundles`` Configurator
