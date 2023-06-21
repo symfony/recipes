@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            plivo: '%env(PLIVO_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "PLIVO_DSN=plivo://AUTH_ID:AUTH_TOKEN@default?from=FROM"
     }

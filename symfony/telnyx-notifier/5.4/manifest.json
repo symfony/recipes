@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            telnyx: '%env(TELNYX_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "TELNYX_DSN=telnyx://API_KEY@default?from=FROM&messaging_profile_id=MESSAGING_PROFILE_ID"
     }

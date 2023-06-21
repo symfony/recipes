@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            pushover: '%env(PUSHOVER_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "PUSHOVER_DSN=pushover://USER_KEY:APP_TOKEN@default"
     }

@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            smsc: '%env(SMSC_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "SMSC_DSN=smsc://LOGIN:PASSWORD@default?from=FROM"
     }

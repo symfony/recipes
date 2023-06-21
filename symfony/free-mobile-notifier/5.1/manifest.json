@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            freemobile: '%env(FREE_MOBILE_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "FREE_MOBILE_DSN=freemobile://LOGIN:API_KEY@default?phone=PHONE"
     }

@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            clickatell: '%env(CLICKATELL_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "CLICKATELL_DSN=clickatell://ACCESS_TOKEN@default?from=FROM"
     }

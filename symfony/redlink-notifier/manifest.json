@@ -1,5 +1,0 @@
-{
-    "env": {
-        "#1": "REDLINK_DSN=redlink://API_TOKEN:APP_TOKEN@default?from=FROM&version=VERSION"
-    }
-}

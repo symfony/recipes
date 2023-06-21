@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            kaz-info-teh: '%env(KAZ_INFO_TEH_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "KAZ_INFO_TEH_DSN=kaz-info-teh://USERNAME:PASSWORD@default?sender=FROM"
     }

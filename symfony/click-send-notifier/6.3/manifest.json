@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            clicksend: '%env(CLICKSEND_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "CLICKSEND_DSN=clicksend://API_USERNAME:API_KEY@default?from=FROM&source=SOURCE&list_id=LIST_ID&from_email=FROM_EMAIL"
     }
