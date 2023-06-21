@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            nexmo: '%env(NEXMO_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "NEXMO_DSN=nexmo://KEY:SECRET@default?from=FROM"
     }

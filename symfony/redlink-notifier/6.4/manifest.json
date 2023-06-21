@@ -3,11 +3,12 @@
         {
             "file": "config/packages/notifier.yaml",
             "position": "after_target",
+            "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            crowdin: '%env(CROWDIN_DSN)%'"
+            "content": "            redlink: '%env(REDLINK_DSN)%'"
         }
     ],
     "env": {
-        "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+        "#1": "REDLINK_DSN=redlink://API_TOKEN:APP_TOKEN@default?from=FROM&version=VERSION"
     }
 }

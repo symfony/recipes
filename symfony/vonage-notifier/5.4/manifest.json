@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            vonage: '%env(VONAGE_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "VONAGE_DSN=vonage://KEY:SECRET@default?from=FROM"
     }

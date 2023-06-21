@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            googlechat: '%env(GOOGLE_CHAT_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "See https://developers.google.com/hangouts/chat/how-tos/webhooks",
         "#2": "GOOGLE_CHAT_DSN=googlechat://ACCESS_KEY:ACCESS_TOKEN@default/SPACE?thread_key=THREAD_KEY"

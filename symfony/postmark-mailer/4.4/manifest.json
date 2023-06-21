@@ -1,4 +1,12 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "target": "        texter_transports:",
+            "content": "            postmark: '%env(MAILER_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "MAILER_DSN=postmark://ID@default"
     }

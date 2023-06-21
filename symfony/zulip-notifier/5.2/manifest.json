@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            zulip: '%env(ZULIP_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "ZULIP_DSN=zulip://EMAIL:TOKEN@HOST?channel=CHANNEL"
     }

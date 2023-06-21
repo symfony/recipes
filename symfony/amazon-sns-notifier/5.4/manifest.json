@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            sns: '%env(AMAZON_SNS_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "AMAZON_SNS_DSN=sns://ACCESS_KEY:SECRET_KEY@default?region=REGION"
     }

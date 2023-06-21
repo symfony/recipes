@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            gatewayapi: '%env(GATEWAYAPI_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "GATEWAYAPI_DSN=gatewayapi://TOKEN@default?from=FROM"
     }

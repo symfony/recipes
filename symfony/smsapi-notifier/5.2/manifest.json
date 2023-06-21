@@ -1,4 +1,13 @@
 {
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            smsapi: '%env(SMSAPI_DSN)%'"
+        }
+    ],
     "env": {
         "#1": "See https://www.smsapi.pl/docs/#autoryzacja",
         "#2": "SMSAPI_DSN=smsapi://TOKEN@default?from=CHANNEL_ID"
