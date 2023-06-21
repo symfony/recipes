@@ -2,12 +2,21 @@
     "manifests": {
         "symfony/slack-notifier": {
             "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            slack: '%env(SLACK_DSN)%'"
+                    }
+                ],
                 "env": {
                     "#1": "SLACK_DSN=slack://TOKEN@default?channel=CHANNEL"
                 }
             },
             "files": [],
-            "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+            "ref": "8fb9603326990013efbe6d71c2dd78ada316808a"
         }
     }
 }

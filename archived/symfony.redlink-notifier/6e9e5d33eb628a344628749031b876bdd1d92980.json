@@ -1,21 +1,22 @@
 {
     "manifests": {
-        "symfony/loco-translation-provider": {
+        "symfony/redlink-notifier": {
             "manifest": {
                 "add-lines": [
                     {
                         "file": "config/packages/notifier.yaml",
                         "position": "after_target",
+                        "warn_if_missing": true,
                         "target": "        texter_transports:",
-                        "content": "            loco: '%env(LOCO_DSN)%'"
+                        "content": "            redlink: '%env(REDLINK_DSN)%'"
                     }
                 ],
                 "env": {
-                    "#1": "LOCO_DSN=loco://API_KEY@default"
+                    "#1": "REDLINK_DSN=redlink://API_TOKEN:APP_TOKEN@default?from=FROM&version=VERSION"
                 }
             },
             "files": [],
-            "ref": "eb6413fa65d3aae92d79b86ad67c2830e4441893"
+            "ref": "6e9e5d33eb628a344628749031b876bdd1d92980"
         }
     }
 }

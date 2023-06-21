@@ -790,6 +790,9 @@
         "symfony/pushover-notifier": [
             "6.3"
         ],
+        "symfony/redlink-notifier": [
+            "6.4"
+        ],
         "symfony/requirements-checker": [
             "1.0",
             "2.0"
