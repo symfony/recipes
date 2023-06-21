@@ -71,6 +71,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/mail-pace-mailer](https://packagist.org/packages/symfony/mail-pace-mailer) | [6.2](symfony/mail-pace-mailer/6.2) | `mail-pace-mailer`, `mailpacemailer` |
 | [symfony/mailchimp-mailer](https://packagist.org/packages/symfony/mailchimp-mailer) | [4.4](symfony/mailchimp-mailer/4.4) | `mailchimp-mailer`, `mailchimpmailer` |
 | [symfony/mailer](https://packagist.org/packages/symfony/mailer) | [4.3](symfony/mailer/4.3) | `mail`, `mailer` |
+| [symfony/mailersend-mailer](https://packagist.org/packages/symfony/mailersend-mailer) | [6.3](symfony/mailersend-mailer/6.3) | `mailersend-mailer`, `mailersendmailer` |
 | [symfony/mailgun-mailer](https://packagist.org/packages/symfony/mailgun-mailer) | [4.4](symfony/mailgun-mailer/4.4) | `mailgun-mailer`, `mailgunmailer` |
 | [symfony/mailjet-mailer](https://packagist.org/packages/symfony/mailjet-mailer) | [5.2](symfony/mailjet-mailer/5.2) | `mailjet-mailer`, `mailjetmailer` |
 | [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [5.4](symfony/mailjet-notifier/5.4) | `mailjet-notifier`, `mailjetnotifier` |

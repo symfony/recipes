@@ -174,7 +174,8 @@
         "mailchimpmailer": "symfony/mailchimp-mailer",
         "mailer": "symfony/mailer",
         "mailer-send-mailer": "symfony/mailer-send-mailer",
-        "mailersendmailer": "symfony/mailer-send-mailer",
+        "mailersend-mailer": "symfony/mailersend-mailer",
+        "mailersendmailer": "symfony/mailersend-mailer",
         "mailgun-mailer": "symfony/mailgun-mailer",
         "mailgunmailer": "symfony/mailgun-mailer",
         "mailjet-mailer": "symfony/mailjet-mailer",
@@ -684,6 +685,9 @@
         ],
         "symfony/mailer": [
             "4.3"
+        ],
+        "symfony/mailersend-mailer": [
+            "6.3"
         ],
         "symfony/mailgun-mailer": [
             "4.3",
