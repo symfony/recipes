@@ -24,7 +24,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [nyholm/psr7](https://packagist.org/packages/nyholm/psr7) | [1.0](nyholm/psr7/1.0) |  |
 | [php-cs-fixer/shim](https://packagist.org/packages/php-cs-fixer/shim) | [3.0](php-cs-fixer/shim/3.0) | `cs-fixer-shim`, `csfixershim`, `php-cs-fixer-shim`, `phpcsfixershim` |
 | [php-http/discovery](https://packagist.org/packages/php-http/discovery) | [1.18](php-http/discovery/1.18) |  |
-| [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | [9.3](phpunit/phpunit/9.3) |  |
+| [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | [9.6](phpunit/phpunit/9.6) |  |
 | [scheb/2fa-bundle](https://packagist.org/packages/scheb/2fa-bundle) | [6.0](scheb/2fa-bundle/6.0) | `2fa` |
 | [sensio/framework-extra-bundle](https://packagist.org/packages/sensio/framework-extra-bundle) | [5.2](sensio/framework-extra-bundle/5.2) | `annot`, `annotation`, `annotations`, `annots` |
 | [sensiolabs/ansi-to-html](https://packagist.org/packages/sensiolabs/ansi-to-html) | [1.2](sensiolabs/ansi-to-html/1.2) |  |
@@ -96,7 +96,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [5.1](symfony/ovh-cloud-notifier/5.1) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
 | [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [6.3](symfony/pager-duty-notifier/6.3) | `pager-duty-notifier`, `pagerdutynotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](symfony/panther/1.0) | `panther` |
-| [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [5.3](symfony/phpunit-bridge/5.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
+| [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [6.3](symfony/phpunit-bridge/6.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |

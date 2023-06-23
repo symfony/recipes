@@ -1,15 +1,24 @@
 {
     "manifests": {
-        "phpunit/phpunit": {
+        "symfony/phpunit-bridge": {
             "manifest": {
                 "copy-from-recipe": {
                     ".env.test": ".env.test",
+                    "bin/": "%BIN_DIR%/",
                     "phpunit.xml.dist": "phpunit.xml.dist",
                     "tests/": "tests/"
                 },
                 "gitignore": [
-                    "/phpunit.xml",
-                    ".phpunit.result.cache"
+                    ".phpunit.result.cache",
+                    "/phpunit.xml"
+                ],
+                "conflict": {
+                    "phpunit/phpunit": "<9.6"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Write</> test cases in the <comment>tests/</> folder",
+                    "  * Use MakerBundle's <comment>make:test</> command as a shortcut!",
+                    "  * <fg=blue>Run</> the tests with <comment>php bin/phpunit</>"
                 ]
             },
             "files": {
@@ -24,6 +33,31 @@
                         ""
                     ],
                     "executable": false
+                },
+                "bin/phpunit": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "if (!ini_get('date.timezone')) {",
+                        "    ini_set('date.timezone', 'UTC');",
+                        "}",
+                        "",
+                        "if (is_file(dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit')) {",
+                        "    define('PHPUNIT_COMPOSER_INSTALL', dirname(__DIR__).'/vendor/autoload.php');",
+                        "    require PHPUNIT_COMPOSER_INSTALL;",
+                        "    PHPUnit\\TextUI\\Command::main();",
+                        "} else {",
+                        "    if (!is_file(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php')) {",
+                        "        echo \"Unable to find the `simple-phpunit.php` script in `vendor/symfony/phpunit-bridge/bin/`.\\n\";",
+                        "        exit(1);",
+                        "    }",
+                        "",
+                        "    require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';",
+                        "}",
+                        ""
+                    ],
+                    "executable": true
                 },
                 "phpunit.xml.dist": {
                     "contents": [
@@ -62,10 +96,8 @@
                         "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
                         "    </listeners>",
                         "",
-                        "    <!-- Uncomment when adding extensions",
                         "    <extensions>",
                         "    </extensions>",
-                        "    -->",
                         "</phpunit>",
                         ""
                     ],
@@ -84,12 +116,16 @@
                         "} elseif (method_exists(Dotenv::class, 'bootEnv')) {",
                         "    (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');",
                         "}",
+                        "",
+                        "if ($_SERVER['APP_DEBUG']) {",
+                        "    umask(0000);",
+                        "}",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "fc344d3f99d9a518245ef3c88176d0c3467ae1a6"
+            "ref": "01dfaa98c58f7a7b5a9b30e6edb7074af7ed9819"
         }
     }
 }

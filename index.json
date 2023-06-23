@@ -526,7 +526,8 @@
         ],
         "phpunit/phpunit": [
             "4.7",
-            "9.3"
+            "9.3",
+            "9.6"
         ],
         "scheb/2fa-bundle": [
             "5.0",
@@ -775,7 +776,8 @@
             "4.1",
             "4.3",
             "5.1",
-            "5.3"
+            "5.3",
+            "6.3"
         ],
         "symfony/plivo-notifier": [
             "6.3"
@@ -1064,6 +1066,11 @@
         "symfony/monolog-bundle": {
             "3.7": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/phpunit-bridge": {
+            "6.3": {
+                "phpunit/phpunit": "<9.6"
             }
         },
         "symfony/routing": {
