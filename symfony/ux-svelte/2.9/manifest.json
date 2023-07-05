@@ -24,7 +24,7 @@
         },
         {
             "file": "assets/app.js",
-            "content": "registerSvelteControllerComponents(require.context('./svelte/controllers', true, /\\.svelte$/));",
+            "content": "registerSvelteControllerComponents(require.context('./svelte/controllers', true, /\.svelte$/));",
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/webpack-encore-bundle"
