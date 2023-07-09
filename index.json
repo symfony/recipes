@@ -566,6 +566,9 @@
         "symfony/bandwidth-notifier": [
             "6.3"
         ],
+        "symfony/brevo-notifier": [
+            "6.4"
+        ],
         "symfony/chatwork-notifier": [
             "6.2"
         ],

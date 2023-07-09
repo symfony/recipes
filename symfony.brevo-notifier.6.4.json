@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/brevo-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "BREVO_DSN=brevo://API_KEY@default?sender=SENDER"
+                }
+            },
+            "files": [],
+            "ref": "3ae8f4671b4c42babcf3c1ce306a85c6398474a5"
+        }
+    }
+}
