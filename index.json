@@ -38,6 +38,10 @@
         "beanstalkd-messenger": "symfony/beanstalkd-messenger",
         "beanstalkdmessenger": "symfony/beanstalkd-messenger",
         "blackfire": "blackfireio/blackfire-symfony-meta",
+        "brevo-mailer": "symfony/brevo-mailer",
+        "brevo-notifier": "symfony/brevo-notifier",
+        "brevomailer": "symfony/brevo-mailer",
+        "brevonotifier": "symfony/brevo-notifier",
         "browser-kit": "symfony/browser-kit",
         "browserkit": "symfony/browser-kit",
         "cache": "symfony/cache",
@@ -1274,6 +1278,12 @@
                 "6.4",
                 "7.0"
             ],
+            "symfony/brevo-mailer": [
+                "6.4"
+            ],
+            "symfony/brevo-notifier": [
+                "6.4"
+            ],
             "symfony/browser-kit": [
                 "3.4",
                 "4.0",
@@ -2223,10 +2233,12 @@
                 "7.0"
             ],
             "symfony/novu-notifier": [
-                "6.4"
+                "6.4",
+                "7.0"
             ],
             "symfony/ntfy-notifier": [
-                "6.4"
+                "6.4",
+                "7.0"
             ],
             "symfony/octopush-notifier": [
                 "5.3",
@@ -2244,8 +2256,7 @@
                 "6.1",
                 "6.2",
                 "6.3",
-                "6.4",
-                "7.0"
+                "6.4"
             ],
             "symfony/one-signal-notifier": [
                 "5.4",
@@ -2433,7 +2444,8 @@
                 "7.0"
             ],
             "symfony/redlink-notifier": [
-                "6.4"
+                "6.4",
+                "7.0"
             ],
             "symfony/remote-event": [
                 "6.3",
