@@ -35,6 +35,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [5.4](symfony/amazon-sns-notifier/5.4) | `amazon-sns-notifier`, `amazonsnsnotifier` |
 | [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [6.3](symfony/asset-mapper/6.3) | `asset-mapper`, `assetmapper`, `importmap` |
 | [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
+| [symfony/brevo-mailer](https://packagist.org/packages/symfony/brevo-mailer) | [6.4](symfony/brevo-mailer/6.4) | `brevo-mailer`, `brevomailer` |
 | [symfony/brevo-notifier](https://packagist.org/packages/symfony/brevo-notifier) | [6.4](symfony/brevo-notifier/6.4) | `brevo-notifier`, `brevonotifier` |
 | [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [6.2](symfony/chatwork-notifier/6.2) | `chatwork-notifier`, `chatworknotifier` |
 | [symfony/click-send-notifier](https://packagist.org/packages/symfony/click-send-notifier) | [6.3](symfony/click-send-notifier/6.3) | `click-send-notifier`, `clicksendnotifier` |

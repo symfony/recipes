@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/brevo-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=brevo+api://KEY@default",
+                    "#2": "MAILER_DSN=brevo+smtp://USERNAME:PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "7c1038ceb733175f610a913a885a7c8b552b703a"
+        }
+    }
+}
