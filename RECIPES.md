@@ -52,7 +52,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/firebase-notifier](https://packagist.org/packages/symfony/firebase-notifier) | [5.1](symfony/firebase-notifier/5.1) | `firebase-notifier`, `firebasenotifier` |
 | [symfony/flex](https://packagist.org/packages/symfony/flex) | [1.0](symfony/flex/1.0) | `flex` |
 | [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
-| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [6.2](symfony/framework-bundle/6.2) | `framework-bundle`, `frameworkbundle` |
+| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.0](symfony/framework-bundle/7.0) | `framework-bundle`, `frameworkbundle` |
 | [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [5.1](symfony/free-mobile-notifier/5.1) | `free-mobile-notifier`, `freemobilenotifier` |
 | [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
