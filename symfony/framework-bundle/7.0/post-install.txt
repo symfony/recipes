@@ -1,0 +1,6 @@
+  * <fg=blue>Run</> your application:
+    1. Go to the project directory
+    2. Create your code repository with the <comment>git init</comment> command
+    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
