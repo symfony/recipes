@@ -2428,7 +2428,8 @@
                 "6.4"
             ],
             "symfony/psr-http-message-bridge": [
-                "6.4"
+                "6.4",
+                "7.0"
             ],
             "symfony/pushover-notifier": [
                 "6.3",
