@@ -270,8 +270,10 @@
         "proxymanagerbridge": "symfony/proxy-manager-bridge",
         "psr-7": "symfony/psr7-pack",
         "psr-17": "symfony/psr7-pack",
+        "psr-http-message-bridge": "symfony/psr-http-message-bridge",
         "psr7": "symfony/psr7-pack",
         "psr17": "symfony/psr7-pack",
+        "psrhttpmessagebridge": "symfony/psr-http-message-bridge",
         "pushover-notifier": "symfony/pushover-notifier",
         "pushovernotifier": "symfony/pushover-notifier",
         "rate-limiter": "symfony/rate-limiter",
@@ -2423,6 +2425,9 @@
                 "6.1",
                 "6.2",
                 "6.3",
+                "6.4"
+            ],
+            "symfony/psr-http-message-bridge": [
                 "6.4"
             ],
             "symfony/pushover-notifier": [
