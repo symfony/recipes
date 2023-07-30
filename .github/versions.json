@@ -1330,6 +1330,9 @@
             "6.4",
             "7.0"
         ],
+        "symfony/scaleway-mailer": [
+            "6.4"
+        ],
         "symfony/scheduler": [
             "6.3",
             "6.4",
