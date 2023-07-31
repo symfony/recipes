@@ -832,6 +832,9 @@
             "6.1",
             "6.2"
         ],
+        "symfony/scaleway-mailer": [
+            "6.4"
+        ],
         "symfony/security-bundle": [
             "3.3",
             "4.4",

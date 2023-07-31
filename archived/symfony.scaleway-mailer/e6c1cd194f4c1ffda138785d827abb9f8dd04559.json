@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/scaleway-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=scaleway+api://PROJECT_ID:API_KEY@default",
+                    "#2": "MAILER_DSN=scaleway+smtp://PROJECT_ID:API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "e6c1cd194f4c1ffda138785d827abb9f8dd04559"
+        }
+    }
+}
