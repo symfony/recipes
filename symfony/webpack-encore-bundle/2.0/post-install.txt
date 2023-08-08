@@ -1,3 +1,5 @@
-  * Install Yarn and run <fg=green>yarn install</>
+  * Install NPM and run <fg=green>npm install</>
 
-  * Start the development server: <fg=green>yarn encore dev-server</>
+  * Compile your assets: <fg=green>npm run dev</>
+
+  * Or start the development server: <fg=green>npm run watch</>
