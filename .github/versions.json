@@ -605,6 +605,9 @@
             "6.4",
             "7.0"
         ],
+        "symfony/go-ip-notifier": [
+            "6.4"
+        ],
         "symfony/google-chat-notifier": [
             "5.2",
             "5.3",
@@ -1145,6 +1148,10 @@
             "6.1",
             "6.2",
             "6.3",
+            "6.4",
+            "7.0"
+        ],
+        "symfony/phrase-translation-provider": [
             "6.4",
             "7.0"
         ],
