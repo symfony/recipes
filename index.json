@@ -125,7 +125,8 @@
         "gitter-notifier": "symfony/gitter-notifier",
         "gitternotifier": "symfony/gitter-notifier",
         "go-ip-notifier": "symfony/go-ip-notifier",
-        "goipnotifier": "symfony/go-ip-notifier",
+        "goip-notifier": "symfony/goip-notifier",
+        "goipnotifier": "symfony/goip-notifier",
         "google-chat-notifier": "symfony/google-chat-notifier",
         "google-mailer": "symfony/google-mailer",
         "googlechatnotifier": "symfony/google-chat-notifier",
@@ -657,6 +658,9 @@
         "symfony/gitter-notifier": [
             "5.3"
         ],
+        "symfony/goip-notifier": [
+            "6.4"
+        ],
         "symfony/google-chat-notifier": [
             "5.2",
             "5.3"
@@ -800,6 +804,9 @@
             "5.3",
             "6.3"
         ],
+        "symfony/phrase-translation-provider": [
+            "6.3"
+        ],
         "symfony/plivo-notifier": [
             "6.3"
         ],
@@ -909,7 +916,8 @@
         ],
         "symfony/translation": [
             "3.3",
-            "5.3"
+            "5.3",
+            "6.3"
         ],
         "symfony/turbo-sms-notifier": [
             "5.4"

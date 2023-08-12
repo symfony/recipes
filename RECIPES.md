@@ -57,6 +57,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
 | [symfony/gitter-notifier](https://packagist.org/packages/symfony/gitter-notifier) | [5.3](symfony/gitter-notifier/5.3) | `gitter-notifier`, `gitternotifier` |
+| [symfony/goip-notifier](https://packagist.org/packages/symfony/goip-notifier) | [6.4](symfony/goip-notifier/6.4) | `goip-notifier`, `goipnotifier` |
 | [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [5.3](symfony/google-chat-notifier/5.3) | `google-chat-notifier`, `googlechatnotifier` |
 | [symfony/google-mailer](https://packagist.org/packages/symfony/google-mailer) | [4.4](symfony/google-mailer/4.4) | `google-mailer`, `googlemailer` |
 | [symfony/infobip-mailer](https://packagist.org/packages/symfony/infobip-mailer) | [6.2](symfony/infobip-mailer/6.2) | `infobip-mailer`, `infobipmailer` |
@@ -99,6 +100,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [6.3](symfony/pager-duty-notifier/6.3) | `pager-duty-notifier`, `pagerdutynotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](symfony/panther/1.0) | `panther` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [6.3](symfony/phpunit-bridge/6.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
+| [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [6.3](symfony/phrase-translation-provider/6.3) | `phrase-translation-provider`, `phrasetranslationprovider` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |
@@ -129,7 +131,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/telegram-notifier](https://packagist.org/packages/symfony/telegram-notifier) | [5.0](symfony/telegram-notifier/5.0) | `telegram-notifier`, `telegramnotifier` |
 | [symfony/telnyx-notifier](https://packagist.org/packages/symfony/telnyx-notifier) | [5.4](symfony/telnyx-notifier/5.4) | `telnyx-notifier`, `telnyxnotifier` |
 | [symfony/termii-notifier](https://packagist.org/packages/symfony/termii-notifier) | [6.3](symfony/termii-notifier/6.3) | `termii-notifier`, `termiinotifier` |
-| [symfony/translation](https://packagist.org/packages/symfony/translation) | [5.3](symfony/translation/5.3) | `translation`, `translations`, `translator` |
+| [symfony/translation](https://packagist.org/packages/symfony/translation) | [6.3](symfony/translation/6.3) | `translation`, `translations`, `translator` |
 | [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [5.4](symfony/turbo-sms-notifier/5.4) | `turbo-sms-notifier`, `turbosmsnotifier` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [6.3](symfony/twig-bundle/6.3) | `twig-bundle`, `twigbundle` |
 | [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
