@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "PHRASE_DSN=phrase://PROJECT_ID:API_TOKEN@default?userAgent=Symfony-Phrase-Provider"
+    }
+}
