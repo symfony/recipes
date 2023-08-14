@@ -57,7 +57,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
 | [symfony/gitter-notifier](https://packagist.org/packages/symfony/gitter-notifier) | [5.3](symfony/gitter-notifier/5.3) | `gitter-notifier`, `gitternotifier` |
-| [symfony/goip-notifier](https://packagist.org/packages/symfony/goip-notifier) | [6.4](symfony/goip-notifier/6.4) | `goip-notifier`, `goipnotifier` |
+| [symfony/go-ip-notifier](https://packagist.org/packages/symfony/go-ip-notifier) | [6.4](symfony/go-ip-notifier/6.4) | `go-ip-notifier`, `goipnotifier` |
 | [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [5.3](symfony/google-chat-notifier/5.3) | `google-chat-notifier`, `googlechatnotifier` |
 | [symfony/google-mailer](https://packagist.org/packages/symfony/google-mailer) | [4.4](symfony/google-mailer/4.4) | `google-mailer`, `googlemailer` |
 | [symfony/infobip-mailer](https://packagist.org/packages/symfony/infobip-mailer) | [6.2](symfony/infobip-mailer/6.2) | `infobip-mailer`, `infobipmailer` |

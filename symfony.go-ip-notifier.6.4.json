@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "symfony/goip-notifier": {
+        "symfony/go-ip-notifier": {
             "manifest": {
                 "env": {
                     "#1": "GOIP_DSN=goip://USERNAME:PASSWORD@HOST:80?sim_slot=SIM_SLOT"
