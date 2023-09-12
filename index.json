@@ -461,7 +461,8 @@
         "api-platform/core": [
             "2.1",
             "2.5",
-            "3.0"
+            "3.0",
+            "3.1"
         ],
         "blackfireio/blackfire-symfony-meta": [
             "1.0"

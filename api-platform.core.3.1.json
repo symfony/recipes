@@ -3,7 +3,7 @@
         "api-platform/core": {
             "manifest": {
                 "bundles": {
-                    "ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle": [
+                    "ApiPlatform\\Symfony\\Bundle\\ApiPlatformBundle": [
                         "all"
                     ]
                 },
@@ -28,12 +28,15 @@
                 "config/packages/api_platform.yaml": {
                     "contents": [
                         "api_platform:",
-                        "    mapping:",
-                        "        paths: ['%kernel.project_dir%/src/Entity']",
-                        "    patch_formats:",
-                        "        json: ['application/merge-patch+json']",
-                        "    swagger:",
-                        "        versions: [3]",
+                        "    title: Hello API Platform",
+                        "    version: 1.0.0",
+                        "    # Good defaults for REST APIs",
+                        "    defaults:",
+                        "        stateless: true",
+                        "        cache_headers:",
+                        "            vary: ['Content-Type', 'Authorization', 'Origin']",
+                        "        extra_properties:",
+                        "            standard_put: true",
                         ""
                     ],
                     "executable": false
@@ -48,14 +51,14 @@
                     ],
                     "executable": false
                 },
-                "src/Entity/.gitignore": {
+                "src/ApiResource/.gitignore": {
                     "contents": [
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "b86557ce5677fa855b1b2608f4a4bc4a8fed8be7"
+            "ref": "adf0c75f4bed8b0043a6680376323404953578c5"
         }
     }
 }
