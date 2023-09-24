@@ -1,0 +1,4 @@
+twig_component:
+    defaults:
+        # Namespace & directory for components
+        App\Twig\Components: 'components/'
