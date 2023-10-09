@@ -15,18 +15,11 @@
             "position": "after_target",
             "target": "{% block javascripts %}",
             "warn_if_missing": true
-        },
-        {
-            "file": "templates/base.html.twig",
-            "content": "            <link rel=\"stylesheet\" href=\"{{ asset('styles/app.css') }}\">",
-            "position": "after_target",
-            "target": "{% block stylesheets %}",
-            "warn_if_missing": true
         }
     ],
     "conflict": {
-        "symfony/framework-bundle": "<6.3",
-        "symfony/twig-bundle": "<6.3",
+        "symfony/framework-bundle": "<6.4",
+        "symfony/twig-bundle": "<6.4",
         "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
     }
 }
