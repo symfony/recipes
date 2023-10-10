@@ -19,8 +19,8 @@
         }
     ],
     "conflict": {
-        "symfony/framework-bundle": "<6.4",
-        "symfony/twig-bundle": "<6.4",
+        "symfony/framework-bundle": "<6.3",
+        "symfony/twig-bundle": "<6.3",
         "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
     }
 }
