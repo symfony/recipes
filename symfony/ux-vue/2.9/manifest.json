@@ -31,6 +31,27 @@
         },
         {
             "file": "assets/app.js",
+            "content": "// If you prefer to lazy-load your Vue.js controller components, in order to reduce the JavaScript bundle the smallest as possible,",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "// and degrade performances as little as possible, you can use the following line instead:",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "registerVueControllerComponents(require.context('./vue/controllers', true, /\\.vue$/, 'lazy'));",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/app.js",
             "content": "registerVueControllerComponents();",
             "position": "bottom",
             "warn_if_missing": true,
