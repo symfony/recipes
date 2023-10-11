@@ -31,7 +31,7 @@
         },
         {
             "file": "assets/app.js",
-            "content": "// If you prefer to lazy-load your Vue.js controller components, in order to reduce the JavaScript bundle the smallest as possible,",
+            "content": "// If you prefer to lazy-load your Vue.js controller components, in order to reduce the JavaScript bundle the smallest as possible",
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/webpack-encore-bundle"
