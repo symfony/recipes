@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ux-twig-component": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\TwigComponent\\TwigComponentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/twig_component.yaml": {
+                    "contents": [
+                        "twig_component:",
+                        "    anonymous_template_directory: 'components/'",
+                        "    defaults:",
+                        "        # Namespace & directory for components",
+                        "        App\\Twig\\Components\\: 'components/'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "67814b5f9794798b885cec9d3f48631424449a01"
+        }
+    }
+}

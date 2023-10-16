@@ -413,12 +413,14 @@
         "ux-react": "symfony/ux-react",
         "ux-svelte": "symfony/ux-svelte",
         "ux-translator": "symfony/ux-translator",
+        "ux-twig-component": "symfony/ux-twig-component",
         "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
         "uxlivecomponent": "symfony/ux-live-component",
         "uxreact": "symfony/ux-react",
         "uxsvelte": "symfony/ux-svelte",
         "uxtranslator": "symfony/ux-translator",
+        "uxtwigcomponent": "symfony/ux-twig-component",
         "uxvue": "symfony/ux-vue",
         "validation": "symfony/validator",
         "validator": "symfony/validator",
@@ -960,6 +962,9 @@
         "symfony/ux-translator": [
             "2.8",
             "2.9"
+        ],
+        "symfony/ux-twig-component": [
+            "2.13"
         ],
         "symfony/ux-vue": [
             "2.8",
