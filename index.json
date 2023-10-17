@@ -574,7 +574,8 @@
             "5.4"
         ],
         "symfony/asset-mapper": [
-            "6.3"
+            "6.3",
+            "6.4"
         ],
         "symfony/bandwidth-notifier": [
             "6.3"
@@ -1083,6 +1084,11 @@
         },
         "symfony/asset-mapper": {
             "6.3": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.3",
+                "symfony/twig-bundle": "<6.3"
+            },
+            "6.4": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<6.3",
                 "symfony/twig-bundle": "<6.3"

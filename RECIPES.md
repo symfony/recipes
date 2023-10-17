@@ -33,7 +33,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |
 | [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [5.4](symfony/amazon-sns-notifier/5.4) | `amazon-sns-notifier`, `amazonsnsnotifier` |
-| [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [6.3](symfony/asset-mapper/6.3) | `asset-mapper`, `assetmapper`, `importmap` |
+| [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [6.4](symfony/asset-mapper/6.4) | `asset-mapper`, `assetmapper`, `importmap` |
 | [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
 | [symfony/brevo-mailer](https://packagist.org/packages/symfony/brevo-mailer) | [6.4](symfony/brevo-mailer/6.4) | `brevo-mailer`, `brevomailer` |
 | [symfony/brevo-notifier](https://packagist.org/packages/symfony/brevo-notifier) | [6.4](symfony/brevo-notifier/6.4) | `brevo-notifier`, `brevonotifier` |
