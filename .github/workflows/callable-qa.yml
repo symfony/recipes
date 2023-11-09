@@ -269,12 +269,12 @@ jobs:
                     exit $EXIT_CODE
 
             -
-                name: Setup PHP 8.1
+                name: Setup PHP 8.2
                 if: "always() && steps.config.outcome == 'success'"
                 uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
-                    php-version: "8.1"
+                    php-version: "8.2"
 
             -
                 name: Create-project with skeleton ^6
