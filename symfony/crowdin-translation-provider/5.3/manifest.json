@@ -1,10 +1,10 @@
 {
     "add-lines": [
         {
-            "file": "config/packages/notifier.yaml",
+            "file": "config/packages/translation.yaml",
             "position": "after_target",
-            "target": "        texter_transports:",
-            "content": "            crowdin: '%env(CROWDIN_DSN)%'"
+            "target": "        providers:",
+            "content": "            crowdin:\n                dsn: '%env(CROWDIN_DSN)%'"
         }
     ],
     "env": {

@@ -4,10 +4,10 @@
             "file": "config/packages/translation.yaml",
             "position": "after_target",
             "target": "        providers:",
-            "content": "            lokalise:\n                dsn: '%env(LOKALISE_DSN)%'"
+            "content": "            phrase:\n                dsn: '%env(PHRASE_DSN)%'"
         }
     ],
     "env": {
-        "#1": "LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default"
+        "#1": "PHRASE_DSN=phrase://PROJECT_ID:API_TOKEN@default?userAgent=Symfony-Phrase-Provider"
     }
 }

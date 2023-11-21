@@ -1,10 +1,10 @@
 {
     "add-lines": [
         {
-            "file": "config/packages/notifier.yaml",
+            "file": "config/packages/translation.yaml",
             "position": "after_target",
-            "target": "        texter_transports:",
-            "content": "            loco: '%env(LOCO_DSN)%'"
+            "target": "        providers:",
+            "content": "            loco:\n                dsn: '%env(LOCO_DSN)%'"
         }
     ],
     "env": {
