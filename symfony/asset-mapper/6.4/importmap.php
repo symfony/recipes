@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Returns the import map for this application.
+ * Returns the importmap for this application.
  *
  * - "path" is a path inside the asset mapper system. Use the
  *     "debug:asset-map" command to see the full list of paths.
