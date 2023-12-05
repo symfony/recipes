@@ -7,7 +7,7 @@
     "aliases": ["asset-mapper", "importmap"],
     "gitignore": [
         "/%PUBLIC_DIR%/assets/",
-        "/assets/vendor"
+        "/assets/vendor/"
     ],
     "add-lines": [
         {
