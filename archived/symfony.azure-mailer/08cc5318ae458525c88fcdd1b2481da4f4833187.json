@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/azure-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=azure+api://ACS_RESOURCE_NAME:KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "08cc5318ae458525c88fcdd1b2481da4f4833187"
+        }
+    }
+}
