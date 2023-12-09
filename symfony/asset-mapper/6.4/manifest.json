@@ -12,7 +12,7 @@
     "add-lines": [
         {
             "file": "templates/base.html.twig",
-            "content": "            {{ importmap('app') }}",
+            "content": "{% block importmap %}{{ importmap('app') }}{% endblock %}",
             "position": "after_target",
             "target": "{% block javascripts %}",
             "warn_if_missing": true
