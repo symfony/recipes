@@ -9,6 +9,9 @@
         "/%PUBLIC_DIR%/assets/",
         "/assets/vendor"
     ],
+    "composer-scripts": {
+        "importmap:install": "symfony-cmd"
+    },
     "add-lines": [
         {
             "file": "templates/base.html.twig",
