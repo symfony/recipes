@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=azure+api://ACS_RESOURCE_NAME:KEY@default"
+    }
+}
