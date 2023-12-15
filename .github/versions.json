@@ -116,6 +116,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/bluesky-notifier": [
+            "7.1"
+        ],
         "symfony/brevo-mailer": [
             "6.4",
             "7.0",
