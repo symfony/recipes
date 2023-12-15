@@ -40,6 +40,8 @@
         "beanstalkd-messenger": "symfony/beanstalkd-messenger",
         "beanstalkdmessenger": "symfony/beanstalkd-messenger",
         "blackfire": "blackfireio/blackfire-symfony-meta",
+        "bluesky-notifier": "symfony/bluesky-notifier",
+        "blueskynotifier": "symfony/bluesky-notifier",
         "brevo-mailer": "symfony/brevo-mailer",
         "brevo-notifier": "symfony/brevo-notifier",
         "brevomailer": "symfony/brevo-mailer",
@@ -1342,6 +1344,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/bluesky-notifier": [
                 "7.1"
             ],
             "symfony/brevo-mailer": [
