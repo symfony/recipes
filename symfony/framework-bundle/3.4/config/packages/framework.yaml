@@ -7,7 +7,6 @@ framework:
     # Remove or comment this section to explicitly disable session support.
     session:
         handler_id: null
-        cookie_samesite: lax
 
     #esi: true
     #fragments: true
