@@ -411,6 +411,8 @@
         "twitter-notifier": "symfony/twitter-notifier",
         "twitternotifier": "symfony/twitter-notifier",
         "uid": "symfony/uid",
+        "unifonic-notifier": "symfony/unifonic-notifier",
+        "unifonicnotifier": "symfony/unifonic-notifier",
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-live-component": "symfony/ux-live-component",
@@ -3166,6 +3168,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/unifonic-notifier": [
                 "7.1"
             ],
             "symfony/validator": [
