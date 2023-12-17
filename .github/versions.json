@@ -1938,6 +1938,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/unifonic-notifier": [
+            "7.1"
+        ],
         "symfony/validator": [
             "3.4",
             "4.0",
