@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/unifonic-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            unifonic: '%env(UNIFONIC_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "UNIFONIC_DSN=unifonic://APP_SID@default?from=SENDER"
+                }
+            },
+            "files": [],
+            "ref": "467f37147389bd8c745190dec4d059760e6d9cb0"
+        }
+    }
+}

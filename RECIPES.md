@@ -138,6 +138,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
 | [symfony/twitter-notifier](https://packagist.org/packages/symfony/twitter-notifier) | [6.3](symfony/twitter-notifier/6.3) | `twitter-notifier`, `twitternotifier` |
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [6.2](symfony/uid/6.2) | `uid` |
+| [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |

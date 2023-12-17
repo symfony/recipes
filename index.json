@@ -953,6 +953,9 @@
         "symfony/uid": [
             "6.2"
         ],
+        "symfony/unifonic-notifier": [
+            "7.1"
+        ],
         "symfony/ux-autocomplete": [
             "2.2",
             "2.6"
