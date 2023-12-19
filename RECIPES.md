@@ -36,6 +36,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [6.4](symfony/asset-mapper/6.4) | `asset-mapper`, `assetmapper`, `importmap` |
 | [symfony/azure-mailer](https://packagist.org/packages/symfony/azure-mailer) | [7.1](symfony/azure-mailer/7.1) | `azure-mailer`, `azuremailer` |
 | [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
+| [symfony/bluesky-notifier](https://packagist.org/packages/symfony/bluesky-notifier) | [7.1](symfony/bluesky-notifier/7.1) | `bluesky-notifier`, `blueskynotifier` |
 | [symfony/brevo-mailer](https://packagist.org/packages/symfony/brevo-mailer) | [6.4](symfony/brevo-mailer/6.4) | `brevo-mailer`, `brevomailer` |
 | [symfony/brevo-notifier](https://packagist.org/packages/symfony/brevo-notifier) | [6.4](symfony/brevo-notifier/6.4) | `brevo-notifier`, `brevonotifier` |
 | [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [6.2](symfony/chatwork-notifier/6.2) | `chatwork-notifier`, `chatworknotifier` |

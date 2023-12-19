@@ -589,6 +589,9 @@
         "symfony/bandwidth-notifier": [
             "6.3"
         ],
+        "symfony/bluesky-notifier": [
+            "7.1"
+        ],
         "symfony/brevo-mailer": [
             "6.4"
         ],

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/bluesky-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "BLUESKY_DSN=bluesky://USER:PASS@bsky.social"
+                }
+            },
+            "files": [],
+            "ref": "b6fc42cd94764128d6251b9d7b901515999923e9"
+        }
+    }
+}
