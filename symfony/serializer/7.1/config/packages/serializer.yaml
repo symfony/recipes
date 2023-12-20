@@ -1,0 +1,4 @@
+framework:
+    serializer:
+        default_context:
+            datetime_timestamp_cast: true
