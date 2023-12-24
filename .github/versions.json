@@ -1726,6 +1726,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/smsbox-notifier": [
+            "7.1"
+        ],
         "symfony/smsc-notifier": [
             "5.4",
             "6.0",
