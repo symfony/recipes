@@ -1704,6 +1704,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/sms-sluzba-notifier": [
+            "7.1"
+        ],
         "symfony/sms77-notifier": [
             "5.4",
             "6.0",
