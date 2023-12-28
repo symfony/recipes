@@ -910,6 +910,9 @@
         "symfony/smsapi-notifier": [
             "5.2"
         ],
+        "symfony/smsbox-notifier": [
+            "7.1"
+        ],
         "symfony/smsc-notifier": [
             "5.4"
         ],
