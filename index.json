@@ -359,6 +359,7 @@
         "slacknotifier": "symfony/slack-notifier",
         "sms-biuras-notifier": "symfony/sms-biuras-notifier",
         "sms-factor-notifier": "symfony/sms-factor-notifier",
+        "sms-sluzba-notifier": "symfony/sms-sluzba-notifier",
         "sms77-notifier": "symfony/sms77-notifier",
         "sms77notifier": "symfony/sms77-notifier",
         "smsapi-notifier": "symfony/smsapi-notifier",
@@ -371,6 +372,7 @@
         "smsfactornotifier": "symfony/sms-factor-notifier",
         "smsmode-notifier": "symfony/smsmode-notifier",
         "smsmodenotifier": "symfony/smsmode-notifier",
+        "smssluzbanotifier": "symfony/sms-sluzba-notifier",
         "spot-hit-notifier": "symfony/spot-hit-notifier",
         "spothitnotifier": "symfony/spot-hit-notifier",
         "stimulus": "symfony/stimulus-bundle",
@@ -2942,6 +2944,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/sms-sluzba-notifier": [
                 "7.1"
             ],
             "symfony/sms77-notifier": [
