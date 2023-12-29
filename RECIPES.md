@@ -118,6 +118,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [4.4](symfony/sendgrid-mailer/4.4) | `sendgrid-mailer`, `sendgridmailer` |
 | [symfony/sendinblue-mailer](https://packagist.org/packages/symfony/sendinblue-mailer) | [5.2](symfony/sendinblue-mailer/5.2) | `sendinblue-mailer`, `sendinbluemailer` |
 | [symfony/sendinblue-notifier](https://packagist.org/packages/symfony/sendinblue-notifier) | [5.2](symfony/sendinblue-notifier/5.2) | `sendinblue-notifier`, `sendinbluenotifier` |
+| [symfony/sevenio-notifier](https://packagist.org/packages/symfony/sevenio-notifier) | [7.1](symfony/sevenio-notifier/7.1) | `sevenio-notifier`, `sevenionotifier` |
 | [symfony/simple-textin-notifier](https://packagist.org/packages/symfony/simple-textin-notifier) | [6.3](symfony/simple-textin-notifier/6.3) | `simple-textin-notifier`, `simpletextinnotifier` |
 | [symfony/sinch-notifier](https://packagist.org/packages/symfony/sinch-notifier) | [5.1](symfony/sinch-notifier/5.1) | `sinch-notifier`, `sinchnotifier` |
 | [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [5.2](symfony/slack-notifier/5.2) | `slack-notifier`, `slacknotifier` |

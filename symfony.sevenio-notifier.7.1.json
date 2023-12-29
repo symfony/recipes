@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/sevenio-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "SEVENIO_DSN=sevenio://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "ef1eefc72cbf353178dc861069f15254ecebbd30"
+        }
+    }
+}

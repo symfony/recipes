@@ -889,6 +889,9 @@
         "symfony/sendinblue-notifier": [
             "5.2"
         ],
+        "symfony/sevenio-notifier": [
+            "7.1"
+        ],
         "symfony/simple-textin-notifier": [
             "6.3"
         ],
