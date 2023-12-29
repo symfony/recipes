@@ -1653,6 +1653,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/sevenio-notifier": [
+            "7.1"
+        ],
         "symfony/simple-textin-notifier": [
             "6.3",
             "6.4",
