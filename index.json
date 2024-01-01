@@ -909,6 +909,9 @@
         "symfony/sms-factor-notifier": [
             "6.2"
         ],
+        "symfony/sms-sluzba-notifier": [
+            "6.4"
+        ],
         "symfony/sms77-notifier": [
             "5.4"
         ],

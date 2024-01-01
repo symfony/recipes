@@ -124,6 +124,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [5.2](symfony/slack-notifier/5.2) | `slack-notifier`, `slacknotifier` |
 | [symfony/sms-biuras-notifier](https://packagist.org/packages/symfony/sms-biuras-notifier) | [5.3](symfony/sms-biuras-notifier/5.3) | `sms-biuras-notifier`, `smsbiurasnotifier` |
 | [symfony/sms-factor-notifier](https://packagist.org/packages/symfony/sms-factor-notifier) | [6.2](symfony/sms-factor-notifier/6.2) | `sms-factor-notifier`, `smsfactornotifier` |
+| [symfony/sms-sluzba-notifier](https://packagist.org/packages/symfony/sms-sluzba-notifier) | [6.4](symfony/sms-sluzba-notifier/6.4) | `sms-sluzba-notifier`, `smssluzbanotifier` |
 | [symfony/sms77-notifier](https://packagist.org/packages/symfony/sms77-notifier) | [5.4](symfony/sms77-notifier/5.4) | `sms77-notifier`, `sms77notifier` |
 | [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [5.2](symfony/smsapi-notifier/5.2) | `smsapi-notifier`, `smsapinotifier` |
 | [symfony/smsbox-notifier](https://packagist.org/packages/symfony/smsbox-notifier) | [7.1](symfony/smsbox-notifier/7.1) | `smsbox-notifier`, `smsboxnotifier` |
