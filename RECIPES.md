@@ -130,7 +130,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [5.4](symfony/smsc-notifier/5.4) | `smsc-notifier`, `smscnotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
-| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.9](symfony/stimulus-bundle/2.9) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.13](symfony/stimulus-bundle/2.13) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
 | [symfony/telegram-notifier](https://packagist.org/packages/symfony/telegram-notifier) | [5.0](symfony/telegram-notifier/5.0) | `telegram-notifier`, `telegramnotifier` |
 | [symfony/telnyx-notifier](https://packagist.org/packages/symfony/telnyx-notifier) | [5.4](symfony/telnyx-notifier/5.4) | `telnyx-notifier`, `telnyxnotifier` |

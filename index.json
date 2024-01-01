@@ -929,7 +929,8 @@
         ],
         "symfony/stimulus-bundle": [
             "2.8",
-            "2.9"
+            "2.9",
+            "2.13"
         ],
         "symfony/swiftmailer-bundle": [
             "2.5"
@@ -1177,6 +1178,10 @@
         },
         "symfony/stimulus-bundle": {
             "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/webpack-encore-bundle": "<2.0"
+            },
+            "2.13": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/webpack-encore-bundle": "<2.0"
             }
