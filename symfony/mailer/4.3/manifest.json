@@ -9,9 +9,20 @@
         "docker-compose.override.yml": {
             "services": [
                 "mailer:",
-                "  image: sj26/mailcatcher",
-                "  ports: [\"1025\", \"1080\"]"
-            ]
+                "  image: axllent/mailpit",
+                "  restart: always",
+                "  volumes:",
+                "    - mailer_data:/data",
+                "  ports:",
+                "    - \"1025\"",
+                "    - \"8025\"",
+                "  environment:",
+                "    MP_MAX_MESSAGES: 5000",
+                "    MP_DATA_FILE: /data/mailpit.db",
+                "    MP_SMTP_AUTH_ACCEPT_ANY: 1",
+                "    MP_SMTP_AUTH_ALLOW_INSECURE: 1"
+            ],
+            "volumes": ["mailer_data:"]
         }
     },
     "aliases": ["mailer", "mail"]
