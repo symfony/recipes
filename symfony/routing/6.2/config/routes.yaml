@@ -3,3 +3,4 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    methods: [GET]
