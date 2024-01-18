@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/uid": {
+            "manifest": {
+                "conflict": {
+                    "symfony/framework-bundle": "<7.0"
+                }
+            },
+            "files": [],
+            "ref": "0df5844274d871b37fc3816c57a768ffc60a43a5"
+        }
+    }
+}

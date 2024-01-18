@@ -868,7 +868,8 @@
             "5.3",
             "6.0",
             "6.1",
-            "6.2"
+            "6.2",
+            "7.0"
         ],
         "symfony/scaleway-mailer": [
             "6.4"
@@ -975,7 +976,8 @@
             "6.3"
         ],
         "symfony/uid": [
-            "6.2"
+            "6.2",
+            "7.0"
         ],
         "symfony/unifonic-notifier": [
             "7.1"
@@ -1010,7 +1012,8 @@
         "symfony/validator": [
             "4.1",
             "4.3",
-            "5.3"
+            "5.3",
+            "7.0"
         ],
         "symfony/vonage-notifier": [
             "5.4"
@@ -1171,6 +1174,9 @@
             },
             "6.2": {
                 "symfony/framework-bundle": "<6.2"
+            },
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
             }
         },
         "symfony/security-bundle": {
@@ -1208,6 +1214,9 @@
         "symfony/uid": {
             "6.2": {
                 "symfony/framework-bundle": "<6.2"
+            },
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
             }
         },
         "symfony/ux-react": {
@@ -1236,6 +1245,9 @@
         "symfony/validator": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
             }
         },
         "symfony/web-profiler-bundle": {
