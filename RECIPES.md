@@ -109,6 +109,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
 | [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [6.4](symfony/redlink-notifier/6.4) | `redlink-notifier`, `redlinknotifier` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
+| [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
 | [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.2](symfony/routing/6.2) | `router`, `routing` |

@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/resend-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=resend+api://API_KEY@default",
+                    "#2": "MAILER_DSN=resend+smtp://resend:API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "487735bc20cbd1547ec311692ef0261a7687a3f0"
+        }
+    }
+}

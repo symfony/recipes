@@ -851,6 +851,9 @@
             "1.0",
             "2.0"
         ],
+        "symfony/resend-mailer": [
+            "7.1"
+        ],
         "symfony/ring-central-notifier": [
             "6.3"
         ],
