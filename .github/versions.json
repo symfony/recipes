@@ -1403,6 +1403,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/resend-mailer": [
+            "7.1"
+        ],
         "symfony/ring-central-notifier": [
             "6.3",
             "6.4",
