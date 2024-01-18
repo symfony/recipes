@@ -1,21 +1,21 @@
 {
     "manifests": {
-        "symfony/crowdin-translation-provider": {
+        "symfony/phrase-translation-provider": {
             "manifest": {
                 "add-lines": [
                     {
                         "file": "config/packages/translation.yaml",
                         "position": "after_target",
                         "target": "        providers:",
-                        "content": "            crowdin:\n                dsn: '%env(CROWDIN_DSN)%'"
+                        "content": "            phrase:\n                dsn: '%env(PHRASE_DSN)%'"
                     }
                 ],
                 "env": {
-                    "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+                    "#1": "PHRASE_DSN=phrase://PROJECT_ID:API_TOKEN@default?userAgent=Symfony-Phrase-Provider"
                 }
             },
             "files": [],
-            "ref": "15c55fd0c3c77c24346815387bdcd73a78305123"
+            "ref": "cfa42c19c56d5842ae9a39432a202f5400241b0f"
         }
     }
 }

@@ -829,7 +829,7 @@
             "6.3"
         ],
         "symfony/phrase-translation-provider": [
-            "6.3"
+            "6.4"
         ],
         "symfony/plivo-notifier": [
             "6.3"

@@ -16,15 +16,7 @@
                         "        default_path: '%kernel.project_dir%/translations'",
                         "        fallbacks:",
                         "            - en",
-                        "#        providers:",
-                        "#            crowdin:",
-                        "#                dsn: '%env(CROWDIN_DSN)%'",
-                        "#            loco:",
-                        "#                dsn: '%env(LOCO_DSN)%'",
-                        "#            lokalise:",
-                        "#                dsn: '%env(LOKALISE_DSN)%'",
-                        "#            phrase:",
-                        "#                dsn: '%env(PHRASE_DSN)%'",
+                        "        providers:",
                         ""
                     ],
                     "executable": false
@@ -36,7 +28,7 @@
                     "executable": false
                 }
             },
-            "ref": "64fe617084223633e1dedf9112935d8c95410d3e"
+            "ref": "e28e27f53663cc34f0be2837aba18e3a1bef8e7b"
         }
     }
 }
