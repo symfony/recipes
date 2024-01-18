@@ -306,6 +306,8 @@
         "requirementchecker": "symfony/requirements-checker",
         "requirements-checker": "symfony/requirements-checker",
         "requirementschecker": "symfony/requirements-checker",
+        "resend-mailer": "symfony/resend-mailer",
+        "resendmailer": "symfony/resend-mailer",
         "ring-central-notifier": "symfony/ring-central-notifier",
         "ringcentralnotifier": "symfony/ring-central-notifier",
         "rocket-chat-notifier": "symfony/rocket-chat-notifier",
@@ -2659,6 +2661,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/resend-mailer": [
                 "7.1"
             ],
             "symfony/ring-central-notifier": [
