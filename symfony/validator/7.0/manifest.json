@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["validation"],
+    "conflict": {
+        "symfony/framework-bundle": "<7.0"
+    }
+}
