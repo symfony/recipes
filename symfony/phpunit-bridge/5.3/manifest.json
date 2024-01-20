@@ -9,5 +9,8 @@
         ".phpunit.result.cache",
         "/phpunit.xml"
     ],
+    "conflict": {
+        "symfony/framework-bundle": "<5.4"
+    },
     "aliases": ["simple-phpunit"]
 }
