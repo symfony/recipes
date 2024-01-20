@@ -967,7 +967,8 @@
             "5.0",
             "5.3",
             "5.4",
-            "6.3"
+            "6.3",
+            "6.4"
         ],
         "symfony/twilio-notifier": [
             "5.0"
@@ -1208,6 +1209,9 @@
                 "symfony/framework-bundle": "<5.3"
             },
             "6.3": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "6.4": {
                 "symfony/framework-bundle": "<5.3"
             }
         },

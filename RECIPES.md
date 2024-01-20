@@ -139,7 +139,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/termii-notifier](https://packagist.org/packages/symfony/termii-notifier) | [6.3](symfony/termii-notifier/6.3) | `termii-notifier`, `termiinotifier` |
 | [symfony/translation](https://packagist.org/packages/symfony/translation) | [6.3](symfony/translation/6.3) | `translation`, `translations`, `translator` |
 | [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [5.4](symfony/turbo-sms-notifier/5.4) | `turbo-sms-notifier`, `turbosmsnotifier` |
-| [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [6.3](symfony/twig-bundle/6.3) | `twig-bundle`, `twigbundle` |
+| [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [6.4](symfony/twig-bundle/6.4) | `twig-bundle`, `twigbundle` |
 | [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
 | [symfony/twitter-notifier](https://packagist.org/packages/symfony/twitter-notifier) | [6.3](symfony/twitter-notifier/6.3) | `twitter-notifier`, `twitternotifier` |
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](symfony/uid/7.0) | `uid` |
