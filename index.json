@@ -1159,8 +1159,12 @@
             }
         },
         "symfony/phpunit-bridge": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.4"
+            },
             "6.3": {
-                "phpunit/phpunit": "<9.6"
+                "phpunit/phpunit": "<9.6",
+                "symfony/framework-bundle": "<5.4"
             }
         },
         "symfony/routing": {
