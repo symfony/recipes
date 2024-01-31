@@ -16,7 +16,7 @@
         {
             "file": "templates/base.html.twig",
             "content": "{% block importmap %}{{ importmap('app') }}{% endblock %}",
-            "position": "after_target",
+            "position": "before_target",
             "target": "{% block javascripts %}",
             "warn_if_missing": true
         }
