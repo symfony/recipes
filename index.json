@@ -92,6 +92,7 @@
         "domcrawler": "symfony/dom-crawler",
         "dotenv": "symfony/dotenv",
         "dump": "symfony/var-dumper",
+        "emoji": "symfony/emoji",
         "encore": "symfony/webpack-encore-bundle",
         "engagespot-notifier": "symfony/engagespot-notifier",
         "engagespotnotifier": "symfony/engagespot-notifier",
@@ -418,6 +419,8 @@
         "twilionotifier": "symfony/twilio-notifier",
         "twitter-notifier": "symfony/twitter-notifier",
         "twitternotifier": "symfony/twitter-notifier",
+        "type-info": "symfony/type-info",
+        "typeinfo": "symfony/type-info",
         "uid": "symfony/uid",
         "unifonic-notifier": "symfony/unifonic-notifier",
         "unifonicnotifier": "symfony/unifonic-notifier",
@@ -1695,6 +1698,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/emoji": [
                 "7.1"
             ],
             "symfony/engagespot-notifier": [
@@ -3218,6 +3224,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/type-info": [
                 "7.1"
             ],
             "symfony/uid": [
