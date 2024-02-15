@@ -285,6 +285,8 @@
         "psrhttpmessagebridge": "symfony/psr-http-message-bridge",
         "pushover-notifier": "symfony/pushover-notifier",
         "pushovernotifier": "symfony/pushover-notifier",
+        "pushy-notifier": "symfony/pushy-notifier",
+        "pushynotifier": "symfony/pushy-notifier",
         "rate-limiter": "symfony/rate-limiter",
         "ratelimiter": "symfony/rate-limiter",
         "react-admin": "api-platform/admin-pack",
@@ -2654,6 +2656,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/pushy-notifier": [
                 "7.1"
             ],
             "symfony/rate-limiter": [
