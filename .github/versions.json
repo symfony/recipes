@@ -1370,6 +1370,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/pushy-notifier": [
+            "7.1"
+        ],
         "symfony/rate-limiter": [
             "5.2",
             "5.3",
