@@ -849,6 +849,9 @@
         "symfony/pushover-notifier": [
             "6.3"
         ],
+        "symfony/pushy-notifier": [
+            "7.1"
+        ],
         "symfony/redlink-notifier": [
             "6.4"
         ],
