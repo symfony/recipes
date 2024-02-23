@@ -940,6 +940,9 @@
         "symfony/smsc-notifier": [
             "5.4"
         ],
+        "symfony/smsense-notifier": [
+            "7.1"
+        ],
         "symfony/smsmode-notifier": [
             "6.3"
         ],

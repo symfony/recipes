@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/smsense-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            smsense: '%env(SMSENSE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSENSE_DSN=smsense://API_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "1337351e55e3adf613c160692034a31acfb0b76a"
+        }
+    }
+}

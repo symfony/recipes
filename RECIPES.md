@@ -131,6 +131,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [5.2](symfony/smsapi-notifier/5.2) | `smsapi-notifier`, `smsapinotifier` |
 | [symfony/smsbox-notifier](https://packagist.org/packages/symfony/smsbox-notifier) | [7.1](symfony/smsbox-notifier/7.1) | `smsbox-notifier`, `smsboxnotifier` |
 | [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [5.4](symfony/smsc-notifier/5.4) | `smsc-notifier`, `smscnotifier` |
+| [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
 | [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.13](symfony/stimulus-bundle/2.13) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
