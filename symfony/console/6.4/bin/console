@@ -14,7 +14,7 @@ return function (array $context) {
     $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
 
     $app = new Application($kernel);
-    $app->setCatchErrors('prod' === $context['APP_ENV']);
+    $app->setCatchErrors(true);
 
     return $app;
 };
