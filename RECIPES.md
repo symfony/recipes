@@ -147,6 +147,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](symfony/uid/7.0) | `uid` |
 | [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
+| [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [2.17](symfony/ux-icons/2.17) | `ux-icons`, `uxicons` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |

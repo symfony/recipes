@@ -430,6 +430,7 @@
         "unifonicnotifier": "symfony/unifonic-notifier",
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
+        "ux-icons": "symfony/ux-icons",
         "ux-live-component": "symfony/ux-live-component",
         "ux-react": "symfony/ux-react",
         "ux-svelte": "symfony/ux-svelte",
@@ -437,6 +438,7 @@
         "ux-twig-component": "symfony/ux-twig-component",
         "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
+        "uxicons": "symfony/ux-icons",
         "uxlivecomponent": "symfony/ux-live-component",
         "uxreact": "symfony/ux-react",
         "uxsvelte": "symfony/ux-svelte",
@@ -999,6 +1001,9 @@
         "symfony/ux-autocomplete": [
             "2.2",
             "2.6"
+        ],
+        "symfony/ux-icons": [
+            "2.17"
         ],
         "symfony/ux-live-component": [
             "2.0",
