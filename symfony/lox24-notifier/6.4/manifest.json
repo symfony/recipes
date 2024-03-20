@@ -4,8 +4,8 @@
       "file": "config/packages/notifier.yaml",
       "position": "after_target",
       "warn_if_missing": true,
-      "target": "texter_transports:",
-      "content": "twilio: '%env(LOX24_DSN)%'"
+      "target": "        texter_transports:",
+      "content": "            lox24: '%env(LOX24_DSN)%'"
     }
   ],
   "env": {
