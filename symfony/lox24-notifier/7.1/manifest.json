@@ -9,6 +9,6 @@
     }
   ],
   "env": {
-    "#1": "LOX24_DSN=lox24://TOKEN@default?from=FROM"
+    "#1": "LOX24_DSN=lox24://USERNAME:TOKEN@default?from=FROM"
   }
 }
