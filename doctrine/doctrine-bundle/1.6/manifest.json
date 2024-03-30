@@ -15,10 +15,7 @@
         "DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
     },
     "dockerfile": [
-        "RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev && \\",
-        "\tdocker-php-ext-install -j$(nproc) pdo_pgsql && \\",
-        "\tapk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5 && \\",
-        "\tapk del .pgsql-deps"
+        "RUN install-php-extensions pdo_pgsql"
     ],
     "docker-compose": {
         "docker-compose.yml": {
