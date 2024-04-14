@@ -179,6 +179,8 @@
         "logs": "symfony/monolog-bundle",
         "lokalise-translation-provider": "symfony/lokalise-translation-provider",
         "lokalisetranslationprovider": "symfony/lokalise-translation-provider",
+        "lox24-notifier": "symfony/lox24-notifier",
+        "lox24notifier": "symfony/lox24-notifier",
         "mail": "symfony/mailer",
         "mail-pace-mailer": "symfony/mail-pace-mailer",
         "mailchimp-mailer": "symfony/mailchimp-mailer",
@@ -2230,6 +2232,9 @@
                 "6.3",
                 "6.4",
                 "7.0",
+                "7.1"
+            ],
+            "symfony/lox24-notifier": [
                 "7.1"
             ],
             "symfony/mail-pace-mailer": [
