@@ -925,6 +925,9 @@
             "7.0",
             "7.1"
         ],
+        "symfony/lox24-notifier": [
+            "7.1"
+        ],
         "symfony/mail-pace-mailer": [
             "6.2",
             "6.3",
