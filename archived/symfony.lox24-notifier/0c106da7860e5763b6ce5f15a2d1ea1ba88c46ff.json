@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/lox24-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            lox24: '%env(LOX24_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LOX24_DSN=lox24://USER:TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "0c106da7860e5763b6ce5f15a2d1ea1ba88c46ff"
+        }
+    }
+}

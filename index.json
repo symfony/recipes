@@ -739,6 +739,9 @@
         "symfony/lokalise-translation-provider": [
             "5.3"
         ],
+        "symfony/lox24-notifier": [
+            "7.1"
+        ],
         "symfony/mail-pace-mailer": [
             "6.2"
         ],
