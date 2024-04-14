@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            lox24: '%env(LOX24_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "LOX24_DSN=lox24://USER:TOKEN@default?from=FROM"
+    }
+}
