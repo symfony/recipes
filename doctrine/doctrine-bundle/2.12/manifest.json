@@ -29,7 +29,7 @@
                 "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}",
                 "    POSTGRES_USER: ${POSTGRES_USER:-app}",
                 "  healthcheck:",
-                "    test: [\"CMD\", \"pg_isready\"]",
+                "    test: [\"CMD\", \"pg_isready -U ${POSTGRES_USER:-app}\"]",
                 "    timeout: 5s",
                 "    retries: 5",
                 "    start_period: 60s",
