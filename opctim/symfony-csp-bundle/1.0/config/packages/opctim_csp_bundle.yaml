@@ -1,0 +1,30 @@
+opctim_csp_bundle:
+    # See vendor/opctim/symfony-csp-bundle/README.md for more details.
+    always_add: []
+
+    # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    directives: &directives
+        default-src:
+            - "'self'"
+            - 'data:'
+            - 'https:'
+        base-uri:
+            - "'self'"
+        object-src:
+            - "'none'"
+        script-src:
+            - "'self'"
+        img-src:
+            - "'self'"
+        style-src:
+            - "'self'"
+            - "'unsafe-inline'"
+
+# For different set-ups in the dev environment
+when@dev:
+    opctim_csp_bundle:
+        # always_add: []
+
+        directives:
+            <<: *directives
+            # Add your overrides here
