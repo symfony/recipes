@@ -13,7 +13,7 @@
     },
     "env": {
         "APP_ENV": "dev",
-        "APP_SECRET": "%generate(secret)%"
+        "APP_SECRET": "NotSecure-%generate(secret)%"
     },
     "gitignore": [
         "/.env.local",
