@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\MakerBundle\\MakerBundle": ["dev"]
+    },
+    "aliases": ["maker", "generator", "make"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
