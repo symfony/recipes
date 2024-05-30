@@ -1,5 +1,5 @@
 # lazy_image:
-    # By default, images are fetch through "file_get_contents" function, but you can use your own implementation 
+    # By default, images are fetched through "file_get_contents" function, but you can use your own implementation 
     # with an invokable service or a callable. 
     # https://symfony.com/bundles/ux-lazy-image/current/index.html#customizing-images-fetching
     # fetch_image_content: 'App\BlurHash\FetchImageContent'
