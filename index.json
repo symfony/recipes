@@ -857,6 +857,9 @@
             "4.3",
             "4.4"
         ],
+        "symfony/primotexto-notifier": [
+            "7.1"
+        ],
         "symfony/psr7-pack": [
             "1.0"
         ],

@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/primotexto-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            primotexto: '%env(PRIMOTEXTO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PRIMOTEXTO_DSN=primotexto://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "db0db26d4027530568496a5411403f656a138e3c"
+        }
+    }
+}

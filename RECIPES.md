@@ -106,6 +106,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [6.4](symfony/phrase-translation-provider/6.4) | `phrase-translation-provider`, `phrasetranslationprovider` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
+| [symfony/primotexto-notifier](https://packagist.org/packages/symfony/primotexto-notifier) | [7.1](symfony/primotexto-notifier/7.1) | `primotexto-notifier`, `primotextonotifier` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |
 | [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
 | [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [7.1](symfony/pushy-notifier/7.1) | `pushy-notifier`, `pushynotifier` |
