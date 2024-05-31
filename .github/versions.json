@@ -1,8 +1,8 @@
 {
     "lts": "6.4",
-    "stable": "7.0",
-    "next": "7.1",
-    "previous": "6.4",
+    "stable": "7.1",
+    "next": "7.2",
+    "previous": "7.0",
     "dev": "7.2",
     "dev-name": "7.2",
     "splits": {
