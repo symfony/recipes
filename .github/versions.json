@@ -3,8 +3,8 @@
     "stable": "7.0",
     "next": "7.1",
     "previous": "6.4",
-    "dev": "7.1",
-    "dev-name": "7.1",
+    "dev": "7.2",
+    "dev-name": "7.2",
     "splits": {
         "symfony/all-my-sms-notifier": [
             "5.3",
@@ -1382,6 +1382,9 @@
             "6.4",
             "7.0",
             "7.1",
+            "7.2"
+        ],
+        "symfony/primotexto-notifier": [
             "7.2"
         ],
         "symfony/process": [
