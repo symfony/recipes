@@ -435,6 +435,7 @@
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-icons": "symfony/ux-icons",
+        "ux-lazy-image": "symfony/ux-lazy-image",
         "ux-live-component": "symfony/ux-live-component",
         "ux-react": "symfony/ux-react",
         "ux-svelte": "symfony/ux-svelte",
@@ -443,6 +444,7 @@
         "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
         "uxicons": "symfony/ux-icons",
+        "uxlazyimage": "symfony/ux-lazy-image",
         "uxlivecomponent": "symfony/ux-live-component",
         "uxreact": "symfony/ux-react",
         "uxsvelte": "symfony/ux-svelte",
@@ -1017,6 +1019,10 @@
         ],
         "symfony/ux-icons": [
             "2.17"
+        ],
+        "symfony/ux-lazy-image": [
+            "2.17",
+            "2.18"
         ],
         "symfony/ux-live-component": [
             "2.0",
