@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=mailomat+api://KEY@default",
+        "#2": "#MAILER_DSN=mailomat+smtp://USERNAME:PASSWORD@default"
+    }
+}
