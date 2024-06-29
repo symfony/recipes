@@ -194,6 +194,8 @@
         "mailjet-notifier": "symfony/mailjet-notifier",
         "mailjetmailer": "symfony/mailjet-mailer",
         "mailjetnotifier": "symfony/mailjet-notifier",
+        "mailomat-mailer": "symfony/mailomat-mailer",
+        "mailomatmailer": "symfony/mailomat-mailer",
         "mailpacemailer": "symfony/mail-pace-mailer",
         "make": "symfony/maker-bundle",
         "maker": "symfony/maker-bundle",
@@ -2409,6 +2411,9 @@
                 "6.4",
                 "7.0",
                 "7.1",
+                "7.2"
+            ],
+            "symfony/mailomat-mailer": [
                 "7.2"
             ],
             "symfony/mastodon-notifier": [
