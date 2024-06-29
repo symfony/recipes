@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/mailomat-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=mailomat+api://KEY@default",
+                    "#2": "#MAILER_DSN=mailomat+smtp://USERNAME:PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "cae79df0a76790e0d6988d41ae0c4520fa0f8ece"
+        }
+    }
+}

@@ -773,6 +773,9 @@
         "symfony/mailjet-notifier": [
             "5.4"
         ],
+        "symfony/mailomat-mailer": [
+            "7.2"
+        ],
         "symfony/maker-bundle": [
             "1.0"
         ],
