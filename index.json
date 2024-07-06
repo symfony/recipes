@@ -938,6 +938,9 @@
         "symfony/sinch-notifier": [
             "5.1"
         ],
+        "symfony/sipgate-notifier": [
+            "7.2"
+        ],
         "symfony/slack-notifier": [
             "5.0",
             "5.1",

@@ -126,6 +126,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/sevenio-notifier](https://packagist.org/packages/symfony/sevenio-notifier) | [7.1](symfony/sevenio-notifier/7.1) | `sevenio-notifier`, `sevenionotifier` |
 | [symfony/simple-textin-notifier](https://packagist.org/packages/symfony/simple-textin-notifier) | [6.3](symfony/simple-textin-notifier/6.3) | `simple-textin-notifier`, `simpletextinnotifier` |
 | [symfony/sinch-notifier](https://packagist.org/packages/symfony/sinch-notifier) | [5.1](symfony/sinch-notifier/5.1) | `sinch-notifier`, `sinchnotifier` |
+| [symfony/sipgate-notifier](https://packagist.org/packages/symfony/sipgate-notifier) | [7.2](symfony/sipgate-notifier/7.2) | `sipgate-notifier`, `sipgatenotifier` |
 | [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [5.2](symfony/slack-notifier/5.2) | `slack-notifier`, `slacknotifier` |
 | [symfony/sms-biuras-notifier](https://packagist.org/packages/symfony/sms-biuras-notifier) | [5.3](symfony/sms-biuras-notifier/5.3) | `sms-biuras-notifier`, `smsbiurasnotifier` |
 | [symfony/sms-factor-notifier](https://packagist.org/packages/symfony/sms-factor-notifier) | [6.2](symfony/sms-factor-notifier/6.2) | `sms-factor-notifier`, `smsfactornotifier` |
