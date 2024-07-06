@@ -368,6 +368,8 @@
         "simpletextinnotifier": "symfony/simple-textin-notifier",
         "sinch-notifier": "symfony/sinch-notifier",
         "sinchnotifier": "symfony/sinch-notifier",
+        "sipgate-notifier": "symfony/sipgate-notifier",
+        "sipgatenotifier": "symfony/sipgate-notifier",
         "slack-notifier": "symfony/slack-notifier",
         "slacknotifier": "symfony/slack-notifier",
         "sms-biuras-notifier": "symfony/sms-biuras-notifier",
@@ -2034,8 +2036,7 @@
                 "6.3",
                 "6.4",
                 "7.0",
-                "7.1",
-                "7.2"
+                "7.1"
             ],
             "symfony/go-ip-notifier": [
                 "6.4",
@@ -3148,6 +3149,9 @@
                 "6.4",
                 "7.0",
                 "7.1",
+                "7.2"
+            ],
+            "symfony/sipgate-notifier": [
                 "7.2"
             ],
             "symfony/slack-notifier": [
