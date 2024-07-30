@@ -4,7 +4,8 @@ framework:
         #prefix_seed: your_vendor_name/app_name
 
         # The "app" cache stores to the filesystem by default.
-        # The data in this cache should persist between deploys.
+        directory: '%env(default:kernel.cache_dir:APP_CACHE_POOLS_DIR)%/pools/app'
+
         # Other options include:
 
         # Redis
