@@ -1,9 +1,6 @@
   * You're near ready to use the Symfony UX Map component. You can create your first map
-    by using the <info>Map</info> class, but you will not be able to render it yet until you:
-    
-    1. Install the Symfony UX Map Bridge you want to use, they can be
-       found at <comment>https://symfony.com/bundles/ux-map/current/index.html#available-renderers</>.
-    2. Uncomment the <info># renderer: '%env(UX_MAP_DSN)%'</> line 
-       in <comment>config/packages/ux_map.yaml</>;
+    by using the <info>Map</info> class, but you will not be able to render it yet until you
+    install the Symfony UX Map Bridge you want to use, they can be found at 
+    <comment>https://symfony.com/bundles/ux-map/current/index.html#available-renderers</>.
 
   * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-map/current/index.html</>
