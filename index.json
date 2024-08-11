@@ -864,6 +864,9 @@
         "symfony/plivo-notifier": [
             "6.3"
         ],
+        "symfony/postal-mailer": [
+            "7.2"
+        ],
         "symfony/postmark-mailer": [
             "4.3",
             "4.4"

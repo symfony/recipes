@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/postal-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=postal+api://API_TOKEN@BASE_URL",
+                    "#2": "MAILER_DSN=postal://API_TOKEN@BASE_URL"
+                }
+            },
+            "files": [],
+            "ref": "a99ffc385336f3e8f11a9e8f822debd609ccf9c5"
+        }
+    }
+}

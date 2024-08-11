@@ -106,6 +106,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [6.3](symfony/phpunit-bridge/6.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [6.4](symfony/phrase-translation-provider/6.4) | `phrase-translation-provider`, `phrasetranslationprovider` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
+| [symfony/postal-mailer](https://packagist.org/packages/symfony/postal-mailer) | [7.2](symfony/postal-mailer/7.2) | `postal-mailer`, `postalmailer` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
 | [symfony/primotexto-notifier](https://packagist.org/packages/symfony/primotexto-notifier) | [7.2](symfony/primotexto-notifier/7.2) | `primotexto-notifier`, `primotextonotifier` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |
