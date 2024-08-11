@@ -271,6 +271,8 @@
         "platformsh": "symfonycorp/platformsh-pack",
         "plivo-notifier": "symfony/plivo-notifier",
         "plivonotifier": "symfony/plivo-notifier",
+        "postal-mailer": "symfony/postal-mailer",
+        "postalmailer": "symfony/postal-mailer",
         "postmark-mailer": "symfony/postmark-mailer",
         "postmarkmailer": "symfony/postmark-mailer",
         "primotexto-notifier": "symfony/primotexto-notifier",
@@ -2700,6 +2702,9 @@
                 "6.4",
                 "7.0",
                 "7.1",
+                "7.2"
+            ],
+            "symfony/postal-mailer": [
                 "7.2"
             ],
             "symfony/postmark-mailer": [
