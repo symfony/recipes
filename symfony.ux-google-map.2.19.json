@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/ux-google-map": {
+            "manifest": {
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/symfony-ux/blob/2.x/src/Map/src/Bridge/Google/README.md",
+                    "#2": "",
+                    "GOOGLE_MAPS_API_KEY": "# Get your API key at https://developers.google.com/maps/documentation/javascript/get-api-key",
+                    "UX_MAP_DSN": "google://%env(GOOGLE_MAPS_API_KEY)%@default"
+                }
+            },
+            "files": [],
+            "ref": "98be4bcd10c1c4e5c05543b278755b7532c9c2e5"
+        }
+    }
+}

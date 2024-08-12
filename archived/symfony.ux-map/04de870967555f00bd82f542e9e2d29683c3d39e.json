@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "symfony/ux-map": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Map\\UXMapBundle": [
+                        "all"
+                    ]
+                },
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * You're near ready to use the Symfony UX Map component. You can create your first map",
+                    "    by using the <info>Map</info> class, but you will not be able to render it yet until you",
+                    "    install the Symfony UX Map Bridge you want to use, they can be found at ",
+                    "    <comment>https://symfony.com/bundles/ux-map/current/index.html#available-renderers</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-map/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/ux_map.yaml": {
+                    "contents": [
+                        "ux_map:",
+                        "    # https://symfony.com/bundles/ux-map/current/index.html#available-renderers",
+                        "    renderer: '%env(resolve:default::UX_MAP_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "04de870967555f00bd82f542e9e2d29683c3d39e"
+        }
+    }
+}

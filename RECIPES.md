@@ -152,9 +152,12 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](symfony/uid/7.0) | `uid` |
 | [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
+| [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.19](symfony/ux-google-map/2.19) | `ux-google-map`, `uxgooglemap` |
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [2.17](symfony/ux-icons/2.17) | `ux-icons`, `uxicons` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.18](symfony/ux-lazy-image/2.18) | `ux-lazy-image`, `uxlazyimage` |
+| [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
+| [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](symfony/ux-map/2.19) | `ux-map`, `uxmap` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
 | [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.9](symfony/ux-translator/2.9) | `ux-translator`, `uxtranslator` |

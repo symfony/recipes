@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "symfony/ux-leaflet-map": {
+            "manifest": {
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/symfony-ux/blob/2.x/src/Map/src/Bridge/Leaflet/README.md",
+                    "#2": "",
+                    "UX_MAP_DSN": "leaflet://default"
+                }
+            },
+            "files": [],
+            "ref": "e696e4124071004125072f3b582a2b7e43ad58c1"
+        }
+    }
+}

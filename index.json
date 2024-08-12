@@ -440,18 +440,24 @@
         "unifonicnotifier": "symfony/unifonic-notifier",
         "ux": "symfony/webpack-encore-bundle",
         "ux-autocomplete": "symfony/ux-autocomplete",
+        "ux-google-map": "symfony/ux-google-map",
         "ux-icons": "symfony/ux-icons",
         "ux-lazy-image": "symfony/ux-lazy-image",
+        "ux-leaflet-map": "symfony/ux-leaflet-map",
         "ux-live-component": "symfony/ux-live-component",
+        "ux-map": "symfony/ux-map",
         "ux-react": "symfony/ux-react",
         "ux-svelte": "symfony/ux-svelte",
         "ux-translator": "symfony/ux-translator",
         "ux-twig-component": "symfony/ux-twig-component",
         "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
+        "uxgooglemap": "symfony/ux-google-map",
         "uxicons": "symfony/ux-icons",
         "uxlazyimage": "symfony/ux-lazy-image",
+        "uxleafletmap": "symfony/ux-leaflet-map",
         "uxlivecomponent": "symfony/ux-live-component",
+        "uxmap": "symfony/ux-map",
         "uxreact": "symfony/ux-react",
         "uxsvelte": "symfony/ux-svelte",
         "uxtranslator": "symfony/ux-translator",
@@ -1032,6 +1038,9 @@
             "2.2",
             "2.6"
         ],
+        "symfony/ux-google-map": [
+            "2.19"
+        ],
         "symfony/ux-icons": [
             "2.17"
         ],
@@ -1039,9 +1048,15 @@
             "2.17",
             "2.18"
         ],
+        "symfony/ux-leaflet-map": [
+            "2.19"
+        ],
         "symfony/ux-live-component": [
             "2.0",
             "2.6"
+        ],
+        "symfony/ux-map": [
+            "2.19"
         ],
         "symfony/ux-react": [
             "2.8",
@@ -1280,6 +1295,21 @@
             },
             "7.0": {
                 "symfony/framework-bundle": "<7.0"
+            }
+        },
+        "symfony/ux-google-map": {
+            "2.19": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            }
+        },
+        "symfony/ux-leaflet-map": {
+            "2.19": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            }
+        },
+        "symfony/ux-map": {
+            "2.19": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
             }
         },
         "symfony/ux-react": {
