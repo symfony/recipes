@@ -1964,6 +1964,9 @@
             "7.1",
             "7.2"
         ],
+        "symfony/sweego-mailer": [
+            "7.2"
+        ],
         "symfony/telegram-notifier": [
             "5.0",
             "5.1",
