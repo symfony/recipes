@@ -399,6 +399,8 @@
         "stimulusbundle": "symfony/stimulus-bundle",
         "stopwatch": "symfony/stopwatch",
         "string": "symfony/string",
+        "sweego-mailer": "symfony/sweego-mailer",
+        "sweegomailer": "symfony/sweego-mailer",
         "swiftmailer": "symfony/swiftmailer-bundle",
         "swiftmailer-bundle": "symfony/swiftmailer-bundle",
         "swiftmailerbundle": "symfony/swiftmailer-bundle",
@@ -3330,6 +3332,9 @@
                 "6.4",
                 "7.0",
                 "7.1",
+                "7.2"
+            ],
+            "symfony/sweego-mailer": [
                 "7.2"
             ],
             "symfony/telegram-notifier": [
