@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=sweego+api://API_KEY@default",
+        "#2": "MAILER_DSN=sweego+smtp://LOGIN:PASSWORD@HOST:PORT"
+    }
+}
