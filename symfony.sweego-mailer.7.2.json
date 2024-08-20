@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/sweego-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=sweego+api://API_KEY@default",
+                    "#2": "MAILER_DSN=sweego+smtp://LOGIN:PASSWORD@HOST:PORT"
+                }
+            },
+            "files": [],
+            "ref": "633f6d6e1ae3e0f7abd24ed3945e094d369aadde"
+        }
+    }
+}

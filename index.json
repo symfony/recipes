@@ -994,6 +994,9 @@
             "2.9",
             "2.13"
         ],
+        "symfony/sweego-mailer": [
+            "7.2"
+        ],
         "symfony/swiftmailer-bundle": [
             "2.5"
         ],
