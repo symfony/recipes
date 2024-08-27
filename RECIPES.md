@@ -66,6 +66,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/infobip-notifier](https://packagist.org/packages/symfony/infobip-notifier) | [5.2](symfony/infobip-notifier/5.2) | `infobip-notifier`, `infobipnotifier` |
 | [symfony/iqsms-notifier](https://packagist.org/packages/symfony/iqsms-notifier) | [5.3](symfony/iqsms-notifier/5.3) | `iqsms-notifier`, `iqsmsnotifier` |
 | [symfony/isendpro-notifier](https://packagist.org/packages/symfony/isendpro-notifier) | [6.3](symfony/isendpro-notifier/6.3) | `isendpro-notifier`, `isendpronotifier` |
+| [symfony/joli-notif-notifier](https://packagist.org/packages/symfony/joli-notif-notifier) | [7.2](symfony/joli-notif-notifier/7.2) | `joli-notif-notifier`, `jolinotifnotifier` |
 | [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [6.1](symfony/kaz-info-teh-notifier/6.1) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |
 | [symfony/light-sms-notifier](https://packagist.org/packages/symfony/light-sms-notifier) | [5.3](symfony/light-sms-notifier/5.3) | `light-sms-notifier`, `lightsmsnotifier` |
 | [symfony/line-notify-notifier](https://packagist.org/packages/symfony/line-notify-notifier) | [6.3](symfony/line-notify-notifier/6.3) | `line-notify-notifier`, `linenotifynotifier` |

@@ -739,6 +739,9 @@
         "symfony/isendpro-notifier": [
             "6.3"
         ],
+        "symfony/joli-notif-notifier": [
+            "7.2"
+        ],
         "symfony/kaz-info-teh-notifier": [
             "6.1"
         ],

@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/joli-notif-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            jolinotif: '%env(JOLINOTIF_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "JOLINOTIF_DSN=jolinotif://default"
+                }
+            },
+            "files": [],
+            "ref": "e38fbf364dbf38a431b561cf70fec054790b569f"
+        }
+    }
+}
