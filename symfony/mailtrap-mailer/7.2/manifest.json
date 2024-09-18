@@ -1,0 +1,6 @@
+{
+    "env": {
+        "#1": "MAILER_DSN=mailtrap+api://TOKEN@default",
+        "#2": "MAILER_DSN=mailtrap+smtp://PASSWORD@default"
+    }
+}
