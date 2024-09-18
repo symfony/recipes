@@ -1093,6 +1093,9 @@
         "symfony/mailomat-mailer": [
             "7.2"
         ],
+        "symfony/mailtrap-mailer": [
+            "7.2"
+        ],
         "symfony/mastodon-notifier": [
             "6.3",
             "6.4",
