@@ -83,6 +83,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/mailjet-mailer](https://packagist.org/packages/symfony/mailjet-mailer) | [5.2](symfony/mailjet-mailer/5.2) | `mailjet-mailer`, `mailjetmailer` |
 | [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [5.4](symfony/mailjet-notifier/5.4) | `mailjet-notifier`, `mailjetnotifier` |
 | [symfony/mailomat-mailer](https://packagist.org/packages/symfony/mailomat-mailer) | [7.2](symfony/mailomat-mailer/7.2) | `mailomat-mailer`, `mailomatmailer` |
+| [symfony/mailtrap-mailer](https://packagist.org/packages/symfony/mailtrap-mailer) | [7.2](symfony/mailtrap-mailer/7.2) | `mailtrap-mailer`, `mailtrapmailer` |
 | [symfony/maker-bundle](https://packagist.org/packages/symfony/maker-bundle) | [1.0](symfony/maker-bundle/1.0) | `generator`, `make`, `maker`, `maker-bundle`, `makerbundle` |
 | [symfony/mastodon-notifier](https://packagist.org/packages/symfony/mastodon-notifier) | [6.3](symfony/mastodon-notifier/6.3) | `mastodon-notifier`, `mastodonnotifier` |
 | [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [5.1](symfony/mattermost-notifier/5.1) | `mattermost-notifier`, `mattermostnotifier` |

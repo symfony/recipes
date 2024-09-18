@@ -795,6 +795,9 @@
         "symfony/mailomat-mailer": [
             "7.2"
         ],
+        "symfony/mailtrap-mailer": [
+            "7.2"
+        ],
         "symfony/maker-bundle": [
             "1.0"
         ],

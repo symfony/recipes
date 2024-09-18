@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/mailtrap-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=mailtrap+api://TOKEN@default",
+                    "#2": "MAILER_DSN=mailtrap+smtp://PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "e1d25e0fab8778b977233aff6762d3791eab3155"
+        }
+    }
+}
