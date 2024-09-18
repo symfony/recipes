@@ -199,6 +199,8 @@
         "mailomat-mailer": "symfony/mailomat-mailer",
         "mailomatmailer": "symfony/mailomat-mailer",
         "mailpacemailer": "symfony/mail-pace-mailer",
+        "mailtrap-mailer": "symfony/mailtrap-mailer",
+        "mailtrapmailer": "symfony/mailtrap-mailer",
         "make": "symfony/maker-bundle",
         "maker": "symfony/maker-bundle",
         "maker-bundle": "symfony/maker-bundle",
@@ -2469,6 +2471,9 @@
                 "7.2"
             ],
             "symfony/mailomat-mailer": [
+                "7.2"
+            ],
+            "symfony/mailtrap-mailer": [
                 "7.2"
             ],
             "symfony/mastodon-notifier": [
