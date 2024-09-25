@@ -4,7 +4,7 @@
 
   * Using MakerBundle? Try <info>php bin/console make:entity --api-resource</info> 
 
-  * To enable the GraphQL support, run <comment>composer require api-platform/graphql</>,
+  * To enable the GraphQL support, run <comment>composer require webonyx/graphql-php</>,
     then browse <info>/api/graphql</info>.
 
   * <fg=blue>Read</> the documentation at <comment>https://api-platform.com/docs/</>
