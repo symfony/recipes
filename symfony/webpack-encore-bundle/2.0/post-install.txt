@@ -2,4 +2,4 @@
 
   * Compile your assets: <fg=green>npm run dev</>
 
-  * Or start the development server: <fg=green>npm run watch</>
+  * Or start the development server: <fg=green>npm run dev-server</>
