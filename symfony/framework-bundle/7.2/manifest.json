@@ -15,6 +15,11 @@
         "APP_ENV": "dev",
         "APP_SECRET": ""
     },
+    "dotenv": {
+        "local": {
+            "APP_SECRET": "%generate(secret)%"
+        }
+    },
     "gitignore": [
         "/.env.local",
         "/.env.local.php",
