@@ -16,7 +16,7 @@
         "APP_SECRET": ""
     },
     "dotenv": {
-        "local": {
+        "dev": {
             "APP_SECRET": "%generate(secret)%"
         }
     },
