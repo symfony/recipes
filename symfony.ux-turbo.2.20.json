@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ux-turbo": {
+            "manifest": {
+                "conflict": {
+                    "symfony/framework-bundle": "<7.2",
+                    "symfony/security-csrf": "<7.2"
+                },
+                "add-lines": [
+                    {
+                        "file": "config/packages/framework.yaml",
+                        "position": "after_target",
+                        "target": "        csrf_protection:",
+                        "content": "            check_header: true"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "0103ff447478c98e6af6de14c20fa6d8938b4591"
+        }
+    }
+}
