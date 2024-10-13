@@ -9,7 +9,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [api-platform/symfony](https://packagist.org/packages/api-platform/symfony) | [4.0](api-platform/symfony/4.0) |  |
 | [blackfireio/blackfire-symfony-meta](https://packagist.org/packages/blackfireio/blackfire-symfony-meta) | [1.0](blackfireio/blackfire-symfony-meta/1.0) | `blackfire` |
 | [doctrine/annotations](https://packagist.org/packages/doctrine/annotations) | [1.10](doctrine/annotations/1.10) |  |
-| [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.12](doctrine/doctrine-bundle/2.12) |  |
+| [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.13](doctrine/doctrine-bundle/2.13) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
 | [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
 | [easycorp/easyadmin-bundle](https://packagist.org/packages/easycorp/easyadmin-bundle) | [3.0](easycorp/easyadmin-bundle/3.0) | `admin`, `admin-gen`, `admin-generator`, `admingen`, `admingenerator` |
