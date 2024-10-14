@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            linebot: '%env(LINE_BOT_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "LINE_BOT_DSN=linebot://TOKEN@default?receiver=RECEIVER"
+    }
+}
