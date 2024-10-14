@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/line-bot-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            linebot: '%env(LINE_BOT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LINE_BOT_DSN=linebot://TOKEN@default?receiver=RECEIVER"
+                }
+            },
+            "files": [],
+            "ref": "1db2ce69193e4ac428021817d01ad2a3b64549be"
+        }
+    }
+}

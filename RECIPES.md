@@ -70,6 +70,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/joli-notif-notifier](https://packagist.org/packages/symfony/joli-notif-notifier) | [7.2](symfony/joli-notif-notifier/7.2) | `joli-notif-notifier`, `jolinotifnotifier` |
 | [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [6.1](symfony/kaz-info-teh-notifier/6.1) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |
 | [symfony/light-sms-notifier](https://packagist.org/packages/symfony/light-sms-notifier) | [5.3](symfony/light-sms-notifier/5.3) | `light-sms-notifier`, `lightsmsnotifier` |
+| [symfony/line-bot-notifier](https://packagist.org/packages/symfony/line-bot-notifier) | [7.2](symfony/line-bot-notifier/7.2) | `line-bot-notifier`, `linebotnotifier` |
 | [symfony/line-notify-notifier](https://packagist.org/packages/symfony/line-notify-notifier) | [6.3](symfony/line-notify-notifier/6.3) | `line-notify-notifier`, `linenotifynotifier` |
 | [symfony/linked-in-notifier](https://packagist.org/packages/symfony/linked-in-notifier) | [5.2](symfony/linked-in-notifier/5.2) | `linked-in-notifier`, `linkedinnotifier` |
 | [symfony/lock](https://packagist.org/packages/symfony/lock) | [5.2](symfony/lock/5.2) | `lock` |

@@ -758,6 +758,9 @@
         "symfony/light-sms-notifier": [
             "5.3"
         ],
+        "symfony/line-bot-notifier": [
+            "7.2"
+        ],
         "symfony/line-notify-notifier": [
             "6.3"
         ],
