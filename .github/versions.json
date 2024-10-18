@@ -823,10 +823,7 @@
             "5.1",
             "5.2",
             "5.3",
-            "5.4",
-            "6.4",
-            "7.1",
-            "7.2"
+            "5.4"
         ],
         "symfony/infobip-mailer": [
             "6.2",
@@ -1708,10 +1705,7 @@
             "5.1",
             "5.2",
             "5.3",
-            "5.4",
-            "6.4",
-            "7.1",
-            "7.2"
+            "5.4"
         ],
         "symfony/security-http": [
             "3.4",
@@ -1980,6 +1974,9 @@
             "7.2"
         ],
         "symfony/sweego-mailer": [
+            "7.2"
+        ],
+        "symfony/sweego-notifier": [
             "7.2"
         ],
         "symfony/telegram-notifier": [
