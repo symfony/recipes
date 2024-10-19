@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/sweego-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            sweego: '%env(SWEEGO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SWEEGO_DSN=sweego://API_KEY@default?region=REGION&campaign_type=CAMPAIGN_TYPE"
+                }
+            },
+            "files": [],
+            "ref": "32f04ab1fef5ddc1002cce4d1c35758a1c4ad342"
+        }
+    }
+}
