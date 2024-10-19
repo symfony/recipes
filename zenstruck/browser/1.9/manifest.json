@@ -1,0 +1,12 @@
+{
+    "aliases": ["browser"],
+    "add-lines": [
+        {
+            "file": "phpunit.xml.dist",
+            "content": "        <server name=\"BROWSER_ALWAYS_START_WEBSERVER\" value=\"1\"/>",
+            "position": "after_target",
+            "target": "<server name=\"SHELL_VERBOSITY\" value=\"-1\" />",
+            "warn_if_missing": true
+        }
+    ]
+}

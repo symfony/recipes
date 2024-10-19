@@ -1,0 +1,5 @@
+  * You're ready to use zenstruck/browser:
+    1. Add the <info>HasBrowser</info> trait to "kernel" test cases
+    2. Start using <info>$this->browser()->...</info> in your tests
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/browser#zenstruckbrowser</>
