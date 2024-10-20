@@ -46,6 +46,7 @@
         "brevo-notifier": "symfony/brevo-notifier",
         "brevomailer": "symfony/brevo-mailer",
         "brevonotifier": "symfony/brevo-notifier",
+        "browser": "zenstruck/browser",
         "browser-kit": "symfony/browser-kit",
         "browserkit": "symfony/browser-kit",
         "cache": "symfony/cache",
@@ -1170,6 +1171,9 @@
         ],
         "willdurand/js-translation-bundle": [
             "2.0"
+        ],
+        "zenstruck/browser": [
+            "1.9"
         ],
         "zenstruck/foundry": [
             "1.9",

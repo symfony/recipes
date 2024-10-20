@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "zenstruck/browser": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "phpunit.xml.dist",
+                        "content": "        <server name=\"BROWSER_ALWAYS_START_WEBSERVER\" value=\"1\"/>",
+                        "position": "after_target",
+                        "target": "<server name=\"SHELL_VERBOSITY\" value=\"-1\" />",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/browser:",
+                    "    1. Add the <info>HasBrowser</info> trait to \"kernel\" test cases",
+                    "    2. Start using <info>$this->browser()->...</info> in your tests",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/browser#zenstruckbrowser</>"
+                ]
+            },
+            "files": [],
+            "ref": "66c5290398734ff02cedddf44dce6eb2002d958c"
+        }
+    }
+}
