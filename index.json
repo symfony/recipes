@@ -1177,7 +1177,8 @@
         ],
         "zenstruck/foundry": [
             "1.9",
-            "1.10"
+            "1.10",
+            "2.0"
         ],
         "zenstruck/messenger-test": [
             "1.7"
@@ -1400,6 +1401,9 @@
         },
         "zenstruck/foundry": {
             "1.10": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "2.0": {
                 "symfony/framework-bundle": "<5.3"
             }
         }
