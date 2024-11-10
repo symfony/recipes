@@ -1,0 +1,20 @@
+{
+    "conflict": {
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/ux_map.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    renderer: '%env(resolve:default::UX_MAP_DSN)%'",
+            "content": "    google_maps:\n        # define the default map id for all maps (https://developers.google.com/maps/documentation/get-map-id)\n        default_map_id: null"
+        }
+    ],
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/2.x/src/Map/src/Bridge/Google/README.md",
+        "#2": "",
+        "GOOGLE_MAPS_API_KEY": "# Get your API key at https://developers.google.com/maps/documentation/javascript/get-api-key",
+        "UX_MAP_DSN": "google://%env(GOOGLE_MAPS_API_KEY)%@default"
+    }
+}
