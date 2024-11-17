@@ -1,0 +1,38 @@
+{
+    "bundles": {
+        "Symfony\\WebpackEncoreBundle\\WebpackEncoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "package.json": "package.json",
+        "webpack.config.js": "webpack.config.js"
+    },
+    "aliases": ["ux", "encore", "webpack", "webpack-encore"],
+    "gitignore": [
+        "/node_modules/",
+        "/%PUBLIC_DIR%/build/",
+        "npm-debug.log",
+        "yarn-error.log"
+    ],
+    "conflict": {
+        "symfony/framework-bundle": "<5.4",
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    },
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ encore_entry_script_tags('app') }}",
+            "position": "after_target",
+            "target": "{% block javascripts %}",
+            "warn_if_missing": true
+        },
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ encore_entry_link_tags('app') }}",
+            "position": "after_target",
+            "target": "{% block stylesheets %}",
+            "warn_if_missing": true
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            slack: '%env(SLACK_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "See https://api.slack.com/messaging/webhooks",
+        "#2": "SLACK_DSN=slack://default/ID"
+    }
+}

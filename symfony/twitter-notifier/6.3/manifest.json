@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            twitter: '%env(TWITTER_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "TWITTER_DSN=twitter://API_KEY:API_SECRET:ACCESS_TOKEN:ACCESS_SECRET@default"
+    }
+}

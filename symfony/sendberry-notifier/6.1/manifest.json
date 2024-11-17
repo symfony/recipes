@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            sendberry: '%env(SENDBERRY_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "SENDBERRY_DSN=sendberry://USERNAME:PASSWORD@default?auth_key=AUTH_KEY&from=FROM"
+    }
+}

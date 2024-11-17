@@ -9,7 +9,7 @@
     "env": {
         "JWT_SECRET_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
         "JWT_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
-        "JWT_PASSPHRASE": "%generate(secret)%"
+        "JWT_PASSPHRASE": "%generate(secret, 32)%"
     },
     "gitignore": [
         "/%CONFIG_DIR%/jwt/*.pem"

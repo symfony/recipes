@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            sms-factor: '%env(SMS_FACTOR_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "SMS_FACTOR_DSN=sms-factor://TOKEN@default?sender=SENDER&push_type=PUSH_TYPE"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            discord: '%env(DISCORD_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "DISCORD_DSN=discord://TOKEN@default?webhook_id=ID"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            lightsms: '%env(LIGHTSMS_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "LIGHTSMS_DSN=lightsms://LOGIN:TOKEN@default?from=PHONE"
+    }
+}

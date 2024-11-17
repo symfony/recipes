@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "BREVO_DSN=brevo://API_KEY@default?sender=SENDER"
+    }
+}

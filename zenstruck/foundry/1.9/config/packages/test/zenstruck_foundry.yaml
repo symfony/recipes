@@ -1,0 +1,5 @@
+# Unless you want different configuration for test/dev environments,
+# add configuration to config/packages/dev/zenstruck_foundry.yml
+# and this will be synced to your test environment.
+imports:
+    - { resource: ../dev/zenstruck_foundry.yaml }

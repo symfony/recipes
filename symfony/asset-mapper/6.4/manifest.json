@@ -1,0 +1,29 @@
+{
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "importmap.php": "importmap.php"
+    },
+    "aliases": ["asset-mapper", "importmap"],
+    "gitignore": [
+        "/%PUBLIC_DIR%/assets/",
+        "/assets/vendor/"
+    ],
+    "composer-scripts": {
+        "importmap:install": "symfony-cmd"
+    },
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {% block importmap %}{{ importmap('app') }}{% endblock %}",
+            "position": "after_target",
+            "target": "{% block javascripts %}",
+            "warn_if_missing": true
+        }
+    ],
+    "conflict": {
+        "symfony/framework-bundle": "<6.3",
+        "symfony/twig-bundle": "<6.3",
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    }
+}

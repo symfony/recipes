@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        texter_transports:",
+            "content": "            twilio: '%env(TWILIO_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "TWILIO_DSN=twilio://SID:TOKEN@default?from=FROM"
+    }
+}

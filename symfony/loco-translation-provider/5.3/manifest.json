@@ -1,0 +1,13 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/translation.yaml",
+            "position": "after_target",
+            "target": "        providers:",
+            "content": "            loco:\n                dsn: '%env(LOCO_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "LOCO_DSN=loco://API_KEY@default"
+    }
+}

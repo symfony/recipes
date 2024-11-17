@@ -1,0 +1,14 @@
+{
+    "conflict": {
+        "symfony/framework-bundle": "<7.2",
+        "symfony/security-csrf": "<7.2"
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/framework.yaml",
+            "position": "after_target",
+            "target": "        csrf_protection:",
+            "content": "            check_header: true"
+        }
+    ]
+}

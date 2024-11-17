@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "SEVENIO_DSN=sevenio://API_KEY@default?from=FROM"
+    }
+}

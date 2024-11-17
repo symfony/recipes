@@ -4,6 +4,7 @@ monolog:
             type: fingers_crossed
             action_level: error
             handler: nested
+            buffer_size: 50 # How many messages should be saved? Prevent memory leaks
             excluded_404s:
                 # regex: exclude all 404 errors from the logs
                 - ^/
@@ -15,11 +16,3 @@ monolog:
             type: console
             process_psr_3_messages: false
             channels: ["!event", "!doctrine"]
-        deprecation:
-            type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.deprecations.log"
-        deprecation_filter:
-            type: filter
-            handler: deprecation
-            max_level: info
-            channels: ["php"]

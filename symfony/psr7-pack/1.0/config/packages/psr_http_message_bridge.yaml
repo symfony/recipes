@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\Bridge\PsrHttpMessage\HttpFoundationFactoryInterface:
+        '@Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory'
+
+    Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface:
+        '@Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory'
+
+    Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory: null
+    Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory: null
+
+    # Uncomment to allow controllers to receive a PSR-7 server request object as argument
+    #Symfony\Bridge\PsrHttpMessage\ArgumentValueResolver\PsrServerRequestResolver: null
+
+    # Uncomment to allow controllers to return a PSR-7 response object
+    #Symfony\Bridge\PsrHttpMessage\EventListener\PsrResponseListener: null

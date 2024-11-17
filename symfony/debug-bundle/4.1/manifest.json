@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Symfony\\Bundle\\DebugBundle\\DebugBundle": ["dev", "test"]
+        "Symfony\\Bundle\\DebugBundle\\DebugBundle": ["dev"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"

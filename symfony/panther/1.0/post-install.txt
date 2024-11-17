@@ -1,0 +1,9 @@
+  * Install <fg=green>ChromeDriver</> or <fg=green>geckodriver</> with 
+    the package manager of your Operating System.
+    
+    Alternatively, use Browser Driver Installer:
+
+    <fg=green>composer require --dev dbrekelmans/bdi</>
+    <fg=green>vendor/bin/bdi detect drivers</>
+
+    This step is not necessary when using Docker.

@@ -7,6 +7,8 @@ Symfony recipes allow the automation of Composer packages configuration via the
 This repository contains "official" recipes for Composer packages endorsed by
 the Symfony Core Team. For contributed recipes, see the `contrib repository`_.
 
+See `RECIPES.md`_ for a full list of recipes that live in this repository.
+
 Creating Recipes
 ----------------
 
@@ -47,6 +49,22 @@ options and configurators.
     When creating a recipe, don't create bundle config files under
     ``config/packages/`` when no options are set.
 
+Updating Recipes
+----------------
+
+When a recipe needs to be updated, we try to minimize the impact for the
+current versions. Creating a new project with a set of dependencies should
+always use the same recipes to avoid differences between the generated code and
+the existing documentation, blog posts, videos for these versions.
+
+As a rule of thumb, consider the same principles as semantic versioning:
+
+* Only change an existing recipe for a version in case of a bug (typos,
+  mis-configuration, ...);
+
+* If the change is about a new best practice or a different way of doing
+  something, do it for the next version of the dependency.
+
 Options
 -------
 
@@ -77,7 +95,7 @@ Symfony is smart enough to reverse those tasks when uninstalling and
 unconfiguring the dependencies.
 
 There are several types of tasks, which are called **configurators**:
-``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``,
+``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``, ``container``
 ``composer-scripts``, ``gitignore``, and ``post-install-output``.
 
 ``bundles`` Configurator
@@ -132,6 +150,13 @@ Copies files or directories from the Composer package contents to the Symfony
 application. It's defined as an associative array where the key is the original
 file/directory and the value is the target file/directory.
 
+.. caution::
+
+    Copying files from the package should be avoided, except for some very
+    specific use cases. Copying PHP files under the project's ``src/``
+    directory is almost always a bad idea; consider adding a command in your
+    bundle that is able to generate such PHP files instead.
+
 This example copies the ``bin/check.php`` script of the package into the binary
 directory of the application:
 
@@ -152,7 +177,7 @@ Recipes must use these placeholders instead of hardcoding the paths to be truly
 reusable. The placeholder values can be overridden in the ``extra`` section of
 your ``composer.json`` file (where you can define your own placeholders too):
 
-.. code-block:: json
+.. code-block:: jsonc
 
     // composer.json
     {
@@ -184,8 +209,11 @@ files and directories:
 
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
     }
+
+Avoid storing PHP files that should land under the ``src/`` directory; consider
+adding a command in your bundle that is able to generate such PHP files
+instead.
 
 ``env`` Configurator
 ~~~~~~~~~~~~~~~~~~~~
@@ -284,6 +312,44 @@ colors`_ are supported too:
 
       * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
 
+``add-lines`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If no other configurators can meet your needs, the ``add-lines`` configurator
+can add entire lines to files, either at the top, bottom or after a target:
+
+.. code-block:: json
+
+    "add-lines": [
+        {
+            "file": "webpack.config.js",
+            "content": "\nenables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+            "position": "after_target",
+            "target": ".splitEntryChunks()"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "import './bootstrap.js';",
+            "position": "top",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/translator.js",
+            "content": "export * from '../var/translations';",
+            "position": "bottom",
+            "requires": "symfony/webpack-encore-bundle"
+        }
+    ]
+
+Each item needs ``file``,  ``content`` and ``position``, which can be
+``top``, ``bottom`` or ``after_target``. If ``after_target`` is used, a
+``target`` must also be specified, which is a string that will be searched for
+in the file.
+
+If ``warn_if_missing`` is set to ``true``, a warning will be shown to the
+user if the ``file`` or ``target`` isn't found. If ``requires`` is set, the
+rule will only be applied if the given package is installed.
+
 Validation
 ----------
 
@@ -351,3 +417,4 @@ one used by ``symfony/framework-bundle``:
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`contrib repository`: https://github.com/symfony/recipes-contrib
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
+.. _`RECIPES.md`: https://github.com/symfony/recipes/blob/flex/main/RECIPES.md

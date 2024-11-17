@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            telegram: '%env(TELEGRAM_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "TELEGRAM_DSN=telegram://TOKEN@default?channel=CHAT_ID"
+    }
+}

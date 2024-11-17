@@ -1,0 +1,6 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    SensioLabs\AnsiConverter\Bridge\Twig\AnsiExtension: null

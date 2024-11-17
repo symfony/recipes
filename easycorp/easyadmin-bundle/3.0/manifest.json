@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": ["all"]
+    },
+    "aliases": ["admin-gen", "admin-generator", "admin"]
+}

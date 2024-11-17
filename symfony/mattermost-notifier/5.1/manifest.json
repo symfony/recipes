@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        chatter_transports:",
+            "content": "            mattermost: '%env(MATTERMOST_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "See https://docs.mattermost.com/developer/bot-accounts.html",
+        "#2": "MATTERMOST_DSN=mattermost://ACCESS_TOKEN@HOST/PATH?channel=CHANNEL"
+    }
+}

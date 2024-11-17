@@ -1,0 +1,14 @@
+name: Q&A
+
+on:
+    pull_request_target:
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    call-qa:
+        uses: symfony/recipes/.github/workflows/callable-qa.yml@main
+        secrets:
+            token: ${{ secrets.BOT_TOKEN }}

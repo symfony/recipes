@@ -1,0 +1,4 @@
+live_component:
+    resource: '@LiveComponentBundle/Resources/config/routing/live_component.xml'
+    # uncomment to add localization to your components
+    #prefix: '/{_locale}'

@@ -1,8 +1,10 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.28.0",
+        "@symfony/stimulus-bridge": "^2.0.0",
+        "@symfony/webpack-encore": "^1.0.0",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
+        "stimulus": "^2.0.0",
         "webpack-notifier": "^1.6.0"
     },
     "license": "UNLICENSED",

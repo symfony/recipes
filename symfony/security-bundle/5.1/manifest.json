@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["security"]
+}

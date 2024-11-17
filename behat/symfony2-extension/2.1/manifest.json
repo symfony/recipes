@@ -1,9 +1,0 @@
-{
-    "copy-from-recipe": {
-        "behat.yml.dist": "behat.yml.dist",
-        "config/": "%CONFIG_DIR%/",
-        "features/": "features/"
-    },
-    "aliases": ["behat"],
-    "gitignore": ["behat.yml"]
-}

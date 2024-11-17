@@ -1,0 +1,13 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/translation.yaml",
+            "position": "after_target",
+            "target": "        providers:",
+            "content": "            crowdin:\n                dsn: '%env(CROWDIN_DSN)%'"
+        }
+    ],
+    "env": {
+        "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+    }
+}

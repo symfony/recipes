@@ -1,0 +1,20 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+
+    # Note that the session will be started ONLY if you read or write from it.
+    session: true
+
+    #esi: true
+    #fragments: true
+
+    # Enable stateless CSRF protection for forms and logins/logouts
+    form: { csrf_protection: { token_id: submit } }
+    csrf_protection:
+        stateless_token_ids: [submit, authenticate, logout]
+
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file

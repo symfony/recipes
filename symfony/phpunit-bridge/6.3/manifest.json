@@ -1,0 +1,17 @@
+{
+    "copy-from-recipe": {
+        ".env.test": ".env.test",
+        "bin/": "%BIN_DIR%/",
+        "phpunit.xml.dist": "phpunit.xml.dist",
+        "tests/": "tests/"
+    },
+    "gitignore": [
+        ".phpunit.result.cache",
+        "/phpunit.xml"
+    ],
+    "conflict": {
+        "phpunit/phpunit": "<9.6",
+        "symfony/framework-bundle": "<5.4"
+    },
+    "aliases": ["simple-phpunit"]
+}

@@ -1,0 +1,4 @@
+  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.
+
+  * <fg=blue>Read</> the documentation at:
+    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>
