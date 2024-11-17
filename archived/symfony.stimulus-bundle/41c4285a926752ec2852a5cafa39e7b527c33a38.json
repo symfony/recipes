@@ -1,0 +1,157 @@
+{
+    "manifests": {
+        "symfony/stimulus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\StimulusBundle\\StimulusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<7.2",
+                    "symfony/security-csrf": "<7.2",
+                    "symfony/webpack-encore-bundle": "<2.0",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "add-lines": [
+                    {
+                        "file": "webpack.config.js",
+                        "content": "\n    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+                        "position": "after_target",
+                        "target": ".splitEntryChunks()"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "import './bootstrap.js';",
+                        "position": "top",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "import { startStimulusApp } from '@symfony/stimulus-bridge';\n\n// Registers Stimulus controllers from controllers.json and in the controllers/ directory\nexport const app = startStimulusApp(require.context(\n    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',\n    true,\n    /\\.[jt]sx?$/\n));",
+                        "position": "top",
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "import { startStimulusApp } from '@symfony/stimulus-bundle';\n\nconst app = startStimulusApp();",
+                        "position": "top",
+                        "requires": "symfony/asset-mapper"
+                    }
+                ]
+            },
+            "files": {
+                "assets/bootstrap.js": {
+                    "contents": [
+                        "// register any custom, 3rd party controllers here",
+                        "// app.register('some_controller_name', SomeImportedController);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers.json": {
+                    "contents": [
+                        "{",
+                        "    \"controllers\": [],",
+                        "    \"entrypoints\": []",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers/csrf_protection_controller.js": {
+                    "contents": [
+                        "var nameCheck = /^[-_a-zA-Z0-9]{4,22}$/;",
+                        "var tokenCheck = /^[-_/+a-zA-Z0-9]{24,}$/;",
+                        "",
+                        "// Generate and double-submit a CSRF token in a form field and a cookie, as defined by Symfony's SameOriginCsrfTokenManager",
+                        "document.addEventListener('submit', function (event) {",
+                        "    var csrfField = event.target.querySelector('input[data-controller=\"csrf-protection\"]');",
+                        "",
+                        "    if (!csrfField) {",
+                        "        return;",
+                        "    }",
+                        "",
+                        "    var csrfCookie = csrfField.getAttribute('data-csrf-protection-cookie-value');",
+                        "    var csrfToken = csrfField.value;",
+                        "",
+                        "    if (!csrfCookie && nameCheck.test(csrfToken)) {",
+                        "        csrfField.setAttribute('data-csrf-protection-cookie-value', csrfCookie = csrfToken);",
+                        "        csrfField.value = csrfToken = btoa(String.fromCharCode.apply(null, (window.crypto || window.msCrypto).getRandomValues(new Uint8Array(18))));",
+                        "    }",
+                        "",
+                        "    if (csrfCookie && tokenCheck.test(csrfToken)) {",
+                        "        var cookie = csrfCookie + '_' + csrfToken + '=' + csrfCookie + '; path=/; samesite=strict';",
+                        "        document.cookie = window.location.protocol === 'https:' ? '__Host-' + cookie + '; secure' : cookie;",
+                        "    }",
+                        "});",
+                        "",
+                        "// When @hotwired/turbo handles form submissions, send the CSRF token in a header in addition to a cookie",
+                        "// The `framework.csrf_protection.check_header` config option needs to be enabled for the header to be checked",
+                        "document.addEventListener('turbo:submit-start', function (event) {",
+                        "    var csrfField = event.detail.formSubmission.formElement.querySelector('input[data-controller=\"csrf-protection\"]');",
+                        "",
+                        "    if (!csrfField) {",
+                        "        return;",
+                        "    }",
+                        "",
+                        "    var csrfCookie = csrfField.getAttribute('data-csrf-protection-cookie-value');",
+                        "",
+                        "    if (tokenCheck.test(csrfField.value) && nameCheck.test(csrfCookie)) {",
+                        "        event.detail.formSubmission.fetchRequest.headers[csrfCookie] = csrfField.value;",
+                        "    }",
+                        "});",
+                        "",
+                        "// When @hotwired/turbo handles form submissions, remove the CSRF cookie once a form has been submitted",
+                        "document.addEventListener('turbo:submit-end', function (event) {",
+                        "    var csrfField = event.detail.formSubmission.formElement.querySelector('input[data-controller=\"csrf-protection\"]');",
+                        "",
+                        "    if (!csrfField) {",
+                        "        return;",
+                        "    }",
+                        "",
+                        "    var csrfCookie = csrfField.getAttribute('data-csrf-protection-cookie-value');",
+                        "",
+                        "    if (tokenCheck.test(csrfField.value) && nameCheck.test(csrfCookie)) {",
+                        "        var cookie = csrfCookie + '_' + csrfField.value + '=0; path=/; samesite=strict; max-age=0';",
+                        "",
+                        "        document.cookie = window.location.protocol === 'https:' ? '__Host-' + cookie + '; secure' : cookie;",
+                        "    }",
+                        "});",
+                        "",
+                        "/* stimulusFetch: 'lazy' */",
+                        "export default 'csrf-protection-controller';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers/hello_controller.js": {
+                    "contents": [
+                        "import { Controller } from '@hotwired/stimulus';",
+                        "",
+                        "/*",
+                        " * This is an example Stimulus controller!",
+                        " *",
+                        " * Any element with a data-controller=\"hello\" attribute will cause",
+                        " * this controller to be executed. The name \"hello\" comes from the filename:",
+                        " * hello_controller.js -> \"hello\"",
+                        " *",
+                        " * Delete this file or adapt it for your use!",
+                        " */",
+                        "export default class extends Controller {",
+                        "    connect() {",
+                        "        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "41c4285a926752ec2852a5cafa39e7b527c33a38"
+        }
+    }
+}

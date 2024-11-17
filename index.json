@@ -460,6 +460,7 @@
         "ux-react": "symfony/ux-react",
         "ux-svelte": "symfony/ux-svelte",
         "ux-translator": "symfony/ux-translator",
+        "ux-turbo": "symfony/ux-turbo",
         "ux-twig-component": "symfony/ux-twig-component",
         "ux-vue": "symfony/ux-vue",
         "uxautocomplete": "symfony/ux-autocomplete",
@@ -472,6 +473,7 @@
         "uxreact": "symfony/ux-react",
         "uxsvelte": "symfony/ux-svelte",
         "uxtranslator": "symfony/ux-translator",
+        "uxturbo": "symfony/ux-turbo",
         "uxtwigcomponent": "symfony/ux-twig-component",
         "uxvue": "symfony/ux-vue",
         "validation": "symfony/validator",
@@ -1016,7 +1018,8 @@
         "symfony/stimulus-bundle": [
             "2.8",
             "2.9",
-            "2.13"
+            "2.13",
+            "2.20"
         ],
         "symfony/sweego-mailer": [
             "7.2"
@@ -1102,6 +1105,9 @@
         "symfony/ux-translator": [
             "2.8",
             "2.9"
+        ],
+        "symfony/ux-turbo": [
+            "2.20"
         ],
         "symfony/ux-twig-component": [
             "2.13"
@@ -1313,6 +1319,12 @@
             "2.13": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/webpack-encore-bundle": "<2.0"
+            },
+            "2.20": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<7.2",
+                "symfony/security-csrf": "<7.2",
+                "symfony/webpack-encore-bundle": "<2.0"
             }
         },
         "symfony/twig-bundle": {
@@ -1370,6 +1382,12 @@
         "symfony/ux-translator": {
             "2.9": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            }
+        },
+        "symfony/ux-turbo": {
+            "2.20": {
+                "symfony/framework-bundle": "<7.2",
+                "symfony/security-csrf": "<7.2"
             }
         },
         "symfony/ux-vue": {

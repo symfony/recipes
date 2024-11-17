@@ -143,7 +143,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
-| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.13](symfony/stimulus-bundle/2.13) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.20](symfony/stimulus-bundle/2.20) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/sweego-mailer](https://packagist.org/packages/symfony/sweego-mailer) | [7.2](symfony/sweego-mailer/7.2) | `sweego-mailer`, `sweegomailer` |
 | [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [7.2](symfony/sweego-notifier/7.2) | `sweego-notifier`, `sweegonotifier` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
@@ -167,6 +167,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
 | [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.9](symfony/ux-translator/2.9) | `ux-translator`, `uxtranslator` |
+| [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [2.20](symfony/ux-turbo/2.20) | `ux-turbo`, `uxturbo` |
 | [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](symfony/ux-twig-component/2.13) | `ux-twig-component`, `uxtwigcomponent` |
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [2.9](symfony/ux-vue/2.9) | `ux-vue`, `uxvue` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [7.0](symfony/validator/7.0) | `validation`, `validator` |
