@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Symfony\\UX\\Turbo\\TurboBundle": ["all"]
+    },
     "conflict": {
         "symfony/framework-bundle": "<7.2",
         "symfony/security-csrf": "<7.2"
