@@ -3,6 +3,7 @@
         "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
     },
     "copy-from-recipe": {
+        ".env.dev": ".env.dev",
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%/",
         "src/": "%SRC_DIR%/"
