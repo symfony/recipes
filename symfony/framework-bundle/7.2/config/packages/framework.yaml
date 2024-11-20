@@ -8,11 +8,6 @@ framework:
     #esi: true
     #fragments: true
 
-    # Enable stateless CSRF protection for forms and logins/logouts
-    form: { csrf_protection: { token_id: submit } }
-    csrf_protection:
-        stateless_token_ids: [submit, authenticate, logout]
-
 when@test:
     framework:
         test: true
