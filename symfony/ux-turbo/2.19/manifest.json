@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Turbo\\TurboBundle": ["all"]
+    }
+}
