@@ -9,8 +9,12 @@ framework:
     #fragments: true
 
     # Enable stateless CSRF protection for forms and logins/logouts
-    form: { csrf_protection: { token_id: submit } }
+    form:
+        csrf_protection:
+            enabled: null
+            token_id: submit
     csrf_protection:
+        enabled: null
         stateless_token_ids: [submit, authenticate, logout]
 
 when@test:
