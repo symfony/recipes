@@ -702,6 +702,9 @@
         "symfony/flex": [
             "1.0"
         ],
+        "symfony/form": [
+            "7.2"
+        ],
         "symfony/forty-six-elks-notifier": [
             "6.1"
         ],

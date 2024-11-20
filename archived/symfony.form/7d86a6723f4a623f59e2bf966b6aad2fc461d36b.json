@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/form": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/csrf.yaml": {
+                    "contents": [
+                        "# Enable stateless CSRF protection for forms and logins/logouts",
+                        "framework:",
+                        "    form:",
+                        "        csrf_protection:",
+                        "            token_id: submit",
+                        "",
+                        "    csrf_protection:",
+                        "        stateless_token_ids:",
+                        "            - submit",
+                        "            - authenticate",
+                        "            - logout",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d86a6723f4a623f59e2bf966b6aad2fc461d36b"
+        }
+    }
+}
