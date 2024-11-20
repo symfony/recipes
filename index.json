@@ -1107,6 +1107,7 @@
             "2.9"
         ],
         "symfony/ux-turbo": [
+            "2.19",
             "2.20"
         ],
         "symfony/ux-twig-component": [
