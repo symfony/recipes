@@ -1436,9 +1436,9 @@
     },
     "versions": {
         "lts": "6.4",
-        "stable": "7.1",
-        "next": "7.2",
-        "previous": "7.0",
+        "stable": "7.2",
+        "next": "7.3",
+        "previous": "7.1",
         "dev": "7.3",
         "dev-name": "7.3",
         "splits": {
