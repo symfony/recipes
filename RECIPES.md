@@ -53,7 +53,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/fake-chat-notifier](https://packagist.org/packages/symfony/fake-chat-notifier) | [5.3](symfony/fake-chat-notifier/5.3) | `fake-chat-notifier`, `fakechatnotifier` |
 | [symfony/fake-sms-notifier](https://packagist.org/packages/symfony/fake-sms-notifier) | [5.3](symfony/fake-sms-notifier/5.3) | `fake-sms-notifier`, `fakesmsnotifier` |
 | [symfony/firebase-notifier](https://packagist.org/packages/symfony/firebase-notifier) | [5.1](symfony/firebase-notifier/5.1) | `firebase-notifier`, `firebasenotifier` |
-| [symfony/flex](https://packagist.org/packages/symfony/flex) | [1.0](symfony/flex/1.0) | `flex` |
+| [symfony/flex](https://packagist.org/packages/symfony/flex) | [2.4](symfony/flex/2.4) | `flex` |
 | [symfony/form](https://packagist.org/packages/symfony/form) | [7.2](symfony/form/7.2) | `form` |
 | [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.2](symfony/framework-bundle/7.2) | `framework-bundle`, `frameworkbundle` |
