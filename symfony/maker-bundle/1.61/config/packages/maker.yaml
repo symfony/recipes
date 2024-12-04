@@ -1,0 +1,12 @@
+when@dev:
+    maker:
+        # tell MakerBundle that all of your classes live in an
+        # Acme namespace, instead of the default App
+        # (e.g. Acme\Entity\Article, Acme\Command\MyCommand, etc)
+        root_namespace: 'App'
+
+        # Tell MakerBundle to make all non-entity classes it generates, "final".
+        generate_final_classes: true
+
+        # Tell MakerBundle to make all entities it generates, "final".
+        generate_final_entities: false
