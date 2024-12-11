@@ -159,6 +159,8 @@
         "jolinotifnotifier": "symfony/joli-notif-notifier",
         "js-translation": "willdurand/js-translation-bundle",
         "js-translator": "willdurand/js-translation-bundle",
+        "json-encoder": "symfony/json-encoder",
+        "jsonencoder": "symfony/json-encoder",
         "jstranslation": "willdurand/js-translation-bundle",
         "jstranslator": "willdurand/js-translation-bundle",
         "jwt": "lexik/jwt-authentication-bundle",
@@ -2387,6 +2389,9 @@
                 "7.2",
                 "7.3"
             ],
+            "symfony/json-encoder": [
+                "7.3"
+            ],
             "symfony/kaz-info-teh-notifier": [
                 "6.1",
                 "6.2",
@@ -2539,6 +2544,10 @@
                 "7.3"
             ],
             "symfony/mailer": [
+                "3.4",
+                "4.0",
+                "4.1",
+                "4.2",
                 "4.3",
                 "4.4",
                 "5.0",
@@ -3317,6 +3326,10 @@
                 "7.3"
             ],
             "symfony/sendgrid-mailer": [
+                "3.4",
+                "4.0",
+                "4.1",
+                "4.2",
                 "4.3",
                 "4.4",
                 "5.0",
