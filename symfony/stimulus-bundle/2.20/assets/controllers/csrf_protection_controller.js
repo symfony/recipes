@@ -14,7 +14,7 @@ document.addEventListener('submit', function (event) {
 
     if (!csrfCookie && nameCheck.test(csrfToken)) {
         csrfField.setAttribute('data-csrf-protection-cookie-value', csrfCookie = csrfToken);
-        csrfField.value = csrfToken = btoa(String.fromCharCode.apply(null, (window.crypto || window.msCrypto).getRandomValues(new Uint8Array(18))));
+        csrfField.defaultValue = csrfToken = btoa(String.fromCharCode.apply(null, (window.crypto || window.msCrypto).getRandomValues(new Uint8Array(18))));
     }
 
     if (csrfCookie && tokenCheck.test(csrfToken)) {
