@@ -6,6 +6,9 @@
     "dev": "7.3",
     "dev-name": "7.3",
     "splits": {
+        "symfony/aha-send-mailer": [
+            "7.3"
+        ],
         "symfony/all-my-sms-notifier": [
             "5.3",
             "5.4",
