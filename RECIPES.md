@@ -30,6 +30,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [sensio/framework-extra-bundle](https://packagist.org/packages/sensio/framework-extra-bundle) | [5.2](sensio/framework-extra-bundle/5.2) | `annot`, `annotation`, `annotations`, `annots` |
 | [sensiolabs/ansi-to-html](https://packagist.org/packages/sensiolabs/ansi-to-html) | [1.2](sensiolabs/ansi-to-html/1.2) |  |
 | [sensiolabs/security-checker](https://packagist.org/packages/sensiolabs/security-checker) | [4.0](sensiolabs/security-checker/4.0) | `sec-check`, `sec-checker`, `sec-checks`, `seccheck`, `secchecker`, `secchecks`, `security-check`, `security-checker`, `securitycheck`, `securitychecker` |
+| [symfony/aha-send-mailer](https://packagist.org/packages/symfony/aha-send-mailer) | [7.2](symfony/aha-send-mailer/7.2) | `aha-send-mailer`, `ahasendmailer` |
 | [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |

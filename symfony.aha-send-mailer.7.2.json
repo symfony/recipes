@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "symfony/aha-send-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=ahasend+api://KEY@default",
+                    "#2": "MAILER_DSN=ahasend+smtp://USERNAME:PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "a8a25ed126a6152fc4e0bc7334e7b562bb2b6444"
+        }
+    }
+}

@@ -626,6 +626,9 @@
         "sensiolabs/security-checker": [
             "4.0"
         ],
+        "symfony/aha-send-mailer": [
+            "7.2"
+        ],
         "symfony/all-my-sms-notifier": [
             "5.3"
         ],
