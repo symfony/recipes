@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            matrix: '%env(SIPGATE_DSN)%'"
+            "content": "            matrix: '%env(MATRIX_DSN)%'"
         }
     ],
     "env": {
