@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/matrix-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            matrix: '%env(MATRIX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MATRIX_DSN=matrix://HOST:PORT/?accessToken=ACCESSTOKEN&ssl=SSL"
+                }
+            },
+            "files": [],
+            "ref": "3248858d0b7365a6e3f956f9b9b3a17285fad6f8"
+        }
+    }
+}
