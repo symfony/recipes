@@ -833,6 +833,9 @@
         "symfony/mastodon-notifier": [
             "6.3"
         ],
+        "symfony/matrix-notifier": [
+            "7.3"
+        ],
         "symfony/mattermost-notifier": [
             "5.1"
         ],
