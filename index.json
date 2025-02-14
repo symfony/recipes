@@ -214,6 +214,8 @@
         "makerbundle": "symfony/maker-bundle",
         "mastodon-notifier": "symfony/mastodon-notifier",
         "mastodonnotifier": "symfony/mastodon-notifier",
+        "matrix-notifier": "symfony/matrix-notifier",
+        "matrixnotifier": "symfony/matrix-notifier",
         "mattermost-notifier": "symfony/mattermost-notifier",
         "mattermostnotifier": "symfony/mattermost-notifier",
         "mercure": "symfony/mercure-bundle",
@@ -2635,6 +2637,9 @@
                 "7.0",
                 "7.1",
                 "7.2",
+                "7.3"
+            ],
+            "symfony/matrix-notifier": [
                 "7.3"
             ],
             "symfony/mattermost-notifier": [
