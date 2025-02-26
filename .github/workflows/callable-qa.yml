@@ -20,12 +20,12 @@ on:
 jobs:
     run-checks:
         name: Run checks
-        runs-on: Ubuntu-20.04
+        runs-on: ubuntu-latest
 
         steps:
             -
                 name: Checkout
-                uses: actions/checkout@v3
+                uses: actions/checkout@v4
                 id: checkout
                 with:
                     fetch-depth: 0
@@ -228,7 +228,7 @@ jobs:
     create-project:
         needs: run-checks
         name: Run updated recipes
-        runs-on: Ubuntu-20.04
+        runs-on: ubuntu-latest
 
         steps:
             -
