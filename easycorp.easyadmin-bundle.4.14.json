@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "easycorp/easyadmin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/easyadmin.yaml": {
+                    "contents": [
+                        "easyadmin:",
+                        "    resource: .",
+                        "    type: easyadmin.routes",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "13b3e524d1038a6861ad6c7fc64e31b644ba0c54"
+        }
+    }
+}

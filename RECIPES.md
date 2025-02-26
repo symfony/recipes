@@ -12,7 +12,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.13](doctrine/doctrine-bundle/2.13) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
 | [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
-| [easycorp/easyadmin-bundle](https://packagist.org/packages/easycorp/easyadmin-bundle) | [3.0](easycorp/easyadmin-bundle/3.0) | `admin`, `admin-gen`, `admin-generator`, `admingen`, `admingenerator` |
+| [easycorp/easyadmin-bundle](https://packagist.org/packages/easycorp/easyadmin-bundle) | [4.14](easycorp/easyadmin-bundle/4.14) | `admin`, `admin-gen`, `admin-generator`, `admingen`, `admingenerator` |
 | [friendsofphp/php-cs-fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) | [3.0](friendsofphp/php-cs-fixer/3.0) | `cs-fixer`, `csfixer`, `php-cs-fixer`, `phpcsfixer` |
 | [hautelook/alice-bundle](https://packagist.org/packages/hautelook/alice-bundle) | [2.2](hautelook/alice-bundle/2.2) | `alice` |
 | [javiereguiluz/easyadmin-bundle](https://packagist.org/packages/javiereguiluz/easyadmin-bundle) | [1.17](javiereguiluz/easyadmin-bundle/1.17) |  |

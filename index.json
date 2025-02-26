@@ -563,7 +563,8 @@
         "easycorp/easyadmin-bundle": [
             "1.17",
             "2.0",
-            "3.0"
+            "3.0",
+            "4.14"
         ],
         "friendsofphp/php-cs-fixer": [
             "2.2",
