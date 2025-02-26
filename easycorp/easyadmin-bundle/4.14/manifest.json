@@ -3,7 +3,7 @@
         "EasyCorp\\Bundle\\EasyAdminBundle\\EasyAdminBundle": ["all"]
     },    
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
+        "config/": "%CONFIG_DIR%/"
     },
     "aliases": ["admin-gen", "admin-generator", "admin"]
 }
