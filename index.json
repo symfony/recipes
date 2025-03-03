@@ -161,8 +161,8 @@
         "jolinotifnotifier": "symfony/joli-notif-notifier",
         "js-translation": "willdurand/js-translation-bundle",
         "js-translator": "willdurand/js-translation-bundle",
-        "json-encoder": "symfony/json-encoder",
-        "jsonencoder": "symfony/json-encoder",
+        "json-streamer": "symfony/json-streamer",
+        "jsonstreamer": "symfony/json-streamer",
         "jstranslation": "willdurand/js-translation-bundle",
         "jstranslator": "willdurand/js-translation-bundle",
         "jwt": "lexik/jwt-authentication-bundle",
@@ -2403,7 +2403,7 @@
                 "7.2",
                 "7.3"
             ],
-            "symfony/json-encoder": [
+            "symfony/json-streamer": [
                 "7.3"
             ],
             "symfony/kaz-info-teh-notifier": [
