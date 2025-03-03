@@ -953,7 +953,7 @@
             "7.2",
             "7.3"
         ],
-        "symfony/json-encoder": [
+        "symfony/json-streamer": [
             "7.3"
         ],
         "symfony/kaz-info-teh-notifier": [
