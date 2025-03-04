@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfonycasts\\TailwindBundle\\SymfonycastsTailwindBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["tailwind", "tailwindcss"]
+}
