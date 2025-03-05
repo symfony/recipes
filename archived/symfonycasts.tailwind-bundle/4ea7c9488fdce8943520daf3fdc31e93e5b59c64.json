@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfonycasts/tailwind-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfonycasts\\TailwindBundle\\SymfonycastsTailwindBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/symfonycasts_tailwind.yaml": {
+                    "contents": [
+                        "symfonycasts_tailwind:",
+                        "    # Specify the EXACT version of Tailwind CSS you want to use",
+                        "    binary_version: 'v3.4.17'",
+                        "",
+                        "    # Alternatively, you can specify the path to the binary that you manage yourself",
+                        "    #binary: 'node_modules/.bin/tailwindcss'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4ea7c9488fdce8943520daf3fdc31e93e5b59c64"
+        }
+    }
+}

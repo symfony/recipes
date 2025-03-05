@@ -419,6 +419,8 @@
         "swiftmailer": "symfony/swiftmailer-bundle",
         "swiftmailer-bundle": "symfony/swiftmailer-bundle",
         "swiftmailerbundle": "symfony/swiftmailer-bundle",
+        "tailwind": "symfonycasts/tailwind-bundle",
+        "tailwindcss": "symfonycasts/tailwind-bundle",
         "telegram-notifier": "symfony/telegram-notifier",
         "telegramnotifier": "symfony/telegram-notifier",
         "telnyx-notifier": "symfony/telnyx-notifier",
@@ -1178,6 +1180,9 @@
         ],
         "symfonycasts/reset-password-bundle": [
             "1.0"
+        ],
+        "symfonycasts/tailwind-bundle": [
+            "0.8"
         ],
         "theofidry/alice-data-fixtures": [
             "1.0"
