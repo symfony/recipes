@@ -29,7 +29,7 @@
             "warn_if_missing": false
         },
         {
-            "file": "env.test",
+            "file": ".env.test",
             "content": "PANTHER_APP_ENV=panther\nPANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots",
             "position": "after_target",
             "target": "SYMFONY_DEPRECATIONS_HELPER=999999",
