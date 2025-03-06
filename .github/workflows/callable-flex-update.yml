@@ -17,7 +17,7 @@ on:
 jobs:
     flex-update:
         name: Update Flex endpoint
-        runs-on: Ubuntu-20.04
+        runs-on: ubuntu-latest
 
         steps:
             -
