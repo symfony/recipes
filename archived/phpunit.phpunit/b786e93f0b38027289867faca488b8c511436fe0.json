@@ -4,12 +4,12 @@
             "manifest": {
                 "copy-from-recipe": {
                     ".env.test": ".env.test",
-                    "phpunit.xml.dist": "phpunit.xml.dist",
+                    "phpunit.dist.xml": "phpunit.dist.xml",
                     "tests/": "tests/"
                 },
                 "gitignore": [
                     "/phpunit.xml",
-                    ".phpunit.result.cache"
+                    "/.phpunit.cache/"
                 ]
             },
             "files": {
@@ -19,13 +19,11 @@
                         "KERNEL_CLASS='App\\Kernel'",
                         "APP_SECRET='$ecretf0rt3st'",
                         "SYMFONY_DEPRECATIONS_HELPER=999999",
-                        "PANTHER_APP_ENV=panther",
-                        "PANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots",
                         ""
                     ],
                     "executable": false
                 },
-                "phpunit.xml.dist": {
+                "phpunit.dist.xml": {
                     "contents": [
                         "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
                         "",
@@ -35,7 +33,7 @@
                         "         backupGlobals=\"false\"",
                         "         colors=\"true\"",
                         "         bootstrap=\"tests/bootstrap.php\"",
-                        "         convertDeprecationsToExceptions=\"false\"",
+                        "         cacheDirectory=\".phpunit.cache\"",
                         ">",
                         "    <php>",
                         "        <ini name=\"display_errors\" value=\"1\" />",
@@ -43,7 +41,7 @@
                         "        <server name=\"APP_ENV\" value=\"test\" force=\"true\" />",
                         "        <server name=\"SHELL_VERBOSITY\" value=\"-1\" />",
                         "        <server name=\"SYMFONY_PHPUNIT_REMOVE\" value=\"\" />",
-                        "        <server name=\"SYMFONY_PHPUNIT_VERSION\" value=\"9.5\" />",
+                        "        <server name=\"SYMFONY_PHPUNIT_VERSION\" value=\"10.5\" />",
                         "    </php>",
                         "",
                         "    <testsuites>",
@@ -52,20 +50,14 @@
                         "        </testsuite>",
                         "    </testsuites>",
                         "",
-                        "    <coverage processUncoveredFiles=\"true\">",
+                        "    <source restrictDeprecations=\"true\" restrictNotices=\"true\" restrictWarnings=\"true\">",
                         "        <include>",
-                        "            <directory suffix=\".php\">src</directory>",
+                        "            <directory>src</directory>",
                         "        </include>",
-                        "    </coverage>",
+                        "    </source>",
                         "",
-                        "    <listeners>",
-                        "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
-                        "    </listeners>",
-                        "",
-                        "    <!-- Uncomment when adding extensions",
                         "    <extensions>",
                         "    </extensions>",
-                        "    -->",
                         "</phpunit>",
                         ""
                     ],
@@ -87,7 +79,7 @@
                     "executable": false
                 }
             },
-            "ref": "4eb12de6eef0f6f1bc7af2c51f6316e2f686e09b"
+            "ref": "b786e93f0b38027289867faca488b8c511436fe0"
         }
     }
 }

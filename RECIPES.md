@@ -25,7 +25,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [nyholm/psr7](https://packagist.org/packages/nyholm/psr7) | [1.0](nyholm/psr7/1.0) |  |
 | [php-cs-fixer/shim](https://packagist.org/packages/php-cs-fixer/shim) | [3.0](php-cs-fixer/shim/3.0) | `cs-fixer-shim`, `csfixershim`, `php-cs-fixer-shim`, `phpcsfixershim` |
 | [php-http/discovery](https://packagist.org/packages/php-http/discovery) | [1.18](php-http/discovery/1.18) |  |
-| [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | [9.6](phpunit/phpunit/9.6) |  |
+| [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | [10.0](phpunit/phpunit/10.0) |  |
 | [scheb/2fa-bundle](https://packagist.org/packages/scheb/2fa-bundle) | [6.0](scheb/2fa-bundle/6.0) | `2fa` |
 | [sensio/framework-extra-bundle](https://packagist.org/packages/sensio/framework-extra-bundle) | [5.2](sensio/framework-extra-bundle/5.2) | `annot`, `annotation`, `annotations`, `annots` |
 | [sensiolabs/ansi-to-html](https://packagist.org/packages/sensiolabs/ansi-to-html) | [1.2](sensiolabs/ansi-to-html/1.2) |  |
