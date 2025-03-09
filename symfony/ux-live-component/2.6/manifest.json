@@ -2,6 +2,7 @@
     "bundles": {
         "Symfony\\UX\\LiveComponent\\LiveComponentBundle": ["all"]
     },
+    "aliases": ["live-component"],    
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
