@@ -1,0 +1,182 @@
+{
+    "manifests": {
+        "symfony/framework-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd",
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_SECRET": ""
+                },
+                "dotenv": {
+                    "dev": {
+                        "APP_SECRET": "%generate(secret)%"
+                    }
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+                    "/%PUBLIC_DIR%/bundles/",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Go to the project directory",
+                    "    2. Create your code repository with the <comment>git init</comment> command",
+                    "    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                ]
+            },
+            "files": {
+                "config/packages/cache.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    cache:",
+                        "        # Unique name of your app: used to compute stable namespaces for cache keys.",
+                        "        #prefix_seed: your_vendor_name/app_name",
+                        "",
+                        "        # The \"app\" cache stores to the filesystem by default.",
+                        "        # The data in this cache should persist between deploys.",
+                        "        # Other options include:",
+                        "",
+                        "        # Redis",
+                        "        #app: cache.adapter.redis",
+                        "        #default_redis_provider: redis://localhost",
+                        "",
+                        "        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
+                        "        #app: cache.adapter.apcu",
+                        "",
+                        "        # Namespaced pools use the above \"app\" backend by default",
+                        "        #pools:",
+                        "            #my.dedicated.cache: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/framework.yaml": {
+                    "contents": [
+                        "# see https://symfony.com/doc/current/reference/configuration/framework.html",
+                        "framework:",
+                        "    secret: '%env(APP_SECRET)%'",
+                        "",
+                        "    # Note that the session will be started ONLY if you read or write from it.",
+                        "    session: true",
+                        "",
+                        "    #esi: true",
+                        "    #fragments: true",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        test: true",
+                        "        session:",
+                        "            storage_factory_id: session.storage.factory.mock_file",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/preload.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "if (file_exists(dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php')) {",
+                        "    require dirname(__DIR__).'/var/cache/prod/App_KernelProdContainer.preload.php';",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/framework.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    _errors:",
+                        "        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'",
+                        "        prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/services.yaml": {
+                    "contents": [
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        autowire: true      # Automatically injects dependencies in your services.",
+                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "",
+                        "    # add more service definitions when explicit configuration is needed",
+                        "    # please note that last definitions always *replace* previous ones",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/index.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "",
+                        "require_once dirname(__DIR__).'/vendor/autoload_runtime.php';",
+                        "",
+                        "return function (array $context) {",
+                        "    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Controller/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Kernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "",
+                        "class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3ea884696e3646e0420510a2f04248e79363b166"
+        }
+    }
+}
