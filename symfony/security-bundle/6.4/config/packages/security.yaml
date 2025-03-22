@@ -7,7 +7,7 @@ security:
         users_in_memory: { memory: null }
     firewalls:
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_profiler|_wdt|assets)/
             security: false
         main:
             lazy: true
