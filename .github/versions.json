@@ -1373,6 +1373,9 @@
             "7.2",
             "7.3"
         ],
+        "symfony/object-mapper": [
+            "7.3"
+        ],
         "symfony/octopush-notifier": [
             "5.3",
             "5.4",
