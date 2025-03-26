@@ -4,8 +4,10 @@ framework:
         paths:
             - assets/
         missing_import_mode: strict
+        server: true
 
 when@prod:
     framework:
         asset_mapper:
+            server: false
             missing_import_mode: warn
