@@ -2,6 +2,7 @@
     "bundles": {
         "Symfony\\UX\\TwigComponent\\TwigComponentBundle": ["all"]
     },
+    "aliases": ["twig-component"],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
