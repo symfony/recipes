@@ -589,7 +589,8 @@
             "1.0"
         ],
         "league/oauth2-server-bundle": [
-            "0.4"
+            "0.4",
+            "0.11"
         ],
         "lexik/jwt-authentication-bundle": [
             "2.3",
