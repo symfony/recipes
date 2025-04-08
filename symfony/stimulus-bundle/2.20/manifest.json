@@ -21,7 +21,7 @@
         },
         {
             "file": "assets/app.js",
-            "content": "import './bootstrap.js';",
+            "content": "import './stimulus_bootstrap.js';",
             "position": "top",
             "warn_if_missing": true
         },
