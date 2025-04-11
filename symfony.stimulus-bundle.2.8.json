@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "symfony/stimulus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\StimulusBundle\\StimulusBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "9e33a8a3794b603fb4be6c04ee5ecab901ce549e"
+        }
+    }
+}
