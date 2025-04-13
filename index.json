@@ -1,0 +1,52 @@
+{
+    "aliases": {
+        "phpunit-bridge": "symfony/phpunit-bridge",
+        "phpunitbridge": "symfony/phpunit-bridge",
+        "simple-phpunit": "symfony/phpunit-bridge",
+        "simplephpunit": "symfony/phpunit-bridge"
+    },
+    "recipes": {
+        "phpunit/phpunit": [
+            "4.7",
+            "9.3",
+            "9.6",
+            "10.0",
+            "11.1"
+        ],
+        "symfony/phpunit-bridge": [
+            "3.3",
+            "4.1",
+            "4.3",
+            "5.1",
+            "5.3",
+            "6.3",
+            "7.3"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/phpunit-bridge": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.4"
+            },
+            "6.3": {
+                "phpunit/phpunit": "<9.6",
+                "symfony/framework-bundle": "<5.4"
+            },
+            "7.3": {
+                "phpunit/phpunit": "<9.6",
+                "symfony/framework-bundle": "<5.4"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1401/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1401/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

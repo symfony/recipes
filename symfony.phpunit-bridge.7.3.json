@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/phpunit-bridge": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "phpunit.xml.dist",
+                        "content": "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "warn_if_missing": false
+                    },
+                    {
+                        "file": "phpunit.dist.xml",
+                        "content": "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">\n            <parameter name=\"clock-mock-namespaces\" value=\"App\" />\n            <parameter name=\"dns-mock-namespaces\" value=\"App\" />\n        </bootstrap>",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "warn_if_missing": false
+                    }
+                ],
+                "conflict": {
+                    "phpunit/phpunit": "<9.6",
+                    "symfony/framework-bundle": "<5.4"
+                }
+            },
+            "files": [],
+            "ref": "c95e0c2a55e09558533ca635d83b7831dd71e7f8"
+        }
+    }
+}
