@@ -343,7 +343,9 @@
         "runtime": "symfony/runtime",
         "scaleway-mailer": "symfony/scaleway-mailer",
         "scalewaymailer": "symfony/scaleway-mailer",
+        "schedule": "symfony/scheduler",
         "scheduler": "symfony/scheduler",
+        "scheduling": "symfony/scheduler",
         "sec-check": "sensiolabs/security-checker",
         "sec-checker": "sensiolabs/security-checker",
         "sec-checks": "sensiolabs/security-checker",
@@ -970,6 +972,9 @@
         ],
         "symfony/scaleway-mailer": [
             "6.4"
+        ],
+        "symfony/scheduler": [
+            "7.2"
         ],
         "symfony/security-bundle": [
             "3.3",

@@ -126,6 +126,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [7.0](symfony/routing/7.0) | `router`, `routing` |
 | [symfony/scaleway-mailer](https://packagist.org/packages/symfony/scaleway-mailer) | [6.4](symfony/scaleway-mailer/6.4) | `scaleway-mailer`, `scalewaymailer` |
+| [symfony/scheduler](https://packagist.org/packages/symfony/scheduler) | [7.2](symfony/scheduler/7.2) | `schedule`, `scheduler`, `scheduling` |
 | [symfony/security-bundle](https://packagist.org/packages/symfony/security-bundle) | [6.4](symfony/security-bundle/6.4) | `security`, `security-bundle`, `securitybundle` |
 | [symfony/sendberry-notifier](https://packagist.org/packages/symfony/sendberry-notifier) | [6.1](symfony/sendberry-notifier/6.1) | `sendberry-notifier`, `sendberrynotifier` |
 | [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [4.4](symfony/sendgrid-mailer/4.4) | `sendgrid-mailer`, `sendgridmailer` |
