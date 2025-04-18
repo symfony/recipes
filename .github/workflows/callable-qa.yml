@@ -58,8 +58,9 @@ jobs:
                 name: Generate Flex testing endpoint
                 if: "always() && steps.checkout.outcome == 'success' && github.base_ref == inputs.branch"
                 run: |
-                    mkdir .github/flex-endpoint
+                    mkdir .github/flex-endpoint .github/archived
                     git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-endpoint ${{ github.repository }} ${{ inputs.branch }} flex/pull-${{ github.event.number }} .github/flex-endpoint ${{ inputs.contrib && '--contrib' || '' }}
+                    php .github/recipes-checker-main/run generate:archived-recipes . ${{ inputs.branch }} .github/archived
                     git stash
                     git switch -c pr
                     git switch --orphan flex/pull-${{ github.event.number }}
@@ -67,6 +68,9 @@ jobs:
                     mv .github/flex-endpoint/*.json .
                     git add *.json
                     git commit -m 'Create Flex endpoint' || true
+                    mv .github/archived .
+                    git add archived
+                    git commit -m 'Create Flex archive' || true
                     git push origin -f flex/pull-${{ github.event.number }}
                     git switch pr
                     git stash pop -q

@@ -1,0 +1,12 @@
+{
+    "copy-from-recipe": {
+        ".env.test": ".env.test",
+        "phpunit.dist.xml": "phpunit.dist.xml",
+        "tests/": "tests/",
+        "bin/": "bin/"
+    },
+    "gitignore": [
+        "/phpunit.xml",
+        "/.phpunit.cache/"
+    ]
+}
