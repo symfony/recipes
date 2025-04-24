@@ -10,7 +10,7 @@
         "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
         "#2": "IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml",
         "#3": "",
-        "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data.db\"",
+        "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data_%kernel.environment%.db\"",
         "#5": "DATABASE_URL=\"mysql://app:!ChangeMe!@127.0.0.1:3306/db_name?serverVersion=8\"",
         "DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/db_name?serverVersion=16&charset=utf8"
     },
