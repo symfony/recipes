@@ -1158,7 +1158,8 @@
         "symfony/web-profiler-bundle": [
             "3.3",
             "5.3",
-            "6.1"
+            "6.1",
+            "7.3"
         ],
         "symfony/web-server-bundle": [
             "3.3"
@@ -1167,7 +1168,8 @@
             "1.0"
         ],
         "symfony/webhook": [
-            "6.3"
+            "6.3",
+            "7.3"
         ],
         "symfony/webpack-encore-bundle": [
             "1.0",
@@ -1442,6 +1444,9 @@
                 "symfony/framework-bundle": "<5.3"
             },
             "6.1": {
+                "symfony/framework-bundle": "<6.1"
+            },
+            "7.3": {
                 "symfony/framework-bundle": "<6.1"
             }
         },
