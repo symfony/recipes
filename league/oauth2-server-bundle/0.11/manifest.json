@@ -11,5 +11,8 @@
         "OAUTH_PASSPHRASE": "%generate(secret)%",
         "OAUTH_ENCRYPTION_KEY": "%generate(secret)%"
     },
+    "gitignore": [
+        "/%CONFIG_DIR%/jwt/*.pem"
+    ],
     "aliases": ["oauth2-server", "oauth-server"]
 }
