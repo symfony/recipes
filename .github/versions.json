@@ -953,6 +953,9 @@
             "7.2",
             "7.3"
         ],
+        "symfony/json-path": [
+            "7.3"
+        ],
         "symfony/json-streamer": [
             "7.3"
         ],
