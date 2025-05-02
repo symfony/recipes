@@ -161,7 +161,9 @@
         "jolinotifnotifier": "symfony/joli-notif-notifier",
         "js-translation": "willdurand/js-translation-bundle",
         "js-translator": "willdurand/js-translation-bundle",
+        "json-path": "symfony/json-path",
         "json-streamer": "symfony/json-streamer",
+        "jsonpath": "symfony/json-path",
         "jsonstreamer": "symfony/json-streamer",
         "jstranslation": "willdurand/js-translation-bundle",
         "jstranslator": "willdurand/js-translation-bundle",
@@ -2421,6 +2423,9 @@
             ],
             "symfony/joli-notif-notifier": [
                 "7.2",
+                "7.3"
+            ],
+            "symfony/json-path": [
                 "7.3"
             ],
             "symfony/json-streamer": [
