@@ -1,0 +1,13 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "bundles": {
+        "Zenstruck\\Foundry\\ZenstruckFoundryBundle": ["dev", "test"]
+    },
+    "conflict": {
+        "doctrine/persistence": "<2.0",
+        "symfony/framework-bundle": "<6.4"
+    },
+    "aliases": ["foundry"]
+}
