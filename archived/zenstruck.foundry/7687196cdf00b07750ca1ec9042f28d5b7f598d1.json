@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "zenstruck/foundry": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "conflict": {
+                    "doctrine/persistence": "<2.0",
+                    "symfony/framework-bundle": "<6.4"
+                },
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/foundry. Create your first factory with",
+                    "    <info>bin/console make:factory</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "when@dev: &dev",
+                        "    # See full configuration: https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#full-default-bundle-configuration",
+                        "    zenstruck_foundry:",
+                        "        persistence:",
+                        "            # Flush only once per call of `PersistentObjectFactory::create()` in userland",
+                        "            flush_once: true",
+                        "",
+                        "when@test: *dev",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7687196cdf00b07750ca1ec9042f28d5b7f598d1"
+        }
+    }
+}

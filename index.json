@@ -1222,7 +1222,8 @@
         "zenstruck/foundry": [
             "1.9",
             "1.10",
-            "2.0"
+            "2.0",
+            "2.5"
         ],
         "zenstruck/messenger-test": [
             "1.7"
@@ -1467,6 +1468,10 @@
             },
             "2.0": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "2.5": {
+                "doctrine/persistence": "<2.0",
+                "symfony/framework-bundle": "<6.4"
             }
         }
     },
