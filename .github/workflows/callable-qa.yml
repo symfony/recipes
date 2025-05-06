@@ -288,3 +288,31 @@ jobs:
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
+                    EXIT_CODE=$?
+
+                    if [[ EXIT_CODE -eq 2 ]]; then
+                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 6\n#\n#\n#\n"
+                    fi
+
+                    exit $EXIT_CODE
+
+            -
+                name: Setup PHP 8.2
+                if: "always() && steps.config.outcome == 'success'"
+                uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "8.2"
+
+            -
+                name: Create-project with skeleton ^7
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^7" v7
+                    cd v7
+                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
+                    composer config minimum-stability dev
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
+                    composer require -W --ansi $PACKAGES
