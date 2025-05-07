@@ -181,6 +181,8 @@
         "linenotifynotifier": "symfony/line-notify-notifier",
         "linked-in-notifier": "symfony/linked-in-notifier",
         "linkedinnotifier": "symfony/linked-in-notifier",
+        "live-component": "symfony/ux-live-component",
+        "livecomponent": "symfony/ux-live-component",
         "lock": "symfony/lock",
         "loco-translation-provider": "symfony/loco-translation-provider",
         "locotranslationprovider": "symfony/loco-translation-provider",

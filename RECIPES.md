@@ -166,7 +166,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [2.17](symfony/ux-icons/2.17) | `ux-icons`, `uxicons` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.18](symfony/ux-lazy-image/2.18) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
-| [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `ux-live-component`, `uxlivecomponent` |
+| [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](symfony/ux-live-component/2.6) | `live-component`, `livecomponent`, `ux-live-component`, `uxlivecomponent` |
 | [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](symfony/ux-map/2.19) | `ux-map`, `uxmap` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
