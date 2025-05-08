@@ -1,0 +1,6 @@
+open_telemetry:
+  service:
+    namespace: 'FriendsOfOpenTelemetry'
+    name: 'Opentelemetry Bundle'
+    version: '0.0.0'
+    environment: '%kernel.environment%'
