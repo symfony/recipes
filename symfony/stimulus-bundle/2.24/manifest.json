@@ -1,0 +1,41 @@
+{
+    "bundles": {
+        "Symfony\\UX\\StimulusBundle\\StimulusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/"
+    },
+    "aliases": ["stimulus", "stimulus-bundle"],
+    "conflict": {
+        "symfony/framework-bundle": "<7.2",
+        "symfony/security-csrf": "<7.2",
+        "symfony/webpack-encore-bundle": "<2.0",
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    },
+    "add-lines": [
+        {
+            "file": "webpack.config.js",
+            "content": "\n    // enables the Symfony UX Stimulus bridge (used in assets/stimulus_bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+            "position": "after_target",
+            "target": ".splitEntryChunks()"
+        },
+        {
+            "file": "assets/app.js",
+            "content": "import './stimulus_bootstrap.js';",
+            "position": "top",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/stimulus_bootstrap.js",
+            "content": "import { startStimulusApp } from '@symfony/stimulus-bridge';\n\n// Registers Stimulus controllers from controllers.json and in the controllers/ directory\nexport const app = startStimulusApp(require.context(\n    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',\n    true,\n    /\\.[jt]sx?$/\n));",
+            "position": "top",
+            "requires": "symfony/webpack-encore-bundle"
+        },
+        {
+            "file": "assets/stimulus_bootstrap.js",
+            "content": "import { startStimulusApp } from '@symfony/stimulus-bundle';\n\nconst app = startStimulusApp();",
+            "position": "top",
+            "requires": "symfony/asset-mapper"
+        }
+    ]
+}
