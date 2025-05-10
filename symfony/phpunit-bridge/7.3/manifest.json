@@ -1,28 +1,11 @@
 {
-    "copy-from-recipe": {
-        ".env.test": ".env.test",
-        "phpunit.dist.xml": "phpunit.dist.xml",
-        "tests/": "tests/",
-        "bin/": "bin/"
-    },
-    "gitignore": [
-        "/phpunit.xml",
-        "/.phpunit.cache/"
-    ],
     "add-lines": [
-        {
-            "file": "phpunit.xml.dist",
-            "content": "        <listener class=\"Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener\" />",
-            "position": "after_target",
-            "target": "<extensions>",
-            "warn_if_missing": false
-        },
         {
             "file": "phpunit.dist.xml",
             "content": "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">\n            <parameter name=\"clock-mock-namespaces\" value=\"App\" />\n            <parameter name=\"dns-mock-namespaces\" value=\"App\" />\n        </bootstrap>",
             "position": "after_target",
             "target": "<extensions>",
-            "warn_if_missing": false
+            "warn_if_missing": true
         }
     ],
     "conflict": {
