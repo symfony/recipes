@@ -10,8 +10,7 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "public/": "%PUBLIC_DIR%/",
-                    "src/": "%SRC_DIR%/",
-                    ".editorconfig": ".editorconfig"
+                    "src/": "%SRC_DIR%/"
                 },
                 "composer-scripts": {
                     "cache:clear": "symfony-cmd",
@@ -40,21 +39,6 @@
                 ]
             },
             "files": {
-                ".editorconfig": {
-                    "contents": [
-                        "root = true",
-                        "",
-                        "[*]",
-                        "charset = utf-8",
-                        "end_of_line = lf",
-                        "indent_size = 4",
-                        "indent_style = space",
-                        "insert_final_newline = true",
-                        "trim_trailing_whitespace = true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/cache.yaml": {
                     "contents": [
                         "framework:",
@@ -200,7 +184,7 @@
                     "executable": false
                 }
             },
-            "ref": "4d5fb46de06001999bc808af198f0ef17b4687b5"
+            "ref": "32126346f25e1cee607cc4aa6783d46034920554"
         }
     }
 }
