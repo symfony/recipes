@@ -3,7 +3,8 @@
         "zenstruck/foundry": {
             "manifest": {
                 "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
                 },
                 "bundles": {
                     "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
@@ -36,9 +37,30 @@
                         ""
                     ],
                     "executable": false
+                },
+                "src/Story/AppStory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Story;",
+                        "",
+                        "use Zenstruck\\Foundry\\Attribute\\AsFixture;",
+                        "use Zenstruck\\Foundry\\Story;",
+                        "",
+                        "#[AsFixture(name: 'main')]",
+                        "final class AppStory extends Story",
+                        "{",
+                        "    public function build(): void",
+                        "    {",
+                        "        // SomeFactory::createOne();",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "ref": "8390abe263fa9b68f55c2799c44af5fec2912c5d"
+            "ref": "3c7f73fdbf04b3a00e0664b0b9cc6fdebbb50a8a"
         }
     }
 }
