@@ -1,0 +1,89 @@
+{
+    "manifests": {
+        "symfony/stimulus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\StimulusBundle\\StimulusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/"
+                },
+                "conflict": {
+                    "symfony/webpack-encore-bundle": "<2.0",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "add-lines": [
+                    {
+                        "file": "webpack.config.js",
+                        "content": "\n    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+                        "position": "after_target",
+                        "target": ".splitEntryChunks()"
+                    },
+                    {
+                        "file": "assets/app.js",
+                        "content": "import './bootstrap.js';",
+                        "position": "top",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "import { startStimulusApp } from '@symfony/stimulus-bridge';\n\n// Registers Stimulus controllers from controllers.json and in the controllers/ directory\nexport const app = startStimulusApp(require.context(\n    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',\n    true,\n    /\\.[jt]sx?$/\n));",
+                        "position": "top",
+                        "requires": "symfony/webpack-encore-bundle"
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "import { startStimulusApp } from '@symfony/stimulus-bundle';\n\nconst app = startStimulusApp();",
+                        "position": "top",
+                        "requires": "symfony/asset-mapper"
+                    }
+                ]
+            },
+            "files": {
+                "assets/bootstrap.js": {
+                    "contents": [
+                        "// register any custom, 3rd party controllers here",
+                        "// app.register('some_controller_name', SomeImportedController);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers.json": {
+                    "contents": [
+                        "{",
+                        "    \"controllers\": [],",
+                        "    \"entrypoints\": []",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers/hello_controller.js": {
+                    "contents": [
+                        "import { Controller } from '@hotwired/stimulus';",
+                        "",
+                        "/*",
+                        " * This is an example Stimulus controller!",
+                        " *",
+                        " * Any element with a data-controller=\"hello\" attribute will cause",
+                        " * this controller to be executed. The name \"hello\" comes from the filename:",
+                        " * hello_controller.js -> \"hello\"",
+                        " *",
+                        " * Delete this file or adapt it for your use!",
+                        " */",
+                        "export default class extends Controller {",
+                        "    connect() {",
+                        "        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6acd9ff4f7fd5626d2962109bd4ebab351d43c43"
+        }
+    }
+}
