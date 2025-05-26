@@ -95,8 +95,10 @@ Symfony is smart enough to reverse those tasks when uninstalling and
 unconfiguring the dependencies.
 
 There are several types of tasks, which are called **configurators**:
-``copy-from-recipe``, ``copy-from-package``, ``bundles``, ``env``, ``container``
-``composer-scripts``, ``gitignore``, and ``post-install-output``.
+``bundles``, ``container``, ``copy-from-recipe``, ``copy-from-package``, ``env``,
+``dotenv``, ``makefile``, ``composer-scripts``, ``composer-commands``,
+``gitignore``, ``dockerfile``, ``docker-compose``, ``add-lines``,
+and ``post-install-output``.
 
 ``bundles`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,6 +248,43 @@ Don't remove or modify these separators.
     Use ``%generate(secret)%`` as the value of any environment variable to
     replace it with a cryptographically secure random value of 16 bytes.
 
+``dotenv`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Very similar to the ``env`` configurator but allows targeting a specific dotenv
+file instead of just ``.env``.
+
+.. code-block:: json
+
+    {
+        "dotenv": {
+            "local": {
+                "SOME_VAR": "value"
+            }
+        }
+    }
+
+This recipe is converted into the following content appended to the
+``.env.local`` file:
+
+.. code-block:: bash
+
+    ###> your-recipe-name-here ###
+    SOME_VAR=value
+    ###< your-recipe-name-here ###
+
+``makefile`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adds new tasks to the ``Makefile`` file stored in the root of the Symfony
+project. Unlike other configurators, there is no specific entry in the manifest
+file. Define tasks by creating a ``Makefile`` file at the root of the recipe
+directory (a ``PHP_EOL`` character is added after each line).
+
+Similar to the ``env`` configurator, the contents are copied into the ``Makefile``
+file and wrapped with section separators (``###> your-recipe-name-here ###``)
+that must not be removed or modified.
+
 ``composer-scripts`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -263,6 +302,54 @@ script (``php-script`` for PHP scripts, ``script`` for any shell script and
             "vendor/bin/security-checker security:check": "php-script",
             "make cache-warmup": "script",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+
+``composer-commands`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Registers scripts in the ``scripts`` section of the ``composer.json`` file
+to execute them manually when running ``composer run the-command``:
+
+.. code-block:: json
+
+    {
+        "composer-commands": {
+            "test": "bin/phpunit"
+        }
+    }
+
+See the `Composer documentation`_ for more information about the
+``scripts`` section of the ``composer.json`` file.
+
+``dockerfile`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adds command lines to the ``Dockerfile``:
+
+.. code-block:: json
+
+    {
+        "dockerfile": [
+            "RUN install-php-extensions pdo_pgsql"
+        ]
+    }
+
+``docker-compose`` Configurator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adds lines to the main entries of docker compose files:
+
+.. code-block:: json
+
+    {
+        "docker-compose": {
+            "compose.yml": {
+                "services": [
+                    "database:",
+                    "  image: postgres:${POSTGRES_VERSION:-16}-alpine",
+                ]
+            }
         }
     }
 
@@ -418,3 +505,4 @@ one used by ``symfony/framework-bundle``:
 .. _`contrib repository`: https://github.com/symfony/recipes-contrib
 .. _`Symfony Console styles and colors`: https://symfony.com/doc/current/console/coloring.html
 .. _`RECIPES.md`: https://github.com/symfony/recipes/blob/flex/main/RECIPES.md
+.. _`Composer documentation`: https://getcomposer.org/doc/articles/scripts.md#defining-scripts
