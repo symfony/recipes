@@ -1,0 +1,21 @@
+{
+    "add-lines": [
+        {
+            "file": "phpunit.dist.xml",
+            "content": "            <method>Doctrine\\Deprecations\\Deprecation::trigger</method>\n            <method>Doctrine\\Deprecations\\Deprecation::delegateTriggerToBackend</method>",
+            "position": "after_target",
+            "target": "<deprecationTrigger>",
+            "requires": ["doctrine/deprecations"]
+        }
+    ],
+    "copy-from-recipe": {
+        ".env.test": ".env.test",
+        "phpunit.dist.xml": "phpunit.dist.xml",
+        "tests/": "tests/",
+        "bin/": "%BIN_DIR%/"
+    },
+    "gitignore": [
+        "/phpunit.xml",
+        "/.phpunit.cache/"
+    ]
+}
