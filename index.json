@@ -940,6 +940,9 @@
         "symfony/primotexto-notifier": [
             "7.2"
         ],
+        "symfony/property-info": [
+            "7.3"
+        ],
         "symfony/psr7-pack": [
             "1.0"
         ],
