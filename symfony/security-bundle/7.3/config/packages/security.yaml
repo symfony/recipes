@@ -6,8 +6,11 @@ security:
     providers:
         users_in_memory: { memory: null }
     firewalls:
-        dev: # Exception for the web debug toolbar and assets (only needed if you have a broad `access_control`):
-            pattern: ^/(_profiler|_wdt|assets|build)/ # `assets` is for AssetMapper; `build` is for Webpack Encore. Regex delimiters `{}` are added automatically.
+        # Disable security for dev tools and static assets (only needed if access_control is broad)
+        dev:
+            # 'assets/' is for AssetMapper, 'build/' for Webpack Encore
+            # (note: no regex delimiters needed; Symfony adds `{}` automatically)
+            pattern: ^/(_profiler|_wdt|assets|build)/
             security: false
         main:
             lazy: true
@@ -28,10 +31,8 @@ security:
 when@test:
     security:
         password_hashers:
-            # By default, password hashers are resource intensive and take time. This is
-            # important to generate secure password hashes. In tests however, secure hashes
-            # are not important, waste resources and increase test times. The following
-            # reduces the work factor to the lowest possible values.
+            # Password hashers are resource-intensive by design to ensure security.
+            # In tests, it's safe to reduce their cost to improve performance.            
             Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
                 algorithm: auto
                 cost: 4 # Lowest possible value for bcrypt
