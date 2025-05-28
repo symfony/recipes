@@ -552,6 +552,9 @@
             "1.0",
             "1.10"
         ],
+        "doctrine/deprecations": [
+            "1.0"
+        ],
         "doctrine/doctrine-bundle": [
             "1.6",
             "1.12",
@@ -627,7 +630,8 @@
             "4.7",
             "9.3",
             "9.6",
-            "10.0"
+            "10.0",
+            "11.1"
         ],
         "scheb/2fa-bundle": [
             "5.0",
@@ -922,7 +926,8 @@
             "4.3",
             "5.1",
             "5.3",
-            "6.3"
+            "6.3",
+            "7.3"
         ],
         "symfony/phrase-translation-provider": [
             "6.4"
@@ -1326,6 +1331,10 @@
             },
             "6.3": {
                 "phpunit/phpunit": "<9.6",
+                "symfony/framework-bundle": "<5.4"
+            },
+            "7.3": {
+                "phpunit/phpunit": "<10.0",
                 "symfony/framework-bundle": "<5.4"
             }
         },

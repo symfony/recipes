@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/phpunit-bridge": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "phpunit.dist.xml",
+                        "content": "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">\n            <parameter name=\"clock-mock-namespaces\" value=\"App\" />\n            <parameter name=\"dns-mock-namespaces\" value=\"App\" />\n        </bootstrap>",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "warn_if_missing": true
+                    }
+                ],
+                "conflict": {
+                    "phpunit/phpunit": "<10.0",
+                    "symfony/framework-bundle": "<5.4"
+                }
+            },
+            "files": [],
+            "ref": "dc13fec96bd527bd399c3c01f0aab915c67fd544"
+        }
+    }
+}

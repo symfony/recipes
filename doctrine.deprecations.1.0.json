@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "doctrine/deprecations": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "phpunit.dist.xml",
+                        "content": "            <method>Doctrine\\Deprecations\\Deprecation::trigger</method>\n            <method>Doctrine\\Deprecations\\Deprecation::delegateTriggerToBackend</method>",
+                        "position": "after_target",
+                        "target": "<deprecationTrigger>",
+                        "warn_if_missing": false
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "87424683adc81d7dc305eefec1fced883084aab9"
+        }
+    }
+}
