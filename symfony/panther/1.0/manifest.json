@@ -1,4 +1,7 @@
 {
+    "conflict": {
+        "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0"
+    },
     "dockerfile": [
         "# Chromium and ChromeDriver",
         "ENV PANTHER_NO_SANDBOX 1",
@@ -21,6 +24,7 @@
             "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
             "position": "after_target",
             "target": "<extensions>",
+            "requires": "symfony/phpunit-bridge:<7.3",
             "warn_if_missing": false
         },
         {
@@ -28,6 +32,23 @@
             "content": "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
             "position": "after_target",
             "target": "<extensions>",
+            "requires": "symfony/phpunit-bridge:<7.3",
+            "warn_if_missing": false
+        },
+        {
+            "file": "phpunit.xml.dist",
+            "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "position": "after_target",
+            "target": "<extensions>",
+            "requires": "phpunit/phpunit:<10",
+            "warn_if_missing": false
+        },
+        {
+            "file": "phpunit.dist.xml",
+            "content": "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "position": "after_target",
+            "target": "<extensions>",
+            "requires": "phpunit/phpunit:>=10",
             "warn_if_missing": false
         },
         {
