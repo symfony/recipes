@@ -1,0 +1,28 @@
+{
+    "aliases": {
+        "panther": "symfony/panther"
+    },
+    "recipes": {
+        "symfony/panther": [
+            "1.0"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/panther": {
+            "1.0": {
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1422/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1422/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
