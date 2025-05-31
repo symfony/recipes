@@ -8,7 +8,7 @@
             "warn_if_missing": true
         }
     ],
-     "gitignore": [
+    "gitignore": [
         ".phpunit.result.cache",
         "/phpunit.xml"
     ],
