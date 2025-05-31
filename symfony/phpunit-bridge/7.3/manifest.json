@@ -2,6 +2,13 @@
     "add-lines": [
         {
             "file": "phpunit.dist.xml",
+            "content": "        <server name=\"SYMFONY_DEPRECATIONS_HELPER\" value=\"disabled\" />",
+            "position": "after_target",
+            "target": "<php>",
+            "warn_if_missing": true
+        },
+        {
+            "file": "phpunit.dist.xml",
             "content": "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">\n            <parameter name=\"clock-mock-namespaces\" value=\"App\" />\n            <parameter name=\"dns-mock-namespaces\" value=\"App\" />\n        </bootstrap>",
             "position": "after_target",
             "target": "<extensions>",
