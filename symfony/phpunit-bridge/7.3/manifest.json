@@ -8,6 +8,10 @@
             "warn_if_missing": true
         }
     ],
+     "gitignore": [
+        ".phpunit.result.cache",
+        "/phpunit.xml"
+    ],
     "conflict": {
         "phpunit/phpunit": "<10.0",
         "symfony/framework-bundle": "<5.4"
