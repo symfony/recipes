@@ -1,0 +1,51 @@
+{
+    "aliases": {
+        "live-component": "symfony/ux-live-component",
+        "live-components": "symfony/ux-live-component",
+        "livecomponent": "symfony/ux-live-component",
+        "livecomponents": "symfony/ux-live-component",
+        "turbo": "symfony/ux-turbo",
+        "twig-component": "symfony/ux-twig-component",
+        "twig-components": "symfony/ux-twig-component",
+        "twigcomponent": "symfony/ux-twig-component",
+        "twigcomponents": "symfony/ux-twig-component",
+        "ux-live-component": "symfony/ux-live-component",
+        "ux-turbo": "symfony/ux-turbo",
+        "ux-twig-component": "symfony/ux-twig-component",
+        "uxlivecomponent": "symfony/ux-live-component",
+        "uxturbo": "symfony/ux-turbo",
+        "uxtwigcomponent": "symfony/ux-twig-component"
+    },
+    "recipes": {
+        "symfony/ux-live-component": [
+            "2.0",
+            "2.6"
+        ],
+        "symfony/ux-turbo": [
+            "2.19",
+            "2.20"
+        ],
+        "symfony/ux-twig-component": [
+            "2.13"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/ux-turbo": {
+            "2.20": {
+                "symfony/framework-bundle": "<7.2",
+                "symfony/security-csrf": "<7.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1429/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1429/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
