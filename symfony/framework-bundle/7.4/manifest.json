@@ -1,0 +1,33 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/",
+        "src/": "%SRC_DIR%/",
+        ".editorconfig": ".editorconfig"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "env": {
+        "APP_ENV": "dev",
+        "APP_SECRET": ""
+    },
+    "dotenv": {
+        "dev": {
+            "APP_SECRET": "%generate(secret)%"
+        }
+    },
+    "gitignore": [
+        "/.env.local",
+        "/.env.local.php",
+        "/.env.*.local",
+        "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+        "/%PUBLIC_DIR%/bundles/",
+        "/%VAR_DIR%/",
+        "/vendor/"
+    ]
+}
