@@ -1,8 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
+use Symfony\Component\HttpKernel\Kernel;
 
 if (!is_dir(dirname(__DIR__).'/vendor')) {
     throw new LogicException('Dependencies are missing. Try running "composer install".');
@@ -15,7 +16,9 @@ if (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
 return function (array $context) {
-    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+    $kernel = new class($context['APP_ENV'], (bool) $context['APP_DEBUG']) extends Kernel {
+        use MicroKernelTrait;
+    };
 
     return new Application($kernel);
 };
