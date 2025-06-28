@@ -1,6 +1,6 @@
 symfonycasts_tailwind:
     # Specify the EXACT version of Tailwind CSS you want to use
-    binary_version: 'v3.4.17'
+    binary_version: 'v4.1.11'
 
     # Alternatively, you can specify the path to the binary that you manage yourself
     #binary: 'node_modules/.bin/tailwindcss'
