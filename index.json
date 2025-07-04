@@ -1325,6 +1325,11 @@
                 "symfony/framework-bundle": "<5.3"
             }
         },
+        "symfony/panther": {
+            "1.0": {
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0"
+            }
+        },
         "symfony/phpunit-bridge": {
             "5.3": {
                 "symfony/framework-bundle": "<5.4"
