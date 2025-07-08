@@ -1498,10 +1498,12 @@
             },
             "2.5": {
                 "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
                 "symfony/framework-bundle": "<6.4"
             },
             "2.6": {
                 "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
                 "symfony/framework-bundle": "<6.4"
             }
         }
