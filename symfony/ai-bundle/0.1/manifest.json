@@ -7,5 +7,6 @@
     },
     "env": {
         "OPENAI_API_KEY": ""
-    }
+    },
+    "aliases": ["ai"]
 }
