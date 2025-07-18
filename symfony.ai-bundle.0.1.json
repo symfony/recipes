@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "symfony/ai-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\AIBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OPENAI_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai.yaml": {
+                    "contents": [
+                        "# config/packages/ai.yaml",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Toolbox\\Tool\\Clock: null",
+                        "",
+                        "ai:",
+                        "    platform:",
+                        "        openai:",
+                        "            api_key: '%env(OPENAI_API_KEY)%'",
+                        "",
+                        "    agent:",
+                        "        default:",
+                        "            platform: 'ai.platform.openai'",
+                        "            model:",
+                        "                class: 'Symfony\\AI\\Platform\\Bridge\\OpenAI\\GPT'",
+                        "                name: 'gpt-4o-mini' # !php/const Symfony\\AI\\Platform\\Bridge\\OpenAI\\GPT::GPT_4O_MINI",
+                        "            system_prompt: |",
+                        "                You are a helpful assistant and you can provide the current date and time.",
+                        "            tools:",
+                        "                - 'Symfony\\AI\\Agent\\Toolbox\\Tool\\Clock'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "098a5a7b816e8fe7d7576aac295a2fb6afcfc36f"
+        }
+    }
+}

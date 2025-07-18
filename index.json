@@ -8,6 +8,9 @@
         "admingenerator": "easycorp/easyadmin-bundle",
         "aha-send-mailer": "symfony/aha-send-mailer",
         "ahasendmailer": "symfony/aha-send-mailer",
+        "ai": "symfony/ai-bundle",
+        "ai-bundle": "symfony/ai-bundle",
+        "aibundle": "symfony/ai-bundle",
         "alice": "hautelook/alice-bundle",
         "all-my-sms-notifier": "symfony/all-my-sms-notifier",
         "allmysms-notifier": "symfony/allmysms-notifier",
@@ -654,6 +657,9 @@
         ],
         "symfony/aha-send-mailer": [
             "7.2"
+        ],
+        "symfony/ai-bundle": [
+            "0.1"
         ],
         "symfony/all-my-sms-notifier": [
             "5.3"
