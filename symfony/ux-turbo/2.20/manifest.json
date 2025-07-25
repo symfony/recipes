@@ -9,10 +9,10 @@
     },
     "add-lines": [
         {
-            "file": "config/packages/framework.yaml",
+            "file": "config/packages/csrf.yaml",
             "position": "after_target",
-            "target": "        csrf_protection:",
-            "content": "            check_header: true"
+            "target": "    csrf_protection:",
+            "content": "        check_header: true"
         }
     ]
 }
