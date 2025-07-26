@@ -2,17 +2,12 @@
     "bundles": {
         "Symfony\\UX\\Turbo\\TurboBundle": ["all"]
     },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "aliases": ["turbo"],
     "conflict": {
         "symfony/framework-bundle": "<7.2",
         "symfony/security-csrf": "<7.2"
-    },
-    "add-lines": [
-        {
-            "file": "config/packages/csrf.yaml",
-            "position": "after_target",
-            "target": "    csrf_protection:",
-            "content": "        check_header: true"
-        }
-    ]
+    }
 }
