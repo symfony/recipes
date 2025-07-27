@@ -1,0 +1,33 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "bundles": {
+        "Zenstruck\\Foundry\\ZenstruckFoundryBundle": ["dev", "test"]
+    },
+    "conflict": {
+        "doctrine/persistence": "<2.0",
+        "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+        "symfony/framework-bundle": "<6.4"
+    },
+    "aliases": ["foundry"],
+    "add-lines": [
+        {
+            "file": "phpunit.dist.xml",
+            "content": "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />",
+            "position": "after_target",
+            "target": "<extensions>",
+            "requires": "phpunit/phpunit:>=10",
+            "warn_if_missing": false
+        },
+        {
+            "file": "config/packages/zenstruck_foundry.yaml",
+            "content": "        enable_auto_refresh_with_lazy_objects: true",
+            "position": "after_target",
+            "target": "zenstruck_foundry:",
+            "requires": "php:>=8.4",
+            "warn_if_missing": false
+        }
+    ]
+}
