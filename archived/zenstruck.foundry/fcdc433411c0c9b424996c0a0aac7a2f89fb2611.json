@@ -1,0 +1,85 @@
+{
+    "manifests": {
+        "zenstruck/foundry": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "bundles": {
+                    "Zenstruck\\Foundry\\ZenstruckFoundryBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "conflict": {
+                    "doctrine/persistence": "<2.0",
+                    "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+                    "symfony/framework-bundle": "<6.4"
+                },
+                "add-lines": [
+                    {
+                        "file": "phpunit.dist.xml",
+                        "content": "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "requires": "phpunit/phpunit:>=10",
+                        "warn_if_missing": false
+                    },
+                    {
+                        "file": "config/packages/zenstruck_foundry.yaml",
+                        "content": "        enable_auto_refresh_with_lazy_objects: true",
+                        "position": "after_target",
+                        "target": "zenstruck_foundry:",
+                        "requires": "php:>=8.4",
+                        "warn_if_missing": false
+                    }
+                ],
+                "post-install-output": [
+                    "  * You're ready to use zenstruck/foundry. Create your first factory with",
+                    "    <info>bin/console make:factory</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/zenstruck_foundry.yaml": {
+                    "contents": [
+                        "when@dev: &dev",
+                        "    # See full configuration: https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#full-default-bundle-configuration",
+                        "    zenstruck_foundry:",
+                        "        persistence:",
+                        "            # Flush only once per call of `PersistentObjectFactory::create()`",
+                        "            flush_once: true",
+                        "",
+                        "when@test: *dev",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Story/AppStory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Story;",
+                        "",
+                        "use Zenstruck\\Foundry\\Attribute\\AsFixture;",
+                        "use Zenstruck\\Foundry\\Story;",
+                        "",
+                        "#[AsFixture(name: 'main')]",
+                        "final class AppStory extends Story",
+                        "{",
+                        "    public function build(): void",
+                        "    {",
+                        "        // SomeFactory::createOne();",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fcdc433411c0c9b424996c0a0aac7a2f89fb2611"
+        }
+    }
+}
