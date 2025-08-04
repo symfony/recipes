@@ -21,7 +21,8 @@
     "dotenv": {
         "test": {
             "PANTHER_APP_ENV": "panther",
-            "PANTHER_ERROR_SCREENSHOT_DIR": "./var/error-screenshots"
+            "PANTHER_ERROR_SCREENSHOT_DIR": "./var/error-screenshots",
+            "PANTHER_DEVTOOLS": "0"
         }
     },
     "add-lines": [
