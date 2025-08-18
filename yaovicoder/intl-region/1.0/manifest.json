@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Ydee\\IntlRegion\\Bundle\\IntlRegionBundle": ["all"]
+    }
+}
