@@ -1,0 +1,7 @@
+# $schema: ../vendor/symfony/routing/Loader/schema/routing.schema.json
+
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
