@@ -1,5 +1,8 @@
 # $schema: ../vendor/symfony/routing/Loader/schema/routing.schema.json
 
+# To see all the routes, use the debug command
+#   bin/console debug:router
+
 controllers:
     resource: attributes
     type: tagged_services
