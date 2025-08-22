@@ -59,7 +59,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/flex](https://packagist.org/packages/symfony/flex) | [2.4](symfony/flex/2.4) | `flex` |
 | [symfony/form](https://packagist.org/packages/symfony/form) | [7.2](symfony/form/7.2) | `form` |
 | [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
-| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.3](symfony/framework-bundle/7.3) | `framework-bundle`, `frameworkbundle` |
+| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.4](symfony/framework-bundle/7.4) | `framework-bundle`, `frameworkbundle` |
 | [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [5.1](symfony/free-mobile-notifier/5.1) | `free-mobile-notifier`, `freemobilenotifier` |
 | [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
@@ -127,7 +127,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
 | [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
-| [symfony/routing](https://packagist.org/packages/symfony/routing) | [7.0](symfony/routing/7.0) | `router`, `routing` |
+| [symfony/routing](https://packagist.org/packages/symfony/routing) | [7.4](symfony/routing/7.4) | `router`, `routing` |
 | [symfony/scaleway-mailer](https://packagist.org/packages/symfony/scaleway-mailer) | [6.4](symfony/scaleway-mailer/6.4) | `scaleway-mailer`, `scalewaymailer` |
 | [symfony/scheduler](https://packagist.org/packages/symfony/scheduler) | [7.2](symfony/scheduler/7.2) | `schedule`, `scheduler`, `scheduling` |
 | [symfony/security-bundle](https://packagist.org/packages/symfony/security-bundle) | [6.4](symfony/security-bundle/6.4) | `security`, `security-bundle`, `securitybundle` |
