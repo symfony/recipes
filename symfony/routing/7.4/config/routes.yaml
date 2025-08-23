@@ -1,6 +1,6 @@
 # $schema: ../vendor/symfony/routing/Loader/schema/routing.schema.json
 
-# To see all the routes, use the debug command
+# To list all registered routes, run the following command:
 #   bin/console debug:router
 
 controllers:
