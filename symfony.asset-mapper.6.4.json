@@ -1,0 +1,194 @@
+{
+    "manifests": {
+        "symfony/asset-mapper": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/",
+                    "importmap.php": "importmap.php"
+                },
+                "gitignore": [
+                    "/%PUBLIC_DIR%/assets/",
+                    "/assets/vendor/"
+                ],
+                "composer-scripts": {
+                    "importmap:install": "symfony-cmd"
+                },
+                "add-lines": [
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "            {% block importmap %}{{ importmap('app') }}{% endblock %}",
+                        "position": "after_target",
+                        "target": "{% block javascripts %}",
+                        "warn_if_missing": true
+                    }
+                ],
+                "conflict": {
+                    "symfony/framework-bundle": "<6.3",
+                    "symfony/twig-bundle": "<6.3",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                }
+            },
+            "files": {
+                "assets/app.js": {
+                    "contents": [
+                        "/*",
+                        " * Welcome to your app's main JavaScript file!",
+                        " *",
+                        " * This file will be included onto the page via the importmap() Twig function,",
+                        " * which should already be in your base.html.twig.",
+                        " */",
+                        "import './styles/app.css';",
+                        "",
+                        "console.log('This log comes from assets/app.js - welcome to AssetMapper! \ud83c\udf89');",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/styles/app.css": {
+                    "contents": [
+                        "body {",
+                        "    font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif;",
+                        "    line-height: 1.5;",
+                        "    padding: 1rem;",
+                        "    max-width: 900px;",
+                        "    margin: 0 auto;",
+                        "    -webkit-font-smoothing: antialiased;",
+                        "    -moz-osx-font-smoothing: grayscale;",
+                        "}",
+                        "",
+                        "h1, h2, h3, h4, h5, h6 {",
+                        "    margin: 0 0 .5em;",
+                        "    font-weight: bold;",
+                        "    line-height: 1.2;",
+                        "}",
+                        "",
+                        "h1 {",
+                        "    font-size: 1.5rem;",
+                        "}",
+                        "",
+                        "h2 {",
+                        "    font-size: 1.25rem;",
+                        "}",
+                        "",
+                        "h3 {",
+                        "    font-size: 1.125rem;",
+                        "}",
+                        "",
+                        "p {",
+                        "    margin: 0 0 1em;",
+                        "}",
+                        "",
+                        "ul, ol {",
+                        "    margin: 0 0 1em;",
+                        "    padding-left: 1.25em;",
+                        "}",
+                        "",
+                        "a {",
+                        "    color: #0b84ff;",
+                        "    text-decoration: underline;",
+                        "}",
+                        "",
+                        "label {",
+                        "    display: block;",
+                        "    margin-bottom: .25em;",
+                        "    font-size: .9rem;",
+                        "    color: #555;",
+                        "}",
+                        "",
+                        "input, textarea, select, button {",
+                        "    font: inherit;",
+                        "    color: inherit;",
+                        "    padding: .5rem .6rem;",
+                        "    border: 1px solid #ccc;",
+                        "    border-radius: 6px;",
+                        "    background: #fff;",
+                        "}",
+                        "",
+                        "textarea {",
+                        "    resize: vertical;",
+                        "    min-height: 6rem;",
+                        "}",
+                        "",
+                        "button {",
+                        "    background: #0b84ff;",
+                        "    color: #fff;",
+                        "    border: none;",
+                        "    cursor: pointer;",
+                        "}",
+                        "",
+                        "button:active {",
+                        "    transform: translateY(1px);",
+                        "}",
+                        "",
+                        "img, video {",
+                        "    max-width: 100%;",
+                        "    height: auto;",
+                        "}",
+                        "",
+                        "table {",
+                        "    border-collapse: collapse;",
+                        "    width: 100%;",
+                        "    margin: 1em 0;",
+                        "}",
+                        "",
+                        "th, td {",
+                        "    border: 1px solid #ddd;",
+                        "    padding: .5rem;",
+                        "    text-align: left;",
+                        "}",
+                        "",
+                        "th {",
+                        "    background: #f9f9f9;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/asset_mapper.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    asset_mapper:",
+                        "        # The paths to make available to the asset mapper.",
+                        "        paths:",
+                        "            - assets/",
+                        "        missing_import_mode: strict",
+                        "",
+                        "when@prod:",
+                        "    framework:",
+                        "        asset_mapper:",
+                        "            missing_import_mode: warn",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "importmap.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "/**",
+                        " * Returns the importmap for this application.",
+                        " *",
+                        " * - \"path\" is a path inside the asset mapper system. Use the",
+                        " *     \"debug:asset-map\" command to see the full list of paths.",
+                        " *",
+                        " * - \"entrypoint\" (JavaScript only) set to true for any module that will",
+                        " *     be used as an \"entrypoint\" (and passed to the importmap() Twig function).",
+                        " *",
+                        " * The \"importmap:require\" command can be used to add new entries to this file.",
+                        " */",
+                        "return [",
+                        "    'app' => [",
+                        "        'path' => './assets/app.js',",
+                        "        'entrypoint' => true,",
+                        "    ],",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f1c75f9e1fd6cac3982b766959566eb3f85d3d36"
+        }
+    }
+}
