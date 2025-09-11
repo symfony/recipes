@@ -1,3 +1,94 @@
 body {
-    background-color: skyblue;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 .5em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+ul, ol {
+    margin: 0 0 1em;
+    padding-left: 1.25em;
+}
+
+a {
+    color: #0b84ff;
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin-bottom: .25em;
+    font-size: .9rem;
+    color: #555;
+}
+
+input, textarea, select, button {
+    font: inherit;
+    color: inherit;
+    padding: .5rem .6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+button {
+    background: #0b84ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: .5rem;
+    text-align: left;
+}
+
+th {
+    background: #f9f9f9;
 }
