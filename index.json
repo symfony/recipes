@@ -98,6 +98,8 @@
         "domcrawler": "symfony/dom-crawler",
         "dotenv": "symfony/dotenv",
         "dump": "symfony/var-dumper",
+        "dynamo-db-lock": "symfony/dynamo-db-lock",
+        "dynamodblock": "symfony/dynamo-db-lock",
         "emoji": "symfony/emoji",
         "encore": "symfony/webpack-encore-bundle",
         "engagespot-notifier": "symfony/engagespot-notifier",
@@ -239,7 +241,9 @@
         "messenger": "symfony/messenger",
         "messenger-test": "zenstruck/messenger-test",
         "messengertest": "zenstruck/messenger-test",
+        "microsoft-graph-mailer": "symfony/microsoft-graph-mailer",
         "microsoft-teams-notifier": "symfony/microsoft-teams-notifier",
+        "microsoftgraphmailer": "symfony/microsoft-graph-mailer",
         "microsoftteamsnotifier": "symfony/microsoft-teams-notifier",
         "migrations": "doctrine/doctrine-migrations-bundle",
         "mime": "symfony/mime",
@@ -2070,6 +2074,9 @@
                 "7.4",
                 "8.0"
             ],
+            "symfony/dynamo-db-lock": [
+                "7.4"
+            ],
             "symfony/emoji": [
                 "7.1",
                 "7.2",
@@ -2976,6 +2983,10 @@
                 "7.1",
                 "7.2",
                 "7.3",
+                "7.4",
+                "8.0"
+            ],
+            "symfony/microsoft-graph-mailer": [
                 "7.4",
                 "8.0"
             ],
