@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\AI\Agent\Bridge\Brave\Brave:
+        $apiKey: '%env(BRAVE_API_KEY)%'
