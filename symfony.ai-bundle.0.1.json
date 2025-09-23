@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "symfony/ai-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\AiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OPENAI_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai.yaml": {
+                    "contents": [
+                        "# config/packages/ai.yaml",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Toolbox\\Tool\\Clock: null",
+                        "",
+                        "ai:",
+                        "    platform:",
+                        "        openai:",
+                        "            api_key: '%env(OPENAI_API_KEY)%'",
+                        "",
+                        "    agent:",
+                        "        default:",
+                        "            platform: 'ai.platform.openai'",
+                        "            model:",
+                        "                name: 'gpt-4o-mini'",
+                        "            system_prompt: |",
+                        "                You are a helpful assistant and you can provide the current date and time.",
+                        "            tools:",
+                        "                - 'Symfony\\AI\\Agent\\Toolbox\\Tool\\Clock'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "05e874eb5feadeaaa615d6f6d1d65617fe28df96"
+        }
+    }
+}
