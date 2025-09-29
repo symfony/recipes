@@ -14,7 +14,7 @@ ai:
     agent:
         default:
             platform: 'ai.platform.openai'
-            model:
+            model: 'gpt-4o-mini'
                 name: 'gpt-4o-mini'
             system_prompt: |
                 You are a helpful assistant and you can provide the current date and time.
