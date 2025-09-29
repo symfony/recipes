@@ -14,9 +14,7 @@ ai:
     agent:
         default:
             platform: 'ai.platform.openai'
-            model:
-                class: 'Symfony\AI\Platform\Bridge\OpenAi\Gpt'
-                name: 'gpt-4o-mini' # !php/const Symfony\AI\Platform\Bridge\OpenAi\Gpt::GPT_4O_MINI
+            model: 'gpt-4o-mini'
             system_prompt: |
                 You are a helpful assistant and you can provide the current date and time.
             tools:
