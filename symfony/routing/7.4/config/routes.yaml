@@ -1,4 +1,4 @@
-# $schema: ../vendor/symfony/routing/Loader/schema/routing.schema.json
+# yaml-language-server: $schema=../vendor/symfony/routing/Loader/schema/routing.schema.json
 
 controllers:
     resource:
