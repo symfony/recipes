@@ -1,4 +1,4 @@
-# $schema: ../vendor/symfony/routing/Loader/schema/routing.schema.json
+# yaml-language-server: $schema=../vendor/symfony/routing/Loader/schema/routing.schema.json
 
 # To list all registered routes, run the following command:
 #   bin/console debug:router

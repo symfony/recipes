@@ -1,4 +1,4 @@
-# $schema: ../vendor/symfony/dependency-injection/Loader/schema/services.schema.json
+# yaml-language-server: $schema=../vendor/symfony/dependency-injection/Loader/schema/services.schema.json
 
 # This file is the entry point to configure your own services.
 # Files in the packages/ subdirectory configure your dependencies.
