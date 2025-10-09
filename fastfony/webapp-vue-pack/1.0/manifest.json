@@ -1,0 +1,6 @@
+{
+    "aliases": ["webapp-vue-pack", "webapp-webpack-pack", "vue-pack", "webpack-pack"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
