@@ -9,7 +9,7 @@ when@dev: &dev
     # See https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#generate
     #services:
     #    App\Tests\Factory\:
-    #        resource: '../../tests/Factory/'
+    #        resource: '%kernel.project_dir%/tests/Factory/'
     #        autowire: true
     #        autoconfigure: true
 
