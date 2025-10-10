@@ -1,5 +1,5 @@
 {
-    "aliases": ["webapp-vue-pack", "webapp-webpack-pack", "vue-pack", "webpack-pack"],
+    "aliases": ["webapp-webpack", "webpack-pack", "webapp-vue-pack"],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
