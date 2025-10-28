@@ -14,7 +14,8 @@
     },
     "env": {
         "APP_ENV": "dev",
-        "APP_SECRET": ""
+        "APP_SECRET": "",
+        "APP_SHARE_DIR": "$APP_PROJECT_DIR/var/share"
     },
     "dotenv": {
         "dev": {
