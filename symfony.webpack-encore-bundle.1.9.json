@@ -164,7 +164,7 @@
                         "{",
                         "    \"devDependencies\": {",
                         "        \"@hotwired/stimulus\": \"^3.0.0\",",
-                        "        \"@symfony/stimulus-bridge\": \"^4.0.0\",",
+                        "        \"@symfony/stimulus-bridge\": \"^3.0.0\",",
                         "        \"@symfony/webpack-encore\": \"^1.7.0\",",
                         "        \"core-js\": \"^3.0.0\",",
                         "        \"regenerator-runtime\": \"^0.13.2\",",
@@ -265,7 +265,7 @@
                     "executable": false
                 }
             },
-            "ref": "06f92cd7b9e7df74ed637075678da31e85a28dd9"
+            "ref": "f466b6384e592cfda11ca2361bbf7c7287b58f55"
         }
     }
 }

@@ -20,35 +20,12 @@
                     "yarn-error.log"
                 ],
                 "conflict": {
-                    "symfony/framework-bundle": "<5.4",
-                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                    "symfony/framework-bundle": "<5.4"
                 },
-                "add-lines": [
-                    {
-                        "file": "templates/base.html.twig",
-                        "content": "            {{ encore_entry_script_tags('app') }}",
-                        "position": "after_target",
-                        "target": "{% block javascripts %}",
-                        "warn_if_missing": true
-                    },
-                    {
-                        "file": "templates/base.html.twig",
-                        "content": "            {{ encore_entry_link_tags('app') }}",
-                        "position": "after_target",
-                        "target": "{% block stylesheets %}",
-                        "warn_if_missing": true
-                    }
-                ],
                 "post-install-output": [
-                    "  * Install NPM and run <fg=green>npm install</>",
+                    "  * Install Yarn and run <fg=green>yarn install</>",
                     "",
-                    "  * Compile your assets for development: <fg=green>npm run dev</>",
-                    "  ",
-                    "  * Compile your assets for development and watch for any modifications: <fg=green>npm run watch</>",
-                    "  ",
-                    "  * Or start the development server: <fg=green>npm run dev-server</>",
-                    "  ",
-                    "  * Compile your assets for production: <fg=green>npm run build</>"
+                    "  * Start the development server: <fg=green>yarn encore dev-server</>"
                 ]
             },
             "files": {
@@ -63,6 +40,58 @@
                         "",
                         "// any CSS you import will output into a single css file (app.css in this case)",
                         "import './styles/app.css';",
+                        "",
+                        "// start the Stimulus application",
+                        "import './bootstrap';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/bootstrap.js": {
+                    "contents": [
+                        "import { startStimulusApp } from '@symfony/stimulus-bridge';",
+                        "",
+                        "// Registers Stimulus controllers from controllers.json and in the controllers/ directory",
+                        "export const app = startStimulusApp(require.context(",
+                        "    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',",
+                        "    true,",
+                        "    /\\.[jt]sx?$/",
+                        "));",
+                        "",
+                        "// register any custom, 3rd party controllers here",
+                        "// app.register('some_controller_name', SomeImportedController);",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers.json": {
+                    "contents": [
+                        "{",
+                        "    \"controllers\": [],",
+                        "    \"entrypoints\": []",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/controllers/hello_controller.js": {
+                    "contents": [
+                        "import { Controller } from '@hotwired/stimulus';",
+                        "",
+                        "/*",
+                        " * This is an example Stimulus controller!",
+                        " *",
+                        " * Any element with a data-controller=\"hello\" attribute will cause",
+                        " * this controller to be executed. The name \"hello\" comes from the filename:",
+                        " * hello_controller.js -> \"hello\"",
+                        " *",
+                        " * Delete this file or adapt it for your use!",
+                        " */",
+                        "export default class extends Controller {",
+                        "    connect() {",
+                        "        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';",
+                        "    }",
+                        "}",
                         ""
                     ],
                     "executable": false
@@ -133,11 +162,14 @@
                         "    \"devDependencies\": {",
                         "        \"@babel/core\": \"^7.17.0\",",
                         "        \"@babel/preset-env\": \"^7.16.0\",",
+                        "        \"@hotwired/stimulus\": \"^3.0.0\",",
+                        "        \"@symfony/stimulus-bridge\": \"^4.0.0\",",
                         "        \"@symfony/webpack-encore\": \"^5.1.0\",",
-                        "        \"core-js\": \"^3.38.0\",",
+                        "        \"core-js\": \"^3.23.0\",",
                         "        \"regenerator-runtime\": \"^0.13.9\",",
                         "        \"webpack\": \"^5.74.0\",",
-                        "        \"webpack-cli\": \"^5.1.0\"",
+                        "        \"webpack-cli\": \"^4.10.0\",",
+                        "        \"webpack-notifier\": \"^1.15.0\"",
                         "    },",
                         "    \"license\": \"UNLICENSED\",",
                         "    \"private\": true,",
@@ -178,6 +210,9 @@
                         "     */",
                         "    .addEntry('app', './assets/app.js')",
                         "",
+                        "    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)",
+                        "    .enableStimulusBridge('./assets/controllers.json')",
+                        "",
                         "    // When enabled, Webpack \"splits\" your files into smaller pieces for greater optimization.",
                         "    .splitEntryChunks()",
                         "",
@@ -193,10 +228,7 @@
                         "     * https://symfony.com/doc/current/frontend.html#adding-more-features",
                         "     */",
                         "    .cleanupOutputBeforeBuild()",
-                        "",
-                        "    // Displays build status system notifications to the user",
-                        "    // .enableBuildNotifications()",
-                        "",
+                        "    .enableBuildNotifications()",
                         "    .enableSourceMaps(!Encore.isProduction())",
                         "    // enables hashed filenames (e.g. app.abc123.css)",
                         "    .enableVersioning(Encore.isProduction())",
@@ -209,7 +241,7 @@
                         "    // enables and configure @babel/preset-env polyfills",
                         "    .configureBabelPresetEnv((config) => {",
                         "        config.useBuiltIns = 'usage';",
-                        "        config.corejs = '3.38';",
+                        "        config.corejs = '3.23';",
                         "    })",
                         "",
                         "    // enables Sass/SCSS support",
@@ -235,7 +267,7 @@
                     "executable": false
                 }
             },
-            "ref": "719f6110345acb6495e496601fc1b4977d7102b3"
+            "ref": "eeb7f3bae6214a0cee8f48310f14e48f5cf90ba3"
         }
     }
 }
