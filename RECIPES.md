@@ -150,7 +150,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
-| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.20](symfony/stimulus-bundle/2.20) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.24](symfony/stimulus-bundle/2.24) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/sweego-mailer](https://packagist.org/packages/symfony/sweego-mailer) | [7.2](symfony/sweego-mailer/7.2) | `sweego-mailer`, `sweegomailer` |
 | [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [7.2](symfony/sweego-notifier/7.2) | `sweego-notifier`, `sweegonotifier` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
