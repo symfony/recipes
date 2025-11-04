@@ -577,7 +577,8 @@
             "2.9",
             "2.10",
             "2.12",
-            "2.13"
+            "2.13",
+            "3.0"
         ],
         "doctrine/doctrine-fixtures-bundle": [
             "3.0"
@@ -1292,6 +1293,9 @@
                 "symfony/framework-bundle": "<7.1"
             },
             "2.13": {
+                "symfony/framework-bundle": "<7.1"
+            },
+            "3.0": {
                 "symfony/framework-bundle": "<7.1"
             }
         },
