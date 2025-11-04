@@ -1013,7 +1013,8 @@
             "5.1",
             "5.3",
             "6.0",
-            "6.4"
+            "6.4",
+            "7.4"
         ],
         "symfony/sendberry-notifier": [
             "6.1"
@@ -1391,6 +1392,9 @@
                 "symfony/framework-bundle": "<5.3"
             },
             "6.4": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "7.4": {
                 "symfony/framework-bundle": "<5.3"
             }
         },
