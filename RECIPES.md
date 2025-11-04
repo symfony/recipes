@@ -189,6 +189,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/zendesk-notifier](https://packagist.org/packages/symfony/zendesk-notifier) | [6.2](symfony/zendesk-notifier/6.2) | `zendesk-notifier`, `zendesknotifier` |
 | [symfony/zulip-notifier](https://packagist.org/packages/symfony/zulip-notifier) | [5.2](symfony/zulip-notifier/5.2) | `zulip-notifier`, `zulipnotifier` |
 | [symfonycasts/reset-password-bundle](https://packagist.org/packages/symfonycasts/reset-password-bundle) | [1.0](symfonycasts/reset-password-bundle/1.0) |  |
+| [symfonycasts/sass-bundle](https://packagist.org/packages/symfonycasts/sass-bundle) | [0.5](symfonycasts/sass-bundle/0.5) | `symfonycasts_sass` |
 | [symfonycasts/tailwind-bundle](https://packagist.org/packages/symfonycasts/tailwind-bundle) | [0.8](symfonycasts/tailwind-bundle/0.8) | `tailwind`, `tailwindcss` |
 | [theofidry/alice-data-fixtures](https://packagist.org/packages/theofidry/alice-data-fixtures) | [1.0](theofidry/alice-data-fixtures/1.0) |  |
 | [twig/cssinliner-extension](https://packagist.org/packages/twig/cssinliner-extension) | [1.0](twig/cssinliner-extension/1.0) |  |

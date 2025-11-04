@@ -436,6 +436,7 @@
         "swiftmailer": "symfony/swiftmailer-bundle",
         "swiftmailer-bundle": "symfony/swiftmailer-bundle",
         "swiftmailerbundle": "symfony/swiftmailer-bundle",
+        "symfonycasts_sass": "symfonycasts/sass-bundle",
         "tailwind": "symfonycasts/tailwind-bundle",
         "tailwindcss": "symfonycasts/tailwind-bundle",
         "telegram-notifier": "symfony/telegram-notifier",
@@ -1228,6 +1229,9 @@
         "symfonycasts/reset-password-bundle": [
             "1.0"
         ],
+        "symfonycasts/sass-bundle": [
+            "0.5"
+        ],
         "symfonycasts/tailwind-bundle": [
             "0.8"
         ],
@@ -1522,6 +1526,11 @@
             "2.0": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<5.4"
+            }
+        },
+        "symfonycasts/sass-bundle": {
+            "0.5": {
+                "symfony/asset-mapper": "<6.3"
             }
         },
         "zenstruck/foundry": {

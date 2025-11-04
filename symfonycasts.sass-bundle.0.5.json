@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "symfonycasts/sass-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfonycasts\\SassBundle\\SymfonycastsSassBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "assets/": "assets/"
+                },
+                "gitignore": [
+                    "/%PUBLIC_DIR%/assets/"
+                ],
+                "add-lines": [
+                    {
+                        "file": "config/packages/asset_mapper.yaml",
+                        "content": "\n        excluded_patterns:\n            - '*/assets/styles/_*.scss'\n            - '*/assets/styles/**/_*.scss'",
+                        "position": "bottom",
+                        "requires": "symfony/asset-mapper",
+                        "warn_if_missing": true
+                    }
+                ],
+                "conflict": {
+                    "symfony/asset-mapper": "<6.3"
+                }
+            },
+            "files": {
+                "assets/styles/app.scss": {
+                    "contents": [
+                        "// add your SASS styles in this file",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/symfonycasts_sass.yaml": {
+                    "contents": [
+                        "symfonycasts_sass:",
+                        "    root_sass:",
+                        "        - 'assets/styles/app.scss'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c891eb9a33f522440ec7dfc0dae3f63ce3a9ee87"
+        }
+    }
+}
