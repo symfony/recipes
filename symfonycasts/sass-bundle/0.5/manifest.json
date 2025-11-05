@@ -12,11 +12,12 @@
     ],
     "add-lines": [
         {
-            "file": "config/packages/asset_mapper.yaml",
-            "content": "\n        excluded_patterns:\n            - '*/assets/styles/_*.scss'\n            - '*/assets/styles/**/_*.scss'",
-            "position": "bottom",
             "requires": "symfony/asset-mapper",
-            "warn_if_missing": true
+            "file": "config/packages/asset_mapper.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "        missing_import_mode: strict",
+            "content": "        excluded_patterns:\n            - '**/assets/styles/**/_*.scss'"
         }
     ],
     "conflict": {
