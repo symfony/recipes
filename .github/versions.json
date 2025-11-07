@@ -544,7 +544,8 @@
             "8.0"
         ],
         "symfony/dynamo-db-lock": [
-            "7.4"
+            "7.4",
+            "8.0"
         ],
         "symfony/emoji": [
             "7.1",
