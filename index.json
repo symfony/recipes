@@ -1401,9 +1401,6 @@
             },
             "6.4": {
                 "symfony/framework-bundle": "<5.3"
-            },
-            "7.4": {
-                "symfony/framework-bundle": "<5.3"
             }
         },
         "symfony/stimulus-bundle": {
