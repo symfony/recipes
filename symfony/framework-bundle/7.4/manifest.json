@@ -3,10 +3,11 @@
         "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"]
     },
     "copy-from-recipe": {
+        ".editorconfig": ".editorconfig",
+        ".symfony.cli.yaml": ".symfony.cli.yaml",
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%/",
-        "src/": "%SRC_DIR%/",
-        ".editorconfig": ".editorconfig"
+        "src/": "%SRC_DIR%/"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
