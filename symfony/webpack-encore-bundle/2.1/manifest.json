@@ -37,6 +37,20 @@
             "position": "after_target",
             "target": "{% block stylesheets %}",
             "warn_if_missing": true
+        },
+        {
+            "file": ".symfony.local.yaml",
+            "content": [
+                "    # Watch and build front assets using Webpack Encore",
+                "    npm_encore_watch:",
+                "        cmd: ['npm', 'run', 'watch']",
+                "    # Or instead, run the Webpack Dev Server (https://symfony.com/doc/current/frontend/encore/dev-server.html)",
+                "    #npm_encore_dev_server:",
+                "    #    cmd: ['npm', 'run', 'dev-server']"
+            ],
+            "position": "after_target",
+            "target": "workers:",
+            "warn_if_missing": true
         }
     ]
 }
