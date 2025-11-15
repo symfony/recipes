@@ -5,5 +5,14 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["tailwind", "tailwindcss"]
+    "aliases": ["tailwind", "tailwindcss"],
+    "add-lines": [
+        {
+            "file": ".symfony.cli.yaml",
+            "content": "    # Watch and build CSS files using Tailwind CSS\n    tailwind:\n        cmd: ['symfony', 'console', 'tailwind:build', '--watch']",
+            "position": "after_target",
+            "target": "workers:",
+            "warn_if_missing": false
+        }
+    ]
 }

@@ -1,0 +1,9 @@
+# This configuration file is used by the Symfony CLI tool.
+# See https://symfony.com/doc/current/setup/symfony_cli.html for more information.
+
+http:
+    # Use Gzip compression
+    use_gzip: true
+
+# Processes that automatically run with the server (https://symfony.com/doc/current/setup/symfony_cli.html#configuring-workers)
+workers:
