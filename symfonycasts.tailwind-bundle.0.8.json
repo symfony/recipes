@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "symfonycasts/tailwind-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfonycasts\\TailwindBundle\\SymfonycastsTailwindBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": ".symfony.cli.yaml",
+                        "content": "    # Watch and build CSS files using Tailwind CSS\n    tailwind:\n        cmd: ['symfony', 'console', 'tailwind:build', '--watch']",
+                        "position": "after_target",
+                        "target": "workers:",
+                        "warn_if_missing": false
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/symfonycasts_tailwind.yaml": {
+                    "contents": [
+                        "symfonycasts_tailwind:",
+                        "    # Specify the EXACT version of Tailwind CSS you want to use",
+                        "    binary_version: 'v4.1.11'",
+                        "",
+                        "    # Alternatively, you can specify the path to the binary that you manage yourself",
+                        "    #binary: 'node_modules/.bin/tailwindcss'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "28d9f43f14bb9427b5aa813c2663337131d6acd0"
+        }
+    }
+}
