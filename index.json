@@ -1,0 +1,27 @@
+{
+    "aliases": {
+        "doctrine-migrations": "doctrine/doctrine-migrations-bundle",
+        "doctrinemigrations": "doctrine/doctrine-migrations-bundle",
+        "migrations": "doctrine/doctrine-migrations-bundle"
+    },
+    "recipes": {
+        "doctrine/doctrine-migrations-bundle": [
+            "1.2",
+            "2.2",
+            "3.1",
+            "3.7"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1480/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1480/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
