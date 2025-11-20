@@ -1,0 +1,82 @@
+{
+    "aliases": {
+        "encore": "symfony/webpack-encore-bundle",
+        "framework-bundle": "symfony/framework-bundle",
+        "frameworkbundle": "symfony/framework-bundle",
+        "symfonycasts_sass": "symfonycasts/sass-bundle",
+        "tailwind": "symfonycasts/tailwind-bundle",
+        "tailwindcss": "symfonycasts/tailwind-bundle",
+        "typescript": "sensiolabs/typescript-bundle",
+        "ux": "symfony/webpack-encore-bundle",
+        "webpack": "symfony/webpack-encore-bundle",
+        "webpack-encore": "symfony/webpack-encore-bundle",
+        "webpack-encore-bundle": "symfony/webpack-encore-bundle",
+        "webpackencore": "symfony/webpack-encore-bundle",
+        "webpackencorebundle": "symfony/webpack-encore-bundle"
+    },
+    "recipes": {
+        "sensiolabs/typescript-bundle": [
+            "0.2"
+        ],
+        "symfony/framework-bundle": [
+            "3.3",
+            "3.4",
+            "4.2",
+            "4.4",
+            "5.1",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.2",
+            "6.4",
+            "7.0",
+            "7.2",
+            "7.3",
+            "7.4"
+        ],
+        "symfony/webpack-encore-bundle": [
+            "1.0",
+            "1.6",
+            "1.9",
+            "1.10",
+            "1.17",
+            "2.0"
+        ],
+        "symfonycasts/sass-bundle": [
+            "0.5"
+        ],
+        "symfonycasts/tailwind-bundle": [
+            "0.8"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/webpack-encore-bundle": {
+            "1.10": {
+                "symfony/framework-bundle": "<5.4"
+            },
+            "1.17": {
+                "symfony/framework-bundle": "<5.4"
+            },
+            "2.0": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<5.4"
+            }
+        },
+        "symfonycasts/sass-bundle": {
+            "0.5": {
+                "symfony/asset-mapper": "<6.3"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1474/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1474/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

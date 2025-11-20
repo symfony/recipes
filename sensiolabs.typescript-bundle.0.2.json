@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "sensiolabs/typescript-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sensiolabs\\TypeScriptBundle\\SensiolabsTypeScriptBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": ".symfony.cli.yaml",
+                        "content": "    # Watch and build TypeScript files\n    typescript:\n        cmd: ['symfony', 'console', 'typescript:build', '--watch']",
+                        "position": "after_target",
+                        "target": "workers:",
+                        "warn_if_missing": false
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "c10ccda835a64d72dafd85d89f9e5af3e0a5b6e7"
+        }
+    }
+}
