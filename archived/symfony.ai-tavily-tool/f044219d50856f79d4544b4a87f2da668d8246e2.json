@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-tavily-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "TAVILY_API_KEY=change-me"
+                }
+            },
+            "files": {
+                "config/packages/ai_tavily_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Tavily\\Tavily:",
+                        "        $apiKey: '%env(TAVILY_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f044219d50856f79d4544b4a87f2da668d8246e2"
+        }
+    }
+}

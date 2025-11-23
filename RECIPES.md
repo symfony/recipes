@@ -37,6 +37,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ai-mapbox-tool](https://packagist.org/packages/symfony/ai-mapbox-tool) | [0.1](symfony/ai-mapbox-tool/0.1) | `ai-mapbox-tool`, `aimapboxtool` |
 | [symfony/ai-open-meteo-tool](https://packagist.org/packages/symfony/ai-open-meteo-tool) | [0.1](symfony/ai-open-meteo-tool/0.1) | `ai-open-meteo-tool`, `aiopenmeteotool` |
 | [symfony/ai-serp-api-tool](https://packagist.org/packages/symfony/ai-serp-api-tool) | [0.1](symfony/ai-serp-api-tool/0.1) | `ai-serp-api-tool`, `aiserpapitool` |
+| [symfony/ai-tavily-tool](https://packagist.org/packages/symfony/ai-tavily-tool) | [0.1](symfony/ai-tavily-tool/0.1) | `ai-tavily-tool`, `aitavilytool` |
 | [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |

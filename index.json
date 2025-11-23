@@ -14,11 +14,13 @@
         "ai-mapbox-tool": "symfony/ai-mapbox-tool",
         "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
+        "ai-tavily-tool": "symfony/ai-tavily-tool",
         "aibundle": "symfony/ai-bundle",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
         "aimapboxtool": "symfony/ai-mapbox-tool",
         "aiopenmeteotool": "symfony/ai-open-meteo-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
+        "aitavilytool": "symfony/ai-tavily-tool",
         "alice": "hautelook/alice-bundle",
         "all-my-sms-notifier": "symfony/all-my-sms-notifier",
         "allmysms-notifier": "symfony/allmysms-notifier",
@@ -685,6 +687,9 @@
             "0.1"
         ],
         "symfony/ai-serp-api-tool": [
+            "0.1"
+        ],
+        "symfony/ai-tavily-tool": [
             "0.1"
         ],
         "symfony/all-my-sms-notifier": [
