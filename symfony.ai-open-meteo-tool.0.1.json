@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/ai-open-meteo-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_open_meteo_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\OpenMeteo\\OpenMeteo: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b218c1f757206805bcaeb3703c1215bfcd5ff8d0"
+        }
+    }
+}

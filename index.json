@@ -10,8 +10,10 @@
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
         "ai-bundle": "symfony/ai-bundle",
+        "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
         "aibundle": "symfony/ai-bundle",
+        "aiopenmeteotool": "symfony/ai-open-meteo-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
         "alice": "hautelook/alice-bundle",
         "all-my-sms-notifier": "symfony/all-my-sms-notifier",
@@ -667,6 +669,9 @@
             "7.2"
         ],
         "symfony/ai-bundle": [
+            "0.1"
+        ],
+        "symfony/ai-open-meteo-tool": [
             "0.1"
         ],
         "symfony/ai-serp-api-tool": [
