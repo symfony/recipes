@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\AI\Agent\Bridge\Tavily\Tavily:
+        $apiKey: '%env(TAVILY_API_KEY)%'
