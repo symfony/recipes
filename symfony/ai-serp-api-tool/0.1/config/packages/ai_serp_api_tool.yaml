@@ -4,4 +4,4 @@ services:
         autoconfigure: true
 
     Symfony\AI\Agent\Bridge\SerpApi\SerpAPi:
-        $apiKey: '%env(SERPAPI_API_KEY)%'
+        $apiKey: '%env(SERP_API_API_KEY)%'
