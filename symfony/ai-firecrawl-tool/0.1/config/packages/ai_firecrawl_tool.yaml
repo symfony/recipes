@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\AI\Agent\Bridge\Firecrawl\Firecrawl:
+        $endpoint: '%env(FIRECRAWL_ENDPOINT)%'
+        $apiKey: '%env(FIRECRAWL_API_KEY)%'
