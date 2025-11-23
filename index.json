@@ -11,10 +11,12 @@
         "ai": "symfony/ai-bundle",
         "ai-bundle": "symfony/ai-bundle",
         "ai-firecrawl-tool": "symfony/ai-firecrawl-tool",
+        "ai-mapbox-tool": "symfony/ai-mapbox-tool",
         "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
         "aibundle": "symfony/ai-bundle",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
+        "aimapboxtool": "symfony/ai-mapbox-tool",
         "aiopenmeteotool": "symfony/ai-open-meteo-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
         "alice": "hautelook/alice-bundle",
@@ -674,6 +676,9 @@
             "0.1"
         ],
         "symfony/ai-firecrawl-tool": [
+            "0.1"
+        ],
+        "symfony/ai-mapbox-tool": [
             "0.1"
         ],
         "symfony/ai-open-meteo-tool": [
