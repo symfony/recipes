@@ -10,7 +10,9 @@
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
         "ai-bundle": "symfony/ai-bundle",
+        "ai-serp-api-tool": "symfony/ai-serp-api-tool",
         "aibundle": "symfony/ai-bundle",
+        "aiserpapitool": "symfony/ai-serp-api-tool",
         "alice": "hautelook/alice-bundle",
         "all-my-sms-notifier": "symfony/all-my-sms-notifier",
         "allmysms-notifier": "symfony/allmysms-notifier",
@@ -665,6 +667,9 @@
             "7.2"
         ],
         "symfony/ai-bundle": [
+            "0.1"
+        ],
+        "symfony/ai-serp-api-tool": [
             "0.1"
         ],
         "symfony/all-my-sms-notifier": [
