@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "symfony/ai-firecrawl-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "FIRECRAWL_ENDPOINT=change-me",
+                    "#2": "FIRECRAWL_API_KEY=change-me"
+                }
+            },
+            "files": {
+                "config/packages/ai_firecrawl_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Firecrawl\\Firecrawl:",
+                        "        $endpoint: '%env(FIRECRAWL_ENDPOINT)%'",
+                        "        $apiKey: '%env(FIRECRAWL_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "05320893f2bb61723d025d0cfb2592ce78fe5df4"
+        }
+    }
+}
