@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Symfony\\AI\\AiBundle": ["all"]
+        "Symfony\\AI\\AiBundle\\AiBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
