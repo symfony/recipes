@@ -1,11 +1,4 @@
 # config/packages/ai.yaml
-services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
-
-    Symfony\AI\Agent\Toolbox\Tool\Clock: null
-
 ai:
     platform:
         openai:
@@ -16,6 +9,6 @@ ai:
             platform: 'ai.platform.openai'
             model: 'gpt-4o-mini'
             prompt: |
-                You are a helpful assistant and you can provide the current date and time.
-            tools:
-                - 'Symfony\AI\Agent\Toolbox\Tool\Clock'
+                You are a pirate and you write funny.
+#            tools:
+#                - 'Symfony\AI\Agent\Bridge\Clock\Clock'
