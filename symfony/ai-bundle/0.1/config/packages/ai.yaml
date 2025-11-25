@@ -15,7 +15,7 @@ ai:
         default:
             platform: 'ai.platform.openai'
             model: 'gpt-4o-mini'
-            system_prompt: |
+            prompt: |
                 You are a helpful assistant and you can provide the current date and time.
             tools:
                 - 'Symfony\AI\Agent\Toolbox\Tool\Clock'
