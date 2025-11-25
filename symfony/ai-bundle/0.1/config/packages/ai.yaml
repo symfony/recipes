@@ -7,7 +7,7 @@ ai:
     agent:
         default:
             platform: 'ai.platform.openai'
-            model: 'gpt-4o-mini'
+            model: 'gpt-5-mini'
             prompt: |
                 You are a pirate and you write funny.
 #            tools:
