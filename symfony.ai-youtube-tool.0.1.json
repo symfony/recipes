@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/ai-youtube-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_youtube_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\YouTube\\YouTubeTranscriber: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "848efaef696b0882232c007b56109a4f971d176d"
+        }
+    }
+}

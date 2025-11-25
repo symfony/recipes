@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/ai-scraper-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_scraper_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Scraper\\Scraper: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d5835512c629bb436e7d9c5f82156d0f03ff6e36"
+        }
+    }
+}

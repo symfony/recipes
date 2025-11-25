@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/ai-wikipedia-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_wikipedia_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Wikipedia\\Wikipedia: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "56c57f9b4a7a2353bdc6df287944722c09f414b2"
+        }
+    }
+}

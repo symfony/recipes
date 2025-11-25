@@ -33,11 +33,15 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [sensiolabs/security-checker](https://packagist.org/packages/sensiolabs/security-checker) | [4.0](sensiolabs/security-checker/4.0) | `sec-check`, `sec-checker`, `sec-checks`, `seccheck`, `secchecker`, `secchecks`, `security-check`, `security-checker`, `securitycheck`, `securitychecker` |
 | [symfony/aha-send-mailer](https://packagist.org/packages/symfony/aha-send-mailer) | [7.2](symfony/aha-send-mailer/7.2) | `aha-send-mailer`, `ahasendmailer` |
 | [symfony/ai-bundle](https://packagist.org/packages/symfony/ai-bundle) | [0.1](symfony/ai-bundle/0.1) | `ai`, `ai-bundle`, `aibundle` |
+| [symfony/ai-clock-tool](https://packagist.org/packages/symfony/ai-clock-tool) | [0.1](symfony/ai-clock-tool/0.1) | `ai-clock-tool`, `aiclocktool` |
 | [symfony/ai-firecrawl-tool](https://packagist.org/packages/symfony/ai-firecrawl-tool) | [0.1](symfony/ai-firecrawl-tool/0.1) | `ai-firecrawl-tool`, `aifirecrawltool` |
 | [symfony/ai-mapbox-tool](https://packagist.org/packages/symfony/ai-mapbox-tool) | [0.1](symfony/ai-mapbox-tool/0.1) | `ai-mapbox-tool`, `aimapboxtool` |
 | [symfony/ai-open-meteo-tool](https://packagist.org/packages/symfony/ai-open-meteo-tool) | [0.1](symfony/ai-open-meteo-tool/0.1) | `ai-open-meteo-tool`, `aiopenmeteotool` |
+| [symfony/ai-scraper-tool](https://packagist.org/packages/symfony/ai-scraper-tool) | [0.1](symfony/ai-scraper-tool/0.1) | `ai-scraper-tool`, `aiscrapertool` |
 | [symfony/ai-serp-api-tool](https://packagist.org/packages/symfony/ai-serp-api-tool) | [0.1](symfony/ai-serp-api-tool/0.1) | `ai-serp-api-tool`, `aiserpapitool` |
 | [symfony/ai-tavily-tool](https://packagist.org/packages/symfony/ai-tavily-tool) | [0.1](symfony/ai-tavily-tool/0.1) | `ai-tavily-tool`, `aitavilytool` |
+| [symfony/ai-wikipedia-tool](https://packagist.org/packages/symfony/ai-wikipedia-tool) | [0.1](symfony/ai-wikipedia-tool/0.1) | `ai-wikipedia-tool`, `aiwikipediatool` |
+| [symfony/ai-youtube-tool](https://packagist.org/packages/symfony/ai-youtube-tool) | [0.1](symfony/ai-youtube-tool/0.1) | `ai-youtube-tool`, `aiyoutubetool` |
 | [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |

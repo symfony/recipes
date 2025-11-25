@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/ai-clock-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_clock_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Clock\\Clock: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c17a3fe7b1301a5db970c9b0a91ab57ad7da2cd0"
+        }
+    }
+}

@@ -10,17 +10,25 @@
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
         "ai-bundle": "symfony/ai-bundle",
+        "ai-clock-tool": "symfony/ai-clock-tool",
         "ai-firecrawl-tool": "symfony/ai-firecrawl-tool",
         "ai-mapbox-tool": "symfony/ai-mapbox-tool",
         "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
+        "ai-scraper-tool": "symfony/ai-scraper-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
         "ai-tavily-tool": "symfony/ai-tavily-tool",
+        "ai-wikipedia-tool": "symfony/ai-wikipedia-tool",
+        "ai-youtube-tool": "symfony/ai-youtube-tool",
         "aibundle": "symfony/ai-bundle",
+        "aiclocktool": "symfony/ai-clock-tool",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
         "aimapboxtool": "symfony/ai-mapbox-tool",
         "aiopenmeteotool": "symfony/ai-open-meteo-tool",
+        "aiscrapertool": "symfony/ai-scraper-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
         "aitavilytool": "symfony/ai-tavily-tool",
+        "aiwikipediatool": "symfony/ai-wikipedia-tool",
+        "aiyoutubetool": "symfony/ai-youtube-tool",
         "alice": "hautelook/alice-bundle",
         "all-my-sms-notifier": "symfony/all-my-sms-notifier",
         "allmysms-notifier": "symfony/allmysms-notifier",
@@ -677,6 +685,9 @@
         "symfony/ai-bundle": [
             "0.1"
         ],
+        "symfony/ai-clock-tool": [
+            "0.1"
+        ],
         "symfony/ai-firecrawl-tool": [
             "0.1"
         ],
@@ -686,10 +697,19 @@
         "symfony/ai-open-meteo-tool": [
             "0.1"
         ],
+        "symfony/ai-scraper-tool": [
+            "0.1"
+        ],
         "symfony/ai-serp-api-tool": [
             "0.1"
         ],
         "symfony/ai-tavily-tool": [
+            "0.1"
+        ],
+        "symfony/ai-wikipedia-tool": [
+            "0.1"
+        ],
+        "symfony/ai-youtube-tool": [
             "0.1"
         ],
         "symfony/all-my-sms-notifier": [
