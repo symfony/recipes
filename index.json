@@ -1,0 +1,26 @@
+{
+    "aliases": {
+        "mercure": "symfony/mercure-bundle",
+        "mercure-bundle": "symfony/mercure-bundle",
+        "mercurebundle": "symfony/mercure-bundle"
+    },
+    "recipes": {
+        "symfony/mercure-bundle": [
+            "0.1",
+            "0.2",
+            "0.3"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1496/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1496/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
