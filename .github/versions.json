@@ -1,10 +1,10 @@
 {
-    "lts": "6.4",
-    "stable": "7.3",
-    "next": "7.4",
-    "previous": "7.2",
-    "dev": "7.4",
-    "dev-name": "7.4",
+    "lts": "7.4",
+    "stable": "8.0",
+    "next": "8.1",
+    "previous": "7.4",
+    "dev": "8.1",
+    "dev-name": "8.1",
     "splits": {
         "symfony/aha-send-mailer": [
             "7.3",
