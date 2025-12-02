@@ -1,0 +1,137 @@
+{
+    "manifests": {
+        "doctrine/doctrine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#2": "IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml",
+                    "#3": "",
+                    "#4": "DATABASE_URL=\"sqlite:///%kernel.project_dir%/var/data_%kernel.environment%.db\"",
+                    "#5": "DATABASE_URL=\"mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4\"",
+                    "#6": "DATABASE_URL=\"mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4\"",
+                    "DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+                },
+                "dockerfile": [
+                    "RUN install-php-extensions pdo_pgsql"
+                ],
+                "docker-compose": {
+                    "docker-compose.yml": {
+                        "services": [
+                            "database:",
+                            "  image: postgres:${POSTGRES_VERSION:-16}-alpine",
+                            "  environment:",
+                            "    POSTGRES_DB: ${POSTGRES_DB:-app}",
+                            "    # You should definitely change the password in production",
+                            "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}",
+                            "    POSTGRES_USER: ${POSTGRES_USER:-app}",
+                            "  healthcheck:",
+                            "    test: [\"CMD\", \"pg_isready\", \"-d\", \"${POSTGRES_DB:-app}\", \"-U\", \"${POSTGRES_USER:-app}\"]",
+                            "    timeout: 5s",
+                            "    retries: 5",
+                            "    start_period: 60s",
+                            "  volumes:",
+                            "    - database_data:/var/lib/postgresql/data:rw",
+                            "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                            "    # - ./docker/db/data:/var/lib/postgresql/data:rw"
+                        ],
+                        "volumes": [
+                            "database_data:"
+                        ]
+                    },
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "database:",
+                            "  ports:",
+                            "    - \"5432\""
+                        ]
+                    }
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<7.1"
+                },
+                "post-install-output": [
+                    "  * Modify your DATABASE_URL config in <fg=green>.env</>",
+                    "",
+                    "  * Configure the <fg=green>driver</> (postgresql) and",
+                    "    <fg=green>server_version</> (16) in <fg=green>config/packages/doctrine.yaml</>"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        url: '%env(resolve:DATABASE_URL)%'",
+                        "",
+                        "        # IMPORTANT: You MUST configure your server version,",
+                        "        # either here or in the DATABASE_URL env var (see .env file)",
+                        "        #server_version: '16'",
+                        "",
+                        "        profiling_collect_backtrace: '%kernel.debug%'",
+                        "    orm:",
+                        "        validate_xml_mapping: true",
+                        "        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware",
+                        "        identity_generation_preferences:",
+                        "            Doctrine\\DBAL\\Platforms\\PostgreSQLPlatform: identity",
+                        "        auto_mapping: true",
+                        "        mappings:",
+                        "            App:",
+                        "                type: attribute",
+                        "                is_bundle: false",
+                        "                dir: '%kernel.project_dir%/src/Entity'",
+                        "                prefix: 'App\\Entity'",
+                        "                alias: App",
+                        "",
+                        "when@test:",
+                        "    doctrine:",
+                        "        dbal:",
+                        "            # \"TEST_TOKEN\" is typically set by ParaTest",
+                        "            dbname_suffix: '_test%env(default::TEST_TOKEN)%'",
+                        "",
+                        "when@prod:",
+                        "    doctrine:",
+                        "        orm:",
+                        "            query_cache_driver:",
+                        "                type: pool",
+                        "                pool: doctrine.system_cache_pool",
+                        "            result_cache_driver:",
+                        "                type: pool",
+                        "                pool: doctrine.result_cache_pool",
+                        "",
+                        "    framework:",
+                        "        cache:",
+                        "            pools:",
+                        "                doctrine.result_cache_pool:",
+                        "                    adapter: cache.app",
+                        "                doctrine.system_cache_pool:",
+                        "                    adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4143f7f8d2c5fe5f5ab46b74b566dc8fb91ae1bf"
+        }
+    }
+}
