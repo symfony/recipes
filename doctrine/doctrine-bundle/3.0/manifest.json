@@ -49,6 +49,6 @@
         }
     },
     "conflict": {
-        "symfony/framework-bundle": "<7.1"
+        "symfony/framework-bundle": "<6.4"
     }
 }
