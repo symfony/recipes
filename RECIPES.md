@@ -182,7 +182,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](symfony/ux-map/2.19) | `ux-map`, `uxmap` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [2.9](symfony/ux-react/2.9) | `ux-react`, `uxreact` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
-| [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.9](symfony/ux-translator/2.9) | `ux-translator`, `uxtranslator` |
+| [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.32](symfony/ux-translator/2.32) | `ux-translator`, `uxtranslator` |
 | [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [2.20](symfony/ux-turbo/2.20) | `turbo`, `ux-turbo`, `uxturbo` |
 | [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](symfony/ux-twig-component/2.13) | `twig-component`, `twig-components`, `twigcomponent`, `twigcomponents`, `ux-twig-component`, `uxtwigcomponent` |
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [2.9](symfony/ux-vue/2.9) | `ux-vue`, `uxvue` |

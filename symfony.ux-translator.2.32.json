@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "symfony/ux-translator": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Translator\\UxTranslatorBundle": [
+                        "all"
+                    ]
+                },
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "var/"
+                }
+            },
+            "files": {
+                "assets/translator.js": {
+                    "contents": [
+                        "import { createTranslator } from '@symfony/ux-translator';",
+                        "import { messages, localeFallbacks } from '../var/translations/index.js';",
+                        "",
+                        "/*",
+                        " * This file is part of the Symfony UX Translator package.",
+                        " *",
+                        " * If folder \"../var/translations\" does not exist, or some translations are missing,",
+                        " * you must warmup your Symfony cache to refresh JavaScript translations.",
+                        " *",
+                        " * If you use TypeScript, you can rename this file to \"translator.ts\" to take advantage of types checking.",
+                        " */",
+                        "",
+                        "const translator = createTranslator({",
+                        "    messages,",
+                        "    localeFallbacks,",
+                        "});",
+                        "",
+                        "export const { trans } = translator;",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/ux_translator.yaml": {
+                    "contents": [
+                        "ux_translator:",
+                        "    # The directory where the JavaScript translations are dumped",
+                        "    dump_directory: '%kernel.project_dir%/var/translations'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/translations/index.js": {
+                    "contents": [
+                        "console.log('Run bin/console cache:warmup to generate the translation files.');",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "69b4fe341a4d5782b0cc837c27b029d8bd8a7d4c"
+        }
+    }
+}
