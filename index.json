@@ -1,0 +1,34 @@
+{
+    "aliases": {
+        "ux-translator": "symfony/ux-translator",
+        "uxtranslator": "symfony/ux-translator"
+    },
+    "recipes": {
+        "symfony/ux-translator": [
+            "2.8",
+            "2.9",
+            "2.32"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/ux-translator": {
+            "2.9": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            },
+            "2.32": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1499/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1499/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
