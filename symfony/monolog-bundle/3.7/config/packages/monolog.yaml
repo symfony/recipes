@@ -50,6 +50,11 @@ when@prod:
                 channels: ["!event", "!doctrine"]
             deprecation:
                 type: stream
-                channels: [deprecation]
                 path: php://stderr
                 formatter: monolog.formatter.json
+            deprecation_deduplication:
+                type: deduplication
+                channels: [deprecation]
+                handler: deprecation
+                deduplication_level: info
+                time: 3600 # 1 hour
