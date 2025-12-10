@@ -18,6 +18,13 @@
             "warn_if_missing": true,
             "target": "        missing_import_mode: strict",
             "content": "        excluded_patterns:\n            - '**/assets/styles/**/_*.scss'"
+        },
+        {
+            "file": ".symfony.cli.yaml",
+            "content": "    # Watch and build Sass files\n    sass:\n        cmd: ['symfony', 'console', 'sass:build', '--watch']",
+            "position": "after_target",
+            "target": "workers:",
+            "warn_if_missing": false
         }
     ],
     "conflict": {
