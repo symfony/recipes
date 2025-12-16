@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        manticoresearch:\n            default:\n                host: '%env(MANTICORESEARCH_HOST)%'\n                port: '%env(int:MANTICORESEARCH_PORT)%'\n                index_name: 'my_index'\n                vector_field: 'vector'"
+        }
+    ],
+    "env": {
+        "#1": "MANTICORESEARCH_HOST=localhost",
+        "#2": "MANTICORESEARCH_PORT=9308"
+    }
+}

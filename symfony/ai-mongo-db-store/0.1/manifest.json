@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        mongodb:\n            default:\n                uri: '%env(MONGODB_URI)%'\n                database: 'my_database'\n                collection: 'embeddings'\n                index_name: 'vector_index'\n                vector_field: 'vector'"
+        }
+    ],
+    "env": {
+        "#1": "MONGODB_URI=mongodb://localhost:27017"
+    }
+}

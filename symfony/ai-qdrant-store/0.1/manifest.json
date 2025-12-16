@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        qdrant:\n            default:\n                host: '%env(QDRANT_HOST)%'\n                port: '%env(int:QDRANT_PORT)%'\n                collection: 'my_collection'"
+        }
+    ],
+    "env": {
+        "#1": "QDRANT_HOST=localhost",
+        "#2": "QDRANT_PORT=6333"
+    }
+}

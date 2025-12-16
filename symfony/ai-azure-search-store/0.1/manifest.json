@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        azuresearch:\n            default:\n                endpoint: '%env(AZURE_SEARCH_ENDPOINT)%'\n                api_key: '%env(AZURE_SEARCH_API_KEY)%'\n                index_name: 'my_index'\n                api_version: '2024-07-01'\n                vector_field: 'vector'"
+        }
+    ],
+    "env": {
+        "#1": "AZURE_SEARCH_ENDPOINT=",
+        "#2": "AZURE_SEARCH_API_KEY="
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        mariadb:\n            default:\n                connection: 'default'\n                table: 'embeddings'\n                vector_field: 'vector'"
+        }
+    ]
+}

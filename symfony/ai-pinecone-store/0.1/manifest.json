@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        pinecone:\n            default:\n                api_key: '%env(PINECONE_API_KEY)%'\n                index_host: '%env(PINECONE_INDEX_HOST)%'\n                namespace: 'default'"
+        }
+    ],
+    "env": {
+        "#1": "PINECONE_API_KEY=",
+        "#2": "PINECONE_INDEX_HOST="
+    }
+}

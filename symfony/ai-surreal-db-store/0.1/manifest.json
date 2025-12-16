@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        surrealdb:\n            default:\n                dsn: '%env(SURREALDB_DSN)%'\n                namespace: 'default'\n                database: 'default'\n                table: 'embeddings'\n                vector_field: 'vector'"
+        }
+    ],
+    "env": {
+        "#1": "SURREALDB_DSN=http://localhost:8000"
+    }
+}

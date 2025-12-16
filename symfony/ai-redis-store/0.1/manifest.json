@@ -1,0 +1,14 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        redis:\n            default:\n                dsn: '%env(REDIS_DSN)%'\n                index_name: 'my_index'\n                vector_field: 'vector'"
+        }
+    ],
+    "env": {
+        "#1": "REDIS_DSN=redis://localhost:6379"
+    }
+}

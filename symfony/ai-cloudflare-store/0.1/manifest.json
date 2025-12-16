@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "content": "        cloudflare:\n            default:\n                account_id: '%env(CLOUDFLARE_ACCOUNT_ID)%'\n                api_token: '%env(CLOUDFLARE_API_TOKEN)%'\n                index_name: 'my_index'"
+        }
+    ],
+    "env": {
+        "#1": "CLOUDFLARE_ACCOUNT_ID=",
+        "#2": "CLOUDFLARE_API_TOKEN="
+    }
+}
