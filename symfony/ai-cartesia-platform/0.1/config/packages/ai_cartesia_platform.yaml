@@ -1,0 +1,5 @@
+ai:
+    platform:
+        cartesia:
+            api_key: '%env(CARTESIA_API_KEY)%'
+            version: '%env(CARTESIA_VERSION)%'

@@ -1,0 +1,4 @@
+ai:
+    platform:
+        scaleway:
+            api_key: '%env(SCALEWAY_API_KEY)%'

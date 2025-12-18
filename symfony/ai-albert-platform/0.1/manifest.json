@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALBERT_API_KEY": "",
+        "#1": "ALBERT_BASE_URL=https://api.albert.ai/v1"
+    }
+}

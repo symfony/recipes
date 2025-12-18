@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "VERTEX_AI_PROJECT_ID=your-project-id",
+        "#2": "VERTEX_AI_LOCATION=us-central1"
+    }
+}

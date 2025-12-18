@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "GENERIC_BASE_URL=https://api.example.com/v1"
+    }
+}
