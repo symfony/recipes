@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        surrealdb:\n            default:\n                dsn: '%env(SURREALDB_DSN)%'\n                namespace: 'default'\n                database: 'default'\n                table: 'embeddings'"
+            "content": "        surrealdb:\n            default:\n                dsn: '%env(SURREALDB_DSN)%'\n                namespace: 'default'\n                database: 'default'"
         }
     ],
     "env": {

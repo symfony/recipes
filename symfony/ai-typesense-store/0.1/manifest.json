@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        typesense:\n            default:\n                host: '%env(TYPESENSE_HOST)%'\n                port: '%env(int:TYPESENSE_PORT)%'\n                api_key: '%env(TYPESENSE_API_KEY)%'\n                collection: 'my_collection'"
+            "content": "        typesense:\n            default:\n                host: '%env(TYPESENSE_HOST)%'\n                port: '%env(int:TYPESENSE_PORT)%'\n                api_key: '%env(TYPESENSE_API_KEY)%'"
         }
     ],
     "env": {

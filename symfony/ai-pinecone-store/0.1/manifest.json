@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        pinecone:\n            default:\n                api_key: '%env(PINECONE_API_KEY)%'\n                index_host: '%env(PINECONE_INDEX_HOST)%'\n                namespace: 'default'"
+            "content": "        pinecone:\n            default:\n                api_key: '%env(PINECONE_API_KEY)%'\n                index_host: '%env(PINECONE_INDEX_HOST)%'"
         }
     ],
     "env": {

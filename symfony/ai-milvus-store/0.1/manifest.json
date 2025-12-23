@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        milvus:\n            default:\n                host: '%env(MILVUS_HOST)%'\n                port: '%env(int:MILVUS_PORT)%'\n                collection: 'my_collection'"
+            "content": "        milvus:\n            default:\n                host: '%env(MILVUS_HOST)%'\n                port: '%env(int:MILVUS_PORT)%'"
         }
     ],
     "env": {

@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        clickhouse:\n            default:\n                dsn: '%env(CLICKHOUSE_DSN)%'\n                database: 'default'\n                table: 'embeddings'"
+            "content": "        clickhouse:\n            default:\n                dsn: '%env(CLICKHOUSE_DSN)%'\n                database: 'default'"
         }
     ],
     "env": {

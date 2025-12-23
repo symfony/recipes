@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        qdrant:\n            default:\n                host: '%env(QDRANT_HOST)%'\n                port: '%env(int:QDRANT_PORT)%'\n                collection: 'my_collection'"
+            "content": "        qdrant:\n            default:\n                host: '%env(QDRANT_HOST)%'\n                port: '%env(int:QDRANT_PORT)%'"
         }
     ],
     "env": {
