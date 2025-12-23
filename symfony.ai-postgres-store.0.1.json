@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/ai-postgres-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        postgres:\n            default:\n                connection: 'default'"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "637f81be8a2bba38361a835508e5145bcb087f26"
+        }
+    }
+}

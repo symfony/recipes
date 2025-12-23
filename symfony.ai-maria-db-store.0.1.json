@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/ai-maria-db-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        mariadb:\n            default:\n                connection: 'default'"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "1bbad0004e98ac892b682fecefbcc49725bdf496"
+        }
+    }
+}

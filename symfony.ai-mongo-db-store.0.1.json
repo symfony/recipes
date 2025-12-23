@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ai-mongo-db-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        mongodb:\n            default:\n                uri: '%env(MONGODB_URI)%'\n                database: 'my_database'\n                index_name: 'vector_index'"
+                    }
+                ],
+                "env": {
+                    "#1": "MONGODB_URI=mongodb://localhost:27017"
+                }
+            },
+            "files": [],
+            "ref": "1fda3663b0a7396fa1533c975206dec3efbe31c3"
+        }
+    }
+}

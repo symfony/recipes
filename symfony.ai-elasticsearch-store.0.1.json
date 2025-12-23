@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ai-elasticsearch-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        elasticsearch:\n            default:\n                hosts:\n                    - '%env(ELASTICSEARCH_HOST)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ELASTICSEARCH_HOST=http://localhost:9200"
+                }
+            },
+            "files": [],
+            "ref": "fe5da4a29aa86ca2f7e85c8c7e0076c2274f6cf9"
+        }
+    }
+}

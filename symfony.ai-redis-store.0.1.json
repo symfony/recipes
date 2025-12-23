@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ai-redis-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        redis:\n            default:\n                dsn: '%env(REDIS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "REDIS_DSN=redis://localhost:6379"
+                }
+            },
+            "files": [],
+            "ref": "8baf1bc824c6d6bdd7ac3f74dade4ce410ee3034"
+        }
+    }
+}

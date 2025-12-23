@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/ai-chroma-db-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        chromadb:\n            default:\n                collection: 'my_collection'"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "4c7b6df0ddd840e1c176a7445f5991244592e5cf"
+        }
+    }
+}

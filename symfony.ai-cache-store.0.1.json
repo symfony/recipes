@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/ai-cache-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        cache:\n            default:\n                service: 'cache.app'"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "f9be36a4a36511df1012039ee436fd3738a2d3ed"
+        }
+    }
+}

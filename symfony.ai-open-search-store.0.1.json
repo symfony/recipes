@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ai-open-search-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        opensearch:\n            default:\n                hosts:\n                    - '%env(OPENSEARCH_HOST)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "OPENSEARCH_HOST=http://localhost:9200"
+                }
+            },
+            "files": [],
+            "ref": "41c37d5f24e414ccc4122831490ecefa0fda247d"
+        }
+    }
+}

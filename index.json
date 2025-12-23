@@ -1,0 +1,129 @@
+{
+    "aliases": {
+        "ai": "symfony/ai-bundle",
+        "ai-azure-search-store": "symfony/ai-azure-search-store",
+        "ai-bundle": "symfony/ai-bundle",
+        "ai-cache-store": "symfony/ai-cache-store",
+        "ai-chroma-db-store": "symfony/ai-chroma-db-store",
+        "ai-click-house-store": "symfony/ai-click-house-store",
+        "ai-cloudflare-store": "symfony/ai-cloudflare-store",
+        "ai-elasticsearch-store": "symfony/ai-elasticsearch-store",
+        "ai-manticore-search-store": "symfony/ai-manticore-search-store",
+        "ai-maria-db-store": "symfony/ai-maria-db-store",
+        "ai-meilisearch-store": "symfony/ai-meilisearch-store",
+        "ai-milvus-store": "symfony/ai-milvus-store",
+        "ai-mongo-db-store": "symfony/ai-mongo-db-store",
+        "ai-neo4j-store": "symfony/ai-neo4j-store",
+        "ai-open-search-store": "symfony/ai-open-search-store",
+        "ai-pinecone-store": "symfony/ai-pinecone-store",
+        "ai-postgres-store": "symfony/ai-postgres-store",
+        "ai-qdrant-store": "symfony/ai-qdrant-store",
+        "ai-redis-store": "symfony/ai-redis-store",
+        "ai-supabase-store": "symfony/ai-supabase-store",
+        "ai-surreal-db-store": "symfony/ai-surreal-db-store",
+        "ai-typesense-store": "symfony/ai-typesense-store",
+        "ai-weaviate-store": "symfony/ai-weaviate-store",
+        "aiazuresearchstore": "symfony/ai-azure-search-store",
+        "aibundle": "symfony/ai-bundle",
+        "aicachestore": "symfony/ai-cache-store",
+        "aichromadbstore": "symfony/ai-chroma-db-store",
+        "aiclickhousestore": "symfony/ai-click-house-store",
+        "aicloudflarestore": "symfony/ai-cloudflare-store",
+        "aielasticsearchstore": "symfony/ai-elasticsearch-store",
+        "aimanticoresearchstore": "symfony/ai-manticore-search-store",
+        "aimariadbstore": "symfony/ai-maria-db-store",
+        "aimeilisearchstore": "symfony/ai-meilisearch-store",
+        "aimilvusstore": "symfony/ai-milvus-store",
+        "aimongodbstore": "symfony/ai-mongo-db-store",
+        "aineo4jstore": "symfony/ai-neo4j-store",
+        "aiopensearchstore": "symfony/ai-open-search-store",
+        "aipineconestore": "symfony/ai-pinecone-store",
+        "aipostgresstore": "symfony/ai-postgres-store",
+        "aiqdrantstore": "symfony/ai-qdrant-store",
+        "airedisstore": "symfony/ai-redis-store",
+        "aisupabasestore": "symfony/ai-supabase-store",
+        "aisurrealdbstore": "symfony/ai-surreal-db-store",
+        "aitypesensestore": "symfony/ai-typesense-store",
+        "aiweaviatestore": "symfony/ai-weaviate-store"
+    },
+    "recipes": {
+        "symfony/ai-azure-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-bundle": [
+            "0.1"
+        ],
+        "symfony/ai-cache-store": [
+            "0.1"
+        ],
+        "symfony/ai-chroma-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-click-house-store": [
+            "0.1"
+        ],
+        "symfony/ai-cloudflare-store": [
+            "0.1"
+        ],
+        "symfony/ai-elasticsearch-store": [
+            "0.1"
+        ],
+        "symfony/ai-manticore-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-maria-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-meilisearch-store": [
+            "0.1"
+        ],
+        "symfony/ai-milvus-store": [
+            "0.1"
+        ],
+        "symfony/ai-mongo-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-neo4j-store": [
+            "0.1"
+        ],
+        "symfony/ai-open-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-pinecone-store": [
+            "0.1"
+        ],
+        "symfony/ai-postgres-store": [
+            "0.1"
+        ],
+        "symfony/ai-qdrant-store": [
+            "0.1"
+        ],
+        "symfony/ai-redis-store": [
+            "0.1"
+        ],
+        "symfony/ai-supabase-store": [
+            "0.1"
+        ],
+        "symfony/ai-surreal-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-typesense-store": [
+            "0.1"
+        ],
+        "symfony/ai-weaviate-store": [
+            "0.1"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1503/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1503/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

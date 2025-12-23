@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-qdrant-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "content": "        qdrant:\n            default:\n                host: '%env(QDRANT_HOST)%'\n                port: '%env(int:QDRANT_PORT)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "QDRANT_HOST=localhost",
+                    "#2": "QDRANT_PORT=6333"
+                }
+            },
+            "files": [],
+            "ref": "dca4eecd2de5ed62ef8bb1c4112d17f583557a3d"
+        }
+    }
+}
