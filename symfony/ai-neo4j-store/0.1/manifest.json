@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        neo4j:\n            default:\n                uri: '%env(NEO4J_URI)%'\n                username: '%env(NEO4J_USERNAME)%'\n                password: '%env(NEO4J_PASSWORD)%'\n                index_name: 'vector_index'\n                vector_field: 'vector'"
+            "content": "        neo4j:\n            default:\n                uri: '%env(NEO4J_URI)%'\n                username: '%env(NEO4J_USERNAME)%'\n                password: '%env(NEO4J_PASSWORD)%'"
         }
     ],
     "env": {

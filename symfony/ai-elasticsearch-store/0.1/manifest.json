@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        elasticsearch:\n            default:\n                hosts:\n                    - '%env(ELASTICSEARCH_HOST)%'\n                index_name: 'my_index'\n                vector_field: 'vector'"
+            "content": "        elasticsearch:\n            default:\n                hosts:\n                    - '%env(ELASTICSEARCH_HOST)%'\n                index_name: 'my_index'"
         }
     ],
     "env": {

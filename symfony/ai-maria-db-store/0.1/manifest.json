@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        mariadb:\n            default:\n                connection: 'default'\n                table: 'embeddings'\n                vector_field: 'vector'"
+            "content": "        mariadb:\n            default:\n                connection: 'default'\n                table_name: 'embeddings'"
         }
     ]
 }

@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        supabase:\n            default:\n                url: '%env(SUPABASE_URL)%'\n                api_key: '%env(SUPABASE_API_KEY)%'\n                table: 'embeddings'\n                vector_field: 'vector'"
+            "content": "        supabase:\n            default:\n                url: '%env(SUPABASE_URL)%'\n                api_key: '%env(SUPABASE_API_KEY)%'\n                table: 'embeddings'"
         }
     ],
     "env": {

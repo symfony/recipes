@@ -5,7 +5,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    store:",
-            "content": "        opensearch:\n            default:\n                hosts:\n                    - '%env(OPENSEARCH_HOST)%'\n                index_name: 'my_index'\n                vector_field: 'vector'"
+            "content": "        opensearch:\n            default:\n                hosts:\n                    - '%env(OPENSEARCH_HOST)%'\n                index_name: 'my_index'"
         }
     ],
     "env": {
