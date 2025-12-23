@@ -1,0 +1,4 @@
+  * Choose an inference platform and install the corresponding bridge
+
+  * For example <fg=green>OpenAI</> with the <fg=green>symfony/ai-openai-bridge</> package
+    or <fg=green>Anthropic</> with the <fg=green>symfony/ai-anthropic-bridge</> package
