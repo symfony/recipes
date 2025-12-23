@@ -5,8 +5,5 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "env": {
-        "OPENAI_API_KEY": ""
-    },
     "aliases": ["ai"]
 }
