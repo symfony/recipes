@@ -1,11 +1,5 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        cache:\n            default:\n                service: 'cache.app'"
-        }
-    ]
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }

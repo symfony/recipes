@@ -1,0 +1,7 @@
+ai:
+    store:
+        surrealdb:
+            default:
+                dsn: '%env(SURREALDB_DSN)%'
+                namespace: 'default'
+                database: 'default'

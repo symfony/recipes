@@ -1,13 +1,7 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        neo4j:\n            default:\n                uri: '%env(NEO4J_URI)%'\n                username: '%env(NEO4J_USERNAME)%'\n                password: '%env(NEO4J_PASSWORD)%'"
-        }
-    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "env": {
         "#1": "NEO4J_URI=bolt://localhost:7687",
         "#2": "NEO4J_USERNAME=neo4j",

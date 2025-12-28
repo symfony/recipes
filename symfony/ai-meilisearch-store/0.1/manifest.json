@@ -1,13 +1,7 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        meilisearch:\n            default:\n                host: '%env(MEILISEARCH_HOST)%'\n                api_key: '%env(MEILISEARCH_API_KEY)%'"
-        }
-    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "env": {
         "#1": "MEILISEARCH_HOST=http://localhost:7700",
         "#2": "MEILISEARCH_API_KEY="

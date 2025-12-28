@@ -1,13 +1,7 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        weaviate:\n            default:\n                host: '%env(WEAVIATE_HOST)%'\n                api_key: '%env(WEAVIATE_API_KEY)%'"
-        }
-    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "env": {
         "#1": "WEAVIATE_HOST=http://localhost:8080",
         "#2": "WEAVIATE_API_KEY="

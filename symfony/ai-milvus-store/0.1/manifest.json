@@ -1,13 +1,7 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        milvus:\n            default:\n                host: '%env(MILVUS_HOST)%'\n                port: '%env(int:MILVUS_PORT)%'"
-        }
-    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "env": {
         "#1": "MILVUS_HOST=localhost",
         "#2": "MILVUS_PORT=19530"

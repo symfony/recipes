@@ -1,0 +1,6 @@
+ai:
+    store:
+        manticoresearch:
+            default:
+                host: '%env(MANTICORESEARCH_HOST)%'
+                port: '%env(int:MANTICORESEARCH_PORT)%'

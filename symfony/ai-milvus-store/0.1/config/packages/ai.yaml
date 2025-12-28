@@ -1,0 +1,6 @@
+ai:
+    store:
+        milvus:
+            default:
+                host: '%env(MILVUS_HOST)%'
+                port: '%env(int:MILVUS_PORT)%'

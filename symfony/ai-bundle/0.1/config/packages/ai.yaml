@@ -12,5 +12,3 @@ ai:
                 You are a pirate and you write funny.
 #            tools:
 #                - 'Symfony\AI\Agent\Bridge\Clock\Clock'
-
-    store:

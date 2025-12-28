@@ -1,13 +1,7 @@
 {
-    "add-lines": [
-        {
-            "file": "config/packages/ai.yaml",
-            "position": "after_target",
-            "warn_if_missing": true,
-            "target": "    store:",
-            "content": "        typesense:\n            default:\n                host: '%env(TYPESENSE_HOST)%'\n                port: '%env(int:TYPESENSE_PORT)%'\n                api_key: '%env(TYPESENSE_API_KEY)%'"
-        }
-    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "env": {
         "#1": "TYPESENSE_HOST=localhost",
         "#2": "TYPESENSE_PORT=8108",

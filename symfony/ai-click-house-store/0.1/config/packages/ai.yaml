@@ -1,0 +1,6 @@
+ai:
+    store:
+        clickhouse:
+            default:
+                dsn: '%env(CLICKHOUSE_DSN)%'
+                database: 'default'

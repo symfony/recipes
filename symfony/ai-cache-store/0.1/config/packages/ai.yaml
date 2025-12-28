@@ -1,0 +1,5 @@
+ai:
+    store:
+        cache:
+            default:
+                service: 'cache.app'

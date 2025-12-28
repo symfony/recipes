@@ -1,0 +1,6 @@
+ai:
+    store:
+        qdrant:
+            default:
+                host: '%env(QDRANT_HOST)%'
+                port: '%env(int:QDRANT_PORT)%'
