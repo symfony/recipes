@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "TYPESENSE_HOST=localhost",
+        "#2": "TYPESENSE_PORT=8108",
+        "#3": "TYPESENSE_API_KEY="
+    }
+}

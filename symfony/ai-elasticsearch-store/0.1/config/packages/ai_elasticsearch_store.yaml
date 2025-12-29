@@ -1,0 +1,6 @@
+ai:
+    store:
+        elasticsearch:
+            default:
+                hosts:
+                    - '%env(ELASTICSEARCH_HOST)%'

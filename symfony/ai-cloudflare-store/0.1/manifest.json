@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "CLOUDFLARE_ACCOUNT_ID=",
+        "#2": "CLOUDFLARE_API_KEY="
+    }
+}

@@ -1,0 +1,5 @@
+ai:
+    store:
+        postgres:
+            default:
+                connection: 'default'

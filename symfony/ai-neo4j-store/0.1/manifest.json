@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "NEO4J_URI=bolt://localhost:7687",
+        "#2": "NEO4J_USERNAME=neo4j",
+        "#3": "NEO4J_PASSWORD="
+    }
+}

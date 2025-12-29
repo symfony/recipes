@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "AZURE_SEARCH_ENDPOINT=",
+        "#2": "AZURE_SEARCH_API_KEY="
+    }
+}

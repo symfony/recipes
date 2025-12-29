@@ -1,0 +1,6 @@
+ai:
+    store:
+        cloudflare:
+            default:
+                account_id: '%env(CLOUDFLARE_ACCOUNT_ID)%'
+                api_key: '%env(CLOUDFLARE_API_KEY)%'

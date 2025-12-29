@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "SUPABASE_URL=",
+        "#2": "SUPABASE_API_KEY="
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "MANTICORESEARCH_HOST=localhost",
+        "#2": "MANTICORESEARCH_PORT=9308"
+    }
+}

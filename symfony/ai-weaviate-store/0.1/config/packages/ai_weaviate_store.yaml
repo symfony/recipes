@@ -1,0 +1,6 @@
+ai:
+    store:
+        weaviate:
+            default:
+                host: '%env(WEAVIATE_HOST)%'
+                api_key: '%env(WEAVIATE_API_KEY)%'
