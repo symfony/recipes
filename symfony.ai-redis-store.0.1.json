@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "symfony/ai-redis-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "REDIS_DSN=redis://localhost:6379"
+                }
+            },
+            "files": {
+                "config/packages/ai_redis_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        redis:",
+                        "            default:",
+                        "                dsn: '%env(REDIS_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "206af422ea9c5065c603aba1c6a891c0adf4d6de"
+        }
+    }
+}

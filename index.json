@@ -9,26 +9,68 @@
         "aha-send-mailer": "symfony/aha-send-mailer",
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
+        "ai-azure-search-store": "symfony/ai-azure-search-store",
         "ai-brave-tool": "symfony/ai-brave-tool",
         "ai-bundle": "symfony/ai-bundle",
+        "ai-cache-store": "symfony/ai-cache-store",
+        "ai-chroma-db-store": "symfony/ai-chroma-db-store",
+        "ai-click-house-store": "symfony/ai-click-house-store",
         "ai-clock-tool": "symfony/ai-clock-tool",
+        "ai-cloudflare-store": "symfony/ai-cloudflare-store",
+        "ai-elasticsearch-store": "symfony/ai-elasticsearch-store",
         "ai-firecrawl-tool": "symfony/ai-firecrawl-tool",
+        "ai-manticore-search-store": "symfony/ai-manticore-search-store",
         "ai-mapbox-tool": "symfony/ai-mapbox-tool",
+        "ai-maria-db-store": "symfony/ai-maria-db-store",
+        "ai-meilisearch-store": "symfony/ai-meilisearch-store",
+        "ai-milvus-store": "symfony/ai-milvus-store",
+        "ai-mongo-db-store": "symfony/ai-mongo-db-store",
+        "ai-neo4j-store": "symfony/ai-neo4j-store",
         "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
+        "ai-open-search-store": "symfony/ai-open-search-store",
+        "ai-pinecone-store": "symfony/ai-pinecone-store",
+        "ai-postgres-store": "symfony/ai-postgres-store",
+        "ai-qdrant-store": "symfony/ai-qdrant-store",
+        "ai-redis-store": "symfony/ai-redis-store",
         "ai-scraper-tool": "symfony/ai-scraper-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
+        "ai-supabase-store": "symfony/ai-supabase-store",
+        "ai-surreal-db-store": "symfony/ai-surreal-db-store",
         "ai-tavily-tool": "symfony/ai-tavily-tool",
+        "ai-typesense-store": "symfony/ai-typesense-store",
+        "ai-weaviate-store": "symfony/ai-weaviate-store",
         "ai-wikipedia-tool": "symfony/ai-wikipedia-tool",
         "ai-youtube-tool": "symfony/ai-youtube-tool",
+        "aiazuresearchstore": "symfony/ai-azure-search-store",
         "aibravetool": "symfony/ai-brave-tool",
         "aibundle": "symfony/ai-bundle",
+        "aicachestore": "symfony/ai-cache-store",
+        "aichromadbstore": "symfony/ai-chroma-db-store",
+        "aiclickhousestore": "symfony/ai-click-house-store",
         "aiclocktool": "symfony/ai-clock-tool",
+        "aicloudflarestore": "symfony/ai-cloudflare-store",
+        "aielasticsearchstore": "symfony/ai-elasticsearch-store",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
+        "aimanticoresearchstore": "symfony/ai-manticore-search-store",
         "aimapboxtool": "symfony/ai-mapbox-tool",
+        "aimariadbstore": "symfony/ai-maria-db-store",
+        "aimeilisearchstore": "symfony/ai-meilisearch-store",
+        "aimilvusstore": "symfony/ai-milvus-store",
+        "aimongodbstore": "symfony/ai-mongo-db-store",
+        "aineo4jstore": "symfony/ai-neo4j-store",
         "aiopenmeteotool": "symfony/ai-open-meteo-tool",
+        "aiopensearchstore": "symfony/ai-open-search-store",
+        "aipineconestore": "symfony/ai-pinecone-store",
+        "aipostgresstore": "symfony/ai-postgres-store",
+        "aiqdrantstore": "symfony/ai-qdrant-store",
+        "airedisstore": "symfony/ai-redis-store",
         "aiscrapertool": "symfony/ai-scraper-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
+        "aisupabasestore": "symfony/ai-supabase-store",
+        "aisurrealdbstore": "symfony/ai-surreal-db-store",
         "aitavilytool": "symfony/ai-tavily-tool",
+        "aitypesensestore": "symfony/ai-typesense-store",
+        "aiweaviatestore": "symfony/ai-weaviate-store",
         "aiwikipediatool": "symfony/ai-wikipedia-tool",
         "aiyoutubetool": "symfony/ai-youtube-tool",
         "alice": "hautelook/alice-bundle",
@@ -684,22 +726,73 @@
         "symfony/aha-send-mailer": [
             "7.2"
         ],
+        "symfony/ai-azure-search-store": [
+            "0.1"
+        ],
         "symfony/ai-brave-tool": [
             "0.1"
         ],
         "symfony/ai-bundle": [
             "0.1"
         ],
+        "symfony/ai-cache-store": [
+            "0.1"
+        ],
+        "symfony/ai-chroma-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-click-house-store": [
+            "0.1"
+        ],
         "symfony/ai-clock-tool": [
+            "0.1"
+        ],
+        "symfony/ai-cloudflare-store": [
+            "0.1"
+        ],
+        "symfony/ai-elasticsearch-store": [
             "0.1"
         ],
         "symfony/ai-firecrawl-tool": [
             "0.1"
         ],
+        "symfony/ai-manticore-search-store": [
+            "0.1"
+        ],
         "symfony/ai-mapbox-tool": [
             "0.1"
         ],
+        "symfony/ai-maria-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-meilisearch-store": [
+            "0.1"
+        ],
+        "symfony/ai-milvus-store": [
+            "0.1"
+        ],
+        "symfony/ai-mongo-db-store": [
+            "0.1"
+        ],
+        "symfony/ai-neo4j-store": [
+            "0.1"
+        ],
         "symfony/ai-open-meteo-tool": [
+            "0.1"
+        ],
+        "symfony/ai-open-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-pinecone-store": [
+            "0.1"
+        ],
+        "symfony/ai-postgres-store": [
+            "0.1"
+        ],
+        "symfony/ai-qdrant-store": [
+            "0.1"
+        ],
+        "symfony/ai-redis-store": [
             "0.1"
         ],
         "symfony/ai-scraper-tool": [
@@ -708,7 +801,19 @@
         "symfony/ai-serp-api-tool": [
             "0.1"
         ],
+        "symfony/ai-supabase-store": [
+            "0.1"
+        ],
+        "symfony/ai-surreal-db-store": [
+            "0.1"
+        ],
         "symfony/ai-tavily-tool": [
+            "0.1"
+        ],
+        "symfony/ai-typesense-store": [
+            "0.1"
+        ],
+        "symfony/ai-weaviate-store": [
             "0.1"
         ],
         "symfony/ai-wikipedia-tool": [

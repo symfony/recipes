@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-manticore-search-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MANTICORESEARCH_HOST=localhost",
+                    "#2": "MANTICORESEARCH_PORT=9308"
+                }
+            },
+            "files": {
+                "config/packages/ai_manticore_search_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        manticoresearch:",
+                        "            default:",
+                        "                host: '%env(MANTICORESEARCH_HOST)%'",
+                        "                port: '%env(int:MANTICORESEARCH_PORT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "46ce5b3ab850f2e9dca6f6782e23f87cc60acd27"
+        }
+    }
+}

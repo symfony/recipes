@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "symfony/ai-click-house-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "CLICKHOUSE_DSN="
+                }
+            },
+            "files": {
+                "config/packages/ai_click_house_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        clickhouse:",
+                        "            default:",
+                        "                dsn: '%env(CLICKHOUSE_DSN)%'",
+                        "                database: 'default'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d4fa8ac32a46176140efaa22fe9c5270dbb11c92"
+        }
+    }
+}

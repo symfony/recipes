@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/ai-azure-search-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "AZURE_SEARCH_ENDPOINT=",
+                    "#2": "AZURE_SEARCH_API_KEY="
+                }
+            },
+            "files": {
+                "config/packages/ai_azure_search_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        azuresearch:",
+                        "            default:",
+                        "                endpoint: '%env(AZURE_SEARCH_ENDPOINT)%'",
+                        "                api_key: '%env(AZURE_SEARCH_API_KEY)%'",
+                        "                api_version: '2024-07-01'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c6dbf26c0f856a5187a318df2099d620c57e8b29"
+        }
+    }
+}

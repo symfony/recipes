@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-cloudflare-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "CLOUDFLARE_ACCOUNT_ID=",
+                    "#2": "CLOUDFLARE_API_KEY="
+                }
+            },
+            "files": {
+                "config/packages/ai_cloudflare_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        cloudflare:",
+                        "            default:",
+                        "                account_id: '%env(CLOUDFLARE_ACCOUNT_ID)%'",
+                        "                api_key: '%env(CLOUDFLARE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "af5468e30d4934f0bf1f907ecd41184cc144b248"
+        }
+    }
+}

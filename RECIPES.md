@@ -32,15 +32,36 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [sensiolabs/ansi-to-html](https://packagist.org/packages/sensiolabs/ansi-to-html) | [1.2](sensiolabs/ansi-to-html/1.2) |  |
 | [sensiolabs/security-checker](https://packagist.org/packages/sensiolabs/security-checker) | [4.0](sensiolabs/security-checker/4.0) | `sec-check`, `sec-checker`, `sec-checks`, `seccheck`, `secchecker`, `secchecks`, `security-check`, `security-checker`, `securitycheck`, `securitychecker` |
 | [symfony/aha-send-mailer](https://packagist.org/packages/symfony/aha-send-mailer) | [7.2](symfony/aha-send-mailer/7.2) | `aha-send-mailer`, `ahasendmailer` |
+| [symfony/ai-azure-search-store](https://packagist.org/packages/symfony/ai-azure-search-store) | [0.1](symfony/ai-azure-search-store/0.1) | `ai-azure-search-store`, `aiazuresearchstore` |
 | [symfony/ai-brave-tool](https://packagist.org/packages/symfony/ai-brave-tool) | [0.1](symfony/ai-brave-tool/0.1) | `ai-brave-tool`, `aibravetool` |
 | [symfony/ai-bundle](https://packagist.org/packages/symfony/ai-bundle) | [0.1](symfony/ai-bundle/0.1) | `ai`, `ai-bundle`, `aibundle` |
+| [symfony/ai-cache-store](https://packagist.org/packages/symfony/ai-cache-store) | [0.1](symfony/ai-cache-store/0.1) | `ai-cache-store`, `aicachestore` |
+| [symfony/ai-chroma-db-store](https://packagist.org/packages/symfony/ai-chroma-db-store) | [0.1](symfony/ai-chroma-db-store/0.1) | `ai-chroma-db-store`, `aichromadbstore` |
+| [symfony/ai-click-house-store](https://packagist.org/packages/symfony/ai-click-house-store) | [0.1](symfony/ai-click-house-store/0.1) | `ai-click-house-store`, `aiclickhousestore` |
 | [symfony/ai-clock-tool](https://packagist.org/packages/symfony/ai-clock-tool) | [0.1](symfony/ai-clock-tool/0.1) | `ai-clock-tool`, `aiclocktool` |
+| [symfony/ai-cloudflare-store](https://packagist.org/packages/symfony/ai-cloudflare-store) | [0.1](symfony/ai-cloudflare-store/0.1) | `ai-cloudflare-store`, `aicloudflarestore` |
+| [symfony/ai-elasticsearch-store](https://packagist.org/packages/symfony/ai-elasticsearch-store) | [0.1](symfony/ai-elasticsearch-store/0.1) | `ai-elasticsearch-store`, `aielasticsearchstore` |
 | [symfony/ai-firecrawl-tool](https://packagist.org/packages/symfony/ai-firecrawl-tool) | [0.1](symfony/ai-firecrawl-tool/0.1) | `ai-firecrawl-tool`, `aifirecrawltool` |
+| [symfony/ai-manticore-search-store](https://packagist.org/packages/symfony/ai-manticore-search-store) | [0.1](symfony/ai-manticore-search-store/0.1) | `ai-manticore-search-store`, `aimanticoresearchstore` |
 | [symfony/ai-mapbox-tool](https://packagist.org/packages/symfony/ai-mapbox-tool) | [0.1](symfony/ai-mapbox-tool/0.1) | `ai-mapbox-tool`, `aimapboxtool` |
+| [symfony/ai-maria-db-store](https://packagist.org/packages/symfony/ai-maria-db-store) | [0.1](symfony/ai-maria-db-store/0.1) | `ai-maria-db-store`, `aimariadbstore` |
+| [symfony/ai-meilisearch-store](https://packagist.org/packages/symfony/ai-meilisearch-store) | [0.1](symfony/ai-meilisearch-store/0.1) | `ai-meilisearch-store`, `aimeilisearchstore` |
+| [symfony/ai-milvus-store](https://packagist.org/packages/symfony/ai-milvus-store) | [0.1](symfony/ai-milvus-store/0.1) | `ai-milvus-store`, `aimilvusstore` |
+| [symfony/ai-mongo-db-store](https://packagist.org/packages/symfony/ai-mongo-db-store) | [0.1](symfony/ai-mongo-db-store/0.1) | `ai-mongo-db-store`, `aimongodbstore` |
+| [symfony/ai-neo4j-store](https://packagist.org/packages/symfony/ai-neo4j-store) | [0.1](symfony/ai-neo4j-store/0.1) | `ai-neo4j-store`, `aineo4jstore` |
 | [symfony/ai-open-meteo-tool](https://packagist.org/packages/symfony/ai-open-meteo-tool) | [0.1](symfony/ai-open-meteo-tool/0.1) | `ai-open-meteo-tool`, `aiopenmeteotool` |
+| [symfony/ai-open-search-store](https://packagist.org/packages/symfony/ai-open-search-store) | [0.1](symfony/ai-open-search-store/0.1) | `ai-open-search-store`, `aiopensearchstore` |
+| [symfony/ai-pinecone-store](https://packagist.org/packages/symfony/ai-pinecone-store) | [0.1](symfony/ai-pinecone-store/0.1) | `ai-pinecone-store`, `aipineconestore` |
+| [symfony/ai-postgres-store](https://packagist.org/packages/symfony/ai-postgres-store) | [0.1](symfony/ai-postgres-store/0.1) | `ai-postgres-store`, `aipostgresstore` |
+| [symfony/ai-qdrant-store](https://packagist.org/packages/symfony/ai-qdrant-store) | [0.1](symfony/ai-qdrant-store/0.1) | `ai-qdrant-store`, `aiqdrantstore` |
+| [symfony/ai-redis-store](https://packagist.org/packages/symfony/ai-redis-store) | [0.1](symfony/ai-redis-store/0.1) | `ai-redis-store`, `airedisstore` |
 | [symfony/ai-scraper-tool](https://packagist.org/packages/symfony/ai-scraper-tool) | [0.1](symfony/ai-scraper-tool/0.1) | `ai-scraper-tool`, `aiscrapertool` |
 | [symfony/ai-serp-api-tool](https://packagist.org/packages/symfony/ai-serp-api-tool) | [0.1](symfony/ai-serp-api-tool/0.1) | `ai-serp-api-tool`, `aiserpapitool` |
+| [symfony/ai-supabase-store](https://packagist.org/packages/symfony/ai-supabase-store) | [0.1](symfony/ai-supabase-store/0.1) | `ai-supabase-store`, `aisupabasestore` |
+| [symfony/ai-surreal-db-store](https://packagist.org/packages/symfony/ai-surreal-db-store) | [0.1](symfony/ai-surreal-db-store/0.1) | `ai-surreal-db-store`, `aisurrealdbstore` |
 | [symfony/ai-tavily-tool](https://packagist.org/packages/symfony/ai-tavily-tool) | [0.1](symfony/ai-tavily-tool/0.1) | `ai-tavily-tool`, `aitavilytool` |
+| [symfony/ai-typesense-store](https://packagist.org/packages/symfony/ai-typesense-store) | [0.1](symfony/ai-typesense-store/0.1) | `ai-typesense-store`, `aitypesensestore` |
+| [symfony/ai-weaviate-store](https://packagist.org/packages/symfony/ai-weaviate-store) | [0.1](symfony/ai-weaviate-store/0.1) | `ai-weaviate-store`, `aiweaviatestore` |
 | [symfony/ai-wikipedia-tool](https://packagist.org/packages/symfony/ai-wikipedia-tool) | [0.1](symfony/ai-wikipedia-tool/0.1) | `ai-wikipedia-tool`, `aiwikipediatool` |
 | [symfony/ai-youtube-tool](https://packagist.org/packages/symfony/ai-youtube-tool) | [0.1](symfony/ai-youtube-tool/0.1) | `ai-youtube-tool`, `aiyoutubetool` |
 | [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |

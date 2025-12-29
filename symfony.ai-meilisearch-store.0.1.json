@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-meilisearch-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MEILISEARCH_HOST=http://localhost:7700",
+                    "#2": "MEILISEARCH_API_KEY="
+                }
+            },
+            "files": {
+                "config/packages/ai_meilisearch_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        meilisearch:",
+                        "            default:",
+                        "                host: '%env(MEILISEARCH_HOST)%'",
+                        "                api_key: '%env(MEILISEARCH_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3b6e66ca509ee3e0dd38003fa2ba19aa9d0a744e"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-milvus-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MILVUS_HOST=localhost",
+                    "#2": "MILVUS_PORT=19530"
+                }
+            },
+            "files": {
+                "config/packages/ai_milvus_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        milvus:",
+                        "            default:",
+                        "                host: '%env(MILVUS_HOST)%'",
+                        "                port: '%env(int:MILVUS_PORT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "07bfe6bd127a1aa300f6257e51c5050dc115f4eb"
+        }
+    }
+}

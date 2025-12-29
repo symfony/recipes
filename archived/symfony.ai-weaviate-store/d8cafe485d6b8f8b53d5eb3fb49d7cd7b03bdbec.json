@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-weaviate-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "WEAVIATE_HOST=http://localhost:8080",
+                    "#2": "WEAVIATE_API_KEY="
+                }
+            },
+            "files": {
+                "config/packages/ai_weaviate_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        weaviate:",
+                        "            default:",
+                        "                host: '%env(WEAVIATE_HOST)%'",
+                        "                api_key: '%env(WEAVIATE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d8cafe485d6b8f8b53d5eb3fb49d7cd7b03bdbec"
+        }
+    }
+}

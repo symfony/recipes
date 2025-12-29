@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-mongo-db-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MONGODB_URI=mongodb://localhost:27017"
+                }
+            },
+            "files": {
+                "config/packages/ai_mongo_db_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        mongodb:",
+                        "            default:",
+                        "                uri: '%env(MONGODB_URI)%'",
+                        "                database: 'my_database'",
+                        "                index_name: 'vector_index'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f4cf478544b0b33e573004eda6891bb9515ef429"
+        }
+    }
+}

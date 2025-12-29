@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "symfony/ai-postgres-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_postgres_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        postgres:",
+                        "            default:",
+                        "                connection: 'default'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "373cb1506ee0d7082944bb2077adce7edcc23229"
+        }
+    }
+}

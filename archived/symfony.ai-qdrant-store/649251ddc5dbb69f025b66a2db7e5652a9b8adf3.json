@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-qdrant-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "QDRANT_HOST=localhost",
+                    "#2": "QDRANT_PORT=6333"
+                }
+            },
+            "files": {
+                "config/packages/ai_qdrant_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        qdrant:",
+                        "            default:",
+                        "                host: '%env(QDRANT_HOST)%'",
+                        "                port: '%env(int:QDRANT_PORT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "649251ddc5dbb69f025b66a2db7e5652a9b8adf3"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "symfony/ai-cache-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_cache_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        cache:",
+                        "            default:",
+                        "                service: 'cache.app'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3eef3d89b2068c37128b76117ea6d887d0607782"
+        }
+    }
+}

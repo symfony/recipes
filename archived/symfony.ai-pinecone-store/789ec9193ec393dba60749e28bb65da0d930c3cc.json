@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-pinecone-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "PINECONE_API_KEY=",
+                    "#2": "PINECONE_INDEX_HOST="
+                }
+            },
+            "files": {
+                "config/packages/ai_pinecone_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        pinecone:",
+                        "            default:",
+                        "                api_key: '%env(PINECONE_API_KEY)%'",
+                        "                index_host: '%env(PINECONE_INDEX_HOST)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "789ec9193ec393dba60749e28bb65da0d930c3cc"
+        }
+    }
+}

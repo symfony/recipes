@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "symfony/ai-chroma-db-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_chroma_db_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        chromadb:",
+                        "            default:",
+                        "                collection: 'my_collection'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "70b5179ede32bb6faf93f7f521570d3740f5230e"
+        }
+    }
+}

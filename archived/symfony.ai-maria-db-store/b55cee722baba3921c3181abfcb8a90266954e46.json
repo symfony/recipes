@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "symfony/ai-maria-db-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_maria_db_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        mariadb:",
+                        "            default:",
+                        "                connection: 'default'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b55cee722baba3921c3181abfcb8a90266954e46"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "symfony/ai-typesense-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "TYPESENSE_HOST=localhost",
+                    "#2": "TYPESENSE_PORT=8108",
+                    "#3": "TYPESENSE_API_KEY="
+                }
+            },
+            "files": {
+                "config/packages/ai_typesense_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        typesense:",
+                        "            default:",
+                        "                host: '%env(TYPESENSE_HOST)%'",
+                        "                port: '%env(int:TYPESENSE_PORT)%'",
+                        "                api_key: '%env(TYPESENSE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eb874c59a5b244935496cc9b43b32809d462bb19"
+        }
+    }
+}

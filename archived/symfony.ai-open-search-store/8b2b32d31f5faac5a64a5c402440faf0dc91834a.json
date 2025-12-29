@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "symfony/ai-open-search-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "OPENSEARCH_HOST=http://localhost:9200"
+                }
+            },
+            "files": {
+                "config/packages/ai_open_search_store.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    store:",
+                        "        opensearch:",
+                        "            default:",
+                        "                hosts:",
+                        "                    - '%env(OPENSEARCH_HOST)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8b2b32d31f5faac5a64a5c402440faf0dc91834a"
+        }
+    }
+}
