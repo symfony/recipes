@@ -9,6 +9,7 @@
         "aha-send-mailer": "symfony/aha-send-mailer",
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
+        "ai-brave-tool": "symfony/ai-brave-tool",
         "ai-bundle": "symfony/ai-bundle",
         "ai-clock-tool": "symfony/ai-clock-tool",
         "ai-firecrawl-tool": "symfony/ai-firecrawl-tool",
@@ -19,6 +20,7 @@
         "ai-tavily-tool": "symfony/ai-tavily-tool",
         "ai-wikipedia-tool": "symfony/ai-wikipedia-tool",
         "ai-youtube-tool": "symfony/ai-youtube-tool",
+        "aibravetool": "symfony/ai-brave-tool",
         "aibundle": "symfony/ai-bundle",
         "aiclocktool": "symfony/ai-clock-tool",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
@@ -681,6 +683,9 @@
         ],
         "symfony/aha-send-mailer": [
             "7.2"
+        ],
+        "symfony/ai-brave-tool": [
+            "0.1"
         ],
         "symfony/ai-bundle": [
             "0.1"

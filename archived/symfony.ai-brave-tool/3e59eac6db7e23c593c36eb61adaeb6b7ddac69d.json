@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-brave-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "BRAVE_API_KEY=change-me"
+                }
+            },
+            "files": {
+                "config/packages/ai_brave_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Brave\\Brave:",
+                        "        $apiKey: '%env(BRAVE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3e59eac6db7e23c593c36eb61adaeb6b7ddac69d"
+        }
+    }
+}
