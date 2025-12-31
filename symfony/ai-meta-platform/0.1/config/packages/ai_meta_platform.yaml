@@ -1,0 +1,4 @@
+ai:
+    platform:
+        meta:
+            api_key: '%env(META_API_KEY)%'

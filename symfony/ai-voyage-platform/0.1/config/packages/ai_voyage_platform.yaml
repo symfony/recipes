@@ -1,0 +1,4 @@
+ai:
+    platform:
+        voyage:
+            api_key: '%env(VOYAGE_API_KEY)%'

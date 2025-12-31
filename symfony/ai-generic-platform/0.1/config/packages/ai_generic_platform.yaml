@@ -1,0 +1,4 @@
+ai:
+    platform:
+        generic:
+            base_url: '%env(GENERIC_BASE_URL)%'

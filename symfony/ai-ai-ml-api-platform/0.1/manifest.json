@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AIMLAPI_API_KEY": ""
+    }
+}

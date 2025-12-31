@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CARTESIA_API_KEY": "",
+        "#1": "CARTESIA_VERSION=2024-06-10"
+    }
+}
