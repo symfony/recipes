@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-open-router-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_open_router_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        openrouter:",
+                        "            api_key: '%env(OPENROUTER_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c39a146c6ec3df8b874accf6ce1cccbda431a688"
+        }
+    }
+}

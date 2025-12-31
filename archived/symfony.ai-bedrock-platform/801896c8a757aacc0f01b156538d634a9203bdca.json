@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-bedrock-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_bedrock_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        bedrock: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "801896c8a757aacc0f01b156538d634a9203bdca"
+        }
+    }
+}

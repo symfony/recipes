@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-voyage-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "VOYAGE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_voyage_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        voyage:",
+                        "            api_key: '%env(VOYAGE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "72b062541e3c7c1c1cee5b8fef9f9264ffa0aeeb"
+        }
+    }
+}

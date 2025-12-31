@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "symfony/ai-vertex-ai-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "VERTEX_AI_PROJECT_ID=your-project-id",
+                    "#2": "VERTEX_AI_LOCATION=us-central1"
+                }
+            },
+            "files": {
+                "config/packages/ai_vertex_ai_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        vertexai:",
+                        "            project_id: '%env(VERTEX_AI_PROJECT_ID)%'",
+                        "            location: '%env(VERTEX_AI_LOCATION)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a61f709ea16655e63b8c002154a41b5f836483d1"
+        }
+    }
+}

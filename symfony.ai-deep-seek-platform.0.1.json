@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-deep-seek-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DEEPSEEK_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_deep_seek_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        deepseek:",
+                        "            api_key: '%env(DEEPSEEK_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "29967c402e59520b8acae4e823ba01793e56c186"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-mistral-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MISTRAL_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_mistral_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        mistral:",
+                        "            api_key: '%env(MISTRAL_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2487d366905f51cc768093e51385be66c3d38f76"
+        }
+    }
+}

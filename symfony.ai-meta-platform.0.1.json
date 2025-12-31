@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-meta-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "META_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_meta_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        meta:",
+                        "            api_key: '%env(META_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1cd9f98ed1cc250d0853bebde3156f8849b4ff63"
+        }
+    }
+}

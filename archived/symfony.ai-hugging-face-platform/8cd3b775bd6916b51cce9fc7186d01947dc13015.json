@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-hugging-face-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HUGGINGFACE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_hugging_face_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        huggingface:",
+                        "            api_key: '%env(HUGGINGFACE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8cd3b775bd6916b51cce9fc7186d01947dc13015"
+        }
+    }
+}

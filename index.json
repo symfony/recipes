@@ -9,67 +9,119 @@
         "aha-send-mailer": "symfony/aha-send-mailer",
         "ahasendmailer": "symfony/aha-send-mailer",
         "ai": "symfony/ai-bundle",
+        "ai-ai-ml-api-platform": "symfony/ai-ai-ml-api-platform",
+        "ai-albert-platform": "symfony/ai-albert-platform",
+        "ai-anthropic-platform": "symfony/ai-anthropic-platform",
+        "ai-azure-platform": "symfony/ai-azure-platform",
         "ai-azure-search-store": "symfony/ai-azure-search-store",
+        "ai-bedrock-platform": "symfony/ai-bedrock-platform",
         "ai-brave-tool": "symfony/ai-brave-tool",
         "ai-bundle": "symfony/ai-bundle",
         "ai-cache-store": "symfony/ai-cache-store",
+        "ai-cartesia-platform": "symfony/ai-cartesia-platform",
+        "ai-cerebras-platform": "symfony/ai-cerebras-platform",
         "ai-chroma-db-store": "symfony/ai-chroma-db-store",
         "ai-click-house-store": "symfony/ai-click-house-store",
         "ai-clock-tool": "symfony/ai-clock-tool",
         "ai-cloudflare-store": "symfony/ai-cloudflare-store",
+        "ai-decart-platform": "symfony/ai-decart-platform",
+        "ai-deep-seek-platform": "symfony/ai-deep-seek-platform",
+        "ai-docker-model-runner-platform": "symfony/ai-docker-model-runner-platform",
         "ai-elasticsearch-store": "symfony/ai-elasticsearch-store",
+        "ai-eleven-labs-platform": "symfony/ai-eleven-labs-platform",
         "ai-firecrawl-tool": "symfony/ai-firecrawl-tool",
+        "ai-gemini-platform": "symfony/ai-gemini-platform",
+        "ai-generic-platform": "symfony/ai-generic-platform",
+        "ai-hugging-face-platform": "symfony/ai-hugging-face-platform",
+        "ai-lm-studio-platform": "symfony/ai-lm-studio-platform",
         "ai-manticore-search-store": "symfony/ai-manticore-search-store",
         "ai-mapbox-tool": "symfony/ai-mapbox-tool",
         "ai-maria-db-store": "symfony/ai-maria-db-store",
         "ai-meilisearch-store": "symfony/ai-meilisearch-store",
+        "ai-meta-platform": "symfony/ai-meta-platform",
         "ai-milvus-store": "symfony/ai-milvus-store",
+        "ai-mistral-platform": "symfony/ai-mistral-platform",
         "ai-mongo-db-store": "symfony/ai-mongo-db-store",
         "ai-neo4j-store": "symfony/ai-neo4j-store",
+        "ai-ollama-platform": "symfony/ai-ollama-platform",
+        "ai-open-ai-platform": "symfony/ai-open-ai-platform",
         "ai-open-meteo-tool": "symfony/ai-open-meteo-tool",
+        "ai-open-router-platform": "symfony/ai-open-router-platform",
         "ai-open-search-store": "symfony/ai-open-search-store",
+        "ai-perplexity-platform": "symfony/ai-perplexity-platform",
         "ai-pinecone-store": "symfony/ai-pinecone-store",
         "ai-postgres-store": "symfony/ai-postgres-store",
         "ai-qdrant-store": "symfony/ai-qdrant-store",
         "ai-redis-store": "symfony/ai-redis-store",
+        "ai-replicate-platform": "symfony/ai-replicate-platform",
+        "ai-scaleway-platform": "symfony/ai-scaleway-platform",
         "ai-scraper-tool": "symfony/ai-scraper-tool",
         "ai-serp-api-tool": "symfony/ai-serp-api-tool",
         "ai-supabase-store": "symfony/ai-supabase-store",
         "ai-surreal-db-store": "symfony/ai-surreal-db-store",
         "ai-tavily-tool": "symfony/ai-tavily-tool",
+        "ai-transformers-php-platform": "symfony/ai-transformers-php-platform",
         "ai-typesense-store": "symfony/ai-typesense-store",
+        "ai-vertex-ai-platform": "symfony/ai-vertex-ai-platform",
+        "ai-voyage-platform": "symfony/ai-voyage-platform",
         "ai-weaviate-store": "symfony/ai-weaviate-store",
         "ai-wikipedia-tool": "symfony/ai-wikipedia-tool",
         "ai-youtube-tool": "symfony/ai-youtube-tool",
+        "aiaimlapiplatform": "symfony/ai-ai-ml-api-platform",
+        "aialbertplatform": "symfony/ai-albert-platform",
+        "aianthropicplatform": "symfony/ai-anthropic-platform",
+        "aiazureplatform": "symfony/ai-azure-platform",
         "aiazuresearchstore": "symfony/ai-azure-search-store",
+        "aibedrockplatform": "symfony/ai-bedrock-platform",
         "aibravetool": "symfony/ai-brave-tool",
         "aibundle": "symfony/ai-bundle",
         "aicachestore": "symfony/ai-cache-store",
+        "aicartesiaplatform": "symfony/ai-cartesia-platform",
+        "aicerebrasplatform": "symfony/ai-cerebras-platform",
         "aichromadbstore": "symfony/ai-chroma-db-store",
         "aiclickhousestore": "symfony/ai-click-house-store",
         "aiclocktool": "symfony/ai-clock-tool",
         "aicloudflarestore": "symfony/ai-cloudflare-store",
+        "aidecartplatform": "symfony/ai-decart-platform",
+        "aideepseekplatform": "symfony/ai-deep-seek-platform",
+        "aidockermodelrunnerplatform": "symfony/ai-docker-model-runner-platform",
         "aielasticsearchstore": "symfony/ai-elasticsearch-store",
+        "aielevenlabsplatform": "symfony/ai-eleven-labs-platform",
         "aifirecrawltool": "symfony/ai-firecrawl-tool",
+        "aigeminiplatform": "symfony/ai-gemini-platform",
+        "aigenericplatform": "symfony/ai-generic-platform",
+        "aihuggingfaceplatform": "symfony/ai-hugging-face-platform",
+        "ailmstudioplatform": "symfony/ai-lm-studio-platform",
         "aimanticoresearchstore": "symfony/ai-manticore-search-store",
         "aimapboxtool": "symfony/ai-mapbox-tool",
         "aimariadbstore": "symfony/ai-maria-db-store",
         "aimeilisearchstore": "symfony/ai-meilisearch-store",
+        "aimetaplatform": "symfony/ai-meta-platform",
         "aimilvusstore": "symfony/ai-milvus-store",
+        "aimistralplatform": "symfony/ai-mistral-platform",
         "aimongodbstore": "symfony/ai-mongo-db-store",
         "aineo4jstore": "symfony/ai-neo4j-store",
+        "aiollamaplatform": "symfony/ai-ollama-platform",
+        "aiopenaiplatform": "symfony/ai-open-ai-platform",
         "aiopenmeteotool": "symfony/ai-open-meteo-tool",
+        "aiopenrouterplatform": "symfony/ai-open-router-platform",
         "aiopensearchstore": "symfony/ai-open-search-store",
+        "aiperplexityplatform": "symfony/ai-perplexity-platform",
         "aipineconestore": "symfony/ai-pinecone-store",
         "aipostgresstore": "symfony/ai-postgres-store",
         "aiqdrantstore": "symfony/ai-qdrant-store",
         "airedisstore": "symfony/ai-redis-store",
+        "aireplicateplatform": "symfony/ai-replicate-platform",
+        "aiscalewayplatform": "symfony/ai-scaleway-platform",
         "aiscrapertool": "symfony/ai-scraper-tool",
         "aiserpapitool": "symfony/ai-serp-api-tool",
         "aisupabasestore": "symfony/ai-supabase-store",
         "aisurrealdbstore": "symfony/ai-surreal-db-store",
         "aitavilytool": "symfony/ai-tavily-tool",
+        "aitransformersphpplatform": "symfony/ai-transformers-php-platform",
         "aitypesensestore": "symfony/ai-typesense-store",
+        "aivertexaiplatform": "symfony/ai-vertex-ai-platform",
+        "aivoyageplatform": "symfony/ai-voyage-platform",
         "aiweaviatestore": "symfony/ai-weaviate-store",
         "aiwikipediatool": "symfony/ai-wikipedia-tool",
         "aiyoutubetool": "symfony/ai-youtube-tool",
@@ -726,7 +778,22 @@
         "symfony/aha-send-mailer": [
             "7.2"
         ],
+        "symfony/ai-ai-ml-api-platform": [
+            "0.1"
+        ],
+        "symfony/ai-albert-platform": [
+            "0.1"
+        ],
+        "symfony/ai-anthropic-platform": [
+            "0.1"
+        ],
+        "symfony/ai-azure-platform": [
+            "0.1"
+        ],
         "symfony/ai-azure-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-bedrock-platform": [
             "0.1"
         ],
         "symfony/ai-brave-tool": [
@@ -736,6 +803,12 @@
             "0.1"
         ],
         "symfony/ai-cache-store": [
+            "0.1"
+        ],
+        "symfony/ai-cartesia-platform": [
+            "0.1"
+        ],
+        "symfony/ai-cerebras-platform": [
             "0.1"
         ],
         "symfony/ai-chroma-db-store": [
@@ -750,10 +823,34 @@
         "symfony/ai-cloudflare-store": [
             "0.1"
         ],
+        "symfony/ai-decart-platform": [
+            "0.1"
+        ],
+        "symfony/ai-deep-seek-platform": [
+            "0.1"
+        ],
+        "symfony/ai-docker-model-runner-platform": [
+            "0.1"
+        ],
         "symfony/ai-elasticsearch-store": [
             "0.1"
         ],
+        "symfony/ai-eleven-labs-platform": [
+            "0.1"
+        ],
         "symfony/ai-firecrawl-tool": [
+            "0.1"
+        ],
+        "symfony/ai-gemini-platform": [
+            "0.1"
+        ],
+        "symfony/ai-generic-platform": [
+            "0.1"
+        ],
+        "symfony/ai-hugging-face-platform": [
+            "0.1"
+        ],
+        "symfony/ai-lm-studio-platform": [
             "0.1"
         ],
         "symfony/ai-manticore-search-store": [
@@ -768,7 +865,13 @@
         "symfony/ai-meilisearch-store": [
             "0.1"
         ],
+        "symfony/ai-meta-platform": [
+            "0.1"
+        ],
         "symfony/ai-milvus-store": [
+            "0.1"
+        ],
+        "symfony/ai-mistral-platform": [
             "0.1"
         ],
         "symfony/ai-mongo-db-store": [
@@ -777,10 +880,22 @@
         "symfony/ai-neo4j-store": [
             "0.1"
         ],
+        "symfony/ai-ollama-platform": [
+            "0.1"
+        ],
+        "symfony/ai-open-ai-platform": [
+            "0.1"
+        ],
         "symfony/ai-open-meteo-tool": [
             "0.1"
         ],
+        "symfony/ai-open-router-platform": [
+            "0.1"
+        ],
         "symfony/ai-open-search-store": [
+            "0.1"
+        ],
+        "symfony/ai-perplexity-platform": [
             "0.1"
         ],
         "symfony/ai-pinecone-store": [
@@ -793,6 +908,12 @@
             "0.1"
         ],
         "symfony/ai-redis-store": [
+            "0.1"
+        ],
+        "symfony/ai-replicate-platform": [
+            "0.1"
+        ],
+        "symfony/ai-scaleway-platform": [
             "0.1"
         ],
         "symfony/ai-scraper-tool": [
@@ -810,7 +931,16 @@
         "symfony/ai-tavily-tool": [
             "0.1"
         ],
+        "symfony/ai-transformers-php-platform": [
+            "0.1"
+        ],
         "symfony/ai-typesense-store": [
+            "0.1"
+        ],
+        "symfony/ai-vertex-ai-platform": [
+            "0.1"
+        ],
+        "symfony/ai-voyage-platform": [
             "0.1"
         ],
         "symfony/ai-weaviate-store": [

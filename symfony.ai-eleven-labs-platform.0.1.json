@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-eleven-labs-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ELEVENLABS_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_eleven_labs_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        elevenlabs:",
+                        "            api_key: '%env(ELEVENLABS_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e67e9f575ef30e7ffe499b5eb125588d614137ee"
+        }
+    }
+}

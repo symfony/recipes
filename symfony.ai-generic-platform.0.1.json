@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-generic-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "GENERIC_BASE_URL=https://api.example.com/v1"
+                }
+            },
+            "files": {
+                "config/packages/ai_generic_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        generic:",
+                        "            base_url: '%env(GENERIC_BASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "caf14516010eb8e0c284f1264322b2af6a012723"
+        }
+    }
+}

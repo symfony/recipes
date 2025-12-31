@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-transformers-php-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_transformers_php_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        transformersphp: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84c6ac5e61f1facbd0afa5e9f8851cda9747be2e"
+        }
+    }
+}

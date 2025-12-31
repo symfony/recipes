@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-ollama-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_ollama_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        ollama: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2f0ac0a8bc59c4e46b47a962a3ad7fe8104457d6"
+        }
+    }
+}

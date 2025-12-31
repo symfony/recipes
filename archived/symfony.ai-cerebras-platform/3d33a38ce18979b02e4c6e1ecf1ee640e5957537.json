@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-cerebras-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CEREBRAS_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_cerebras_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        cerebras:",
+                        "            api_key: '%env(CEREBRAS_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d33a38ce18979b02e4c6e1ecf1ee640e5957537"
+        }
+    }
+}

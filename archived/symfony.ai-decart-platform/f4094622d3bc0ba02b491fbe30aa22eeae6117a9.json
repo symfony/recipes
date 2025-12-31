@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-decart-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DECART_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_decart_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        decart:",
+                        "            api_key: '%env(DECART_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f4094622d3bc0ba02b491fbe30aa22eeae6117a9"
+        }
+    }
+}

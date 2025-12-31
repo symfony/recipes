@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/ai-azure-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AZURE_API_KEY": "",
+                    "#1": "AZURE_BASE_URL=https://YOUR_RESOURCE_NAME.openai.azure.com",
+                    "#2": "AZURE_DEPLOYMENT=YOUR_DEPLOYMENT_NAME"
+                }
+            },
+            "files": {
+                "config/packages/ai_azure_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        azure:",
+                        "            api_key: '%env(AZURE_API_KEY)%'",
+                        "            base_url: '%env(AZURE_BASE_URL)%'",
+                        "            deployment: '%env(AZURE_DEPLOYMENT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2efef53d52ae795845ad5e083a1bea9ab01177c7"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-open-ai-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OPENAI_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_open_ai_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        openai:",
+                        "            api_key: '%env(OPENAI_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4f925d48b69c145cde2286e2cabfc7bd5eb4aca9"
+        }
+    }
+}

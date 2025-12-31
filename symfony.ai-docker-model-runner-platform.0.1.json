@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-docker-model-runner-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ai_docker_model_runner_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        docker_model_runner: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b1e2438c094572b7eb54771ff66eb3d41486602b"
+        }
+    }
+}

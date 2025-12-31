@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-anthropic-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ANTHROPIC_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_anthropic_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        anthropic:",
+                        "            api_key: '%env(ANTHROPIC_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "169d966953a6b9aeca111cb7f0ac2da72e050159"
+        }
+    }
+}

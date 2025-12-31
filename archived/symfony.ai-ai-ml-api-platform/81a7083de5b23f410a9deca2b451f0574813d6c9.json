@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-ai-ml-api-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AIMLAPI_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_ai_ml_api_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        aimlapi:",
+                        "            api_key: '%env(AIMLAPI_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "81a7083de5b23f410a9deca2b451f0574813d6c9"
+        }
+    }
+}

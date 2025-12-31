@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-replicate-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "REPLICATE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_replicate_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        replicate:",
+                        "            api_key: '%env(REPLICATE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c6e72fc3a4e0cb9b2e8b1e0430a7a6b0e17dd142"
+        }
+    }
+}

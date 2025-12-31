@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-scaleway-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SCALEWAY_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_scaleway_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        scaleway:",
+                        "            api_key: '%env(SCALEWAY_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "76cf021f70c3056da8101ce4d1c9229903b431d0"
+        }
+    }
+}

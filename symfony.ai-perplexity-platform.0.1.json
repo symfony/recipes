@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/ai-perplexity-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PERPLEXITY_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ai_perplexity_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        perplexity:",
+                        "            api_key: '%env(PERPLEXITY_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42a5df2dc3e2be26f71bb8d9613b43590a0d13fb"
+        }
+    }
+}

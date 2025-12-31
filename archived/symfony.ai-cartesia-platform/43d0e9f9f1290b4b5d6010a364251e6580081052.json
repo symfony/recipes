@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "symfony/ai-cartesia-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CARTESIA_API_KEY": "",
+                    "#1": "CARTESIA_VERSION=2024-06-10"
+                }
+            },
+            "files": {
+                "config/packages/ai_cartesia_platform.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    platform:",
+                        "        cartesia:",
+                        "            api_key: '%env(CARTESIA_API_KEY)%'",
+                        "            version: '%env(CARTESIA_VERSION)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "43d0e9f9f1290b4b5d6010a364251e6580081052"
+        }
+    }
+}
