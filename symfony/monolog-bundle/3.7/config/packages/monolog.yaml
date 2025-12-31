@@ -1,5 +1,5 @@
 monolog:
-    channels:
+    channels: # To show all channels built-in by Symfony, run: php bin/console debug:container monolog
         - deprecation # Deprecations are logged in the dedicated "deprecation" channel when it exists
 
 when@dev:
