@@ -61,7 +61,6 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ai-mapbox-tool](https://packagist.org/packages/symfony/ai-mapbox-tool) | [0.1](symfony/ai-mapbox-tool/0.1) | `ai-mapbox-tool`, `aimapboxtool` |
 | [symfony/ai-maria-db-store](https://packagist.org/packages/symfony/ai-maria-db-store) | [0.1](symfony/ai-maria-db-store/0.1) | `ai-maria-db-store`, `aimariadbstore` |
 | [symfony/ai-meilisearch-store](https://packagist.org/packages/symfony/ai-meilisearch-store) | [0.1](symfony/ai-meilisearch-store/0.1) | `ai-meilisearch-store`, `aimeilisearchstore` |
-| [symfony/ai-meta-platform](https://packagist.org/packages/symfony/ai-meta-platform) | [0.1](symfony/ai-meta-platform/0.1) | `ai-meta-platform`, `aimetaplatform` |
 | [symfony/ai-milvus-store](https://packagist.org/packages/symfony/ai-milvus-store) | [0.1](symfony/ai-milvus-store/0.1) | `ai-milvus-store`, `aimilvusstore` |
 | [symfony/ai-mistral-platform](https://packagist.org/packages/symfony/ai-mistral-platform) | [0.1](symfony/ai-mistral-platform/0.1) | `ai-mistral-platform`, `aimistralplatform` |
 | [symfony/ai-mongo-db-store](https://packagist.org/packages/symfony/ai-mongo-db-store) | [0.1](symfony/ai-mongo-db-store/0.1) | `ai-mongo-db-store`, `aimongodbstore` |

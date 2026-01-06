@@ -38,7 +38,6 @@
         "ai-mapbox-tool": "symfony/ai-mapbox-tool",
         "ai-maria-db-store": "symfony/ai-maria-db-store",
         "ai-meilisearch-store": "symfony/ai-meilisearch-store",
-        "ai-meta-platform": "symfony/ai-meta-platform",
         "ai-milvus-store": "symfony/ai-milvus-store",
         "ai-mistral-platform": "symfony/ai-mistral-platform",
         "ai-mongo-db-store": "symfony/ai-mongo-db-store",
@@ -96,7 +95,6 @@
         "aimapboxtool": "symfony/ai-mapbox-tool",
         "aimariadbstore": "symfony/ai-maria-db-store",
         "aimeilisearchstore": "symfony/ai-meilisearch-store",
-        "aimetaplatform": "symfony/ai-meta-platform",
         "aimilvusstore": "symfony/ai-milvus-store",
         "aimistralplatform": "symfony/ai-mistral-platform",
         "aimongodbstore": "symfony/ai-mongo-db-store",
@@ -863,9 +861,6 @@
             "0.1"
         ],
         "symfony/ai-meilisearch-store": [
-            "0.1"
-        ],
-        "symfony/ai-meta-platform": [
             "0.1"
         ],
         "symfony/ai-milvus-store": [
