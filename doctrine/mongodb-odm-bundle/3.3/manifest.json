@@ -13,5 +13,6 @@
     "env": {
         "MONGODB_URI": "mongodb://localhost:27017",
         "MONGODB_DB": "symfony"
-    }
+    },
+    "aliases": ["mongodb-odm", "doctrine-mongodb", "mongo-odm", "doctrine-mongo"]
 }

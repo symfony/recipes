@@ -17,5 +17,6 @@
     "conflict": {
         "doctrine/cache": "<1.11",
         "symfony/framework-bundle": "<5.3"
-    }
+    },
+    "aliases": ["mongodb-odm", "doctrine-mongodb", "mongo-odm", "doctrine-mongo"]
 }

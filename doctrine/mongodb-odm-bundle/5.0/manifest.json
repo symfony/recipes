@@ -45,5 +45,6 @@
                 "    - \"27017\""
             ]
         }
-    }
+    },
+    "aliases": ["mongodb-odm", "doctrine-mongodb", "mongo-odm", "doctrine-mongo"]
 }
