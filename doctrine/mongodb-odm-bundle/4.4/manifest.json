@@ -1,0 +1,49 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "container": {
+        "env(MONGODB_URI)": "",
+        "env(MONGODB_DB)": ""
+    },
+    "env": {
+        "#1": "Format described at https://www.mongodb.com/docs/php-library/current/connect/connection-options/",
+        "#2": "MONGODB_URI=\"mongodb://username:password@localhost:27017/?authSource=auth-db\"",
+        "#3": "MONGODB_URI=\"mongodb+srv://username:password@YOUR_CLUSTER_NAME.YOUR_HASH.mongodb.net/?retryWrites=true&w=majority\"",
+        "MONGODB_URI": "mongodb://localhost:27017",
+        "MONGODB_DB": "symfony"
+    },
+    "dockerfile": [
+        "RUN install-php-extensions mongodb"
+    ],
+    "docker-compose": {
+        "compose.yaml": {
+            "services": [
+                "mongodb:",
+                "  # In production, you may want to use a managed database service",
+                "  image: mongodb/mongodb-community-server:latest",
+                "  environment:",
+                "    - MONGODB_INITDB_DATABASE=${MONGODB_DB:-app}",
+                "    # You should definitely set a root username and password in production",
+                "    - MONGODB_INITDB_ROOT_USERNAME=${MONGODB_USERNAME:-}",
+                "    - MONGODB_INITDB_ROOT_PASSWORD=${MONGODB_PASSWORD:-}",
+                "  volumes:",
+                "    - mongodb_data:/data/db:rw",
+                "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                "    # - ./docker/mongodb/data:/data/db:rw"
+            ],
+            "volumes": ["mongodb_data:"]
+        },
+        "compose.override.yaml": {
+            "services": [
+                "mongodb:",
+                "  ports:",
+                "    - \"27017\""
+            ]
+        }
+    }
+}
