@@ -6,10 +6,6 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     },
-    "container": {
-        "env(MONGODB_URI)": "",
-        "env(MONGODB_DB)": ""
-    },
     "env": {
         "MONGODB_URI": "mongodb://localhost:27017",
         "MONGODB_DB": "symfony"

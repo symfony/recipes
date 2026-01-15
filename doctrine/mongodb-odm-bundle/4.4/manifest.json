@@ -6,10 +6,6 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     },
-    "container": {
-        "env(MONGODB_URI)": "",
-        "env(MONGODB_DB)": ""
-    },
     "env": {
         "#1": "Format described at https://www.mongodb.com/docs/php-library/current/connect/connection-options/",
         "#2": "MONGODB_URI=\"mongodb://username:password@localhost:27017/?authSource=auth-db\"",
