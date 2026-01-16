@@ -201,10 +201,14 @@
         "doctrine-bridge": "symfony/doctrine-bridge",
         "doctrine-messenger": "symfony/doctrine-messenger",
         "doctrine-migrations": "doctrine/doctrine-migrations-bundle",
+        "doctrine-mongo": "doctrine/mongodb-odm-bundle",
+        "doctrine-mongodb": "doctrine/mongodb-odm-bundle",
         "doctrine-orm": "symfony/orm-pack",
         "doctrinebridge": "symfony/doctrine-bridge",
         "doctrinemessenger": "symfony/doctrine-messenger",
         "doctrinemigrations": "doctrine/doctrine-migrations-bundle",
+        "doctrinemongo": "doctrine/mongodb-odm-bundle",
+        "doctrinemongodb": "doctrine/mongodb-odm-bundle",
         "doctrineorm": "symfony/orm-pack",
         "dom-crawler": "symfony/dom-crawler",
         "domcrawler": "symfony/dom-crawler",
@@ -361,6 +365,10 @@
         "mime": "symfony/mime",
         "mobyt-notifier": "symfony/mobyt-notifier",
         "mobytnotifier": "symfony/mobyt-notifier",
+        "mongo-odm": "doctrine/mongodb-odm-bundle",
+        "mongodb-odm": "doctrine/mongodb-odm-bundle",
+        "mongodbodm": "doctrine/mongodb-odm-bundle",
+        "mongoodm": "doctrine/mongodb-odm-bundle",
         "monolog": "symfony/monolog-bundle",
         "monolog-bridge": "symfony/monolog-bridge",
         "monolog-bundle": "symfony/monolog-bundle",
@@ -700,6 +708,12 @@
             "1.2",
             "2.2",
             "3.1"
+        ],
+        "doctrine/mongodb-odm-bundle": [
+            "3.3",
+            "4.1",
+            "4.4",
+            "5.0"
         ],
         "easycorp/easyadmin-bundle": [
             "1.17",
@@ -1583,6 +1597,12 @@
             },
             "3.0": {
                 "symfony/framework-bundle": "<6.4"
+            }
+        },
+        "doctrine/mongodb-odm-bundle": {
+            "4.1": {
+                "doctrine/cache": "<1.11",
+                "symfony/framework-bundle": "<5.3"
             }
         },
         "hautelook/alice-bundle": {
