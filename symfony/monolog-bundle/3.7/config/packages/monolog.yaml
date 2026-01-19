@@ -48,8 +48,12 @@ when@prod:
                 type: console
                 process_psr_3_messages: false
                 channels: ["!event", "!doctrine"]
+            deprecation_deduplication:
+                type: deduplication
+                channels: [deprecation]
+                handler: deprecation
+                time: 86400 # 1 day
             deprecation:
                 type: stream
-                channels: [deprecation]
                 path: php://stderr
                 formatter: monolog.formatter.json
