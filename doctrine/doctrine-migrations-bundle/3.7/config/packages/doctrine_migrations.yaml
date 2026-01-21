@@ -1,0 +1,9 @@
+doctrine_migrations:
+    enable_service_migrations: false
+    migrations_paths:
+        # The namespace is arbitrary but should be different from App\Migrations
+        # as migrations classes should NOT be autoloaded unless enable_service_migrations is true
+        'DoctrineMigrations': '%kernel.project_dir%/migrations'
+        # If enable_service_migrations is set to true, migrations MUST be discoverable by the autoloader:
+        # 'App\Migrations': '%kernel.project_dir%/src/Migrations'
+    enable_profiler: false
