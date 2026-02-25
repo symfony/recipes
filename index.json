@@ -1,0 +1,28 @@
+{
+    "aliases": {
+        "ai-amazee-ai-platform": "symfony/ai-amazee-ai-platform",
+        "ai-generic-platform": "symfony/ai-generic-platform",
+        "aiamazeeaiplatform": "symfony/ai-amazee-ai-platform",
+        "aigenericplatform": "symfony/ai-generic-platform"
+    },
+    "recipes": {
+        "symfony/ai-amazee-ai-platform": [
+            "0.5"
+        ],
+        "symfony/ai-generic-platform": [
+            "0.1"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1517/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1517/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
