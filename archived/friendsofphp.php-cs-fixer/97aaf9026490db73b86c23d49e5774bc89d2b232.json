@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "php-cs-fixer/shim": {
+        "friendsofphp/php-cs-fixer": {
             "manifest": {
                 "copy-from-recipe": {
                     ".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php"
@@ -35,7 +35,7 @@
                     "executable": false
                 }
             },
-            "ref": "6cf95ac1baa3d6f5816dd4db7281997912f239a6"
+            "ref": "97aaf9026490db73b86c23d49e5774bc89d2b232"
         }
     }
 }
