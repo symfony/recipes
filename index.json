@@ -1,0 +1,23 @@
+{
+    "aliases": {
+        "ai-docker-model-runner-platform": "symfony/ai-docker-model-runner-platform",
+        "aidockermodelrunnerplatform": "symfony/ai-docker-model-runner-platform"
+    },
+    "recipes": {
+        "symfony/ai-docker-model-runner-platform": [
+            "0.1"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1519/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1519/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
