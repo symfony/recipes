@@ -254,8 +254,8 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^6" v6
-                    cd v6
+                    composer create-project --ansi "symfony/skeleton:^6" sf6-php81
+                    cd sf6-php81
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
@@ -282,8 +282,42 @@ jobs:
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^7" v7
-                    cd v7
+                    composer create-project --ansi "symfony/skeleton:^7" sf7-php82
+                    cd sf7-php82
+                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
+                    composer config minimum-stability dev
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
+                    composer require -W --ansi $PACKAGES
+
+            -
+                name: Setup PHP 8.4
+                if: "always() && steps.config.outcome == 'success'"
+                uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "8.4"
+
+            -
+                name: Create-project with skeleton ^6
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^6" sf6-php84
+                    cd sf6-php84
+                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
+                    composer config minimum-stability dev
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
+                    composer require -W --ansi $PACKAGES
+
+            -
+                name: Create-project with skeleton ^7
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^7" sf7-php84
+                    cd sf7-php84
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
