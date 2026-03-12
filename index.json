@@ -1175,7 +1175,8 @@
         "symfony/mercure-bundle": [
             "0.1",
             "0.2",
-            "0.3"
+            "0.3",
+            "0.4"
         ],
         "symfony/mercure-notifier": [
             "5.3"
