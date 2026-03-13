@@ -288,3 +288,16 @@ jobs:
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
+
+            -
+                name: Create-project with skeleton ^8
+                if: "always() && steps.config.outcome == 'success'"
+                run: |
+                    set -x
+                    php -v
+                    composer create-project --ansi "symfony/skeleton:^8" sf8-php84
+                    cd sf8-php84
+                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
+                    composer config minimum-stability dev
+                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
+                    composer require -W --ansi $PACKAGES
