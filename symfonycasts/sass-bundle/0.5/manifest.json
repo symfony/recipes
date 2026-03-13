@@ -17,7 +17,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        missing_import_mode: strict",
-            "content": "        excluded_patterns:\n            - '**/assets/styles/**/_*.scss'"
+            "content": "        excluded_patterns:\n            - '*/assets/styles/**/_*.scss'"
         }
     ],
     "conflict": {
