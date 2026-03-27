@@ -2,4 +2,4 @@ ai:
     store:
         postgres:
             default:
-                connection: 'default'
+                dbal_connection: 'doctrine.dbal.default_connection'
