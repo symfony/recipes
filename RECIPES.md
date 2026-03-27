@@ -116,7 +116,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/flex](https://packagist.org/packages/symfony/flex) | [2.4](../../../tree/main/symfony/flex/2.4) | `flex` |
 | [symfony/form](https://packagist.org/packages/symfony/form) | [7.2](../../../tree/main/symfony/form/7.2) | `form` |
 | [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](../../../tree/main/symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
-| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.4](../../../tree/main/symfony/framework-bundle/7.4) | `framework-bundle`, `frameworkbundle` |
+| [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [8.1](../../../tree/main/symfony/framework-bundle/8.1) | `framework-bundle`, `frameworkbundle` |
 | [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [5.1](../../../tree/main/symfony/free-mobile-notifier/5.1) | `free-mobile-notifier`, `freemobilenotifier` |
 | [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](../../../tree/main/symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](../../../tree/main/symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
