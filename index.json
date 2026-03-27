@@ -1510,7 +1510,8 @@
             "1.9",
             "1.10",
             "1.17",
-            "2.0"
+            "2.0",
+            "2.1"
         ],
         "symfony/workflow": [
             "3.3"
@@ -1828,6 +1829,10 @@
                 "symfony/framework-bundle": "<5.4"
             },
             "2.0": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<5.4"
+            },
+            "2.1": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<5.4"
             }
