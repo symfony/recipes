@@ -6,7 +6,8 @@
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%/",
         "src/": "%SRC_DIR%/",
-        ".editorconfig": ".editorconfig"
+        ".editorconfig": ".editorconfig",
+        ".symfony.local.yaml": ".symfony.local.yaml"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
