@@ -52,7 +52,7 @@ when@prod:
                 type: deduplication
                 channels: [deprecation]
                 handler: deprecation
-                time: 86400 # 1 day
+                time: 3600 # 1 hour
             deprecation:
                 type: stream
                 path: php://stderr
