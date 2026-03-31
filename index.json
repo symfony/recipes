@@ -1,0 +1,36 @@
+{
+    "aliases": {
+        "log": "symfony/monolog-bundle",
+        "logger": "symfony/monolog-bundle",
+        "logging": "symfony/monolog-bundle",
+        "logs": "symfony/monolog-bundle",
+        "monolog": "symfony/monolog-bundle",
+        "monolog-bundle": "symfony/monolog-bundle",
+        "monologbundle": "symfony/monolog-bundle"
+    },
+    "recipes": {
+        "symfony/monolog-bundle": [
+            "3.1",
+            "3.3",
+            "3.7"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/monolog-bundle": {
+            "3.7": {
+                "symfony/framework-bundle": "<5.3"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1500/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1500/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
