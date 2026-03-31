@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            plivo: '%env(PLIVO_DSN)%'"
+            "content": [
+                "            plivo: '%env(PLIVO_DSN)%'"
+            ]
         }
     ],
     "env": {

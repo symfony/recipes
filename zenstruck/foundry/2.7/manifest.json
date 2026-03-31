@@ -15,7 +15,9 @@
     "add-lines": [
         {
             "file": "phpunit.dist.xml",
-            "content": "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />",
+            "content": [
+                "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "phpunit/phpunit:>=10",
@@ -23,7 +25,9 @@
         },
         {
             "file": "config/packages/zenstruck_foundry.yaml",
-            "content": "        enable_auto_refresh_with_lazy_objects: true",
+            "content": [
+                "        enable_auto_refresh_with_lazy_objects: true"
+            ],
             "position": "after_target",
             "target": "zenstruck_foundry:",
             "requires": "php:>=8.4",

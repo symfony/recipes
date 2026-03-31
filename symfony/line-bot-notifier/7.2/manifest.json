@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            linebot: '%env(LINE_BOT_DSN)%'"
+            "content": [
+                "            linebot: '%env(LINE_BOT_DSN)%'"
+            ]
         }
     ],
     "env": {

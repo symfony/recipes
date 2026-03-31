@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            mercure: '%env(MERCURE_DSN)%'"
+            "content": [
+                "            mercure: '%env(MERCURE_DSN)%'"
+            ]
         }
     ],
     "env": {

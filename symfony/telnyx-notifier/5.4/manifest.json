@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            telnyx: '%env(TELNYX_DSN)%'"
+            "content": [
+                "            telnyx: '%env(TELNYX_DSN)%'"
+            ]
         }
     ],
     "env": {

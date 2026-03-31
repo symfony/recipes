@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            pushy: '%env(PUSHY_DSN)%'"
+            "content": [
+                "            pushy: '%env(PUSHY_DSN)%'"
+            ]
         }
     ],
     "env": {

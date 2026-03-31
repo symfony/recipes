@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            forty-six-elks: '%env(FORTY_SIX_ELKS_DSN)%'"
+            "content": [
+                "            forty-six-elks: '%env(FORTY_SIX_ELKS_DSN)%'"
+            ]
         }
     ],
     "env": {

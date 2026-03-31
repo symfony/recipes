@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            goip: '%env(GOIP_DSN)%'"
+            "content": [
+                "            goip: '%env(GOIP_DSN)%'"
+            ]
         }
     ],
     "env": {

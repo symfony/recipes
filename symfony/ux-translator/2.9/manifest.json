@@ -13,25 +13,33 @@
     "add-lines": [
         {
             "file": "assets/translator.js",
-            "content": "import { localeFallbacks } from '../var/translations/configuration';",
+            "content": [
+                "import { localeFallbacks } from '../var/translations/configuration';"
+            ],
             "position": "top",
             "requires": "symfony/webpack-encore-bundle"
         },
         {
             "file": "assets/translator.js",
-            "content": "import { localeFallbacks } from '@app/translations/configuration';",
+            "content": [
+                "import { localeFallbacks } from '@app/translations/configuration';"
+            ],
             "position": "top",
             "requires": "symfony/asset-mapper"
         },
         {
             "file": "assets/translator.js",
-            "content": "export * from '../var/translations';",
+            "content": [
+                "export * from '../var/translations';"
+            ],
             "position": "bottom",
             "requires": "symfony/webpack-encore-bundle"
         },
         {
             "file": "assets/translator.js",
-            "content": "export * from '@app/translations';",
+            "content": [
+                "export * from '@app/translations';"
+            ],
             "position": "bottom",
             "requires": "symfony/asset-mapper"
         }

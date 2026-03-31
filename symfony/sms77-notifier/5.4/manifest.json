@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            sms77: '%env(SMS77_DSN)%'"
+            "content": [
+                "            sms77: '%env(SMS77_DSN)%'"
+            ]
         }
     ],
     "env": {

@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            ringcentral: '%env(RINGCENTRAL_DSN)%'"
+            "content": [
+                "            ringcentral: '%env(RINGCENTRAL_DSN)%'"
+            ]
         }
     ],
     "env": {

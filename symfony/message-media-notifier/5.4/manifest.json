@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            messagemedia: '%env(MESSAGEMEDIA_DSN)%'"
+            "content": [
+                "            messagemedia: '%env(MESSAGEMEDIA_DSN)%'"
+            ]
         }
     ],
     "env": {

@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            kaz-info-teh: '%env(KAZ_INFO_TEH_DSN)%'"
+            "content": [
+                "            kaz-info-teh: '%env(KAZ_INFO_TEH_DSN)%'"
+            ]
         }
     ],
     "env": {

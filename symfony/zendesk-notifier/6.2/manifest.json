@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            zendesk: '%env(ZENDESK_DSN)%'"
+            "content": [
+                "            zendesk: '%env(ZENDESK_DSN)%'"
+            ]
         }
     ],
     "env": {

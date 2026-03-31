@@ -4,7 +4,9 @@
             "file": "config/packages/notifier.yaml",
             "position": "after_target",
             "target": "        texter_transports:",
-            "content": "            sendgrid: '%env(MAILER_DSN)%'"
+            "content": [
+                "            sendgrid: '%env(MAILER_DSN)%'"
+            ]
         }
     ],
     "env": {

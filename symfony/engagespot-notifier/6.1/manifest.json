@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            engagespot: '%env(ENGAGESPOT_DSN)%'"
+            "content": [
+                "            engagespot: '%env(ENGAGESPOT_DSN)%'"
+            ]
         }
     ],
     "env": {

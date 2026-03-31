@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            redlink: '%env(REDLINK_DSN)%'"
+            "content": [
+                "            redlink: '%env(REDLINK_DSN)%'"
+            ]
         }
     ],
     "env": {

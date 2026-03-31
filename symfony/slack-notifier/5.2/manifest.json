@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            slack: '%env(SLACK_DSN)%'"
+            "content": [
+                "            slack: '%env(SLACK_DSN)%'"
+            ]
         }
     ],
     "env": {

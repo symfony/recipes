@@ -4,7 +4,10 @@
             "file": "config/packages/translation.yaml",
             "position": "after_target",
             "target": "        providers:",
-            "content": "            crowdin:\n                dsn: '%env(CROWDIN_DSN)%'"
+            "content": [
+                "            crowdin:",
+                "                dsn: '%env(CROWDIN_DSN)%'"
+            ]
         }
     ],
     "env": {

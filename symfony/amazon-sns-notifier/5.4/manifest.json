@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            sns: '%env(AMAZON_SNS_DSN)%'"
+            "content": [
+                "            sns: '%env(AMAZON_SNS_DSN)%'"
+            ]
         }
     ],
     "env": {

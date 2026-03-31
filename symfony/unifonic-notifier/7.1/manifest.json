@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            unifonic: '%env(UNIFONIC_DSN)%'"
+            "content": [
+                "            unifonic: '%env(UNIFONIC_DSN)%'"
+            ]
         }
     ],
     "env": {

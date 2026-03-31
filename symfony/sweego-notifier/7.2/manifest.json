@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            sweego: '%env(SWEEGO_DSN)%'"
+            "content": [
+                "            sweego: '%env(SWEEGO_DSN)%'"
+            ]
         }
     ],
     "env": {

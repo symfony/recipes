@@ -12,26 +12,35 @@
     "add-lines": [
         {
             "file": "webpack.config.js",
-            "content": "\n    .enableSvelte()",
+            "content": [
+                "",
+                "    .enableSvelte()"
+            ],
             "position": "after_target",
             "target": ".splitEntryChunks()"
         },
         {
             "file": "assets/app.js",
-            "content": "import { registerSvelteControllerComponents } from '@symfony/ux-svelte';",
+            "content": [
+                "import { registerSvelteControllerComponents } from '@symfony/ux-svelte';"
+            ],
             "position": "top",
             "warn_if_missing": true
         },
         {
             "file": "assets/app.js",
-            "content": "registerSvelteControllerComponents(require.context('./svelte/controllers', true, /\\.svelte$/));",
+            "content": [
+                "registerSvelteControllerComponents(require.context('./svelte/controllers', true, /\\.svelte$/));"
+            ],
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/webpack-encore-bundle"
         },
         {
             "file": "assets/app.js",
-            "content": "registerSvelteControllerComponents();",
+            "content": [
+                "registerSvelteControllerComponents();"
+            ],
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/asset-mapper"

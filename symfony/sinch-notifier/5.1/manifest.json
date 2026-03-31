@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            sinch: '%env(SINCH_DSN)%'"
+            "content": [
+                "            sinch: '%env(SINCH_DSN)%'"
+            ]
         }
     ],
     "env": {

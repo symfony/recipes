@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            sms-factor: '%env(SMS_FACTOR_DSN)%'"
+            "content": [
+                "            sms-factor: '%env(SMS_FACTOR_DSN)%'"
+            ]
         }
     ],
     "env": {

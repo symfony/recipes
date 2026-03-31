@@ -4,7 +4,9 @@
             "file": "config/packages/notifier.yaml",
             "position": "after_target",
             "target": "        texter_transports:",
-            "content": "            mailpace+api: '%env(MAILER_DSN)%'"
+            "content": [
+                "            mailpace+api: '%env(MAILER_DSN)%'"
+            ]
         }
     ],
     "env": {

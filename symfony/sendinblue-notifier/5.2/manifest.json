@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            sendinblue: '%env(SENDINBLUE_DSN)%'"
+            "content": [
+                "            sendinblue: '%env(SENDINBLUE_DSN)%'"
+            ]
         }
     ],
     "env": {

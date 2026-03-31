@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            smsmode: '%env(SMSMODE_DSN)%'"
+            "content": [
+                "            smsmode: '%env(SMSMODE_DSN)%'"
+            ]
         }
     ],
     "env": {

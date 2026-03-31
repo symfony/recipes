@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            chatwork: '%env(CHATWORK_DSN)%'"
+            "content": [
+                "            chatwork: '%env(CHATWORK_DSN)%'"
+            ]
         }
     ],
     "env": {

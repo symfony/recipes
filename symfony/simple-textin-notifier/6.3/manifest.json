@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            simpletextin: '%env(SIMPLETEXTIN_DSN)%'"
+            "content": [
+                "            simpletextin: '%env(SIMPLETEXTIN_DSN)%'"
+            ]
         }
     ],
     "env": {

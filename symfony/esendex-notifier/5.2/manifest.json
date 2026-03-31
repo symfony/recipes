@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            esendex: '%env(ESENDEX_DSN)%'"
+            "content": [
+                "            esendex: '%env(ESENDEX_DSN)%'"
+            ]
         }
     ],
     "env": {

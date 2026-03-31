@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            lightsms: '%env(LIGHTSMS_DSN)%'"
+            "content": [
+                "            lightsms: '%env(LIGHTSMS_DSN)%'"
+            ]
         }
     ],
     "env": {

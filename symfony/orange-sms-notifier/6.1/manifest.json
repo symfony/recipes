@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            orange-sms: '%env(ORANGE_SMS_DSN)%'"
+            "content": [
+                "            orange-sms: '%env(ORANGE_SMS_DSN)%'"
+            ]
         }
     ],
     "env": {

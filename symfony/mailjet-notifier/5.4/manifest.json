@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            mailjet: '%env(MAILJET_DSN)%'"
+            "content": [
+                "            mailjet: '%env(MAILJET_DSN)%'"
+            ]
         }
     ],
     "env": {

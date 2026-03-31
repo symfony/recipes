@@ -22,14 +22,18 @@
     "add-lines": [
         {
             "file": "templates/base.html.twig",
-            "content": "            {{ encore_entry_script_tags('app') }}",
+            "content": [
+                "            {{ encore_entry_script_tags('app') }}"
+            ],
             "position": "after_target",
             "target": "{% block javascripts %}",
             "warn_if_missing": true
         },
         {
             "file": "templates/base.html.twig",
-            "content": "            {{ encore_entry_link_tags('app') }}",
+            "content": [
+                "            {{ encore_entry_link_tags('app') }}"
+            ],
             "position": "after_target",
             "target": "{% block stylesheets %}",
             "warn_if_missing": true

@@ -12,26 +12,35 @@
     "add-lines": [
         {
             "file": "webpack.config.js",
-            "content": "\n    .enableVueLoader()",
+            "content": [
+                "",
+                "    .enableVueLoader()"
+            ],
             "position": "after_target",
             "target": ".splitEntryChunks()"
         },
         {
             "file": "assets/app.js",
-            "content": "import { registerVueControllerComponents } from '@symfony/ux-vue';",
+            "content": [
+                "import { registerVueControllerComponents } from '@symfony/ux-vue';"
+            ],
             "position": "top",
             "warn_if_missing": true
         },
         {
             "file": "assets/app.js",
-            "content": "registerVueControllerComponents(require.context('./vue/controllers', true, /\\.vue$/));",
+            "content": [
+                "registerVueControllerComponents(require.context('./vue/controllers', true, /\\.vue$/));"
+            ],
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/webpack-encore-bundle"
         },
         {
             "file": "assets/app.js",
-            "content": "registerVueControllerComponents();",
+            "content": [
+                "registerVueControllerComponents();"
+            ],
             "position": "bottom",
             "warn_if_missing": true,
             "requires": "symfony/asset-mapper"

@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            mastodon: '%env(MASTODON_DSN)%'"
+            "content": [
+                "            mastodon: '%env(MASTODON_DSN)%'"
+            ]
         }
     ],
     "env": {

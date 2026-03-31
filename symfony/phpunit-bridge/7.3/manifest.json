@@ -2,7 +2,12 @@
     "add-lines": [
         {
             "file": "phpunit.dist.xml",
-            "content": "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">\n            <parameter name=\"clock-mock-namespaces\" value=\"App\" />\n            <parameter name=\"dns-mock-namespaces\" value=\"App\" />\n        </bootstrap>",
+            "content": [
+                "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">",
+                "            <parameter name=\"clock-mock-namespaces\" value=\"App\" />",
+                "            <parameter name=\"dns-mock-namespaces\" value=\"App\" />",
+                "        </bootstrap>"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "warn_if_missing": true

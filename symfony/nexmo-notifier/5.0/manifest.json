@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            nexmo: '%env(NEXMO_DSN)%'"
+            "content": [
+                "            nexmo: '%env(NEXMO_DSN)%'"
+            ]
         }
     ],
     "env": {

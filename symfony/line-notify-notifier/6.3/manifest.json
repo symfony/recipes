@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        chatter_transports:",
-            "content": "            linenotify: '%env(LINE_NOTIFY_DSN)%'"
+            "content": [
+                "            linenotify: '%env(LINE_NOTIFY_DSN)%'"
+            ]
         }
     ],
     "env": {

@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            freemobile: '%env(FREE_MOBILE_DSN)%'"
+            "content": [
+                "            freemobile: '%env(FREE_MOBILE_DSN)%'"
+            ]
         }
     ],
     "env": {

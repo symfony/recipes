@@ -4,7 +4,10 @@
             "file": "config/packages/translation.yaml",
             "position": "after_target",
             "target": "        providers:",
-            "content": "            phrase:\n                dsn: '%env(PHRASE_DSN)%'"
+            "content": [
+                "            phrase:",
+                "                dsn: '%env(PHRASE_DSN)%'"
+            ]
         }
     ],
     "env": {

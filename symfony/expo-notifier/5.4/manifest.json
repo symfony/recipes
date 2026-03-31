@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            expo: '%env(EXPO_DSN)%'"
+            "content": [
+                "            expo: '%env(EXPO_DSN)%'"
+            ]
         }
     ],
     "env": {

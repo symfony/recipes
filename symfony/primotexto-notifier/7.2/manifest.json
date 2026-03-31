@@ -5,7 +5,9 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        texter_transports:",
-            "content": "            primotexto: '%env(PRIMOTEXTO_DSN)%'"
+            "content": [
+                "            primotexto: '%env(PRIMOTEXTO_DSN)%'"
+            ]
         }
     ],
     "env": {

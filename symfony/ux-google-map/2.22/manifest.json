@@ -8,7 +8,11 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    renderer: '%env(resolve:default::UX_MAP_DSN)%'",
-            "content": "    google_maps:\n        # define the default map id for all maps (https://developers.google.com/maps/documentation/get-map-id)\n        default_map_id: null"
+            "content": [
+                "    google_maps:",
+                "        # define the default map id for all maps (https://developers.google.com/maps/documentation/get-map-id)",
+                "        default_map_id: null"
+            ]
         }
     ],
     "env": {

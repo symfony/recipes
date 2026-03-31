@@ -4,7 +4,10 @@
             "file": "config/packages/translation.yaml",
             "position": "after_target",
             "target": "        providers:",
-            "content": "            lokalise:\n                dsn: '%env(LOKALISE_DSN)%'"
+            "content": [
+                "            lokalise:",
+                "                dsn: '%env(LOKALISE_DSN)%'"
+            ]
         }
     ],
     "env": {

@@ -28,7 +28,9 @@
     "add-lines": [
         {
             "file": "phpunit.xml.dist",
-            "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "content": [
+                "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "symfony/phpunit-bridge:<7.3",
@@ -36,7 +38,9 @@
         },
         {
             "file": "phpunit.dist.xml",
-            "content": "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "content": [
+                "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "symfony/phpunit-bridge:<7.3",
@@ -44,7 +48,9 @@
         },
         {
             "file": "phpunit.xml.dist",
-            "content": "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "content": [
+                "        <extension class=\"Symfony\\Component\\Panther\\ServerExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "phpunit/phpunit:<10",
@@ -52,7 +58,9 @@
         },
         {
             "file": "phpunit.dist.xml",
-            "content": "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />",
+            "content": [
+                "        <bootstrap class=\"Symfony\\Component\\Panther\\ServerExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "phpunit/phpunit:>=10",

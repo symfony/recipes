@@ -15,7 +15,9 @@
     "add-lines": [
         {
             "file": "phpunit.dist.xml",
-            "content": "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />",
+            "content": [
+                "        <bootstrap class=\"Zenstruck\\Foundry\\PHPUnit\\FoundryExtension\" />"
+            ],
             "position": "after_target",
             "target": "<extensions>",
             "requires": "phpunit/phpunit:>=10",
