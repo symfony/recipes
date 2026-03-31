@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "doctrine/doctrine-migrations-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_migrations.yaml": {
+                    "contents": [
+                        "doctrine_migrations:",
+                        "    enable_service_migrations: true",
+                        "    migrations_paths:",
+                        "        'App\\Migrations': '%kernel.project_dir%/src/Migrations'",
+                        "    enable_profiler: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "22bf81c4b6beb7c8258f08ab92f4007306880a18"
+        }
+    }
+}
