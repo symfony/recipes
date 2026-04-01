@@ -9,7 +9,11 @@
     "add-lines": [
         {
             "file": ".symfony.local.yaml",
-            "content": "    # Watch and build CSS files using Tailwind CSS\n    tailwind:\n        cmd: ['symfony', 'console', 'tailwind:build', '--watch']",
+            "content": [
+                "    # Watch and build CSS files using Tailwind CSS",
+                "    tailwind:",
+                "        cmd: ['symfony', 'console', 'tailwind:build', '--watch']"
+            ],
             "position": "after_target",
             "target": "workers:",
             "warn_if_missing": true

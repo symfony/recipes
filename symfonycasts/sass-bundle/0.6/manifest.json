@@ -17,11 +17,18 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "        missing_import_mode: strict",
-            "content": "        excluded_patterns:\n            - '**/assets/styles/*/_*.scss'"
+            "content": [
+                "        excluded_patterns:",
+                "            - '*/assets/styles/**/_*.scss'"
+            ]
         },
         {
             "file": ".symfony.local.yaml",
-            "content": "    # Watch and build Sass files\n    sass:\n        cmd: ['symfony', 'console', 'sass:build', '--watch']",
+            "content": [
+                "    # Watch and build Sass files",
+                "    sass:",
+                "        cmd: ['symfony', 'console', 'sass:build', '--watch']"
+            ],
             "position": "after_target",
             "target": "workers:",
             "warn_if_missing": true
