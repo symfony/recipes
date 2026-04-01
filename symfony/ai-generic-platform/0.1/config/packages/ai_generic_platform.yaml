@@ -1,5 +1,4 @@
 ai:
     platform:
         generic:
-            default:
-                base_url: '%env(GENERIC_BASE_URL)%'
+            base_url: '%env(GENERIC_BASE_URL)%'
