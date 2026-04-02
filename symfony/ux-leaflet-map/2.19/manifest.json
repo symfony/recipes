@@ -10,7 +10,10 @@
     "add-lines": [
         {
             "file": "webpack.config.js",
-            "content": "\n    .addAliases({'leaflet/dist/leaflet.min.css': 'leaflet/dist/leaflet.css'})",
+            "content": [
+                "",
+                "    .addAliases({'leaflet/dist/leaflet.min.css': 'leaflet/dist/leaflet.css'})"
+            ],
             "position": "after_target",
             "target": ".autoProvidejQuery()"
         }
