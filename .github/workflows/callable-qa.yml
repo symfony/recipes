@@ -259,11 +259,17 @@ jobs:
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    composer require -W --ansi $PACKAGES
-                    EXIT_CODE=$?
+                    EXIT_CODE=0
+                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
 
-                    if [[ EXIT_CODE -eq 2 ]]; then
-                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 6\n#\n#\n#\n"
+                    if [[ $EXIT_CODE -eq 2 ]]; then
+                        set +x
+                        printf '\n\n' >&2
+                        printf '\033[32m########################################################################\033[0m\n' >&2
+                        printf '\033[32m# You can ignore this error if your package does not support Symfony 6 #\033[0m\n' >&2
+                        printf '\033[32m########################################################################\033[0m\n' >&2
+                        printf '\n\n' >&2
+                        set -x
                     fi
 
                     exit $EXIT_CODE
