@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "AMAZEEAI_LLM_API_URL=https://llm.YOUR_REGION.amazee.ai",
+        "#2": "AMAZEEAI_LLM_KEY=CHANGE_ME"
+    }
+}

@@ -1,0 +1,5 @@
+ai:
+    platform:
+        amazeeai:
+            base_url: '%env(AMAZEEAI_LLM_API_URL)%'
+            api_key: '%env(AMAZEEAI_LLM_KEY)%'
