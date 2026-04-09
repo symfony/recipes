@@ -35,6 +35,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/aha-send-mailer](https://packagist.org/packages/symfony/aha-send-mailer) | [7.2](../../../tree/main/symfony/aha-send-mailer/7.2) | `aha-send-mailer`, `ahasendmailer` |
 | [symfony/ai-ai-ml-api-platform](https://packagist.org/packages/symfony/ai-ai-ml-api-platform) | [0.1](../../../tree/main/symfony/ai-ai-ml-api-platform/0.1) | `ai-ai-ml-api-platform`, `aiaimlapiplatform` |
 | [symfony/ai-albert-platform](https://packagist.org/packages/symfony/ai-albert-platform) | [0.1](../../../tree/main/symfony/ai-albert-platform/0.1) | `ai-albert-platform`, `aialbertplatform` |
+| [symfony/ai-amazee-ai-platform](https://packagist.org/packages/symfony/ai-amazee-ai-platform) | [0.6](../../../tree/main/symfony/ai-amazee-ai-platform/0.6) | `ai-amazee-ai-platform`, `aiamazeeaiplatform` |
 | [symfony/ai-anthropic-platform](https://packagist.org/packages/symfony/ai-anthropic-platform) | [0.1](../../../tree/main/symfony/ai-anthropic-platform/0.1) | `ai-anthropic-platform`, `aianthropicplatform` |
 | [symfony/ai-azure-platform](https://packagist.org/packages/symfony/ai-azure-platform) | [0.1](../../../tree/main/symfony/ai-azure-platform/0.1) | `ai-azure-platform`, `aiazureplatform` |
 | [symfony/ai-azure-search-store](https://packagist.org/packages/symfony/ai-azure-search-store) | [0.1](../../../tree/main/symfony/ai-azure-search-store/0.1) | `ai-azure-search-store`, `aiazuresearchstore` |

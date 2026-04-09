@@ -11,6 +11,7 @@
         "ai": "symfony/ai-bundle",
         "ai-ai-ml-api-platform": "symfony/ai-ai-ml-api-platform",
         "ai-albert-platform": "symfony/ai-albert-platform",
+        "ai-amazee-ai-platform": "symfony/ai-amazee-ai-platform",
         "ai-anthropic-platform": "symfony/ai-anthropic-platform",
         "ai-azure-platform": "symfony/ai-azure-platform",
         "ai-azure-search-store": "symfony/ai-azure-search-store",
@@ -68,6 +69,7 @@
         "ai-youtube-tool": "symfony/ai-youtube-tool",
         "aiaimlapiplatform": "symfony/ai-ai-ml-api-platform",
         "aialbertplatform": "symfony/ai-albert-platform",
+        "aiamazeeaiplatform": "symfony/ai-amazee-ai-platform",
         "aianthropicplatform": "symfony/ai-anthropic-platform",
         "aiazureplatform": "symfony/ai-azure-platform",
         "aiazuresearchstore": "symfony/ai-azure-search-store",
@@ -796,6 +798,9 @@
         ],
         "symfony/ai-albert-platform": [
             "0.1"
+        ],
+        "symfony/ai-amazee-ai-platform": [
+            "0.6"
         ],
         "symfony/ai-anthropic-platform": [
             "0.1"
