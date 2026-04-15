@@ -24,7 +24,6 @@ document.addEventListener('turbo:submit-end', function (event) {
 
 export function generateCsrfToken (formElement) {
     const csrfField = getCsrfField(formElement);
-    cLog('csrfField', csrfField, generateCsrfToken);
 
     if (!csrfField) {
         return;
