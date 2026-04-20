@@ -1,6 +1,7 @@
 {
     "env": {
-        "#1": "MAILER_DSN=mailgun://KEY:DOMAIN@default?region=us",
-        "#2": "MAILER_DSN=mailgun+smtp://USERNAME:PASSWORD@default?region=us"
+        "#1": "MAILER_DSN=mailgun+smtp://USERNAME:PASSWORD@default?region=us",
+        "#2": "MAILER_DSN=mailgun+https://KEY:DOMAIN@default?region=us",
+        "#3": "MAILER_DSN=mailgun+api://KEY:DOMAIN@default?region=us"
     }
 }
