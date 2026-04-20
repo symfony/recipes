@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "symfony/mailgun-mailer": {
+            "manifest": {
+                "env": {
+                    "#1": "MAILER_DSN=mailgun+smtp://USERNAME:PASSWORD@default?region=us",
+                    "#2": "MAILER_DSN=mailgun+https://KEY:DOMAIN@default?region=us",
+                    "#3": "MAILER_DSN=mailgun+api://KEY:DOMAIN@default?region=us"
+                }
+            },
+            "files": [],
+            "ref": "808e7052971863a6b94df61807f41a71d480885b"
+        }
+    }
+}
