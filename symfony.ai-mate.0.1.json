@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "symfony/ai-mate": {
+            "manifest": {
+                "composer-scripts": {
+                    "vendor/bin/mate discover --composer --ignore-missing-file": "script"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>AI Mate installed! Run the following to get started:</>",
+                    "",
+                    "    <comment>vendor/bin/mate init</>"
+                ]
+            },
+            "files": [],
+            "ref": "b85686d3bb17d13e7bbb38ddb6eb930b20fd74f4"
+        }
+    }
+}
