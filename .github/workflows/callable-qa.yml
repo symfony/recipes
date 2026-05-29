@@ -68,6 +68,7 @@ jobs:
                     mv .github/flex-endpoint/*.json .
                     git add *.json
                     git commit -m 'Create Flex endpoint' || true
+                    git config --local --unset-all http.https://github.com/.extraheader || true
                     git push -f "https://x-access-token:${{ secrets.token }}@github.com/${{ github.repository }}" "flex/pull-${{ github.event.number }}"
                     git switch pr
                     git stash pop -q
@@ -91,9 +92,8 @@ jobs:
                 name: Post diff between recipe versions
                 if: "always() && steps.checkout.outcome == 'success'"
                 uses: marocchino/sticky-pull-request-comment@v2
-                env:
-                    GITHUB_TOKEN: ${{ secrets.token }}
                 with:
+                    GITHUB_TOKEN: ${{ secrets.token }}
                     path: .github/diff-recipe-versions.md
 
             -
