@@ -13,6 +13,9 @@ on:
             versions_json:
                 required: false
                 type: string
+        secrets:
+            token:
+                required: true
 
 jobs:
     flex-update:
@@ -52,4 +55,5 @@ jobs:
                     php .github/recipes-checker-main/run generate:recipes-readme index.json ${{ inputs.contrib && '--contrib' || '' }} > RECIPES.md
                     git add RECIPES.md
                     git commit -m 'Update Flex endpoint' || true
-                    git push origin -f flex/main
+                    git config --local --unset-all http.https://github.com/.extraheader || true
+                    git push -f "https://x-access-token:${{ secrets.token }}@github.com/${{ github.repository }}" "flex/main"
