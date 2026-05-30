@@ -237,7 +237,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [2.9](../../../tree/main/symfony/ux-vue/2.9) | `ux-vue`, `uxvue` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [7.0](../../../tree/main/symfony/validator/7.0) | `validation`, `validator` |
 | [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](../../../tree/main/symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
-| [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [7.3](../../../tree/main/symfony/web-profiler-bundle/7.3) | `web-profiler-bundle`, `webprofilerbundle` |
+| [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [8.1](../../../tree/main/symfony/web-profiler-bundle/8.1) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](../../../tree/main/symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](../../../tree/main/symfony/webapp-pack/1.0) | `webapp` |
 | [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [7.3](../../../tree/main/symfony/webhook/7.3) | `webhook` |

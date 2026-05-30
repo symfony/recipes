@@ -1498,7 +1498,8 @@
             "3.3",
             "5.3",
             "6.1",
-            "7.3"
+            "7.3",
+            "8.1"
         ],
         "symfony/web-server-bundle": [
             "3.3"
@@ -1824,6 +1825,9 @@
                 "symfony/framework-bundle": "<6.1"
             },
             "7.3": {
+                "symfony/framework-bundle": "<6.1"
+            },
+            "8.1": {
                 "symfony/framework-bundle": "<6.1"
             }
         },
