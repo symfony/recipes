@@ -79,14 +79,9 @@ export function removeCsrfToken (formElement) {
 
 function getCsrfField (formElement) 
 {
-    // Input element is placed inside the form
-    const qSel = 'input[data-controller="csrf-protection"], input[name="_csrf_token"]';
-    const csrfField = formElement.querySelector(qSel);
-    if (csrfField) {return csrfField;}
+    const qs = 'input[data-controller="csrf-protection"], input[name="_csrf_token"]';
 
-    // Input element is placed outside the form
-    return Array.from(document.querySelectorAll(qSel))
-        .find((field) => field.form === formElement) || null;
+    return formElement.querySelector(qs) || Array.from(document.querySelectorAll(qs)).find((field) => field.form === formElement) || null;
 }
 
 /* stimulusFetch: 'lazy' */
