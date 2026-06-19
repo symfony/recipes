@@ -1,0 +1,24 @@
+{
+    "aliases": {
+        "tailwind": "symfonycasts/tailwind-bundle",
+        "tailwindcss": "symfonycasts/tailwind-bundle"
+    },
+    "recipes": {
+        "symfonycasts/tailwind-bundle": [
+            "0.8",
+            "0.14"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1541/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1541/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
