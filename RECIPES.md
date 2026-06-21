@@ -248,7 +248,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/zulip-notifier](https://packagist.org/packages/symfony/zulip-notifier) | [5.2](../../../tree/main/symfony/zulip-notifier/5.2) | `zulip-notifier`, `zulipnotifier` |
 | [symfonycasts/reset-password-bundle](https://packagist.org/packages/symfonycasts/reset-password-bundle) | [1.0](../../../tree/main/symfonycasts/reset-password-bundle/1.0) |  |
 | [symfonycasts/sass-bundle](https://packagist.org/packages/symfonycasts/sass-bundle) | [0.5](../../../tree/main/symfonycasts/sass-bundle/0.5) | `symfonycasts_sass` |
-| [symfonycasts/tailwind-bundle](https://packagist.org/packages/symfonycasts/tailwind-bundle) | [0.8](../../../tree/main/symfonycasts/tailwind-bundle/0.8) | `tailwind`, `tailwindcss` |
+| [symfonycasts/tailwind-bundle](https://packagist.org/packages/symfonycasts/tailwind-bundle) | [0.14](../../../tree/main/symfonycasts/tailwind-bundle/0.14) | `tailwind`, `tailwindcss` |
 | [theofidry/alice-data-fixtures](https://packagist.org/packages/theofidry/alice-data-fixtures) | [1.0](../../../tree/main/theofidry/alice-data-fixtures/1.0) |  |
 | [twig/cssinliner-extension](https://packagist.org/packages/twig/cssinliner-extension) | [1.0](../../../tree/main/twig/cssinliner-extension/1.0) |  |
 | [twig/extensions](https://packagist.org/packages/twig/extensions) | [1.0](../../../tree/main/twig/extensions/1.0) | `twig-ext`, `twig-extensions`, `twig-exts`, `twigext`, `twigextensions`, `twigexts` |

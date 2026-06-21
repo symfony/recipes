@@ -1539,7 +1539,8 @@
             "0.5"
         ],
         "symfonycasts/tailwind-bundle": [
-            "0.8"
+            "0.8",
+            "0.14"
         ],
         "theofidry/alice-data-fixtures": [
             "1.0"
