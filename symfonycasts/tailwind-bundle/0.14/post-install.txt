@@ -1,0 +1,6 @@
+  * <fg=green>Tailwind CSS is installed!</> Time to get rolling:
+
+  * <fg=blue>Run</> <comment>php bin/console tailwind:init</> to set up your Tailwind configuration
+  * <fg=blue>Then</> start the watcher with <comment>php bin/console tailwind:build --watch</>
+
+  * <fg=blue>Read</> the docs at <comment>https://symfony.com/bundles/TailwindBundle/current/index.html</>
