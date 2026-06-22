@@ -1,0 +1,9 @@
+  * Install NPM and run <fg=green>npm install</>
+
+  * Compile your assets for development: <fg=green>npm run dev</>
+  
+  * Compile your assets for development and watch for any modifications: <fg=green>npm run watch</>
+  
+  * Or start the development server: <fg=green>npm run dev-server</>
+  
+  * Compile your assets for production: <fg=green>npm run build</>
