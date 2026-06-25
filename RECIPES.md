@@ -208,7 +208,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](../../../tree/main/symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](../../../tree/main/symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](../../../tree/main/symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
-| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.24](../../../tree/main/symfony/stimulus-bundle/2.24) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.25](../../../tree/main/symfony/stimulus-bundle/2.25) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/sweego-mailer](https://packagist.org/packages/symfony/sweego-mailer) | [7.2](../../../tree/main/symfony/sweego-mailer/7.2) | `sweego-mailer`, `sweegomailer` |
 | [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [7.2](../../../tree/main/symfony/sweego-notifier/7.2) | `sweego-notifier`, `sweegonotifier` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](../../../tree/main/symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
@@ -241,7 +241,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](../../../tree/main/symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](../../../tree/main/symfony/webapp-pack/1.0) | `webapp` |
 | [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [7.3](../../../tree/main/symfony/webhook/7.3) | `webhook` |
-| [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.1](../../../tree/main/symfony/webpack-encore-bundle/2.1) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
+| [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.2](../../../tree/main/symfony/webpack-encore-bundle/2.2) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
 | [symfony/workflow](https://packagist.org/packages/symfony/workflow) | [3.3](../../../tree/main/symfony/workflow/3.3) | `workflow` |
 | [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [5.4](../../../tree/main/symfony/yunpian-notifier/5.4) | `yunpian-notifier`, `yunpiannotifier` |
 | [symfony/zendesk-notifier](https://packagist.org/packages/symfony/zendesk-notifier) | [6.2](../../../tree/main/symfony/zendesk-notifier/6.2) | `zendesk-notifier`, `zendesknotifier` |
