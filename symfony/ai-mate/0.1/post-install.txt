@@ -1,0 +1,3 @@
+  <bg=blue;fg=white>AI Mate installed! Run the following to get started:</>
+
+    <comment>vendor/bin/mate init</>
