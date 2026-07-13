@@ -1,0 +1,14 @@
+
+  * Add a <comment>data-controller="hello"</> attribute to any element to try the example controller.
+
+  * Using <fg=green>Symfony Reprise</>? Turn Stimulus on by adding the <fg=green>stimulus</> option to the
+    Symfony() plugin in your <comment>vite.config</> or <comment>rsbuild.config</>:
+
+        Symfony({
+            stimulus: './assets/controllers.json',
+        })
+
+  * Using <fg=green>Webpack Encore</>? Install the Stimulus bridge, which is no longer
+    added automatically as of StimulusBundle 3.3:
+
+      <fg=green>npm install --save-dev @symfony/stimulus-bridge</>

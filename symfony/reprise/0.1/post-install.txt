@@ -1,0 +1,67 @@
+
+  <bg=blue;fg=white>                   </>
+  <bg=blue;fg=white>  Symfony Reprise  </>
+  <bg=blue;fg=white>                   </>
+
+  A few frontend steps remain to wire up your bundler.
+  The commands below use npm (or pnpm, yarn, ...).
+
+  * If you don't have a bundler yet, install <fg=green>Vite</> or <fg=green>Rsbuild</>:
+
+      <fg=green>npm install --save-dev vite</>
+      <comment># or</>
+      <fg=green>npm install --save-dev @rsbuild/core</>
+
+  * Install the Reprise plugin:
+
+      <fg=green>npm install --save-dev @symfony/reprise</>
+
+  * Register the plugin in your bundler config:
+
+    <comment>// vite.config.js</>
+    import { defineConfig } from 'vite'
+    import Symfony from '@symfony/reprise/vite'
+
+    export default defineConfig({
+        build: {
+            rollupOptions: {
+                input: {
+                    app: './assets/app.js',
+                },
+            },
+        },
+        plugins: [
+            Symfony({
+                // Enable support for Stimulus Controller and Symfony UX
+                // stimulus: './assets/controllers.json',
+            }),
+        ],
+    })
+
+    <comment>// rsbuild.config.js</>
+    import { defineConfig } from '@rsbuild/core'
+    import Symfony from '@symfony/reprise/rsbuild'
+
+    export default defineConfig({
+        source: {
+            entry: {
+                app: './assets/app.js',
+            },
+        },
+        plugins: [
+            Symfony({
+                // Enable support for Stimulus Controller and Symfony UX
+                // stimulus: './assets/controllers.json',
+            }),
+        ],
+    })
+
+  * Render your assets from Twig with <fg=green>reprise_entry_link_tags('app')</> and
+    <fg=green>reprise_entry_script_tags('app')</> (already added to <fg=green>templates/base.html.twig</> for you).
+
+  * Build your assets:
+
+      <fg=green>npx vite build</>     <comment># or: npx rsbuild build</>
+      <fg=green>npx vite</>           <comment># dev server (or: npx rsbuild dev)</>
+
+  * Read the documentation: <comment>https://github.com/symfony/reprise</>
