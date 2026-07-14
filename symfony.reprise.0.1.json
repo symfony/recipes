@@ -1,0 +1,177 @@
+{
+    "manifests": {
+        "symfony/reprise": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Reprise\\RepriseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                    "symfony/framework-bundle": "<6.4"
+                },
+                "gitignore": [
+                    "/node_modules/",
+                    "/%PUBLIC_DIR%/build/"
+                ],
+                "add-lines": [
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "            {{ reprise_entry_link_tags('app') }}",
+                        "position": "after_target",
+                        "target": "{% block stylesheets %}",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "            {{ reprise_entry_script_tags('app') }}",
+                        "position": "after_target",
+                        "target": "{% block javascripts %}",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "",
+                    "  <bg=blue;fg=white>                   </>",
+                    "  <bg=blue;fg=white>  Symfony Reprise  </>",
+                    "  <bg=blue;fg=white>                   </>",
+                    "",
+                    "  A few frontend steps remain to wire up your bundler.",
+                    "  The commands below use npm (or pnpm, yarn, ...).",
+                    "",
+                    "  * If you don't have a bundler yet, install <fg=green>Vite</> or <fg=green>Rsbuild</>:",
+                    "",
+                    "      <fg=green>npm install --save-dev vite</>",
+                    "      <comment># or</>",
+                    "      <fg=green>npm install --save-dev @rsbuild/core</>",
+                    "",
+                    "  * Install the Reprise plugin:",
+                    "",
+                    "      <fg=green>npm install --save-dev @symfony/reprise</>",
+                    "",
+                    "  * Register the plugin in your bundler config:",
+                    "",
+                    "    <comment>// vite.config.js</>",
+                    "    import { defineConfig } from 'vite'",
+                    "    import Symfony from '@symfony/reprise/vite'",
+                    "",
+                    "    export default defineConfig({",
+                    "        build: {",
+                    "            rollupOptions: {",
+                    "                input: {",
+                    "                    app: './assets/app.js',",
+                    "                },",
+                    "            },",
+                    "        },",
+                    "        plugins: [",
+                    "            Symfony({",
+                    "                // Enable support for Stimulus Controller and Symfony UX",
+                    "                // stimulus: './assets/controllers.json',",
+                    "            }),",
+                    "        ],",
+                    "    })",
+                    "",
+                    "    <comment>// rsbuild.config.js</>",
+                    "    import { defineConfig } from '@rsbuild/core'",
+                    "    import Symfony from '@symfony/reprise/rsbuild'",
+                    "",
+                    "    export default defineConfig({",
+                    "        source: {",
+                    "            entry: {",
+                    "                app: './assets/app.js',",
+                    "            },",
+                    "        },",
+                    "        plugins: [",
+                    "            Symfony({",
+                    "                // Enable support for Stimulus Controller and Symfony UX",
+                    "                // stimulus: './assets/controllers.json',",
+                    "            }),",
+                    "        ],",
+                    "    })",
+                    "",
+                    "  * Render your assets from Twig with <fg=green>reprise_entry_link_tags('app')</> and",
+                    "    <fg=green>reprise_entry_script_tags('app')</> (already added to <fg=green>templates/base.html.twig</> for you).",
+                    "",
+                    "  * Build your assets:",
+                    "",
+                    "      <fg=green>npx vite build</>     <comment># or: npx rsbuild build</>",
+                    "      <fg=green>npx vite</>           <comment># dev server (or: npx rsbuild dev)</>",
+                    "",
+                    "  * Read the documentation: <comment>https://github.com/symfony/reprise</>"
+                ]
+            },
+            "files": {
+                "assets/app.js": {
+                    "contents": [
+                        "/*",
+                        " * Welcome to your app's main JavaScript file!",
+                        " *",
+                        " * This file will be included onto the page via the reprise_entry_script_tags('app') Twig function,",
+                        " * which should already be in your base.html.twig.",
+                        " */",
+                        "import './styles/app.css';",
+                        "",
+                        "console.log('This log comes from assets/app.js - welcome to Symfony Reprise! \ud83c\udf89');",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/styles/app.css": {
+                    "contents": [
+                        "body {",
+                        "    background-color: skyblue;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/reprise.yaml": {
+                    "contents": [
+                        "# Reprise works with zero configuration. Every option below is shown at its",
+                        "# default value; uncomment the block and tweak what you need.",
+                        "# See https://github.com/symfony/reprise/blob/main/doc/index.rst#configuration",
+                        "# reprise:",
+                        "    # Directory the @symfony/reprise plugin writes entrypoints.json and manifest.json into.",
+                        "    # output_path: '%kernel.project_dir%/public/build'",
+                        "",
+                        "    # Throw when entrypoints.json or a requested entry is missing, instead of rendering nothing.",
+                        "    # strict_mode: true",
+                        "",
+                        "    # A framework.assets package name used to resolve entry URLs. null uses the default package.",
+                        "    # asset_package: null",
+                        "",
+                        "    # crossorigin attribute set alongside SRI integrity: false, 'anonymous' or 'use-credentials'.",
+                        "    # crossorigin: false",
+                        "",
+                        "    # Register rendered assets as WebLink HTTP/2 Link: preload headers (needs symfony/web-link).",
+                        "    # preload: true",
+                        "",
+                        "    # Default attributes added to every rendered <script> / <link> tag.",
+                        "    # script_attributes: []",
+                        "    # link_attributes: []",
+                        "",
+                        "framework:",
+                        "    assets:",
+                        "        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'",
+                        "",
+                        "when@prod:",
+                        "    reprise:",
+                        "        # In prod we'd rather render nothing than let a missing entrypoints.json (or entry) take the app down with a 500.",
+                        "        strict_mode: false",
+                        "",
+                        "        # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)",
+                        "        cache: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "912ce6c6bd6b81afac04525159bfcceb08fdd9fe"
+        }
+    }
+}

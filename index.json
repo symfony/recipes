@@ -455,6 +455,7 @@
         "redlinknotifier": "symfony/redlink-notifier",
         "remote-event": "symfony/remote-event",
         "remoteevent": "symfony/remote-event",
+        "reprise": "symfony/reprise",
         "req-check": "symfony/requirements-checker",
         "req-checker": "symfony/requirements-checker",
         "req-checks": "symfony/requirements-checker",
@@ -1280,6 +1281,9 @@
         "symfony/redlink-notifier": [
             "6.4"
         ],
+        "symfony/reprise": [
+            "0.1"
+        ],
         "symfony/requirements-checker": [
             "1.0",
             "2.0"
@@ -1386,7 +1390,8 @@
             "2.13",
             "2.20",
             "2.24",
-            "2.25"
+            "2.25",
+            "3.3"
         ],
         "symfony/sweego-mailer": [
             "7.2"
@@ -1687,6 +1692,12 @@
                 "symfony/framework-bundle": "<5.4"
             }
         },
+        "symfony/reprise": {
+            "0.1": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.4"
+            }
+        },
         "symfony/routing": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
@@ -1740,6 +1751,12 @@
                 "symfony/webpack-encore-bundle": "<2.0"
             },
             "2.25": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<7.2",
+                "symfony/security-csrf": "<7.2",
+                "symfony/webpack-encore-bundle": "<2.0"
+            },
+            "3.3": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<7.2",
                 "symfony/security-csrf": "<7.2",

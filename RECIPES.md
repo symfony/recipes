@@ -181,6 +181,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](../../../tree/main/symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
 | [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [7.1](../../../tree/main/symfony/pushy-notifier/7.1) | `pushy-notifier`, `pushynotifier` |
 | [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [6.4](../../../tree/main/symfony/redlink-notifier/6.4) | `redlink-notifier`, `redlinknotifier` |
+| [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [0.1](../../../tree/main/symfony/reprise/0.1) | `reprise` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](../../../tree/main/symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](../../../tree/main/symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
 | [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](../../../tree/main/symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
@@ -208,7 +209,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](../../../tree/main/symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
 | [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](../../../tree/main/symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
 | [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](../../../tree/main/symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
-| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.25](../../../tree/main/symfony/stimulus-bundle/2.25) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [3.3](../../../tree/main/symfony/stimulus-bundle/3.3) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/sweego-mailer](https://packagist.org/packages/symfony/sweego-mailer) | [7.2](../../../tree/main/symfony/sweego-mailer/7.2) | `sweego-mailer`, `sweegomailer` |
 | [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [7.2](../../../tree/main/symfony/sweego-notifier/7.2) | `sweego-notifier`, `sweegonotifier` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](../../../tree/main/symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
