@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "config/": "config/",
+        "src/": "src/",
+        "templates/": "templates/",
+        "tests/": "tests/"
+    }
+}
