@@ -1,0 +1,28 @@
+
+  * Using <fg=green>Vite</>? Install <fg=green>@vitejs/plugin-vue</> so Vite can compile
+    single-file components, and register it in your <comment>vite.config</>:
+
+      <fg=green>npm install --save-dev @vitejs/plugin-vue</>
+
+        import vue from '@vitejs/plugin-vue'
+
+        export default defineConfig({
+            plugins: [
+                vue(),
+                Symfony({ /* ... */ }),
+            ],
+        })
+
+  * Using <fg=green>Rsbuild</>? Install <fg=green>@rsbuild/plugin-vue</> and register it in your
+    <comment>rsbuild.config</>:
+
+      <fg=green>npm install --save-dev @rsbuild/plugin-vue</>
+
+        import { pluginVue } from '@rsbuild/plugin-vue'
+
+        export default defineConfig({
+            plugins: [
+                pluginVue(),
+                Symfony({ /* ... */ }),
+            ],
+        })
