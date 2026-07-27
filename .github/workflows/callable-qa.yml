@@ -30,6 +30,7 @@ jobs:
                 with:
                     fetch-depth: 0
                     ref: 'refs/pull/${{ github.event.number }}/merge'
+                    allow-unsafe-pr-checkout: true
 
             -
                 name: Install tools
