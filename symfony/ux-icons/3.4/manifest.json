@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Icons\\UXIconsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/"
+    }
+}
