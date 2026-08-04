@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "symfony/security-csrf": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/csrf.yaml": {
+                    "contents": [
+                        "# Enable stateless CSRF protection",
+                        "framework:",
+                        "    csrf_protection:",
+                        "        stateless_token_ids:",
+                        "            - authenticate",
+                        "            - logout",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dad688434f25812c46bef6979f83beb38d15fcc4"
+        }
+    }
+}
