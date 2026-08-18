@@ -225,7 +225,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](../../../tree/main/symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
-| [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [2.19](../../../tree/main/symfony/ux-icons/2.19) | `ux-icons`, `uxicons` |
+| [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.18](../../../tree/main/symfony/ux-lazy-image/2.18) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](../../../tree/main/symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](../../../tree/main/symfony/ux-live-component/2.6) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |

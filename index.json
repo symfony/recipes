@@ -1451,7 +1451,8 @@
         ],
         "symfony/ux-icons": [
             "2.17",
-            "2.19"
+            "2.19",
+            "3.4"
         ],
         "symfony/ux-lazy-image": [
             "2.17",
