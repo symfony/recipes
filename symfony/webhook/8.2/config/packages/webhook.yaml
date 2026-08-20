@@ -1,0 +1,5 @@
+framework:
+    webhook:
+        # see https://www.standardwebhooks.com/
+        # use "transitional" to also emit the legacy signature while migrating existing subscribers
+        signature_format: standard
