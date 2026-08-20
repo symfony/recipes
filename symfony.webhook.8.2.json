@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "symfony/webhook": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/webhook.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    webhook:",
+                        "        # see https://www.standardwebhooks.com/",
+                        "        # use \"transitional\" to also emit the legacy signature while migrating existing subscribers",
+                        "        signature_format: standard",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/webhook.yaml": {
+                    "contents": [
+                        "webhook:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/webhook.php'",
+                        "    prefix: /webhook",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3bdb63df45e08b3a4358a837aed4396c48552dac"
+        }
+    }
+}
