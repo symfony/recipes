@@ -29,12 +29,16 @@ because it isn't installed yet; installing it is one command.
 Follow https://symfony.com/doc/current/best_practices.html to write idiomatic
 Symfony:
 
-- Use PHP attributes for framework metadata: `#[Route]`, `#[Assert\...]`,
-  `#[MapRequestPayload]`, `#[IsGranted]`, `#[AsCommand]`. No YAML or XML routing.
+- Use PHP attributes for framework metadata, and not only on controllers:
+  `#[Route]`, `#[MapRequestPayload]`, `#[IsGranted]` on actions, `#[Assert\...]`
+  on properties, `#[AsCommand]`, `#[AsEventListener]`, `#[AsMessageHandler]`, and
+  `#[AsAlias]` / `#[AsTaggedItem]` / `#[Autoconfigure]` on services. No YAML or
+  XML routing.
 - Rely on autowiring and autoconfiguration. Type-hint constructor arguments and
-  let the container resolve them; write an explicit service definition only when
-  it genuinely can't be resolved (scalar arguments, several implementations of
-  one interface).
+  let the container resolve them. Where a type-hint can't express it, stay in the
+  class with `#[Autowire]` (parameters, env vars, expressions) or `#[Target]` (one
+  of several implementations of an interface). A YAML service definition is the
+  last resort, not the first.
 - Controllers extend `AbstractController`, stay thin, and delegate to services.
 - Use the framework for what it already does: Form for server-rendered forms,
   Validator for validation, Serializer for JSON, Messenger for async work,
