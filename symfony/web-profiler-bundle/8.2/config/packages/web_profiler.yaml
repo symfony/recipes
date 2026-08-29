@@ -1,0 +1,15 @@
+when@dev:
+    web_profiler:
+        toolbar: true
+
+    framework:
+        profiler:
+            collect: true
+            excluded_paths:
+                - '^/\.well-known/'
+                - '^/favicon\.ico$'
+
+when@test:
+    framework:
+        profiler:
+            collect: false
