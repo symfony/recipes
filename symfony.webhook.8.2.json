@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "symfony/webhook": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/webhook.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    webhook:",
+                        "        signature_format: standard",
+                        "        no_private_network: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/webhook.yaml": {
+                    "contents": [
+                        "webhook:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/webhook.php'",
+                        "    prefix: /webhook",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9df1abfb2eb5b96332a5e2258929ec042db5f782"
+        }
+    }
+}
