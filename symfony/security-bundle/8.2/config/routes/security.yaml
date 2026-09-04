@@ -1,0 +1,7 @@
+_security_logout:
+    resource: security.route_loader.logout
+    type: service
+
+_security_oidc_login:
+    resource: security.authenticator.oidc_login.route_loader
+    type: service
