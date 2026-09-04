@@ -1,0 +1,28 @@
+
+  * Using <fg=green>Vite</>? Install <fg=green>@vitejs/plugin-react</> so Vite can compile JSX,
+    and register it in your <comment>vite.config</>:
+
+      <fg=green>npm install --save-dev @vitejs/plugin-react</>
+
+        import react from '@vitejs/plugin-react'
+
+        export default defineConfig({
+            plugins: [
+                react(),
+                Symfony({ /* ... */ }),
+            ],
+        })
+
+  * Using <fg=green>Rsbuild</>? Install <fg=green>@rsbuild/plugin-react</> and register it in your
+    <comment>rsbuild.config</>:
+
+      <fg=green>npm install --save-dev @rsbuild/plugin-react</>
+
+        import { pluginReact } from '@rsbuild/plugin-react'
+
+        export default defineConfig({
+            plugins: [
+                pluginReact(),
+                Symfony({ /* ... */ }),
+            ],
+        })
