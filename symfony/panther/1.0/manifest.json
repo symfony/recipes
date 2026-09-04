@@ -20,7 +20,7 @@
     ],
     "dotenv": {
         "test": {
-            "PANTHER_APP_ENV": "panther",
+            "PANTHER_APP_ENV": "test",
             "PANTHER_ERROR_SCREENSHOT_DIR": "./var/error-screenshots",
             "PANTHER_DEVTOOLS": "0"
         }
