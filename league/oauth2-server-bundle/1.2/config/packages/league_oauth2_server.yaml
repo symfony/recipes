@@ -1,0 +1,30 @@
+league_oauth2_server:
+    authorization_server:
+        private_key: '%env(resolve:OAUTH_PRIVATE_KEY)%'
+        private_key_passphrase: '%env(resolve:OAUTH_PASSPHRASE)%'
+        encryption_key: '%env(resolve:OAUTH_ENCRYPTION_KEY)%'
+        # Both grants are disabled by default and will be removed in 2.0. Enable them only if you need them.
+        enable_password_grant: false
+        enable_implicit_grant: false
+    resource_server:
+        public_key: '%env(resolve:OAUTH_PUBLIC_KEY)%'
+    scopes:
+        available: ['email']
+        default: ['email']
+    persistence:
+        doctrine: null
+    client:
+        # Store client secrets hashed. Set to true only to keep supporting legacy plaintext secrets.
+        allow_plaintext_secrets: false
+
+when@test:
+    league_oauth2_server:
+        persistence:
+            in_memory: null
+
+    services:
+        # Use the lowest bcrypt cost to speed up client secret hashing in tests.
+        league.oauth2_server.password_hasher:
+            class: Symfony\Component\PasswordHasher\Hasher\NativePasswordHasher
+            arguments:
+                $cost: 4 # Lowest possible value for bcrypt
