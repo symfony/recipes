@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "symfony/web-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<6.1"
+                }
+            },
+            "files": {
+                "config/packages/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler:",
+                        "        toolbar: true",
+                        "",
+                        "    framework:",
+                        "        profiler: true",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler_wdt:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'",
+                        "        prefix: /_wdt",
+                        "",
+                        "    web_profiler_profiler:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/profiler.php'",
+                        "        prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bdd46f712bbed33a27130b6e055391cb1ab73d9"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "symfony/web-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<6.1"
+                }
+            },
+            "files": {
+                "config/packages/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler:",
+                        "        toolbar: true",
+                        "",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect_serializer_data: true",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        profiler: { collect: false }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler_wdt:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.xml'",
+                        "        prefix: /_wdt",
+                        "",
+                        "    web_profiler_profiler:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/profiler.xml'",
+                        "        prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8b51135b84f4266e3b4c8a6dc23c9d1e32e543b7"
+        }
+    }
+}

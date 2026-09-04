@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "symfony/web-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<6.1"
+                }
+            },
+            "files": {
+                "config/packages/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler:",
+                        "        toolbar: true",
+                        "",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect_serializer_data: true",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: false",
+                        "            collect_serializer_data: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler_wdt:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'",
+                        "        prefix: /_wdt",
+                        "",
+                        "    web_profiler_profiler:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/profiler.php'",
+                        "        prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a363460c1b0b4a4d0242f2ce1a843ca0f6ac9026"
+        }
+    }
+}
