@@ -1506,7 +1506,8 @@
             "5.3",
             "6.1",
             "7.3",
-            "8.1"
+            "8.1",
+            "8.2"
         ],
         "symfony/web-server-bundle": [
             "3.3"
@@ -1856,6 +1857,9 @@
             },
             "8.1": {
                 "symfony/framework-bundle": "<6.1"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/webpack-encore-bundle": {

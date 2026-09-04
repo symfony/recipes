@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "symfony/web-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler:",
+                        "        toolbar: true",
+                        "",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: true",
+                        "            excluded_paths:",
+                        "                - '^/\\.well-known/'",
+                        "                - '^/favicon\\.ico$'",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/web_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    web_profiler_wdt:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'",
+                        "        prefix: /_wdt",
+                        "",
+                        "    web_profiler_profiler:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/profiler.php'",
+                        "        prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "09f3a006a6cff5a51962d5026d17b1c0a45b5338"
+        }
+    }
+}
