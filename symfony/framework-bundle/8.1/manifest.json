@@ -6,7 +6,9 @@
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%/",
         "src/": "%SRC_DIR%/",
-        ".editorconfig": ".editorconfig"
+        ".editorconfig": ".editorconfig",
+        "AGENTS.md": "AGENTS.md",
+        "CLAUDE.md": "CLAUDE.md"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
