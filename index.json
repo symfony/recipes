@@ -1283,7 +1283,8 @@
             "6.4"
         ],
         "symfony/reprise": [
-            "0.1"
+            "0.1",
+            "1.1"
         ],
         "symfony/requirements-checker": [
             "1.0",
@@ -1698,6 +1699,10 @@
         },
         "symfony/reprise": {
             "0.1": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.4"
+            },
+            "1.1": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<6.4"
             }

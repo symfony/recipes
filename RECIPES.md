@@ -181,7 +181,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](../../../tree/main/symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
 | [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [7.1](../../../tree/main/symfony/pushy-notifier/7.1) | `pushy-notifier`, `pushynotifier` |
 | [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [6.4](../../../tree/main/symfony/redlink-notifier/6.4) | `redlink-notifier`, `redlinknotifier` |
-| [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [0.1](../../../tree/main/symfony/reprise/0.1) | `reprise` |
+| [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [1.1](../../../tree/main/symfony/reprise/1.1) | `reprise` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](../../../tree/main/symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](../../../tree/main/symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
 | [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](../../../tree/main/symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
