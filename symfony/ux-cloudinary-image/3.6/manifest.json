@@ -1,0 +1,7 @@
+{
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudinary/README.md",
+        "#2": "",
+        "#3": "UX_IMAGE_DSN=cloudinary://my-cloud?origin=https://example.com"
+    }
+}

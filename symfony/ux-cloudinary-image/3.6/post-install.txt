@@ -1,0 +1,12 @@
+  * <info>UX_IMAGE_DSN</info> is commented out in <info>.env</info>, so images keep their original URL
+    in dev. Set it for production, in <info>.env.prod.local</info> or as a Symfony secret, with your
+    Cloudinary cloud name as host and the base URL your original images are served from as the
+    <info>origin</info> option.
+
+  * Cloudinary only allows fetch delivery when "Fetched URL" is unticked under
+    "Restricted media types" in your account's security settings.
+
+  * If your account requires signed URLs, add its API secret to the DSN as the
+    <info>api_secret</info> option. It also grants full API access to your account.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudinary/README.md</>

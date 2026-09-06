@@ -1,0 +1,10 @@
+  * <info>UX_IMAGE_DSN</info> is commented out in <info>.env</info>, so images keep their original URL
+    in dev. Set it for production, in <info>.env.prod.local</info> or as a Symfony secret, with the
+    domain of your imgix source as host. With a Web Folder source pointing at your application,
+    <info>src</info> stays the path your application serves the image from.
+
+  * If your source requires signed URLs, add its secure URL token to the DSN as the
+    <info>sign_key</info> option. Anyone holding it can request any transformation of any image of
+    the source.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Imgix/README.md</>
