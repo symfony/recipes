@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Image\\UXImageBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,3 @@
+ux_image:
+    # https://symfony.com/bundles/ux-image/current/index.html#the-provider-dsn
+    provider: '%env(resolve:default::UX_IMAGE_DSN)%'
