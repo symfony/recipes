@@ -1,0 +1,38 @@
+{
+    "aliases": {
+        "ux-cloudflare-image": "symfony/ux-cloudflare-image",
+        "ux-glide-image": "symfony/ux-glide-image",
+        "ux-image": "symfony/ux-image",
+        "ux-keycdn-image": "symfony/ux-keycdn-image",
+        "uxcloudflareimage": "symfony/ux-cloudflare-image",
+        "uxglideimage": "symfony/ux-glide-image",
+        "uximage": "symfony/ux-image",
+        "uxkeycdnimage": "symfony/ux-keycdn-image"
+    },
+    "recipes": {
+        "symfony/ux-cloudflare-image": [
+            "3.6"
+        ],
+        "symfony/ux-glide-image": [
+            "3.6"
+        ],
+        "symfony/ux-image": [
+            "3.6"
+        ],
+        "symfony/ux-keycdn-image": [
+            "3.6"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1571/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1571/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

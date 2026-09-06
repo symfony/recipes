@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "symfony/ux-glide-image": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Glide/README.md",
+                    "#2": "The path segment below (/images) must match the prefix in config/routes/ux_image_glide.yaml",
+                    "#3": "",
+                    "UX_IMAGE_DSN": "glide://default/images?source=%kernel.project_dir%/public/uploads&cache=%kernel.project_dir%/var/glide-cache"
+                },
+                "post-install-output": [
+                    "  * Resizing happens in your application, not on a remote service.",
+                    "",
+                    "  * The recipe added <info>config/routes/ux_image_glide.yaml</info>; its <info>prefix</info> must match the path",
+                    "    segment of <info>UX_IMAGE_DSN</info>, or generated URLs won't match the route.",
+                    "",
+                    "  * Set a <info>sign_key</info> in the DSN before going to production, or the route will resize and",
+                    "    cache whatever anyone asks for.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Glide/README.md</>"
+                ]
+            },
+            "files": {
+                "config/routes/ux_image_glide.yaml": {
+                    "contents": [
+                        "ux_image_glide:",
+                        "    resource: '@UXImageBundle/config/routes/glide.php'",
+                        "    # must match the path segment of UX_IMAGE_DSN",
+                        "    prefix: /images",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d3696d12da8b6a5fd52b9b04a1b50edcb2ebbf4b"
+        }
+    }
+}

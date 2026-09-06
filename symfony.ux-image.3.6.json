@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "symfony/ux-image": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Image\\UXImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * This component is installed but renders nothing on its own. It needs one provider,",
+                    "    installed as a separate package: <info>symfony/ux-glide-image</info> for local use with no CDN,",
+                    "    <info>symfony/ux-cloudflare-image</info>, or <info>symfony/ux-keycdn-image</info>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-image/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/ux_image.yaml": {
+                    "contents": [
+                        "ux_image:",
+                        "    # https://symfony.com/bundles/ux-image/current/index.html#the-provider-dsn",
+                        "    provider: '%env(resolve:default::UX_IMAGE_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "73cbf0c070051852b24d9fa6f49b7ee35750fe28"
+        }
+    }
+}
