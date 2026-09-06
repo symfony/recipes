@@ -1,0 +1,4 @@
+ux_image_glide:
+    resource: '@UXImageBundle/config/routes/glide.php'
+    # must match the path segment of UX_IMAGE_DSN
+    prefix: /images

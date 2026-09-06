@@ -1,0 +1,11 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Glide/README.md",
+        "#2": "The path segment below (/images) must match the prefix in config/routes/ux_image_glide.yaml",
+        "#3": "",
+        "UX_IMAGE_DSN": "glide://default/images?source=%kernel.project_dir%/public/uploads&cache=%kernel.project_dir%/var/glide-cache"
+    }
+}
