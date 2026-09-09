@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "symfony/mcp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\McpBundle\\McpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    servers:",
+                        "        default:",
+                        "            registry: '*'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    resource: .",
+                        "    type: mcp",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ed0ee988d7c9d19a2e04253c3cbccd0d1f30b238"
+        }
+    }
+}
