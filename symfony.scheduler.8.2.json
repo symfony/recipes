@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "symfony/scheduler": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    scheduler:",
+                        "        use_messenger_routing: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Schedule.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Component\\Scheduler\\Attribute\\AsSchedule;",
+                        "use Symfony\\Component\\Scheduler\\Schedule as SymfonySchedule;",
+                        "use Symfony\\Component\\Scheduler\\ScheduleProviderInterface;",
+                        "use Symfony\\Contracts\\Cache\\CacheInterface;",
+                        "",
+                        "#[AsSchedule]",
+                        "class Schedule implements ScheduleProviderInterface",
+                        "{",
+                        "    public function __construct(",
+                        "        private CacheInterface $cache,",
+                        "    ) {",
+                        "    }",
+                        "",
+                        "    public function getSchedule(): SymfonySchedule",
+                        "    {",
+                        "        return (new SymfonySchedule())",
+                        "            ->stateful($this->cache) // ensure missed tasks are executed",
+                        "            ->processOnlyLastMissedRun(true) // ensure only last missed task is run",
+                        "",
+                        "            // add your own tasks here",
+                        "            // see https://symfony.com/doc/current/scheduler.html#attaching-recurring-messages-to-a-schedule",
+                        "        ;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2f08866d3b0fb1243ab13ce3ecda8a9e9645a61a"
+        }
+    }
+}
