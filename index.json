@@ -1071,7 +1071,8 @@
             "7.2",
             "7.3",
             "7.4",
-            "8.1"
+            "8.1",
+            "8.2"
         ],
         "symfony/free-mobile-notifier": [
             "5.1"
@@ -1548,7 +1549,8 @@
             "1.0"
         ],
         "symfonycasts/sass-bundle": [
-            "0.5"
+            "0.5",
+            "0.6"
         ],
         "symfonycasts/tailwind-bundle": [
             "0.8",
@@ -1891,6 +1893,9 @@
         },
         "symfonycasts/sass-bundle": {
             "0.5": {
+                "symfony/asset-mapper": "<6.3"
+            },
+            "0.6": {
                 "symfony/asset-mapper": "<6.3"
             }
         },
