@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "symfony/ux-react": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\React\\ReactBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "fee05066d80fef87f20023aa637f96ca8cd415c7"
+        }
+    }
+}

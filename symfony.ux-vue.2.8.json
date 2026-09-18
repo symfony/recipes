@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "symfony/ux-vue": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Vue\\VueBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "d8639af8055fb0b8bb5f393ff851cb7cdb905b30"
+        }
+    }
+}
