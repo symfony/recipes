@@ -25,7 +25,7 @@ security:
     # Note: Only the *first* matching rule is applied
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: ^/profile/, roles: ROLE_USER } # Caution: This is not enough to restrict access, see https://symfony.com/doc/current/security/voters.html
 
 when@test:
     security:
