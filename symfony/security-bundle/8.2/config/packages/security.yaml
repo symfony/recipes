@@ -16,6 +16,7 @@ security:
         main:
             lazy: true
             provider: users_in_memory
+            user_checker_on_refresh: true
 
             # Activate different ways to authenticate:
             # https://symfony.com/doc/current/security.html#the-firewall
