@@ -19,6 +19,12 @@ security:
             # Activate different ways to authenticate:
             # https://symfony.com/doc/current/security.html#the-firewall
 
+            # https://symfony.com/doc/current/security/user_checkers.html
+            # user_checker: App\Security\UserChecker
+            # re-run the user checker when the user is refreshed from the session,
+            # so an account disabled during a session is rejected on the next request
+            # user_checker_on_refresh: true
+
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
 
