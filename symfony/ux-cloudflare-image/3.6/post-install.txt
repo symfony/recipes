@@ -1,0 +1,6 @@
+  * Set the host in <info>UX_IMAGE_DSN</info> to the domain your Cloudflare zone proxies, the one
+    your original images are served from.
+
+  * Image transformations must be enabled on that zone before this works.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudflare/README.md</>

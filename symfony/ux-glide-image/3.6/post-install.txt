@@ -1,0 +1,9 @@
+  * Resizing happens in your application, not on a remote service.
+
+  * The recipe added <info>config/routes/ux_image_glide.yaml</info>; its <info>prefix</info> must match the path
+    segment of <info>UX_IMAGE_DSN</info>, or generated URLs won't match the route.
+
+  * Set a <info>sign_key</info> in the DSN before going to production, or the route will resize and
+    cache whatever anyone asks for.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Glide/README.md</>

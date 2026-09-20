@@ -1,0 +1,5 @@
+  * This component is installed but renders nothing on its own. It needs one provider,
+    installed as a separate package: <info>symfony/ux-glide-image</info> for local use with no CDN,
+    <info>symfony/ux-cloudflare-image</info>, or <info>symfony/ux-keycdn-image</info>.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-image/current/index.html</>
