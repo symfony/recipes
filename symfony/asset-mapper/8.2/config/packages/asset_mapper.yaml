@@ -4,6 +4,7 @@ framework:
         paths:
             - assets/
         missing_import_mode: strict
+        metadata_dir: '%kernel.project_dir%/var/assets'
         minimum_release_age: 604800
 
 when@prod:
