@@ -3,4 +3,5 @@ asset_mapper:
     # The paths to make available to the asset mapper.
     paths:
         - assets/
+    metadata_dir: '%kernel.project_dir%/var/assets'
     minimum_release_age: 604800
