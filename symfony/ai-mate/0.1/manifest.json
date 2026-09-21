@@ -1,0 +1,6 @@
+{
+    "composer-scripts": {
+        "vendor/bin/mate discover --composer --ignore-missing-file": "script"
+    },
+    "aliases": ["mate"]
+}
