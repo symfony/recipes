@@ -1,0 +1,32 @@
+{
+    "add-lines": [
+        {
+            "file": "phpunit.dist.xml",
+            "content": [
+                "        <bootstrap class=\"Symfony\\Bridge\\PhpUnit\\SymfonyExtension\">",
+                "            <parameter name=\"clock-mock-namespaces\" value=\"App\" />",
+                "            <parameter name=\"dns-mock-namespaces\" value=\"App\" />",
+                "        </bootstrap>"
+            ],
+            "position": "after_target",
+            "target": "<extensions>",
+            "warn_if_missing": true
+        },
+        {
+            "file": "phpunit.dist.xml",
+            "content": [
+                "        <issueTriggerResolvers>",
+                "            <issueTriggerResolver className=\"Symfony\\Bridge\\PhpUnit\\DebugClassLoaderIssueTriggerResolver\" />",
+                "        </issueTriggerResolvers>"
+            ],
+            "position": "after_target",
+            "target": "</deprecationTrigger>",
+            "warn_if_missing": true
+        }
+    ],
+    "conflict": {
+        "phpunit/phpunit": "<13.1",
+        "symfony/framework-bundle": "<5.4"
+    },
+    "aliases": ["simple-phpunit"]
+}
