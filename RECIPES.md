@@ -170,7 +170,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [5.1](../../../tree/main/symfony/ovh-cloud-notifier/5.1) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
 | [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [6.3](../../../tree/main/symfony/pager-duty-notifier/6.3) | `pager-duty-notifier`, `pagerdutynotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](../../../tree/main/symfony/panther/1.0) | `panther` |
-| [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [7.3](../../../tree/main/symfony/phpunit-bridge/7.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
+| [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [8.2](../../../tree/main/symfony/phpunit-bridge/8.2) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [6.4](../../../tree/main/symfony/phrase-translation-provider/6.4) | `phrase-translation-provider`, `phrasetranslationprovider` |
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](../../../tree/main/symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postal-mailer](https://packagist.org/packages/symfony/postal-mailer) | [7.2](../../../tree/main/symfony/postal-mailer/7.2) | `postal-mailer`, `postalmailer` |

@@ -1250,7 +1250,8 @@
             "5.1",
             "5.3",
             "6.3",
-            "7.3"
+            "7.3",
+            "8.2"
         ],
         "symfony/phrase-translation-provider": [
             "6.4"
@@ -1698,6 +1699,10 @@
             },
             "7.3": {
                 "phpunit/phpunit": "<10.0",
+                "symfony/framework-bundle": "<5.4"
+            },
+            "8.2": {
+                "phpunit/phpunit": "<13.1",
                 "symfony/framework-bundle": "<5.4"
             }
         },
