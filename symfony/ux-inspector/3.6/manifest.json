@@ -4,5 +4,31 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    }
+    },
+    "add-lines": [
+        {
+            "file": "assets/stimulus_bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (typeof app !== 'undefined' && app.debug) {",
+                "    window.Stimulus = app;",
+                "}",
+                ""
+            ],
+            "position": "bottom",
+            "requires": "symfony/stimulus-bundle"
+        },
+        {
+            "file": "assets/bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (typeof app !== 'undefined' && app.debug) {",
+                "    window.Stimulus = app;",
+                "}",
+                ""
+            ],
+            "position": "bottom",
+            "requires": "symfony/stimulus-bundle"
+        }
+    ]
 }
