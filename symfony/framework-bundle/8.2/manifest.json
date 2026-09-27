@@ -8,8 +8,7 @@
         "src/": "%SRC_DIR%/",
         ".editorconfig": ".editorconfig",
         ".symfony.local.yaml": ".symfony.local.yaml",
-        "AGENTS.md": "AGENTS.md",
-        "CLAUDE.md": "CLAUDE.md"
+        "AGENTS.md": "AGENTS.md"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
