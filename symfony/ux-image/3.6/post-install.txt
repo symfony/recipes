@@ -1,0 +1,6 @@
+  * Without a provider, images render with their original URL and no resizing (the default
+    provider is a pass-through). To resize and convert images, install one provider
+    package: <info>symfony/ux-cloudflare-image</info> or
+    <info>symfony/ux-keycdn-image</info>.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-image/current/index.html</>

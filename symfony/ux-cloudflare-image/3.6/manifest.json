@@ -1,0 +1,7 @@
+{
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudflare/README.md",
+        "#2": "",
+        "UX_IMAGE_DSN": "cloudflare://cdn.example.com"
+    }
+}
