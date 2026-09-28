@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "symfony/ux-image": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Image\\UXImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Without a provider, images render with their original URL and no resizing (the default",
+                    "    provider is a pass-through). To resize and convert images, install one provider",
+                    "    package: <info>symfony/ux-cloudflare-image</info> or",
+                    "    <info>symfony/ux-keycdn-image</info>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-image/current/index.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/ux_image.yaml": {
+                    "contents": [
+                        "ux_image:",
+                        "    # https://symfony.com/bundles/ux-image/current/index.html#the-provider-dsn",
+                        "    provider: '%env(resolve:default::UX_IMAGE_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1adc2e77247fcc15e0e1d91e770632cf1e1dc37d"
+        }
+    }
+}
