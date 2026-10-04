@@ -3,7 +3,8 @@ framework:
     secret: '%env(APP_SECRET)%'
 
     # Note that the session will be started ONLY if you read or write from it.
-    session: true
+    session:
+        isolate_attributes: true
 
     #esi: true
     #fragments: true
