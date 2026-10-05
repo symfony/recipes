@@ -319,6 +319,8 @@
         "kazinfotehnotifier": "symfony/kaz-info-teh-notifier",
         "key-management": "symfony/key-management",
         "keymanagement": "symfony/key-management",
+        "kmip-key-management": "symfony/kmip-key-management",
+        "kmipkeymanagement": "symfony/kmip-key-management",
         "ldap": "symfony/ldap",
         "light-sms-notifier": "symfony/light-sms-notifier",
         "lightsmsnotifier": "symfony/light-sms-notifier",
@@ -3252,6 +3254,9 @@
                 "8.2"
             ],
             "symfony/key-management": [
+                "8.2"
+            ],
+            "symfony/kmip-key-management": [
                 "8.2"
             ],
             "symfony/ldap": [
