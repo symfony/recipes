@@ -5,3 +5,7 @@ _security_logout:
 _security_oidc_login:
     resource: security.authenticator.oidc_login.route_loader
     type: service
+
+_security_protected_resource_metadata:
+    resource: security.authenticator.access_token.route_loader
+    type: service
