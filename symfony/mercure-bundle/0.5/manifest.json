@@ -12,29 +12,28 @@
         "#3": "The public URL of the Mercure hub, used by the browser to connect",
         "MERCURE_PUBLIC_URL": "https://example.com/.well-known/mercure",
         "#4": "The secret used to sign the JWTs",
-        "MERCURE_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!"
+        "MERCURE_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!",
+        "#5": "The issuer of the JWTs, must be trusted by the hub (MERCURE_TRUSTED_ISSUERS)",
+        "MERCURE_JWT_ISSUER": "https://localhost"
     },
     "docker-compose": {
         "docker-compose.yml": {
             "services": [
                 "mercure:",
-                "  image: dunglas/mercure:v0",
+                "  image: dunglas/mercure:v1",
                 "  restart: unless-stopped",
                 "  environment:",
                 "    # Uncomment the following line to disable HTTPS,",
                 "    #SERVER_NAME: ':80'",
                 "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
                 "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
+                "    # Must match the MERCURE_JWT_ISSUER of your Symfony project",
+                "    MERCURE_TRUSTED_ISSUERS: 'https://localhost'",
+                "    # Remove the playground directive to disable the development mode",
                 "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
                 "    MERCURE_EXTRA_DIRECTIVES: |",
+                "      playground",
                 "      cors_origins http://127.0.0.1:8000",
-                "  # Comment the following line to disable the development mode",
-                "  command: /usr/bin/caddy run --config /etc/caddy/dev.Caddyfile",
-                "  healthcheck:",
-                "    test: [\"CMD\", \"curl\", \"-f\", \"https://localhost/healthz\"]",
-                "    timeout: 5s",
-                "    retries: 5",
-                "    start_period: 60s",
                 "  volumes:",
                 "    - mercure_data:/data",
                 "    - mercure_config:/config"
