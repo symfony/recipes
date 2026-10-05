@@ -1271,6 +1271,9 @@
         "symfony/key-management": [
             "8.2"
         ],
+        "symfony/kmip-key-management": [
+            "8.2"
+        ],
         "symfony/ldap": [
             "3.4",
             "4.0",
