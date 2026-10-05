@@ -1,0 +1,4 @@
+framework:
+    webhook:
+        signature_format: standard
+        no_private_network: true
