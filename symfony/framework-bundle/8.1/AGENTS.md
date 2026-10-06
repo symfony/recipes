@@ -56,8 +56,6 @@ Three specifics worth spelling out, because they are easy to get wrong:
   installed yet, `composer require` them rather than falling back to manual
   parsing.
 - Use constructor property promotion, and `readonly` for DTOs and value objects.
-  Don't mark a service `readonly` if it might become `lazy: true`: a lazy proxy
-  can't extend a `readonly` class.
 - Use `symfony/lock` (`LockFactory`) for mutual exclusion. A hand-built flag or
   lock file looks fine in review and is usually wrong under concurrency.
 
