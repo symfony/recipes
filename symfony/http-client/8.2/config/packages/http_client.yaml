@@ -1,0 +1,4 @@
+when@test:
+    http_client:
+        # records and replays the HTTP requests of the tests using #[UseRecord]
+        recorder: true
