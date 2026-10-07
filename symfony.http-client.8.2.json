@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "symfony/http-client": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/http_client.yaml": {
+                    "contents": [
+                        "when@test:",
+                        "    http_client:",
+                        "        # records and replays the HTTP requests of the tests using #[UseRecord]",
+                        "        recorder: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d838d9721c430c4dc62cf9dbbba56b0a4b7934d9"
+        }
+    }
+}
