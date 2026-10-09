@@ -1,0 +1,13 @@
+  * You're ready to send emails.
+
+  * If you want to send emails via a supported email provider, install
+    the corresponding bridge.
+    For instance, <info>composer require mailgun-mailer</> for Mailgun.
+
+  * If you want to send emails asynchronously:
+
+    1. Install the messenger component by running <info>composer require messenger</>;
+    2. Route <info>Symfony\Component\Mailer\Messenger\SendEmailMessage</> to a transport
+       under <info>messenger.routing</> in <info>config/packages/messenger.yaml</>, as the webapp pack does.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/current/mailer.html</>
