@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/property-info": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/property_info.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    property_info:",
+                        "        with_constructor_extractor: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dae70df71978ae9226ae915ffd5fad817f5ca1f7"
+        }
+    }
+}

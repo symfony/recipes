@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "symfony/notifier": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/notifier.yaml": {
+                    "contents": [
+                        "notifier:",
+                        "    chatter_transports:",
+                        "    texter_transports:",
+                        "    channel_policy:",
+                        "        # use chat/slack, chat/telegram, sms/twilio or sms/vonage",
+                        "        urgent: ['email']",
+                        "        high: ['email']",
+                        "        medium: ['email']",
+                        "        low: ['email']",
+                        "    admin_recipients:",
+                        "        - { email: admin@example.com }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "66a3c0d043c1ea1a395510036a6b71b20308d906"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "symfony/validator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "validation:",
+                        "    # Enables validator auto-mapping support.",
+                        "    # For instance, basic validation constraints will be inferred from Doctrine's metadata.",
+                        "    #auto_mapping:",
+                        "    #    App\\Entity\\: []",
+                        "",
+                        "when@test:",
+                        "    validation:",
+                        "        not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fb84d1c3a000e4f39a8d7ff5c4e85fc04e911e53"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "symfony/routing": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<7.0"
+                },
+                "env": {
+                    "#1": "Configure how to generate URLs in non-HTTP contexts, such as CLI commands.",
+                    "#2": "See https://symfony.com/doc/current/routing.html#generating-urls-in-commands",
+                    "DEFAULT_URI": "http://localhost"
+                }
+            },
+            "files": {
+                "config/packages/routing.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    router:",
+                        "        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.",
+                        "        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands",
+                        "        default_uri: '%env(DEFAULT_URI)%'",
+                        "",
+                        "when@prod:",
+                        "    framework:",
+                        "        router:",
+                        "            strict_requirements: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "",
+                        "# This file is the entry point to configure the routes of your app.",
+                        "# Methods with the #[Route] attribute are automatically imported.",
+                        "# See also https://symfony.com/doc/current/routing.html",
+                        "",
+                        "# To list all registered routes, run the following command:",
+                        "#   bin/console debug:router",
+                        "",
+                        "controllers:",
+                        "    resource: routing.controllers",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bc94c4fd86f393f3ab3947c18b830ea343e51ded"
+        }
+    }
+}

@@ -1,0 +1,214 @@
+{
+    "aliases": {
+        "asset-mapper": "symfony/asset-mapper",
+        "assetmapper": "symfony/asset-mapper",
+        "framework-bundle": "symfony/framework-bundle",
+        "frameworkbundle": "symfony/framework-bundle",
+        "importmap": "symfony/asset-mapper",
+        "lock": "symfony/lock",
+        "mail": "symfony/mailer",
+        "mailer": "symfony/mailer",
+        "messenger": "symfony/messenger",
+        "notifier": "symfony/notifier",
+        "property-info": "symfony/property-info",
+        "propertyinfo": "symfony/property-info",
+        "router": "symfony/routing",
+        "routing": "symfony/routing",
+        "translation": "symfony/translation",
+        "translations": "symfony/translation",
+        "translator": "symfony/translation",
+        "validation": "symfony/validator",
+        "validator": "symfony/validator",
+        "workflow": "symfony/workflow"
+    },
+    "recipes": {
+        "symfony/asset-mapper": [
+            "6.3",
+            "6.4",
+            "8.2"
+        ],
+        "symfony/framework-bundle": [
+            "3.3",
+            "3.4",
+            "4.2",
+            "4.4",
+            "5.1",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.2",
+            "6.4",
+            "7.0",
+            "7.2",
+            "7.3",
+            "7.4",
+            "8.1",
+            "8.2"
+        ],
+        "symfony/lock": [
+            "4.4",
+            "5.2",
+            "8.2"
+        ],
+        "symfony/mailer": [
+            "4.3",
+            "8.2"
+        ],
+        "symfony/messenger": [
+            "4.1",
+            "4.3",
+            "5.4",
+            "6.0",
+            "8.2"
+        ],
+        "symfony/notifier": [
+            "5.0",
+            "8.2"
+        ],
+        "symfony/property-info": [
+            "7.3",
+            "8.2"
+        ],
+        "symfony/routing": [
+            "3.3",
+            "4.0",
+            "4.2",
+            "5.1",
+            "5.3",
+            "6.0",
+            "6.1",
+            "6.2",
+            "7.0",
+            "7.4",
+            "8.2"
+        ],
+        "symfony/translation": [
+            "3.3",
+            "5.3",
+            "6.3",
+            "8.2"
+        ],
+        "symfony/validator": [
+            "4.1",
+            "4.3",
+            "5.3",
+            "7.0",
+            "8.2"
+        ],
+        "symfony/workflow": [
+            "3.3",
+            "8.2"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/asset-mapper": {
+            "6.3": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.3",
+                "symfony/twig-bundle": "<6.3"
+            },
+            "6.4": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<6.3",
+                "symfony/twig-bundle": "<6.3"
+            },
+            "8.2": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2",
+                "symfony/twig-bundle": "<6.3"
+            }
+        },
+        "symfony/lock": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/messenger": {
+            "4.1": {
+                "symfony/framework-bundle": "<4.1"
+            },
+            "4.3": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "5.4": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "6.0": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/property-info": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/routing": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "6.0": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "6.1": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "6.2": {
+                "symfony/framework-bundle": "<6.2"
+            },
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
+            },
+            "7.4": {
+                "symfony/framework-bundle": "<7.0"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/translation": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/validator": {
+            "5.3": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/workflow": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1592/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1592/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

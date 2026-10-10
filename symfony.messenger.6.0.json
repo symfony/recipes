@@ -1,0 +1,66 @@
+{
+    "manifests": {
+        "symfony/messenger": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Choose one of the transports below",
+                    "#2": "MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages",
+                    "#3": "MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages",
+                    "MESSENGER_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<4.3"
+                },
+                "post-install-output": [
+                    "  * You're ready to use the Messenger component. You can define your own message buses",
+                    "    or start using the default one right now by injecting the <info>message_bus</info> service",
+                    "    or type-hinting <info>Symfony\\Component\\Messenger\\MessageBusInterface</info> in your code.",
+                    "",
+                    "  * To send messages to a transport and handle them asynchronously:",
+                    "",
+                    "    1. Update the <info>MESSENGER_TRANSPORT_DSN</> env var in <comment>.env</> if needed",
+                    "       and <info>framework.messenger.transports.async</> in <comment>config/packages/messenger.yaml</>;",
+                    "    2. (if using Doctrine) Generate a Doctrine migration <info>bin/console doctrine:migration:diff</>",
+                    "       and execute it <info>bin/console doctrine:migration:migrate</>",
+                    "    3. Route your message classes to the async transport in <comment>config/packages/messenger.yaml</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc/current/messenger.html</>"
+                ]
+            },
+            "files": {
+                "config/packages/messenger.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    messenger:",
+                        "        # Uncomment this (and the failed transport below) to send failed messages to this transport for later handling.",
+                        "        # failure_transport: failed",
+                        "",
+                        "        transports:",
+                        "            # https://symfony.com/doc/current/messenger.html#transport-configuration",
+                        "            # async: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        "            # failed: 'doctrine://default?queue_name=failed'",
+                        "            sync: 'sync://'",
+                        "",
+                        "        routing:",
+                        "            # Route your messages to the transports",
+                        "            # 'App\\Message\\YourMessage': async",
+                        "",
+                        "# when@test:",
+                        "#    framework:",
+                        "#        messenger:",
+                        "#            transports:",
+                        "#                # replace with your transport name here (e.g., my_transport: 'in-memory://')",
+                        "#                # For more Messenger testing tools, see https://github.com/zenstruck/messenger-test",
+                        "#                async: 'in-memory://'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d8936e2e2230637ef97e5eecc0eea074eecae58b"
+        }
+    }
+}
