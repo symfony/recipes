@@ -3,7 +3,6 @@ mercure:
         default:
             url: '%env(default::MERCURE_URL)%'
             public_url: '%env(default::MERCURE_PUBLIC_URL)%'
-            protocol_version: '1.0'
             jwt:
                 secret: '%env(MERCURE_JWT_SECRET)%'
                 publish: '*'
