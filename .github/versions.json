@@ -3317,6 +3317,9 @@
             "8.1",
             "8.2"
         ],
+        "symfony/zoho-cpaas-mailer": [
+            "8.2"
+        ],
         "symfony/zulip-notifier": [
             "5.2",
             "5.3",
