@@ -1,0 +1,9 @@
+scheduler:
+    schedules:
+        default:
+            # run the tasks missed while no worker was running, once
+            stateful: true
+            process_only_last_missed_run: true
+
+            # add your tasks with the #[AsCronTask] and #[AsPeriodicTask] attributes
+            # see https://symfony.com/doc/current/scheduler.html
