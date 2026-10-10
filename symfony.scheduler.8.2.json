@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "symfony/scheduler": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": [
+                        "scheduler:",
+                        "    schedules:",
+                        "        default:",
+                        "            # run the tasks missed while no worker was running, once",
+                        "            stateful: true",
+                        "            process_only_last_missed_run: true",
+                        "",
+                        "            # add your tasks with the #[AsCronTask] and #[AsPeriodicTask] attributes",
+                        "            # see https://symfony.com/doc/current/scheduler.html",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "57f4f69446db3445908bc84ac88ecdb0995cfe43"
+        }
+    }
+}
