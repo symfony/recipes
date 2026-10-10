@@ -706,6 +706,8 @@
         "yunpiannotifier": "symfony/yunpian-notifier",
         "zendesk-notifier": "symfony/zendesk-notifier",
         "zendesknotifier": "symfony/zendesk-notifier",
+        "zoho-cpaas-mailer": "symfony/zoho-cpaas-mailer",
+        "zohocpaasmailer": "symfony/zoho-cpaas-mailer",
         "zulip-notifier": "symfony/zulip-notifier",
         "zulipnotifier": "symfony/zulip-notifier"
     },
@@ -5290,6 +5292,9 @@
                 "7.4",
                 "8.0",
                 "8.1",
+                "8.2"
+            ],
+            "symfony/zoho-cpaas-mailer": [
                 "8.2"
             ],
             "symfony/zulip-notifier": [
