@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "translations/": "translations/"
+    },
+    "aliases": ["translator", "translations"],
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
