@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "symfony/web-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/web_profiler.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "when@dev:",
+                        "    web_profiler:",
+                        "        toolbar: true",
+                        "",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: true",
+                        "            excluded_paths:",
+                        "                - '^/\\.well-known/'",
+                        "                - '^/favicon\\.ico$'",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        profiler:",
+                        "            collect: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/web_profiler.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "when@dev:",
+                        "    web_profiler_wdt:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'",
+                        "        prefix: /_wdt",
+                        "",
+                        "    web_profiler_profiler:",
+                        "        resource: '@WebProfilerBundle/Resources/config/routing/profiler.php'",
+                        "        prefix: /_profiler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "90b638a9d099592feea4d14ad2a654e4f45b71dd"
+        }
+    }
+}
