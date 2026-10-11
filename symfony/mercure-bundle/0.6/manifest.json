@@ -44,7 +44,13 @@
             "services": [
                 "mercure:",
                 "  ports:",
-                "    - \"80\""
+                "    - \"80\"",
+                "  environment:",
+                "    # Development only: trust the X-Forwarded-* headers sent from private networks, e.g. by \"symfony serve --proxy-mercure\"",
+                "    GLOBAL_OPTIONS: |",
+                "      servers {",
+                "        trusted_proxies static private_ranges",
+                "      }"
             ]
         }
     },
