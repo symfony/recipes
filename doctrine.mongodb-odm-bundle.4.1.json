@@ -1,0 +1,82 @@
+{
+    "manifests": {
+        "doctrine/mongodb-odm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MONGODB_URI": "mongodb://localhost:27017",
+                    "MONGODB_DB": "symfony"
+                },
+                "conflict": {
+                    "doctrine/cache": "<1.11",
+                    "symfony/framework-bundle": "<5.3"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_mongodb.yaml": {
+                    "contents": [
+                        "doctrine_mongodb:",
+                        "    auto_generate_proxy_classes: true",
+                        "    auto_generate_hydrator_classes: true",
+                        "    connections:",
+                        "        default:",
+                        "            server: '%env(MONGODB_URI)%'",
+                        "            options: {}",
+                        "    default_database: '%env(MONGODB_DB)%'",
+                        "    document_managers:",
+                        "        default:",
+                        "            auto_mapping: true",
+                        "            mappings:",
+                        "                App:",
+                        "                    is_bundle: false",
+                        "                    type: annotation",
+                        "                    dir: '%kernel.project_dir%/src/Document'",
+                        "                    prefix: 'App\\Document'",
+                        "                    alias: App",
+                        "",
+                        "when@prod:",
+                        "    doctrine_mongodb:",
+                        "        auto_generate_proxy_classes: false",
+                        "        auto_generate_hydrator_classes: false",
+                        "        document_managers:",
+                        "            default:",
+                        "                metadata_cache_driver:",
+                        "                    type: service",
+                        "                    id: doctrine_mongodb.system_cache_provider",
+                        "",
+                        "    services:",
+                        "        doctrine_mongodb.system_cache_provider:",
+                        "            factory: ['Doctrine\\Common\\Cache\\Psr6\\DoctrineProvider', 'wrap']",
+                        "            class: 'Doctrine\\Common\\Cache\\Psr6\\DoctrineProvider'",
+                        "            public: false",
+                        "            arguments:",
+                        "                - '@doctrine_mongodb.system_cache_pool'",
+                        "",
+                        "    framework:",
+                        "        cache:",
+                        "            pools:",
+                        "                doctrine_mongodb.system_cache_pool:",
+                        "                    adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Document/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e2820faba9e39f7d989bb39f9aaa323f76039d68"
+        }
+    }
+}
