@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../schema.json
 asset_mapper:
     # The paths to make available to the asset mapper.
     paths:

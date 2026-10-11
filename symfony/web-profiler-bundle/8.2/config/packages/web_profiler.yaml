@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../schema.json
 when@dev:
     web_profiler:
         toolbar: true

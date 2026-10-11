@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../schema.json
 #validation:
     # Enables validator auto-mapping support.
     # For instance, basic validation constraints will be inferred from Doctrine's metadata.
