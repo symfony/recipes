@@ -18,19 +18,17 @@
         "docker-compose.yml": {
             "services": [
                 "mercure:",
-                "  image: dunglas/mercure:v1",
+                "  image: dunglas/mercure",
                 "  restart: unless-stopped",
                 "  environment:",
                 "    # Uncomment the following line to disable HTTPS,",
                 "    #SERVER_NAME: ':80'",
                 "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
                 "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
-                "    # Accept the Mercure 0.x tokens issued by this bundle version, remove after upgrading to symfony/mercure-bundle 0.6",
-                "    # Remove the playground directive to disable the development mode",
+                "    # protocol_version_compatibility accepts the Mercure 0.x tokens issued by this bundle version, remove it after upgrading to symfony/mercure-bundle 0.6",
                 "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
                 "    MERCURE_EXTRA_DIRECTIVES: |",
                 "      protocol_version_compatibility 8",
-                "      playground",
                 "      cors_origins http://127.0.0.1:8000",
                 "  volumes:",
                 "    - mercure_data:/data",
@@ -42,7 +40,19 @@
             "services": [
                 "mercure:",
                 "  ports:",
-                "    - \"80\""
+                "    - \"80\"",
+                "  environment:",
+                "    # Replaces MERCURE_EXTRA_DIRECTIVES from docker-compose.yml, keep the other directives in sync",
+                "    # The playground directive enables the development mode (anonymous subscribers, debug UI)",
+                "    MERCURE_EXTRA_DIRECTIVES: |",
+                "      protocol_version_compatibility 8",
+                "      playground",
+                "      cors_origins http://127.0.0.1:8000",
+                "    # Development only: trust the X-Forwarded-* headers sent from private networks, e.g. by \"symfony serve --proxy-mercure\"",
+                "    GLOBAL_OPTIONS: |",
+                "      servers {",
+                "        trusted_proxies static private_ranges",
+                "      }"
             ]
         }
     },
