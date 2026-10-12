@@ -1,0 +1,13 @@
+ux_router:
+    # The directory where the JavaScript routes are dumped
+    # If you change it, also change the import in assets/router.js
+    dump_directory: '%kernel.project_dir%/var/routes'
+
+    # Route name patterns exposed to JavaScript, prefix with "!" to exclude (e.g. 'app_*', '!app_admin_*')
+    routes: []
+
+when@prod:
+    ux_router:
+        # Control whether TypeScript types are dumped alongside routes.
+        # Disable this if you do not use TypeScript (e.g. in production when using AssetMapper), to speed up cache warmup.
+        # dump_typescript: false
