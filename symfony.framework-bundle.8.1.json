@@ -12,8 +12,7 @@
                     "public/": "%PUBLIC_DIR%/",
                     "src/": "%SRC_DIR%/",
                     ".editorconfig": ".editorconfig",
-                    "AGENTS.md": "AGENTS.md",
-                    "CLAUDE.md": "CLAUDE.md"
+                    "AGENTS.md": "AGENTS.md"
                 },
                 "composer-scripts": {
                     "cache:clear": "symfony-cmd",
@@ -185,15 +184,6 @@
                     ],
                     "executable": false
                 },
-                "CLAUDE.md": {
-                    "contents": [
-                        "# CLAUDE.md",
-                        "",
-                        "@AGENTS.md",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/cache.yaml": {
                     "contents": [
                         "framework:",
@@ -337,7 +327,7 @@
                     "executable": false
                 }
             },
-            "ref": "5295b2b1ef2170b272383b2b0ae0b66702883822"
+            "ref": "d3714db4cc12adbfd4c0453cf854be32788ef549"
         }
     }
 }
