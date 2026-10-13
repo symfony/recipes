@@ -1,8 +1,4 @@
 # yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
-_security_logout:
-    resource: security.route_loader.logout
-    type: service
-
-_security_oidc_login:
-    resource: security.authenticator.oidc_login.route_loader
+_security:
+    resource: security.route_loader
     type: service
