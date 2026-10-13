@@ -1389,7 +1389,8 @@
             "6.4"
         ],
         "symfony/scheduler": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/security-bundle": [
             "3.3",
@@ -1878,6 +1879,11 @@
             "7.4": {
                 "symfony/framework-bundle": "<7.0"
             },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/scheduler": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }

@@ -188,7 +188,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](../../../tree/main/symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [8.2](../../../tree/main/symfony/routing/8.2) | `router`, `routing` |
 | [symfony/scaleway-mailer](https://packagist.org/packages/symfony/scaleway-mailer) | [6.4](../../../tree/main/symfony/scaleway-mailer/6.4) | `scaleway-mailer`, `scalewaymailer` |
-| [symfony/scheduler](https://packagist.org/packages/symfony/scheduler) | [7.2](../../../tree/main/symfony/scheduler/7.2) | `schedule`, `scheduler`, `scheduling` |
+| [symfony/scheduler](https://packagist.org/packages/symfony/scheduler) | [8.2](../../../tree/main/symfony/scheduler/8.2) | `schedule`, `scheduler`, `scheduling` |
 | [symfony/security-bundle](https://packagist.org/packages/symfony/security-bundle) | [8.2](../../../tree/main/symfony/security-bundle/8.2) | `security`, `security-bundle`, `securitybundle` |
 | [symfony/sendberry-notifier](https://packagist.org/packages/symfony/sendberry-notifier) | [6.1](../../../tree/main/symfony/sendberry-notifier/6.1) | `sendberry-notifier`, `sendberrynotifier` |
 | [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [4.4](../../../tree/main/symfony/sendgrid-mailer/4.4) | `sendgrid-mailer`, `sendgridmailer` |
