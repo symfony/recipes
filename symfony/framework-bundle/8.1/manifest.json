@@ -7,8 +7,7 @@
         "public/": "%PUBLIC_DIR%/",
         "src/": "%SRC_DIR%/",
         ".editorconfig": ".editorconfig",
-        "AGENTS.md": "AGENTS.md",
-        "CLAUDE.md": "CLAUDE.md"
+        "AGENTS.md": "AGENTS.md"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
