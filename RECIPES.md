@@ -224,8 +224,13 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](../../../tree/main/symfony/uid/7.0) | `uid` |
 | [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](../../../tree/main/symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
+| [symfony/ux-cloudflare-image](https://packagist.org/packages/symfony/ux-cloudflare-image) | [3.6](../../../tree/main/symfony/ux-cloudflare-image/3.6) | `ux-cloudflare-image`, `uxcloudflareimage` |
+| [symfony/ux-cloudinary-image](https://packagist.org/packages/symfony/ux-cloudinary-image) | [3.6](../../../tree/main/symfony/ux-cloudinary-image/3.6) | `ux-cloudinary-image`, `uxcloudinaryimage` |
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
+| [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.6](../../../tree/main/symfony/ux-image/3.6) | `ux-image`, `uximage` |
+| [symfony/ux-imgix-image](https://packagist.org/packages/symfony/ux-imgix-image) | [3.6](../../../tree/main/symfony/ux-imgix-image/3.6) | `ux-imgix-image`, `uximgiximage` |
+| [symfony/ux-keycdn-image](https://packagist.org/packages/symfony/ux-keycdn-image) | [3.6](../../../tree/main/symfony/ux-keycdn-image/3.6) | `ux-keycdn-image`, `uxkeycdnimage` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.29](../../../tree/main/symfony/ux-lazy-image/2.29) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](../../../tree/main/symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](../../../tree/main/symfony/ux-live-component/2.6) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |

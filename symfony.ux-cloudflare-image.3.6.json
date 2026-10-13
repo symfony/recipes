@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ux-cloudflare-image": {
+            "manifest": {
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudflare/README.md",
+                    "#2": "",
+                    "#3": "UX_IMAGE_DSN=cloudflare://cdn.example.com"
+                },
+                "post-install-output": [
+                    "  * <info>UX_IMAGE_DSN</info> is commented out in <info>.env</info>, so images keep their original URL",
+                    "    in dev. Set it for production, in <info>.env.prod.local</info> or as a Symfony secret, with the",
+                    "    domain your Cloudflare zone proxies as host, the one your original images are served from.",
+                    "",
+                    "  * Image transformations must be enabled on that zone before this works.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Cloudflare/README.md</>"
+                ]
+            },
+            "files": [],
+            "ref": "c796ecf71fe552bdd81b01e1e87385f1ee7a6f7f"
+        }
+    }
+}
