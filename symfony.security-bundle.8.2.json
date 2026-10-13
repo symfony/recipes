@@ -61,19 +61,15 @@
                 "config/routes/security.yaml": {
                     "contents": [
                         "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
-                        "_security_logout:",
-                        "    resource: security.route_loader.logout",
-                        "    type: service",
-                        "",
-                        "_security_oidc_login:",
-                        "    resource: security.authenticator.oidc_login.route_loader",
+                        "_security:",
+                        "    resource: security.route_loader",
                         "    type: service",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "ec5af66a05c54477cc8ca27b7cd4f8cc879aa076"
+            "ref": "2240c2a590715c6cff7f0213f171499e68a5e326"
         }
     }
 }
