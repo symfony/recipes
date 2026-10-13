@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=../schema.json
+property_info:
+    with_constructor_extractor: true

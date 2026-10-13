@@ -1,0 +1,26 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAILER_DSN": "null://null"
+    },
+    "docker-compose": {
+        "docker-compose.override.yml": {
+            "services": [
+                "mailer:",
+                "  image: axllent/mailpit",
+                "  ports:",
+                "    - \"1025\"",
+                "    - \"8025\"",
+                "  environment:",
+                "    MP_SMTP_AUTH_ACCEPT_ANY: 1",
+                "    MP_SMTP_AUTH_ALLOW_INSECURE: 1"
+            ]
+        }
+    },
+    "aliases": ["mailer", "mail"],
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}

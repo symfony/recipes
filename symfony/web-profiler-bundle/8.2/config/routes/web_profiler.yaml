@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
 when@dev:
     web_profiler_wdt:
         resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'
