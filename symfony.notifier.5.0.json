@@ -14,7 +14,7 @@
                         "        chatter_transports:",
                         "        texter_transports:",
                         "        channel_policy:",
-                        "            # use chat/slack, chat/telegram, sms/twilio or sms/nexmo",
+                        "            # use chat/slack, chat/telegram, sms/twilio or sms/vonage",
                         "            urgent: ['email']",
                         "            high: ['email']",
                         "            medium: ['email']",
@@ -26,7 +26,7 @@
                     "executable": false
                 }
             },
-            "ref": "178877daf79d2dbd62129dd03612cb1a2cb407cc"
+            "ref": "b912054fd9639f5fad62493cc24439048c2fd045"
         }
     }
 }

@@ -18,7 +18,7 @@
             "files": {
                 "config/packages/ux_turbo.yaml": {
                     "contents": [
-                        "# Enable stateless CSRF protection for forms and logins/logouts",
+                        "# Accept the CSRF token sent in a header, as Turbo form submissions do",
                         "framework:",
                         "    csrf_protection:",
                         "        check_header: true",
@@ -27,7 +27,7 @@
                     "executable": false
                 }
             },
-            "ref": "287f7c6eb6e9b65e422d34c00795b360a787380b"
+            "ref": "eaff62fc37864d355804c778309a226ae539831f"
         }
     }
 }
