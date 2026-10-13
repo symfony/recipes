@@ -1,0 +1,9 @@
+{
+    "aliases": ["webapp"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
