@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["schedule", "scheduling"],
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
