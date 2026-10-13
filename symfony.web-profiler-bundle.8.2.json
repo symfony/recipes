@@ -18,6 +18,7 @@
             "files": {
                 "config/packages/web_profiler.yaml": {
                     "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
                         "when@dev:",
                         "    web_profiler:",
                         "        toolbar: true",
@@ -39,6 +40,7 @@
                 },
                 "config/routes/web_profiler.yaml": {
                     "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
                         "when@dev:",
                         "    web_profiler_wdt:",
                         "        resource: '@WebProfilerBundle/Resources/config/routing/wdt.php'",
@@ -52,7 +54,7 @@
                     "executable": false
                 }
             },
-            "ref": "09f3a006a6cff5a51962d5026d17b1c0a45b5338"
+            "ref": "90b638a9d099592feea4d14ad2a654e4f45b71dd"
         }
     }
 }

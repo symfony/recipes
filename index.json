@@ -1045,7 +1045,8 @@
         ],
         "symfony/asset-mapper": [
             "6.3",
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/azure-mailer": [
             "7.1"
@@ -1084,7 +1085,8 @@
         "symfony/debug-bundle": [
             "3.3",
             "4.1",
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/discord-notifier": [
             "5.2"
@@ -1112,7 +1114,8 @@
             "2.4"
         ],
         "symfony/form": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/forty-six-elks-notifier": [
             "6.1"
@@ -1190,7 +1193,8 @@
         ],
         "symfony/lock": [
             "4.4",
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/loco-translation-provider": [
             "5.3"
@@ -1209,7 +1213,8 @@
             "4.4"
         ],
         "symfony/mailer": [
-            "4.3"
+            "4.3",
+            "8.2"
         ],
         "symfony/mailer-send-mailer": [
             "6.3"
@@ -1261,7 +1266,8 @@
             "4.1",
             "4.3",
             "5.4",
-            "6.0"
+            "6.0",
+            "8.2"
         ],
         "symfony/microsoft-teams-notifier": [
             "5.3"
@@ -1278,7 +1284,8 @@
             "5.0"
         ],
         "symfony/notifier": [
-            "5.0"
+            "5.0",
+            "8.2"
         ],
         "symfony/novu-notifier": [
             "6.4"
@@ -1331,7 +1338,8 @@
             "7.2"
         ],
         "symfony/property-info": [
-            "7.3"
+            "7.3",
+            "8.2"
         ],
         "symfony/psr7-pack": [
             "1.0"
@@ -1373,7 +1381,8 @@
             "6.1",
             "6.2",
             "7.0",
-            "7.4"
+            "7.4",
+            "8.2"
         ],
         "symfony/scaleway-mailer": [
             "6.4"
@@ -1481,7 +1490,8 @@
         "symfony/translation": [
             "3.3",
             "5.3",
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/turbo-sms-notifier": [
             "5.4"
@@ -1493,7 +1503,8 @@
             "5.3",
             "5.4",
             "6.3",
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/twilio-notifier": [
             "5.0"
@@ -1584,7 +1595,8 @@
             "4.1",
             "4.3",
             "5.3",
-            "7.0"
+            "7.0",
+            "8.2"
         ],
         "symfony/vonage-notifier": [
             "5.4"
@@ -1620,7 +1632,8 @@
             "2.3"
         ],
         "symfony/workflow": [
-            "3.3"
+            "3.3",
+            "8.2"
         ],
         "symfony/yunpian-notifier": [
             "5.4"
@@ -1747,11 +1760,34 @@
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<6.3",
                 "symfony/twig-bundle": "<6.3"
+            },
+            "8.2": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2",
+                "symfony/twig-bundle": "<6.3"
             }
         },
         "symfony/debug-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/form": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/lock": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/messenger": {
@@ -1766,11 +1802,19 @@
             },
             "6.0": {
                 "symfony/framework-bundle": "<4.3"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/monolog-bundle": {
             "3.7": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/panther": {
@@ -1793,6 +1837,11 @@
             "8.2": {
                 "phpunit/phpunit": "<13.1",
                 "symfony/framework-bundle": "<5.4"
+            }
+        },
+        "symfony/property-info": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/reprise": {
@@ -1827,6 +1876,9 @@
             },
             "7.4": {
                 "symfony/framework-bundle": "<7.0"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/security-bundle": {
@@ -1874,6 +1926,11 @@
                 "symfony/webpack-encore-bundle": "<2.0"
             }
         },
+        "symfony/translation": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/twig-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
@@ -1886,6 +1943,9 @@
             },
             "6.4": {
                 "symfony/framework-bundle": "<5.3"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/uid": {
@@ -1970,6 +2030,9 @@
             },
             "7.0": {
                 "symfony/framework-bundle": "<7.0"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/web-profiler-bundle": {
@@ -2015,6 +2078,11 @@
             },
             "2.3": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/workflow": {
+            "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
         },

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "symfony/debug-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\DebugBundle\\DebugBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/debug.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "when@dev:",
+                        "    debug:",
+                        "        # Forwards VarDumper Data clones to a centralized server allowing to inspect dumps on CLI or in your browser.",
+                        "        # See the \"server:dump\" command to start a new server.",
+                        "        dump_destination: \"tcp://%env(VAR_DUMPER_SERVER)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bf7758dda9715a7b8599012cd8b23adc09dd6fa8"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "symfony/workflow": {
+            "manifest": {
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "46c0212530169ce92351ce7d58336db04f77c2a6"
+        }
+    }
+}
