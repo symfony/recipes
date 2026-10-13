@@ -655,6 +655,7 @@
         "ux-live-component": "symfony/ux-live-component",
         "ux-map": "symfony/ux-map",
         "ux-react": "symfony/ux-react",
+        "ux-router": "symfony/ux-router",
         "ux-svelte": "symfony/ux-svelte",
         "ux-translator": "symfony/ux-translator",
         "ux-turbo": "symfony/ux-turbo",
@@ -668,6 +669,7 @@
         "uxlivecomponent": "symfony/ux-live-component",
         "uxmap": "symfony/ux-map",
         "uxreact": "symfony/ux-react",
+        "uxrouter": "symfony/ux-router",
         "uxsvelte": "symfony/ux-svelte",
         "uxtranslator": "symfony/ux-translator",
         "uxturbo": "symfony/ux-turbo",
@@ -1529,6 +1531,9 @@
             "2.9",
             "3.4"
         ],
+        "symfony/ux-router": [
+            "3.6"
+        ],
         "symfony/ux-svelte": [
             "2.8",
             "2.9"
@@ -1897,6 +1902,11 @@
             "3.4": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/webpack-encore-bundle": "<2.0"
+            }
+        },
+        "symfony/ux-router": {
+            "3.6": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
             }
         },
         "symfony/ux-svelte": {

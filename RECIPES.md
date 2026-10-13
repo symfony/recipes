@@ -231,6 +231,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](../../../tree/main/symfony/ux-live-component/2.6) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |
 | [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](../../../tree/main/symfony/ux-map/2.19) | `ux-map`, `uxmap` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [3.4](../../../tree/main/symfony/ux-react/3.4) | `ux-react`, `uxreact` |
+| [symfony/ux-router](https://packagist.org/packages/symfony/ux-router) | [3.6](../../../tree/main/symfony/ux-router/3.6) | `ux-router`, `uxrouter` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](../../../tree/main/symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
 | [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.32](../../../tree/main/symfony/ux-translator/2.32) | `ux-translator`, `uxtranslator` |
 | [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [2.20](../../../tree/main/symfony/ux-turbo/2.20) | `turbo`, `ux-turbo`, `uxturbo` |
