@@ -1,0 +1,8 @@
+  * <info>UX_IMAGE_DSN</info> is commented out in <info>.env</info>, so images keep their original URL
+    in dev. Set it for production, in <info>.env.prod.local</info> or as a Symfony secret, with your
+    KeyCDN zone as host.
+
+  * If your zone requires signed URLs, add its Secure Token Key to the DSN as the
+    <info>secure_token</info> option.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/KeyCdn/README.md</>
