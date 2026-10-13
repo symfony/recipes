@@ -1,0 +1,7 @@
+  * The recipe adds an <info>ipx</info> service to <info>compose.yaml</info>. <info>UX_IMAGE_DSN</info> in <info>.env</info> points at it over plain HTTP. With the Symfony CLI, <info>IPX_HOST</info> and <info>IPX_PORT</info> come from the port published in <info>compose.override.yaml</info>.
+
+  * For production, set <info>UX_IMAGE_DSN</info> in <info>.env.prod.local</info> or as a Symfony secret, using the host your reverse proxy serves IPX from. The "Production" section of the README explains how to run IPX there, with a <info>compose.prod.yaml</info> that publishes a fixed port for the reverse proxy, and how to set up caching. Read it here: <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md#production</>
+
+  * IPX has no URL signing. <info>IPX_ALLOWED_MODIFIERS</info> in <info>compose.yaml</info> only allows the common modifiers. Add each extra operation you pass.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md</>
