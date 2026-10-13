@@ -1,0 +1,12 @@
+framework:
+    asset_mapper:
+        # The paths to make available to the asset mapper.
+        paths:
+            - assets/
+        missing_import_mode: strict
+        minimum_release_age: 604800
+
+when@prod:
+    framework:
+        asset_mapper:
+            missing_import_mode: warn
