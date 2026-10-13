@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "symfony/ux-ipx-image": {
+            "manifest": {
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md",
+                    "#2": "",
+                    "UX_IMAGE_DSN": "ipx://${IPX_HOST:-127.0.0.1}:${IPX_PORT:-3000}?secure=false"
+                },
+                "docker-compose": {
+                    "compose.yaml": {
+                        "services": [
+                            "ipx:",
+                            "  image: node:26-alpine",
+                            "  command: npx --yes ipx@4 serve",
+                            "  environment:",
+                            "    IPX_FS_DIR: /srv/public",
+                            "    IPX_ALLOWED_MODIFIERS: width,height,resize,fit,format,quality",
+                            "  volumes:",
+                            "    - ./public:/srv/public:ro"
+                        ]
+                    },
+                    "compose.override.yaml": {
+                        "services": [
+                            "ipx:",
+                            "  ports:",
+                            "    - \"3000\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * The recipe adds an <info>ipx</info> service to <info>compose.yaml</info>. <info>UX_IMAGE_DSN</info> in <info>.env</info> points at it over plain HTTP. With the Symfony CLI, <info>IPX_HOST</info> and <info>IPX_PORT</info> come from the port published in <info>compose.override.yaml</info>.",
+                    "",
+                    "  * For production, set <info>UX_IMAGE_DSN</info> in <info>.env.prod.local</info> or as a Symfony secret, using the host your reverse proxy serves IPX from. The \"Production\" section of the README explains how to run IPX there, with a <info>compose.prod.yaml</info> that publishes a fixed port for the reverse proxy, and how to set up caching. Read it here: <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md#production</>",
+                    "",
+                    "  * IPX has no URL signing. <info>IPX_ALLOWED_MODIFIERS</info> in <info>compose.yaml</info> only allows the common modifiers. Add each extra operation you pass.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md</>"
+                ]
+            },
+            "files": [],
+            "ref": "badf27f254c4826f4a5632169e126b8d8a3a92fd"
+        }
+    }
+}
