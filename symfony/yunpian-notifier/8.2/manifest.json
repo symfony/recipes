@@ -1,0 +1,27 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "target": "        texter_transports:",
+            "content": [
+                "            yunpian: '%env(YUNPIAN_DSN)%'"
+            ]
+        },
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    texter_transports:",
+            "content": [
+                "        yunpian: '%env(YUNPIAN_DSN)%'"
+            ]
+        }
+    ],
+    "env": {
+        "#1": "YUNPIAN_DSN=yunpian://APIKEY@default"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}

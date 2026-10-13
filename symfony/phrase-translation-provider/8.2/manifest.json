@@ -1,0 +1,26 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/translation.yaml",
+            "position": "after_target",
+            "target": "        providers:",
+            "content": [
+                "            phrase: { dsn: '%env(PHRASE_DSN)%' }"
+            ]
+        },
+        {
+            "file": "config/packages/translation.yaml",
+            "position": "after_target",
+            "target": "    providers:",
+            "content": [
+                "        phrase: { dsn: '%env(PHRASE_DSN)%' }"
+            ]
+        }
+    ],
+    "env": {
+        "#1": "PHRASE_DSN=phrase://PROJECT_ID:API_TOKEN@default?userAgent=Symfony-Phrase-Provider"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
