@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "symfony/ux-lazy-image": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\LazyImage\\LazyImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/lazy_image.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "# lazy_image:",
+                        "    # By default, images are fetched through \"file_get_contents\" function, but you can use your own implementation ",
+                        "    # with an invokable service or a callable. ",
+                        "    # https://symfony.com/bundles/ux-lazy-image/current/index.html#customizing-images-fetching",
+                        "    # fetch_image_content: 'App\\BlurHash\\FetchImageContent'",
+                        "",
+                        "    # It is recommended to cache the generated BlurHash for performance reasons, to avoid generating it for each request.",
+                        "    # https://symfony.com/bundles/ux-lazy-image/current/index.html#performance-considerations",
+                        "    # cache: cache.lazy_image",
+                        "",
+                        "# cache:",
+                        "    # pools:",
+                        "        # cache.lazy_image: ",
+                        "            # If possible, prefer to use a cache adapter that is not cleared between deployments, like \"cache.adapter.redis\"",
+                        "            # adapter: cache.app",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "451509994475b6cf9ee8457bb836a8b51b4ba435"
+        }
+    }
+}

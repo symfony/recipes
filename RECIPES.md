@@ -10,10 +10,10 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [blackfireio/blackfire-symfony-meta](https://packagist.org/packages/blackfireio/blackfire-symfony-meta) | [1.0](../../../tree/main/blackfireio/blackfire-symfony-meta/1.0) | `blackfire` |
 | [doctrine/annotations](https://packagist.org/packages/doctrine/annotations) | [1.10](../../../tree/main/doctrine/annotations/1.10) |  |
 | [doctrine/deprecations](https://packagist.org/packages/doctrine/deprecations) | [1.0](../../../tree/main/doctrine/deprecations/1.0) |  |
-| [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [3.0](../../../tree/main/doctrine/doctrine-bundle/3.0) |  |
+| [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [3.1](../../../tree/main/doctrine/doctrine-bundle/3.1) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](../../../tree/main/doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
 | [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](../../../tree/main/doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
-| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.0](../../../tree/main/doctrine/mongodb-odm-bundle/5.0) | `doctrine-mongo`, `doctrine-mongodb`, `doctrinemongo`, `doctrinemongodb`, `mongo-odm`, `mongodb-odm`, `mongodbodm`, `mongoodm` |
+| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.5](../../../tree/main/doctrine/mongodb-odm-bundle/5.5) | `doctrine-mongo`, `doctrine-mongodb`, `doctrinemongo`, `doctrinemongodb`, `mongo-odm`, `mongodb-odm`, `mongodbodm`, `mongoodm` |
 | [easycorp/easyadmin-bundle](https://packagist.org/packages/easycorp/easyadmin-bundle) | [4.14](../../../tree/main/easycorp/easyadmin-bundle/4.14) | `admin`, `admin-gen`, `admin-generator`, `admingen`, `admingenerator` |
 | [friendsofphp/php-cs-fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) | [3.39](../../../tree/main/friendsofphp/php-cs-fixer/3.39) | `cs-fixer`, `csfixer`, `php-cs-fixer`, `phpcsfixer` |
 | [hautelook/alice-bundle](https://packagist.org/packages/hautelook/alice-bundle) | [2.2](../../../tree/main/hautelook/alice-bundle/2.2) | `alice` |
@@ -181,7 +181,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](../../../tree/main/symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
 | [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [7.1](../../../tree/main/symfony/pushy-notifier/7.1) | `pushy-notifier`, `pushynotifier` |
 | [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [6.4](../../../tree/main/symfony/redlink-notifier/6.4) | `redlink-notifier`, `redlinknotifier` |
-| [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [1.1](../../../tree/main/symfony/reprise/1.1) | `reprise` |
+| [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [1.2](../../../tree/main/symfony/reprise/1.2) | `reprise` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](../../../tree/main/symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](../../../tree/main/symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
 | [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](../../../tree/main/symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
@@ -226,7 +226,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
-| [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.18](../../../tree/main/symfony/ux-lazy-image/2.18) | `ux-lazy-image`, `uxlazyimage` |
+| [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.29](../../../tree/main/symfony/ux-lazy-image/2.29) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](../../../tree/main/symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
 | [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](../../../tree/main/symfony/ux-live-component/2.6) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |
 | [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](../../../tree/main/symfony/ux-map/2.19) | `ux-map`, `uxmap` |
@@ -240,9 +240,9 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](../../../tree/main/symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [8.2](../../../tree/main/symfony/web-profiler-bundle/8.2) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](../../../tree/main/symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
-| [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.0](../../../tree/main/symfony/webapp-pack/1.0) | `webapp` |
+| [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.4](../../../tree/main/symfony/webapp-pack/1.4) | `webapp` |
 | [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [7.3](../../../tree/main/symfony/webhook/7.3) | `webhook` |
-| [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.2](../../../tree/main/symfony/webpack-encore-bundle/2.2) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
+| [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.3](../../../tree/main/symfony/webpack-encore-bundle/2.3) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
 | [symfony/workflow](https://packagist.org/packages/symfony/workflow) | [3.3](../../../tree/main/symfony/workflow/3.3) | `workflow` |
 | [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [5.4](../../../tree/main/symfony/yunpian-notifier/5.4) | `yunpian-notifier`, `yunpiannotifier` |
 | [symfony/zendesk-notifier](https://packagist.org/packages/symfony/zendesk-notifier) | [6.2](../../../tree/main/symfony/zendesk-notifier/6.2) | `zendesk-notifier`, `zendesknotifier` |

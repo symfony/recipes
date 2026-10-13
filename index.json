@@ -749,7 +749,8 @@
             "2.10",
             "2.12",
             "2.13",
-            "3.0"
+            "3.0",
+            "3.1"
         ],
         "doctrine/doctrine-fixtures-bundle": [
             "3.0"
@@ -763,7 +764,8 @@
             "3.3",
             "4.1",
             "4.4",
-            "5.0"
+            "5.0",
+            "5.5"
         ],
         "easycorp/easyadmin-bundle": [
             "1.17",
@@ -1333,7 +1335,8 @@
         ],
         "symfony/reprise": [
             "0.1",
-            "1.1"
+            "1.1",
+            "1.2"
         ],
         "symfony/requirements-checker": [
             "1.0",
@@ -1508,7 +1511,8 @@
         ],
         "symfony/ux-lazy-image": [
             "2.17",
-            "2.18"
+            "2.18",
+            "2.29"
         ],
         "symfony/ux-leaflet-map": [
             "2.19"
@@ -1567,7 +1571,8 @@
             "3.3"
         ],
         "symfony/webapp-pack": [
-            "1.0"
+            "1.0",
+            "1.4"
         ],
         "symfony/webhook": [
             "6.3",
@@ -1581,7 +1586,8 @@
             "1.17",
             "2.0",
             "2.1",
-            "2.2"
+            "2.2",
+            "2.3"
         ],
         "symfony/workflow": [
             "3.3"
@@ -1672,12 +1678,18 @@
             },
             "3.0": {
                 "symfony/framework-bundle": "<6.4"
+            },
+            "3.1": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "doctrine/mongodb-odm-bundle": {
             "4.1": {
                 "doctrine/cache": "<1.11",
                 "symfony/framework-bundle": "<5.3"
+            },
+            "5.5": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "hautelook/alice-bundle": {
@@ -1761,6 +1773,10 @@
             "1.1": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<6.4"
+            },
+            "1.2": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/routing": {
@@ -1858,6 +1874,11 @@
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
             }
         },
+        "symfony/ux-lazy-image": {
+            "2.29": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/ux-leaflet-map": {
             "2.19": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
@@ -1933,6 +1954,11 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/webapp-pack": {
+            "1.4": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/webpack-encore-bundle": {
             "1.10": {
                 "symfony/framework-bundle": "<5.4"
@@ -1951,6 +1977,10 @@
             "2.2": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<5.4"
+            },
+            "2.3": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfonycasts/sass-bundle": {
