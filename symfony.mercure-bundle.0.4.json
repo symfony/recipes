@@ -30,16 +30,11 @@
                             "    #SERVER_NAME: ':80'",
                             "    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
                             "    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'",
+                            "    # protocol_version_compatibility accepts the Mercure 0.x tokens issued by this bundle version, remove it after upgrading to symfony/mercure-bundle 0.6",
                             "    # Set the URL of your Symfony project (without trailing slash!) as value of the cors_origins directive",
                             "    MERCURE_EXTRA_DIRECTIVES: |",
+                            "      protocol_version_compatibility 8",
                             "      cors_origins http://127.0.0.1:8000",
-                            "  # Comment the following line to disable the development mode",
-                            "  command: /usr/bin/caddy run --config /etc/caddy/dev.Caddyfile",
-                            "  healthcheck:",
-                            "    test: [\"CMD\", \"curl\", \"-f\", \"https://localhost/healthz\"]",
-                            "    timeout: 5s",
-                            "    retries: 5",
-                            "    start_period: 60s",
                             "  volumes:",
                             "    - mercure_data:/data",
                             "    - mercure_config:/config"
@@ -53,7 +48,19 @@
                         "services": [
                             "mercure:",
                             "  ports:",
-                            "    - \"80\""
+                            "    - \"80\"",
+                            "  environment:",
+                            "    # Replaces MERCURE_EXTRA_DIRECTIVES from docker-compose.yml, keep the other directives in sync",
+                            "    # The playground directive enables the development mode (anonymous subscribers, debug UI)",
+                            "    MERCURE_EXTRA_DIRECTIVES: |",
+                            "      protocol_version_compatibility 8",
+                            "      playground",
+                            "      cors_origins http://127.0.0.1:8000",
+                            "    # Development only: trust the X-Forwarded-* headers sent from private networks, e.g. by \"symfony serve --proxy-mercure\"",
+                            "    GLOBAL_OPTIONS: |",
+                            "      servers {",
+                            "        trusted_proxies static private_ranges",
+                            "      }"
                         ]
                     }
                 }
@@ -74,7 +81,7 @@
                     "executable": false
                 }
             },
-            "ref": "b141b8c8f13bc8c31d718a5488039b712c0d3592"
+            "ref": "9f9016974c85645f3a2427c6d904bf28dfb7818c"
         }
     }
 }
