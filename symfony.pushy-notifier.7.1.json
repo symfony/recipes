@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/pushy-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            pushy: '%env(PUSHY_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PUSHY_DSN=pushy://API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "a07dabcb079a08f6bb980b958dec4a8fc969e049"
+        }
+    }
+}

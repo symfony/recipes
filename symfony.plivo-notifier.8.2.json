@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/plivo-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            plivo: '%env(PLIVO_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        plivo: '%env(PLIVO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PLIVO_DSN=plivo://AUTH_ID:AUTH_TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "23852df1fd1965bf04ce35877b0806ed5a096200"
+        }
+    }
+}

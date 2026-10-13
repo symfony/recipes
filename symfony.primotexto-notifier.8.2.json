@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/primotexto-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            primotexto: '%env(PRIMOTEXTO_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        primotexto: '%env(PRIMOTEXTO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PRIMOTEXTO_DSN=primotexto://API_KEY@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "d4c484ed0003a75320bc45666f288b4ed8d0e9fc"
+        }
+    }
+}

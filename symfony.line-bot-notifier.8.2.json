@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/line-bot-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            linebot: '%env(LINE_BOT_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        linebot: '%env(LINE_BOT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LINE_BOT_DSN=linebot://TOKEN@default?receiver=RECEIVER"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "96298059e0037bea7c77f73f2d967aab93acaaf7"
+        }
+    }
+}

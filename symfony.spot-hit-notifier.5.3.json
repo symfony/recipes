@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/spot-hit-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            spothit: '%env(SPOTHIT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SPOTHIT_DSN=spothit://TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "e14968adee1e84916c81917e9199f1f8dba9418d"
+        }
+    }
+}

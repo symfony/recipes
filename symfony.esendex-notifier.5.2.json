@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/esendex-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            esendex: '%env(ESENDEX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ESENDEX_DSN=esendex://EMAIL:PASSWORD@default?accountreference=ACCOUNT_REFERENCE&from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "ccf4804bf9cb7b7a1b0ea4823e0084e3974248b6"
+        }
+    }
+}

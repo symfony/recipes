@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/sms-sluzba-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            sms-sluzba: '%env(SMS_SLUZBA_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMS_SLUZBA_DSN=sms-sluzba://USERNAME:PASSWORD@default"
+                }
+            },
+            "files": [],
+            "ref": "f4e6274a88ea7014caf05dadb72105fb43a49f58"
+        }
+    }
+}

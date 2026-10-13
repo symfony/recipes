@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/infobip-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            infobip: '%env(INFOBIP_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        infobip: '%env(INFOBIP_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "INFOBIP_DSN=infobip://ACCESS_TOKEN@HOST?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "d90ff1c95ce7b1516f0561b5f693532e2869d99b"
+        }
+    }
+}

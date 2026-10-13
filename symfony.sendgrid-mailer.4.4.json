@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "symfony/sendgrid-mailer": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            sendgrid: '%env(MAILER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MAILER_DSN=sendgrid://KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "1caff9467bfc5c7f68503aa9eba9dc762a30ae21"
+        }
+    }
+}

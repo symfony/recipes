@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/firebase-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            firebase: '%env(FIREBASE_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        firebase: '%env(FIREBASE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "FIREBASE_DSN=firebase://TOKEN@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "c6e9661886b634c10533b0c584c75a44478f2a67"
+        }
+    }
+}

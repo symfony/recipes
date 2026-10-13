@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/discord-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            discord: '%env(DISCORD_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "DISCORD_DSN=discord://TOKEN@default?webhook_id=ID"
+                }
+            },
+            "files": [],
+            "ref": "4382408da6e53630230b4d41256b93a6f3b8c33e"
+        }
+    }
+}

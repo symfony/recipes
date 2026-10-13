@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/line-notify-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            linenotify: '%env(LINE_NOTIFY_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        linenotify: '%env(LINE_NOTIFY_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LINE_NOTIFY_DSN=linenotify://TOKEN@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "e56b13c623ccbf5e1989dd6221259c76b88040af"
+        }
+    }
+}

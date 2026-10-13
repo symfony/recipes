@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/mastodon-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            mastodon: '%env(MASTODON_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MASTODON_DSN=mastodon://ACCESS_TOKEN@HOST"
+                }
+            },
+            "files": [],
+            "ref": "7876aee0d76e1d77c46a0ad44d49c9f2b42805a8"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/smsmode-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            smsmode: '%env(SMSMODE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSMODE_DSN=smsmode://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "cc672b284cdaf849740c14561a36506e03c42ed3"
+        }
+    }
+}

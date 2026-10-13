@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/one-signal-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            onesignal: '%env(ONESIGNAL_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ONESIGNAL_DSN=onesignal://APP_ID:API_KEY@default?defaultRecipientId=DEFAULT_RECIPIENT_ID"
+                }
+            },
+            "files": [],
+            "ref": "8eb9eb907faa010dc740ebfb6461bcb5b5d50c9f"
+        }
+    }
+}

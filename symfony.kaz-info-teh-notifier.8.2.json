@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/kaz-info-teh-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            kaz-info-teh: '%env(KAZ_INFO_TEH_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        kaz-info-teh: '%env(KAZ_INFO_TEH_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "KAZ_INFO_TEH_DSN=kaz-info-teh://USERNAME:PASSWORD@default?sender=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "84576837ffdf3201f70613aac36f9126e3ba3d56"
+        }
+    }
+}

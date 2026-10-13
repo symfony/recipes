@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "symfony/crowdin-translation-provider": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "        providers:",
+                        "content": "            crowdin:\n                dsn: '%env(CROWDIN_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+                }
+            },
+            "files": [],
+            "ref": "fe29f7cb04adb566f51f58c6e05447ed56ae51ac"
+        }
+    }
+}

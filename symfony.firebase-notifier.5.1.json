@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/firebase-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            firebase: '%env(FIREBASE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "FIREBASE_DSN=firebase://TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "babc442d44a0e17460999d9fc6ca711dae02f3f3"
+        }
+    }
+}

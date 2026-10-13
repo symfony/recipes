@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/pushover-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            pushover: '%env(PUSHOVER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PUSHOVER_DSN=pushover://USER_KEY:APP_TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "eb2aefc42ea7e44a70c4d1c3aea86ad176171e7c"
+        }
+    }
+}

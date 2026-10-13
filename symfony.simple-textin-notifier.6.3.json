@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/simple-textin-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            simpletextin: '%env(SIMPLETEXTIN_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SIMPLETEXTIN_DSN=simpletextin://API_KEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "c0df98450132247945123029e70d727065a74a52"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/vonage-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            vonage: '%env(VONAGE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "VONAGE_DSN=vonage://KEY:SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "5b60490ba868ba3973d0de15acb96ee269a939a6"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/go-ip-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            goip: '%env(GOIP_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        goip: '%env(GOIP_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "GOIP_DSN=goip://USERNAME:PASSWORD@HOST:80?sim_slot=SIM_SLOT"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "ec17779d8f8a08cccb30fcfec443f6db9980c692"
+        }
+    }
+}

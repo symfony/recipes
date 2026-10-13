@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/line-notify-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            linenotify: '%env(LINE_NOTIFY_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LINE_NOTIFY_DSN=linenotify://TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "52d01b15fa42445cf8020b2b35bbde3b461f6036"
+        }
+    }
+}

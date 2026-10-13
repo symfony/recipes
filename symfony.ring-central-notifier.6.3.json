@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ring-central-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            ringcentral: '%env(RINGCENTRAL_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "RINGCENTRAL_DSN=ringcentral://API_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "e8139c02c6db2a5839e86babb2f59306a22e644d"
+        }
+    }
+}

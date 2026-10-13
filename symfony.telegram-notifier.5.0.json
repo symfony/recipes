@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/telegram-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            telegram: '%env(TELEGRAM_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TELEGRAM_DSN=telegram://TOKEN@default?channel=CHAT_ID"
+                }
+            },
+            "files": [],
+            "ref": "a3b62351bdaf9af180ffaf8a9c5ae0df70886abe"
+        }
+    }
+}

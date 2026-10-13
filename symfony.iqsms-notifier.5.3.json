@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/iqsms-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            iqsms: '%env(IQSMS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "IQSMS_DSN=iqsms://LOGIN:PASSWORD@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "d6cfa962cd75c2234320abf6781acab0ecb917f2"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/sms-factor-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            sms-factor: '%env(SMS_FACTOR_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        sms-factor: '%env(SMS_FACTOR_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMS_FACTOR_DSN=sms-factor://TOKEN@default?sender=SENDER&push_type=PUSH_TYPE"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "6f05c43127aa4f068162f10913e361da2cbcca9c"
+        }
+    }
+}

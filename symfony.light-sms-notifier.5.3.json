@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/light-sms-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            lightsms: '%env(LIGHTSMS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LIGHTSMS_DSN=lightsms://LOGIN:TOKEN@default?from=PHONE"
+                }
+            },
+            "files": [],
+            "ref": "3c3bcc63922c86149e0ae85a4b63f098bb1fb7f1"
+        }
+    }
+}

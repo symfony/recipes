@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/ovh-cloud-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            ovhcloud: '%env(OVHCLOUD_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "OVHCLOUD_DSN=ovhcloud://APPLICATION_KEY:APPLICATION_SECRET@default?consumer_key=CONSUMER_KEY&service_name=SERVICE_NAME"
+                }
+            },
+            "files": [],
+            "ref": "3021c49f22f8f444550cadb5c1144cbd7a200295"
+        }
+    }
+}

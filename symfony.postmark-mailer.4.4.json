@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "symfony/postmark-mailer": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            postmark: '%env(MAILER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MAILER_DSN=postmark://ID@default"
+                }
+            },
+            "files": [],
+            "ref": "a5924b4e3d78962df013d8434f463c090594ae79"
+        }
+    }
+}

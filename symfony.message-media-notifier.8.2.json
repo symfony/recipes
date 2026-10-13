@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/message-media-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            messagemedia: '%env(MESSAGEMEDIA_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        messagemedia: '%env(MESSAGEMEDIA_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MESSAGEMEDIA_DSN=messagemedia://API_KEY:API_SECRET@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "2d3d33b4088a4f341508be4e0a45dd5db1f0abc9"
+        }
+    }
+}

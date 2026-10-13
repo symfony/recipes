@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/sipgate-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            sipgate: '%env(SIPGATE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SIPGATE_DSN=sipgate://TOKEN_ID:TOKEN@default?senderId=SENDER_ID"
+                }
+            },
+            "files": [],
+            "ref": "94654ed1e55430a52d6e82caf8dea8da885bd69c"
+        }
+    }
+}

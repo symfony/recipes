@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/engagespot-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            engagespot: '%env(ENGAGESPOT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ENGAGESPOT_DSN=engagespot://API_KEY@default?campaign_name=CAMPAIGN_NAME"
+                }
+            },
+            "files": [],
+            "ref": "1b30591c54b63f1825ef52058f6d5dc6a95c71b1"
+        }
+    }
+}

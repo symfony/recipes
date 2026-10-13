@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/smsbox-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            smsbox: '%env(SMSBOX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSBOX_DSN=smsbox://APIKEY@default?mode=MODE&strategy=STRATEGY&sender=SENDER"
+                }
+            },
+            "files": [],
+            "ref": "cfe0a1138b51dc2fd3debcfda93fedaf53042601"
+        }
+    }
+}

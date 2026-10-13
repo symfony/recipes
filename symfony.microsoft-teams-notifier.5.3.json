@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/microsoft-teams-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            microsoftteams: '%env(MICROSOFT_TEAMS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MICROSOFT_TEAMS_DSN=microsoftteams://default/HOSTPATH"
+                }
+            },
+            "files": [],
+            "ref": "57116096b460c3ba8cc4035c185512c0e6599d90"
+        }
+    }
+}

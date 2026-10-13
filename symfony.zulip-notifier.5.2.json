@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/zulip-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        chatter_transports:",
+                        "content": "            zulip: '%env(ZULIP_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ZULIP_DSN=zulip://EMAIL:TOKEN@HOST?channel=CHANNEL"
+                }
+            },
+            "files": [],
+            "ref": "a06c876e98cbf6d880e26e0d79c542dec3de03b9"
+        }
+    }
+}

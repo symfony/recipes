@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/pushover-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            pushover: '%env(PUSHOVER_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        pushover: '%env(PUSHOVER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PUSHOVER_DSN=pushover://USER_KEY:APP_TOKEN@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "e063147ed3deedb40f5634b5284a0976e8534dda"
+        }
+    }
+}

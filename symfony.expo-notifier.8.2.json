@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/expo-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            expo: '%env(EXPO_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        expo: '%env(EXPO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "EXPO_DSN=expo://TOKEN@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "b0fe06a703b96c965f339b1feafbc42fefe4191a"
+        }
+    }
+}

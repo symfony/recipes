@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/message-media-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            messagemedia: '%env(MESSAGEMEDIA_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MESSAGEMEDIA_DSN=messagemedia://API_KEY:API_SECRET@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "a685c659ac770a41aa9d1124ea11ca2d94f3f085"
+        }
+    }
+}

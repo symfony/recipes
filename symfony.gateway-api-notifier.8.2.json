@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/gateway-api-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            gatewayapi: '%env(GATEWAYAPI_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        gatewayapi: '%env(GATEWAYAPI_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "GATEWAYAPI_DSN=gatewayapi://TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "0fc2c472080515ddf501df7e612d81b393b679f1"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/yunpian-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            yunpian: '%env(YUNPIAN_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "YUNPIAN_DSN=yunpian://APIKEY@default"
+                }
+            },
+            "files": [],
+            "ref": "1cbcdb7213b6c5fddac6399dfda9f5ee2318cde5"
+        }
+    }
+}

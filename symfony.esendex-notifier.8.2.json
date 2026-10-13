@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/esendex-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            esendex: '%env(ESENDEX_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        esendex: '%env(ESENDEX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ESENDEX_DSN=esendex://EMAIL:PASSWORD@default?accountreference=ACCOUNT_REFERENCE&from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "e0e72cbfb364992288ef11eec7949cd442cf0bc3"
+        }
+    }
+}

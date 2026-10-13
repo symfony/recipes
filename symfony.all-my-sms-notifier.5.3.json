@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/all-my-sms-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            allmysms: '%env(ALLMYSMS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ALLMYSMS_DSN=allmysms://LOGIN:APIKEY@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "2e65929e692456391b605ff567dd74f8a6ce64e8"
+        }
+    }
+}

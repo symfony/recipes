@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/isendpro-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            isendpro: '%env(ISENDPRO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ISENDPRO_DSN=isendpro://ACCOUNT_KEY_ID@default?from=FROM&no_stop=NO_STOP&sandbox=SANDBOX"
+                }
+            },
+            "files": [],
+            "ref": "ea63680781673fe9ae6b9b89b0037ce33beab7da"
+        }
+    }
+}

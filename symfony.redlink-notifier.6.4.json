@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/redlink-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            redlink: '%env(REDLINK_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "REDLINK_DSN=redlink://API_TOKEN:APP_TOKEN@default?from=FROM&version=VERSION"
+                }
+            },
+            "files": [],
+            "ref": "a6319b8708765bc25eb3cc38a2efa1e54caee7b9"
+        }
+    }
+}

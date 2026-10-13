@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "symfony/mattermost-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            mattermost: '%env(MATTERMOST_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        mattermost: '%env(MATTERMOST_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "See https://docs.mattermost.com/developer/bot-accounts.html",
+                    "#2": "MATTERMOST_DSN=mattermost://ACCESS_TOKEN@HOST/PATH?channel=CHANNEL"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "5d9d3b2594cb1b347370ec866eb6b54c08b4cca1"
+        }
+    }
+}

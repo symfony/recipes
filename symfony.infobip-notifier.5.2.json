@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/infobip-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            infobip: '%env(INFOBIP_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "INFOBIP_DSN=infobip://ACCESS_TOKEN@HOST?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "ef7c027b80efcfd92502c497c2b4fab854a36de8"
+        }
+    }
+}

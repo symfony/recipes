@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/sms-biuras-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            smsbiuras: '%env(SMSBIURAS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSBIURAS_DSN=smsbiuras://UID:API_KEY@default?from=FROM&test_mode=0"
+                }
+            },
+            "files": [],
+            "ref": "51f384a00e6e560bf632f0cb0c496c8d846497ab"
+        }
+    }
+}

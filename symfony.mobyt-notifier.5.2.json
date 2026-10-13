@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/mobyt-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            mobyt: '%env(MOBYT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MOBYT_DSN=mobyt://USER_KEY:ACCESS_TOKEN@default?from=FROM"
+                }
+            },
+            "files": [],
+            "ref": "380dac362bcd423ddf1b17fef0e13fec65597ee0"
+        }
+    }
+}

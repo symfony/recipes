@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/telnyx-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            telnyx: '%env(TELNYX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TELNYX_DSN=telnyx://API_KEY@default?from=FROM&messaging_profile_id=MESSAGING_PROFILE_ID"
+                }
+            },
+            "files": [],
+            "ref": "607f48d0a036d2eb19e570c4db5799b7d772354b"
+        }
+    }
+}

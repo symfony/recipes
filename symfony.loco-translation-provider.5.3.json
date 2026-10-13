@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "symfony/loco-translation-provider": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "        providers:",
+                        "content": "            loco:\n                dsn: '%env(LOCO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "LOCO_DSN=loco://API_KEY@default"
+                }
+            },
+            "files": [],
+            "ref": "653e6aa65233d00e0b17268247a4c135b38b6c5c"
+        }
+    }
+}

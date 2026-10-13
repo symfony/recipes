@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/smsc-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            smsc: '%env(SMSC_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        smsc: '%env(SMSC_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSC_DSN=smsc://LOGIN:PASSWORD@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "1356ca2ebb96abf5f1d327dc204efa4598dd3578"
+        }
+    }
+}
