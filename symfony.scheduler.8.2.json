@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "symfony/scheduler": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": [
+                        "scheduler:",
+                        "    # send the scheduled messages to the Messenger transports routed for their class",
+                        "    use_messenger_routing: true",
+                        "",
+                        "    schedules:",
+                        "        default:",
+                        "            # run the tasks missed while no worker was running, once",
+                        "            stateful: true",
+                        "            process_only_last_missed_run: true",
+                        "",
+                        "            # add your tasks with the #[AsCronTask] and #[AsPeriodicTask] attributes",
+                        "            # see https://symfony.com/doc/current/scheduler.html",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a3739cfd29c84fb1f5cc2733fcb7ba83ac64c30b"
+        }
+    }
+}
