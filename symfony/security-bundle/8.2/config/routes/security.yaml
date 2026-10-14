@@ -2,3 +2,7 @@
 _security:
     resource: security.route_loader
     type: service
+
+_security_protected_resource_metadata:
+    resource: security.authenticator.access_token.route_loader
+    type: service
