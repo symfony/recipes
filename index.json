@@ -307,8 +307,10 @@
         "js-translation": "willdurand/js-translation-bundle",
         "js-translator": "willdurand/js-translation-bundle",
         "json-path": "symfony/json-path",
+        "json-schema": "symfony/json-schema",
         "json-streamer": "symfony/json-streamer",
         "jsonpath": "symfony/json-path",
+        "jsonschema": "symfony/json-schema",
         "jsonstreamer": "symfony/json-streamer",
         "jstranslation": "willdurand/js-translation-bundle",
         "jstranslator": "willdurand/js-translation-bundle",
@@ -3372,6 +3374,9 @@
                 "7.4",
                 "8.0",
                 "8.1",
+                "8.2"
+            ],
+            "symfony/json-schema": [
                 "8.2"
             ],
             "symfony/json-streamer": [
