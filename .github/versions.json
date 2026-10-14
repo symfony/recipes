@@ -2302,6 +2302,9 @@
             "8.1",
             "8.2"
         ],
+        "symfony/scaleway-key-management": [
+            "8.2"
+        ],
         "symfony/scaleway-mailer": [
             "6.4",
             "7.0",
