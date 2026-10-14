@@ -16,11 +16,8 @@ doctrine:
         auto_mapping: true
         mappings:
             App:
-                type: attribute
-                is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
-                alias: App
 
 when@test:
     doctrine:
@@ -32,15 +29,12 @@ when@prod:
     doctrine:
         orm:
             query_cache_driver:
-                type: pool
                 pool: doctrine.system_cache_pool
             result_cache_driver:
-                type: pool
                 pool: doctrine.result_cache_pool
 
     cache:
         pools:
-            doctrine.result_cache_pool:
-                adapter: cache.app
+            doctrine.result_cache_pool: null
             doctrine.system_cache_pool:
                 adapter: cache.system
