@@ -1,0 +1,27 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "target": "        texter_transports:",
+            "content": [
+                "            sms-sluzba: '%env(SMS_SLUZBA_DSN)%'"
+            ]
+        },
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    texter_transports:",
+            "content": [
+                "        sms-sluzba: '%env(SMS_SLUZBA_DSN)%'"
+            ]
+        }
+    ],
+    "env": {
+        "#1": "SMS_SLUZBA_DSN=sms-sluzba://USERNAME:PASSWORD@default"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
