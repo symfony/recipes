@@ -515,7 +515,9 @@
         "router": "symfony/routing",
         "routing": "symfony/routing",
         "runtime": "symfony/runtime",
+        "scaleway-key-management": "symfony/scaleway-key-management",
         "scaleway-mailer": "symfony/scaleway-mailer",
+        "scalewaykeymanagement": "symfony/scaleway-key-management",
         "scalewaymailer": "symfony/scaleway-mailer",
         "schedule": "symfony/scheduler",
         "scheduler": "symfony/scheduler",
@@ -4429,6 +4431,9 @@
                 "7.4",
                 "8.0",
                 "8.1",
+                "8.2"
+            ],
+            "symfony/scaleway-key-management": [
                 "8.2"
             ],
             "symfony/scaleway-mailer": [
