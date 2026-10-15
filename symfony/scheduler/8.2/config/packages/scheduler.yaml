@@ -1,4 +1,7 @@
 scheduler:
+    # send the scheduled messages to the Messenger transports routed for their class
+    use_messenger_routing: true
+
     schedules:
         default:
             # run the tasks missed while no worker was running, once
