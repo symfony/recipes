@@ -23,7 +23,7 @@ document.addEventListener('turbo:submit-end', function (event) {
 });
 
 export function generateCsrfToken (formElement) {
-    const csrfField = formElement.querySelector('input[data-controller="csrf-protection"], input[name="_csrf_token"]');
+    const csrfField = getCsrfField(formElement);
 
     if (!csrfField) {
         return;
@@ -46,7 +46,7 @@ export function generateCsrfToken (formElement) {
 
 export function generateCsrfHeaders (formElement) {
     const headers = {};
-    const csrfField = formElement.querySelector('input[data-controller="csrf-protection"], input[name="_csrf_token"]');
+    const csrfField = getCsrfField(formElement);
 
     if (!csrfField) {
         return headers;
@@ -62,7 +62,7 @@ export function generateCsrfHeaders (formElement) {
 }
 
 export function removeCsrfToken (formElement) {
-    const csrfField = formElement.querySelector('input[data-controller="csrf-protection"], input[name="_csrf_token"]');
+    const csrfField = getCsrfField(formElement);
 
     if (!csrfField) {
         return;
@@ -75,6 +75,13 @@ export function removeCsrfToken (formElement) {
 
         document.cookie = window.location.protocol === 'https:' ? '__Host-' + cookie + '; secure' : cookie;
     }
+}
+
+function getCsrfField (formElement) 
+{
+    const qs = 'input[data-controller="csrf-protection"], input[name="_csrf_token"]';
+
+    return formElement.querySelector(qs) || Array.from(document.querySelectorAll(qs)).find((field) => field.form === formElement) || null;
 }
 
 /* stimulusFetch: 'lazy' */
