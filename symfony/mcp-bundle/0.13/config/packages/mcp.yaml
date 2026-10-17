@@ -1,0 +1,4 @@
+mcp:
+    servers:
+        default:
+            registry: '*'
