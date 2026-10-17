@@ -21,6 +21,8 @@ jobs:
     run-checks:
         name: Run checks
         runs-on: ubuntu-latest
+        outputs:
+            skip: ${{ steps.platforms.outputs.skip }}
 
         steps:
             -
@@ -57,6 +59,69 @@ jobs:
                     .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ secrets.token }} | xargs -r -n10 rm -rf
 
             -
+                name: Detect supported Symfony and PHP versions
+                id: platforms
+                if: "always() && steps.checkout.outcome == 'success'"
+                continue-on-error: true
+                run: |
+                    PACKAGES=()
+                    for PACKAGE in $(find * -mindepth 1 -maxdepth 1 -type d | sort); do
+                        PACKAGES+=("$PACKAGE:^$(ls "$PACKAGE" | sort -V | tail -n1)")
+                    done
+
+                    if [[ 0 -eq ${#PACKAGES[@]} ]]; then exit 0; fi
+
+                    # A global Flex applies the skeletons' "extra.symfony.require" without installing them
+                    composer global config --no-plugins allow-plugins.symfony/flex true
+                    composer global require -q --no-progress --no-scripts --no-plugins symfony/flex
+
+                    ROWS=()
+                    for PLATFORM in '6 8.1' '7 8.2' '6 8.4' '7 8.4' '8 8.4'; do
+                        read -r SF PHP <<< "$PLATFORM"
+                        ID="sf${SF}_php${PHP/./}"
+                        DIR="$RUNNER_TEMP/platforms/$ID"
+                        CODE=unknown
+
+                        echo "::group::Symfony $SF, PHP $PHP"
+                        if composer create-project -q --no-plugins --no-install --no-scripts --ignore-platform-reqs "symfony/skeleton:^$SF" "$DIR" \
+                            && composer -d "$DIR" config platform.php "$PHP.99" \
+                            && composer -d "$DIR" config minimum-stability dev; then
+                            SF=$(jq -r --arg sf "$SF" '.extra.symfony.require // $sf | rtrimstr(".*")' "$DIR/composer.json")
+                            CODE=0
+                            composer -d "$DIR" require -W --dry-run --no-progress --no-scripts "${PACKAGES[@]}" || CODE=$?
+                        fi
+                        echo "::endgroup::"
+
+                        ROWS+=("$ID $SF $PHP $CODE")
+                    done
+
+                    SUPPORTED=$(printf '%s\n' "${ROWS[@]}" | awk '$4 == "0"')
+                    SKIP=$(printf '%s\n' "${ROWS[@]}" | awk '$4 == "2" { printf "%s ", $1 }')
+
+                    if [[ -z $SUPPORTED && -z $SKIP ]]; then exit 0; fi
+
+                    if [[ -z $SUPPORTED ]]; then
+                        SUMMARY='No combination can install the package(s), so all of them are tested anyway to show the error.'
+                        SKIPPED='❌ Not installable'
+                        echo "::warning::$SUMMARY"
+                    else
+                        SUMMARY="Lowest versions that can install the package(s) among the tested combinations: Symfony $(awk '{ print $2 }' <<< "$SUPPORTED" | sort -V | head -n1), PHP $(awk '{ print $3 }' <<< "$SUPPORTED" | sort -V | head -n1)"
+                        SKIPPED='⏭️ Not installable, skipped'
+                        echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+                    fi
+
+                    {
+                        echo '## Supported Symfony and PHP versions'
+                        echo
+                        echo "$SUMMARY"
+                        echo
+                        echo '| Symfony | PHP | Status |'
+                        echo '| --- | --- | --- |'
+                        printf '%s\n' "${ROWS[@]}" | awk -v skipped="$SKIPPED" '{ print "| " $2 " | " $3 " | " ($4 == "0" ? "✅ Tested" : ($4 == "2" ? skipped : "❔ Could not check, tested anyway")) " |" }'
+                        echo
+                    } > "$RUNNER_TEMP/supported-versions.md"
+
+            -
                 name: Generate Flex testing endpoint
                 if: "always() && steps.checkout.outcome == 'success' && github.base_ref == inputs.branch"
                 run: |
@@ -88,6 +153,15 @@ jobs:
                     find * -mindepth 1 -maxdepth 1 -type d | sort \
                         | .github/recipes-checker-main/run diff-recipe-versions 'https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json' \
                         > .github/diff-recipe-versions.md
+
+                    if [[ -f $RUNNER_TEMP/supported-versions.md ]]; then
+                        awk -v section="$RUNNER_TEMP/supported-versions.md" '
+                            /^## Diff between recipe versions/ && !done { while ((getline line < section) > 0) print line; done = 1 }
+                            { print }
+                            END { if (!done) { print ""; while ((getline line < section) > 0) print line } }
+                        ' .github/diff-recipe-versions.md > .github/diff-recipe-versions.md.tmp
+                        mv .github/diff-recipe-versions.md.tmp .github/diff-recipe-versions.md
+                    fi
 
             -
                 name: Post diff between recipe versions
@@ -246,7 +320,7 @@ jobs:
 
             -
                 name: Setup PHP 8.1
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf6_php81')"
                 uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
@@ -254,7 +328,7 @@ jobs:
 
             -
                 name: Create-project with skeleton ^6
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf6_php81')"
                 run: |
                     set -x
                     php -v
@@ -264,17 +338,10 @@ jobs:
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     composer require -W --ansi $PACKAGES
-                    EXIT_CODE=$?
-
-                    if [[ EXIT_CODE -eq 2 ]]; then
-                        echo -e "\n#\n#\n# You can ignore this error if your package does not support Symfony 6\n#\n#\n#\n"
-                    fi
-
-                    exit $EXIT_CODE
 
             -
                 name: Setup PHP 8.2
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf7_php82')"
                 uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
@@ -282,7 +349,7 @@ jobs:
 
             -
                 name: Create-project with skeleton ^7
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf7_php82')"
                 run: |
                     set -x
                     php -v
@@ -295,7 +362,7 @@ jobs:
 
             -
                 name: Setup PHP 8.4
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && (!contains(needs.run-checks.outputs.skip, 'sf6_php84') || !contains(needs.run-checks.outputs.skip, 'sf7_php84') || !contains(needs.run-checks.outputs.skip, 'sf8_php84'))"
                 uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
@@ -303,7 +370,7 @@ jobs:
 
             -
                 name: Create-project with skeleton ^6
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf6_php84')"
                 run: |
                     set -x
                     php -v
@@ -316,7 +383,7 @@ jobs:
 
             -
                 name: Create-project with skeleton ^7
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf7_php84')"
                 run: |
                     set -x
                     php -v
@@ -329,7 +396,7 @@ jobs:
 
             -
                 name: Create-project with skeleton ^8
-                if: "always() && steps.config.outcome == 'success'"
+                if: "always() && steps.config.outcome == 'success' && !contains(needs.run-checks.outputs.skip, 'sf8_php84')"
                 run: |
                     set -x
                     php -v
