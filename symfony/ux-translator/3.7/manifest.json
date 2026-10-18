@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Translator\\UxTranslatorBundle": ["all"]
+    },
+    "conflict": {
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "var/": "var/"
+    }
+}
