@@ -1,0 +1,5 @@
+ux_native:
+    resource: '@UXNativeBundle/config/routes.php'
+    # The Hotwire Native apps match these paths anywhere in the URL:
+    # you can add a prefix, but do not rename the paths themselves
+    #prefix: '/app'
