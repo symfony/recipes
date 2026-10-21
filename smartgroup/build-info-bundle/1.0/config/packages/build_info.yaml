@@ -1,0 +1,5 @@
+build_info:
+    # Path to the generated build metadata JSON file.
+    # path: '%kernel.project_dir%/var/build-info.json'
+    twig:
+        enabled: true
