@@ -1,0 +1,57 @@
+{
+    "aliases": {
+        "foundry": "zenstruck/foundry"
+    },
+    "recipes": {
+        "zenstruck/foundry": [
+            "1.9",
+            "1.10",
+            "2.0",
+            "2.5",
+            "2.6",
+            "2.7",
+            "2.15"
+        ]
+    },
+    "recipe-conflicts": {
+        "zenstruck/foundry": {
+            "1.10": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "2.0": {
+                "symfony/framework-bundle": "<5.3"
+            },
+            "2.5": {
+                "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+                "symfony/framework-bundle": "<6.4"
+            },
+            "2.6": {
+                "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+                "symfony/framework-bundle": "<6.4"
+            },
+            "2.7": {
+                "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+                "symfony/framework-bundle": "<6.4"
+            },
+            "2.15": {
+                "doctrine/persistence": "<2.0",
+                "symfony/flex": "<1.23.0 || >=2.0.0,<2.8.0",
+                "symfony/framework-bundle": "<6.4"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1604/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1604/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
