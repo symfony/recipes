@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "smartgroup/build-info-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SmartGroup\\BuildInfoBundle\\SmartGroupBuildInfoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/build_info.yaml": {
+                    "contents": [
+                        "build_info:",
+                        "    # Path to the generated build metadata JSON file.",
+                        "    # path: '%kernel.project_dir%/var/build-info.json'",
+                        "    twig:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fae8e2370a0b875ae84c326314c2c79ed4446100"
+        }
+    }
+}
