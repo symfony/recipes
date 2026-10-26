@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/slack-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            slack: '%env(SLACK_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        slack: '%env(SLACK_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SLACK_DSN=slack://TOKEN@default?channel=CHANNEL"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "2aeb017573691b02bbad7aac19e4f30162f55827"
+        }
+    }
+}

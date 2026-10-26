@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/telnyx-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            telnyx: '%env(TELNYX_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        telnyx: '%env(TELNYX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TELNYX_DSN=telnyx://API_KEY@default?from=FROM&messaging_profile_id=MESSAGING_PROFILE_ID"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "c3322dce3dfb0c143d54221f77560a29de7a09a9"
+        }
+    }
+}

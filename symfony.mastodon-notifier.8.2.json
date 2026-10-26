@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/mastodon-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            mastodon: '%env(MASTODON_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        mastodon: '%env(MASTODON_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MASTODON_DSN=mastodon://ACCESS_TOKEN@HOST"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "08fc9ab82628a2ba407efe71cadcaab178377448"
+        }
+    }
+}

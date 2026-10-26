@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/pager-duty-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            pagerduty: '%env(PAGERDUTY_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        pagerduty: '%env(PAGERDUTY_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PAGERDUTY_DSN=pagerduty://TOKEN@SUBDOMAIN"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "bad13ef5ad8ea5d035e467ce965b1b7b4fe219c2"
+        }
+    }
+}

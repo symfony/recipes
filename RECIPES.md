@@ -91,138 +91,138 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ai-weaviate-store](https://packagist.org/packages/symfony/ai-weaviate-store) | [0.1](../../../tree/main/symfony/ai-weaviate-store/0.1) | `ai-weaviate-store`, `aiweaviatestore` |
 | [symfony/ai-wikipedia-tool](https://packagist.org/packages/symfony/ai-wikipedia-tool) | [0.1](../../../tree/main/symfony/ai-wikipedia-tool/0.1) | `ai-wikipedia-tool`, `aiwikipediatool` |
 | [symfony/ai-youtube-tool](https://packagist.org/packages/symfony/ai-youtube-tool) | [0.1](../../../tree/main/symfony/ai-youtube-tool/0.1) | `ai-youtube-tool`, `aiyoutubetool` |
-| [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [5.3](../../../tree/main/symfony/all-my-sms-notifier/5.3) | `all-my-sms-notifier` |
+| [symfony/all-my-sms-notifier](https://packagist.org/packages/symfony/all-my-sms-notifier) | [8.2](../../../tree/main/symfony/all-my-sms-notifier/8.2) | `all-my-sms-notifier` |
 | [symfony/allmysms-notifier](https://packagist.org/packages/symfony/allmysms-notifier) | [5.3](../../../tree/main/symfony/allmysms-notifier/5.3) | `allmysms-notifier`, `allmysmsnotifier` |
 | [symfony/amazon-mailer](https://packagist.org/packages/symfony/amazon-mailer) | [4.4](../../../tree/main/symfony/amazon-mailer/4.4) | `amazon-mailer`, `amazonmailer` |
-| [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [5.4](../../../tree/main/symfony/amazon-sns-notifier/5.4) | `amazon-sns-notifier`, `amazonsnsnotifier` |
+| [symfony/amazon-sns-notifier](https://packagist.org/packages/symfony/amazon-sns-notifier) | [8.2](../../../tree/main/symfony/amazon-sns-notifier/8.2) | `amazon-sns-notifier`, `amazonsnsnotifier` |
 | [symfony/asset-mapper](https://packagist.org/packages/symfony/asset-mapper) | [8.2](../../../tree/main/symfony/asset-mapper/8.2) | `asset-mapper`, `assetmapper`, `importmap` |
 | [symfony/azure-mailer](https://packagist.org/packages/symfony/azure-mailer) | [7.1](../../../tree/main/symfony/azure-mailer/7.1) | `azure-mailer`, `azuremailer` |
-| [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [6.3](../../../tree/main/symfony/bandwidth-notifier/6.3) | `bandwidth-notifier`, `bandwidthnotifier` |
+| [symfony/bandwidth-notifier](https://packagist.org/packages/symfony/bandwidth-notifier) | [8.2](../../../tree/main/symfony/bandwidth-notifier/8.2) | `bandwidth-notifier`, `bandwidthnotifier` |
 | [symfony/bluesky-notifier](https://packagist.org/packages/symfony/bluesky-notifier) | [7.1](../../../tree/main/symfony/bluesky-notifier/7.1) | `bluesky-notifier`, `blueskynotifier` |
 | [symfony/brevo-mailer](https://packagist.org/packages/symfony/brevo-mailer) | [6.4](../../../tree/main/symfony/brevo-mailer/6.4) | `brevo-mailer`, `brevomailer` |
 | [symfony/brevo-notifier](https://packagist.org/packages/symfony/brevo-notifier) | [6.4](../../../tree/main/symfony/brevo-notifier/6.4) | `brevo-notifier`, `brevonotifier` |
-| [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [6.2](../../../tree/main/symfony/chatwork-notifier/6.2) | `chatwork-notifier`, `chatworknotifier` |
-| [symfony/click-send-notifier](https://packagist.org/packages/symfony/click-send-notifier) | [6.3](../../../tree/main/symfony/click-send-notifier/6.3) | `click-send-notifier`, `clicksendnotifier` |
-| [symfony/clickatell-notifier](https://packagist.org/packages/symfony/clickatell-notifier) | [5.3](../../../tree/main/symfony/clickatell-notifier/5.3) | `clickatell-notifier`, `clickatellnotifier` |
+| [symfony/chatwork-notifier](https://packagist.org/packages/symfony/chatwork-notifier) | [8.2](../../../tree/main/symfony/chatwork-notifier/8.2) | `chatwork-notifier`, `chatworknotifier` |
+| [symfony/click-send-notifier](https://packagist.org/packages/symfony/click-send-notifier) | [8.2](../../../tree/main/symfony/click-send-notifier/8.2) | `click-send-notifier`, `clicksendnotifier` |
+| [symfony/clickatell-notifier](https://packagist.org/packages/symfony/clickatell-notifier) | [8.2](../../../tree/main/symfony/clickatell-notifier/8.2) | `clickatell-notifier`, `clickatellnotifier` |
 | [symfony/console](https://packagist.org/packages/symfony/console) | [5.3](../../../tree/main/symfony/console/5.3) | `cli`, `console` |
-| [symfony/crowdin-translation-provider](https://packagist.org/packages/symfony/crowdin-translation-provider) | [5.3](../../../tree/main/symfony/crowdin-translation-provider/5.3) | `crowdin-translation-provider`, `crowdintranslationprovider` |
+| [symfony/crowdin-translation-provider](https://packagist.org/packages/symfony/crowdin-translation-provider) | [8.2](../../../tree/main/symfony/crowdin-translation-provider/8.2) | `crowdin-translation-provider`, `crowdintranslationprovider` |
 | [symfony/debug-bundle](https://packagist.org/packages/symfony/debug-bundle) | [8.2](../../../tree/main/symfony/debug-bundle/8.2) | `debug-bundle`, `debugbundle` |
-| [symfony/discord-notifier](https://packagist.org/packages/symfony/discord-notifier) | [5.2](../../../tree/main/symfony/discord-notifier/5.2) | `discord-notifier`, `discordnotifier` |
-| [symfony/engagespot-notifier](https://packagist.org/packages/symfony/engagespot-notifier) | [6.1](../../../tree/main/symfony/engagespot-notifier/6.1) | `engagespot-notifier`, `engagespotnotifier` |
-| [symfony/esendex-notifier](https://packagist.org/packages/symfony/esendex-notifier) | [5.2](../../../tree/main/symfony/esendex-notifier/5.2) | `esendex-notifier`, `esendexnotifier` |
-| [symfony/expo-notifier](https://packagist.org/packages/symfony/expo-notifier) | [5.4](../../../tree/main/symfony/expo-notifier/5.4) | `expo-notifier`, `exponotifier` |
-| [symfony/fake-chat-notifier](https://packagist.org/packages/symfony/fake-chat-notifier) | [5.3](../../../tree/main/symfony/fake-chat-notifier/5.3) | `fake-chat-notifier`, `fakechatnotifier` |
-| [symfony/fake-sms-notifier](https://packagist.org/packages/symfony/fake-sms-notifier) | [5.3](../../../tree/main/symfony/fake-sms-notifier/5.3) | `fake-sms-notifier`, `fakesmsnotifier` |
-| [symfony/firebase-notifier](https://packagist.org/packages/symfony/firebase-notifier) | [5.1](../../../tree/main/symfony/firebase-notifier/5.1) | `firebase-notifier`, `firebasenotifier` |
+| [symfony/discord-notifier](https://packagist.org/packages/symfony/discord-notifier) | [8.2](../../../tree/main/symfony/discord-notifier/8.2) | `discord-notifier`, `discordnotifier` |
+| [symfony/engagespot-notifier](https://packagist.org/packages/symfony/engagespot-notifier) | [8.2](../../../tree/main/symfony/engagespot-notifier/8.2) | `engagespot-notifier`, `engagespotnotifier` |
+| [symfony/esendex-notifier](https://packagist.org/packages/symfony/esendex-notifier) | [8.2](../../../tree/main/symfony/esendex-notifier/8.2) | `esendex-notifier`, `esendexnotifier` |
+| [symfony/expo-notifier](https://packagist.org/packages/symfony/expo-notifier) | [8.2](../../../tree/main/symfony/expo-notifier/8.2) | `expo-notifier`, `exponotifier` |
+| [symfony/fake-chat-notifier](https://packagist.org/packages/symfony/fake-chat-notifier) | [8.2](../../../tree/main/symfony/fake-chat-notifier/8.2) | `fake-chat-notifier`, `fakechatnotifier` |
+| [symfony/fake-sms-notifier](https://packagist.org/packages/symfony/fake-sms-notifier) | [8.2](../../../tree/main/symfony/fake-sms-notifier/8.2) | `fake-sms-notifier`, `fakesmsnotifier` |
+| [symfony/firebase-notifier](https://packagist.org/packages/symfony/firebase-notifier) | [8.2](../../../tree/main/symfony/firebase-notifier/8.2) | `firebase-notifier`, `firebasenotifier` |
 | [symfony/flex](https://packagist.org/packages/symfony/flex) | [2.4](../../../tree/main/symfony/flex/2.4) | `flex` |
 | [symfony/form](https://packagist.org/packages/symfony/form) | [8.2](../../../tree/main/symfony/form/8.2) | `form` |
-| [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [6.1](../../../tree/main/symfony/forty-six-elks-notifier/6.1) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
+| [symfony/forty-six-elks-notifier](https://packagist.org/packages/symfony/forty-six-elks-notifier) | [8.2](../../../tree/main/symfony/forty-six-elks-notifier/8.2) | `forty-six-elks-notifier`, `fortysixelksnotifier` |
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [8.2](../../../tree/main/symfony/framework-bundle/8.2) | `framework-bundle`, `frameworkbundle` |
-| [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [5.1](../../../tree/main/symfony/free-mobile-notifier/5.1) | `free-mobile-notifier`, `freemobilenotifier` |
-| [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [5.3](../../../tree/main/symfony/gateway-api-notifier/5.3) | `gateway-api-notifier` |
+| [symfony/free-mobile-notifier](https://packagist.org/packages/symfony/free-mobile-notifier) | [8.2](../../../tree/main/symfony/free-mobile-notifier/8.2) | `free-mobile-notifier`, `freemobilenotifier` |
+| [symfony/gateway-api-notifier](https://packagist.org/packages/symfony/gateway-api-notifier) | [8.2](../../../tree/main/symfony/gateway-api-notifier/8.2) | `gateway-api-notifier` |
 | [symfony/gatewayapi-notifier](https://packagist.org/packages/symfony/gatewayapi-notifier) | [5.3](../../../tree/main/symfony/gatewayapi-notifier/5.3) | `gatewayapi-notifier`, `gatewayapinotifier` |
 | [symfony/gitter-notifier](https://packagist.org/packages/symfony/gitter-notifier) | [5.3](../../../tree/main/symfony/gitter-notifier/5.3) | `gitter-notifier`, `gitternotifier` |
-| [symfony/go-ip-notifier](https://packagist.org/packages/symfony/go-ip-notifier) | [6.4](../../../tree/main/symfony/go-ip-notifier/6.4) | `go-ip-notifier`, `goipnotifier` |
-| [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [5.3](../../../tree/main/symfony/google-chat-notifier/5.3) | `google-chat-notifier`, `googlechatnotifier` |
+| [symfony/go-ip-notifier](https://packagist.org/packages/symfony/go-ip-notifier) | [8.2](../../../tree/main/symfony/go-ip-notifier/8.2) | `go-ip-notifier`, `goipnotifier` |
+| [symfony/google-chat-notifier](https://packagist.org/packages/symfony/google-chat-notifier) | [8.2](../../../tree/main/symfony/google-chat-notifier/8.2) | `google-chat-notifier`, `googlechatnotifier` |
 | [symfony/google-mailer](https://packagist.org/packages/symfony/google-mailer) | [4.4](../../../tree/main/symfony/google-mailer/4.4) | `google-mailer`, `googlemailer` |
 | [symfony/infobip-mailer](https://packagist.org/packages/symfony/infobip-mailer) | [6.2](../../../tree/main/symfony/infobip-mailer/6.2) | `infobip-mailer`, `infobipmailer` |
-| [symfony/infobip-notifier](https://packagist.org/packages/symfony/infobip-notifier) | [5.2](../../../tree/main/symfony/infobip-notifier/5.2) | `infobip-notifier`, `infobipnotifier` |
-| [symfony/iqsms-notifier](https://packagist.org/packages/symfony/iqsms-notifier) | [5.3](../../../tree/main/symfony/iqsms-notifier/5.3) | `iqsms-notifier`, `iqsmsnotifier` |
-| [symfony/isendpro-notifier](https://packagist.org/packages/symfony/isendpro-notifier) | [6.3](../../../tree/main/symfony/isendpro-notifier/6.3) | `isendpro-notifier`, `isendpronotifier` |
-| [symfony/joli-notif-notifier](https://packagist.org/packages/symfony/joli-notif-notifier) | [7.2](../../../tree/main/symfony/joli-notif-notifier/7.2) | `joli-notif-notifier`, `jolinotifnotifier` |
-| [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [6.1](../../../tree/main/symfony/kaz-info-teh-notifier/6.1) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |
-| [symfony/light-sms-notifier](https://packagist.org/packages/symfony/light-sms-notifier) | [5.3](../../../tree/main/symfony/light-sms-notifier/5.3) | `light-sms-notifier`, `lightsmsnotifier` |
-| [symfony/line-bot-notifier](https://packagist.org/packages/symfony/line-bot-notifier) | [7.2](../../../tree/main/symfony/line-bot-notifier/7.2) | `line-bot-notifier`, `linebotnotifier` |
-| [symfony/line-notify-notifier](https://packagist.org/packages/symfony/line-notify-notifier) | [6.3](../../../tree/main/symfony/line-notify-notifier/6.3) | `line-notify-notifier`, `linenotifynotifier` |
-| [symfony/linked-in-notifier](https://packagist.org/packages/symfony/linked-in-notifier) | [5.2](../../../tree/main/symfony/linked-in-notifier/5.2) | `linked-in-notifier`, `linkedinnotifier` |
+| [symfony/infobip-notifier](https://packagist.org/packages/symfony/infobip-notifier) | [8.2](../../../tree/main/symfony/infobip-notifier/8.2) | `infobip-notifier`, `infobipnotifier` |
+| [symfony/iqsms-notifier](https://packagist.org/packages/symfony/iqsms-notifier) | [8.2](../../../tree/main/symfony/iqsms-notifier/8.2) | `iqsms-notifier`, `iqsmsnotifier` |
+| [symfony/isendpro-notifier](https://packagist.org/packages/symfony/isendpro-notifier) | [8.2](../../../tree/main/symfony/isendpro-notifier/8.2) | `isendpro-notifier`, `isendpronotifier` |
+| [symfony/joli-notif-notifier](https://packagist.org/packages/symfony/joli-notif-notifier) | [8.2](../../../tree/main/symfony/joli-notif-notifier/8.2) | `joli-notif-notifier`, `jolinotifnotifier` |
+| [symfony/kaz-info-teh-notifier](https://packagist.org/packages/symfony/kaz-info-teh-notifier) | [8.2](../../../tree/main/symfony/kaz-info-teh-notifier/8.2) | `kaz-info-teh-notifier`, `kazinfotehnotifier` |
+| [symfony/light-sms-notifier](https://packagist.org/packages/symfony/light-sms-notifier) | [8.2](../../../tree/main/symfony/light-sms-notifier/8.2) | `light-sms-notifier`, `lightsmsnotifier` |
+| [symfony/line-bot-notifier](https://packagist.org/packages/symfony/line-bot-notifier) | [8.2](../../../tree/main/symfony/line-bot-notifier/8.2) | `line-bot-notifier`, `linebotnotifier` |
+| [symfony/line-notify-notifier](https://packagist.org/packages/symfony/line-notify-notifier) | [8.2](../../../tree/main/symfony/line-notify-notifier/8.2) | `line-notify-notifier`, `linenotifynotifier` |
+| [symfony/linked-in-notifier](https://packagist.org/packages/symfony/linked-in-notifier) | [8.2](../../../tree/main/symfony/linked-in-notifier/8.2) | `linked-in-notifier`, `linkedinnotifier` |
 | [symfony/lock](https://packagist.org/packages/symfony/lock) | [8.2](../../../tree/main/symfony/lock/8.2) | `lock` |
-| [symfony/loco-translation-provider](https://packagist.org/packages/symfony/loco-translation-provider) | [5.3](../../../tree/main/symfony/loco-translation-provider/5.3) | `loco-translation-provider`, `locotranslationprovider` |
-| [symfony/lokalise-translation-provider](https://packagist.org/packages/symfony/lokalise-translation-provider) | [5.3](../../../tree/main/symfony/lokalise-translation-provider/5.3) | `lokalise-translation-provider`, `lokalisetranslationprovider` |
-| [symfony/lox24-notifier](https://packagist.org/packages/symfony/lox24-notifier) | [7.1](../../../tree/main/symfony/lox24-notifier/7.1) | `lox24-notifier`, `lox24notifier` |
-| [symfony/mail-pace-mailer](https://packagist.org/packages/symfony/mail-pace-mailer) | [6.2](../../../tree/main/symfony/mail-pace-mailer/6.2) | `mail-pace-mailer`, `mailpacemailer` |
+| [symfony/loco-translation-provider](https://packagist.org/packages/symfony/loco-translation-provider) | [8.2](../../../tree/main/symfony/loco-translation-provider/8.2) | `loco-translation-provider`, `locotranslationprovider` |
+| [symfony/lokalise-translation-provider](https://packagist.org/packages/symfony/lokalise-translation-provider) | [8.2](../../../tree/main/symfony/lokalise-translation-provider/8.2) | `lokalise-translation-provider`, `lokalisetranslationprovider` |
+| [symfony/lox24-notifier](https://packagist.org/packages/symfony/lox24-notifier) | [8.2](../../../tree/main/symfony/lox24-notifier/8.2) | `lox24-notifier`, `lox24notifier` |
+| [symfony/mail-pace-mailer](https://packagist.org/packages/symfony/mail-pace-mailer) | [8.2](../../../tree/main/symfony/mail-pace-mailer/8.2) | `mail-pace-mailer`, `mailpacemailer` |
 | [symfony/mailchimp-mailer](https://packagist.org/packages/symfony/mailchimp-mailer) | [4.4](../../../tree/main/symfony/mailchimp-mailer/4.4) | `mailchimp-mailer`, `mailchimpmailer` |
 | [symfony/mailer](https://packagist.org/packages/symfony/mailer) | [8.2](../../../tree/main/symfony/mailer/8.2) | `mail`, `mailer` |
 | [symfony/mailer-send-mailer](https://packagist.org/packages/symfony/mailer-send-mailer) | [6.3](../../../tree/main/symfony/mailer-send-mailer/6.3) | `mailer-send-mailer`, `mailersendmailer` |
 | [symfony/mailgun-mailer](https://packagist.org/packages/symfony/mailgun-mailer) | [4.4](../../../tree/main/symfony/mailgun-mailer/4.4) | `mailgun-mailer`, `mailgunmailer` |
 | [symfony/mailjet-mailer](https://packagist.org/packages/symfony/mailjet-mailer) | [5.2](../../../tree/main/symfony/mailjet-mailer/5.2) | `mailjet-mailer`, `mailjetmailer` |
-| [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [5.4](../../../tree/main/symfony/mailjet-notifier/5.4) | `mailjet-notifier`, `mailjetnotifier` |
+| [symfony/mailjet-notifier](https://packagist.org/packages/symfony/mailjet-notifier) | [8.2](../../../tree/main/symfony/mailjet-notifier/8.2) | `mailjet-notifier`, `mailjetnotifier` |
 | [symfony/mailomat-mailer](https://packagist.org/packages/symfony/mailomat-mailer) | [7.2](../../../tree/main/symfony/mailomat-mailer/7.2) | `mailomat-mailer`, `mailomatmailer` |
 | [symfony/mailtrap-mailer](https://packagist.org/packages/symfony/mailtrap-mailer) | [7.2](../../../tree/main/symfony/mailtrap-mailer/7.2) | `mailtrap-mailer`, `mailtrapmailer` |
 | [symfony/maker-bundle](https://packagist.org/packages/symfony/maker-bundle) | [1.0](../../../tree/main/symfony/maker-bundle/1.0) | `generator`, `make`, `maker`, `maker-bundle`, `makerbundle` |
-| [symfony/mastodon-notifier](https://packagist.org/packages/symfony/mastodon-notifier) | [6.3](../../../tree/main/symfony/mastodon-notifier/6.3) | `mastodon-notifier`, `mastodonnotifier` |
-| [symfony/matrix-notifier](https://packagist.org/packages/symfony/matrix-notifier) | [7.3](../../../tree/main/symfony/matrix-notifier/7.3) | `matrix-notifier`, `matrixnotifier` |
-| [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [5.1](../../../tree/main/symfony/mattermost-notifier/5.1) | `mattermost-notifier`, `mattermostnotifier` |
+| [symfony/mastodon-notifier](https://packagist.org/packages/symfony/mastodon-notifier) | [8.2](../../../tree/main/symfony/mastodon-notifier/8.2) | `mastodon-notifier`, `mastodonnotifier` |
+| [symfony/matrix-notifier](https://packagist.org/packages/symfony/matrix-notifier) | [8.2](../../../tree/main/symfony/matrix-notifier/8.2) | `matrix-notifier`, `matrixnotifier` |
+| [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [8.2](../../../tree/main/symfony/mattermost-notifier/8.2) | `mattermost-notifier`, `mattermostnotifier` |
 | [symfony/mercure-bundle](https://packagist.org/packages/symfony/mercure-bundle) | [0.6](../../../tree/main/symfony/mercure-bundle/0.6) | `mercure`, `mercure-bundle`, `mercurebundle` |
-| [symfony/mercure-notifier](https://packagist.org/packages/symfony/mercure-notifier) | [5.3](../../../tree/main/symfony/mercure-notifier/5.3) | `mercure-notifier`, `mercurenotifier` |
-| [symfony/message-bird-notifier](https://packagist.org/packages/symfony/message-bird-notifier) | [5.3](../../../tree/main/symfony/message-bird-notifier/5.3) | `message-bird-notifier`, `messagebirdnotifier` |
-| [symfony/message-media-notifier](https://packagist.org/packages/symfony/message-media-notifier) | [5.4](../../../tree/main/symfony/message-media-notifier/5.4) | `message-media-notifier`, `messagemedianotifier` |
+| [symfony/mercure-notifier](https://packagist.org/packages/symfony/mercure-notifier) | [8.2](../../../tree/main/symfony/mercure-notifier/8.2) | `mercure-notifier`, `mercurenotifier` |
+| [symfony/message-bird-notifier](https://packagist.org/packages/symfony/message-bird-notifier) | [8.2](../../../tree/main/symfony/message-bird-notifier/8.2) | `message-bird-notifier`, `messagebirdnotifier` |
+| [symfony/message-media-notifier](https://packagist.org/packages/symfony/message-media-notifier) | [8.2](../../../tree/main/symfony/message-media-notifier/8.2) | `message-media-notifier`, `messagemedianotifier` |
 | [symfony/messenger](https://packagist.org/packages/symfony/messenger) | [8.2](../../../tree/main/symfony/messenger/8.2) | `messenger` |
-| [symfony/microsoft-teams-notifier](https://packagist.org/packages/symfony/microsoft-teams-notifier) | [5.3](../../../tree/main/symfony/microsoft-teams-notifier/5.3) | `microsoft-teams-notifier`, `microsoftteamsnotifier` |
-| [symfony/mobyt-notifier](https://packagist.org/packages/symfony/mobyt-notifier) | [5.2](../../../tree/main/symfony/mobyt-notifier/5.2) | `mobyt-notifier`, `mobytnotifier` |
+| [symfony/microsoft-teams-notifier](https://packagist.org/packages/symfony/microsoft-teams-notifier) | [8.2](../../../tree/main/symfony/microsoft-teams-notifier/8.2) | `microsoft-teams-notifier`, `microsoftteamsnotifier` |
+| [symfony/mobyt-notifier](https://packagist.org/packages/symfony/mobyt-notifier) | [8.2](../../../tree/main/symfony/mobyt-notifier/8.2) | `mobyt-notifier`, `mobytnotifier` |
 | [symfony/monolog-bundle](https://packagist.org/packages/symfony/monolog-bundle) | [3.7](../../../tree/main/symfony/monolog-bundle/3.7) | `log`, `logger`, `logging`, `logs`, `monolog`, `monolog-bundle`, `monologbundle` |
 | [symfony/nexmo-notifier](https://packagist.org/packages/symfony/nexmo-notifier) | [5.0](../../../tree/main/symfony/nexmo-notifier/5.0) | `nexmo-notifier`, `nexmonotifier` |
 | [symfony/notifier](https://packagist.org/packages/symfony/notifier) | [8.2](../../../tree/main/symfony/notifier/8.2) | `notifier` |
 | [symfony/novu-notifier](https://packagist.org/packages/symfony/novu-notifier) | [6.4](../../../tree/main/symfony/novu-notifier/6.4) | `novu-notifier`, `novunotifier` |
 | [symfony/ntfy-notifier](https://packagist.org/packages/symfony/ntfy-notifier) | [6.4](../../../tree/main/symfony/ntfy-notifier/6.4) | `ntfy-notifier`, `ntfynotifier` |
-| [symfony/octopush-notifier](https://packagist.org/packages/symfony/octopush-notifier) | [5.3](../../../tree/main/symfony/octopush-notifier/5.3) | `octopush-notifier`, `octopushnotifier` |
-| [symfony/one-signal-notifier](https://packagist.org/packages/symfony/one-signal-notifier) | [5.4](../../../tree/main/symfony/one-signal-notifier/5.4) | `one-signal-notifier`, `onesignalnotifier` |
-| [symfony/orange-sms-notifier](https://packagist.org/packages/symfony/orange-sms-notifier) | [6.1](../../../tree/main/symfony/orange-sms-notifier/6.1) | `orange-sms-notifier`, `orangesmsnotifier` |
-| [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [5.1](../../../tree/main/symfony/ovh-cloud-notifier/5.1) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
-| [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [6.3](../../../tree/main/symfony/pager-duty-notifier/6.3) | `pager-duty-notifier`, `pagerdutynotifier` |
+| [symfony/octopush-notifier](https://packagist.org/packages/symfony/octopush-notifier) | [8.2](../../../tree/main/symfony/octopush-notifier/8.2) | `octopush-notifier`, `octopushnotifier` |
+| [symfony/one-signal-notifier](https://packagist.org/packages/symfony/one-signal-notifier) | [8.2](../../../tree/main/symfony/one-signal-notifier/8.2) | `one-signal-notifier`, `onesignalnotifier` |
+| [symfony/orange-sms-notifier](https://packagist.org/packages/symfony/orange-sms-notifier) | [8.2](../../../tree/main/symfony/orange-sms-notifier/8.2) | `orange-sms-notifier`, `orangesmsnotifier` |
+| [symfony/ovh-cloud-notifier](https://packagist.org/packages/symfony/ovh-cloud-notifier) | [8.2](../../../tree/main/symfony/ovh-cloud-notifier/8.2) | `ovh-cloud-notifier`, `ovhcloudnotifier` |
+| [symfony/pager-duty-notifier](https://packagist.org/packages/symfony/pager-duty-notifier) | [8.2](../../../tree/main/symfony/pager-duty-notifier/8.2) | `pager-duty-notifier`, `pagerdutynotifier` |
 | [symfony/panther](https://packagist.org/packages/symfony/panther) | [1.0](../../../tree/main/symfony/panther/1.0) | `panther` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [8.2](../../../tree/main/symfony/phpunit-bridge/8.2) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
-| [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [6.4](../../../tree/main/symfony/phrase-translation-provider/6.4) | `phrase-translation-provider`, `phrasetranslationprovider` |
-| [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [6.3](../../../tree/main/symfony/plivo-notifier/6.3) | `plivo-notifier`, `plivonotifier` |
+| [symfony/phrase-translation-provider](https://packagist.org/packages/symfony/phrase-translation-provider) | [8.2](../../../tree/main/symfony/phrase-translation-provider/8.2) | `phrase-translation-provider`, `phrasetranslationprovider` |
+| [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [8.2](../../../tree/main/symfony/plivo-notifier/8.2) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postal-mailer](https://packagist.org/packages/symfony/postal-mailer) | [7.2](../../../tree/main/symfony/postal-mailer/7.2) | `postal-mailer`, `postalmailer` |
-| [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [4.4](../../../tree/main/symfony/postmark-mailer/4.4) | `postmark-mailer`, `postmarkmailer` |
-| [symfony/primotexto-notifier](https://packagist.org/packages/symfony/primotexto-notifier) | [7.2](../../../tree/main/symfony/primotexto-notifier/7.2) | `primotexto-notifier`, `primotextonotifier` |
+| [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [8.2](../../../tree/main/symfony/postmark-mailer/8.2) | `postmark-mailer`, `postmarkmailer` |
+| [symfony/primotexto-notifier](https://packagist.org/packages/symfony/primotexto-notifier) | [8.2](../../../tree/main/symfony/primotexto-notifier/8.2) | `primotexto-notifier`, `primotextonotifier` |
 | [symfony/property-info](https://packagist.org/packages/symfony/property-info) | [8.2](../../../tree/main/symfony/property-info/8.2) | `property-info`, `propertyinfo` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](../../../tree/main/symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |
-| [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [6.3](../../../tree/main/symfony/pushover-notifier/6.3) | `pushover-notifier`, `pushovernotifier` |
-| [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [7.1](../../../tree/main/symfony/pushy-notifier/7.1) | `pushy-notifier`, `pushynotifier` |
-| [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [6.4](../../../tree/main/symfony/redlink-notifier/6.4) | `redlink-notifier`, `redlinknotifier` |
+| [symfony/pushover-notifier](https://packagist.org/packages/symfony/pushover-notifier) | [8.2](../../../tree/main/symfony/pushover-notifier/8.2) | `pushover-notifier`, `pushovernotifier` |
+| [symfony/pushy-notifier](https://packagist.org/packages/symfony/pushy-notifier) | [8.2](../../../tree/main/symfony/pushy-notifier/8.2) | `pushy-notifier`, `pushynotifier` |
+| [symfony/redlink-notifier](https://packagist.org/packages/symfony/redlink-notifier) | [8.2](../../../tree/main/symfony/redlink-notifier/8.2) | `redlink-notifier`, `redlinknotifier` |
 | [symfony/reprise](https://packagist.org/packages/symfony/reprise) | [1.2](../../../tree/main/symfony/reprise/1.2) | `reprise` |
 | [symfony/requirements-checker](https://packagist.org/packages/symfony/requirements-checker) | [2.0](../../../tree/main/symfony/requirements-checker/2.0) | `req-check`, `req-checker`, `req-checks`, `reqcheck`, `reqchecker`, `reqchecks`, `requirement-check`, `requirement-checker`, `requirementcheck`, `requirementchecker`, `requirements-checker`, `requirementschecker` |
 | [symfony/resend-mailer](https://packagist.org/packages/symfony/resend-mailer) | [7.1](../../../tree/main/symfony/resend-mailer/7.1) | `resend-mailer`, `resendmailer` |
-| [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [6.3](../../../tree/main/symfony/ring-central-notifier/6.3) | `ring-central-notifier`, `ringcentralnotifier` |
-| [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [5.1](../../../tree/main/symfony/rocket-chat-notifier/5.1) | `rocket-chat-notifier`, `rocketchatnotifier` |
+| [symfony/ring-central-notifier](https://packagist.org/packages/symfony/ring-central-notifier) | [8.2](../../../tree/main/symfony/ring-central-notifier/8.2) | `ring-central-notifier`, `ringcentralnotifier` |
+| [symfony/rocket-chat-notifier](https://packagist.org/packages/symfony/rocket-chat-notifier) | [8.2](../../../tree/main/symfony/rocket-chat-notifier/8.2) | `rocket-chat-notifier`, `rocketchatnotifier` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [8.2](../../../tree/main/symfony/routing/8.2) | `router`, `routing` |
 | [symfony/scaleway-mailer](https://packagist.org/packages/symfony/scaleway-mailer) | [6.4](../../../tree/main/symfony/scaleway-mailer/6.4) | `scaleway-mailer`, `scalewaymailer` |
 | [symfony/scheduler](https://packagist.org/packages/symfony/scheduler) | [8.2](../../../tree/main/symfony/scheduler/8.2) | `schedule`, `scheduler`, `scheduling` |
 | [symfony/security-bundle](https://packagist.org/packages/symfony/security-bundle) | [8.2](../../../tree/main/symfony/security-bundle/8.2) | `security`, `security-bundle`, `securitybundle` |
-| [symfony/sendberry-notifier](https://packagist.org/packages/symfony/sendberry-notifier) | [6.1](../../../tree/main/symfony/sendberry-notifier/6.1) | `sendberry-notifier`, `sendberrynotifier` |
-| [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [4.4](../../../tree/main/symfony/sendgrid-mailer/4.4) | `sendgrid-mailer`, `sendgridmailer` |
+| [symfony/sendberry-notifier](https://packagist.org/packages/symfony/sendberry-notifier) | [8.2](../../../tree/main/symfony/sendberry-notifier/8.2) | `sendberry-notifier`, `sendberrynotifier` |
+| [symfony/sendgrid-mailer](https://packagist.org/packages/symfony/sendgrid-mailer) | [8.2](../../../tree/main/symfony/sendgrid-mailer/8.2) | `sendgrid-mailer`, `sendgridmailer` |
 | [symfony/sendinblue-mailer](https://packagist.org/packages/symfony/sendinblue-mailer) | [5.2](../../../tree/main/symfony/sendinblue-mailer/5.2) | `sendinblue-mailer`, `sendinbluemailer` |
 | [symfony/sendinblue-notifier](https://packagist.org/packages/symfony/sendinblue-notifier) | [5.2](../../../tree/main/symfony/sendinblue-notifier/5.2) | `sendinblue-notifier`, `sendinbluenotifier` |
 | [symfony/sevenio-notifier](https://packagist.org/packages/symfony/sevenio-notifier) | [7.1](../../../tree/main/symfony/sevenio-notifier/7.1) | `sevenio-notifier`, `sevenionotifier` |
-| [symfony/simple-textin-notifier](https://packagist.org/packages/symfony/simple-textin-notifier) | [6.3](../../../tree/main/symfony/simple-textin-notifier/6.3) | `simple-textin-notifier`, `simpletextinnotifier` |
-| [symfony/sinch-notifier](https://packagist.org/packages/symfony/sinch-notifier) | [5.1](../../../tree/main/symfony/sinch-notifier/5.1) | `sinch-notifier`, `sinchnotifier` |
-| [symfony/sipgate-notifier](https://packagist.org/packages/symfony/sipgate-notifier) | [7.2](../../../tree/main/symfony/sipgate-notifier/7.2) | `sipgate-notifier`, `sipgatenotifier` |
-| [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [5.2](../../../tree/main/symfony/slack-notifier/5.2) | `slack-notifier`, `slacknotifier` |
-| [symfony/sms-biuras-notifier](https://packagist.org/packages/symfony/sms-biuras-notifier) | [5.3](../../../tree/main/symfony/sms-biuras-notifier/5.3) | `sms-biuras-notifier`, `smsbiurasnotifier` |
-| [symfony/sms-factor-notifier](https://packagist.org/packages/symfony/sms-factor-notifier) | [6.2](../../../tree/main/symfony/sms-factor-notifier/6.2) | `sms-factor-notifier`, `smsfactornotifier` |
-| [symfony/sms-sluzba-notifier](https://packagist.org/packages/symfony/sms-sluzba-notifier) | [6.4](../../../tree/main/symfony/sms-sluzba-notifier/6.4) | `sms-sluzba-notifier`, `smssluzbanotifier` |
+| [symfony/simple-textin-notifier](https://packagist.org/packages/symfony/simple-textin-notifier) | [8.2](../../../tree/main/symfony/simple-textin-notifier/8.2) | `simple-textin-notifier`, `simpletextinnotifier` |
+| [symfony/sinch-notifier](https://packagist.org/packages/symfony/sinch-notifier) | [8.2](../../../tree/main/symfony/sinch-notifier/8.2) | `sinch-notifier`, `sinchnotifier` |
+| [symfony/sipgate-notifier](https://packagist.org/packages/symfony/sipgate-notifier) | [8.2](../../../tree/main/symfony/sipgate-notifier/8.2) | `sipgate-notifier`, `sipgatenotifier` |
+| [symfony/slack-notifier](https://packagist.org/packages/symfony/slack-notifier) | [8.2](../../../tree/main/symfony/slack-notifier/8.2) | `slack-notifier`, `slacknotifier` |
+| [symfony/sms-biuras-notifier](https://packagist.org/packages/symfony/sms-biuras-notifier) | [8.2](../../../tree/main/symfony/sms-biuras-notifier/8.2) | `sms-biuras-notifier`, `smsbiurasnotifier` |
+| [symfony/sms-factor-notifier](https://packagist.org/packages/symfony/sms-factor-notifier) | [8.2](../../../tree/main/symfony/sms-factor-notifier/8.2) | `sms-factor-notifier`, `smsfactornotifier` |
+| [symfony/sms-sluzba-notifier](https://packagist.org/packages/symfony/sms-sluzba-notifier) | [8.2](../../../tree/main/symfony/sms-sluzba-notifier/8.2) | `sms-sluzba-notifier`, `smssluzbanotifier` |
 | [symfony/sms77-notifier](https://packagist.org/packages/symfony/sms77-notifier) | [5.4](../../../tree/main/symfony/sms77-notifier/5.4) | `sms77-notifier`, `sms77notifier` |
-| [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [5.2](../../../tree/main/symfony/smsapi-notifier/5.2) | `smsapi-notifier`, `smsapinotifier` |
-| [symfony/smsbox-notifier](https://packagist.org/packages/symfony/smsbox-notifier) | [7.1](../../../tree/main/symfony/smsbox-notifier/7.1) | `smsbox-notifier`, `smsboxnotifier` |
-| [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [5.4](../../../tree/main/symfony/smsc-notifier/5.4) | `smsc-notifier`, `smscnotifier` |
-| [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [7.1](../../../tree/main/symfony/smsense-notifier/7.1) | `smsense-notifier`, `smsensenotifier` |
-| [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [6.3](../../../tree/main/symfony/smsmode-notifier/6.3) | `smsmode-notifier`, `smsmodenotifier` |
-| [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [5.3](../../../tree/main/symfony/spot-hit-notifier/5.3) | `spot-hit-notifier`, `spothitnotifier` |
+| [symfony/smsapi-notifier](https://packagist.org/packages/symfony/smsapi-notifier) | [8.2](../../../tree/main/symfony/smsapi-notifier/8.2) | `smsapi-notifier`, `smsapinotifier` |
+| [symfony/smsbox-notifier](https://packagist.org/packages/symfony/smsbox-notifier) | [8.2](../../../tree/main/symfony/smsbox-notifier/8.2) | `smsbox-notifier`, `smsboxnotifier` |
+| [symfony/smsc-notifier](https://packagist.org/packages/symfony/smsc-notifier) | [8.2](../../../tree/main/symfony/smsc-notifier/8.2) | `smsc-notifier`, `smscnotifier` |
+| [symfony/smsense-notifier](https://packagist.org/packages/symfony/smsense-notifier) | [8.2](../../../tree/main/symfony/smsense-notifier/8.2) | `smsense-notifier`, `smsensenotifier` |
+| [symfony/smsmode-notifier](https://packagist.org/packages/symfony/smsmode-notifier) | [8.2](../../../tree/main/symfony/smsmode-notifier/8.2) | `smsmode-notifier`, `smsmodenotifier` |
+| [symfony/spot-hit-notifier](https://packagist.org/packages/symfony/spot-hit-notifier) | [8.2](../../../tree/main/symfony/spot-hit-notifier/8.2) | `spot-hit-notifier`, `spothitnotifier` |
 | [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [3.3](../../../tree/main/symfony/stimulus-bundle/3.3) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/sweego-mailer](https://packagist.org/packages/symfony/sweego-mailer) | [7.2](../../../tree/main/symfony/sweego-mailer/7.2) | `sweego-mailer`, `sweegomailer` |
-| [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [7.2](../../../tree/main/symfony/sweego-notifier/7.2) | `sweego-notifier`, `sweegonotifier` |
+| [symfony/sweego-notifier](https://packagist.org/packages/symfony/sweego-notifier) | [8.2](../../../tree/main/symfony/sweego-notifier/8.2) | `sweego-notifier`, `sweegonotifier` |
 | [symfony/swiftmailer-bundle](https://packagist.org/packages/symfony/swiftmailer-bundle) | [2.5](../../../tree/main/symfony/swiftmailer-bundle/2.5) | `swiftmailer`, `swiftmailer-bundle`, `swiftmailerbundle` |
-| [symfony/telegram-notifier](https://packagist.org/packages/symfony/telegram-notifier) | [5.0](../../../tree/main/symfony/telegram-notifier/5.0) | `telegram-notifier`, `telegramnotifier` |
-| [symfony/telnyx-notifier](https://packagist.org/packages/symfony/telnyx-notifier) | [5.4](../../../tree/main/symfony/telnyx-notifier/5.4) | `telnyx-notifier`, `telnyxnotifier` |
-| [symfony/termii-notifier](https://packagist.org/packages/symfony/termii-notifier) | [6.3](../../../tree/main/symfony/termii-notifier/6.3) | `termii-notifier`, `termiinotifier` |
+| [symfony/telegram-notifier](https://packagist.org/packages/symfony/telegram-notifier) | [8.2](../../../tree/main/symfony/telegram-notifier/8.2) | `telegram-notifier`, `telegramnotifier` |
+| [symfony/telnyx-notifier](https://packagist.org/packages/symfony/telnyx-notifier) | [8.2](../../../tree/main/symfony/telnyx-notifier/8.2) | `telnyx-notifier`, `telnyxnotifier` |
+| [symfony/termii-notifier](https://packagist.org/packages/symfony/termii-notifier) | [8.2](../../../tree/main/symfony/termii-notifier/8.2) | `termii-notifier`, `termiinotifier` |
 | [symfony/translation](https://packagist.org/packages/symfony/translation) | [8.2](../../../tree/main/symfony/translation/8.2) | `translation`, `translations`, `translator` |
-| [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [5.4](../../../tree/main/symfony/turbo-sms-notifier/5.4) | `turbo-sms-notifier`, `turbosmsnotifier` |
+| [symfony/turbo-sms-notifier](https://packagist.org/packages/symfony/turbo-sms-notifier) | [8.2](../../../tree/main/symfony/turbo-sms-notifier/8.2) | `turbo-sms-notifier`, `turbosmsnotifier` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [8.2](../../../tree/main/symfony/twig-bundle/8.2) | `twig-bundle`, `twigbundle` |
-| [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [5.0](../../../tree/main/symfony/twilio-notifier/5.0) | `twilio-notifier`, `twilionotifier` |
-| [symfony/twitter-notifier](https://packagist.org/packages/symfony/twitter-notifier) | [6.3](../../../tree/main/symfony/twitter-notifier/6.3) | `twitter-notifier`, `twitternotifier` |
+| [symfony/twilio-notifier](https://packagist.org/packages/symfony/twilio-notifier) | [8.2](../../../tree/main/symfony/twilio-notifier/8.2) | `twilio-notifier`, `twilionotifier` |
+| [symfony/twitter-notifier](https://packagist.org/packages/symfony/twitter-notifier) | [8.2](../../../tree/main/symfony/twitter-notifier/8.2) | `twitter-notifier`, `twitternotifier` |
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](../../../tree/main/symfony/uid/7.0) | `uid` |
-| [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [7.1](../../../tree/main/symfony/unifonic-notifier/7.1) | `unifonic-notifier`, `unifonicnotifier` |
+| [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [8.2](../../../tree/main/symfony/unifonic-notifier/8.2) | `unifonic-notifier`, `unifonicnotifier` |
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-cloudflare-image](https://packagist.org/packages/symfony/ux-cloudflare-image) | [3.6](../../../tree/main/symfony/ux-cloudflare-image/3.6) | `ux-cloudflare-image`, `uxcloudflareimage` |
 | [symfony/ux-cloudinary-image](https://packagist.org/packages/symfony/ux-cloudinary-image) | [3.6](../../../tree/main/symfony/ux-cloudinary-image/3.6) | `ux-cloudinary-image`, `uxcloudinaryimage` |
@@ -243,18 +243,18 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](../../../tree/main/symfony/ux-twig-component/2.13) | `twig-component`, `twig-components`, `twigcomponent`, `twigcomponents`, `ux-twig-component`, `uxtwigcomponent` |
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [3.4](../../../tree/main/symfony/ux-vue/3.4) | `ux-vue`, `uxvue` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [8.2](../../../tree/main/symfony/validator/8.2) | `validation`, `validator` |
-| [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [5.4](../../../tree/main/symfony/vonage-notifier/5.4) | `vonage-notifier`, `vonagenotifier` |
+| [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [8.2](../../../tree/main/symfony/vonage-notifier/8.2) | `vonage-notifier`, `vonagenotifier` |
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [8.2](../../../tree/main/symfony/web-profiler-bundle/8.2) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](../../../tree/main/symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.4](../../../tree/main/symfony/webapp-pack/1.4) | `webapp` |
 | [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [7.3](../../../tree/main/symfony/webhook/7.3) | `webhook` |
 | [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.3](../../../tree/main/symfony/webpack-encore-bundle/2.3) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
 | [symfony/workflow](https://packagist.org/packages/symfony/workflow) | [8.2](../../../tree/main/symfony/workflow/8.2) | `workflow` |
-| [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [5.4](../../../tree/main/symfony/yunpian-notifier/5.4) | `yunpian-notifier`, `yunpiannotifier` |
-| [symfony/zendesk-notifier](https://packagist.org/packages/symfony/zendesk-notifier) | [6.2](../../../tree/main/symfony/zendesk-notifier/6.2) | `zendesk-notifier`, `zendesknotifier` |
-| [symfony/zulip-notifier](https://packagist.org/packages/symfony/zulip-notifier) | [5.2](../../../tree/main/symfony/zulip-notifier/5.2) | `zulip-notifier`, `zulipnotifier` |
+| [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [8.2](../../../tree/main/symfony/yunpian-notifier/8.2) | `yunpian-notifier`, `yunpiannotifier` |
+| [symfony/zendesk-notifier](https://packagist.org/packages/symfony/zendesk-notifier) | [8.2](../../../tree/main/symfony/zendesk-notifier/8.2) | `zendesk-notifier`, `zendesknotifier` |
+| [symfony/zulip-notifier](https://packagist.org/packages/symfony/zulip-notifier) | [8.2](../../../tree/main/symfony/zulip-notifier/8.2) | `zulip-notifier`, `zulipnotifier` |
 | [symfonycasts/reset-password-bundle](https://packagist.org/packages/symfonycasts/reset-password-bundle) | [1.0](../../../tree/main/symfonycasts/reset-password-bundle/1.0) |  |
-| [symfonycasts/sass-bundle](https://packagist.org/packages/symfonycasts/sass-bundle) | [0.6](../../../tree/main/symfonycasts/sass-bundle/0.6) | `symfonycasts_sass` |
+| [symfonycasts/sass-bundle](https://packagist.org/packages/symfonycasts/sass-bundle) | [0.8](../../../tree/main/symfonycasts/sass-bundle/0.8) | `symfonycasts_sass` |
 | [symfonycasts/tailwind-bundle](https://packagist.org/packages/symfonycasts/tailwind-bundle) | [0.14](../../../tree/main/symfonycasts/tailwind-bundle/0.14) | `tailwind`, `tailwindcss` |
 | [theofidry/alice-data-fixtures](https://packagist.org/packages/theofidry/alice-data-fixtures) | [1.0](../../../tree/main/theofidry/alice-data-fixtures/1.0) |  |
 | [twig/cssinliner-extension](https://packagist.org/packages/twig/cssinliner-extension) | [1.0](../../../tree/main/twig/cssinliner-extension/1.0) |  |

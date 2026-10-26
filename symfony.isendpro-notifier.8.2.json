@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/isendpro-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            isendpro: '%env(ISENDPRO_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        isendpro: '%env(ISENDPRO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ISENDPRO_DSN=isendpro://ACCOUNT_KEY_ID@default?from=FROM&no_stop=NO_STOP&sandbox=SANDBOX"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "0a357ddecfacec381c6a65e227d093f4a5391918"
+        }
+    }
+}

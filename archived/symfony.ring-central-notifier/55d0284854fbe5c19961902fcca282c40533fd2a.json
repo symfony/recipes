@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/ring-central-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            ringcentral: '%env(RINGCENTRAL_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        ringcentral: '%env(RINGCENTRAL_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "RINGCENTRAL_DSN=ringcentral://API_TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "55d0284854fbe5c19961902fcca282c40533fd2a"
+        }
+    }
+}

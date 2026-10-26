@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/octopush-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            octopush: '%env(OCTOPUSH_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        octopush: '%env(OCTOPUSH_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "OCTOPUSH_DSN=octopush://USERLOGIN:APIKEY@default?from=FROM&type=TYPE"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "e2a33f978649b3e3da905f378ab288bfdc45bfb6"
+        }
+    }
+}

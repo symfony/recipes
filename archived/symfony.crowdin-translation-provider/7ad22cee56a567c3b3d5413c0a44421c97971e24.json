@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/crowdin-translation-provider": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "        providers:",
+                        "content": "            crowdin: { dsn: '%env(CROWDIN_DSN)%' }"
+                    },
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "    providers:",
+                        "content": "        crowdin: { dsn: '%env(CROWDIN_DSN)%' }"
+                    }
+                ],
+                "env": {
+                    "#1": "CROWDIN_DSN=crowdin://PROJECT_ID:API_TOKEN@ORGANIZATION_DOMAIN.default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "7ad22cee56a567c3b3d5413c0a44421c97971e24"
+        }
+    }
+}

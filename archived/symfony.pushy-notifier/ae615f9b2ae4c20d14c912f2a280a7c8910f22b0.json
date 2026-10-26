@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/pushy-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            pushy: '%env(PUSHY_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        pushy: '%env(PUSHY_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PUSHY_DSN=pushy://API_KEY@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "ae615f9b2ae4c20d14c912f2a280a7c8910f22b0"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/spot-hit-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            spothit: '%env(SPOTHIT_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        spothit: '%env(SPOTHIT_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SPOTHIT_DSN=spothit://TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "9b9d1aaed0b73828d1f69037833a413bd1652981"
+        }
+    }
+}

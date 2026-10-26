@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/mail-pace-mailer": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            mailpace+api: '%env(MAILER_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "    texter_transports:",
+                        "content": "        mailpace+api: '%env(MAILER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MAILER_DSN=mailpace+api://API_TOKEN@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "bc5c5392a71be145d7f87c679fc7bbe1c481ba5a"
+        }
+    }
+}

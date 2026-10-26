@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/all-my-sms-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            allmysms: '%env(ALLMYSMS_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        allmysms: '%env(ALLMYSMS_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ALLMYSMS_DSN=allmysms://LOGIN:APIKEY@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "d4fb0c7e6f8db010ed808934dc0fec8fc302bffb"
+        }
+    }
+}

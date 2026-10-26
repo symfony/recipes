@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/telegram-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            telegram: '%env(TELEGRAM_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        telegram: '%env(TELEGRAM_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TELEGRAM_DSN=telegram://TOKEN@default?channel=CHAT_ID"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "35f1ed3f920ff446aa0e2a551d71de59d96accfe"
+        }
+    }
+}

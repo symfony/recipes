@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/loco-translation-provider": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "        providers:",
+                        "content": "            loco: { dsn: '%env(LOCO_DSN)%' }"
+                    },
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "    providers:",
+                        "content": "        loco: { dsn: '%env(LOCO_DSN)%' }"
+                    }
+                ],
+                "env": {
+                    "#1": "LOCO_DSN=loco://API_KEY@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "fe069536bb7a473b68ff6de8751d43ae4cd96002"
+        }
+    }
+}

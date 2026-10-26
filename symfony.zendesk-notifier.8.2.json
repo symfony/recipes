@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/zendesk-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            zendesk: '%env(ZENDESK_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        zendesk: '%env(ZENDESK_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "ZENDESK_DSN=zendesk://EMAIL:TOKEN@SUBDOMAIN"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "b84f99db65a91760ebb1365ea6079a0bdf5a1d97"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/lokalise-translation-provider": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "        providers:",
+                        "content": "            lokalise: { dsn: '%env(LOKALISE_DSN)%' }"
+                    },
+                    {
+                        "file": "config/packages/translation.yaml",
+                        "position": "after_target",
+                        "target": "    providers:",
+                        "content": "        lokalise: { dsn: '%env(LOKALISE_DSN)%' }"
+                    }
+                ],
+                "env": {
+                    "#1": "LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "ce79f075b984ca09b4f6374cfeba85b533b523da"
+        }
+    }
+}

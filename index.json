@@ -1036,7 +1036,8 @@
             "0.1"
         ],
         "symfony/all-my-sms-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/allmysms-notifier": [
             "5.3"
@@ -1046,7 +1047,8 @@
             "4.4"
         ],
         "symfony/amazon-sns-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/asset-mapper": [
             "6.3",
@@ -1057,7 +1059,8 @@
             "7.1"
         ],
         "symfony/bandwidth-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/bluesky-notifier": [
             "7.1"
@@ -1069,13 +1072,16 @@
             "6.4"
         ],
         "symfony/chatwork-notifier": [
-            "6.2"
+            "6.2",
+            "8.2"
         ],
         "symfony/click-send-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/clickatell-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/console": [
             "3.3",
@@ -1085,7 +1091,8 @@
             "5.3"
         ],
         "symfony/crowdin-translation-provider": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/debug-bundle": [
             "3.3",
@@ -1094,25 +1101,32 @@
             "8.2"
         ],
         "symfony/discord-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/engagespot-notifier": [
-            "6.1"
+            "6.1",
+            "8.2"
         ],
         "symfony/esendex-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/expo-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/fake-chat-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/fake-sms-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/firebase-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/flex": [
             "1.0",
@@ -1123,7 +1137,8 @@
             "8.2"
         ],
         "symfony/forty-six-elks-notifier": [
-            "6.1"
+            "6.1",
+            "8.2"
         ],
         "symfony/framework-bundle": [
             "3.3",
@@ -1144,10 +1159,12 @@
             "8.2"
         ],
         "symfony/free-mobile-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/gateway-api-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/gatewayapi-notifier": [
             "5.3"
@@ -1156,11 +1173,13 @@
             "5.3"
         ],
         "symfony/go-ip-notifier": [
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/google-chat-notifier": [
             "5.2",
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/google-mailer": [
             "4.3",
@@ -1170,31 +1189,40 @@
             "6.2"
         ],
         "symfony/infobip-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/iqsms-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/isendpro-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/joli-notif-notifier": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/kaz-info-teh-notifier": [
-            "6.1"
+            "6.1",
+            "8.2"
         ],
         "symfony/light-sms-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/line-bot-notifier": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/line-notify-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/linked-in-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/lock": [
             "4.4",
@@ -1202,16 +1230,20 @@
             "8.2"
         ],
         "symfony/loco-translation-provider": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/lokalise-translation-provider": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/lox24-notifier": [
-            "7.1"
+            "7.1",
+            "8.2"
         ],
         "symfony/mail-pace-mailer": [
-            "6.2"
+            "6.2",
+            "8.2"
         ],
         "symfony/mailchimp-mailer": [
             "4.3",
@@ -1232,7 +1264,8 @@
             "5.2"
         ],
         "symfony/mailjet-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/mailomat-mailer": [
             "7.2"
@@ -1244,13 +1277,16 @@
             "1.0"
         ],
         "symfony/mastodon-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/matrix-notifier": [
-            "7.3"
+            "7.3",
+            "8.2"
         ],
         "symfony/mattermost-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/mercure-bundle": [
             "0.1",
@@ -1260,13 +1296,16 @@
             "0.6"
         ],
         "symfony/mercure-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/message-bird-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/message-media-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/messenger": [
             "4.1",
@@ -1276,10 +1315,12 @@
             "8.2"
         ],
         "symfony/microsoft-teams-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/mobyt-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/monolog-bundle": [
             "3.1",
@@ -1300,19 +1341,24 @@
             "6.4"
         ],
         "symfony/octopush-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/one-signal-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/orange-sms-notifier": [
-            "6.1"
+            "6.1",
+            "8.2"
         ],
         "symfony/ovh-cloud-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/pager-duty-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/panther": [
             "1.0"
@@ -1328,20 +1374,24 @@
             "8.2"
         ],
         "symfony/phrase-translation-provider": [
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/plivo-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/postal-mailer": [
             "7.2"
         ],
         "symfony/postmark-mailer": [
             "4.3",
-            "4.4"
+            "4.4",
+            "8.2"
         ],
         "symfony/primotexto-notifier": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/property-info": [
             "7.3",
@@ -1351,13 +1401,16 @@
             "1.0"
         ],
         "symfony/pushover-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/pushy-notifier": [
-            "7.1"
+            "7.1",
+            "8.2"
         ],
         "symfony/redlink-notifier": [
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/reprise": [
             "0.1",
@@ -1372,10 +1425,12 @@
             "7.1"
         ],
         "symfony/ring-central-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/rocket-chat-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/routing": [
             "3.3",
@@ -1408,11 +1463,13 @@
             "8.2"
         ],
         "symfony/sendberry-notifier": [
-            "6.1"
+            "6.1",
+            "8.2"
         ],
         "symfony/sendgrid-mailer": [
             "4.3",
-            "4.4"
+            "4.4",
+            "8.2"
         ],
         "symfony/sendinblue-mailer": [
             "5.2"
@@ -1424,48 +1481,61 @@
             "7.1"
         ],
         "symfony/simple-textin-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/sinch-notifier": [
-            "5.1"
+            "5.1",
+            "8.2"
         ],
         "symfony/sipgate-notifier": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/slack-notifier": [
             "5.0",
             "5.1",
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/sms-biuras-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/sms-factor-notifier": [
-            "6.2"
+            "6.2",
+            "8.2"
         ],
         "symfony/sms-sluzba-notifier": [
-            "6.4"
+            "6.4",
+            "8.2"
         ],
         "symfony/sms77-notifier": [
             "5.4"
         ],
         "symfony/smsapi-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfony/smsbox-notifier": [
-            "7.1"
+            "7.1",
+            "8.2"
         ],
         "symfony/smsc-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/smsense-notifier": [
-            "7.1"
+            "7.1",
+            "8.2"
         ],
         "symfony/smsmode-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/spot-hit-notifier": [
-            "5.3"
+            "5.3",
+            "8.2"
         ],
         "symfony/stimulus-bundle": [
             "2.8",
@@ -1480,19 +1550,23 @@
             "7.2"
         ],
         "symfony/sweego-notifier": [
-            "7.2"
+            "7.2",
+            "8.2"
         ],
         "symfony/swiftmailer-bundle": [
             "2.5"
         ],
         "symfony/telegram-notifier": [
-            "5.0"
+            "5.0",
+            "8.2"
         ],
         "symfony/telnyx-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/termii-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/translation": [
             "3.3",
@@ -1501,7 +1575,8 @@
             "8.2"
         ],
         "symfony/turbo-sms-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/twig-bundle": [
             "3.3",
@@ -1514,17 +1589,20 @@
             "8.2"
         ],
         "symfony/twilio-notifier": [
-            "5.0"
+            "5.0",
+            "8.2"
         ],
         "symfony/twitter-notifier": [
-            "6.3"
+            "6.3",
+            "8.2"
         ],
         "symfony/uid": [
             "6.2",
             "7.0"
         ],
         "symfony/unifonic-notifier": [
-            "7.1"
+            "7.1",
+            "8.2"
         ],
         "symfony/ux-autocomplete": [
             "2.2",
@@ -1606,7 +1684,8 @@
             "8.2"
         ],
         "symfony/vonage-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/web-profiler-bundle": [
             "3.3",
@@ -1643,20 +1722,24 @@
             "8.2"
         ],
         "symfony/yunpian-notifier": [
-            "5.4"
+            "5.4",
+            "8.2"
         ],
         "symfony/zendesk-notifier": [
-            "6.2"
+            "6.2",
+            "8.2"
         ],
         "symfony/zulip-notifier": [
-            "5.2"
+            "5.2",
+            "8.2"
         ],
         "symfonycasts/reset-password-bundle": [
             "1.0"
         ],
         "symfonycasts/sass-bundle": [
             "0.5",
-            "0.6"
+            "0.6",
+            "0.8"
         ],
         "symfonycasts/tailwind-bundle": [
             "0.8",
@@ -1758,6 +1841,16 @@
                 "php-http/discovery": ">=1.18"
             }
         },
+        "symfony/all-my-sms-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/amazon-sns-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/asset-mapper": {
             "6.3": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
@@ -1775,10 +1868,70 @@
                 "symfony/twig-bundle": "<6.3"
             }
         },
+        "symfony/bandwidth-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/chatwork-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/click-send-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/clickatell-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/crowdin-translation-provider": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/debug-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
             },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/discord-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/engagespot-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/esendex-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/expo-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/fake-chat-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/fake-sms-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/firebase-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
@@ -1788,12 +1941,137 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/forty-six-elks-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/free-mobile-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/gateway-api-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/go-ip-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/google-chat-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/infobip-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/iqsms-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/isendpro-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/joli-notif-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/kaz-info-teh-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/light-sms-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/line-bot-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/line-notify-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/linked-in-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/lock": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/loco-translation-provider": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/lokalise-translation-provider": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/lox24-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mail-pace-mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mailjet-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mastodon-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/matrix-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mattermost-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mercure-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/message-bird-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/message-media-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
@@ -1815,12 +2093,47 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/microsoft-teams-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/mobyt-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/monolog-bundle": {
             "3.7": {
                 "symfony/framework-bundle": "<5.3"
             }
         },
         "symfony/notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/octopush-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/one-signal-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/orange-sms-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/ovh-cloud-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/pager-duty-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
@@ -1847,7 +2160,42 @@
                 "symfony/framework-bundle": "<5.4"
             }
         },
+        "symfony/phrase-translation-provider": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/plivo-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/postmark-mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/primotexto-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/property-info": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/pushover-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/pushy-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/redlink-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
@@ -1863,6 +2211,16 @@
             },
             "1.2": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/ring-central-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/rocket-chat-notifier": {
+            "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
         },
@@ -1905,6 +2263,81 @@
                 "symfony/framework-bundle": "<5.3"
             }
         },
+        "symfony/sendberry-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sendgrid-mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/simple-textin-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sinch-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sipgate-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/slack-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sms-biuras-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sms-factor-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/sms-sluzba-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/smsapi-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/smsbox-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/smsc-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/smsense-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/smsmode-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/spot-hit-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/stimulus-bundle": {
             "2.9": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
@@ -1939,7 +2372,32 @@
                 "symfony/webpack-encore-bundle": "<2.0"
             }
         },
+        "symfony/sweego-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/telegram-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/telnyx-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/termii-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/translation": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/turbo-sms-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
@@ -1961,12 +2419,27 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/twilio-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/twitter-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/uid": {
             "6.2": {
                 "symfony/framework-bundle": "<6.2"
             },
             "7.0": {
                 "symfony/framework-bundle": "<7.0"
+            }
+        },
+        "symfony/unifonic-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/ux-google-map": {
@@ -2048,6 +2521,11 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/vonage-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/web-profiler-bundle": {
             "5.3": {
                 "symfony/framework-bundle": "<5.3"
@@ -2099,12 +2577,31 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "symfony/yunpian-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/zendesk-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/zulip-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfonycasts/sass-bundle": {
             "0.5": {
                 "symfony/asset-mapper": "<6.3"
             },
             "0.6": {
                 "symfony/asset-mapper": "<6.3"
+            },
+            "0.8": {
+                "symfony/asset-mapper": "<6.3",
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "zenstruck/foundry": {

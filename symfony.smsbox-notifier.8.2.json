@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/smsbox-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            smsbox: '%env(SMSBOX_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        smsbox: '%env(SMSBOX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SMSBOX_DSN=smsbox://APIKEY@default?mode=MODE&strategy=STRATEGY&sender=SENDER"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "eed811d82fd542bd34422f5a47c70b724dbc5139"
+        }
+    }
+}

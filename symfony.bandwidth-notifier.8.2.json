@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/bandwidth-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            bandwidth: '%env(BANDWIDTH_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        bandwidth: '%env(BANDWIDTH_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "BANDWIDTH_DSN=bandwidth://USERNAME:PASSWORD@default?from=FROM&account_id=ACCOUNT_ID&application_id=APPLICATION_ID&priority=PRIORITY"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "32b7f2f3841871a5be250e649f59ac09e0c4a531"
+        }
+    }
+}

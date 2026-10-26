@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/mailjet-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            mailjet: '%env(MAILJET_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        mailjet: '%env(MAILJET_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MAILJET_DSN=mailjet://TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "2ced659541f2195f99ccd736c2dec59ed7c791f2"
+        }
+    }
+}

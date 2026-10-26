@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/twitter-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            twitter: '%env(TWITTER_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        twitter: '%env(TWITTER_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TWITTER_DSN=twitter://API_KEY:API_SECRET:ACCESS_TOKEN:ACCESS_SECRET@default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "74855a8390fa5b4ee999e953fbe36c1ae9940df7"
+        }
+    }
+}

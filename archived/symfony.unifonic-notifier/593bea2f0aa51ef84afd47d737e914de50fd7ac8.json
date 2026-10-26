@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/unifonic-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            unifonic: '%env(UNIFONIC_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        unifonic: '%env(UNIFONIC_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "UNIFONIC_DSN=unifonic://APP_SID@default?from=SENDER"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "593bea2f0aa51ef84afd47d737e914de50fd7ac8"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/twilio-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            twilio: '%env(TWILIO_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        twilio: '%env(TWILIO_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "TWILIO_DSN=twilio://SID:TOKEN@default?from=FROM"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "af17761da95f09752ad2c3e18e02344f97b8cbfb"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/matrix-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        chatter_transports:",
+                        "content": "            matrix: '%env(MATRIX_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    chatter_transports:",
+                        "content": "        matrix: '%env(MATRIX_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MATRIX_DSN=matrix://HOST:PORT/?accessToken=ACCESSTOKEN&ssl=SSL"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "d560c08e6e12898035ee2f8ea481fd4db6748b95"
+        }
+    }
+}
