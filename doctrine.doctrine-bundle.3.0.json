@@ -89,7 +89,6 @@
                         "                is_bundle: false",
                         "                dir: '%kernel.project_dir%/src/Entity'",
                         "                prefix: 'App\\Entity'",
-                        "                alias: App",
                         "",
                         "when@test:",
                         "    doctrine:",
@@ -131,7 +130,7 @@
                     "executable": false
                 }
             },
-            "ref": "d39a3bd844edfe90c20ae520b804a3bf4f82b4ad"
+            "ref": "7d10295408f32426bffd6e99c75c2cb0a7b823f2"
         }
     }
 }
