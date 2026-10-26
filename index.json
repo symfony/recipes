@@ -1,0 +1,44 @@
+{
+    "aliases": {
+        "messenger": "symfony/messenger"
+    },
+    "recipes": {
+        "symfony/messenger": [
+            "4.1",
+            "4.3",
+            "5.4",
+            "6.0",
+            "8.2"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/messenger": {
+            "4.1": {
+                "symfony/framework-bundle": "<4.1"
+            },
+            "4.3": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "5.4": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "6.0": {
+                "symfony/framework-bundle": "<4.3"
+            },
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1587/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1587/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
