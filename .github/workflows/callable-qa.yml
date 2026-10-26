@@ -267,13 +267,8 @@ jobs:
                     composer require -W --ansi $PACKAGES || EXIT_CODE=$?
 
                     if [[ $EXIT_CODE -eq 2 ]]; then
-                        set +x
-                        printf '\n\n' >&2
-                        printf '\033[32m########################################################################\033[0m\n' >&2
-                        printf '\033[32m# You can ignore this error if your package does not support Symfony 6 #\033[0m\n' >&2
-                        printf '\033[32m########################################################################\033[0m\n' >&2
-                        printf '\n\n' >&2
-                        set -x
+                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 6.4 with PHP 8.1"
+                        exit 0
                     fi
 
                     exit $EXIT_CODE
@@ -297,7 +292,15 @@ jobs:
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    composer require -W --ansi $PACKAGES
+                    EXIT_CODE=0
+                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
+
+                    if [[ $EXIT_CODE -eq 2 ]]; then
+                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 7.4 with PHP 8.2"
+                        exit 0
+                    fi
+
+                    exit $EXIT_CODE
 
             -
                 name: Setup PHP 8.4
@@ -318,7 +321,15 @@ jobs:
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    composer require -W --ansi $PACKAGES
+                    EXIT_CODE=0
+                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
+
+                    if [[ $EXIT_CODE -eq 2 ]]; then
+                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 6.4 with PHP 8.4"
+                        exit 0
+                    fi
+
+                    exit $EXIT_CODE
 
             -
                 name: Create-project with skeleton ^7
@@ -331,15 +342,23 @@ jobs:
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    composer require -W --ansi $PACKAGES
+                    EXIT_CODE=0
+                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
+
+                    if [[ $EXIT_CODE -eq 2 ]]; then
+                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 7.4 with PHP 8.4"
+                        exit 0
+                    fi
+
+                    exit $EXIT_CODE
 
             -
-                name: Create-project with skeleton ^8
+                name: Create-project with skeleton ^8@dev
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^8" sf8-php84
+                    composer create-project --ansi --stability=dev "symfony/skeleton:^8" sf8-php84
                     cd sf8-php84
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
