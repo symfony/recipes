@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "League\\Bundle\\OAuth2ServerBundle\\LeagueOAuth2ServerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OAUTH_PRIVATE_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/private.pem",
+        "OAUTH_PUBLIC_KEY": "%kernel.project_dir%/%CONFIG_DIR%/jwt/public.pem",
+        "OAUTH_PASSPHRASE": "%generate(secret)%",
+        "OAUTH_ENCRYPTION_KEY": "%generate(secret)%"
+    },
+    "gitignore": [
+        "/%CONFIG_DIR%/jwt/*.pem"
+    ],
+    "aliases": ["oauth2-server", "oauth-server"]
+}
