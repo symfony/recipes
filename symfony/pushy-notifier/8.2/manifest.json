@@ -1,0 +1,27 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "target": "        texter_transports:",
+            "content": [
+                "            pushy: '%env(PUSHY_DSN)%'"
+            ]
+        },
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    texter_transports:",
+            "content": [
+                "        pushy: '%env(PUSHY_DSN)%'"
+            ]
+        }
+    ],
+    "env": {
+        "#1": "PUSHY_DSN=pushy://API_KEY@default"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}

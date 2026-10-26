@@ -1,0 +1,27 @@
+{
+    "add-lines": [
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "target": "        chatter_transports:",
+            "content": [
+                "            linkedin: '%env(LINKEDIN_DSN)%'"
+            ]
+        },
+        {
+            "file": "config/packages/notifier.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    chatter_transports:",
+            "content": [
+                "        linkedin: '%env(LINKEDIN_DSN)%'"
+            ]
+        }
+    ],
+    "env": {
+        "#1": "LINKEDIN_DSN=linkedin://token:user-id@default"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
