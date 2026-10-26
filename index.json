@@ -1,0 +1,30 @@
+{
+    "aliases": {
+        "joli-notif-notifier": "symfony/joli-notif-notifier",
+        "jolinotifnotifier": "symfony/joli-notif-notifier"
+    },
+    "recipes": {
+        "symfony/joli-notif-notifier": [
+            "7.2",
+            "8.2"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/joli-notif-notifier": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1607/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1607/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

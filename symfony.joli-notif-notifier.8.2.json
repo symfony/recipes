@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/joli-notif-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            jolinotif: '%env(JOLINOTIF_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        jolinotif: '%env(JOLINOTIF_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "JOLINOTIF_DSN": "jolinotif://default"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "5fe3a1f94626a4fdf651c1b9b3391e409b2c2e34"
+        }
+    }
+}
