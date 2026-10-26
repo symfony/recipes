@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "symfony/twig-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.3"
+                }
+            },
+            "files": {
+                "config/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    file_name_pattern: '*.twig'",
+                        "",
+                        "when@test:",
+                        "    twig:",
+                        "        strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/base.html.twig": {
+                    "contents": [
+                        "<!DOCTYPE html>",
+                        "<html>",
+                        "    <head>",
+                        "        <meta charset=\"UTF-8\">",
+                        "        <title>{% block title %}Welcome!{% endblock %}</title>",
+                        "        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>\u26ab\ufe0f</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">",
+                        "        {% block stylesheets %}",
+                        "        {% endblock %}",
+                        "",
+                        "        {% block javascripts %}",
+                        "        {% endblock %}",
+                        "",
+                        "        {% set frankenphp_hot_reload = app.request.server.get('FRANKENPHP_HOT_RELOAD') %}",
+                        "        {% if frankenphp_hot_reload %}",
+                        "        <meta name=\"frankenphp-hot-reload:url\" content=\"{{ frankenphp_hot_reload }}\">",
+                        "        <script src=\"https://cdn.jsdelivr.net/npm/idiomorph\"></script>",
+                        "        <script src=\"https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm\" type=\"module\"></script>",
+                        "        {% endif %}",
+                        "    </head>",
+                        "    <body>",
+                        "        {% block body %}{% endblock %}",
+                        "    </body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "06dacf16872358cb1f2494e089070ff2d045233a"
+        }
+    }
+}
