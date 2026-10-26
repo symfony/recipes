@@ -1,0 +1,6 @@
+  * Your MCP HTTP endpoint is available at <fg=green>/mcp</> and only accepts localhost by default.
+    Configure <fg=green>http.allowed_hosts</> in <fg=green>config/packages/mcp.yaml</> to allow other hostnames.
+
+  * The registry initially exposes all MCP services, including those from third-party bundles.
+    After adding your MCP services, restrict <fg=green>registry</> to their namespace(s), e.g. <fg=green>'App\Mcp\'</>.
+    Each namespace pattern must match at least one registered MCP service.
