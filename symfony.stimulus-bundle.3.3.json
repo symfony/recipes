@@ -103,7 +103,7 @@
                         "});",
                         "",
                         "export function generateCsrfToken (formElement) {",
-                        "    const csrfField = formElement.querySelector('input[data-controller=\"csrf-protection\"], input[name=\"_csrf_token\"]');",
+                        "    const csrfField = getCsrfField(formElement);",
                         "",
                         "    if (!csrfField) {",
                         "        return;",
@@ -126,7 +126,7 @@
                         "",
                         "export function generateCsrfHeaders (formElement) {",
                         "    const headers = {};",
-                        "    const csrfField = formElement.querySelector('input[data-controller=\"csrf-protection\"], input[name=\"_csrf_token\"]');",
+                        "    const csrfField = getCsrfField(formElement);",
                         "",
                         "    if (!csrfField) {",
                         "        return headers;",
@@ -142,7 +142,7 @@
                         "}",
                         "",
                         "export function removeCsrfToken (formElement) {",
-                        "    const csrfField = formElement.querySelector('input[data-controller=\"csrf-protection\"], input[name=\"_csrf_token\"]');",
+                        "    const csrfField = getCsrfField(formElement);",
                         "",
                         "    if (!csrfField) {",
                         "        return;",
@@ -155,6 +155,10 @@
                         "",
                         "        document.cookie = window.location.protocol === 'https:' ? '__Host-' + cookie + '; secure' : cookie;",
                         "    }",
+                        "}",
+                        "",
+                        "function getCsrfField (formElement) {",
+                        "    return Array.from(formElement.elements).find((field) => field.matches('input[data-controller=\"csrf-protection\"], input[name=\"_csrf_token\"]'));",
                         "}",
                         "",
                         "/* stimulusFetch: 'lazy' */",
@@ -194,7 +198,7 @@
                     "executable": false
                 }
             },
-            "ref": "30f7461c215766d446f3c990b2b18f08ff51386e"
+            "ref": "7ce779ee74ea8d8aae6afed73e8438af5a392b30"
         }
     }
 }
