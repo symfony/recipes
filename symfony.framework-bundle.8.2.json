@@ -244,8 +244,6 @@
                         "when@test:",
                         "    framework:",
                         "        test: true",
-                        "        session:",
-                        "            storage_factory_id: session.storage.factory.mock_file",
                         ""
                     ],
                     "executable": false
@@ -348,7 +346,7 @@
                     "executable": false
                 }
             },
-            "ref": "dc142f63913d14d2225b0f425e48895592f0fbcd"
+            "ref": "aa745fca75282b643e6c59c880f603696a5a5da6"
         }
     }
 }

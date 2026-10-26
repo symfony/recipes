@@ -61,11 +61,6 @@
                         "    # The paths to make available to the asset mapper.",
                         "    paths:",
                         "        - assets/",
-                        "    missing_import_mode: strict",
-                        "",
-                        "when@prod:",
-                        "    asset_mapper:",
-                        "        missing_import_mode: warn",
                         ""
                     ],
                     "executable": false
@@ -96,7 +91,7 @@
                     "executable": false
                 }
             },
-            "ref": "8b638b01c8af466637f3ba11c9b0bc30bcf85838"
+            "ref": "d8489b8fdf3780dca11d80d6ddb1c64483144afd"
         }
     }
 }

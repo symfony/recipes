@@ -22,10 +22,6 @@
                         "    # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.",
                         "    # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands",
                         "    default_uri: '%env(DEFAULT_URI)%'",
-                        "",
-                        "when@prod:",
-                        "    router:",
-                        "        strict_requirements: null",
                         ""
                     ],
                     "executable": false
@@ -48,7 +44,7 @@
                     "executable": false
                 }
             },
-            "ref": "0071d8dba06cbd2d94559e6ab753445fcfb1f0f0"
+            "ref": "1c0b0d4378307e83cb6e99cf3333390e3c2c9041"
         }
     }
 }

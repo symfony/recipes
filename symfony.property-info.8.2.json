@@ -2,25 +2,12 @@
     "manifests": {
         "symfony/property-info": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
                 "conflict": {
                     "symfony/framework-bundle": "<8.2"
                 }
             },
-            "files": {
-                "config/packages/property_info.yaml": {
-                    "contents": [
-                        "# yaml-language-server: $schema=../schema.json",
-                        "property_info:",
-                        "    with_constructor_extractor: true",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "d2be7c7db8a2baaeee79138b20cacc54850cd974"
+            "files": [],
+            "ref": "46c0212530169ce92351ce7d58336db04f77c2a6"
         }
     }
 }

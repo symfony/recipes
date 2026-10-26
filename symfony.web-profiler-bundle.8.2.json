@@ -25,7 +25,6 @@
                         "",
                         "    framework:",
                         "        profiler:",
-                        "            collect: true",
                         "            excluded_paths:",
                         "                - '^/\\.well-known/'",
                         "                - '^/favicon\\.ico$'",
@@ -54,7 +53,7 @@
                     "executable": false
                 }
             },
-            "ref": "90b638a9d099592feea4d14ad2a654e4f45b71dd"
+            "ref": "8379003b884b943fdf0ff66b0378231b0e51f893"
         }
     }
 }

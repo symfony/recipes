@@ -14,9 +14,6 @@
                 "config/packages/translation.yaml": {
                     "contents": [
                         "# yaml-language-server: $schema=../schema.json",
-                        "framework:",
-                        "    default_locale: en",
-                        "",
                         "translation:",
                         "    default_path: '%kernel.project_dir%/translations'",
                         "    providers:",
@@ -31,7 +28,7 @@
                     "executable": false
                 }
             },
-            "ref": "7c7f46d05183226347a1fbc1266f9f2460ce9189"
+            "ref": "30050bb35d10c0195a1500199a97c8c04085d2be"
         }
     }
 }

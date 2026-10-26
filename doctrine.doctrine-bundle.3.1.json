@@ -86,11 +86,8 @@
                         "        auto_mapping: true",
                         "        mappings:",
                         "            App:",
-                        "                type: attribute",
-                        "                is_bundle: false",
                         "                dir: '%kernel.project_dir%/src/Entity'",
                         "                prefix: 'App\\Entity'",
-                        "                alias: App",
                         "",
                         "when@test:",
                         "    doctrine:",
@@ -102,16 +99,13 @@
                         "    doctrine:",
                         "        orm:",
                         "            query_cache_driver:",
-                        "                type: pool",
                         "                pool: doctrine.system_cache_pool",
                         "            result_cache_driver:",
-                        "                type: pool",
                         "                pool: doctrine.result_cache_pool",
                         "",
                         "    cache:",
                         "        pools:",
-                        "            doctrine.result_cache_pool:",
-                        "                adapter: cache.app",
+                        "            doctrine.result_cache_pool: null",
                         "            doctrine.system_cache_pool:",
                         "                adapter: cache.system",
                         ""
@@ -131,7 +125,7 @@
                     "executable": false
                 }
             },
-            "ref": "5b12898971b315f19a5be25bc60d347614b78c75"
+            "ref": "798165f38ea0191f4b195503338d843f13acd312"
         }
     }
 }

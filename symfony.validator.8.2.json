@@ -18,16 +18,12 @@
                         "    # For instance, basic validation constraints will be inferred from Doctrine's metadata.",
                         "    #auto_mapping:",
                         "    #    App\\Entity\\: []",
-                        "",
-                        "when@test:",
-                        "    validation:",
-                        "        not_compromised_password: false",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "d49089c43605829ee424e0c92b60c494ff95aef6"
+            "ref": "06ad4500705d987fa871ffb4ad04cea68870371e"
         }
     }
 }
