@@ -175,6 +175,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/plivo-notifier](https://packagist.org/packages/symfony/plivo-notifier) | [8.2](../../../tree/main/symfony/plivo-notifier/8.2) | `plivo-notifier`, `plivonotifier` |
 | [symfony/postal-mailer](https://packagist.org/packages/symfony/postal-mailer) | [7.2](../../../tree/main/symfony/postal-mailer/7.2) | `postal-mailer`, `postalmailer` |
 | [symfony/postmark-mailer](https://packagist.org/packages/symfony/postmark-mailer) | [8.2](../../../tree/main/symfony/postmark-mailer/8.2) | `postmark-mailer`, `postmarkmailer` |
+| [symfony/prelude-notifier](https://packagist.org/packages/symfony/prelude-notifier) | [8.2](../../../tree/main/symfony/prelude-notifier/8.2) | `prelude-notifier`, `preludenotifier` |
 | [symfony/primotexto-notifier](https://packagist.org/packages/symfony/primotexto-notifier) | [8.2](../../../tree/main/symfony/primotexto-notifier/8.2) | `primotexto-notifier`, `primotextonotifier` |
 | [symfony/property-info](https://packagist.org/packages/symfony/property-info) | [8.2](../../../tree/main/symfony/property-info/8.2) | `property-info`, `propertyinfo` |
 | [symfony/psr7-pack](https://packagist.org/packages/symfony/psr7-pack) | [1.0](../../../tree/main/symfony/psr7-pack/1.0) | `psr-7`, `psr-17`, `psr7`, `psr17` |

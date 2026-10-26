@@ -1389,6 +1389,10 @@
             "4.4",
             "8.2"
         ],
+        "symfony/prelude-notifier": [
+            "8.1",
+            "8.2"
+        ],
         "symfony/primotexto-notifier": [
             "7.2",
             "8.2"
@@ -2171,6 +2175,11 @@
             }
         },
         "symfony/postmark-mailer": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/prelude-notifier": {
             "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/prelude-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "target": "        texter_transports:",
+                        "content": "            prelude: '%env(PRELUDE_DSN)%'"
+                    },
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    texter_transports:",
+                        "content": "        prelude: '%env(PRELUDE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PRELUDE_DSN=prelude://API_KEY@default?sender=SENDER_ID"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": [],
+            "ref": "e8c26ec307ed81251f66ee174bf051d626409e0c"
+        }
+    }
+}

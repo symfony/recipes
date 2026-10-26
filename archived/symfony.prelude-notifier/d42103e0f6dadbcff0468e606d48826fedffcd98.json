@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "symfony/prelude-notifier": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "config/packages/notifier.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "        texter_transports:",
+                        "content": "            prelude: '%env(PRELUDE_DSN)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PRELUDE_DSN=prelude://API_KEY@default?sender=SENDER_ID"
+                }
+            },
+            "files": [],
+            "ref": "d42103e0f6dadbcff0468e606d48826fedffcd98"
+        }
+    }
+}
