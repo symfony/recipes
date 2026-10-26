@@ -61,6 +61,7 @@
                         "    # The paths to make available to the asset mapper.",
                         "    paths:",
                         "        - assets/",
+                        "    minimum_release_age: 604800",
                         ""
                     ],
                     "executable": false
@@ -91,7 +92,7 @@
                     "executable": false
                 }
             },
-            "ref": "d8489b8fdf3780dca11d80d6ddb1c64483144afd"
+            "ref": "1766d3625a3cc3b88fe5686a22875a24a976fb3b"
         }
     }
 }
