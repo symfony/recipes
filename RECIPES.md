@@ -263,5 +263,5 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [twig/markdown-extension](https://packagist.org/packages/twig/markdown-extension) | [1.0](../../../tree/main/twig/markdown-extension/1.0) |  |
 | [willdurand/js-translation-bundle](https://packagist.org/packages/willdurand/js-translation-bundle) | [2.0](../../../tree/main/willdurand/js-translation-bundle/2.0) | `js-translation`, `js-translator`, `jstranslation`, `jstranslator` |
 | [zenstruck/browser](https://packagist.org/packages/zenstruck/browser) | [1.9](../../../tree/main/zenstruck/browser/1.9) | `browser` |
-| [zenstruck/foundry](https://packagist.org/packages/zenstruck/foundry) | [2.7](../../../tree/main/zenstruck/foundry/2.7) | `foundry` |
+| [zenstruck/foundry](https://packagist.org/packages/zenstruck/foundry) | [2.15](../../../tree/main/zenstruck/foundry/2.15) | `foundry` |
 | [zenstruck/messenger-test](https://packagist.org/packages/zenstruck/messenger-test) | [1.7](../../../tree/main/zenstruck/messenger-test/1.7) | `messenger-test`, `messengertest` |
