@@ -1,6 +1,7 @@
 mcp:
     servers:
         default:
-            # Expose MCP tools, prompts and resources from the App\Mcp\ namespace.
             # Add your MCP services in src/Mcp/ and use the MCP SDK attributes to declare them.
-            registry: 'App\Mcp\'
+            # Once at least one MCP service exists, restrict the registry to 'App\Mcp\'.
+            # Namespace patterns must match at least one registered MCP service.
+            registry: '*'
