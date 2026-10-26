@@ -13,6 +13,9 @@
                 "config/packages/scheduler.yaml": {
                     "contents": [
                         "scheduler:",
+                        "    # send the scheduled messages to the Messenger transports routed for their class",
+                        "    use_messenger_routing: true",
+                        "",
                         "    schedules:",
                         "        default:",
                         "            # run the tasks missed while no worker was running, once",
@@ -26,7 +29,7 @@
                     "executable": false
                 }
             },
-            "ref": "57f4f69446db3445908bc84ac88ecdb0995cfe43"
+            "ref": "a3739cfd29c84fb1f5cc2733fcb7ba83ac64c30b"
         }
     }
 }
