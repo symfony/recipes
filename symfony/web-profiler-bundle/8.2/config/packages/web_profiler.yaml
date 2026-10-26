@@ -5,7 +5,6 @@ when@dev:
 
     framework:
         profiler:
-            collect: true
             excluded_paths:
                 - '^/\.well-known/'
                 - '^/favicon\.ico$'
