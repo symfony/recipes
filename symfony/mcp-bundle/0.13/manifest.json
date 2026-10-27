@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Symfony\\AI\\McpBundle\\McpBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["mcp"]
+}
