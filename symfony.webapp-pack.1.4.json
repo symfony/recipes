@@ -19,7 +19,9 @@
                         "    transports:",
                         "        # https://symfony.com/doc/current/messenger.html#transport-configuration",
                         "        async: '%env(MESSENGER_TRANSPORT_DSN)%'",
-                        "        failed: 'doctrine://default?queue_name=failed'",
+                        "        failed:",
+                        "            dsn: 'doctrine://default?queue_name=failed'",
+                        "            sign: true",
                         "        # sync: 'sync://'",
                         "",
                         "    routing:",
@@ -34,7 +36,7 @@
                     "executable": false
                 }
             },
-            "ref": "63800aca6d1ad624b04bf7af2427e959f9ec0f57"
+            "ref": "05459a8ffc76bcd01a7c7dd9a3c95df2b3841bd5"
         }
     }
 }
