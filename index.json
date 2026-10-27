@@ -661,6 +661,7 @@
         "ux-icons": "symfony/ux-icons",
         "ux-image": "symfony/ux-image",
         "ux-imgix-image": "symfony/ux-imgix-image",
+        "ux-inspector": "symfony/ux-inspector",
         "ux-keycdn-image": "symfony/ux-keycdn-image",
         "ux-lazy-image": "symfony/ux-lazy-image",
         "ux-leaflet-map": "symfony/ux-leaflet-map",
@@ -680,6 +681,7 @@
         "uxicons": "symfony/ux-icons",
         "uximage": "symfony/ux-image",
         "uximgiximage": "symfony/ux-imgix-image",
+        "uxinspector": "symfony/ux-inspector",
         "uxkeycdnimage": "symfony/ux-keycdn-image",
         "uxlazyimage": "symfony/ux-lazy-image",
         "uxleafletmap": "symfony/ux-leaflet-map",
@@ -1637,6 +1639,9 @@
             "3.6"
         ],
         "symfony/ux-imgix-image": [
+            "3.6"
+        ],
+        "symfony/ux-inspector": [
             "3.6"
         ],
         "symfony/ux-keycdn-image": [
