@@ -1,0 +1,29 @@
+{
+    "aliases": {
+        "webapp": "symfony/webapp-pack"
+    },
+    "recipes": {
+        "symfony/webapp-pack": [
+            "1.0",
+            "1.4"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/webapp-pack": {
+            "1.4": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1611/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1611/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
