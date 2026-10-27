@@ -220,6 +220,9 @@
                         "  `debug:event-dispatcher`...;",
                         "- `bin/console lint:container`, `lint:yaml config/`, `lint:twig templates/`: to",
                         "  catch errors before running;",
+                        "- `vendor/symfony/<package>/CHANGELOG.md`: what each version added, deprecated",
+                        "  or removed. Read the sections of the recent versions before you use a",
+                        "  component;",
                         "- the source and the docblocks in `vendor/`;",
                         "- https://symfony.com/doc/current/, switched to the version of `composer.json`",
                         "  when it differs.",
@@ -371,7 +374,7 @@
                     "executable": false
                 }
             },
-            "ref": "112179548f5afbed04835b2d3702c577313461c4"
+            "ref": "17c3acc869f0958d04edb32c4e774599618aa498"
         }
     }
 }
