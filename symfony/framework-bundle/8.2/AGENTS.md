@@ -92,6 +92,22 @@ the team:
 - Keep the diff to what the task needs: no unrelated renames, reformatting or
   refactoring.
 
+## When a package gets in the way
+
+- Before you work around what looks like a bug or a missing feature of Symfony
+  or another package, check that the bug is real. Reproduce it in a few lines,
+  compare the installed version with the latest release, and search the issues
+  and pull requests of the project.
+- If the bug is real, keep the workaround small. Link the workaround to the
+  upstream issue or pull request in a comment, so that it can be removed after
+  the fix is released.
+- Offer to report the bug. Draft the issue with the reproduction, or a pull
+  request with a test when the fix is clear. Ask before posting anything, since
+  it is published under the name of the person you work for.
+- Report security issues privately, as the security policy of the project says,
+  never in a public issue. For Symfony, see
+  https://symfony.com/doc/current/contributing/code/security.html.
+
 ## Look it up
 
 Symfony's APIs change between versions, and what you remember may be outdated.
