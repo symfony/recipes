@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ux-native": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Native\\UXNativeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ux_native.yaml": {
+                    "contents": [
+                        "ux_native:",
+                        "    resource: '@UXNativeBundle/config/routes.php'",
+                        "    # The Hotwire Native apps match these paths anywhere in the URL:",
+                        "    # you can add a prefix, but do not rename the paths themselves",
+                        "    #prefix: '/app'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6e05df269be118ec9b5659a6bb7e19e380eb955e"
+        }
+    }
+}

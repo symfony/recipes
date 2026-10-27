@@ -668,6 +668,7 @@
         "ux-leaflet-map": "symfony/ux-leaflet-map",
         "ux-live-component": "symfony/ux-live-component",
         "ux-map": "symfony/ux-map",
+        "ux-native": "symfony/ux-native",
         "ux-react": "symfony/ux-react",
         "ux-router": "symfony/ux-router",
         "ux-svelte": "symfony/ux-svelte",
@@ -688,6 +689,7 @@
         "uxleafletmap": "symfony/ux-leaflet-map",
         "uxlivecomponent": "symfony/ux-live-component",
         "uxmap": "symfony/ux-map",
+        "uxnative": "symfony/ux-native",
         "uxreact": "symfony/ux-react",
         "uxrouter": "symfony/ux-router",
         "uxsvelte": "symfony/ux-svelte",
@@ -1666,6 +1668,9 @@
         ],
         "symfony/ux-map": [
             "2.19"
+        ],
+        "symfony/ux-native": [
+            "3.7"
         ],
         "symfony/ux-react": [
             "2.8",
