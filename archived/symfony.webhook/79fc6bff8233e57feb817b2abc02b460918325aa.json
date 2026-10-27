@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "symfony/webhook": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/webhook.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "webhook:",
+                        "    signature_format: standard",
+                        "    no_private_network: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/webhook.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "webhook:",
+                        "    resource: '@FrameworkBundle/Resources/config/routing/webhook.php'",
+                        "    prefix: /webhook",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "79fc6bff8233e57feb817b2abc02b460918325aa"
+        }
+    }
+}

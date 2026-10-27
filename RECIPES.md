@@ -251,7 +251,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/web-profiler-bundle](https://packagist.org/packages/symfony/web-profiler-bundle) | [8.2](../../../tree/main/symfony/web-profiler-bundle/8.2) | `web-profiler-bundle`, `webprofilerbundle` |
 | [symfony/web-server-bundle](https://packagist.org/packages/symfony/web-server-bundle) | [3.3](../../../tree/main/symfony/web-server-bundle/3.3) | `server`, `web-server`, `web-server-bundle`, `webserver`, `webserverbundle` |
 | [symfony/webapp-pack](https://packagist.org/packages/symfony/webapp-pack) | [1.4](../../../tree/main/symfony/webapp-pack/1.4) | `webapp` |
-| [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [7.3](../../../tree/main/symfony/webhook/7.3) | `webhook` |
+| [symfony/webhook](https://packagist.org/packages/symfony/webhook) | [8.2](../../../tree/main/symfony/webhook/8.2) | `webhook` |
 | [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) | [2.3](../../../tree/main/symfony/webpack-encore-bundle/2.3) | `encore`, `ux`, `webpack`, `webpack-encore`, `webpack-encore-bundle`, `webpackencore`, `webpackencorebundle` |
 | [symfony/workflow](https://packagist.org/packages/symfony/workflow) | [8.2](../../../tree/main/symfony/workflow/8.2) | `workflow` |
 | [symfony/yunpian-notifier](https://packagist.org/packages/symfony/yunpian-notifier) | [8.2](../../../tree/main/symfony/yunpian-notifier/8.2) | `yunpian-notifier`, `yunpiannotifier` |

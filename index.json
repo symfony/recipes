@@ -1725,7 +1725,8 @@
         ],
         "symfony/webhook": [
             "6.3",
-            "7.3"
+            "7.3",
+            "8.2"
         ],
         "symfony/webpack-encore-bundle": [
             "1.0",
@@ -2579,6 +2580,11 @@
         },
         "symfony/webapp-pack": {
             "1.4": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/webhook": {
+            "8.2": {
                 "symfony/framework-bundle": "<8.2"
             }
         },
