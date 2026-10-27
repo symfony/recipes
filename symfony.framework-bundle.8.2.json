@@ -33,7 +33,9 @@
                     "/.env.local",
                     "/.env.local.php",
                     "/.env.*.local",
-                    "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+                    "/%CONFIG_DIR%/secrets/*/*.decrypt.private.php",
+                    "!/%CONFIG_DIR%/secrets/dev/dev.decrypt.private.php",
+                    "!/%CONFIG_DIR%/secrets/test/test.decrypt.private.php",
                     "/%PUBLIC_DIR%/bundles/",
                     "/%VAR_DIR%/",
                     "/vendor/"
@@ -344,7 +346,7 @@
                     "executable": false
                 }
             },
-            "ref": "513bd7932a84808101ebb70a2b8a817c2edf9acb"
+            "ref": "16bf1b97ebb899b3dfcec2b2152ef7e56ce0686a"
         }
     }
 }
