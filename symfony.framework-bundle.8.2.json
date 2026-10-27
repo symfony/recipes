@@ -236,7 +236,8 @@
                         "    secret: '%env(APP_SECRET)%'",
                         "",
                         "    # Note that the session will be started ONLY if you read or write from it.",
-                        "    session: true",
+                        "    session:",
+                        "        isolate_attributes: true",
                         "",
                         "    #esi: true",
                         "    #fragments: true",
@@ -346,7 +347,7 @@
                     "executable": false
                 }
             },
-            "ref": "16bf1b97ebb899b3dfcec2b2152ef7e56ce0686a"
+            "ref": "750b3267671655b70aa5ddf2f9c7dd010fb5bdb4"
         }
     }
 }
