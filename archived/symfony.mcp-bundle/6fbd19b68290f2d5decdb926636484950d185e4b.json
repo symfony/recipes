@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "symfony/mcp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\McpBundle\\McpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Your MCP HTTP endpoint is available at <fg=green>/mcp</> and only accepts localhost by default.",
+                    "    Configure <fg=green>http.allowed_hosts</> in <fg=green>config/packages/mcp.yaml</> to allow other hostnames.",
+                    "",
+                    "  * The registry initially exposes all MCP services, including those from third-party bundles.",
+                    "    After adding your MCP services, restrict <fg=green>registry</> to their namespace(s), e.g. <fg=green>'App\\Mcp\\'</>.",
+                    "    Each namespace pattern must match at least one registered MCP service."
+                ]
+            },
+            "files": {
+                "config/packages/mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    servers:",
+                        "        default:",
+                        "            # Use the MCP SDK attributes to declare tools, prompts and resources on your services.",
+                        "            # Once MCP services exist, restrict the registry to their namespace(s), e.g. 'App\\Mcp\\'.",
+                        "            # Namespace patterns must match at least one registered MCP service.",
+                        "            # '*' also exposes MCP services from third-party bundles over HTTP.",
+                        "            registry: '*'",
+                        "",
+                        "            http:",
+                        "                path: /mcp",
+                        "                # Only localhost is allowed by default. Add hostnames without ports for remote access.",
+                        "                # allowed_hosts: ['localhost', 'mcp.example.com']",
+                        "",
+                        "            # Enable STDIO for clients such as Claude Desktop via bin/console mcp:server.",
+                        "            # transports:",
+                        "            #     stdio: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    # Import the HTTP routes for the configured MCP servers.",
+                        "    resource: .",
+                        "    type: mcp",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6fbd19b68290f2d5decdb926636484950d185e4b"
+        }
+    }
+}

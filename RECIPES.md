@@ -152,6 +152,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/mastodon-notifier](https://packagist.org/packages/symfony/mastodon-notifier) | [8.2](../../../tree/main/symfony/mastodon-notifier/8.2) | `mastodon-notifier`, `mastodonnotifier` |
 | [symfony/matrix-notifier](https://packagist.org/packages/symfony/matrix-notifier) | [8.2](../../../tree/main/symfony/matrix-notifier/8.2) | `matrix-notifier`, `matrixnotifier` |
 | [symfony/mattermost-notifier](https://packagist.org/packages/symfony/mattermost-notifier) | [8.2](../../../tree/main/symfony/mattermost-notifier/8.2) | `mattermost-notifier`, `mattermostnotifier` |
+| [symfony/mcp-bundle](https://packagist.org/packages/symfony/mcp-bundle) | [0.13](../../../tree/main/symfony/mcp-bundle/0.13) | `mcp`, `mcp-bundle`, `mcpbundle` |
 | [symfony/mercure-bundle](https://packagist.org/packages/symfony/mercure-bundle) | [0.6](../../../tree/main/symfony/mercure-bundle/0.6) | `mercure`, `mercure-bundle`, `mercurebundle` |
 | [symfony/mercure-notifier](https://packagist.org/packages/symfony/mercure-notifier) | [8.2](../../../tree/main/symfony/mercure-notifier/8.2) | `mercure-notifier`, `mercurenotifier` |
 | [symfony/message-bird-notifier](https://packagist.org/packages/symfony/message-bird-notifier) | [8.2](../../../tree/main/symfony/message-bird-notifier/8.2) | `message-bird-notifier`, `messagebirdnotifier` |

@@ -377,6 +377,9 @@
         "matrixnotifier": "symfony/matrix-notifier",
         "mattermost-notifier": "symfony/mattermost-notifier",
         "mattermostnotifier": "symfony/mattermost-notifier",
+        "mcp": "symfony/mcp-bundle",
+        "mcp-bundle": "symfony/mcp-bundle",
+        "mcpbundle": "symfony/mcp-bundle",
         "mercure": "symfony/mercure-bundle",
         "mercure-bundle": "symfony/mercure-bundle",
         "mercure-notifier": "symfony/mercure-notifier",
@@ -1287,6 +1290,9 @@
         "symfony/mattermost-notifier": [
             "5.1",
             "8.2"
+        ],
+        "symfony/mcp-bundle": [
+            "0.13"
         ],
         "symfony/mercure-bundle": [
             "0.1",
