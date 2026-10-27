@@ -19,12 +19,13 @@
                         "        stateless_token_ids:",
                         "            - authenticate",
                         "            - logout",
+                        "            - switch_user",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "f9afe6be3fd1e515a9c7adf3c429326e92c1ff1e"
+            "ref": "939ab3e95126f02c1d7a481abf72c40f810ea1cb"
         }
     }
 }
