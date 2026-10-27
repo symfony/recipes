@@ -10,10 +10,10 @@
                 }
             },
             "files": {
-                "config/packages/csrf.yaml": {
+                "config/packages/form.yaml": {
                     "contents": [
                         "# yaml-language-server: $schema=../schema.json",
-                        "# Enable stateless CSRF protection for forms and logins/logouts",
+                        "# Enable stateless CSRF protection for forms",
                         "framework:",
                         "    form:",
                         "        csrf_protection:",
@@ -22,14 +22,12 @@
                         "    csrf_protection:",
                         "        stateless_token_ids:",
                         "            - submit",
-                        "            - authenticate",
-                        "            - logout",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "cd90fb049c59d5577f0177bc0badc6d2970eca89"
+            "ref": "3432a58fba173e2c80d9e86b50fdd9598fef1335"
         }
     }
 }

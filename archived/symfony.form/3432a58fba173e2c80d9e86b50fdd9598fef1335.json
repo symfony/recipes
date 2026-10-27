@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "symfony/form": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/form.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "# Enable stateless CSRF protection for forms",
+                        "framework:",
+                        "    form:",
+                        "        csrf_protection:",
+                        "            token_id: submit",
+                        "",
+                        "    csrf_protection:",
+                        "        stateless_token_ids:",
+                        "            - submit",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3432a58fba173e2c80d9e86b50fdd9598fef1335"
+        }
+    }
+}

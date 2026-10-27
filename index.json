@@ -200,6 +200,7 @@
         "cs-fixer-shim": "php-cs-fixer/shim",
         "csfixer": "friendsofphp/php-cs-fixer",
         "csfixershim": "php-cs-fixer/shim",
+        "csrf": "symfony/security-csrf",
         "css-selector": "symfony/css-selector",
         "cssselector": "symfony/css-selector",
         "debug": "symfony/debug-pack",
@@ -1475,6 +1476,9 @@
             "7.4",
             "8.2"
         ],
+        "symfony/security-csrf": [
+            "8.2"
+        ],
         "symfony/sendberry-notifier": [
             "6.1",
             "8.2"
@@ -2283,6 +2287,11 @@
             },
             "6.4": {
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/security-csrf": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/sendberry-notifier": {
