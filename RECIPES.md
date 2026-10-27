@@ -241,7 +241,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [3.4](../../../tree/main/symfony/ux-react/3.4) | `ux-react`, `uxreact` |
 | [symfony/ux-router](https://packagist.org/packages/symfony/ux-router) | [3.6](../../../tree/main/symfony/ux-router/3.6) | `ux-router`, `uxrouter` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](../../../tree/main/symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
-| [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [2.32](../../../tree/main/symfony/ux-translator/2.32) | `ux-translator`, `uxtranslator` |
+| [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [3.7](../../../tree/main/symfony/ux-translator/3.7) | `ux-translator`, `uxtranslator` |
 | [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [2.20](../../../tree/main/symfony/ux-turbo/2.20) | `turbo`, `ux-turbo`, `uxturbo` |
 | [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](../../../tree/main/symfony/ux-twig-component/2.13) | `twig-component`, `twig-components`, `twigcomponent`, `twigcomponents`, `ux-twig-component`, `uxtwigcomponent` |
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [3.4](../../../tree/main/symfony/ux-vue/3.4) | `ux-vue`, `uxvue` |
