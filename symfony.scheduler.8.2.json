@@ -12,6 +12,7 @@
             "files": {
                 "config/packages/scheduler.yaml": {
                     "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
                         "scheduler:",
                         "    # send the scheduled messages to the Messenger transports routed for their class",
                         "    use_messenger_routing: true",
@@ -29,7 +30,7 @@
                     "executable": false
                 }
             },
-            "ref": "a3739cfd29c84fb1f5cc2733fcb7ba83ac64c30b"
+            "ref": "b77083bd73a4da995d904c6dda1b290aa582c02f"
         }
     }
 }
