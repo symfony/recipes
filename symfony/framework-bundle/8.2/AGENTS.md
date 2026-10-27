@@ -125,6 +125,9 @@ The application can tell what exists:
   `debug:event-dispatcher`...;
 - `bin/console lint:container`, `lint:yaml config/`, `lint:twig templates/`: to
   catch errors before running;
+- `vendor/symfony/<package>/CHANGELOG.md`: what each version added, deprecated
+  or removed. Read the sections of the recent versions before you use a
+  component;
 - the source and the docblocks in `vendor/`;
 - https://symfony.com/doc/current/, switched to the version of `composer.json`
   when it differs.
