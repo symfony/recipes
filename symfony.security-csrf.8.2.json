@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony/security-csrf": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
+                }
+            },
+            "files": {
+                "config/packages/csrf_protection.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "# Enable stateless CSRF protection",
+                        "framework:",
+                        "    csrf_protection:",
+                        "        stateless_token_ids:",
+                        "            - authenticate",
+                        "            - logout",
+                        "            - switch_user",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "939ab3e95126f02c1d7a481abf72c40f810ea1cb"
+        }
+    }
+}

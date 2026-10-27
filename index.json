@@ -1,0 +1,30 @@
+{
+    "aliases": {
+        "csrf": "symfony/security-csrf",
+        "security-csrf": "symfony/security-csrf",
+        "securitycsrf": "symfony/security-csrf"
+    },
+    "recipes": {
+        "symfony/security-csrf": [
+            "8.2"
+        ]
+    },
+    "recipe-conflicts": {
+        "symfony/security-csrf": {
+            "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/symfony/recipes",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1553/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes/flex/pull-1553/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
