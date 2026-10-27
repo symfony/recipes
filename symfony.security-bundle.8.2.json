@@ -27,7 +27,7 @@
                         "    firewalls:",
                         "        dev:",
                         "            # Ensure dev tools and static assets are always allowed",
-                        "            pattern: ^/(_profiler|_wdt|assets|build)/",
+                        "            pattern: ^/(_profiler(/|$)|(_wdt|assets|build)/)",
                         "            security: false",
                         "        main:",
                         "            lazy: true",
@@ -58,7 +58,7 @@
                     "executable": false
                 }
             },
-            "ref": "03a9b30dfbe6ac78c88eb202b5f488b632f7d4b2"
+            "ref": "5db1f5e414619d0c5ae524aab9dfcdb1f920059d"
         }
     }
 }

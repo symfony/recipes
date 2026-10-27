@@ -26,7 +26,7 @@
                         "        users_in_memory: { memory: null }",
                         "    firewalls:",
                         "        dev:",
-                        "            pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "            pattern: ^/(_profiler(/|$)|(_wdt|css|images|js)/)",
                         "            security: false",
                         "        main:",
                         "            lazy: true",
@@ -70,7 +70,7 @@
                     "executable": false
                 }
             },
-            "ref": "2ae08430db28c8eb4476605894296c82a642028f"
+            "ref": "d7b1c0401047df8cf5dc72fd078fad1372228913"
         }
     }
 }
