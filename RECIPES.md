@@ -12,7 +12,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [doctrine/deprecations](https://packagist.org/packages/doctrine/deprecations) | [1.0](../../../tree/main/doctrine/deprecations/1.0) |  |
 | [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [3.1](../../../tree/main/doctrine/doctrine-bundle/3.1) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](../../../tree/main/doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
-| [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](../../../tree/main/doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
+| [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.7](../../../tree/main/doctrine/doctrine-migrations-bundle/3.7) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
 | [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.5](../../../tree/main/doctrine/mongodb-odm-bundle/5.5) | `doctrine-mongo`, `doctrine-mongodb`, `doctrinemongo`, `doctrinemongodb`, `mongo-odm`, `mongodb-odm`, `mongodbodm`, `mongoodm` |
 | [easycorp/easyadmin-bundle](https://packagist.org/packages/easycorp/easyadmin-bundle) | [4.14](../../../tree/main/easycorp/easyadmin-bundle/4.14) | `admin`, `admin-gen`, `admin-generator`, `admingen`, `admingenerator` |
 | [friendsofphp/php-cs-fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) | [3.39](../../../tree/main/friendsofphp/php-cs-fixer/3.39) | `cs-fixer`, `csfixer`, `php-cs-fixer`, `phpcsfixer` |
