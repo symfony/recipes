@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../schema.json
 scheduler:
     # send the scheduled messages to the Messenger transports routed for their class
     use_messenger_routing: true
