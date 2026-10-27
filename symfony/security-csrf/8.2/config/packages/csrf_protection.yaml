@@ -5,3 +5,4 @@ framework:
         stateless_token_ids:
             - authenticate
             - logout
+            - switch_user
