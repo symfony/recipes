@@ -32,6 +32,7 @@
                         "        main:",
                         "            lazy: true",
                         "            provider: users_in_memory",
+                        "            user_checker_on_refresh: true",
                         "",
                         "            # Activate different ways to authenticate:",
                         "            # https://symfony.com/doc/current/security.html#the-firewall",
@@ -58,7 +59,7 @@
                     "executable": false
                 }
             },
-            "ref": "5db1f5e414619d0c5ae524aab9dfcdb1f920059d"
+            "ref": "c0af0228ae2d5825bbbca9f32a4c054f1c40e88d"
         }
     }
 }
