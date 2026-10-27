@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
+webhook:
+    resource: '@FrameworkBundle/Resources/config/routing/webhook.php'
+    prefix: /webhook
