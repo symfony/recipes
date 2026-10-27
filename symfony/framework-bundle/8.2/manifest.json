@@ -28,7 +28,9 @@
         "/.env.local",
         "/.env.local.php",
         "/.env.*.local",
-        "/%CONFIG_DIR%/secrets/prod/prod.decrypt.private.php",
+        "/%CONFIG_DIR%/secrets/*/*.decrypt.private.php",
+        "!/%CONFIG_DIR%/secrets/dev/dev.decrypt.private.php",
+        "!/%CONFIG_DIR%/secrets/test/test.decrypt.private.php",
         "/%PUBLIC_DIR%/bundles/",
         "/%VAR_DIR%/",
         "/vendor/"
