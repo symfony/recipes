@@ -10,12 +10,22 @@
                     "#2": "",
                     "UX_MAP_DSN": "leaflet://default"
                 },
+                "add-lines": [
+                    {
+                        "file": "webpack.config.js",
+                        "content": "\n    .addAliases({'leaflet/dist/leaflet.min.css': 'leaflet/dist/leaflet.css'})",
+                        "position": "after_target",
+                        "target": ".autoProvidejQuery()",
+                        "warn_if_missing": true,
+                        "requires": "symfony/webpack-encore-bundle"
+                    }
+                ],
                 "post-install-output": [
                     "  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/2.x/src/Map/src/Bridge/Leaflet/README.md</>"
                 ]
             },
             "files": [],
-            "ref": "bed7e7f6d7c04e0de9665859ddbf0e842e5323e3"
+            "ref": "d376949f6444ac2fb753ec20a07a799a98ce209e"
         }
     }
 }
