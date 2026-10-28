@@ -6,11 +6,6 @@ that a package is installed.
 
 ## Installing packages
 
-Add a feature with `composer require <package>` (`symfony/messenger`,
-`orm-pack`...): its Flex recipe registers the bundle and writes its default
-configuration. Don't edit `config/bundles.php` or write that configuration by
-hand.
-
 Before writing infrastructure code or adding a third-party library, check
 whether a Symfony component does the job: Lock, Cache, HttpClient, Mailer,
 Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and
@@ -25,8 +20,6 @@ Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and
   `config/schema.json` is their JSON schema, which editors use and `lint:yaml`
   checks when `opis/json-schema` is installed. Both are regenerated when the
   container is rebuilt in debug mode. Read them instead of guessing an option.
-- Configure services and routes with attributes, YAML or PHP. Symfony 8
-  removed the XML format.
 - Prefer attributes to configuration files: `#[Route]`, `#[IsGranted]`,
   `#[AsCommand]`, `#[AsEventListener]`, `#[AsMessageHandler]`, `#[Autowire]`,
   `#[Target]`... Services are autowired and autoconfigured, so a service
@@ -50,8 +43,6 @@ Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and
 - Makers (`bin/console make:*`) ask for missing arguments, and a
   non-interactive shell then waits forever. Pass all the arguments, with
   `--no-interaction`.
-- With Doctrine, change the schema with migrations (`make:migration`, then
-  `doctrine:migrations:migrate`), not with `doctrine:schema:update`.
 
 ## Tests
 
