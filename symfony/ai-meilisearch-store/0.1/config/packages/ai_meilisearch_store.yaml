@@ -1,6 +1,0 @@
-ai:
-    store:
-        meilisearch:
-            default:
-                host: '%env(MEILISEARCH_HOST)%'
-                api_key: '%env(MEILISEARCH_API_KEY)%'

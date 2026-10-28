@@ -1,4 +1,0 @@
-ai:
-    platform:
-        cerebras:
-            api_key: '%env(CEREBRAS_API_KEY)%'

@@ -1,7 +1,19 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        manticoresearch:",
+                "            default:",
+                "                host: '%env(MANTICORESEARCH_HOST)%'",
+                "                port: '%env(int:MANTICORESEARCH_PORT)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "MANTICORESEARCH_HOST=localhost",
         "#2": "MANTICORESEARCH_PORT=9308"
