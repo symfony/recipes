@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-open-router-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        openrouter:\n            api_key: '%env(OPENROUTER_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "OPENROUTER_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "304a1318266967fa194ba62b139ee80637479bdf"
+        }
+    }
+}

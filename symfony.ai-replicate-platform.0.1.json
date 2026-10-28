@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-replicate-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        replicate:\n            api_key: '%env(REPLICATE_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "REPLICATE_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "cf56dc9627b9718a951519c81dfd5cb51bf20977"
+        }
+    }
+}

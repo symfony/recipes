@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-hugging-face-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        huggingface:\n            api_key: '%env(HUGGINGFACE_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "HUGGINGFACE_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "68bc896a3d39a0155d55fb77635d9f7d1df66e8f"
+        }
+    }
+}

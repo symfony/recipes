@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "symfony/ai-transformers-php-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        transformersphp: null"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "c8b019ffb4ee1a24f1fc71f1f69294840693530b"
+        }
+    }
+}

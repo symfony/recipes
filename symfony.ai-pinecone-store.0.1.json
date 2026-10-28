@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-pinecone-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        pinecone:\n            default:\n                api_key: '%env(PINECONE_API_KEY)%'\n                index_host: '%env(PINECONE_INDEX_HOST)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "PINECONE_API_KEY=",
+                    "#2": "PINECONE_INDEX_HOST="
+                }
+            },
+            "files": [],
+            "ref": "ce615699ffcf5cd75033f7d4da913fc1a888ed70"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "symfony/ai-bedrock-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        bedrock: null"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "05450bd53513d168c29840d9b5ec9d25485dc668"
+        }
+    }
+}

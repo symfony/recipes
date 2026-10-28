@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-mistral-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        mistral:\n            api_key: '%env(MISTRAL_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "MISTRAL_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "900e107b11b561a6cffb55d4e43c5b1e123aaa63"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-decart-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        decart:\n            api_key: '%env(DECART_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "DECART_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "137060fbddf718572d4feab034d5aa310f35bb45"
+        }
+    }
+}

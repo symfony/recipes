@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-supabase-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        supabase:\n            default:\n                url: '%env(SUPABASE_URL)%'\n                api_key: '%env(SUPABASE_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "SUPABASE_URL=",
+                    "#2": "SUPABASE_API_KEY="
+                }
+            },
+            "files": [],
+            "ref": "0aa914cab75de7b542da54966a5b06d790eeb84e"
+        }
+    }
+}

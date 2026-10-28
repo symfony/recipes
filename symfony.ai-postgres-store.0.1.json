@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "symfony/ai-postgres-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        postgres:\n            default:\n                dbal_connection: 'doctrine.dbal.default_connection'"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "f8eb18e2a912725d85813c1b978926be99717e2b"
+        }
+    }
+}

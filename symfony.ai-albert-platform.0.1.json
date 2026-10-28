@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-albert-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        albert:\n            api_key: '%env(ALBERT_API_KEY)%'\n            base_url: '%env(ALBERT_BASE_URL)%'"
+                    }
+                ],
+                "env": {
+                    "ALBERT_API_KEY": "",
+                    "#1": "ALBERT_BASE_URL=https://api.albert.ai/v1"
+                }
+            },
+            "files": [],
+            "ref": "0dc8ef84e0145a7693785ff5cbc676c6db0a935f"
+        }
+    }
+}

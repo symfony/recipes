@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-scaleway-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        scaleway:\n            api_key: '%env(SCALEWAY_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "SCALEWAY_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "d027c64c069d0cf3842207453596977acea1b044"
+        }
+    }
+}

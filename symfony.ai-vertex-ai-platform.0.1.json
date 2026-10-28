@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-vertex-ai-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        vertexai:\n            project_id: '%env(VERTEX_AI_PROJECT_ID)%'\n            location: '%env(VERTEX_AI_LOCATION)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "VERTEX_AI_PROJECT_ID=your-project-id",
+                    "#2": "VERTEX_AI_LOCATION=us-central1"
+                }
+            },
+            "files": [],
+            "ref": "6395e5fbe1cc639e38cf09bf2bbb70ea973d3927"
+        }
+    }
+}

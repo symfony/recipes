@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-perplexity-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        perplexity:\n            api_key: '%env(PERPLEXITY_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "PERPLEXITY_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "570727196c51a4ddc230399e22c4e8268cdabcb3"
+        }
+    }
+}
