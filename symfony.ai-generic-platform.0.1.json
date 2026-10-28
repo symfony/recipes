@@ -12,17 +12,19 @@
             "files": {
                 "config/packages/ai_generic_platform.yaml": {
                     "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        generic:",
-                        "            default:",
-                        "                base_url: '%env(GENERIC_BASE_URL)%'",
+                        "# Uncomment to call an API that is compatible with the one of OpenAI.",
+                        "# This is commented out because other platform bridges install this package too.",
+                        "#ai:",
+                        "#    platform:",
+                        "#        generic:",
+                        "#            default:",
+                        "#                base_url: '%env(GENERIC_BASE_URL)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "f38913b87380322d4c40c302b41626e811516bc4"
+            "ref": "a3919116f59f52377b59cfffe889711f8351d472"
         }
     }
 }
