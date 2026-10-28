@@ -1,0 +1,372 @@
+{
+    "manifests": {
+        "symfony/framework-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "src/": "%SRC_DIR%/",
+                    ".editorconfig": ".editorconfig",
+                    ".symfony.local.yaml": ".symfony.local.yaml",
+                    "AGENTS.md": "AGENTS.md"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd",
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "env": {
+                    "APP_ENV": "dev",
+                    "APP_SECRET": "",
+                    "APP_SHARE_DIR": "%VAR_DIR%/share"
+                },
+                "dotenv": {
+                    "dev": {
+                        "APP_SECRET": "%generate(secret)%"
+                    }
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%CONFIG_DIR%/secrets/*/*.decrypt.private.php",
+                    "!/%CONFIG_DIR%/secrets/dev/dev.decrypt.private.php",
+                    "!/%CONFIG_DIR%/secrets/test/test.decrypt.private.php",
+                    "/%PUBLIC_DIR%/bundles/",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Go to the project directory",
+                    "    2. Create your code repository with the <comment>git init</comment> command",
+                    "    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                ]
+            },
+            "files": {
+                ".editorconfig": {
+                    "contents": [
+                        "# editorconfig.org",
+                        "",
+                        "root = true",
+                        "",
+                        "[*]",
+                        "charset = utf-8",
+                        "end_of_line = lf",
+                        "indent_size = 4",
+                        "indent_style = space",
+                        "insert_final_newline = true",
+                        "trim_trailing_whitespace = true",
+                        "",
+                        "[{compose.yaml,compose.*.yaml}]",
+                        "indent_size = 2",
+                        "",
+                        "[*.md]",
+                        "trim_trailing_whitespace = false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".symfony.local.yaml": {
+                    "contents": [
+                        "# This configuration file is used by the Symfony CLI tool.",
+                        "# See https://symfony.com/doc/current/setup/symfony_cli.html for more information.",
+                        "",
+                        "http:",
+                        "    use_gzip: true",
+                        "",
+                        "# Processes that automatically run with the server (https://symfony.com/doc/current/setup/symfony_cli.html#configuring-workers)",
+                        "workers:",
+                        "    # Consume async messages, and restart the worker when the code changes",
+                        "    #messenger_consume_async:",
+                        "    #    cmd: ['symfony', 'console', 'messenger:consume', 'async']",
+                        "    #    watch: ['config', 'src', 'templates', 'vendor/composer/installed.json']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "AGENTS.md": {
+                    "contents": [
+                        "# AGENTS.md",
+                        "",
+                        "This is a Symfony application. `composer.json` gives the versions of Symfony and",
+                        "PHP. `symfony.lock` lists the recipes that ran. Check both before you assume",
+                        "that a package is installed.",
+                        "",
+                        "## Installing packages",
+                        "",
+                        "Before writing infrastructure code or adding a third-party library, check",
+                        "whether a Symfony component does the job: Lock, Cache, HttpClient, Mailer,",
+                        "Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and",
+                        "`composer require` installs it.",
+                        "",
+                        "## Configuration",
+                        "",
+                        "- Since Symfony 8.2, each component is configured at its own root key:",
+                        "  `messenger:`, `cache:`, `mailer:`, `validation:`... not under `framework:` as",
+                        "  in older versions.",
+                        "- `config/reference.php` describes every option of the installed bundles, and",
+                        "  `config/schema.json` is their JSON schema, which editors use and `lint:yaml`",
+                        "  checks when `opis/json-schema` is installed. Both are regenerated when the",
+                        "  container is rebuilt in debug mode. Read them instead of guessing an option.",
+                        "- Prefer attributes to configuration files: `#[Route]`, `#[IsGranted]`,",
+                        "  `#[AsCommand]`, `#[AsEventListener]`, `#[AsMessageHandler]`, `#[Autowire]`,",
+                        "  `#[Target]`... Services are autowired and autoconfigured, so a service",
+                        "  definition in YAML is the last resort.",
+                        "- Map request data with `#[MapRequestPayload]` and `#[MapQueryString]` on the",
+                        "  arguments of an action. These attributes deserialize and validate the data,",
+                        "  unlike `json_decode()`.",
+                        "- `.env` is committed and contains default values only. Secrets go in",
+                        "  `.env.local`, which is ignored by git, or in the vault",
+                        "  (`bin/console secrets:set`).",
+                        "",
+                        "## Running the app",
+                        "",
+                        "- If `compose.yaml` runs services (database, mailer...), run commands through",
+                        "  the Symfony CLI: `symfony console ...`, `symfony php bin/phpunit`. The CLI",
+                        "  exposes the env vars of the running containers, and `bin/console` alone",
+                        "  doesn't see them. `symfony serve -d` starts a web server.",
+                        "- There's no need to clear the cache in dev: the kernel rebuilds what changed.",
+                        "- When something fails, read `var/log/dev.log` and the profiler (`/_profiler`",
+                        "  lists the last requests) before changing code.",
+                        "- Makers (`bin/console make:*`) ask for missing arguments, and a",
+                        "  non-interactive shell then waits forever. Pass all the arguments, with",
+                        "  `--no-interaction`.",
+                        "",
+                        "## Tests",
+                        "",
+                        "`symfony/test-pack` provides PHPUnit: run `php bin/phpunit`. Extend",
+                        "`WebTestCase` to test HTTP requests and `KernelTestCase` to test services. These",
+                        "helpers replace a lot of setup code:",
+                        "",
+                        "- `$client->loginUser($user)` instead of submitting a login form;",
+                        "- `MessengerAssertionsTrait`: a message sent to an async transport isn't handled",
+                        "  during a test. Call `consumeQueuedMessages()` and check what the handler did,",
+                        "  such as the email it sent, or the handler stays untested;",
+                        "- `#[UseRecord]` to record HTTP exchanges once and replay them, instead of",
+                        "  calling real APIs;",
+                        "- `ClockSensitiveTrait::mockTime()` to control the time.",
+                        "",
+                        "## Writing",
+                        "",
+                        "These rules apply to comments, commit messages, docs and anything written for",
+                        "the team:",
+                        "",
+                        "- Write plain, factual English, because many readers aren't native speakers.",
+                        "  Write one idea per sentence and use verbs in their everyday sense. Repeat the",
+                        "  noun instead of using a pronoun that makes the reader look back.",
+                        "- State facts, not how good they are. Avoid words like \"robust\", \"seamless\",",
+                        "  \"powerful\" or \"simply\", exclamation marks and emoji.",
+                        "- Start with what changes for the reader, then explain why. Don't repeat what",
+                        "  the code or the diff already shows.",
+                        "- Use commas, colons and parentheses, not em-dashes.",
+                        "- A commit message says what changed in one line, plus a sentence or two when",
+                        "  the reason isn't obvious.",
+                        "",
+                        "## Code",
+                        "",
+                        "- Write a comment only for what the code can't say, such as a reason, a",
+                        "  reference to a spec or a non-obvious constraint. Don't narrate the code.",
+                        "- Don't set an option to its default value. `config/reference.php` shows the",
+                        "  defaults.",
+                        "- Fix a bug by writing a test that reproduces it first.",
+                        "- Keep the diff to what the task needs: no unrelated renames, reformatting or",
+                        "  refactoring.",
+                        "",
+                        "## When a package gets in the way",
+                        "",
+                        "These rules apply to bugs, missing features, slow code paths and APIs that make",
+                        "the app write boilerplate, in Symfony or in any other package:",
+                        "",
+                        "- Before you write a workaround, check that the problem is real. Reproduce it in",
+                        "  a few lines, compare the installed version with the latest release, and",
+                        "  search the issues and pull requests of the project.",
+                        "- For a performance issue, measure it first, with the profiler or a benchmark,",
+                        "  and keep the numbers.",
+                        "- Keep the workaround small. Link the workaround to the upstream issue or pull",
+                        "  request in a comment, so that it can be removed after the fix is released.",
+                        "- Offer to report it upstream. Draft the issue with the reproduction or the",
+                        "  numbers, or a pull request with a test when the fix is clear. Ask before",
+                        "  posting anything, since it is published under the name of the person you",
+                        "  work for.",
+                        "- Report security issues privately, as the security policy of the project says,",
+                        "  never in a public issue. For Symfony, see",
+                        "  https://symfony.com/doc/current/contributing/code/security.html.",
+                        "",
+                        "## Look it up",
+                        "",
+                        "Symfony's APIs change between versions, and what you remember may be outdated.",
+                        "The application can tell what exists:",
+                        "",
+                        "- `bin/console debug:autowiring <keyword>`: the services you can type-hint;",
+                        "- `bin/console debug:autoconfiguration <keyword>`: the attributes and interfaces",
+                        "  that make a class a command, a listener, a voter, a message handler...;",
+                        "- `bin/console debug:config <root key>`: the configuration as resolved;",
+                        "- `bin/console debug:router`, `debug:container --env-vars`, `debug:messenger`,",
+                        "  `debug:event-dispatcher`...;",
+                        "- `bin/console lint:container`, `lint:yaml config/`, `lint:twig templates/`: to",
+                        "  catch errors before running;",
+                        "- `vendor/symfony/<package>/CHANGELOG.md`: what each version added, deprecated",
+                        "  or removed. Read the sections of the recent versions before you use a",
+                        "  component;",
+                        "- the source and the docblocks in `vendor/`;",
+                        "- https://symfony.com/doc/current/, switched to the version of `composer.json`",
+                        "  when it differs.",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/cache.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "#cache:",
+                        "    # Unique name of your app: used to compute stable namespaces for cache keys.",
+                        "    #prefix_seed: your_vendor_name/app_name",
+                        "",
+                        "    # The \"app\" cache stores to the filesystem by default.",
+                        "    # The data in this cache should persist between deploys.",
+                        "    # Other options include:",
+                        "",
+                        "    # Redis",
+                        "    #app: cache.adapter.redis",
+                        "    #default_redis_provider: redis://localhost",
+                        "",
+                        "    # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)",
+                        "    #app: cache.adapter.apcu",
+                        "",
+                        "    # Namespaced pools use the above \"app\" backend by default",
+                        "    #pools:",
+                        "        #my.dedicated.cache: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/framework.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "# see https://symfony.com/doc/current/reference/configuration/framework.html",
+                        "framework:",
+                        "    secret: '%env(APP_SECRET)%'",
+                        "",
+                        "    # Note that the session will be started ONLY if you read or write from it.",
+                        "    session:",
+                        "        isolate_attributes: true",
+                        "",
+                        "    #esi: true",
+                        "    #fragments: true",
+                        "",
+                        "when@test:",
+                        "    framework:",
+                        "        test: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/preload.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "foreach (glob(dirname(__DIR__).'/var/cache/prod/*.preload.php') ?: [] as $file) {",
+                        "    require $file;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/framework.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "when@dev:",
+                        "    _errors:",
+                        "        resource: '@FrameworkBundle/Resources/config/routing/errors.php'",
+                        "        prefix: /_error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/services.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../vendor/symfony/dependency-injection/Loader/schema/services.schema.json",
+                        "",
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "# See also https://symfony.com/doc/current/service_container/import.html",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    # default configuration for services in *this* file",
+                        "    _defaults:",
+                        "        autowire: true      # Automatically injects dependencies in your services.",
+                        "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
+                        "",
+                        "    # makes classes in src/ available to be used as services",
+                        "    # this creates a service per class whose id is the fully-qualified class name",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "",
+                        "    # add more service definitions when explicit configuration is needed",
+                        "    # please note that last definitions always *replace* previous ones",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/index.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "",
+                        "require_once dirname(__DIR__).'/vendor/autoload_runtime.php';",
+                        "",
+                        "return static function (array $context) {",
+                        "    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Controller/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Kernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait;",
+                        "use Symfony\\Component\\HttpKernel\\Kernel as BaseKernel;",
+                        "",
+                        "class Kernel extends BaseKernel",
+                        "{",
+                        "    use MicroKernelTrait;",
+                        "",
+                        "    /**",
+                        "     * @return list<string> An array of allowed values for APP_ENV",
+                        "     */",
+                        "    private function getAllowedEnvs(): array",
+                        "    {",
+                        "        return ['prod', 'dev', 'test'];",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6dad798dd0f9536371957911281436501bdc0d8f"
+        }
+    }
+}
