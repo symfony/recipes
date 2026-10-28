@@ -1,5 +1,7 @@
-ai:
-    platform:
-        generic:
-            default:
-                base_url: '%env(GENERIC_BASE_URL)%'
+# Uncomment to call an API that is compatible with the one of OpenAI.
+# This is commented out because other platform bridges install this package too.
+#ai:
+#    platform:
+#        generic:
+#            default:
+#                base_url: '%env(GENERIC_BASE_URL)%'
