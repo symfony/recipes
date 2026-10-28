@@ -437,6 +437,12 @@ If ``warn_if_missing`` is set to ``true``, a warning will be shown to the
 user if the ``file`` or ``target`` isn't found. If ``requires`` is set, the
 rule will only be applied if the given package is installed.
 
+Lines are not added when the file already contains the ``content``, wherever
+it is. You can use this to list the same ``content`` with several targets, as
+fallbacks. Only the first entry whose target is found adds the lines. To add
+the same lines at several places on purpose, make each ``content`` unique, for
+example with a trailing comment.
+
 Validation
 ----------
 
