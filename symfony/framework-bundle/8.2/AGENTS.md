@@ -60,8 +60,9 @@ Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and
 helpers replace a lot of setup code:
 
 - `$client->loginUser($user)` instead of submitting a login form;
-- `MessengerAssertionsTrait`, with `consumeQueuedMessages()`, for the messages
-  sent to in-memory transports;
+- `MessengerAssertionsTrait`: a message sent to an async transport isn't handled
+  during a test. Call `consumeQueuedMessages()` and check what the handler did,
+  such as the email it sent, or the handler stays untested;
 - `#[UseRecord]` to record HTTP exchanges once and replay them, instead of
   calling real APIs;
 - `ClockSensitiveTrait::mockTime()` to control the time.
