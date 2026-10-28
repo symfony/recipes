@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\AI\Agent\Bridge\Mapbox\Mapbox:
+        $accessToken: '%env(MAPBOX_ACCESS_TOKEN)%'
