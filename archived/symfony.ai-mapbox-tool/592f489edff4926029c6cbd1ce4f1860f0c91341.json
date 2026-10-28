@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "symfony/ai-mapbox-tool": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MAPBOX_ACCESS_TOKEN=change-me"
+                }
+            },
+            "files": {
+                "config/packages/ai_mapbox_tool.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    Symfony\\AI\\Agent\\Bridge\\Mapbox\\Mapbox:",
+                        "        $accessToken: '%env(MAPBOX_ACCESS_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "592f489edff4926029c6cbd1ce4f1860f0c91341"
+        }
+    }
+}

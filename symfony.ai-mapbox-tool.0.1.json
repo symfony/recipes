@@ -6,25 +6,25 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "#1": "BRAVE_API_KEY=change-me"
+                    "#1": "MAPBOX_ACCESS_TOKEN=change-me"
                 }
             },
             "files": {
-                "config/packages/ai_brave_tool.yaml": {
+                "config/packages/ai_mapbox_tool.yaml": {
                     "contents": [
                         "services:",
                         "    _defaults:",
                         "        autowire: true",
                         "        autoconfigure: true",
                         "",
-                        "    Symfony\\AI\\Agent\\Bridge\\Brave\\Brave:",
-                        "        $apiKey: '%env(BRAVE_API_KEY)%'",
+                        "    Symfony\\AI\\Agent\\Bridge\\Mapbox\\Mapbox:",
+                        "        $accessToken: '%env(MAPBOX_ACCESS_TOKEN)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "3e59eac6db7e23c593c36eb61adaeb6b7ddac69d"
+            "ref": "592f489edff4926029c6cbd1ce4f1860f0c91341"
         }
     }
 }
