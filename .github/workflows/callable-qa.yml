@@ -126,7 +126,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     ERRORS=$(find * -name '*.yaml' -or -name '*.json' \
-                        | xargs -n1 grep -P -H -n -v '^((    )*[^ \t]|$)' \
+                        | xargs -r -n1 grep -P -H -n -v '^((    )*[^ \t]|$)' \
                         | cut -d: -f1-2 \
                         | sed 's/\(.*\):\([0-9]*\)$/\\n::error file=\1,line=\2::Indendation must be a multiple of 4 spaces/' || true)
 
@@ -138,7 +138,7 @@ jobs:
                 run: |
                     ERRORS=$(find * -name '*.yaml' -or -name '*.yml' -or -name '*.txt' -or -name '*.md' -or -name '*.markdown' \
                             -or -name '*.json' -or -name '*.rst' -or -name '*.php' -or -name '*.js' -or -name '*.css' -or -name '*.twig' \
-                        | xargs -n1 -P0 bash -c '[ -n "$(tail -c1 "$0")" ] && echo ::error file="$0",line=$((1 + `wc -l "$0" | cut -d" " -f1`))::Should end with a newline' || true)
+                        | xargs -r -n1 -P0 bash -c '[ -n "$(tail -c1 "$0")" ] && echo ::error file="$0",line=$((1 + `wc -l "$0" | cut -d" " -f1`))::Should end with a newline' || true)
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
@@ -164,7 +164,7 @@ jobs:
                 name: JSON files are valid
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
-                    ERRORS=$(find * -name '*.json' | xargs -n1 -P0 bash -c 'ERR=$(cd / && python -mjson.tool '$(pwd)'/"$0" 2>&1 1> /dev/null) || echo \\n::error file="$0",line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
+                    ERRORS=$(find * -name '*.json' | xargs -r -n1 -P0 bash -c 'ERR=$(cd / && python -mjson.tool '$(pwd)'/"$0" 2>&1 1> /dev/null) || echo \\n::error file="$0",line=`echo "${ERR#*: line }" | cut -d" " -f 1`::${ERR%%: line *}')
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
@@ -191,7 +191,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     ERRORS=$(find */*/*/config/packages/ -name '*.yaml' -or -name '*.yml' \
-                        | xargs -n1 grep -P -H -n '^parameters:' \
+                        | xargs -r -n1 grep -P -H -n '^parameters:' \
                         | cut -d: -f1-2 \
                         | sed 's/\(.*\):\([0-9]*\)$/\\n::error file=\1,line=\2::"parameters" should be defined via the "container" configurator instead/' || true)
 
@@ -203,7 +203,7 @@ jobs:
                 run: |
                     ERRORS=$(find */*/*/config -type f \
                         | grep -v -P '[^/]+/[^/]+/[^/]+/config/[0-9a-z_./]+$' \
-                        | xargs -n1 -I{} echo "::error file={}::Underscore notation is required for file and directory names under config/" || true)
+                        | xargs -r -n1 -I{} echo "::error file={}::Underscore notation is required for file and directory names under config/" || true)
 
                     if [[ "" != "$ERRORS" ]]; then echo -e "$ERRORS\n"; exit 1; fi
 
@@ -212,7 +212,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     ERRORS=$(find * -name '*.yaml' -or -name '*.yml' \
-                        | xargs -n1 grep -F -H -n ': ~'\
+                        | xargs -r -n1 grep -F -H -n ': ~'\
                         | cut -d: -f1-2 \
                         | sed 's/\(.*\):\([0-9]*\)$/\\n::error file=\1,line=\2::"~" should be replaced with "null"/' || true)
 
@@ -223,7 +223,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     ERRORS=$(find * -name Makefile \
-                        | xargs -n1 grep -P -H -n 'bin/console|\$\(CONSOLE\)' \
+                        | xargs -r -n1 grep -P -H -n 'bin/console|\$\(CONSOLE\)' \
                         | cut -d: -f1-2 \
                         | sed 's/\(.*\):\([0-9]*\)$/\\n::error file=\1,line=\2::Symfony commands should not be wrapped in a Makefile/' || true)
 
