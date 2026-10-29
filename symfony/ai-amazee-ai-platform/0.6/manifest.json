@@ -1,7 +1,18 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        amazeeai:",
+                "            base_url: '%env(AMAZEEAI_LLM_API_URL)%'",
+                "            api_key: '%env(AMAZEEAI_LLM_KEY)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "AMAZEEAI_LLM_API_URL=https://llm.YOUR_REGION.amazee.ai",
         "#2": "AMAZEEAI_LLM_KEY=CHANGE_ME"

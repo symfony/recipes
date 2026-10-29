@@ -1,5 +1,0 @@
-ai:
-    store:
-        chromadb:
-            default:
-                collection: 'my_collection'

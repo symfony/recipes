@@ -1,7 +1,18 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        redis:",
+                "            default:",
+                "                dsn: '%env(REDIS_DSN)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "REDIS_DSN=redis://localhost:6379"
     }

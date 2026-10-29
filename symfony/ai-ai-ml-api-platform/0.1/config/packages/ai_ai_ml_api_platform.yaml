@@ -1,4 +1,0 @@
-ai:
-    platform:
-        aimlapi:
-            api_key: '%env(AIMLAPI_API_KEY)%'

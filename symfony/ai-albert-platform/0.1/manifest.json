@@ -1,7 +1,18 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        albert:",
+                "            api_key: '%env(ALBERT_API_KEY)%'",
+                "            base_url: '%env(ALBERT_BASE_URL)%'"
+            ]
+        }
+    ],
     "env": {
         "ALBERT_API_KEY": "",
         "#1": "ALBERT_BASE_URL=https://api.albert.ai/v1"

@@ -1,4 +1,0 @@
-ai:
-    platform:
-        decart:
-            api_key: '%env(DECART_API_KEY)%'
