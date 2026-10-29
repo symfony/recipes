@@ -41,8 +41,8 @@ options and configurators.
 .. note::
 
     Don't create a recipe for Symfony bundles if the only configuration in the
-    manifest is the registration of the bundle for all environments, as this is
-    done automatically.
+    manifest is the registration of the bundle for all environments. Flex does
+    this automatically for packages of the ``symfony-bundle`` type.
 
 .. note::
 
@@ -84,6 +84,22 @@ more aliases to make it easier to install:
     }
 
 Developers can now install this dependency with ``composer require acme-log``.
+
+``conflict`` option
+~~~~~~~~~~~~~~~~~~~
+
+This option defines the versions of other packages that the recipe doesn't work
+with. When one of these versions is installed, Flex uses an older version of
+the recipe, if there is one:
+
+.. code-block:: json
+
+    {
+        "conflict": {
+            "symfony/framework-bundle": "<7.2",
+            "symfony/flex": "<2.12"
+        }
+    }
 
 Configurators
 -------------
@@ -170,10 +186,11 @@ directory of the application:
         }
     }
 
-The ``%BIN_DIR%`` string is a placeholder that, when installing the recipe, is
-turned into the absolute path of the binaries directory of the Symfony app.
-These are the available placeholders: ``%BIN_DIR%``, ``%CONF_DIR%``,
-``%CONFIG_DIR%``, ``%SRC_DIR%`` ``%VAR_DIR%`` and ``%PUBLIC_DIR%``.
+The ``%BIN_DIR%`` string is a placeholder. When installing the recipe, Flex
+replaces it with the path of the binaries directory, relative to the root of
+the project (``bin`` by default). These are the available placeholders:
+``%BIN_DIR%``, ``%CONFIG_DIR%``, ``%SRC_DIR%``, ``%VAR_DIR%``, ``%PUBLIC_DIR%``
+and ``%ASSETS_DIR%``.
 
 Recipes must use these placeholders instead of hardcoding the paths to be truly
 reusable. The placeholder values can be overridden in the ``extra`` section of
@@ -192,12 +209,19 @@ your ``composer.json`` file (where you can define your own placeholders too):
             "src-dir": "src/",
             "var-dir": "var/",
             "public-dir": "public/",
+            "assets-dir": "assets/",
 
             // defining a custom placeholder (can be accessed using
             // %MY_SPECIAL_DIR% in the recipe)
             "my-special-dir": "..."
         }
     }
+
+.. note::
+
+    Versions of Flex older than 2.12 leave ``%ASSETS_DIR%`` as is. If your
+    recipe uses this placeholder, add a ``conflict`` with
+    ``"symfony/flex": "<2.12"``.
 
 ``copy-from-recipe`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +234,7 @@ files and directories:
 .. code-block:: json
 
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
+        "config/": "%CONFIG_DIR%/"
     }
 
 Avoid storing PHP files that should land under the ``src/`` directory; consider
@@ -243,10 +267,56 @@ The ``###> your-recipe-name-here ###`` section separators are needed by Symfony
 to detect the contents added by this dependency in case you uninstall it later.
 Don't remove or modify these separators.
 
+When the project has no ``.env.test`` file, the variables are also added to the
+``phpunit.xml.dist``, ``phpunit.dist.xml`` or ``phpunit.xml`` file.
+
+Keys that start with ``#`` add comments. ``#1``, ``#2``, etc. add their value as
+a comment line, and ``#SOME_VAR`` adds the ``SOME_VAR`` variable as a comment:
+
+.. code-block:: json
+
+    {
+        "env": {
+            "#1": "Use one of the following URLs",
+            "#DATABASE_URL": "mysql://app:pass@127.0.0.1:3306/app",
+            "DATABASE_URL": "postgresql://app:pass@127.0.0.1:5432/app"
+        }
+    }
+
+.. code-block:: bash
+
+    ###> your-recipe-name-here ###
+    # Use one of the following URLs
+    #DATABASE_URL=mysql://app:pass@127.0.0.1:3306/app
+    DATABASE_URL=postgresql://app:pass@127.0.0.1:5432/app
+    ###< your-recipe-name-here ###
+
+Values that contain spaces, tabs, new lines or the ``&``, ``!`` or ``"``
+characters are wrapped in double quotes. To write a value as a literal string,
+for example a JSON array, wrap it in single quotes. The value must not contain
+other single quotes. Flex then writes it as is in ``.env`` files, and without
+the single quotes in ``phpunit.xml.dist``:
+
+.. code-block:: json
+
+    {
+        "env": {
+            "ALLOWED_LANGUAGES": "'[\"en\",\"de\"]'"
+        }
+    }
+
+.. code-block:: bash
+
+    ###> your-recipe-name-here ###
+    ALLOWED_LANGUAGES='["en","de"]'
+    ###< your-recipe-name-here ###
+
 .. tip::
 
     Use ``%generate(secret)%`` as the value of any environment variable to
-    replace it with a cryptographically secure random value of 16 bytes.
+    replace it with a cryptographically secure random value of 16 bytes. Use
+    ``%generate(secret, 32)%`` to define another number of bytes. When the
+    recipe is updated, Flex keeps the existing value.
 
 ``dotenv`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -344,14 +414,21 @@ Adds lines to the main entries of docker compose files:
 
     {
         "docker-compose": {
-            "compose.yml": {
+            "docker-compose.yml": {
                 "services": [
                     "database:",
-                    "  image: postgres:${POSTGRES_VERSION:-16}-alpine",
+                    "  image: postgres:${POSTGRES_VERSION:-16}-alpine"
                 ]
             }
         }
     }
+
+The lines are wrapped with section separators
+(``###> your-recipe-name-here ###``) that must not be removed or modified. Use
+the ``docker-compose.yml`` key, like official recipes do. Flex adds the lines
+to ``compose.yaml``, ``compose.yml``, ``docker-compose.yaml`` or
+``docker-compose.yml``, whichever exists in the project directory or its
+parent directories. When none exists, Flex creates ``compose.yaml``.
 
 ``gitignore`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -399,6 +476,9 @@ colors`_ are supported too:
 
       * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
 
+Placeholders like ``%CONFIG_DIR%`` are replaced in these lines. Users can
+display them again later by running ``composer recipes vendor/package``.
+
 ``add-lines`` Configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -410,13 +490,13 @@ can add entire lines to files, either at the top, bottom or after a target:
     "add-lines": [
         {
             "file": "webpack.config.js",
-            "content": "\nenables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
+            "content": "\n    // enables the Symfony UX Stimulus bridge (used in assets/stimulus_bootstrap.js)\n    .enableStimulusBridge('./assets/controllers.json')",
             "position": "after_target",
             "target": ".splitEntryChunks()"
         },
         {
             "file": "assets/app.js",
-            "content": "import './bootstrap.js';",
+            "content": "import './stimulus_bootstrap.js';",
             "position": "top",
             "warn_if_missing": true
         },
@@ -433,8 +513,9 @@ Each item needs ``file``,  ``content`` and ``position``, which can be
 ``target`` must also be specified, which is a string that will be searched for
 in the file.
 
-If ``warn_if_missing`` is set to ``true``, a warning will be shown to the
-user if the ``file`` or ``target`` isn't found. If ``requires`` is set, the
+If ``warn_if_missing`` is set to ``true``, the user gets a warning with the
+missing lines when the ``file`` or ``target`` isn't found. Otherwise, these
+lines are only displayed in verbose mode (``-v``). If ``requires`` is set, the
 rule will only be applied if the given package is installed.
 
 Lines are not added when the file already contains the ``content``, wherever
