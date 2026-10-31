@@ -1,0 +1,3 @@
+  * The recipe adds an <info>imagor</info> service to <info>compose.yaml</info>. It reads the images from the <info>public/</info> directory, and its HTTP loader is turned off. <info>UX_IMAGE_DSN</info> in <info>.env</info> points at it over plain HTTP. With the Symfony CLI, <info>IMAGOR_HOST</info> and <info>IMAGOR_PORT</info> come from the port published in <info>compose.override.yaml</info>.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Imagor/README.md</>
