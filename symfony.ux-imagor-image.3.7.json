@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "symfony/ux-imagor-image": {
+            "manifest": {
+                "env": {
+                    "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Imagor/README.md",
+                    "#2": "",
+                    "UX_IMAGE_DSN": "imagor://${IMAGOR_HOST:-127.0.0.1}:${IMAGOR_PORT:-8000}?secure=false&sign_key=!ChangeMe!"
+                },
+                "docker-compose": {
+                    "compose.yaml": {
+                        "services": [
+                            "imagor:",
+                            "  image: shumc/imagor:1.9.14",
+                            "  environment:",
+                            "    IMAGOR_SECRET: ${IMAGOR_SECRET:-!ChangeMe!}",
+                            "    FILE_LOADER_BASE_DIR: /srv/public",
+                            "    HTTP_LOADER_DISABLE: 1",
+                            "  volumes:",
+                            "    - ./public:/srv/public:ro"
+                        ]
+                    },
+                    "compose.override.yaml": {
+                        "services": [
+                            "imagor:",
+                            "  ports:",
+                            "    - \"8000\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * The recipe adds an <info>imagor</info> service to <info>compose.yaml</info>. It reads the images from the <info>public/</info> directory, and its HTTP loader is turned off. <info>UX_IMAGE_DSN</info> in <info>.env</info> points at it over plain HTTP. With the Symfony CLI, <info>IMAGOR_HOST</info> and <info>IMAGOR_PORT</info> come from the port published in <info>compose.override.yaml</info>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Imagor/README.md</>"
+                ]
+            },
+            "files": [],
+            "ref": "4b054538bc8699169ae4560c34f29d4ca5ba4b89"
+        }
+    }
+}
