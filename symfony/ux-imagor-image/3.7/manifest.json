@@ -1,0 +1,28 @@
+{
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Imagor/README.md",
+        "#2": "",
+        "UX_IMAGE_DSN": "imagor://${IMAGOR_HOST:-127.0.0.1}:${IMAGOR_PORT:-8000}?secure=false&sign_key=!ChangeMe!"
+    },
+    "docker-compose": {
+        "compose.yaml": {
+            "services": [
+                "imagor:",
+                "  image: shumc/imagor:1.9.14",
+                "  environment:",
+                "    IMAGOR_SECRET: ${IMAGOR_SECRET:-!ChangeMe!}",
+                "    FILE_LOADER_BASE_DIR: /srv/public",
+                "    HTTP_LOADER_DISABLE: 1",
+                "  volumes:",
+                "    - ./public:/srv/public:ro"
+            ]
+        },
+        "compose.override.yaml": {
+            "services": [
+                "imagor:",
+                "  ports:",
+                "    - \"8000\""
+            ]
+        }
+    }
+}
