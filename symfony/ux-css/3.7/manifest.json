@@ -1,0 +1,25 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Css\\UXCssBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+        "symfony/framework-bundle": "<8.2"
+    },
+    "add-lines": [
+        {
+            "file": "assets/styles/app.css",
+            "content": [
+                "@layer reset, base, tokens, components, utilities;",
+                "",
+                "@import '../../var/ux_css/styles.css';",
+                ""
+            ],
+            "position": "top",
+            "warn_if_missing": true
+        }
+    ]
+}
