@@ -1,7 +1,20 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        typesense:",
+                "            default:",
+                "                host: '%env(TYPESENSE_HOST)%'",
+                "                port: '%env(int:TYPESENSE_PORT)%'",
+                "                api_key: '%env(TYPESENSE_API_KEY)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "TYPESENSE_HOST=localhost",
         "#2": "TYPESENSE_PORT=8108",

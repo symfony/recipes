@@ -1,5 +1,14 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        lmstudio: null"
+            ]
+        }
+    ]
 }

@@ -1,7 +1,17 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        anthropic:",
+                "            api_key: '%env(ANTHROPIC_API_KEY)%'"
+            ]
+        }
+    ],
     "env": {
         "ANTHROPIC_API_KEY": ""
     }

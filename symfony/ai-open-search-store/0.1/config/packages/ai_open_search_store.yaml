@@ -1,6 +1,0 @@
-ai:
-    store:
-        opensearch:
-            default:
-                hosts:
-                    - '%env(OPENSEARCH_HOST)%'

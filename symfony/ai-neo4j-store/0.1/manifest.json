@@ -1,7 +1,20 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        neo4j:",
+                "            default:",
+                "                uri: '%env(NEO4J_URI)%'",
+                "                username: '%env(NEO4J_USERNAME)%'",
+                "                password: '%env(NEO4J_PASSWORD)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "NEO4J_URI=bolt://localhost:7687",
         "#2": "NEO4J_USERNAME=neo4j",

@@ -1,7 +1,18 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        vertexai:",
+                "            project_id: '%env(VERTEX_AI_PROJECT_ID)%'",
+                "            location: '%env(VERTEX_AI_LOCATION)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "VERTEX_AI_PROJECT_ID=your-project-id",
         "#2": "VERTEX_AI_LOCATION=us-central1"

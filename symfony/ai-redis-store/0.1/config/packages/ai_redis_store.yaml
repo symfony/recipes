@@ -1,5 +1,0 @@
-ai:
-    store:
-        redis:
-            default:
-                dsn: '%env(REDIS_DSN)%'

@@ -1,7 +1,19 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        cloudflare:",
+                "            default:",
+                "                account_id: '%env(CLOUDFLARE_ACCOUNT_ID)%'",
+                "                api_key: '%env(CLOUDFLARE_API_KEY)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "CLOUDFLARE_ACCOUNT_ID=",
         "#2": "CLOUDFLARE_API_KEY="

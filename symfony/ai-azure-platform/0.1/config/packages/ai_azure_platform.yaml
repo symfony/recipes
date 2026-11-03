@@ -1,6 +1,0 @@
-ai:
-    platform:
-        azure:
-            api_key: '%env(AZURE_API_KEY)%'
-            base_url: '%env(AZURE_BASE_URL)%'
-            deployment: '%env(AZURE_DEPLOYMENT)%'

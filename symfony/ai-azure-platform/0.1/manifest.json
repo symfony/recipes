@@ -1,7 +1,19 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    platform:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        azure:",
+                "            api_key: '%env(AZURE_API_KEY)%'",
+                "            base_url: '%env(AZURE_BASE_URL)%'",
+                "            deployment: '%env(AZURE_DEPLOYMENT)%'"
+            ]
+        }
+    ],
     "env": {
         "AZURE_API_KEY": "",
         "#1": "AZURE_BASE_URL=https://YOUR_RESOURCE_NAME.openai.azure.com",

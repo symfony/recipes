@@ -1,7 +1,19 @@
 {
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
+    "add-lines": [
+        {
+            "file": "%CONFIG_DIR%/packages/ai.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    store:",
+            "requires": "symfony/ai-bundle",
+            "content": [
+                "        elasticsearch:",
+                "            default:",
+                "                hosts:",
+                "                    - '%env(ELASTICSEARCH_HOST)%'"
+            ]
+        }
+    ],
     "env": {
         "#1": "ELASTICSEARCH_HOST=http://localhost:9200"
     }
