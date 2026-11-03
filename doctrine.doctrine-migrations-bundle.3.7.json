@@ -10,6 +10,9 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2"
                 }
             },
             "files": {
@@ -31,7 +34,7 @@
                     "executable": false
                 }
             },
-            "ref": "22bf81c4b6beb7c8258f08ab92f4007306880a18"
+            "ref": "c830377a2118d68834733b32fa0be06afe0dd7fb"
         }
     }
 }

@@ -1844,6 +1844,11 @@
                 "symfony/framework-bundle": "<8.2"
             }
         },
+        "doctrine/doctrine-migrations-bundle": {
+            "3.7": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "doctrine/mongodb-odm-bundle": {
             "4.1": {
                 "doctrine/cache": "<1.11",
