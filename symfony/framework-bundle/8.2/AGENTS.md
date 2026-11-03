@@ -16,10 +16,14 @@ Messenger, Scheduler, RateLimiter, Workflow... Usually there is one, and
 - Since Symfony 8.2, each component is configured at its own root key:
   `messenger:`, `cache:`, `mailer:`, `validation:`... not under `framework:` as
   in older versions.
-- `config/reference.php` describes every option of the installed bundles, and
-  `config/schema.json` is their JSON schema, which editors use and `lint:yaml`
-  checks when `opis/json-schema` is installed. Both are regenerated when the
-  container is rebuilt in debug mode. Read them instead of guessing an option.
+- `bin/console config:dump-reference` lists the root keys, and
+  `bin/console config:dump-reference <root key>` lists the options of one root
+  key with their default values, for example `messenger` (without the colon).
+- `config/reference.php` describes every option of the installed bundles, in
+  one `@psalm-type` block per root key, and `config/schema.json` is their JSON
+  schema, which editors use and `lint:yaml` checks when `opis/json-schema` is
+  installed. Both are regenerated when the container is rebuilt in debug mode.
+  Read them instead of guessing an option.
 - Prefer attributes to configuration files: `#[Route]`, `#[IsGranted]`,
   `#[AsCommand]`, `#[AsEventListener]`, `#[AsMessageHandler]`, `#[Autowire]`,
   `#[Target]`... Services are autowired and autoconfigured, so a service
