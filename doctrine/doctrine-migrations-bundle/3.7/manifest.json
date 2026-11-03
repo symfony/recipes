@@ -6,5 +6,8 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     },
-    "aliases": ["doctrine-migrations", "migrations"]
+    "aliases": ["doctrine-migrations", "migrations"],
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
 }
