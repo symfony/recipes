@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-voyage-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        voyage:\n            api_key: '%env(VOYAGE_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "VOYAGE_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "34ba22c02016b7dce41b5de1fe85c32a4b019cc4"
+        }
+    }
+}

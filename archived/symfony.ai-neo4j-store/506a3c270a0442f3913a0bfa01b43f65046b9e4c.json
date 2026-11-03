@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "symfony/ai-neo4j-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        neo4j:\n            default:\n                uri: '%env(NEO4J_URI)%'\n                username: '%env(NEO4J_USERNAME)%'\n                password: '%env(NEO4J_PASSWORD)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "NEO4J_URI=bolt://localhost:7687",
+                    "#2": "NEO4J_USERNAME=neo4j",
+                    "#3": "NEO4J_PASSWORD="
+                }
+            },
+            "files": [],
+            "ref": "506a3c270a0442f3913a0bfa01b43f65046b9e4c"
+        }
+    }
+}

@@ -2,26 +2,22 @@
     "manifests": {
         "symfony/ai-ai-ml-api-platform": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        aimlapi:\n            api_key: '%env(AIMLAPI_API_KEY)%'"
+                    }
+                ],
                 "env": {
                     "AIMLAPI_API_KEY": ""
                 }
             },
-            "files": {
-                "config/packages/ai_ai_ml_api_platform.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        aimlapi:",
-                        "            api_key: '%env(AIMLAPI_API_KEY)%'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "81a7083de5b23f410a9deca2b451f0574813d6c9"
+            "files": [],
+            "ref": "a9249afebeca198e684a23aa44fc206c5c3972a3"
         }
     }
 }

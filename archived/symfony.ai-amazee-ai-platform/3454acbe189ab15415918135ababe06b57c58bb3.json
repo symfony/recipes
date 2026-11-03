@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-amazee-ai-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        amazeeai:\n            base_url: '%env(AMAZEEAI_LLM_API_URL)%'\n            api_key: '%env(AMAZEEAI_LLM_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "AMAZEEAI_LLM_API_URL=https://llm.YOUR_REGION.amazee.ai",
+                    "#2": "AMAZEEAI_LLM_KEY=CHANGE_ME"
+                }
+            },
+            "files": [],
+            "ref": "3454acbe189ab15415918135ababe06b57c58bb3"
+        }
+    }
+}

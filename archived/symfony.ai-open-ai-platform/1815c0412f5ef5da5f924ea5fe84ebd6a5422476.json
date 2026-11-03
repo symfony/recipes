@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-open-ai-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        openai:\n            api_key: '%env(OPENAI_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "OPENAI_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "1815c0412f5ef5da5f924ea5fe84ebd6a5422476"
+        }
+    }
+}

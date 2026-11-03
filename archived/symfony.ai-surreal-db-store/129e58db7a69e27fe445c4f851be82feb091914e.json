@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-surreal-db-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        surrealdb:\n            default:\n                dsn: '%env(SURREALDB_DSN)%'\n                namespace: 'default'\n                database: 'default'"
+                    }
+                ],
+                "env": {
+                    "#1": "SURREALDB_DSN=http://localhost:8000"
+                }
+            },
+            "files": [],
+            "ref": "129e58db7a69e27fe445c4f851be82feb091914e"
+        }
+    }
+}

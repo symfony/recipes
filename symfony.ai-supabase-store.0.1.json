@@ -2,29 +2,23 @@
     "manifests": {
         "symfony/ai-supabase-store": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        supabase:\n            default:\n                url: '%env(SUPABASE_URL)%'\n                api_key: '%env(SUPABASE_API_KEY)%'"
+                    }
+                ],
                 "env": {
                     "#1": "SUPABASE_URL=",
                     "#2": "SUPABASE_API_KEY="
                 }
             },
-            "files": {
-                "config/packages/ai_supabase_store.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    store:",
-                        "        supabase:",
-                        "            default:",
-                        "                url: '%env(SUPABASE_URL)%'",
-                        "                api_key: '%env(SUPABASE_API_KEY)%'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "20b55c77ac7d1dfebcf4accc8961516bd01d956f"
+            "files": [],
+            "ref": "0aa914cab75de7b542da54966a5b06d790eeb84e"
         }
     }
 }

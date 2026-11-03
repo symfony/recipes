@@ -2,26 +2,22 @@
     "manifests": {
         "symfony/ai-cerebras-platform": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        cerebras:\n            api_key: '%env(CEREBRAS_API_KEY)%'"
+                    }
+                ],
                 "env": {
                     "CEREBRAS_API_KEY": ""
                 }
             },
-            "files": {
-                "config/packages/ai_cerebras_platform.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        cerebras:",
-                        "            api_key: '%env(CEREBRAS_API_KEY)%'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "3d33a38ce18979b02e4c6e1ecf1ee640e5957537"
+            "files": [],
+            "ref": "af8ba578d1c1c84a7f4ef17bba6c7c1b69a9a9c4"
         }
     }
 }

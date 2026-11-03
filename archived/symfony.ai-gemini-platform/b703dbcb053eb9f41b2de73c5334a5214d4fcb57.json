@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-gemini-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        gemini:\n            api_key: '%env(GEMINI_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "GEMINI_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "b703dbcb053eb9f41b2de73c5334a5214d4fcb57"
+        }
+    }
+}

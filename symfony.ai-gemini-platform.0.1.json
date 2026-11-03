@@ -2,26 +2,22 @@
     "manifests": {
         "symfony/ai-gemini-platform": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        gemini:\n            api_key: '%env(GEMINI_API_KEY)%'"
+                    }
+                ],
                 "env": {
                     "GEMINI_API_KEY": ""
                 }
             },
-            "files": {
-                "config/packages/ai_gemini_platform.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        gemini:",
-                        "            api_key: '%env(GEMINI_API_KEY)%'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "a6953d134a46a78354003b4dddf682f03ef886b2"
+            "files": [],
+            "ref": "b703dbcb053eb9f41b2de73c5334a5214d4fcb57"
         }
     }
 }

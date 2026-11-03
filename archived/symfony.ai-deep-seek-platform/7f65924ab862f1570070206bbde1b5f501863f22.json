@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-deep-seek-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        deepseek:\n            api_key: '%env(DEEPSEEK_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "DEEPSEEK_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "7f65924ab862f1570070206bbde1b5f501863f22"
+        }
+    }
+}

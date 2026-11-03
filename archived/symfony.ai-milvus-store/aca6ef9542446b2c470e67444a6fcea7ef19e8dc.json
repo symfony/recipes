@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "symfony/ai-milvus-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        milvus:\n            default:\n                host: '%env(MILVUS_HOST)%'\n                port: '%env(int:MILVUS_PORT)%'"
+                    }
+                ],
+                "env": {
+                    "#1": "MILVUS_HOST=localhost",
+                    "#2": "MILVUS_PORT=19530"
+                }
+            },
+            "files": [],
+            "ref": "aca6ef9542446b2c470e67444a6fcea7ef19e8dc"
+        }
+    }
+}

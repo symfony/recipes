@@ -2,22 +2,19 @@
     "manifests": {
         "symfony/ai-docker-model-runner-platform": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                }
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        dockermodelrunner: null"
+                    }
+                ]
             },
-            "files": {
-                "config/packages/ai_docker_model_runner_platform.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        dockermodelrunner: null",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "c699a35ab18b73913c394d0a2bf536c51cca6f4c"
+            "files": [],
+            "ref": "f37ec36f957045e34396eee30c93079cbec96dca"
         }
     }
 }

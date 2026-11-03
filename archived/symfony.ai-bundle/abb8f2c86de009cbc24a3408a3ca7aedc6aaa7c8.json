@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "symfony/ai-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\AiBundle\\AiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Choose an inference platform and install the corresponding bridge",
+                    "",
+                    "  * For example <fg=green>OpenAI</> with the <fg=green>symfony/ai-open-ai-platform</> package",
+                    "    or <fg=green>Anthropic</> with the <fg=green>symfony/ai-anthropic-platform</> package"
+                ]
+            },
+            "files": {
+                "config/packages/ai.yaml": {
+                    "contents": [
+                        "ai:",
+                        "    # see https://symfony.com/doc/current/ai/components/platform.html",
+                        "    platform:",
+                        "",
+                        "    # see https://symfony.com/doc/current/ai/bundles/ai-bundle.html",
+                        "    agent:",
+                        "",
+                        "    # see https://symfony.com/doc/current/ai/components/store.html",
+                        "    store:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "abb8f2c86de009cbc24a3408a3ca7aedc6aaa7c8"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-ai-ml-api-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        aimlapi:\n            api_key: '%env(AIMLAPI_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "AIMLAPI_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "a9249afebeca198e684a23aa44fc206c5c3972a3"
+        }
+    }
+}

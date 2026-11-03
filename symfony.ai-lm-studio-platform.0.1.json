@@ -2,22 +2,19 @@
     "manifests": {
         "symfony/ai-lm-studio-platform": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                }
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        lmstudio: null"
+                    }
+                ]
             },
-            "files": {
-                "config/packages/ai_lm_studio_platform.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    platform:",
-                        "        lmstudio: null",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "e35cced28f6559fc5effccb8f22597f309fedfdf"
+            "files": [],
+            "ref": "df345972be70654f2436d53e103c883607125a44"
         }
     }
 }

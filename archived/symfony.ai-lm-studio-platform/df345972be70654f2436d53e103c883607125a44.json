@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "symfony/ai-lm-studio-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        lmstudio: null"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "df345972be70654f2436d53e103c883607125a44"
+        }
+    }
+}

@@ -2,29 +2,23 @@
     "manifests": {
         "symfony/ai-weaviate-store": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                },
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        weaviate:\n            default:\n                host: '%env(WEAVIATE_HOST)%'\n                api_key: '%env(WEAVIATE_API_KEY)%'"
+                    }
+                ],
                 "env": {
                     "#1": "WEAVIATE_HOST=http://localhost:8080",
                     "#2": "WEAVIATE_API_KEY="
                 }
             },
-            "files": {
-                "config/packages/ai_weaviate_store.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    store:",
-                        "        weaviate:",
-                        "            default:",
-                        "                host: '%env(WEAVIATE_HOST)%'",
-                        "                api_key: '%env(WEAVIATE_API_KEY)%'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "d8cafe485d6b8f8b53d5eb3fb49d7cd7b03bdbec"
+            "files": [],
+            "ref": "21468f0c4dabdd59c4e82b894073679d637774ab"
         }
     }
 }

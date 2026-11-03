@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-click-house-store": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        clickhouse:\n            default:\n                dsn: '%env(CLICKHOUSE_DSN)%'\n                database: 'default'"
+                    }
+                ],
+                "env": {
+                    "#1": "CLICKHOUSE_DSN="
+                }
+            },
+            "files": [],
+            "ref": "92dbe72169571d452ca6446bc686f62835c9c6a8"
+        }
+    }
+}

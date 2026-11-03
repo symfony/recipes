@@ -2,24 +2,19 @@
     "manifests": {
         "symfony/ai-cache-store": {
             "manifest": {
-                "copy-from-recipe": {
-                    "config/": "%CONFIG_DIR%/"
-                }
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    store:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        cache:\n            default:\n                service: 'cache.app'"
+                    }
+                ]
             },
-            "files": {
-                "config/packages/ai_cache_store.yaml": {
-                    "contents": [
-                        "ai:",
-                        "    store:",
-                        "        cache:",
-                        "            default:",
-                        "                service: 'cache.app'",
-                        ""
-                    ],
-                    "executable": false
-                }
-            },
-            "ref": "3eef3d89b2068c37128b76117ea6d887d0607782"
+            "files": [],
+            "ref": "439d882b167693addf80b045dedd32a76dfca649"
         }
     }
 }

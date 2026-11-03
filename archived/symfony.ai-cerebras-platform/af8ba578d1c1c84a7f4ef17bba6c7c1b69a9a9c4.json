@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "symfony/ai-cerebras-platform": {
+            "manifest": {
+                "add-lines": [
+                    {
+                        "file": "%CONFIG_DIR%/packages/ai.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    platform:",
+                        "requires": "symfony/ai-bundle",
+                        "content": "        cerebras:\n            api_key: '%env(CEREBRAS_API_KEY)%'"
+                    }
+                ],
+                "env": {
+                    "CEREBRAS_API_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "af8ba578d1c1c84a7f4ef17bba6c7c1b69a9a9c4"
+        }
+    }
+}
