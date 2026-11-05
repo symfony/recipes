@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Router\\UXRouterBundle": ["all"]
+    },
+    "conflict": {
+        "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+        "symfony/framework-bundle": "<8.2"
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "var/": "var/"
+    }
+}

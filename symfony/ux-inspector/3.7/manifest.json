@@ -1,0 +1,58 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Inspector\\UXInspectorBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/stimulus_bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (app.debug) {",
+                "    window.Stimulus = app;",
+                "}"
+            ],
+            "position": "after_target",
+            "target": "const app = startStimulusApp();",
+            "requires": "symfony/stimulus-bundle"
+        },
+        {
+            "file": "assets/bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (app.debug) {",
+                "    window.Stimulus = app;",
+                "}"
+            ],
+            "position": "after_target",
+            "target": "const app = startStimulusApp();",
+            "requires": "symfony/stimulus-bundle"
+        },
+        {
+            "file": "assets/stimulus_bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (typeof app !== 'undefined' && app.debug) {",
+                "    window.Stimulus = app;",
+                "}",
+                ""
+            ],
+            "position": "bottom",
+            "requires": ["symfony/stimulus-bundle", "symfony/webpack-encore-bundle"]
+        },
+        {
+            "file": "assets/bootstrap.js",
+            "content": [
+                "// Connect Symfony UX Inspector to the Stimulus application in debug mode.",
+                "if (typeof app !== 'undefined' && app.debug) {",
+                "    window.Stimulus = app;",
+                "}",
+                ""
+            ],
+            "position": "bottom",
+            "requires": ["symfony/stimulus-bundle", "symfony/webpack-encore-bundle"]
+        }
+    ]
+}

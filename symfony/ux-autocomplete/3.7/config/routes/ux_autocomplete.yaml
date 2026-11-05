@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
+ux_autocomplete:
+    resource: '@AutocompleteBundle/config/routes.php'
+    prefix: '/autocomplete'

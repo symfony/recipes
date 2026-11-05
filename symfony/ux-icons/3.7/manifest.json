@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Icons\\UXIconsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}

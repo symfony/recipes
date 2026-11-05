@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
+when@dev:
+    ux_inspector:
+        resource: '@UXInspectorBundle/config/routes.php'

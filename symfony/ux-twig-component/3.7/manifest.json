@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Symfony\\UX\\TwigComponent\\TwigComponentBundle": ["all"]
+    },
+    "aliases": ["twig-component", "twig-components"],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<8.2"
+    }
+}
