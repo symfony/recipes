@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../schema.json
+ux_css:
+    # A CSS reset in the "reset" layer, like Panda CSS; it removes the default
+    # styles of the browser, such as heading sizes and list bullets
+    # https://symfony.com/bundles/ux-css/current/preflight.html
+    # preflight: true
+
+    # The default tokens of Panda CSS: colors, spacing, sizes, radii, font sizes,
+    # font weights, line heights, letter spacings, fonts, shadows, borders,
+    # blurs, aspect ratios, animations, durations and easings
+    # https://symfony.com/bundles/ux-css/current/tokens.html#default-tokens
+    default_tokens: panda
+
+    # Your own values, by category, added to the default ones or replacing them
+    # https://symfony.com/bundles/ux-css/current/token-categories.html
+    tokens:
+        colors:
+            brand: 'oklch(0.55 0.2 260)'
+
+    # Names for other tokens; a value with "base" changes with a condition
+    # https://symfony.com/bundles/ux-css/current/tokens.html#semantic-tokens
+    semantic_tokens:
+        colors:
+            primary: '{colors.brand}'
+            fg: { base: '{colors.gray.900}', _osDark: '{colors.gray.50}' }
+            bg: { base: '{colors.white}', _osDark: '{colors.gray.950}' }

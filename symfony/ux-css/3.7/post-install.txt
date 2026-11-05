@@ -1,0 +1,11 @@
+  * Style your templates with tokens from <comment>config/packages/ux_css.yaml</>:
+
+      <div class="{{ css({ color: 'fg', bg: 'bg', p: '4' }) }}">
+
+  * The CSS is written to <comment>var/ux_css/styles.css</> and imported from
+    <comment>assets/styles/app.css</>. Run <info>php bin/console cache:warmup</>
+    before building your assets in production.
+
+  * <fg=blue>Commit</> <comment>config/reference_css.php</>: editors read it to complete css() hashes.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-css/current/index.html</>
