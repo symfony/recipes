@@ -1631,7 +1631,8 @@
         ],
         "symfony/ux-autocomplete": [
             "2.2",
-            "2.6"
+            "2.6",
+            "3.7"
         ],
         "symfony/ux-cloudflare-image": [
             "3.6"
@@ -1650,10 +1651,12 @@
         "symfony/ux-icons": [
             "2.17",
             "2.19",
-            "3.4"
+            "3.4",
+            "3.7"
         ],
         "symfony/ux-image": [
-            "3.6"
+            "3.6",
+            "3.7"
         ],
         "symfony/ux-imagor-image": [
             "3.7"
@@ -1662,7 +1665,8 @@
             "3.6"
         ],
         "symfony/ux-inspector": [
-            "3.6"
+            "3.6",
+            "3.7"
         ],
         "symfony/ux-ipx-image": [
             "3.7"
@@ -1680,10 +1684,12 @@
         ],
         "symfony/ux-live-component": [
             "2.0",
-            "2.6"
+            "2.6",
+            "3.7"
         ],
         "symfony/ux-map": [
-            "2.19"
+            "2.19",
+            "3.7"
         ],
         "symfony/ux-native": [
             "3.7"
@@ -1694,7 +1700,8 @@
             "3.4"
         ],
         "symfony/ux-router": [
-            "3.6"
+            "3.6",
+            "3.7"
         ],
         "symfony/ux-svelte": [
             "2.8",
@@ -1708,10 +1715,12 @@
         ],
         "symfony/ux-turbo": [
             "2.19",
-            "2.20"
+            "2.20",
+            "3.7"
         ],
         "symfony/ux-twig-component": [
-            "2.13"
+            "2.13",
+            "3.7"
         ],
         "symfony/ux-vue": [
             "2.8",
@@ -2517,6 +2526,16 @@
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
             }
         },
+        "symfony/ux-icons": {
+            "3.7": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/ux-image": {
+            "3.7": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
         "symfony/ux-lazy-image": {
             "2.29": {
                 "symfony/framework-bundle": "<8.2"
@@ -2530,6 +2549,10 @@
         "symfony/ux-map": {
             "2.19": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            },
+            "3.7": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/ux-react": {
@@ -2545,6 +2568,10 @@
         "symfony/ux-router": {
             "3.6": {
                 "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            },
+            "3.7": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/ux-svelte": {
@@ -2568,6 +2595,15 @@
             "2.20": {
                 "symfony/framework-bundle": "<7.2",
                 "symfony/security-csrf": "<7.2"
+            },
+            "3.7": {
+                "symfony/framework-bundle": "<8.2",
+                "symfony/security-csrf": "<7.2"
+            }
+        },
+        "symfony/ux-twig-component": {
+            "3.7": {
+                "symfony/framework-bundle": "<8.2"
             }
         },
         "symfony/ux-vue": {

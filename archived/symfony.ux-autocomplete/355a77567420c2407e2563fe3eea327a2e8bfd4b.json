@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "symfony/ux-autocomplete": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Autocomplete\\AutocompleteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ux_autocomplete.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "ux_autocomplete:",
+                        "    resource: '@AutocompleteBundle/config/routes.php'",
+                        "    prefix: '/autocomplete'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "355a77567420c2407e2563fe3eea327a2e8bfd4b"
+        }
+    }
+}

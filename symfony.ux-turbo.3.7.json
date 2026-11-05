@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "symfony/ux-turbo": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Turbo\\TurboBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<8.2",
+                    "symfony/security-csrf": "<7.2"
+                }
+            },
+            "files": {
+                "config/packages/ux_turbo.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../schema.json",
+                        "# Accept the CSRF token sent in a header, as Turbo form submissions do",
+                        "framework:",
+                        "    csrf_protection:",
+                        "        check_header: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "678d2b36bb363f7d68087deb6ffec2b64733174c"
+        }
+    }
+}

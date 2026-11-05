@@ -226,29 +226,29 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/twitter-notifier](https://packagist.org/packages/symfony/twitter-notifier) | [8.2](../../../tree/main/symfony/twitter-notifier/8.2) | `twitter-notifier`, `twitternotifier` |
 | [symfony/uid](https://packagist.org/packages/symfony/uid) | [7.0](../../../tree/main/symfony/uid/7.0) | `uid` |
 | [symfony/unifonic-notifier](https://packagist.org/packages/symfony/unifonic-notifier) | [8.2](../../../tree/main/symfony/unifonic-notifier/8.2) | `unifonic-notifier`, `unifonicnotifier` |
-| [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
+| [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [3.7](../../../tree/main/symfony/ux-autocomplete/3.7) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-cloudflare-image](https://packagist.org/packages/symfony/ux-cloudflare-image) | [3.6](../../../tree/main/symfony/ux-cloudflare-image/3.6) | `ux-cloudflare-image`, `uxcloudflareimage` |
 | [symfony/ux-cloudinary-image](https://packagist.org/packages/symfony/ux-cloudinary-image) | [3.6](../../../tree/main/symfony/ux-cloudinary-image/3.6) | `ux-cloudinary-image`, `uxcloudinaryimage` |
 | [symfony/ux-css](https://packagist.org/packages/symfony/ux-css) | [3.7](../../../tree/main/symfony/ux-css/3.7) | `ux-css`, `uxcss` |
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
-| [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
-| [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.6](../../../tree/main/symfony/ux-image/3.6) | `ux-image`, `uximage` |
+| [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.7](../../../tree/main/symfony/ux-icons/3.7) | `ux-icons`, `uxicons` |
+| [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.7](../../../tree/main/symfony/ux-image/3.7) | `ux-image`, `uximage` |
 | [symfony/ux-imagor-image](https://packagist.org/packages/symfony/ux-imagor-image) | [3.7](../../../tree/main/symfony/ux-imagor-image/3.7) | `ux-imagor-image`, `uximagorimage` |
 | [symfony/ux-imgix-image](https://packagist.org/packages/symfony/ux-imgix-image) | [3.6](../../../tree/main/symfony/ux-imgix-image/3.6) | `ux-imgix-image`, `uximgiximage` |
-| [symfony/ux-inspector](https://packagist.org/packages/symfony/ux-inspector) | [3.6](../../../tree/main/symfony/ux-inspector/3.6) | `ux-inspector`, `uxinspector` |
+| [symfony/ux-inspector](https://packagist.org/packages/symfony/ux-inspector) | [3.7](../../../tree/main/symfony/ux-inspector/3.7) | `ux-inspector`, `uxinspector` |
 | [symfony/ux-ipx-image](https://packagist.org/packages/symfony/ux-ipx-image) | [3.7](../../../tree/main/symfony/ux-ipx-image/3.7) | `ux-ipx-image`, `uxipximage` |
 | [symfony/ux-keycdn-image](https://packagist.org/packages/symfony/ux-keycdn-image) | [3.6](../../../tree/main/symfony/ux-keycdn-image/3.6) | `ux-keycdn-image`, `uxkeycdnimage` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.29](../../../tree/main/symfony/ux-lazy-image/2.29) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](../../../tree/main/symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
-| [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [2.6](../../../tree/main/symfony/ux-live-component/2.6) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |
-| [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [2.19](../../../tree/main/symfony/ux-map/2.19) | `ux-map`, `uxmap` |
+| [symfony/ux-live-component](https://packagist.org/packages/symfony/ux-live-component) | [3.7](../../../tree/main/symfony/ux-live-component/3.7) | `live-component`, `live-components`, `livecomponent`, `livecomponents`, `ux-live-component`, `uxlivecomponent` |
+| [symfony/ux-map](https://packagist.org/packages/symfony/ux-map) | [3.7](../../../tree/main/symfony/ux-map/3.7) | `ux-map`, `uxmap` |
 | [symfony/ux-native](https://packagist.org/packages/symfony/ux-native) | [3.7](../../../tree/main/symfony/ux-native/3.7) | `ux-native`, `uxnative` |
 | [symfony/ux-react](https://packagist.org/packages/symfony/ux-react) | [3.4](../../../tree/main/symfony/ux-react/3.4) | `ux-react`, `uxreact` |
-| [symfony/ux-router](https://packagist.org/packages/symfony/ux-router) | [3.6](../../../tree/main/symfony/ux-router/3.6) | `ux-router`, `uxrouter` |
+| [symfony/ux-router](https://packagist.org/packages/symfony/ux-router) | [3.7](../../../tree/main/symfony/ux-router/3.7) | `ux-router`, `uxrouter` |
 | [symfony/ux-svelte](https://packagist.org/packages/symfony/ux-svelte) | [2.9](../../../tree/main/symfony/ux-svelte/2.9) | `ux-svelte`, `uxsvelte` |
 | [symfony/ux-translator](https://packagist.org/packages/symfony/ux-translator) | [3.7](../../../tree/main/symfony/ux-translator/3.7) | `ux-translator`, `uxtranslator` |
-| [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [2.20](../../../tree/main/symfony/ux-turbo/2.20) | `turbo`, `ux-turbo`, `uxturbo` |
-| [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](../../../tree/main/symfony/ux-twig-component/2.13) | `twig-component`, `twig-components`, `twigcomponent`, `twigcomponents`, `ux-twig-component`, `uxtwigcomponent` |
+| [symfony/ux-turbo](https://packagist.org/packages/symfony/ux-turbo) | [3.7](../../../tree/main/symfony/ux-turbo/3.7) | `turbo`, `ux-turbo`, `uxturbo` |
+| [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [3.7](../../../tree/main/symfony/ux-twig-component/3.7) | `twig-component`, `twig-components`, `twigcomponent`, `twigcomponents`, `ux-twig-component`, `uxtwigcomponent` |
 | [symfony/ux-vue](https://packagist.org/packages/symfony/ux-vue) | [3.4](../../../tree/main/symfony/ux-vue/3.4) | `ux-vue`, `uxvue` |
 | [symfony/validator](https://packagist.org/packages/symfony/validator) | [8.2](../../../tree/main/symfony/validator/8.2) | `validation`, `validator` |
 | [symfony/vonage-notifier](https://packagist.org/packages/symfony/vonage-notifier) | [8.2](../../../tree/main/symfony/vonage-notifier/8.2) | `vonage-notifier`, `vonagenotifier` |
