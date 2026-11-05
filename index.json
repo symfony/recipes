@@ -663,6 +663,7 @@
         "ux-image": "symfony/ux-image",
         "ux-imgix-image": "symfony/ux-imgix-image",
         "ux-inspector": "symfony/ux-inspector",
+        "ux-ipx-image": "symfony/ux-ipx-image",
         "ux-keycdn-image": "symfony/ux-keycdn-image",
         "ux-lazy-image": "symfony/ux-lazy-image",
         "ux-leaflet-map": "symfony/ux-leaflet-map",
@@ -684,6 +685,7 @@
         "uximage": "symfony/ux-image",
         "uximgiximage": "symfony/ux-imgix-image",
         "uxinspector": "symfony/ux-inspector",
+        "uxipximage": "symfony/ux-ipx-image",
         "uxkeycdnimage": "symfony/ux-keycdn-image",
         "uxlazyimage": "symfony/ux-lazy-image",
         "uxleafletmap": "symfony/ux-leaflet-map",
@@ -1650,6 +1652,9 @@
         ],
         "symfony/ux-inspector": [
             "3.6"
+        ],
+        "symfony/ux-ipx-image": [
+            "3.7"
         ],
         "symfony/ux-keycdn-image": [
             "3.6"

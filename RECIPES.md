@@ -234,6 +234,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.6](../../../tree/main/symfony/ux-image/3.6) | `ux-image`, `uximage` |
 | [symfony/ux-imgix-image](https://packagist.org/packages/symfony/ux-imgix-image) | [3.6](../../../tree/main/symfony/ux-imgix-image/3.6) | `ux-imgix-image`, `uximgiximage` |
 | [symfony/ux-inspector](https://packagist.org/packages/symfony/ux-inspector) | [3.6](../../../tree/main/symfony/ux-inspector/3.6) | `ux-inspector`, `uxinspector` |
+| [symfony/ux-ipx-image](https://packagist.org/packages/symfony/ux-ipx-image) | [3.7](../../../tree/main/symfony/ux-ipx-image/3.7) | `ux-ipx-image`, `uxipximage` |
 | [symfony/ux-keycdn-image](https://packagist.org/packages/symfony/ux-keycdn-image) | [3.6](../../../tree/main/symfony/ux-keycdn-image/3.6) | `ux-keycdn-image`, `uxkeycdnimage` |
 | [symfony/ux-lazy-image](https://packagist.org/packages/symfony/ux-lazy-image) | [2.29](../../../tree/main/symfony/ux-lazy-image/2.29) | `ux-lazy-image`, `uxlazyimage` |
 | [symfony/ux-leaflet-map](https://packagist.org/packages/symfony/ux-leaflet-map) | [2.19](../../../tree/main/symfony/ux-leaflet-map/2.19) | `ux-leaflet-map`, `uxleafletmap` |
