@@ -229,6 +229,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-autocomplete](https://packagist.org/packages/symfony/ux-autocomplete) | [2.6](../../../tree/main/symfony/ux-autocomplete/2.6) | `ux-autocomplete`, `uxautocomplete` |
 | [symfony/ux-cloudflare-image](https://packagist.org/packages/symfony/ux-cloudflare-image) | [3.6](../../../tree/main/symfony/ux-cloudflare-image/3.6) | `ux-cloudflare-image`, `uxcloudflareimage` |
 | [symfony/ux-cloudinary-image](https://packagist.org/packages/symfony/ux-cloudinary-image) | [3.6](../../../tree/main/symfony/ux-cloudinary-image/3.6) | `ux-cloudinary-image`, `uxcloudinaryimage` |
+| [symfony/ux-css](https://packagist.org/packages/symfony/ux-css) | [3.7](../../../tree/main/symfony/ux-css/3.7) | `ux-css`, `uxcss` |
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
 | [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.6](../../../tree/main/symfony/ux-image/3.6) | `ux-image`, `uximage` |

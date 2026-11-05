@@ -658,6 +658,7 @@
         "ux-autocomplete": "symfony/ux-autocomplete",
         "ux-cloudflare-image": "symfony/ux-cloudflare-image",
         "ux-cloudinary-image": "symfony/ux-cloudinary-image",
+        "ux-css": "symfony/ux-css",
         "ux-google-map": "symfony/ux-google-map",
         "ux-icons": "symfony/ux-icons",
         "ux-image": "symfony/ux-image",
@@ -681,6 +682,7 @@
         "uxautocomplete": "symfony/ux-autocomplete",
         "uxcloudflareimage": "symfony/ux-cloudflare-image",
         "uxcloudinaryimage": "symfony/ux-cloudinary-image",
+        "uxcss": "symfony/ux-css",
         "uxgooglemap": "symfony/ux-google-map",
         "uxicons": "symfony/ux-icons",
         "uximage": "symfony/ux-image",
@@ -1637,6 +1639,10 @@
         "symfony/ux-cloudinary-image": [
             "3.6"
         ],
+        "symfony/ux-css": [
+            "3.0",
+            "3.7"
+        ],
         "symfony/ux-google-map": [
             "2.19",
             "2.22"
@@ -2491,6 +2497,15 @@
         },
         "symfony/unifonic-notifier": {
             "8.2": {
+                "symfony/framework-bundle": "<8.2"
+            }
+        },
+        "symfony/ux-css": {
+            "3.0": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+            },
+            "3.7": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<8.2"
             }
         },
