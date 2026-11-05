@@ -232,6 +232,7 @@ Additional recipes can be found on the [Contrib Recipes Repository](https://gith
 | [symfony/ux-google-map](https://packagist.org/packages/symfony/ux-google-map) | [2.22](../../../tree/main/symfony/ux-google-map/2.22) | `ux-google-map`, `uxgooglemap` |
 | [symfony/ux-icons](https://packagist.org/packages/symfony/ux-icons) | [3.4](../../../tree/main/symfony/ux-icons/3.4) | `ux-icons`, `uxicons` |
 | [symfony/ux-image](https://packagist.org/packages/symfony/ux-image) | [3.6](../../../tree/main/symfony/ux-image/3.6) | `ux-image`, `uximage` |
+| [symfony/ux-imagor-image](https://packagist.org/packages/symfony/ux-imagor-image) | [3.7](../../../tree/main/symfony/ux-imagor-image/3.7) | `ux-imagor-image`, `uximagorimage` |
 | [symfony/ux-imgix-image](https://packagist.org/packages/symfony/ux-imgix-image) | [3.6](../../../tree/main/symfony/ux-imgix-image/3.6) | `ux-imgix-image`, `uximgiximage` |
 | [symfony/ux-inspector](https://packagist.org/packages/symfony/ux-inspector) | [3.6](../../../tree/main/symfony/ux-inspector/3.6) | `ux-inspector`, `uxinspector` |
 | [symfony/ux-ipx-image](https://packagist.org/packages/symfony/ux-ipx-image) | [3.7](../../../tree/main/symfony/ux-ipx-image/3.7) | `ux-ipx-image`, `uxipximage` |

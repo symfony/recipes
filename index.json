@@ -661,6 +661,7 @@
         "ux-google-map": "symfony/ux-google-map",
         "ux-icons": "symfony/ux-icons",
         "ux-image": "symfony/ux-image",
+        "ux-imagor-image": "symfony/ux-imagor-image",
         "ux-imgix-image": "symfony/ux-imgix-image",
         "ux-inspector": "symfony/ux-inspector",
         "ux-ipx-image": "symfony/ux-ipx-image",
@@ -683,6 +684,7 @@
         "uxgooglemap": "symfony/ux-google-map",
         "uxicons": "symfony/ux-icons",
         "uximage": "symfony/ux-image",
+        "uximagorimage": "symfony/ux-imagor-image",
         "uximgiximage": "symfony/ux-imgix-image",
         "uxinspector": "symfony/ux-inspector",
         "uxipximage": "symfony/ux-ipx-image",
@@ -1646,6 +1648,9 @@
         ],
         "symfony/ux-image": [
             "3.6"
+        ],
+        "symfony/ux-imagor-image": [
+            "3.7"
         ],
         "symfony/ux-imgix-image": [
             "3.6"
