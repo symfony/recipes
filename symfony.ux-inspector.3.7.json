@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "symfony/ux-inspector": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\Inspector\\UXInspectorBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/stimulus_bootstrap.js",
+                        "content": "// Connect Symfony UX Inspector to the Stimulus application in debug mode.\nif (app.debug) {\n    window.Stimulus = app;\n}",
+                        "position": "after_target",
+                        "target": "const app = startStimulusApp();",
+                        "requires": "symfony/stimulus-bundle"
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "// Connect Symfony UX Inspector to the Stimulus application in debug mode.\nif (app.debug) {\n    window.Stimulus = app;\n}",
+                        "position": "after_target",
+                        "target": "const app = startStimulusApp();",
+                        "requires": "symfony/stimulus-bundle"
+                    },
+                    {
+                        "file": "assets/stimulus_bootstrap.js",
+                        "content": "// Connect Symfony UX Inspector to the Stimulus application in debug mode.\nif (typeof app !== 'undefined' && app.debug) {\n    window.Stimulus = app;\n}\n",
+                        "position": "bottom",
+                        "requires": [
+                            "symfony/stimulus-bundle",
+                            "symfony/webpack-encore-bundle"
+                        ]
+                    },
+                    {
+                        "file": "assets/bootstrap.js",
+                        "content": "// Connect Symfony UX Inspector to the Stimulus application in debug mode.\nif (typeof app !== 'undefined' && app.debug) {\n    window.Stimulus = app;\n}\n",
+                        "position": "bottom",
+                        "requires": [
+                            "symfony/stimulus-bundle",
+                            "symfony/webpack-encore-bundle"
+                        ]
+                    }
+                ]
+            },
+            "files": {
+                "config/routes/ux_inspector.yaml": {
+                    "contents": [
+                        "# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json",
+                        "when@dev:",
+                        "    ux_inspector:",
+                        "        resource: '@UXInspectorBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e05b4dea1f8d05cee2cdab98b4346c849f12227e"
+        }
+    }
+}
