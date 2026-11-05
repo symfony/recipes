@@ -1,0 +1,28 @@
+{
+    "env": {
+        "#1": "Options available at https://github.com/symfony/ux/blob/3.x/src/Image/src/Bridge/Ipx/README.md",
+        "#2": "",
+        "UX_IMAGE_DSN": "ipx://${IPX_HOST:-127.0.0.1}:${IPX_PORT:-3000}?secure=false"
+    },
+    "docker-compose": {
+        "compose.yaml": {
+            "services": [
+                "ipx:",
+                "  image: node:26-alpine",
+                "  command: npx --yes ipx@4 serve",
+                "  environment:",
+                "    IPX_FS_DIR: /srv/public",
+                "    IPX_ALLOWED_MODIFIERS: width,height,resize,fit,format,quality",
+                "  volumes:",
+                "    - ./public:/srv/public:ro"
+            ]
+        },
+        "compose.override.yaml": {
+            "services": [
+                "ipx:",
+                "  ports:",
+                "    - \"3000\""
+            ]
+        }
+    }
+}
