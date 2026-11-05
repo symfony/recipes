@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Symfony\\UX\\Autocomplete\\AutocompleteBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

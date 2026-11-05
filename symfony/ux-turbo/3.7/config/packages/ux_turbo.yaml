@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=../schema.json
+# Accept the CSRF token sent in a header, as Turbo form submissions do
+framework:
+    csrf_protection:
+        check_header: true

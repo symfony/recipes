@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=../../vendor/symfony/routing/Loader/schema/routing.schema.json
+live_component:
+    resource: '@LiveComponentBundle/config/routes.php'
+    prefix: '/_components'
+    # adjust prefix to add localization to your components
+    #prefix: '/{_locale}/_components'

@@ -1,0 +1,9 @@
+  * Without a provider, images render with their original URL and no resizing (the default
+    provider is a pass-through). To resize and convert images, install one provider
+    package: <info>symfony/ux-cloudflare-image</info>, <info>symfony/ux-cloudinary-image</info>,
+    <info>symfony/ux-imgix-image</info> or <info>symfony/ux-keycdn-image</info>.
+
+  * The Twig component and functions of UX Image only load when
+    <info>symfony/ux-twig-component</info> is installed.
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/bundles/ux-image/current/index.html</>
