@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "php-cs-fixer/shim": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php"
+                },
+                "gitignore": [
+                    "/.php-cs-fixer.php",
+                    "/.php-cs-fixer.cache"
+                ]
+            },
+            "files": {
+                ".php-cs-fixer.dist.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "$finder = (new PhpCsFixer\\Finder())",
+                        "    ->in(__DIR__)",
+                        "    ->exclude([",
+                        "        'config/secrets',",
+                        "        'public',",
+                        "        'var',",
+                        "    ])",
+                        "    ->notPath([",
+                        "        'config/bundles.php',",
+                        "        'config/reference.php',",
+                        "    ])",
+                        ";",
+                        "",
+                        "return (new PhpCsFixer\\Config())",
+                        "    ->setRiskyAllowed(true)",
+                        "    ->setRules([",
+                        "        '@auto' => true,",
+                        "        '@auto:risky' => true,",
+                        "        '@Symfony' => true,",
+                        "        '@Symfony:risky' => true,",
+                        "    ])",
+                        "    ->setFinder($finder)",
+                        ";",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "57b31d9d148b1fa7d00f4bf3bb3e8af12645ae02"
+        }
+    }
+}
