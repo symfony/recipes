@@ -9,7 +9,7 @@
             "content": [
                 "        meilisearch:",
                 "            default:",
-                "                host: '%env(MEILISEARCH_HOST)%'",
+                "                endpoint: '%env(MEILISEARCH_HOST)%'",
                 "                api_key: '%env(MEILISEARCH_API_KEY)%'"
             ]
         }
