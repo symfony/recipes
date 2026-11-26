@@ -44,6 +44,8 @@
                 "  ports:",
                 "    - \"80\"",
                 "  environment:",
+                "    # Development only: serve plain HTTP on the published port, the one the Symfony CLI connects to",
+                "    SERVER_NAME: ':80'",
                 "    # Replaces MERCURE_EXTRA_DIRECTIVES from docker-compose.yml, keep the other directives in sync",
                 "    # The playground directive enables the development mode (anonymous subscribers, debug UI)",
                 "    MERCURE_EXTRA_DIRECTIVES: |",
