@@ -50,12 +50,14 @@
                             "  ports:",
                             "    - \"80\"",
                             "  environment:",
+                            "    # Development only: serve plain HTTP on the published port, the one the Symfony CLI connects to",
+                            "    SERVER_NAME: ':80'",
                             "    # Replaces MERCURE_EXTRA_DIRECTIVES from docker-compose.yml, keep the other directives in sync",
                             "    # The playground directive enables the development mode (anonymous subscribers, debug UI)",
                             "    MERCURE_EXTRA_DIRECTIVES: |",
                             "      protocol_version_compatibility 8",
                             "      playground",
-                            "      cors_origins http://127.0.0.1:8000",
+                            "      cors_origins http://127.0.0.1:8000 https://127.0.0.1:8000",
                             "    # Development only: trust the X-Forwarded-* headers sent from private networks, e.g. by \"symfony serve --proxy-mercure\"",
                             "    GLOBAL_OPTIONS: |",
                             "      servers {",
@@ -81,7 +83,7 @@
                     "executable": false
                 }
             },
-            "ref": "4fa38a2e8791de195f818fdda7457372a1cbea35"
+            "ref": "6dbb6fd28b5a342448b12e172711031cf09dcf20"
         }
     }
 }
