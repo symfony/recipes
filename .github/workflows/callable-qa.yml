@@ -21,6 +21,8 @@ jobs:
     run-checks:
         name: Run checks
         runs-on: ubuntu-latest
+        outputs:
+            matrix: ${{ steps.matrix.outputs.matrix }}
 
         steps:
             -
@@ -57,6 +59,14 @@ jobs:
                     .github/recipes-checker-main/run list-unpatched-packages $GITHUB_EVENT_PATH ${{ secrets.token }} | xargs -r -n10 rm -rf
 
             -
+                name: Find the Symfony and PHP versions to test
+                id: matrix
+                if: "always() && steps.checkout.outcome == 'success'"
+                run: |
+                    MATRIX=$(find * -mindepth 1 -maxdepth 1 -type d | sort | .github/recipes-checker-main/run generate:create-project-matrix .github/supported-versions.md)
+                    echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+
+            -
                 name: Generate Flex testing endpoint
                 if: "always() && steps.checkout.outcome == 'success' && github.base_ref == inputs.branch"
                 run: |
@@ -86,7 +96,7 @@ jobs:
                 if: "always() && steps.checkout.outcome == 'success'"
                 run: |
                     find * -mindepth 1 -maxdepth 1 -type d | sort \
-                        | .github/recipes-checker-main/run diff-recipe-versions 'https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json' \
+                        | .github/recipes-checker-main/run diff-recipe-versions 'https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json' .github/supported-versions.md \
                         > .github/diff-recipe-versions.md
 
             -
@@ -231,8 +241,13 @@ jobs:
 
     create-project:
         needs: run-checks
-        name: Run updated recipes
+        if: needs.run-checks.outputs.matrix != '[]'
+        name: Run updated recipes (Symfony ${{ matrix.symfony }}, PHP ${{ matrix.php }})
         runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                include: ${{ fromJSON(needs.run-checks.outputs.matrix) }}
 
         steps:
             -
@@ -245,122 +260,30 @@ jobs:
                     [[ "" != "$PACKAGES" ]]
 
             -
-                name: Setup PHP 8.1
+                name: Setup PHP ${{ matrix.php }}
                 if: "always() && steps.config.outcome == 'success'"
                 uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
-                    php-version: "8.1"
+                    php-version: ${{ matrix.php }}
 
             -
-                name: Create-project with skeleton ^6
+                name: Create-project with skeleton ${{ matrix.skeleton }}
                 if: "always() && steps.config.outcome == 'success'"
                 run: |
                     set -x
                     php -v
-                    composer create-project --ansi "symfony/skeleton:^6" sf6-php81
-                    cd sf6-php81
+                    composer create-project --ansi --stability=${{ matrix.stability }} "symfony/skeleton:${{ matrix.skeleton }}" app
+                    cd app
                     composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
                     composer config minimum-stability dev
                     export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
                     EXIT_CODE=0
                     composer require -W --ansi $PACKAGES || EXIT_CODE=$?
 
-                    if [[ $EXIT_CODE -eq 2 ]]; then
-                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 6.4 with PHP 8.1"
+                    if [[ $EXIT_CODE -eq 2 && ${{ matrix.strict }} != true ]]; then
+                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony ${{ matrix.symfony }} with PHP ${{ matrix.php }}"
                         exit 0
                     fi
 
                     exit $EXIT_CODE
-
-            -
-                name: Setup PHP 8.2
-                if: "always() && steps.config.outcome == 'success'"
-                uses: shivammathur/setup-php@v2
-                with:
-                    coverage: "none"
-                    php-version: "8.2"
-
-            -
-                name: Create-project with skeleton ^7
-                if: "always() && steps.config.outcome == 'success'"
-                run: |
-                    set -x
-                    php -v
-                    composer create-project --ansi "symfony/skeleton:^7" sf7-php82
-                    cd sf7-php82
-                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
-                    composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    EXIT_CODE=0
-                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
-
-                    if [[ $EXIT_CODE -eq 2 ]]; then
-                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 7.4 with PHP 8.2"
-                        exit 0
-                    fi
-
-                    exit $EXIT_CODE
-
-            -
-                name: Setup PHP 8.4
-                if: "always() && steps.config.outcome == 'success'"
-                uses: shivammathur/setup-php@v2
-                with:
-                    coverage: "none"
-                    php-version: "8.4"
-
-            -
-                name: Create-project with skeleton ^6
-                if: "always() && steps.config.outcome == 'success'"
-                run: |
-                    set -x
-                    php -v
-                    composer create-project --ansi "symfony/skeleton:^6" sf6-php84
-                    cd sf6-php84
-                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
-                    composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    EXIT_CODE=0
-                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
-
-                    if [[ $EXIT_CODE -eq 2 ]]; then
-                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 6.4 with PHP 8.4"
-                        exit 0
-                    fi
-
-                    exit $EXIT_CODE
-
-            -
-                name: Create-project with skeleton ^7
-                if: "always() && steps.config.outcome == 'success'"
-                run: |
-                    set -x
-                    php -v
-                    composer create-project --ansi "symfony/skeleton:^7" sf7-php84
-                    cd sf7-php84
-                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
-                    composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    EXIT_CODE=0
-                    composer require -W --ansi $PACKAGES || EXIT_CODE=$?
-
-                    if [[ $EXIT_CODE -eq 2 ]]; then
-                        echo "::notice::Skipped: the package(s) cannot be installed on Symfony 7.4 with PHP 8.4"
-                        exit 0
-                    fi
-
-                    exit $EXIT_CODE
-
-            -
-                name: Create-project with skeleton ^8@dev
-                if: "always() && steps.config.outcome == 'success'"
-                run: |
-                    set -x
-                    php -v
-                    composer create-project --ansi --stability=dev "symfony/skeleton:^8" sf8-php84
-                    cd sf8-php84
-                    composer config extra.symfony.allow-contrib ${{ inputs.contrib && 'true' || 'false' }}
-                    composer config minimum-stability dev
-                    export SYMFONY_ENDPOINT=https://raw.githubusercontent.com/${{ github.repository }}/flex/pull-${{ github.event.number }}/index.json
-                    composer require -W --ansi $PACKAGES
